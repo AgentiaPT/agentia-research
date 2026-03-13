@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Feed Explorer — agentIA Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2d3a;
+    --text: #e0e0e0;
+    --muted: #8890a0;
+    --accent: #6c8cff;
+    --green: #4caf50;
+    --red: #ef5350;
+    --orange: #ff9800;
+    --yellow: #ffd54f;
+    --purple: #b388ff;
+    --cyan: #4dd0e1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 48px 24px 32px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .header .meta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .header .meta span {
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(108, 140, 255, 0.15);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .tag.green { background: rgba(76, 175, 80, 0.15); color: var(--green); }
+  .tag.orange { background: rgba(255, 152, 0, 0.15); color: var(--orange); }
+  .tag.red { background: rgba(239, 83, 80, 0.15); color: var(--red); }
+  .tag.purple { background: rgba(179, 136, 255, 0.15); color: var(--purple); }
+  .tag.yellow { background: rgba(255, 213, 79, 0.15); color: var(--yellow); }
+  .tag.cyan { background: rgba(77, 208, 225, 0.15); color: var(--cyan); }
+
+  /* Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    min-height: calc(100vh - 200px);
+  }
+
+  @media (max-width: 768px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+    .sidebar { display: none; }
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .nav-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .nav-section h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 6px 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+
+  .nav-link:hover { background: var(--border); }
+  .nav-link.active { background: rgba(108, 140, 255, 0.15); color: var(--accent); }
+
+  /* Filter chips in sidebar */
+  .filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .filter-chip {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .filter-chip:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-chip.active { background: rgba(108, 140, 255, 0.15); border-color: var(--accent); color: var(--accent); }
+
+  /* Main content */
+  .main {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  /* Stats grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .stat-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .stat-box .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .stat-box .label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* Voice Map */
+  .voice-map {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .voice-map-axes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .axis-label {
+    position: absolute;
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .axis-label.top { top: 8px; left: 50%; transform: translateX(-50%); }
+  .axis-label.bottom { bottom: 8px; left: 50%; transform: translateX(-50%); }
+  .axis-label.left { left: 8px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+  .axis-label.right { right: 8px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+  .axis-line-h, .axis-line-v {
+    position: absolute;
+    background: var(--border);
+  }
+
+  .axis-line-h {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    opacity: 0.4;
+  }
+
+  .axis-line-v {
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    top: 0;
+    opacity: 0.4;
+  }
+
+  .voice-dot {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    transform: translate(-50%, -50%);
+    border: 2px solid transparent;
+  }
+
+  .voice-dot:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    z-index: 10;
+    border-color: white;
+  }
+
+  .voice-dot .voice-tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text);
+    z-index: 20;
+    pointer-events: none;
+    min-width: 180px;
+  }
+
+  .voice-dot .voice-tooltip .tt-name {
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .voice-dot .voice-tooltip .tt-org {
+    color: var(--muted);
+    font-size: 0.72rem;
+  }
+
+  .voice-dot .voice-tooltip .tt-stance {
+    margin-top: 4px;
+    font-size: 0.72rem;
+  }
+
+  .voice-dot:hover .voice-tooltip { display: block; }
+
+  /* Signal Radar */
+  .signal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+
+  .signal-item {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    transition: border-color 0.15s;
+  }
+
+  .signal-item:hover { border-color: var(--accent); }
+
+  .signal-priority {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .signal-priority.high { background: var(--red); }
+  .signal-priority.medium { background: var(--orange); }
+  .signal-priority.low { background: var(--green); }
+
+  .signal-body h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .signal-body p {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .timeline-entry {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.15s;
+  }
+
+  .timeline-entry:hover { border-color: var(--accent); }
+
+  .timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 22px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+
+  .timeline-entry .te-date {
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 4px;
+  }
+
+  .timeline-entry .te-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .timeline-entry .te-body {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .timeline-entry .te-tags {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* Quotes carousel */
+  .quotes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+
+  .quote-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .quote-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    font-size: 2.5rem;
+    color: var(--accent);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .quote-card blockquote {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 10px;
+    padding-left: 4px;
+  }
+
+  .quote-card .quote-author {
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .quote-card .quote-context {
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+  /* Theme bars */
+  .theme-bar-container {
+    margin-bottom: 12px;
+  }
+
+  .theme-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+  }
+
+  .theme-bar-label span:first-child { color: var(--text); }
+  .theme-bar-label span:last-child { color: var(--muted); font-size: 0.75rem; }
+
+  .theme-bar {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .theme-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tab {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Voice list (for mobile / alternative view) */
+  .voice-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+  }
+
+  .voice-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.15s;
+  }
+
+  .voice-list-item:hover { border-color: var(--accent); }
+
+  .voice-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .voice-info h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .voice-info .voice-meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px 24px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>AI News Feed Explorer</h1>
+  <p class="subtitle">Tracking the voices, signals, and narratives shaping AI-powered software engineering.</p>
+  <div class="meta">
+    <span>Ongoing research</span>
+    <span>agentIA Research</span>
+    <span class="tag">weekly</span>
+    <span class="tag">voices</span>
+    <span class="tag">signals</span>
+  </div>
+</div>
+
+<!-- Layout: Sidebar + Main -->
+<div class="layout">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="nav-section">
+      <h3>Sections</h3>
+      <a class="nav-link active" href="#dashboard">Dashboard</a>
+      <a class="nav-link" href="#voice-map">Voice Map</a>
+      <a class="nav-link" href="#signals">Signal Radar</a>
+      <a class="nav-link" href="#timeline">Edition Timeline</a>
+      <a class="nav-link" href="#quotes">Key Quotes</a>
+    </div>
+
+    <div class="nav-section">
+      <h3>Filter by Theme</h3>
+      <div class="filter-chips" id="theme-filters">
+        <button class="filter-chip active" data-theme="all">All</button>
+        <button class="filter-chip" data-theme="agentic">Agentic</button>
+        <button class="filter-chip" data-theme="quality">Quality</button>
+        <button class="filter-chip" data-theme="adoption">Adoption</button>
+        <button class="filter-chip" data-theme="roles">Roles</button>
+        <button class="filter-chip" data-theme="security">Security</button>
+        <button class="filter-chip" data-theme="safety">Safety</button>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <h3>Filter by Stance</h3>
+      <div class="filter-chips" id="stance-filters">
+        <button class="filter-chip active" data-stance="all">All</button>
+        <button class="filter-chip" data-stance="optimist">Optimist</button>
+        <button class="filter-chip" data-stance="realist">Realist</button>
+        <button class="filter-chip" data-stance="skeptic">Skeptic</button>
+        <button class="filter-chip" data-stance="convert">Convert</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+
+    <!-- Dashboard -->
+    <div class="card" id="dashboard">
+      <h2>Dashboard</h2>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="value">17</div>
+          <div class="label">Tracked Voices</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">1</div>
+          <div class="label">Editions</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">16</div>
+          <div class="label">Active Signals</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">6</div>
+          <div class="label">Themes</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">30+</div>
+          <div class="label">Sources</div>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 8px;">Theme Coverage</h2>
+      <div style="margin-top: 12px;">
+        <div class="theme-bar-container">
+          <div class="theme-bar-label"><span>Velocity vs. Quality</span><span>13 mentions</span></div>
+          <div class="theme-bar"><div class="theme-bar-fill" style="width:100%;background:var(--red)"></div></div>
+        </div>
+        <div class="theme-bar-container">
+          <div class="theme-bar-label"><span>Agentic Engineering</span><span>11 mentions</span></div>
+          <div class="theme-bar"><div class="theme-bar-fill" style="width:85%;background:var(--accent)"></div></div>
+        </div>
+        <div class="theme-bar-container">
+          <div class="theme-bar-label"><span>Role Transformation</span><span>9 mentions</span></div>
+          <div class="theme-bar"><div class="theme-bar-fill" style="width:69%;background:var(--purple)"></div></div>
+        </div>
+        <div class="theme-bar-container">
+          <div class="theme-bar-label"><span>AI Adoption Patterns</span><span>8 mentions</span></div>
+          <div class="theme-bar"><div class="theme-bar-fill" style="width:62%;background:var(--orange)"></div></div>
+        </div>
+        <div class="theme-bar-container">
+          <div class="theme-bar-label"><span>AI Safety & Ethics</span><span>6 mentions</span></div>
+          <div class="theme-bar"><div class="theme-bar-fill" style="width:46%;background:var(--yellow)"></div></div>
+        </div>
+        <div class="theme-bar-container">
+          <div class="theme-bar-label"><span>Security & Supply Chain</span><span>4 mentions</span></div>
+          <div class="theme-bar"><div class="theme-bar-fill" style="width:31%;background:var(--cyan)"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voice Map -->
+    <div class="card" id="voice-map">
+      <h2>Voice Position Map</h2>
+      <p>Voices plotted by stance (skeptic ← → optimist) and influence level. Hover for details.</p>
+
+      <div class="tabs" style="margin-top: 16px;">
+        <button class="tab active" onclick="switchTab(this, 'tab-map')">Position Map</button>
+        <button class="tab" onclick="switchTab(this, 'tab-list')">Voice List</button>
+      </div>
+
+      <div class="tab-content active" id="tab-map">
+        <div class="voice-map" id="voiceMap">
+          <div class="voice-map-axes">
+            <div class="axis-line-h"></div>
+            <div class="axis-line-v"></div>
+            <span class="axis-label top">Higher Influence</span>
+            <span class="axis-label bottom">Emerging Voice</span>
+            <span class="axis-label left">Skeptic</span>
+            <span class="axis-label right">Optimist</span>
+          </div>
+          <!-- Voice dots rendered by JS -->
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-list">
+        <div class="voice-list" id="voiceList">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Signal Radar -->
+    <div class="card" id="signals">
+      <h2>Signal Radar</h2>
+      <p>Active signals from the latest edition, ranked by priority and actionability.</p>
+      <div class="signal-grid" id="signalGrid" style="margin-top: 16px;">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Edition Timeline -->
+    <div class="card" id="timeline">
+      <h2>Edition Timeline</h2>
+      <p>Narrative arcs across editions. Each entry captures the defining story of a period.</p>
+      <div class="timeline" id="editionTimeline" style="margin-top: 16px;">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Quotes -->
+    <div class="card" id="quotes">
+      <h2>Key Quotes</h2>
+      <p>The most striking insights from tracked voices, across all editions.</p>
+      <div class="quotes-container" id="quotesContainer" style="margin-top: 16px;">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>
+    <a href="https://github.com/AgentiaPT/agentia-research">agentIA Research</a> — AI News Feed Explorer
+    · <a href="README.md">Overview</a>
+    · <a href="2026-03-13.md">Edition: Mar 8–13, 2026</a>
+  </p>
+</div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────────────
+
+const voices = [
+  { id: 'willison', name: 'Simon Willison', org: 'Independent', stance: 'optimist', influence: 0.92, x: 72, y: 12, color: 'var(--green)', initials: 'SW', themes: ['agentic','quality','adoption'], quote: 'Within a year it will become undeniable that LLMs write good code.' },
+  { id: 'yegge', name: 'Steve Yegge', org: 'SourceGraph', stance: 'optimist', influence: 0.85, x: 88, y: 18, color: 'var(--accent)', initials: 'SY', themes: ['agentic','roles'], quote: 'It\'s 2026 and this is an exponential curve.' },
+  { id: 'orosz', name: 'Gergely Orosz', org: 'Pragmatic Engineer', stance: 'realist', influence: 0.90, x: 58, y: 14, color: 'var(--purple)', initials: 'GO', themes: ['adoption','roles','quality'], quote: 'The ability to orchestrate and audit AI output becomes the hallmark of a great engineer.' },
+  { id: 'beck', name: 'Kent Beck', org: 'Independent', stance: 'optimist', influence: 0.88, x: 70, y: 15, color: 'var(--green)', initials: 'KB', themes: ['quality','agentic'], quote: 'TDD is a superpower in the age of AI.' },
+  { id: 'osmani', name: 'Addy Osmani', org: 'Google', stance: 'realist', influence: 0.82, x: 60, y: 22, color: 'var(--orange)', initials: 'AO', themes: ['quality','adoption'], quote: 'Comprehension Debt: the gap between what AI produces and what developers understand.' },
+  { id: 'mollick', name: 'Ethan Mollick', org: 'Wharton', stance: 'realist', influence: 0.87, x: 62, y: 16, color: 'var(--purple)', initials: 'EM', themes: ['adoption','roles'], quote: 'The skills dismissed as \'soft\' turned out to be the hard ones.' },
+  { id: 'booch', name: 'Grady Booch', org: 'Independent', stance: 'skeptic', influence: 0.85, x: 25, y: 18, color: 'var(--red)', initials: 'GB', themes: ['roles','quality'], quote: 'I\'d say politely... it\'s utter BS.' },
+  { id: 'farley', name: 'Dave Farley', org: 'CD Training', stance: 'realist', influence: 0.78, x: 48, y: 28, color: 'var(--orange)', initials: 'DF', themes: ['quality','agentic'], quote: 'Trust has to come from executable specifications, not manual inspection.' },
+  { id: 'majors', name: 'Charity Majors', org: 'Honeycomb', stance: 'realist', influence: 0.80, x: 55, y: 25, color: 'var(--orange)', initials: 'CM', themes: ['quality','agentic','security'], quote: 'The model hallucinates. The agent takes a different path. This isn\'t a failure mode. It\'s the feature.' },
+  { id: 'dhh', name: 'DHH', org: '37signals', stance: 'convert', influence: 0.88, x: 68, y: 17, color: 'var(--yellow)', initials: 'DHH', themes: ['adoption','agentic'], quote: 'The most exciting thing we\'ve made computers do since we connected them to the internet.' },
+  { id: 'hightower', name: 'Kelsey Hightower', org: 'Retired/Google', stance: 'skeptic', influence: 0.84, x: 30, y: 20, color: 'var(--red)', initials: 'KH', themes: ['adoption','roles'], quote: 'You do not need AI or an AI agent to reset passwords. Oh my God, people, please.' },
+  { id: 'mason', name: 'Mike Mason', org: 'Thoughtworks', stance: 'realist', influence: 0.75, x: 42, y: 32, color: 'var(--orange)', initials: 'MM', themes: ['adoption','quality'], quote: 'Realistic net cycle time impact from AI agents is 8-13%, not 50%.' },
+  { id: 'troy', name: 'Chelsea Troy', org: 'U of Chicago', stance: 'skeptic', influence: 0.72, x: 22, y: 35, color: 'var(--red)', initials: 'CT', themes: ['quality','roles'], quote: '60% drek rate — modulated by user skill.' },
+  { id: 'primeagen', name: 'ThePrimeagen', org: 'Independent', stance: 'skeptic', influence: 0.76, x: 28, y: 30, color: 'var(--red)', initials: 'TP', themes: ['quality','security'], quote: 'AI assists, doesn\'t replace.' },
+  { id: 'cantrill', name: 'Bryan Cantrill', org: 'Oxide', stance: 'skeptic', influence: 0.80, x: 20, y: 24, color: 'var(--red)', initials: 'BC', themes: ['quality','roles'], quote: 'Software is hard, yes, even in an era of vibe coding.' },
+  { id: 'hashimoto', name: 'Mitchell Hashimoto', org: 'HashiCorp/IBM', stance: 'realist', influence: 0.83, x: 55, y: 20, color: 'var(--purple)', initials: 'MH', themes: ['agentic','quality','security'], quote: 'I\'m more or less the architect. AI is pretty bad at architectural problems.' },
+  { id: 'debois', name: 'Patrick Debois', org: 'AI Native Dev', stance: 'optimist', influence: 0.74, x: 75, y: 33, color: 'var(--green)', initials: 'PD', themes: ['agentic','adoption','roles'], quote: 'Developers are becoming managers of agents.' },
+];
+
+const signals = [
+  { title: 'Amazon vibe-coding outages', body: 'Velocity-vs-quality thesis playing out live — 4 critical incidents in one week from AI-mandated coding.', priority: 'high', themes: ['quality','adoption'] },
+  { title: 'NYT "Coding After Coders"', body: '70+ developer interviews confirm the shift. Mainstream articulation of role transformation.', priority: 'high', themes: ['roles','adoption'] },
+  { title: 'Anthropic $380B valuation', body: 'Time cover. Claude Code $2.5B ARR. Most disruptive company framing.', priority: 'high', themes: ['adoption','safety'] },
+  { title: 'Claude Code Review launch', body: 'Multi-agent PR review. 84% flag rate on large changes. Verification at machine speed.', priority: 'high', themes: ['agentic','quality'] },
+  { title: 'Junior 67%→73% hiring collapse', body: 'Entry-level pipeline contracting across 8 industries. Fresh data confirms the trend.', priority: 'high', themes: ['roles'] },
+  { title: 'Mollick: Management as AI superpower', body: 'Academic proof that soft skills matter more than coding for agent orchestration.', priority: 'medium', themes: ['roles','adoption'] },
+  { title: 'Osmani: Comprehension Debt', body: 'New concept — gap between AI output volume and developer understanding capacity.', priority: 'medium', themes: ['quality'] },
+  { title: 'Mason: 8-13% real productivity', body: 'Honest data vs vendor hype. Soberest analysis of actual AI coding ROI.', priority: 'medium', themes: ['adoption','quality'] },
+  { title: 'DHH reversal', body: 'Loudest AI-coding skeptic flipped. Validates November 2025 inflection point.', priority: 'medium', themes: ['adoption'] },
+  { title: 'Booch: Third Golden Age', body: 'Authoritative framing — abstraction layers, not replacement. Pushback on Amodei.', priority: 'medium', themes: ['roles'] },
+  { title: 'Farley: Executable specifications', body: 'Practical answer to Comprehension Debt. TDD as verification language for agents.', priority: 'medium', themes: ['quality','agentic'] },
+  { title: 'Debois: 4 AI-native patterns', body: 'Producer→Manager, Implementation→Intent, Delivery→Discovery, Content→Knowledge.', priority: 'medium', themes: ['agentic','roles'] },
+  { title: 'ROME rogue agent incident', body: 'Validates architectural containment over prompt guardrails for agent security.', priority: 'medium', themes: ['security'] },
+  { title: 'OpenClaw supply chain crisis', body: 'Prompt injection industrialized at ecosystem scale. Package poisoning via AI.', priority: 'high', themes: ['security'] },
+  { title: 'Microsoft Copilot uses Claude', body: 'Microsoft bet on Anthropic for M365 flagship, despite $13B OpenAI investment.', priority: 'low', themes: ['adoption'] },
+  { title: 'Hashimoto Vouch system', body: 'Trust infrastructure for the reputation-farming era. Community-level defense.', priority: 'low', themes: ['security','quality'] },
+];
+
+const editions = [
+  {
+    date: 'March 8–13, 2026',
+    title: 'The Convergence Week',
+    body: 'Three storylines collided: Amazon\'s vibe-coding outages proved velocity-without-discipline fails catastrophically. Anthropic launched Code Review, sued the Pentagon, landed Time\'s cover, and partnered with Microsoft — all in 72 hours. The NYT Magazine published the most comprehensive piece yet on AI\'s impact on programming, interviewing 70+ developers.',
+    tags: ['quality', 'adoption', 'agentic', 'safety'],
+    voices: 17,
+    sources: 30
+  }
+];
+
+const quotes = [
+  { text: 'You can\'t just rip out a system that\'s deeply embedded overnight.', author: 'Pentagon CTO Emil Michael', context: 'On Palantir still using Claude despite blacklist' },
+  { text: 'It feels like we might be speaking out of both sides of our mouths.', author: 'Deep Ganguli', context: 'Anthropic societal-impacts lead, on safety commitments' },
+  { text: 'It\'s 2026 and this is an exponential curve, and we don\'t have time to sit around and feel pity for ourselves.', author: 'Steve Yegge', context: 'On the pace of AI-driven change' },
+  { text: 'The ability to orchestrate and audit AI output becomes the hallmark of a great engineer.', author: 'Gergely Orosz', context: 'Sonar Summit keynote' },
+  { text: 'The skills that are so often dismissed as \'soft\' turned out to be the hard ones.', author: 'Ethan Mollick', context: 'On management as AI superpower' },
+  { text: 'I\'d say politely... it\'s utter BS.', author: 'Grady Booch', context: 'On Amodei\'s automation-in-12-months claim' },
+  { text: 'The trust has to come from executable specifications and continuous verification, not from manual inspection.', author: 'Dave Farley', context: 'On reviewing AI-generated code at scale' },
+  { text: 'The model hallucinates. The agent takes a different path. This isn\'t a failure mode. It\'s the feature.', author: 'Charity Majors', context: 'Honeycomb 10-year manifesto' },
+  { text: 'This is the most exciting thing we\'ve made computers do since we connected them to the internet.', author: 'DHH', context: 'After reversing his AI coding skepticism' },
+  { text: 'You do not need AI or an AI agent to reset passwords. Oh my God, people, please.', author: 'Kelsey Hightower', context: 'On AI agent overreach' },
+  { text: 'If we stop caring about the code, our rigor has to move somewhere else.', author: 'Chad Fowler', context: 'Referenced by Beck and Osmani' },
+  { text: 'One of the dumbest things I\'ve ever heard.', author: 'AWS CEO Matt Garman', context: 'On replacing junior developers with AI' },
+  { text: 'Did I gaslight myself by being an agent skeptic?', author: 'Max Woolf', context: 'After Claude Code exceeded his expectations' },
+];
+
+// ── Rendering ─────────────────────────────────────────────────────
+
+let activeTheme = 'all';
+let activeStance = 'all';
+
+function renderVoiceMap() {
+  const map = document.getElementById('voiceMap');
+  // Remove old dots
+  map.querySelectorAll('.voice-dot').forEach(d => d.remove());
+
+  const filtered = voices.filter(v => {
+    if (activeTheme !== 'all' && !v.themes.includes(activeTheme)) return false;
+    if (activeStance !== 'all' && v.stance !== activeStance) return false;
+    return true;
+  });
+
+  filtered.forEach(v => {
+    const dot = document.createElement('div');
+    dot.className = 'voice-dot';
+    dot.style.left = v.x + '%';
+    dot.style.top = v.y + '%';
+    dot.style.background = v.color;
+    dot.style.color = '#0f1117';
+    dot.textContent = v.initials;
+
+    const tooltip = document.createElement('div');
+    tooltip.className = 'voice-tooltip';
+    tooltip.innerHTML = `
+      <div class="tt-name">${v.name}</div>
+      <div class="tt-org">${v.org}</div>
+      <div class="tt-stance" style="color:${v.color}">${v.stance.charAt(0).toUpperCase() + v.stance.slice(1)} · Influence: ${Math.round(v.influence * 100)}%</div>
+      <div style="margin-top:6px;font-style:italic;font-size:0.72rem;color:var(--muted)">"${v.quote}"</div>
+    `;
+    dot.appendChild(tooltip);
+    map.appendChild(dot);
+  });
+}
+
+function renderVoiceList() {
+  const list = document.getElementById('voiceList');
+  const filtered = voices.filter(v => {
+    if (activeTheme !== 'all' && !v.themes.includes(activeTheme)) return false;
+    if (activeStance !== 'all' && v.stance !== activeStance) return false;
+    return true;
+  });
+
+  list.innerHTML = filtered.sort((a, b) => b.influence - a.influence).map(v => `
+    <div class="voice-list-item">
+      <div class="voice-avatar" style="background:${v.color};color:#0f1117">${v.initials}</div>
+      <div class="voice-info">
+        <h4>${v.name}</h4>
+        <div class="voice-meta">${v.org} · ${v.stance.charAt(0).toUpperCase() + v.stance.slice(1)} · ${Math.round(v.influence * 100)}% influence</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderSignals() {
+  const grid = document.getElementById('signalGrid');
+  const filtered = signals.filter(s => {
+    if (activeTheme !== 'all' && !s.themes.includes(activeTheme)) return false;
+    return true;
+  });
+
+  grid.innerHTML = filtered.map(s => `
+    <div class="signal-item">
+      <div class="signal-priority ${s.priority}"></div>
+      <div class="signal-body">
+        <h4>${s.title}</h4>
+        <p>${s.body}</p>
+        <div style="margin-top:6px">${s.themes.map(t => {
+          const colors = { agentic: '', quality: 'red', adoption: 'orange', roles: 'purple', security: 'cyan', safety: 'yellow' };
+          return `<span class="tag ${colors[t] || ''}">${t}</span>`;
+        }).join(' ')}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderTimeline() {
+  const tl = document.getElementById('editionTimeline');
+  tl.innerHTML = editions.map(e => `
+    <div class="timeline-entry">
+      <div class="te-date">${e.date}</div>
+      <div class="te-title">${e.title}</div>
+      <div class="te-body">${e.body}</div>
+      <div style="display:flex;gap:16px;margin-top:8px;font-size:0.75rem;color:var(--muted)">
+        <span>${e.voices} voices</span>
+        <span>${e.sources}+ sources</span>
+      </div>
+      <div class="te-tags">${e.tags.map(t => {
+        const colors = { agentic: '', quality: 'red', adoption: 'orange', roles: 'purple', security: 'cyan', safety: 'yellow' };
+        return `<span class="tag ${colors[t] || ''}">${t}</span>`;
+      }).join('')}</div>
+    </div>
+  `).join('');
+}
+
+function renderQuotes() {
+  const container = document.getElementById('quotesContainer');
+  container.innerHTML = quotes.map(q => `
+    <div class="quote-card">
+      <blockquote>${q.text}</blockquote>
+      <div class="quote-author">${q.author}</div>
+      <div class="quote-context">${q.context}</div>
+    </div>
+  `).join('');
+}
+
+function renderAll() {
+  renderVoiceMap();
+  renderVoiceList();
+  renderSignals();
+  renderTimeline();
+  renderQuotes();
+}
+
+// ── Interactions ──────────────────────────────────────────────────
+
+// Tab switching
+function switchTab(btn, tabId) {
+  btn.closest('.card').querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.closest('.card').querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+// Theme filters
+document.querySelectorAll('#theme-filters .filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('#theme-filters .filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeTheme = chip.dataset.theme;
+    renderAll();
+  });
+});
+
+// Stance filters
+document.querySelectorAll('#stance-filters .filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('#stance-filters .filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeStance = chip.dataset.stance;
+    renderAll();
+  });
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+// Active section tracking
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      document.querySelectorAll('.nav-link').forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.card[id]').forEach(card => observer.observe(card));
+
+// Initial render
+renderAll();
+</script>
+</body>
+</html>
