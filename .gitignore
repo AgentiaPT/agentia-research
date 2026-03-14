@@ -1,0 +1,63 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Shell / user dotfiles
+.bash_profile
+.bashrc
+.profile
+.zshrc
+.zprofile
+.gitconfig
+.gitmodules
+.ripgreprc
+.mcp.json
+
+# Git internals (drvfs workaround artifacts)
+HEAD
+config
+hooks
+objects
+refs
+
+# Python
+*.pyc
+__pycache__/
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment & secrets
+.env
+.env.*
+credentials.json
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Large files
+*.h5
+*.pkl
+*.pt
+*.ckpt
+*.bin
+
+# Generated
+projects/index.json
+
+# Temp
+*.tmp
+*.log

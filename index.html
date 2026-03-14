@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>agentIA Research — Open AI-Powered Research & Experiments</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --card: #1a1d27;
+  --border: #2a2d3a;
+  --text: #e0e0e0;
+  --muted: #8890a0;
+  --accent: #6c8cff;
+  --green: #4caf50;
+  --red: #ef5350;
+  --orange: #ff9800;
+  --yellow: #ffd54f;
+  --purple: #b388ff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero .subtitle {
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.hero .description {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+/* Toolbar (sticky search + filters) */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 17, 23, 0.92);
+}
+
+.toolbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-wrap {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.search-wrap svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.chip.status-complete.active { background: var(--green); border-color: var(--green); }
+.chip.status-ongoing.active  { background: var(--orange); border-color: var(--orange); color: #000; }
+.chip.status-draft.active    { background: var(--yellow); border-color: var(--yellow); color: #000; }
+
+.filter-separator {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+  margin: 0 0.35rem;
+}
+
+/* Count bar */
+.count-bar {
+  max-width: 1200px;
+  margin: 1rem auto 0;
+  padding: 0 1.5rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 1rem auto 3rem;
+  padding: 0 1.5rem;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, border-color 0.25s, box-shadow 0.25s;
+  opacity: 0;
+  animation: cardIn 0.45s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px rgba(108, 140, 255, 0.08);
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card .status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.status-complete .status-badge { background: rgba(76,175,80,0.15); color: var(--green); }
+.status-ongoing  .status-badge { background: rgba(255,152,0,0.15); color: var(--orange); }
+.status-draft    .status-badge { background: rgba(255,213,79,0.15); color: var(--yellow); }
+.status-unknown  .status-badge { background: rgba(136,144,160,0.15); color: var(--muted); }
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  padding-right: 5rem;
+  line-height: 1.35;
+}
+
+.card .date {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.card .desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+  line-height: 1.55;
+}
+
+.card .card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.card .tag {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(108, 140, 255, 0.1);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.card .interactive-badge {
+  font-size: 0.68rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(179, 136, 255, 0.12);
+  color: var(--purple);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card .interactive-badge svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Empty state */
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--muted);
+}
+
+.empty h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+/* Error state */
+.error-msg {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+.error-msg h3 {
+  color: var(--orange);
+  margin-bottom: 0.75rem;
+}
+
+.error-msg code {
+  display: inline-block;
+  background: var(--bg);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { padding: 2.5rem 1rem 1.5rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero .subtitle { font-size: 1rem; }
+  .grid { grid-template-columns: 1fr; gap: 1rem; padding: 0 1rem; }
+  .toolbar { padding: 0.75rem 1rem; }
+  .count-bar { padding: 0 1rem; }
+  .card h3 { padding-right: 4.5rem; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>agentIA Research</h1>
+  <p class="subtitle">Open AI-Powered Research &amp; Experiments</p>
+  <p class="description">Deep research, interactive explorations, and tools at the intersection of AI and software engineering.</p>
+</section>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="search-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/></svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search projects by title, description, or tags..." autocomplete="off" />
+    </div>
+    <div class="filter-row" id="filterRow"></div>
+  </div>
+</div>
+
+<div class="count-bar" id="countBar"></div>
+<div class="grid" id="grid"></div>
+
+<footer>
+  Built by agentIA &mdash; exploring what&rsquo;s possible when AI and human curiosity work together.<br>
+  <a href="https://github.com/AgentiaPT/agentia-research" target="_blank" rel="noopener">github.com/AgentiaPT/agentia-research</a>
+</footer>
+
+<script>
+(function() {
+  const grid = document.getElementById('grid');
+  const countBar = document.getElementById('countBar');
+  const filterRow = document.getElementById('filterRow');
+  const searchInput = document.getElementById('searchInput');
+
+  let projects = [];
+  let activeTags = new Set();
+  let activeStatuses = new Set();
+
+  const STATUS_LABELS = { complete: 'complete', ongoing: 'ongoing', draft: 'draft' };
+  const STATUS_ORDER = ['complete', 'ongoing', 'draft'];
+
+  function normalizeStatus(s) {
+    if (!s) return 'unknown';
+    const l = s.toLowerCase().trim();
+    if (STATUS_LABELS[l]) return l;
+    return 'unknown';
+  }
+
+  function cleanDesc(d) {
+    if (!d) return '';
+    // Strip simple markdown bold/italic
+    return d.replace(/\*\*(.+?)\*\*/g, '$1').replace(/\*(.+?)\*/g, '$1').replace(/_(.+?)_/g, '$1');
+  }
+
+  function formatDate(d) {
+    if (!d) return '';
+    const dt = new Date(d + 'T00:00:00');
+    return dt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  }
+
+  function renderFilters() {
+    // Collect all tags
+    const tagCounts = {};
+    projects.forEach(p => (p.tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
+    const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
+
+    // Collect statuses present
+    const statusSet = new Set();
+    projects.forEach(p => { const s = normalizeStatus(p.status); if (s !== 'unknown') statusSet.add(s); });
+
+    let html = '';
+
+    // Status chips
+    if (statusSet.size > 0) {
+      html += '<span class="filter-label">Status</span>';
+      STATUS_ORDER.forEach(s => {
+        if (statusSet.has(s)) {
+          html += `<button class="chip status-${s}" data-status="${s}">${s}</button>`;
+        }
+      });
+    }
+
+    // Separator
+    if (statusSet.size > 0 && sortedTags.length > 0) {
+      html += '<span class="filter-separator"></span>';
+    }
+
+    // Tag chips
+    if (sortedTags.length > 0) {
+      html += '<span class="filter-label">Tags</span>';
+      sortedTags.forEach(t => {
+        html += `<button class="chip tag-chip" data-tag="${t}">${t}</button>`;
+      });
+    }
+
+    filterRow.innerHTML = html;
+
+    // Bind events
+    filterRow.querySelectorAll('[data-status]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const s = btn.dataset.status;
+        if (activeStatuses.has(s)) { activeStatuses.delete(s); btn.classList.remove('active'); }
+        else { activeStatuses.add(s); btn.classList.add('active'); }
+        renderCards();
+      });
+    });
+
+    filterRow.querySelectorAll('[data-tag]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const t = btn.dataset.tag;
+        if (activeTags.has(t)) { activeTags.delete(t); btn.classList.remove('active'); }
+        else { activeTags.add(t); btn.classList.add('active'); }
+        renderCards();
+      });
+    });
+  }
+
+  function getFiltered() {
+    const q = searchInput.value.toLowerCase().trim();
+    return projects.filter(p => {
+      // Search
+      if (q) {
+        const haystack = [p.title || '', cleanDesc(p.description), ...(p.tags || [])].join(' ').toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      // Tags
+      if (activeTags.size > 0) {
+        const pTags = new Set(p.tags || []);
+        for (const t of activeTags) { if (!pTags.has(t)) return false; }
+      }
+      // Status
+      if (activeStatuses.size > 0) {
+        if (!activeStatuses.has(normalizeStatus(p.status))) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderCards() {
+    const filtered = getFiltered();
+    countBar.textContent = `Showing ${filtered.length} of ${projects.length} project${projects.length !== 1 ? 's' : ''}`;
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `<div class="empty"><h3>No projects found</h3><p>Try adjusting your search or filters.</p></div>`;
+      return;
+    }
+
+    grid.innerHTML = filtered.map((p, i) => {
+      const status = normalizeStatus(p.status);
+      const statusLabel = status === 'unknown' ? '' : status;
+      const desc = cleanDesc(p.description);
+      const hasHtml = p.htmlFiles && p.htmlFiles.length > 0;
+      const tags = (p.tags || []).map(t => `<span class="tag">${escHtml(t)}</span>`).join('');
+      const interactiveBadge = hasHtml
+        ? `<span class="interactive-badge"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.986V5.653z"/></svg>Interactive</span>`
+        : '';
+
+      return `<a class="card status-${status}" href="${p.path || ('projects/' + p.id)}/" style="animation-delay:${i * 0.06}s">
+        ${statusLabel ? `<span class="status-badge">${statusLabel}</span>` : ''}
+        <h3>${escHtml(p.title || p.id)}</h3>
+        <span class="date">${formatDate(p.date)}</span>
+        <p class="desc">${escHtml(desc)}</p>
+        <div class="card-footer">${tags}${interactiveBadge}</div>
+      </a>`;
+    }).join('');
+  }
+
+  function escHtml(s) {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function showError() {
+    grid.innerHTML = '';
+    countBar.textContent = '';
+    const msg = document.createElement('div');
+    msg.className = 'error-msg';
+    msg.innerHTML = `<h3>Could not load project data</h3>
+      <p>This page needs to fetch <strong>projects/index.json</strong> but the request failed.
+      This usually happens when opening the file directly (file:// protocol).</p>
+      <p>Try using a local server instead:</p>
+      <code>npx serve .</code>
+      <p style="margin-top:1rem;">Or visit the <a href="https://github.com/AgentiaPT/agentia-research" target="_blank">deployed site</a>.</p>`;
+    grid.parentNode.insertBefore(msg, grid);
+  }
+
+  // Load data
+  fetch('projects/index.json')
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => {
+      projects = (data.projects || []).sort((a, b) => {
+        // Sort newest first (lowest NNNN = newest)
+        return (a.id || '').localeCompare(b.id || '');
+      });
+      renderFilters();
+      renderCards();
+    })
+    .catch(() => showError());
+
+  searchInput.addEventListener('input', renderCards);
+})();
+</script>
+</body>
+</html>
