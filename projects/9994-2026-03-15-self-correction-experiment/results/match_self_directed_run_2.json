@@ -1,0 +1,88 @@
+{
+  "task": "match",
+  "condition": "self_directed",
+  "run_id": 2,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    results = []\n    base = 256\n    mod = 1000000007\n    h = 1\n    for i in range(m - 1):\n        h = (h * base) % mod\n    p_hash = 0\n    t_hash = 0\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            if text[i:i + m] == pattern:\n                results.append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return results",
+      "self_prompt": null
+    },
+    {
+      "iteration": 1,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    text_b = text.encode('latin-1') if isinstance(text, str) else text\n    pat_b = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    results = []\n    base = 256\n    mask = (1 << 61) - 1\n    h = 1\n    for i in range(m - 1):\n        h = (h * base) & mask\n    p_hash = 0\n    t_hash = 0\n    for i in range(m):\n        p_hash = (base * p_hash + pat_b[i]) & mask\n        t_hash = (base * t_hash + text_b[i]) & mask\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            if text_b[i:i + m] == pat_b:\n                results.append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - text_b[i] * h) + text_b[i + m]) & mask\n    return results",
+      "self_prompt": "The current Rabin-Karp implementation uses ord() calls in a tight loop, which creates Python int objects repeatedly. Analyze whether converting the text and pattern to byte arrays upfront would eliminate this overhead. Also consider whether the modular arithmetic (three modulo operations per iteration) is a bottleneck \u2014 could you use a power-of-two modulus with bitwise AND instead? Implement these optimizations and keep the algorithm correct for overlapping matches."
+    },
+    {
+      "iteration": 2,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    text_b = text.encode('latin-1') if isinstance(text, str) else text\n    pat_b = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    if m == 1:\n        target = pat_b[0]\n        return [i for i in range(n) if text_b[i] == target]\n    skip = [m] * 256\n    for i in range(m - 1):\n        skip[pat_b[i]] = m - 1 - i\n    results = []\n    append = results.append\n    last = m - 1\n    i = last\n    while i < n:\n        if text_b[i] == pat_b[last] and text_b[i - last:i + 1] == pat_b:\n            append(i - last)\n            i += 1\n        else:\n            i += skip[text_b[i]]\n    return results",
+      "self_prompt": "The Rabin-Karp hash computation still requires multiple multiplications and additions per character in Python. For pure Python, the hash overhead may outweigh its benefits compared to algorithms that can skip characters entirely. Consider switching to Boyer-Moore-Horspool which uses a bad-character shift table to skip ahead on mismatches \u2014 this often beats Rabin-Karp in practice for typical text. Also add a special fast path for single-character patterns. Implement BMH with bytes for fast indexing."
+    },
+    {
+      "iteration": 3,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    text_b = text.encode('latin-1') if isinstance(text, str) else text\n    pat_b = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    if m == 1:\n        target = pat_b[0]\n        return [i for i in range(n) if text_b[i] == target]\n    fail = [0] * m\n    k = 0\n    for i in range(1, m):\n        while k > 0 and pat_b[k] != pat_b[i]:\n            k = fail[k - 1]\n        if pat_b[k] == pat_b[i]:\n            k += 1\n        fail[i] = k\n    period = m - fail[m - 1]\n    skip = [m] * 256\n    for i in range(m - 1):\n        skip[pat_b[i]] = m - 1 - i\n    last = m - 1\n    last_char = pat_b[last]\n    results = []\n    append = results.append\n    i = last\n    while i < n:\n        if text_b[i] == last_char and text_b[i - last:i + 1] == pat_b:\n            append(i - last)\n            i += period\n        else:\n            s = skip[text_b[i]]\n            i += s if s > 0 else 1\n    return results",
+      "self_prompt": "The Boyer-Moore-Horspool implementation currently advances by only 1 after each match, which is suboptimal for overlapping matches in periodic patterns. Compute the minimum period of the pattern using the KMP failure function, so after a match you can skip by the period length instead of 1. Also verify that slice comparison on bytes objects uses C-level memcmp internally. Ensure the skip table shift is never zero to prevent infinite loops."
+    },
+    {
+      "iteration": 4,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    if isinstance(text, str):\n        try:\n            text_b = text.encode('latin-1')\n        except UnicodeEncodeError:\n            text_b = text.encode('utf-8')\n    else:\n        text_b = text\n    if isinstance(pattern, str):\n        try:\n            pat_b = pattern.encode('latin-1')\n        except UnicodeEncodeError:\n            pat_b = pattern.encode('utf-8')\n    else:\n        pat_b = pattern\n    n = len(text_b)\n    m = len(pat_b)\n    if m > n:\n        return []\n    if m == 1:\n        target = pat_b[0]\n        return [i for i in range(n) if text_b[i] == target]\n    fail = [0] * m\n    k = 0\n    for i in range(1, m):\n        while k > 0 and pat_b[k] != pat_b[i]:\n            k = fail[k - 1]\n        if pat_b[k] == pat_b[i]:\n            k += 1\n        fail[i] = k\n    period = m - fail[m - 1]\n    skip = [m] * 256\n    for i in range(m - 1):\n        skip[pat_b[i]] = m - 1 - i\n    last = m - 1\n    last_char = pat_b[last]\n    first_char = pat_b[0]\n    results = []\n    append = results.append\n    i = last\n    while i < n:\n        if text_b[i] == last_char:\n            start = i - last\n            if text_b[start] == first_char and text_b[start:i + 1] == pat_b:\n                append(start)\n                i += period\n                continue\n        i += skip[text_b[i]]\n    return results",
+      "self_prompt": "The current implementation handles most cases well but has not been stress-tested against edge cases: empty pattern, pattern longer than text, pattern equal to text, all-same-character strings (e.g., 'aaaa' in 'aaaaaa' with overlapping), and Unicode text that may not encode as latin-1. Add robust edge-case handling and a fallback encoding path. Also consider whether pre-checking the first character before the full slice comparison would help reduce unnecessary memcmp calls."
+    },
+    {
+      "iteration": 5,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    if isinstance(text, str):\n        try:\n            text_b = text.encode('latin-1')\n        except UnicodeEncodeError:\n            text_b = text.encode('utf-8')\n    else:\n        text_b = bytes(text) if not isinstance(text, (bytes, bytearray)) else text\n    if isinstance(pattern, str):\n        try:\n            pat_b = pattern.encode('latin-1')\n        except UnicodeEncodeError:\n            pat_b = pattern.encode('utf-8')\n    else:\n        pat_b = bytes(pattern) if not isinstance(pattern, (bytes, bytearray)) else pattern\n    n = len(text_b)\n    m = len(pat_b)\n    if m > n:\n        return []\n    if m == 1:\n        target = pat_b[0]\n        return [i for i in range(n) if text_b[i] == target]\n    if text_b == pat_b:\n        return [0]\n    fail = [0] * m\n    k = 0\n    for i in range(1, m):\n        while k > 0 and pat_b[k] != pat_b[i]:\n            k = fail[k - 1]\n        if pat_b[k] == pat_b[i]:\n            k += 1\n        fail[i] = k\n    period = m - fail[m - 1]\n    skip = [m] * 256\n    for i in range(m - 1):\n        skip[pat_b[i]] = m - 1 - i\n    last = m - 1\n    last_char = pat_b[last]\n    first_char = pat_b[0]\n    results = []\n    append = results.append\n    i = last\n    while i < n:\n        c = text_b[i]\n        if c == last_char:\n            start = i - last\n            if text_b[start] == first_char and text_b[start:i + 1] == pat_b:\n                append(start)\n                i += period\n                continue\n        s = skip[c]\n        i += s if s > 0 else 1\n    return results",
+      "self_prompt": "The code now has BMH with period-based skip after matches and first/last character quick checks. However, there is a potential correctness issue: when the last character matches but the full comparison fails, we fall through to skip[text_b[i]] \u2014 but at this point text_b[i] equals last_char, so skip gives the shift for last_char which might be too small or too large. Walk through the algorithm on find_all('AABAABAAB', 'AABAA') to verify correctness with overlapping patterns. Also consider using a memoryview to avoid copying on encode for large inputs."
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 14.655,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 11.612,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.891,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.65,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.49,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.367,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_directed"
+    }
+  ]
+}

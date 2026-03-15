@@ -1,0 +1,82 @@
+{
+  "task": "match",
+  "condition": "self_correction",
+  "run_id": 2,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash\n    base = 256\n    mod = 1000000007\n    results = []\n    # Compute hash of pattern and first window\n    pat_hash = 0\n    txt_hash = 0\n    h = 1\n    for i in range(m - 1):\n        h = (h * base) % mod\n    for i in range(m):\n        pat_hash = (base * pat_hash + ord(pattern[i])) % mod\n        txt_hash = (base * txt_hash + ord(text[i])) % mod\n    # Slide the pattern over text\n    for i in range(n - m + 1):\n        if pat_hash == txt_hash:\n            # Verify character by character\n            match = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    match = False\n                    break\n            if match:\n                results.append(i)\n        if i < n - m:\n            txt_hash = (base * (txt_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if txt_hash < 0:\n                txt_hash += mod\n    return results"
+    },
+    {
+      "iteration": 1,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash - optimized\n    base = 256\n    mod = (1 << 61) - 1  # Mersenne prime for faster modulo\n    results = []\n    # Precompute ord values\n    text_ords = [ord(c) for c in text]\n    pat_ords = [ord(c) for c in pattern]\n    # Compute hash of pattern and first window\n    pat_hash = 0\n    txt_hash = 0\n    h = pow(base, m - 1, mod)\n    for i in range(m):\n        pat_hash = (base * pat_hash + pat_ords[i]) % mod\n        txt_hash = (base * txt_hash + text_ords[i]) % mod\n    # Slide the pattern\n    results_append = results.append\n    for i in range(n - m + 1):\n        if pat_hash == txt_hash:\n            match = True\n            for j in range(m):\n                if text_ords[i + j] != pat_ords[j]:\n                    match = False\n                    break\n            if match:\n                results_append(i)\n        if i < n - m:\n            txt_hash = (base * (txt_hash - text_ords[i] * h) + text_ords[i + m]) % mod\n    return results"
+    },
+    {
+      "iteration": 2,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    # Rabin-Karp with double hashing to minimize false positives\n    base1 = 256\n    mod1 = (1 << 61) - 1\n    base2 = 131\n    mod2 = (1 << 31) - 1\n    # Precompute ord values for speed\n    text_ords = [ord(c) for c in text]\n    pat_ords = [ord(c) for c in pattern]\n    # Compute hashes of pattern and first window\n    pat_h1 = pat_h2 = 0\n    txt_h1 = txt_h2 = 0\n    h1 = pow(base1, m - 1, mod1)\n    h2 = pow(base2, m - 1, mod2)\n    for i in range(m):\n        pat_h1 = (base1 * pat_h1 + pat_ords[i]) % mod1\n        pat_h2 = (base2 * pat_h2 + pat_ords[i]) % mod2\n        txt_h1 = (base1 * txt_h1 + text_ords[i]) % mod1\n        txt_h2 = (base2 * txt_h2 + text_ords[i]) % mod2\n    results = []\n    results_append = results.append\n    for i in range(n - m + 1):\n        if txt_h1 == pat_h1 and txt_h2 == pat_h2:\n            # Double hash match - verify to be safe\n            match = True\n            for j in range(m):\n                if text_ords[i + j] != pat_ords[j]:\n                    match = False\n                    break\n            if match:\n                results_append(i)\n        if i < n - m:\n            txt_h1 = (base1 * (txt_h1 - text_ords[i] * h1) + text_ords[i + m]) % mod1\n            txt_h2 = (base2 * (txt_h2 - text_ords[i] * h2) + text_ords[i + m]) % mod2\n    return results"
+    },
+    {
+      "iteration": 3,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    if m == 1:\n        # Single character optimization\n        c = pattern[0]\n        return [i for i in range(n) if text[i] == c]\n    # Rabin-Karp with double hashing\n    base1 = 256\n    mod1 = (1 << 61) - 1\n    base2 = 131\n    mod2 = (1 << 31) - 1\n    text_ords = [ord(c) for c in text]\n    pat_ords = [ord(c) for c in pattern]\n    pat_h1 = pat_h2 = 0\n    txt_h1 = txt_h2 = 0\n    h1 = pow(base1, m - 1, mod1)\n    h2 = pow(base2, m - 1, mod2)\n    for i in range(m):\n        pat_h1 = (base1 * pat_h1 + pat_ords[i]) % mod1\n        pat_h2 = (base2 * pat_h2 + pat_ords[i]) % mod2\n        txt_h1 = (base1 * txt_h1 + text_ords[i]) % mod1\n        txt_h2 = (base2 * txt_h2 + text_ords[i]) % mod2\n    results = []\n    append = results.append\n    nm = n - m\n    for i in range(nm + 1):\n        if txt_h1 == pat_h1 and txt_h2 == pat_h2:\n            match = True\n            for j in range(m):\n                if text_ords[i + j] != pat_ords[j]:\n                    match = False\n                    break\n            if match:\n                append(i)\n        if i < nm:\n            ti = text_ords[i]\n            tim = text_ords[i + m]\n            txt_h1 = (base1 * (txt_h1 - ti * h1) + tim) % mod1\n            txt_h2 = (base2 * (txt_h2 - ti * h2) + tim) % mod2\n    return results"
+    },
+    {
+      "iteration": 4,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    if m == 1:\n        c = pattern[0]\n        return [i for i in range(n) if text[i] == c]\n    # Convert to bytes for faster indexing\n    tb = text.encode('latin-1') if isinstance(text, str) else text\n    pb = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    nb = len(tb)\n    mb = len(pb)\n    # Rabin-Karp with single large prime (Mersenne)\n    base = 256\n    mod = (1 << 61) - 1\n    pat_hash = 0\n    txt_hash = 0\n    h = pow(base, mb - 1, mod)\n    for i in range(mb):\n        pat_hash = (base * pat_hash + pb[i]) % mod\n        txt_hash = (base * txt_hash + tb[i]) % mod\n    results = []\n    append = results.append\n    nmb = nb - mb\n    for i in range(nmb + 1):\n        if txt_hash == pat_hash:\n            # Verify match\n            if tb[i:i + mb] == pb:\n                append(i)\n        if i < nmb:\n            txt_hash = (base * (txt_hash - tb[i] * h) + tb[i + mb]) % mod\n    return results"
+    },
+    {
+      "iteration": 5,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    if m == 1:\n        c = pattern[0]\n        return [i for i in range(n) if text[i] == c]\n    # Convert to bytes for fast byte-level comparison and indexing\n    tb = text.encode('latin-1') if isinstance(text, str) else text\n    pb = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    nb = len(tb)\n    mb = len(pb)\n    # Hybrid: Rabin-Karp hash + last-char pre-check\n    base = 256\n    mod = (1 << 61) - 1\n    pat_hash = 0\n    txt_hash = 0\n    h = pow(base, mb - 1, mod)\n    for i in range(mb):\n        pat_hash = (base * pat_hash + pb[i]) % mod\n        txt_hash = (base * txt_hash + tb[i]) % mod\n    results = []\n    append = results.append\n    last_pat = pb[mb - 1]\n    first_pat = pb[0]\n    nmb = nb - mb\n    for i in range(nmb + 1):\n        if txt_hash == pat_hash and tb[i] == first_pat and tb[i + mb - 1] == last_pat:\n            if tb[i:i + mb] == pb:\n                append(i)\n        if i < nmb:\n            txt_hash = (base * (txt_hash - tb[i] * h) + tb[i + mb]) % mod\n    return results"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 10.927,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 10.437,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 18.823,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 16.843,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 8.133,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 8.601,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_correction"
+    }
+  ]
+}

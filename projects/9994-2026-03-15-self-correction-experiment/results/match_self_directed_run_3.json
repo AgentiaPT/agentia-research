@@ -1,0 +1,88 @@
+{
+  "task": "match",
+  "condition": "self_directed",
+  "run_id": 3,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    lps = [0] * m\n    length = 0\n    i = 1\n    while i < m:\n        if pattern[i] == pattern[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length > 0:\n                length = lps[length - 1]\n            else:\n                lps[i] = 0\n                i += 1\n    results = []\n    i = 0\n    j = 0\n    while i < n:\n        if pattern[j] == text[i]:\n            i += 1\n            j += 1\n        if j == m:\n            results.append(i - j)\n            j = lps[j - 1]\n        elif i < n and pattern[j] != text[i]:\n            if j > 0:\n                j = lps[j - 1]\n            else:\n                i += 1\n    return results",
+      "self_prompt": null
+    },
+    {
+      "iteration": 1,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    text_b = text.encode('latin-1') if isinstance(text, str) else text\n    pat_b = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    lps = [0] * m\n    length = 0\n    i = 1\n    while i < m:\n        if pat_b[i] == pat_b[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length > 0:\n                length = lps[length - 1]\n            else:\n                lps[i] = 0\n                i += 1\n    results = []\n    append = results.append\n    i = 0\n    j = 0\n    while i < n:\n        if pat_b[j] == text_b[i]:\n            i += 1\n            j += 1\n        if j == m:\n            append(i - j)\n            j = lps[j - 1]\n        elif i < n and pat_b[j] != text_b[i]:\n            if j > 0:\n                j = lps[j - 1]\n            else:\n                i += 1\n    return results",
+      "self_prompt": "The current KMP implementation operates on Python strings, which means each character comparison involves creating a new single-character string object. This is very slow. Investigate whether converting both text and pattern to bytes (or a bytearray/memoryview) before the search loop would significantly reduce the per-comparison overhead. Also consider caching results.append as a local variable to reduce attribute lookup overhead in the inner loop."
+    },
+    {
+      "iteration": 2,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    text_b = text.encode('latin-1') if isinstance(text, str) else text\n    pat_b = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    if m == 1:\n        t = pat_b[0]\n        return [i for i in range(n) if text_b[i] == t]\n    shift = [m] * 256\n    for i in range(m - 1):\n        shift[pat_b[i]] = m - 1 - i\n    last = m - 1\n    last_ch = pat_b[last]\n    results = []\n    append = results.append\n    i = last\n    while i < n:\n        c = text_b[i]\n        if c == last_ch:\n            start = i - last\n            if text_b[start:i + 1] == pat_b:\n                append(start)\n            i += 1\n        else:\n            i += shift[c]\n    return results",
+      "self_prompt": "KMP processes every character in the text one by one and cannot skip ahead. For typical text searches where the alphabet is large relative to the pattern, Boyer-Moore-Horspool can skip multiple characters at once using a bad-character shift table, making it faster in practice despite having the same worst-case complexity. Implement a BMH variant that uses bytes for fast integer indexing, with slice comparison for the full match check (leveraging C-level memcmp). Add a fast path for single-character patterns."
+    },
+    {
+      "iteration": 3,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    text_b = text.encode('latin-1') if isinstance(text, str) else text\n    pat_b = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    if m == 1:\n        t = pat_b[0]\n        return [i for i in range(n) if text_b[i] == t]\n    lps = [0] * m\n    k = 0\n    for i in range(1, m):\n        while k > 0 and pat_b[k] != pat_b[i]:\n            k = lps[k - 1]\n        if pat_b[k] == pat_b[i]:\n            k += 1\n        lps[i] = k\n    period = m - lps[m - 1]\n    shift = [m] * 256\n    for i in range(m - 1):\n        shift[pat_b[i]] = m - 1 - i\n    last = m - 1\n    last_ch = pat_b[last]\n    first_ch = pat_b[0]\n    results = []\n    append = results.append\n    i = last\n    while i < n:\n        c = text_b[i]\n        if c == last_ch:\n            start = i - last\n            if text_b[start] == first_ch and text_b[start:i + 1] == pat_b:\n                append(start)\n                i += period\n            else:\n                i += 1\n        else:\n            i += shift[c]\n    return results",
+      "self_prompt": "The BMH implementation advances by only 1 after a match or when the last character matches but the full pattern does not. This is wasteful. Two improvements: (1) After a successful match, advance by the pattern's minimum period (computed via KMP failure function) instead of 1 \u2014 this correctly handles overlapping patterns. (2) When the last char matches but the full comparison fails, we should still use the shift table rather than advancing by 1. Also pre-check the first character of the pattern before doing the full slice comparison to avoid unnecessary memcmp calls."
+    },
+    {
+      "iteration": 4,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    if isinstance(text, str):\n        try:\n            text_b = text.encode('latin-1')\n        except UnicodeEncodeError:\n            text_b = text.encode('utf-8')\n    else:\n        text_b = text\n    if isinstance(pattern, str):\n        try:\n            pat_b = pattern.encode('latin-1')\n        except UnicodeEncodeError:\n            pat_b = pattern.encode('utf-8')\n    else:\n        pat_b = pattern\n    n = len(text_b)\n    m = len(pat_b)\n    if m > n:\n        return []\n    if m == 1:\n        t = pat_b[0]\n        return [i for i in range(n) if text_b[i] == t]\n    if text_b == pat_b:\n        return [0]\n    lps = [0] * m\n    k = 0\n    for i in range(1, m):\n        while k > 0 and pat_b[k] != pat_b[i]:\n            k = lps[k - 1]\n        if pat_b[k] == pat_b[i]:\n            k += 1\n        lps[i] = k\n    period = m - lps[m - 1]\n    shift = [m] * 256\n    for i in range(m - 1):\n        shift[pat_b[i]] = m - 1 - i\n    last = m - 1\n    last_ch = pat_b[last]\n    first_ch = pat_b[0]\n    results = []\n    append = results.append\n    i = last\n    while i < n:\n        c = text_b[i]\n        if c == last_ch:\n            start = i - last\n            if text_b[start] == first_ch and text_b[start:i + 1] == pat_b:\n                append(start)\n                i += period\n            else:\n                i += 1\n        else:\n            i += shift[c]\n    return results",
+      "self_prompt": "When the last character matches but the full comparison fails, the code advances by only 1. This is a missed optimization \u2014 the shift table entry for the last character could allow a larger skip. However, using shift[last_ch] here could skip valid matches. A safer approach: when the full comparison fails after a last-char match, compute how far we can safely skip by looking at the next character (i+1) in the text if available, or advance by 1 as fallback. Also add encoding fallback for non-latin-1 text and handle the edge case where text equals pattern."
+    },
+    {
+      "iteration": 5,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    if isinstance(text, str):\n        try:\n            text_b = text.encode('latin-1')\n        except UnicodeEncodeError:\n            text_b = text.encode('utf-8')\n    else:\n        text_b = bytes(text) if not isinstance(text, (bytes, bytearray)) else text\n    if isinstance(pattern, str):\n        try:\n            pat_b = pattern.encode('latin-1')\n        except UnicodeEncodeError:\n            pat_b = pattern.encode('utf-8')\n    else:\n        pat_b = bytes(pattern) if not isinstance(pattern, (bytes, bytearray)) else pattern\n    n = len(text_b)\n    m = len(pat_b)\n    if m > n:\n        return []\n    if m == 1:\n        t = pat_b[0]\n        return [i for i in range(n) if text_b[i] == t]\n    if text_b == pat_b:\n        return [0]\n    lps = [0] * m\n    k = 0\n    for i in range(1, m):\n        while k > 0 and pat_b[k] != pat_b[i]:\n            k = lps[k - 1]\n        if pat_b[k] == pat_b[i]:\n            k += 1\n        lps[i] = k\n    period = m - lps[m - 1]\n    if m <= 255:\n        shift = bytearray([m]) * 256\n        for i in range(m - 1):\n            shift[pat_b[i]] = m - 1 - i\n    else:\n        shift = [m] * 256\n        for i in range(m - 1):\n            shift[pat_b[i]] = m - 1 - i\n    last = m - 1\n    last_ch = pat_b[last]\n    first_ch = pat_b[0]\n    results = []\n    append = results.append\n    i = last\n    while i < n:\n        c = text_b[i]\n        if c == last_ch:\n            start = i - last\n            if text_b[start] == first_ch and text_b[start:i + 1] == pat_b:\n                append(start)\n                i += period\n            else:\n                i += 1\n        else:\n            i += shift[c]\n    return results",
+      "self_prompt": "Review the complete algorithm for correctness on all edge cases: (1) overlapping patterns like 'aa' in 'aaaa', (2) pattern at the very end of text, (3) pattern with all identical characters, (4) no matches at all. Also consider whether the shift table could use a bytearray instead of a list for faster indexing (bytearray uses C array of bytes vs list of Python objects). Note that bytearray values are limited to 0-255 so this only works if m <= 255 \u2014 add a fallback for longer patterns."
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 5.857,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 6.054,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.631,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.516,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.3,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.376,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_directed"
+    }
+  ]
+}

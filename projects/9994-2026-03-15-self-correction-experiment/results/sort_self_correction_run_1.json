@@ -1,0 +1,82 @@
+{
+  "task": "sort",
+  "condition": "self_correction",
+  "run_id": 1,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return fast_sort(left) + middle + fast_sort(right)"
+    },
+    {
+      "iteration": 1,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    if len(arr) <= 16:\n        for i in range(1, len(arr)):\n            key = arr[i]\n            j = i - 1\n            while j >= 0 and arr[j] > key:\n                arr[j + 1] = arr[j]\n                j -= 1\n            arr[j + 1] = key\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return fast_sort(left) + middle + fast_sort(right)"
+    },
+    {
+      "iteration": 2,
+      "code": "def fast_sort(arr):\n    arr = list(arr)\n    def _sort(a, lo, hi):\n        if hi - lo <= 16:\n            for i in range(lo + 1, hi):\n                key = a[i]\n                j = i - 1\n                while j >= lo and a[j] > key:\n                    a[j + 1] = a[j]\n                    j -= 1\n                a[j + 1] = key\n            return\n        mid = (lo + hi) // 2\n        pivot = a[mid]\n        a[mid], a[hi - 1] = a[hi - 1], a[mid]\n        i, j = lo, hi - 2\n        while i <= j:\n            while i <= j and a[i] < pivot:\n                i += 1\n            while i <= j and a[j] > pivot:\n                j -= 1\n            if i <= j:\n                a[i], a[j] = a[j], a[i]\n                i += 1\n                j -= 1\n        a[i], a[hi - 1] = a[hi - 1], a[i]\n        _sort(a, lo, i)\n        _sort(a, i + 1, hi)\n    _sort(arr, 0, len(arr))\n    return arr"
+    },
+    {
+      "iteration": 3,
+      "code": "def fast_sort(arr):\n    arr = list(arr)\n    def _sort(a, lo, hi):\n        if hi - lo <= 32:\n            for i in range(lo + 1, hi):\n                key = a[i]\n                j = i - 1\n                while j >= lo and a[j] > key:\n                    a[j + 1] = a[j]\n                    j -= 1\n                a[j + 1] = key\n            return\n        mid = (lo + hi) // 2\n        if a[lo] > a[mid]:\n            a[lo], a[mid] = a[mid], a[lo]\n        if a[lo] > a[hi - 1]:\n            a[lo], a[hi - 1] = a[hi - 1], a[lo]\n        if a[mid] > a[hi - 1]:\n            a[mid], a[hi - 1] = a[hi - 1], a[mid]\n        pivot = a[mid]\n        a[mid], a[hi - 2] = a[hi - 2], a[mid]\n        i, j = lo + 1, hi - 3\n        while i <= j:\n            while a[i] < pivot:\n                i += 1\n            while a[j] > pivot:\n                j -= 1\n            if i <= j:\n                a[i], a[j] = a[j], a[i]\n                i += 1\n                j -= 1\n        a[i], a[hi - 2] = a[hi - 2], a[i]\n        _sort(a, lo, i)\n        _sort(a, i + 1, hi)\n    if len(arr) > 1:\n        _sort(arr, 0, len(arr))\n    return arr"
+    },
+    {
+      "iteration": 4,
+      "code": "def fast_sort(arr):\n    arr = list(arr)\n    n = len(arr)\n    if n <= 1:\n        return arr\n    def _insertion_sort(a, lo, hi):\n        for i in range(lo + 1, hi):\n            key = a[i]\n            j = i - 1\n            while j >= lo and a[j] > key:\n                a[j + 1] = a[j]\n                j -= 1\n            a[j + 1] = key\n    def _sort(a, lo, hi, depth_limit):\n        while hi - lo > 32:\n            if depth_limit == 0:\n                _heapsort(a, lo, hi)\n                return\n            depth_limit -= 1\n            mid = (lo + hi) // 2\n            if a[lo] > a[mid]:\n                a[lo], a[mid] = a[mid], a[lo]\n            if a[lo] > a[hi - 1]:\n                a[lo], a[hi - 1] = a[hi - 1], a[lo]\n            if a[mid] > a[hi - 1]:\n                a[mid], a[hi - 1] = a[hi - 1], a[mid]\n            pivot = a[mid]\n            a[mid], a[hi - 2] = a[hi - 2], a[mid]\n            i, j = lo + 1, hi - 3\n            while i <= j:\n                while a[i] < pivot:\n                    i += 1\n                while a[j] > pivot:\n                    j -= 1\n                if i <= j:\n                    a[i], a[j] = a[j], a[i]\n                    i += 1\n                    j -= 1\n            a[i], a[hi - 2] = a[hi - 2], a[i]\n            _sort(a, i + 1, hi, depth_limit)\n            hi = i\n        _insertion_sort(a, lo, hi)\n    def _heapsort(a, lo, hi):\n        n = hi - lo\n        def sift_down(start, end):\n            root = start\n            while True:\n                child = 2 * root + 1\n                if child >= end:\n                    break\n                if child + 1 < end and a[lo + child] < a[lo + child + 1]:\n                    child += 1\n                if a[lo + root] < a[lo + child]:\n                    a[lo + root], a[lo + child] = a[lo + child], a[lo + root]\n                    root = child\n                else:\n                    break\n        for start in range(n // 2 - 1, -1, -1):\n            sift_down(start, n)\n        for end in range(n - 1, 0, -1):\n            a[lo], a[lo + end] = a[lo + end], a[lo]\n            sift_down(0, end)\n    depth = 2 * int(n).bit_length()\n    _sort(arr, 0, n, depth)\n    return arr"
+    },
+    {
+      "iteration": 5,
+      "code": "def fast_sort(arr):\n    arr = list(arr)\n    n = len(arr)\n    if n <= 1:\n        return arr\n    def _insertion_sort(a, lo, hi):\n        for i in range(lo + 1, hi):\n            key = a[i]\n            j = i - 1\n            while j >= lo and a[j] > key:\n                a[j + 1] = a[j]\n                j -= 1\n            a[j + 1] = key\n    def _heapsort(a, lo, hi):\n        size = hi - lo\n        def sift_down(start, end):\n            root = start\n            while True:\n                child = 2 * root + 1\n                if child >= end:\n                    break\n                if child + 1 < end and a[lo + child] < a[lo + child + 1]:\n                    child += 1\n                if a[lo + root] < a[lo + child]:\n                    a[lo + root], a[lo + child] = a[lo + child], a[lo + root]\n                    root = child\n                else:\n                    break\n        for start in range(size // 2 - 1, -1, -1):\n            sift_down(start, size)\n        for end in range(size - 1, 0, -1):\n            a[lo], a[lo + end] = a[lo + end], a[lo]\n            sift_down(0, end)\n    def _sort(a, lo, hi, depth_limit):\n        while hi - lo > 32:\n            if depth_limit == 0:\n                _heapsort(a, lo, hi)\n                return\n            depth_limit -= 1\n            mid = (lo + hi) // 2\n            s = hi - lo\n            if s > 100:\n                q1 = lo + s // 4\n                q3 = lo + 3 * s // 4\n                candidates = [(a[lo], lo), (a[q1], q1), (a[mid], mid), (a[q3], q3), (a[hi - 1], hi - 1)]\n                candidates_sorted = [c for c in candidates]\n                candidates_sorted.sort(key=lambda x: x[0])\n                pivot_val, pivot_idx = candidates_sorted[2]\n            else:\n                if a[lo] > a[mid]:\n                    a[lo], a[mid] = a[mid], a[lo]\n                if a[lo] > a[hi - 1]:\n                    a[lo], a[hi - 1] = a[hi - 1], a[lo]\n                if a[mid] > a[hi - 1]:\n                    a[mid], a[hi - 1] = a[hi - 1], a[mid]\n                pivot_val = a[mid]\n                pivot_idx = mid\n            a[pivot_idx], a[hi - 1] = a[hi - 1], a[pivot_idx]\n            pivot = pivot_val\n            lt, gt = lo, hi - 2\n            i = lo\n            while i <= gt:\n                if a[i] < pivot:\n                    a[i], a[lt] = a[lt], a[i]\n                    lt += 1\n                    i += 1\n                elif a[i] > pivot:\n                    a[i], a[gt] = a[gt], a[i]\n                    gt -= 1\n                else:\n                    i += 1\n            a[hi - 1], a[gt + 1] = a[gt + 1], a[hi - 1]\n            _sort(a, gt + 2, hi, depth_limit)\n            hi = lt\n        _insertion_sort(a, lo, hi)\n    depth = 2 * n.bit_length()\n    _sort(arr, 0, n, depth)\n    return arr"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 0.8968,
+      "error": null,
+      "time_ms": 16.727,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 13.106,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 11.319,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 11.226,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 11.618,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.7689,
+      "error": null,
+      "time_ms": 19.508,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_correction"
+    }
+  ]
+}

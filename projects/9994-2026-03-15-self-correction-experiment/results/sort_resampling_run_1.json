@@ -1,0 +1,82 @@
+{
+  "task": "sort",
+  "condition": "resampling",
+  "run_id": 1,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    arr = arr[:]\n    _quicksort(arr, 0, len(arr) - 1)\n    return arr\n\ndef _quicksort(arr, low, high):\n    while low < high:\n        mid = (low + high) // 2\n        a, b, c = arr[low], arr[mid], arr[high]\n        if a <= b <= c or c <= b <= a:\n            arr[mid], arr[high] = arr[high], arr[mid]\n        elif a <= c <= b or b <= c <= a:\n            pass\n        else:\n            arr[low], arr[high] = arr[high], arr[low]\n        pivot = arr[high]\n        i = low - 1\n        for j in range(low, high):\n            if arr[j] <= pivot:\n                i += 1\n                arr[i], arr[j] = arr[j], arr[i]\n        arr[i + 1], arr[high] = arr[high], arr[i + 1]\n        p = i + 1\n        if p - low < high - p:\n            _quicksort(arr, low, p - 1)\n            low = p + 1\n        else:\n            _quicksort(arr, p + 1, high)\n            high = p - 1"
+    },
+    {
+      "iteration": 1,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return list(arr)\n    result = list(arr)\n    n = len(result)\n    width = 1\n    tmp = [0] * n\n    while width < n:\n        for i in range(0, n, 2 * width):\n            left = i\n            mid = min(i + width, n)\n            right = min(i + 2 * width, n)\n            l, r, k = left, mid, left\n            while l < mid and r < right:\n                if result[l] <= result[r]:\n                    tmp[k] = result[l]\n                    l += 1\n                else:\n                    tmp[k] = result[r]\n                    r += 1\n                k += 1\n            while l < mid:\n                tmp[k] = result[l]\n                l += 1\n                k += 1\n            while r < right:\n                tmp[k] = result[r]\n                r += 1\n                k += 1\n        result, tmp = tmp, result\n        width *= 2\n    return result"
+    },
+    {
+      "iteration": 2,
+      "code": "def fast_sort(arr):\n    arr = list(arr)\n    n = len(arr)\n    if n <= 1:\n        return arr\n    for i in range(n // 2 - 1, -1, -1):\n        _sift_down(arr, i, n)\n    for end in range(n - 1, 0, -1):\n        arr[0], arr[end] = arr[end], arr[0]\n        _sift_down(arr, 0, end)\n    return arr\n\ndef _sift_down(arr, start, end):\n    root = start\n    while True:\n        child = 2 * root + 1\n        if child >= end:\n            break\n        if child + 1 < end and arr[child] < arr[child + 1]:\n            child += 1\n        if arr[root] < arr[child]:\n            arr[root], arr[child] = arr[child], arr[root]\n            root = child\n        else:\n            break"
+    },
+    {
+      "iteration": 3,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return list(arr)\n    arr = list(arr)\n    _qsort(arr, 0, len(arr) - 1)\n    return arr\n\ndef _qsort(arr, lo, hi):\n    if lo >= hi:\n        return\n    pivot = arr[hi]\n    i = lo\n    for j in range(lo, hi):\n        if arr[j] < pivot:\n            arr[i], arr[j] = arr[j], arr[i]\n            i += 1\n    arr[i], arr[hi] = arr[hi], arr[i]\n    _qsort(arr, lo, i - 1)\n    _qsort(arr, i + 1, hi)"
+    },
+    {
+      "iteration": 4,
+      "code": "def fast_sort(arr):\n    if not arr:\n        return []\n    arr = list(arr)\n    min_val = min(arr)\n    if min_val < 0:\n        arr = [x - min_val for x in arr]\n    else:\n        min_val = 0\n    max_val = max(arr)\n    if max_val == 0:\n        return [min_val] * len(arr)\n    num_digits = len(str(max_val))\n    exp = 1\n    for _ in range(num_digits):\n        buckets = [[] for _ in range(10)]\n        for num in arr:\n            digit = (num // exp) % 10\n            buckets[digit].append(num)\n        arr = []\n        for bucket in buckets:\n            arr.extend(bucket)\n        exp *= 10\n    if min_val != 0:\n        arr = [x + min_val for x in arr]\n    return arr"
+    },
+    {
+      "iteration": 5,
+      "code": "def fast_sort(arr):\n    import random\n    if len(arr) <= 1:\n        return list(arr)\n    arr = list(arr)\n    _qs(arr, 0, len(arr) - 1, random)\n    return arr\n\ndef _qs(arr, lo, hi, rng):\n    stack = [(lo, hi)]\n    while stack:\n        lo, hi = stack.pop()\n        if lo >= hi:\n            continue\n        pivot_idx = rng.randint(lo, hi)\n        arr[pivot_idx], arr[hi] = arr[hi], arr[pivot_idx]\n        pivot = arr[hi]\n        i = lo - 1\n        for j in range(lo, hi):\n            if arr[j] <= pivot:\n                i += 1\n                arr[i], arr[j] = arr[j], arr[i]\n        arr[i + 1], arr[hi] = arr[hi], arr[i + 1]\n        p = i + 1\n        stack.append((lo, p - 1))\n        stack.append((p + 1, hi))"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 12.23,
+      "correct": true,
+      "iteration": 0,
+      "condition": "resampling"
+    },
+    {
+      "score": 0.7877,
+      "error": null,
+      "time_ms": 19.043,
+      "correct": true,
+      "iteration": 1,
+      "condition": "resampling"
+    },
+    {
+      "score": 0.6686,
+      "error": null,
+      "time_ms": 22.436,
+      "correct": true,
+      "iteration": 2,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 13.484,
+      "correct": true,
+      "iteration": 3,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 5.053,
+      "correct": true,
+      "iteration": 4,
+      "condition": "resampling"
+    },
+    {
+      "score": 0.8837,
+      "error": null,
+      "time_ms": 16.974,
+      "correct": true,
+      "iteration": 5,
+      "condition": "resampling"
+    }
+  ]
+}

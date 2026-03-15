@@ -1,0 +1,88 @@
+{
+  "task": "sort",
+  "condition": "self_directed",
+  "run_id": 1,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    if len(arr) <= 16:\n        # Insertion sort for small arrays\n        result = arr[:]\n        for i in range(1, len(result)):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return fast_sort(left) + middle + fast_sort(right)",
+      "self_prompt": null
+    },
+    {
+      "iteration": 1,
+      "code": "def fast_sort(arr):\n    result = arr[:]\n    \n    def _insertion_sort(a, lo, hi):\n        for i in range(lo + 1, hi + 1):\n            key = a[i]\n            j = i - 1\n            while j >= lo and a[j] > key:\n                a[j + 1] = a[j]\n                j -= 1\n            a[j + 1] = key\n    \n    def _median_of_three(a, lo, hi):\n        mid = (lo + hi) // 2\n        if a[lo] > a[mid]:\n            a[lo], a[mid] = a[mid], a[lo]\n        if a[lo] > a[hi]:\n            a[lo], a[hi] = a[hi], a[lo]\n        if a[mid] > a[hi]:\n            a[mid], a[hi] = a[hi], a[mid]\n        a[mid], a[hi - 1] = a[hi - 1], a[mid]\n        return a[hi - 1]\n    \n    def _quicksort(a, lo, hi):\n        while hi - lo > 16:\n            pivot = _median_of_three(a, lo, hi)\n            i = lo\n            j = hi - 1\n            while True:\n                i += 1\n                while a[i] < pivot:\n                    i += 1\n                j -= 1\n                while a[j] > pivot:\n                    j -= 1\n                if i >= j:\n                    break\n                a[i], a[j] = a[j], a[i]\n            a[i], a[hi - 1] = a[hi - 1], a[i]\n            if i - lo < hi - i:\n                _quicksort(a, lo, i - 1)\n                lo = i + 1\n            else:\n                _quicksort(a, i + 1, hi)\n                hi = i - 1\n        _insertion_sort(a, lo, hi)\n    \n    if len(result) > 1:\n        _quicksort(result, 0, len(result) - 1)\n    return result",
+      "self_prompt": "The current quicksort implementation uses list comprehensions that create three new lists on every recursive call, which is memory-intensive and slow due to repeated allocation. Analyze whether an in-place partitioning scheme (e.g., Lomuto or Hoare partition) would reduce overhead significantly for ~10,000 integers. Rewrite the function to use in-place partitioning while keeping the insertion sort cutoff for small subarrays. Also consider: is median-of-three pivot selection worth adding to avoid worst-case O(n^2) on already-sorted input?"
+    },
+    {
+      "iteration": 2,
+      "code": "def fast_sort(arr):\n    result = arr[:]\n    n = len(result)\n    if n <= 1:\n        return result\n    \n    def _insertion_sort(a, lo, hi):\n        for i in range(lo + 1, hi + 1):\n            key = a[i]\n            j = i - 1\n            while j >= lo and a[j] > key:\n                a[j + 1] = a[j]\n                j -= 1\n            a[j + 1] = key\n    \n    # Iterative quicksort with explicit stack\n    stack = [(0, n - 1)]\n    while stack:\n        lo, hi = stack.pop()\n        if hi - lo <= 16:\n            _insertion_sort(result, lo, hi)\n            continue\n        # Median-of-three pivot\n        mid = (lo + hi) // 2\n        if result[lo] > result[mid]:\n            result[lo], result[mid] = result[mid], result[lo]\n        if result[lo] > result[hi]:\n            result[lo], result[hi] = result[hi], result[lo]\n        if result[mid] > result[hi]:\n            result[mid], result[hi] = result[hi], result[mid]\n        result[mid], result[hi - 1] = result[hi - 1], result[mid]\n        pivot = result[hi - 1]\n        i = lo\n        j = hi - 1\n        while True:\n            i += 1\n            while result[i] < pivot:\n                i += 1\n            j -= 1\n            while result[j] > pivot:\n                j -= 1\n            if i >= j:\n                break\n            result[i], result[j] = result[j], result[i]\n        result[i], result[hi - 1] = result[hi - 1], result[i]\n        # Push larger partition first for better stack behavior\n        if i - lo > hi - i:\n            stack.append((lo, i - 1))\n            stack.append((i + 1, hi))\n        else:\n            stack.append((i + 1, hi))\n            stack.append((lo, i - 1))\n    return result",
+      "self_prompt": "The in-place quicksort with Hoare-style partitioning and tail-call optimization looks solid, but Python function call overhead is significant. Consider whether replacing recursion entirely with an explicit stack (iterative quicksort) would reduce overhead. Also evaluate: would switching to a radix sort for integer-only input be dramatically faster than comparison-based sorting in Python? Benchmark the tradeoffs mentally and implement whichever approach yields the best expected performance for 10,000 random integers."
+    },
+    {
+      "iteration": 3,
+      "code": "def fast_sort(arr):\n    n = len(arr)\n    if n <= 1:\n        return arr[:]\n    \n    # Radix sort (LSD, base 256) - handles negatives via offset\n    min_val = min(arr)\n    # Offset so all values are non-negative\n    if min_val < 0:\n        work = [x - min_val for x in arr]\n    else:\n        work = arr[:]\n    \n    max_val = max(work)\n    \n    # Determine number of bytes needed\n    num_bytes = 0\n    tmp = max_val\n    if tmp == 0:\n        num_bytes = 1\n    else:\n        while tmp > 0:\n            num_bytes += 1\n            tmp >>= 8\n    \n    buf = [0] * n\n    for byte_idx in range(num_bytes):\n        shift = byte_idx * 8\n        count = [0] * 257\n        # Count occurrences\n        for x in work:\n            count[((x >> shift) & 0xFF) + 1] += 1\n        # Prefix sum\n        for i in range(1, 257):\n            count[i] += count[i - 1]\n        # Distribute\n        for x in work:\n            digit = (x >> shift) & 0xFF\n            buf[count[digit]] = x\n            count[digit] += 1\n        work, buf = buf, work\n    \n    # Remove offset\n    if min_val < 0:\n        return [x + min_val for x in work]\n    return work",
+      "self_prompt": "The iterative quicksort is good but we haven't explored radix sort, which avoids comparisons entirely. For 10,000 random integers, an LSD radix sort with base 256 would do only 4 passes (for 32-bit ints) with O(n) work per pass. The challenge is handling negative numbers. Implement a hybrid approach: use radix sort as the main algorithm, handling negatives by offsetting all values, and compare whether this would outperform the comparison-based quicksort in Python. Focus on minimizing Python-level loop iterations."
+    },
+    {
+      "iteration": 4,
+      "code": "def fast_sort(arr):\n    n = len(arr)\n    if n <= 1:\n        return arr[:]\n    if n <= 32:\n        result = arr[:]\n        for i in range(1, n):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    \n    # Radix sort with base 65536 (16-bit digits) - only 2 passes for 32-bit ints\n    min_val = min(arr)\n    if min_val < 0:\n        work = [x - min_val for x in arr]\n    else:\n        work = arr[:]\n    \n    max_val = max(work)\n    buf = [0] * n\n    \n    # Pass 1: lower 16 bits\n    count = [0] * 65537\n    for x in work:\n        count[(x & 0xFFFF) + 1] += 1\n    for i in range(1, 65537):\n        count[i] += count[i - 1]\n    for x in work:\n        digit = x & 0xFFFF\n        buf[count[digit]] = x\n        count[digit] += 1\n    work, buf = buf, work\n    \n    # Pass 2: upper 16 bits (only if needed)\n    if max_val > 0xFFFF:\n        count = [0] * 65537\n        for x in work:\n            count[((x >> 16) & 0xFFFF) + 1] += 1\n        for i in range(1, 65537):\n            count[i] += count[i - 1]\n        for x in work:\n            digit = (x >> 16) & 0xFFFF\n            buf[count[digit]] = x\n            count[digit] += 1\n        work, buf = buf, work\n    \n    if min_val < 0:\n        return [x + min_val for x in work]\n    return work",
+      "self_prompt": "The radix sort handles the algorithmic complexity well but Python's per-element loop overhead in the counting and distribution phases is the bottleneck. Explore whether we can reduce the number of Python-level loop iterations by using a larger radix (e.g., base 65536 for 2 passes instead of 4) or by leveraging array/bytearray operations. Also verify correctness: does the current implementation handle edge cases like empty arrays, single elements, all-same values, and arrays with both large positive and large negative numbers?"
+    },
+    {
+      "iteration": 5,
+      "code": "def fast_sort(arr):\n    n = len(arr)\n    if n <= 1:\n        return arr[:]\n    if n <= 64:\n        result = arr[:]\n        for i in range(1, n):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    \n    min_val = min(arr)\n    max_val = max(arr)\n    \n    # If range is small enough, use counting sort\n    val_range = max_val - min_val\n    if val_range < n * 4:\n        counts = [0] * (val_range + 1)\n        for x in arr:\n            counts[x - min_val] += 1\n        result = []\n        append = result.append\n        for i in range(val_range + 1):\n            c = counts[i]\n            if c:\n                v = i + min_val\n                for _ in range(c):\n                    append(v)\n        return result\n    \n    # Radix sort with base 65536\n    if min_val < 0:\n        work = [x - min_val for x in arr]\n        adjusted_max = max_val - min_val\n    else:\n        work = arr[:]\n        adjusted_max = max_val\n    \n    buf = [0] * n\n    \n    # Pass 1: lower 16 bits\n    count = [0] * 65537\n    for x in work:\n        count[(x & 0xFFFF) + 1] += 1\n    for i in range(1, 65537):\n        count[i] += count[i - 1]\n    for x in work:\n        d = x & 0xFFFF\n        buf[count[d]] = x\n        count[d] += 1\n    work, buf = buf, work\n    \n    # Pass 2: upper bits only if needed\n    if adjusted_max > 0xFFFF:\n        count = [0] * 65537\n        for x in work:\n            count[((x >> 16) & 0xFFFF) + 1] += 1\n        for i in range(1, 65537):\n            count[i] += count[i - 1]\n        for x in work:\n            d = (x >> 16) & 0xFFFF\n            buf[count[d]] = x\n            count[d] += 1\n        work, buf = buf, work\n    \n    if min_val < 0:\n        return [x + min_val for x in work]\n    return work",
+      "self_prompt": "We've optimized the radix sort to use base 65536 with only 2 passes. Now consider a fundamentally different angle: Python's overhead per loop iteration is ~50-100ns, so for 10,000 elements with 2 passes, we do ~40,000 iterations just in distribution. Can we reduce Python-level work further by: (1) combining the count and prefix-sum into a single-pass approach, (2) using memoryview or array module for faster element access, or (3) pre-computing both passes' digit extractions in a single scan? Also consider: for typical random int ranges, is there a way to detect when only 1 pass is needed and skip the second entirely?"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 0.9593,
+      "error": null,
+      "time_ms": 15.637,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 12.026,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 11.388,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 7.14,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_directed"
+    },
+    {
+      "score": 0.8215,
+      "error": null,
+      "time_ms": 18.258,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_directed"
+    },
+    {
+      "score": 0.8606,
+      "error": null,
+      "time_ms": 17.429,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_directed"
+    }
+  ]
+}

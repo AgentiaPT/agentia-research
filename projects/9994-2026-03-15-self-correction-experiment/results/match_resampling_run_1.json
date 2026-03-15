@@ -1,0 +1,82 @@
+{
+  "task": "match",
+  "condition": "resampling",
+  "run_id": 1,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def find_all(text, pattern):\n    \"\"\"KMP (Knuth-Morris-Pratt) string matching algorithm.\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    # Build failure function\n    fail = [0] * m\n    j = 0\n    for i in range(1, m):\n        while j > 0 and pattern[j] != pattern[i]:\n            j = fail[j - 1]\n        if pattern[j] == pattern[i]:\n            j += 1\n        fail[i] = j\n    # Search\n    result = []\n    j = 0\n    for i in range(n):\n        while j > 0 and pattern[j] != text[i]:\n            j = fail[j - 1]\n        if pattern[j] == text[i]:\n            j += 1\n        if j == m:\n            result.append(i - m + 1)\n            j = fail[j - 1]\n    return result"
+    },
+    {
+      "iteration": 1,
+      "code": "def find_all(text, pattern):\n    \"\"\"Rabin-Karp with rolling hash.\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    base = 256\n    mod = 1000000007\n    result = []\n    # Compute hash of pattern and first window\n    p_hash = 0\n    t_hash = 0\n    h = 1\n    for i in range(m - 1):\n        h = (h * base) % mod\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            # Verify character by character\n            match = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    match = False\n                    break\n            if match:\n                result.append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return result"
+    },
+    {
+      "iteration": 2,
+      "code": "def find_all(text, pattern):\n    \"\"\"Boyer-Moore-Horspool algorithm.\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    # Build bad character shift table\n    shift = {}\n    for i in range(m - 1):\n        shift[pattern[i]] = m - 1 - i\n    default_shift = m\n    result = []\n    i = 0\n    while i <= n - m:\n        j = m - 1\n        while j >= 0 and text[i + j] == pattern[j]:\n            j -= 1\n        if j < 0:\n            result.append(i)\n            i += 1\n        else:\n            i += shift.get(text[i + m - 1], default_shift)\n    return result"
+    },
+    {
+      "iteration": 3,
+      "code": "def find_all(text, pattern):\n    \"\"\"Z-algorithm based string matching.\"\"\"\n    m = len(pattern)\n    n = len(text)\n    if m == 0 or m > n:\n        return []\n    concat = pattern + '$' + text\n    total = len(concat)\n    z = [0] * total\n    z[0] = total\n    l, r = 0, 0\n    for i in range(1, total):\n        if i < r:\n            z[i] = min(r - i, z[i - l])\n        while i + z[i] < total and concat[z[i]] == concat[i + z[i]]:\n            z[i] += 1\n        if i + z[i] > r:\n            l, r = i, i + z[i]\n    result = []\n    for i in range(m + 1, total):\n        if z[i] == m:\n            result.append(i - m - 1)\n    return result"
+    },
+    {
+      "iteration": 4,
+      "code": "def find_all(text, pattern):\n    \"\"\"Two-way string matching algorithm (simplified).\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    result = []\n    # Compute maximal suffix\n    def max_suffix(p, order):\n        ms = -1\n        j = 0\n        k = 1\n        period = 1\n        length = len(p)\n        while j + k < length:\n            a = p[j + k]\n            b = p[ms + k]\n            if (order and a < b) or (not order and a > b):\n                j += k\n                k = 1\n                period = j - ms\n            elif a == b:\n                if k == period:\n                    j += period\n                    k = 1\n                else:\n                    k += 1\n            else:\n                ms = j\n                j = ms + 1\n                k = 1\n                period = 1\n        return ms, period\n    ms1, p1 = max_suffix(pattern, True)\n    ms2, p2 = max_suffix(pattern, False)\n    if ms1 >= ms2:\n        ms, period = ms1, p1\n    else:\n        ms, period = ms2, p2\n    # Search phase\n    i = 0\n    memory = 0\n    split = ms + 1\n    if pattern[:split] == pattern[period:period + split]:\n        while i <= n - m:\n            j = max(split, memory)\n            while j < m and text[i + j] == pattern[j]:\n                j += 1\n            if j < m:\n                i += max(1, j - ms)\n                memory = 0\n            else:\n                j = split - 1\n                while j >= memory and text[i + j] == pattern[j]:\n                    j -= 1\n                if j < memory:\n                    result.append(i)\n                i += period\n                memory = m - period\n    else:\n        while i <= n - m:\n            j = split\n            while j < m and text[i + j] == pattern[j]:\n                j += 1\n            if j < m:\n                i += max(1, j - ms)\n            else:\n                j = split - 1\n                while j >= 0 and text[i + j] == pattern[j]:\n                    j -= 1\n                if j < 0:\n                    result.append(i)\n                i += max(1, split - j)\n    return result"
+    },
+    {
+      "iteration": 5,
+      "code": "def find_all(text, pattern):\n    \"\"\"Bitap (shift-or) algorithm for exact matching.\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    if m > 63:\n        # Fall back to naive for very long patterns\n        result = []\n        for i in range(n - m + 1):\n            match = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    match = False\n                    break\n            if match:\n                result.append(i)\n        return result\n    # Build character masks\n    char_mask = {}\n    for i in range(m):\n        c = pattern[i]\n        if c not in char_mask:\n            char_mask[c] = ~0\n        char_mask[c] &= ~(1 << i)\n    result = []\n    state = ~0\n    match_bit = 1 << (m - 1)\n    for i in range(n):\n        state = (state << 1) | char_mask.get(text[i], ~0)\n        if not (state & match_bit):\n            result.append(i - m + 1)\n    return result"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 3.542,
+      "correct": true,
+      "iteration": 0,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 10.972,
+      "correct": true,
+      "iteration": 1,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 2.684,
+      "correct": true,
+      "iteration": 2,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 11.703,
+      "correct": true,
+      "iteration": 3,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 7.135,
+      "correct": true,
+      "iteration": 4,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 3.726,
+      "correct": true,
+      "iteration": 5,
+      "condition": "resampling"
+    }
+  ]
+}

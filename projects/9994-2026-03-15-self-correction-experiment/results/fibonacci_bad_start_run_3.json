@@ -1,0 +1,82 @@
+{
+  "task": "fibonacci",
+  "condition": "bad_start",
+  "run_id": 3,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    return fibonacci(n - 1) + fibonacci(n - 2)"
+    },
+    {
+      "iteration": 1,
+      "code": "def fibonacci(n, _cache={0: 0, 1: 1}):\n    if n in _cache:\n        return _cache[n]\n    _cache[n] = fibonacci(n - 1, _cache) + fibonacci(n - 2, _cache)\n    return _cache[n]"
+    },
+    {
+      "iteration": 2,
+      "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    a, b = 0, 1\n    for _ in range(n - 1):\n        a, b = b, a + b\n    return b"
+    },
+    {
+      "iteration": 3,
+      "code": "def fibonacci(n):\n    if n < 0:\n        return 0\n    def _fib_pair(n):\n        if n == 0:\n            return (0, 1)\n        a, b = _fib_pair(n >> 1)\n        c = a * (2 * b - a)\n        d = a * a + b * b\n        if n & 1:\n            return (d, c + d)\n        return (c, d)\n    return _fib_pair(n)[0]"
+    },
+    {
+      "iteration": 4,
+      "code": "def fibonacci(n):\n    if n < 0:\n        return 0\n    if n == 0:\n        return 0\n    a, b = 0, 1\n    bit_length = n.bit_length()\n    for i in range(bit_length - 1, -1, -1):\n        c = a * (2 * b - a)\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    return a"
+    },
+    {
+      "iteration": 5,
+      "code": "def fibonacci(n):\n    if n < 0:\n        return 0\n    if n == 0:\n        return 0\n    a, b = 0, 1\n    bit_length = n.bit_length()\n    for i in range(bit_length - 1, -1, -1):\n        t = a * ((b << 1) - a)\n        u = a * a + b * b\n        if (n >> i) & 1:\n            a, b = u, t + u\n        else:\n            a, b = t, u\n    return a"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 0.2,
+      "error": "fibonacci(10000) failed: maximum recursion depth exceeded",
+      "time_ms": null,
+      "correct": true,
+      "iteration": 0,
+      "condition": "bad_start"
+    },
+    {
+      "score": 0.2,
+      "error": "fibonacci(10000) failed: maximum recursion depth exceeded",
+      "time_ms": null,
+      "correct": true,
+      "iteration": 1,
+      "condition": "bad_start"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.987,
+      "correct": true,
+      "iteration": 2,
+      "condition": "bad_start"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.031,
+      "correct": true,
+      "iteration": 3,
+      "condition": "bad_start"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.03,
+      "correct": true,
+      "iteration": 4,
+      "condition": "bad_start"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.025,
+      "correct": true,
+      "iteration": 5,
+      "condition": "bad_start"
+    }
+  ]
+}

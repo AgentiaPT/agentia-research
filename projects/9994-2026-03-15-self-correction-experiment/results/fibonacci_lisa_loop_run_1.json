@@ -1,0 +1,88 @@
+{
+  "task": "fibonacci",
+  "condition": "lisa_loop",
+  "run_id": 1,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+      "reasoning": "Starting point. O(n) iterative approach. For n=10000, performs 9999 big-integer additions. Fibonacci(10000) has ~2000 digits, so each addition operates on large integers."
+    },
+    {
+      "iteration": 1,
+      "code": "def fibonacci(n):\n    if n < 0:\n        return 0\n    def _fib(n):\n        if n == 0:\n            return (0, 1)\n        a, b = _fib(n >> 1)\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        if n & 1:\n            return (d, c + d)\n        else:\n            return (c, d)\n    return _fib(n)[0]",
+      "reasoning": "Fast doubling algorithm (recursive). Uses identities F(2k) = F(k)[2F(k+1) - F(k)] and F(2k+1) = F(k)^2 + F(k+1)^2. Reduces from O(n) additions to O(log n) iterations with multiplications. For n=10000, only ~13 iterations instead of 9999. Trade-off: big-int multiplications are more expensive than additions, but far fewer iterations more than compensates."
+    },
+    {
+      "iteration": 2,
+      "code": "def fibonacci(n):\n    if n < 0:\n        return 0\n    if n == 0:\n        return 0\n    a, b = 0, 1\n    for bit in bin(n)[2:]:\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        if bit == '1':\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    return a",
+      "reasoning": "Converted recursive fast doubling to iterative to eliminate function call overhead. Processes bits of n from MSB to LSB using bin() string conversion. Same O(log n) complexity but no recursion stack."
+    },
+    {
+      "iteration": 3,
+      "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    a, b = 0, 1\n    for i in range(n.bit_length() - 1, -1, -1):\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    return a",
+      "reasoning": "Replaced bin() string conversion with bit manipulation using n.bit_length() and bit shifts. Avoids string allocation and character comparison overhead. Uses integer operations throughout which are faster than string ops in CPython."
+    },
+    {
+      "iteration": 4,
+      "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    a, b = 0, 1\n    for i in range(n.bit_length() - 1, -1, -1):\n        a2 = a * a\n        c = ((a * b) << 1) - a2\n        d = a2 + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    return a",
+      "reasoning": "Attempted to cache a*a to avoid recomputation. Rewrote c = a*(2b-a) as 2ab - a^2. However, analysis showed this uses 3 multiplications (a*a, a*b, b*b) same as iteration 3 (a*(2b-a), a*a, b*b) but iteration 3 actually does the (2b-a) with a cheap shift+subtract before the single multiplication. So this is NOT better - iteration 3 saves one multiplication by combining the 2b-a computation into a single multiply."
+    },
+    {
+      "iteration": 5,
+      "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    a, b = 0, 1\n    for i in range(n.bit_length() - 1, -1, -1):\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    return a",
+      "reasoning": "Reverted to iteration 3 after analysis confirmed it is optimal. Considered matrix exponentiation (same O(log n) but 8 mults per step vs 3), gmpy2 (external dependency, not pure Python), and Karatsuba-style tricks (still 3 mults minimum). The iterative fast doubling with bit manipulation is the best pure-Python approach: O(log n) steps, 3 big-int multiplications per step, no recursion, no string allocation. For n=10000, this performs ~13 iterations with 3 mults each = ~39 big-int multiplications, versus the original's 9999 big-int additions."
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.171,
+      "correct": true,
+      "iteration": 0,
+      "condition": "lisa_loop"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.031,
+      "correct": true,
+      "iteration": 1,
+      "condition": "lisa_loop"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.032,
+      "correct": true,
+      "iteration": 2,
+      "condition": "lisa_loop"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.029,
+      "correct": true,
+      "iteration": 3,
+      "condition": "lisa_loop"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.03,
+      "correct": true,
+      "iteration": 4,
+      "condition": "lisa_loop"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.031,
+      "correct": true,
+      "iteration": 5,
+      "condition": "lisa_loop"
+    }
+  ]
+}

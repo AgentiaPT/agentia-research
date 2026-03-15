@@ -1,0 +1,82 @@
+{
+  "task": "match",
+  "condition": "self_correction",
+  "run_id": 3,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    # Boyer-Moore-Horspool: build bad character table\n    bad_char = {}\n    for i in range(m - 1):\n        bad_char[pattern[i]] = m - 1 - i\n    results = []\n    i = 0\n    while i <= n - m:\n        j = m - 1\n        while j >= 0 and text[i + j] == pattern[j]:\n            j -= 1\n        if j < 0:\n            results.append(i)\n            i += 1\n        else:\n            skip = bad_char.get(text[i + m - 1], m)\n            i += skip\n    return results"
+    },
+    {
+      "iteration": 1,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    # Boyer-Moore-Horspool with optimized bad character table\n    bad_char = [m] * 256\n    for i in range(m - 1):\n        bad_char[ord(pattern[i])] = m - 1 - i\n    results = []\n    results_append = results.append\n    i = 0\n    while i <= n - m:\n        j = m - 1\n        while j >= 0 and text[i + j] == pattern[j]:\n            j -= 1\n        if j < 0:\n            results_append(i)\n            i += 1\n        else:\n            i += bad_char[ord(text[i + m - 1])]\n    return results"
+    },
+    {
+      "iteration": 2,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    # Convert to bytes for fast indexing\n    tb = text.encode('latin-1') if isinstance(text, str) else text\n    pb = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    nb = len(tb)\n    mb = len(pb)\n    # Boyer-Moore-Horspool with byte-level bad character table\n    bad_char = [mb] * 256\n    for i in range(mb - 1):\n        bad_char[pb[i]] = mb - 1 - i\n    results = []\n    results_append = results.append\n    i = 0\n    while i <= nb - mb:\n        j = mb - 1\n        while j >= 0 and tb[i + j] == pb[j]:\n            j -= 1\n        if j < 0:\n            results_append(i)\n            i += 1\n        else:\n            i += bad_char[tb[i + mb - 1]]\n    return results"
+    },
+    {
+      "iteration": 3,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    if m == 1:\n        c = pattern[0]\n        return [i for i in range(n) if text[i] == c]\n    # Convert to bytes for fast element access\n    tb = text.encode('latin-1') if isinstance(text, str) else text\n    pb = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    nb = len(tb)\n    mb = len(pb)\n    # Boyer-Moore-Horspool\n    bad_char = [mb] * 256\n    for i in range(mb - 1):\n        bad_char[pb[i]] = mb - 1 - i\n    results = []\n    append = results.append\n    last = pb[mb - 1]\n    i = 0\n    nm = nb - mb\n    while i <= nm:\n        # Check last character first for early bail-out\n        if tb[i + mb - 1] == last:\n            j = mb - 2\n            while j >= 0 and tb[i + j] == pb[j]:\n                j -= 1\n            if j < 0:\n                append(i)\n                i += 1\n                continue\n        i += bad_char[tb[i + mb - 1]]\n    return results"
+    },
+    {
+      "iteration": 4,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    if m == 1:\n        c = pattern[0]\n        return [i for i in range(n) if text[i] == c]\n    # Convert to bytes\n    tb = text.encode('latin-1') if isinstance(text, str) else text\n    pb = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    nb = len(tb)\n    mb = len(pb)\n    # Boyer-Moore-Horspool with Sunday's improvement\n    # Shift table looks at the character AFTER the current window\n    bad_char = [mb + 1] * 256\n    for i in range(mb):\n        bad_char[pb[i]] = mb - i\n    results = []\n    append = results.append\n    i = 0\n    nm = nb - mb\n    while i <= nm:\n        j = 0\n        while j < mb and tb[i + j] == pb[j]:\n            j += 1\n        if j == mb:\n            append(i)\n        if i + mb < nb:\n            i += bad_char[tb[i + mb]]\n        else:\n            break\n    return results"
+    },
+    {
+      "iteration": 5,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    if m == 1:\n        c = pattern[0]\n        return [i for i in range(n) if text[i] == c]\n    # Convert to bytes for fast byte-level operations\n    tb = text.encode('latin-1') if isinstance(text, str) else text\n    pb = pattern.encode('latin-1') if isinstance(pattern, str) else pattern\n    nb = len(tb)\n    mb = len(pb)\n    # Boyer-Moore-Horspool with combined shift tables\n    # Bad character shift based on last position\n    bad_char = [mb] * 256\n    for i in range(mb - 1):\n        bad_char[pb[i]] = mb - 1 - i\n    results = []\n    append = results.append\n    i = 0\n    nm = nb - mb\n    last_pb = pb[mb - 1]\n    first_pb = pb[0]\n    while i <= nm:\n        # Quick pre-checks on first and last chars before full comparison\n        if tb[i + mb - 1] == last_pb and tb[i] == first_pb:\n            if tb[i:i + mb] == pb:\n                append(i)\n                i += 1\n                continue\n        i += bad_char[tb[i + mb - 1]]\n    return results"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 2.605,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 2.65,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 2.45,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 2.088,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 2.631,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.83,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_correction"
+    }
+  ]
+}

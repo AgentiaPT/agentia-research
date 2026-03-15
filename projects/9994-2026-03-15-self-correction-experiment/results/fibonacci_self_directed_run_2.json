@@ -1,0 +1,88 @@
+{
+  "task": "fibonacci",
+  "condition": "self_directed",
+  "run_id": 2,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    prev, curr = 0, 1\n    for i in range(2, n + 1):\n        prev, curr = curr, prev + curr\n    return curr",
+      "self_prompt": null
+    },
+    {
+      "iteration": 1,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    def _fast_double(n):\n        if n == 0:\n            return (0, 1)\n        k, r = divmod(n, 2)\n        fk, fk1 = _fast_double(k)\n        # F(2k) = F(k) * (2*F(k+1) - F(k))\n        # F(2k+1) = F(k)^2 + F(k+1)^2\n        f2k = fk * (2 * fk1 - fk)\n        f2k1 = fk * fk + fk1 * fk1\n        if r:\n            return (f2k1, f2k + f2k1)\n        return (f2k, f2k1)\n    \n    return _fast_double(n)[0]",
+      "self_prompt": "This is a basic O(n) iterative solution. For n=10000, it does 10000 iterations of big-integer addition. While additions of ~2000-digit numbers are fast, there exists an O(log n) approach using fast doubling that would only need ~14 iterations (but with more expensive multiplications). For n=10000, which approach actually wins in practice? The fast doubling approach does O(log n) multiplications of numbers with O(n) digits, while the iterative approach does O(n) additions of numbers with up to O(n) digits. Since big-integer multiplication is super-linear while addition is linear, the crossover point matters. Implement the fast doubling method and reason about which is faster for n=10000."
+    },
+    {
+      "iteration": 2,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1  # F(0), F(1)\n    \n    # Process bits from MSB to LSB\n    for i in range(n.bit_length() - 1, -1, -1):\n        # Doubling step\n        c = a * ((b << 1) - a)   # F(2k)\n        d = a * a + b * b         # F(2k+1)\n        \n        if (n >> i) & 1:\n            a, b = d, c + d       # Shift to F(2k+1), F(2k+2)\n        else:\n            a, b = c, d           # Stay at F(2k), F(2k+1)\n    \n    return a",
+      "self_prompt": "The recursive fast doubling works but has Python function call overhead for each recursive step. For n=10000, recursion depth is only ~14, so it won't hit the recursion limit, but iterative would still be faster by avoiding frame allocation. Convert to iterative by processing bits of n from MSB to LSB. Also, I used divmod and multiplication with 2 instead of bit shifts. Replace 2*fk1 with fk1 << 1, and divmod(n,2) with bit operations for micro-optimization. Profile the bit-processing approach."
+    },
+    {
+      "iteration": 3,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1  # F(0), F(1)\n    \n    for i in range(n.bit_length() - 1, -1, -1):\n        # Doubling formulas using 2 multiplications + 1 squaring:\n        # Let s = a + b (no mul needed)\n        # a*a gives F(k)^2\n        # Use: F(2k) = F(k)*(2*F(k+1) - F(k)) still needs a*b or a*(2b-a)\n        # \n        # Sticking with the standard 3-mul approach since reducing to 2\n        # doesn't have a clean algebraic path without adding more additions\n        # that negate the savings for numbers this size.\n        t = a * ((b << 1) - a)   # F(2k)\n        u = a * a + b * b         # F(2k+1)\n        \n        if (n >> i) & 1:\n            a, b = u, t + u\n        else:\n            a, b = t, u\n    \n    return a",
+      "self_prompt": "The code now uses iterative fast doubling with bit shifts. Let me think about what else could be improved. One angle I haven't explored: memory allocation patterns. Each iteration creates new big integers for c, d, and the tuple unpacking creates temporaries. In Python, this is unavoidable without ctypes/C extensions, so that's a dead end. Another angle: can I reduce the number of big-integer multiplications? Currently each doubling step does 3 multiplications: a*(2b-a), a*a, b*b. Is there a way to compute F(2k) and F(2k+1) with only 2 multiplications? Consider: if I compute a*b and a*a, then F(2k) = 2*a*b - a*a and F(2k+1) = a*a + b*b. But b*b is still needed separately. What about using (a+b)^2 = a^2 + 2ab + b^2? Then b^2 = (a+b)^2 - a^2 - 2ab. That requires computing (a+b)^2, a^2, and a*b \u2014 still 3 muls. Try another identity."
+    },
+    {
+      "iteration": 4,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    # Local references for slight CPython speedup\n    bit_length = n.bit_length()\n    \n    for i in range(bit_length - 1, -1, -1):\n        # Fast doubling: F(2k) and F(2k+1) from F(k) and F(k+1)\n        t = a * ((b << 1) - a)\n        u = a * a + b * b\n        if (n >> i) & 1:\n            a, b = u, t + u\n        else:\n            a, b = t, u\n    \n    return a",
+      "self_prompt": "I've been focused on algorithmic optimization but haven't considered an alternative fast approach: the matrix exponentiation method. [[1,1],[1,0]]^n gives [[F(n+1),F(n)],[F(n),F(n-1)]]. This is also O(log n) but involves 2x2 matrix multiplication which is 8 multiplications per step vs 3 for fast doubling. So fast doubling is strictly better. Let me instead focus on Python-specific performance: are there ways to make the existing code faster using Python-specific tricks? For instance, using local variable access (which is faster than global in CPython), or restructuring the loop. Also verify: is the bit iteration range correct? For n=10, bit_length is 4, so we iterate bits 3,2,1,0. Starting with (0,1), after processing all bits of 10 (binary 1010), we should get F(10)=55. Verify this mentally."
+    },
+    {
+      "iteration": 5,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    \n    for i in range(n.bit_length() - 1, -1, -1):\n        # Fast doubling:\n        # F(2k)   = F(k) * [2*F(k+1) - F(k)]\n        # F(2k+1) = F(k)^2 + F(k+1)^2\n        t = a * ((b << 1) - a)\n        u = a * a + b * b\n        if (n >> i) & 1:\n            a, b = u, t + u\n        else:\n            a, b = t, u\n    \n    return a",
+      "self_prompt": "At this point the algorithm is optimal for pure Python: iterative fast doubling with O(log n) big-integer multiplications. Let me consider one final angle: the squaring operation. In the line `a * a + b * b`, both are squarings. Python's int.__mul__ does detect when both operands are the same object and can use a specialized squaring algorithm that's faster than general multiplication (Karatsuba squaring). But `a * a` in Python doesn't necessarily trigger this \u2014 it depends on CPython internals. Using `pow(a, 2)` won't help either. There's no way to force this in pure Python. Let me do a final cleanup pass: ensure the code is minimal, clear, handles all edge cases, and has no unnecessary operations. Remove the unnecessary bit_length variable since it's used only once."
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.244,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.033,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.034,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.034,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.035,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.035,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_directed"
+    }
+  ]
+}

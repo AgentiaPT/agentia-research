@@ -1,0 +1,88 @@
+{
+  "task": "fibonacci",
+  "condition": "self_directed",
+  "run_id": 3,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+      "self_prompt": null
+    },
+    {
+      "iteration": 1,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    \n    # Iterate from MSB to LSB of n\n    for bit in range(n.bit_length() - 1, -1, -1):\n        # Double: compute F(2k), F(2k+1)\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        # If current bit is set, advance by one more step\n        if (n >> bit) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a",
+      "self_prompt": "The linear iterative approach does n-1 additions. For n=10000, Fibonacci numbers have roughly 2090 digits, so each addition toward the end operates on ~2000-digit numbers. Total work is O(n * digits) = O(n^2) since digit count grows linearly with n. The fast doubling method does O(log n) steps but each involves multiplications of similarly large numbers. Big-integer multiplication of d-digit numbers is O(d^1.585) with Karatsuba. Total work for fast doubling: O(log n * d^1.585) where d = O(n), giving O(n^1.585 * log n). Compare: O(n^2) vs O(n^1.585 * log n) \u2014 fast doubling wins for large n. Implement fast doubling. Use an iterative approach from the start to avoid function call overhead."
+    },
+    {
+      "iteration": 2,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    \n    for bit in range(n.bit_length() - 1, -1, -1):\n        # Fast doubling formulas:\n        # F(2k)   = F(k) * [2*F(k+1) - F(k)]\n        # F(2k+1) = F(k)**2 + F(k+1)**2\n        two_b_minus_a = (b << 1) - a\n        c = a * two_b_minus_a\n        d = a * a + b * b\n        if (n >> bit) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a",
+      "self_prompt": "I jumped straight to the optimal algorithm. Let me now stress-test the logic mentally. For n=10 (binary 1010, bit_length=4), iterate bits 3,2,1,0:\n- bit=3: n>>3 & 1 = 1. a=0,b=1 -> c=0*(2-0)=0, d=0+1=1. Bit set: a,b = 1,1. Now tracking F(1),F(2).\n- bit=2: n>>2 & 1 = 0. a=1,b=1 -> c=1*(2-1)=1, d=1+1=2. Bit clear: a,b = 1,2. Now F(2),F(3)? No wait, F(2)=1, F(3)=2. Yes.\n- bit=1: n>>1 & 1 = 1. a=1,b=2 -> c=1*(4-1)=3, d=1+4=5. Bit set: a,b = 5,8. F(5)=5, F(6)=8. Yes.\n- bit=0: n>>0 & 1 = 0. a=5,b=8 -> c=5*(16-5)=55, d=25+64=89. Bit clear: a,b = 55,89. F(10)=55. Correct!\n\nThe algorithm is verified. Now let me think about whether there's a meaningful optimization left. What about using Python's `**` operator for squaring (a**2 instead of a*a)? Does CPython treat them differently? Also, could precomputing (b << 1) - a into a named variable improve readability without affecting speed?"
+    },
+    {
+      "iteration": 3,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    \n    for bit in range(n.bit_length() - 1, -1, -1):\n        # Fast doubling:\n        # F(2k)   = F(k) * (2*F(k+1) - F(k))\n        # F(2k+1) = F(k)^2 + F(k+1)^2\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        if (n >> bit) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a",
+      "self_prompt": "I've optimized the algorithm to O(log n) with iterative fast doubling. Let me explore a completely different direction: can I use a lookup table or memoization-like caching within the function (without functools) to speed things up? For a single call, a cache wouldn't help since fast doubling doesn't revisit subproblems. What about a hybrid approach: use fast doubling to get close to n, then switch to linear iteration for the last few steps? This could help if the final few linear steps are cheaper than the last doubling step (since addition is cheaper than multiplication). For example, if n=10000, do fast doubling to reach F(9984) = F(10000 - 16), then iterate 16 times. The last doubling step multiplies ~2000-digit numbers, while 16 additions of ~2000-digit numbers would be ~16 * 2000 = 32000 digit-operations vs one ~2000^1.585 \u2248 200000 digit-operations for multiplication. So the hybrid saves nothing for the last step. This isn't worth it."
+    },
+    {
+      "iteration": 4,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    # MSB is always 1 for n >= 2, so start with F(1), F(2)\n    a, b = 1, 1\n    \n    for bit in range(n.bit_length() - 2, -1, -1):\n        # Fast doubling:\n        # F(2k)   = F(k) * (2*F(k+1) - F(k))\n        # F(2k+1) = F(k)^2 + F(k+1)^2\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        if (n >> bit) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a",
+      "self_prompt": "Let me reconsider the problem from scratch. Is there any representation trick that could help? Fibonacci numbers satisfy F(n) = round(phi^n / sqrt(5)) for small n, but floating-point precision fails catastrophically for large n. Not viable. What about using the GMP library through Python? The constraint says 'no imports needed,' but doesn't say no imports allowed. However, gmpy2 isn't guaranteed to be installed, so relying on it isn't safe. Let me instead focus on whether the current code can be made more Pythonic or if there are any subtle bugs. One thing: when a=0 and b=1, the first iteration computes c = 0 * (2-0) = 0 and d = 0 + 1 = 1, which is just the identity. We could skip this by starting the loop from bit_length-2 instead of bit_length-1, and initialize a,b based on the MSB directly. The MSB is always 1 (for n >= 2), so we can start with a,b = 0,1 and after processing MSB=1, we get a,b = 1,1 = F(1),F(2). Let's skip that redundant first step."
+    },
+    {
+      "iteration": 5,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    # Start from MSB which is always 1, giving F(1)=1, F(2)=1\n    a, b = 1, 1\n    \n    # Process remaining bits from second-highest to LSB\n    for bit in range(n.bit_length() - 2, -1, -1):\n        c = a * ((b << 1) - a)   # F(2k)\n        d = a * a + b * b         # F(2k+1)\n        if (n >> bit) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a",
+      "self_prompt": "The optimization to skip the first redundant iteration is a nice micro-optimization that saves one set of multiplications. Let me verify correctness for small values: n=2 (binary 10, bit_length=2). Start a,b=1,1. Loop bit from 0 to 0: bit=0, n>>0 & 1 = 0. c = 1*(2-1) = 1, d = 1+1 = 2. Bit clear: a,b = 1,2. Return a=1. F(2)=1. Correct. n=3 (binary 11, bit_length=2). Start a,b=1,1. bit=0: n>>0 & 1 = 1. c=1, d=2. Bit set: a,b = 2,3. Return 2. F(3)=2. Correct. n=5 (binary 101, bit_length=3). Start a,b=1,1. bit=1: n>>1 & 1 = 0. c=1, d=2. Bit clear: a,b=1,2. bit=0: n>>0 & 1 = 1. c=1*(4-1)=3, d=1+4=5. Bit set: a,b=5,8. Return 5. F(5)=5. Correct. The code is verified, optimal, and clean. Do a final polish pass ensuring the code is as minimal and readable as possible."
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.256,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.033,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.036,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.033,
+      "correct": true,
+      "iteration": 3,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.034,
+      "correct": true,
+      "iteration": 4,
+      "condition": "self_directed"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.034,
+      "correct": true,
+      "iteration": 5,
+      "condition": "self_directed"
+    }
+  ]
+}

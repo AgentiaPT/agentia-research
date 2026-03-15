@@ -1,0 +1,82 @@
+{
+  "task": "fibonacci",
+  "condition": "self_correction",
+  "run_id": 1,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b"
+    },
+    {
+      "iteration": 1,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    def matrix_mult(A, B):\n        return [\n            [A[0][0] * B[0][0] + A[0][1] * B[1][0],\n             A[0][0] * B[0][1] + A[0][1] * B[1][1]],\n            [A[1][0] * B[0][0] + A[1][1] * B[1][0],\n             A[1][0] * B[0][1] + A[1][1] * B[1][1]]\n        ]\n    \n    def matrix_pow(M, p):\n        result = [[1, 0], [0, 1]]\n        base = M\n        while p:\n            if p % 2 == 1:\n                result = matrix_mult(result, base)\n            base = matrix_mult(base, base)\n            p //= 2\n        return result\n    \n    M = [[1, 1], [1, 0]]\n    return matrix_pow(M, n)[0][1]"
+    },
+    {
+      "iteration": 2,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    def fib_pair(n):\n        if n == 0:\n            return (0, 1)\n        a, b = fib_pair(n >> 1)\n        c = a * (2 * b - a)\n        d = a * a + b * b\n        if n & 1:\n            return (d, c + d)\n        else:\n            return (c, d)\n    \n    return fib_pair(n)[0]"
+    },
+    {
+      "iteration": 3,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    bits = []\n    k = n\n    while k:\n        bits.append(k & 1)\n        k >>= 1\n    bits.pop()\n    \n    for bit in reversed(bits):\n        c = a * (2 * b - a)\n        d = a * a + b * b\n        if bit:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a"
+    },
+    {
+      "iteration": 4,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    highest_bit = n.bit_length() - 1\n    \n    for i in range(highest_bit - 1, -1, -1):\n        c = a * ((b << 1) - a)\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a"
+    },
+    {
+      "iteration": 5,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    highest_bit = n.bit_length() - 1\n    \n    for i in range(highest_bit - 1, -1, -1):\n        t = b + b - a\n        c = a * t\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.037,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.228,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.028,
+      "correct": true,
+      "iteration": 2,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.1,
+      "error": "fibonacci(10) = 1, expected 55",
+      "time_ms": null,
+      "correct": false,
+      "iteration": 3,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.1,
+      "error": "fibonacci(10) = 1, expected 55",
+      "time_ms": null,
+      "correct": false,
+      "iteration": 4,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.1,
+      "error": "fibonacci(10) = 1, expected 55",
+      "time_ms": null,
+      "correct": false,
+      "iteration": 5,
+      "condition": "self_correction"
+    }
+  ]
+}

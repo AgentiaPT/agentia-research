@@ -1,0 +1,82 @@
+{
+  "task": "sort",
+  "condition": "cautious_self_correction",
+  "run_id": 2,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fast_sort(arr):\n    if not arr:\n        return []\n    max_val = arr[0]\n    min_val = arr[0]\n    for x in arr:\n        if x > max_val:\n            max_val = x\n        if x < min_val:\n            min_val = x\n    range_val = max_val - min_val + 1\n    if range_val > 10 * len(arr):\n        if len(arr) <= 1:\n            return arr[:]\n        mid = len(arr) // 2\n        left = fast_sort(arr[:mid])\n        right = fast_sort(arr[mid:])\n        merged = []\n        i = j = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n        merged.extend(left[i:])\n        merged.extend(right[j:])\n        return merged\n    count = [0] * range_val\n    for x in arr:\n        count[x - min_val] += 1\n    result = []\n    for i in range(range_val):\n        result.extend([i + min_val] * count[i])\n    return result"
+    },
+    {
+      "iteration": 1,
+      "code": "def fast_sort(arr):\n    if not arr:\n        return []\n    if len(arr) <= 1:\n        return arr[:]\n    max_val = arr[0]\n    min_val = arr[0]\n    for x in arr:\n        if x > max_val:\n            max_val = x\n        if x < min_val:\n            min_val = x\n    range_val = max_val - min_val + 1\n    if range_val > 10 * len(arr):\n        mid = len(arr) // 2\n        left = fast_sort(arr[:mid])\n        right = fast_sort(arr[mid:])\n        merged = []\n        i = j = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n        merged.extend(left[i:])\n        merged.extend(right[j:])\n        return merged\n    count = [0] * range_val\n    for x in arr:\n        count[x - min_val] += 1\n    result = []\n    for i in range(range_val):\n        result.extend([i + min_val] * count[i])\n    return result"
+    },
+    {
+      "iteration": 2,
+      "code": "def fast_sort(arr):\n    if not arr:\n        return []\n    if len(arr) <= 1:\n        return arr[:]\n    max_val = arr[0]\n    min_val = arr[0]\n    for x in arr:\n        if x > max_val:\n            max_val = x\n        if x < min_val:\n            min_val = x\n    range_val = max_val - min_val + 1\n    if range_val > 10 * len(arr):\n        mid = len(arr) // 2\n        left = fast_sort(arr[:mid])\n        right = fast_sort(arr[mid:])\n        merged = []\n        i = j = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n        merged.extend(left[i:])\n        merged.extend(right[j:])\n        return merged\n    count = [0] * range_val\n    for x in arr:\n        count[x - min_val] += 1\n    result = []\n    for i in range(range_val):\n        result.extend([i + min_val] * count[i])\n    return result"
+    },
+    {
+      "iteration": 3,
+      "code": "def fast_sort(arr):\n    if not arr:\n        return []\n    if len(arr) <= 1:\n        return arr[:]\n    max_val = arr[0]\n    min_val = arr[0]\n    for x in arr:\n        if x > max_val:\n            max_val = x\n        if x < min_val:\n            min_val = x\n    range_val = max_val - min_val + 1\n    if range_val > 10 * len(arr):\n        mid = len(arr) // 2\n        left = fast_sort(arr[:mid])\n        right = fast_sort(arr[mid:])\n        merged = []\n        i = j = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n        merged.extend(left[i:])\n        merged.extend(right[j:])\n        return merged\n    count = [0] * range_val\n    for x in arr:\n        count[x - min_val] += 1\n    result = []\n    for i in range(range_val):\n        result.extend([i + min_val] * count[i])\n    return result"
+    },
+    {
+      "iteration": 4,
+      "code": "def fast_sort(arr):\n    if not arr:\n        return []\n    if len(arr) <= 1:\n        return arr[:]\n    max_val = arr[0]\n    min_val = arr[0]\n    for x in arr:\n        if x > max_val:\n            max_val = x\n        if x < min_val:\n            min_val = x\n    range_val = max_val - min_val + 1\n    if range_val > 10 * len(arr):\n        mid = len(arr) // 2\n        left = fast_sort(arr[:mid])\n        right = fast_sort(arr[mid:])\n        merged = []\n        i = j = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n        merged.extend(left[i:])\n        merged.extend(right[j:])\n        return merged\n    count = [0] * range_val\n    for x in arr:\n        count[x - min_val] += 1\n    result = []\n    for i in range(range_val):\n        result.extend([i + min_val] * count[i])\n    return result"
+    },
+    {
+      "iteration": 5,
+      "code": "def fast_sort(arr):\n    if not arr:\n        return []\n    if len(arr) <= 1:\n        return arr[:]\n    max_val = arr[0]\n    min_val = arr[0]\n    for x in arr:\n        if x > max_val:\n            max_val = x\n        if x < min_val:\n            min_val = x\n    range_val = max_val - min_val + 1\n    if range_val > 10 * len(arr):\n        mid = len(arr) // 2\n        left = fast_sort(arr[:mid])\n        right = fast_sort(arr[mid:])\n        merged = []\n        i = j = 0\n        while i < len(left) and j < len(right):\n            if left[i] <= right[j]:\n                merged.append(left[i])\n                i += 1\n            else:\n                merged.append(right[j])\n                j += 1\n        merged.extend(left[i:])\n        merged.extend(right[j:])\n        return merged\n    count = [0] * range_val\n    for x in arr:\n        count[x - min_val] += 1\n    result = []\n    for i in range(range_val):\n        result.extend([i + min_val] * count[i])\n    return result"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 0.457,
+      "error": null,
+      "time_ms": 32.821,
+      "correct": true,
+      "iteration": 0,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.5473,
+      "error": null,
+      "time_ms": 27.407,
+      "correct": true,
+      "iteration": 1,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.5474,
+      "error": null,
+      "time_ms": 27.404,
+      "correct": true,
+      "iteration": 2,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.5578,
+      "error": null,
+      "time_ms": 26.893,
+      "correct": true,
+      "iteration": 3,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.5691,
+      "error": null,
+      "time_ms": 26.356,
+      "correct": true,
+      "iteration": 4,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.5552,
+      "error": null,
+      "time_ms": 27.019,
+      "correct": true,
+      "iteration": 5,
+      "condition": "cautious_self_correction"
+    }
+  ]
+}

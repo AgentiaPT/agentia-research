@@ -1,0 +1,82 @@
+{
+  "task": "match",
+  "condition": "resampling",
+  "run_id": 2,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def find_all(text, pattern):\n    \"\"\"KMP algorithm with optimized failure function.\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return []\n    if m > n:\n        return []\n    # Compute partial match table (failure function)\n    lps = [0] * m\n    length = 0\n    i = 1\n    while i < m:\n        if pattern[i] == pattern[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length != 0:\n                length = lps[length - 1]\n            else:\n                lps[i] = 0\n                i += 1\n    # Perform search\n    result = []\n    i = 0\n    j = 0\n    while i < n:\n        if pattern[j] == text[i]:\n            i += 1\n            j += 1\n        if j == m:\n            result.append(i - j)\n            j = lps[j - 1]\n        elif i < n and pattern[j] != text[i]:\n            if j != 0:\n                j = lps[j - 1]\n            else:\n                i += 1\n    return result"
+    },
+    {
+      "iteration": 1,
+      "code": "def find_all(text, pattern):\n    \"\"\"Rabin-Karp using polynomial rolling hash with double hashing.\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    BASE1 = 31\n    MOD1 = 1000000009\n    BASE2 = 37\n    MOD2 = 1000000007\n    # Precompute pattern hashes\n    ph1, ph2 = 0, 0\n    th1, th2 = 0, 0\n    pow1, pow2 = 1, 1\n    for i in range(m):\n        c_p = ord(pattern[i]) - ord('a') + 1 if pattern[i].islower() else ord(pattern[i])\n        c_t = ord(text[i]) - ord('a') + 1 if text[i].islower() else ord(text[i])\n        ph1 = (ph1 * BASE1 + ord(pattern[i])) % MOD1\n        ph2 = (ph2 * BASE2 + ord(pattern[i])) % MOD2\n        th1 = (th1 * BASE1 + ord(text[i])) % MOD1\n        th2 = (th2 * BASE2 + ord(text[i])) % MOD2\n        if i > 0:\n            pow1 = (pow1 * BASE1) % MOD1\n            pow2 = (pow2 * BASE2) % MOD2\n    result = []\n    for i in range(n - m + 1):\n        if th1 == ph1 and th2 == ph2:\n            ok = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    ok = False\n                    break\n            if ok:\n                result.append(i)\n        if i < n - m:\n            th1 = (th1 * BASE1 - ord(text[i]) * pow1 * BASE1 + ord(text[i + m])) % MOD1\n            th2 = (th2 * BASE2 - ord(text[i]) * pow2 * BASE2 + ord(text[i + m])) % MOD2\n            if th1 < 0:\n                th1 += MOD1\n            if th2 < 0:\n                th2 += MOD2\n    return result"
+    },
+    {
+      "iteration": 2,
+      "code": "def find_all(text, pattern):\n    \"\"\"Boyer-Moore with bad character rule only.\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    # Bad character table: last occurrence of each char in pattern\n    bad_char = {}\n    for i in range(m):\n        bad_char[pattern[i]] = i\n    result = []\n    s = 0  # shift of pattern over text\n    while s <= n - m:\n        j = m - 1\n        while j >= 0 and pattern[j] == text[s + j]:\n            j -= 1\n        if j < 0:\n            result.append(s)\n            # Shift pattern so next char in text aligns with last occurrence in pattern\n            if s + m < n:\n                s += m - bad_char.get(text[s + m], -1)\n            else:\n                s += 1\n        else:\n            bc_shift = j - bad_char.get(text[s + j], -1)\n            s += max(1, bc_shift)\n    return result"
+    },
+    {
+      "iteration": 3,
+      "code": "def find_all(text, pattern):\n    \"\"\"Aho-style single-pattern matching using a goto/fail automaton.\"\"\"\n    m = len(pattern)\n    n = len(text)\n    if m == 0 or m > n:\n        return []\n    # Build goto and failure for single pattern (essentially KMP automaton)\n    # State i means we've matched pattern[0:i]\n    goto = [{} for _ in range(m + 1)]\n    fail = [0] * (m + 1)\n    # Build goto from state 0\n    for i in range(m):\n        goto[i][pattern[i]] = i + 1\n    # Build failure links\n    from collections import deque\n    queue = deque()\n    for c, s in goto[0].items():\n        fail[s] = 0\n        queue.append(s)\n    while queue:\n        r = queue.popleft()\n        if r >= m:\n            continue\n        for c, s in goto[r].items():\n            queue.append(s)\n            state = fail[r]\n            while state != 0 and c not in goto[state]:\n                state = fail[state]\n            fail[s] = goto[state].get(c, 0)\n            if fail[s] == s:\n                fail[s] = 0\n    # Search\n    result = []\n    state = 0\n    for i in range(n):\n        c = text[i]\n        while state != 0 and c not in goto[state]:\n            state = fail[state]\n        state = goto[state].get(c, 0)\n        if state == m:\n            result.append(i - m + 1)\n            state = fail[state]\n    return result"
+    },
+    {
+      "iteration": 4,
+      "code": "def find_all(text, pattern):\n    \"\"\"Z-algorithm based matcher.\"\"\"\n    m = len(pattern)\n    n = len(text)\n    if m == 0 or m > n:\n        return []\n    # Build Z-array for pattern$text\n    s = pattern + '\\x00' + text\n    slen = len(s)\n    z = [0] * slen\n    z[0] = slen\n    rt = 0\n    lt = 0\n    for i in range(1, slen):\n        if i > rt:\n            lt = rt = i\n            while rt < slen and s[rt - lt] == s[rt]:\n                rt += 1\n            z[i] = rt - lt\n            rt -= 1\n        else:\n            k = i - lt\n            if z[k] < rt - i + 1:\n                z[i] = z[k]\n            else:\n                lt = i\n                while rt < slen and s[rt - lt] == s[rt]:\n                    rt += 1\n                z[i] = rt - lt\n                rt -= 1\n    result = []\n    offset = m + 1\n    for i in range(offset, slen):\n        if z[i] == m:\n            result.append(i - offset)\n    return result"
+    },
+    {
+      "iteration": 5,
+      "code": "def find_all(text, pattern):\n    \"\"\"Sunday algorithm (variant of Boyer-Moore).\"\"\"\n    n = len(text)\n    m = len(pattern)\n    if m == 0 or m > n:\n        return []\n    # Precompute shift table: for each character, how far to shift\n    # when mismatch occurs, based on next character after window\n    shift = {}\n    for i in range(m):\n        shift[pattern[i]] = m - i\n    default_shift = m + 1\n    result = []\n    i = 0\n    while i <= n - m:\n        j = 0\n        while j < m and text[i + j] == pattern[j]:\n            j += 1\n        if j == m:\n            result.append(i)\n        # Shift based on character just after the current window\n        next_pos = i + m\n        if next_pos < n:\n            i += shift.get(text[next_pos], default_shift)\n        else:\n            i += 1\n    return result"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 5.4,
+      "correct": true,
+      "iteration": 0,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 16.766,
+      "correct": true,
+      "iteration": 1,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 3.857,
+      "correct": true,
+      "iteration": 2,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 3.363,
+      "correct": true,
+      "iteration": 3,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 7.911,
+      "correct": true,
+      "iteration": 4,
+      "condition": "resampling"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 2.364,
+      "correct": true,
+      "iteration": 5,
+      "condition": "resampling"
+    }
+  ]
+}

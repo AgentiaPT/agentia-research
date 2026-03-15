@@ -1,0 +1,82 @@
+{
+  "task": "fibonacci",
+  "condition": "self_correction",
+  "run_id": 2,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    prev, curr = 0, 1\n    for _ in range(2, n + 1):\n        prev, curr = curr, prev + curr\n    return curr"
+    },
+    {
+      "iteration": 1,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    def _fib_doubling(k):\n        if k == 0:\n            return (0, 1)\n        half_a, half_b = _fib_doubling(k >> 1)\n        c = half_a * (2 * half_b - half_a)\n        d = half_a * half_a + half_b * half_b\n        if k & 1:\n            return (d, c + d)\n        return (c, d)\n    \n    return _fib_doubling(n)[0]"
+    },
+    {
+      "iteration": 2,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    for i in range(n.bit_length() - 2, -1, -1):\n        c = a * (2 * b - a)\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a"
+    },
+    {
+      "iteration": 3,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    high = n.bit_length() - 1\n    \n    for i in range(high - 1, -1, -1):\n        two_b_minus_a = (b << 1) - a\n        c = a * two_b_minus_a\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a"
+    },
+    {
+      "iteration": 4,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    high = n.bit_length() - 1\n    \n    for i in range(high - 1, -1, -1):\n        aa = a * a\n        c = a * (b + b - a)\n        d = aa + b * b\n        if (n >> i) & 1:\n            a, b = d, c + d\n        else:\n            a, b = c, d\n    \n    return a"
+    },
+    {
+      "iteration": 5,
+      "code": "def fibonacci(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    high_bit = n.bit_length() - 1\n    \n    for i in range(high_bit - 1, -1, -1):\n        t = b + b\n        c = a * (t - a)\n        d = a * a + b * b\n        if (n >> i) & 1:\n            a = d\n            b = c + d\n        else:\n            a = c\n            b = d\n    \n    return a"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 1.097,
+      "correct": true,
+      "iteration": 0,
+      "condition": "self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 0.035,
+      "correct": true,
+      "iteration": 1,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.1,
+      "error": "fibonacci(10) = 1, expected 55",
+      "time_ms": null,
+      "correct": false,
+      "iteration": 2,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.1,
+      "error": "fibonacci(10) = 1, expected 55",
+      "time_ms": null,
+      "correct": false,
+      "iteration": 3,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.1,
+      "error": "fibonacci(10) = 1, expected 55",
+      "time_ms": null,
+      "correct": false,
+      "iteration": 4,
+      "condition": "self_correction"
+    },
+    {
+      "score": 0.1,
+      "error": "fibonacci(10) = 1, expected 55",
+      "time_ms": null,
+      "correct": false,
+      "iteration": 5,
+      "condition": "self_correction"
+    }
+  ]
+}

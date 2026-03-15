@@ -1,0 +1,82 @@
+{
+  "task": "sort",
+  "condition": "cautious_self_correction",
+  "run_id": 3,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr[:]\n    if len(arr) <= 20:\n        result = arr[:]\n        for i in range(1, len(result)):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    mid = len(arr) // 2\n    left = fast_sort(arr[:mid])\n    right = fast_sort(arr[mid:])\n    merged = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            merged.append(left[i])\n            i += 1\n        else:\n            merged.append(right[j])\n            j += 1\n    merged.extend(left[i:])\n    merged.extend(right[j:])\n    return merged"
+    },
+    {
+      "iteration": 1,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr[:]\n    if len(arr) <= 20:\n        result = arr[:]\n        for i in range(1, len(result)):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    mid = len(arr) // 2\n    left = fast_sort(arr[:mid])\n    right = fast_sort(arr[mid:])\n    merged = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            merged.append(left[i])\n            i += 1\n        else:\n            merged.append(right[j])\n            j += 1\n    merged.extend(left[i:])\n    merged.extend(right[j:])\n    return merged"
+    },
+    {
+      "iteration": 2,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr[:]\n    if len(arr) <= 20:\n        result = arr[:]\n        for i in range(1, len(result)):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    mid = len(arr) // 2\n    left = fast_sort(arr[:mid])\n    right = fast_sort(arr[mid:])\n    merged = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            merged.append(left[i])\n            i += 1\n        else:\n            merged.append(right[j])\n            j += 1\n    merged.extend(left[i:])\n    merged.extend(right[j:])\n    return merged"
+    },
+    {
+      "iteration": 3,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr[:]\n    if len(arr) <= 20:\n        result = arr[:]\n        for i in range(1, len(result)):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    mid = len(arr) // 2\n    left = fast_sort(arr[:mid])\n    right = fast_sort(arr[mid:])\n    merged = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            merged.append(left[i])\n            i += 1\n        else:\n            merged.append(right[j])\n            j += 1\n    merged.extend(left[i:])\n    merged.extend(right[j:])\n    return merged"
+    },
+    {
+      "iteration": 4,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr[:]\n    if len(arr) <= 32:\n        result = arr[:]\n        for i in range(1, len(result)):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    mid = len(arr) // 2\n    left = fast_sort(arr[:mid])\n    right = fast_sort(arr[mid:])\n    merged = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            merged.append(left[i])\n            i += 1\n        else:\n            merged.append(right[j])\n            j += 1\n    merged.extend(left[i:])\n    merged.extend(right[j:])\n    return merged"
+    },
+    {
+      "iteration": 5,
+      "code": "def fast_sort(arr):\n    if len(arr) <= 1:\n        return arr[:]\n    if len(arr) <= 32:\n        result = arr[:]\n        for i in range(1, len(result)):\n            key = result[i]\n            j = i - 1\n            while j >= 0 and result[j] > key:\n                result[j + 1] = result[j]\n                j -= 1\n            result[j + 1] = key\n        return result\n    mid = len(arr) // 2\n    left = fast_sort(arr[:mid])\n    right = fast_sort(arr[mid:])\n    merged = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            merged.append(left[i])\n            i += 1\n        else:\n            merged.append(right[j])\n            j += 1\n    merged.extend(left[i:])\n    merged.extend(right[j:])\n    return merged"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 0.964,
+      "error": null,
+      "time_ms": 15.56,
+      "correct": true,
+      "iteration": 0,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.9563,
+      "error": null,
+      "time_ms": 15.685,
+      "correct": true,
+      "iteration": 1,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.9323,
+      "error": null,
+      "time_ms": 16.089,
+      "correct": true,
+      "iteration": 2,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.9258,
+      "error": null,
+      "time_ms": 16.202,
+      "correct": true,
+      "iteration": 3,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.9152,
+      "error": null,
+      "time_ms": 16.39,
+      "correct": true,
+      "iteration": 4,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 0.913,
+      "error": null,
+      "time_ms": 16.43,
+      "correct": true,
+      "iteration": 5,
+      "condition": "cautious_self_correction"
+    }
+  ]
+}

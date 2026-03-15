@@ -1,0 +1,82 @@
+{
+  "task": "match",
+  "condition": "cautious_self_correction",
+  "run_id": 2,
+  "iterations": 5,
+  "samples": [
+    {
+      "iteration": 0,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return list(range(n + 1))\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash\n    base = 256\n    mod = 101\n    result = []\n    # Compute hash of pattern and first window\n    p_hash = 0\n    t_hash = 0\n    h = 1\n    for i in range(m - 1):\n        h = (h * base) % mod\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    # Slide the window\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            # Verify character by character\n            match = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    match = False\n                    break\n            if match:\n                result.append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return result"
+    },
+    {
+      "iteration": 1,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return list(range(n + 1))\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash - use larger prime to reduce collisions\n    base = 256\n    mod = 1000000007\n    result = []\n    # Compute hash of pattern and first window\n    p_hash = 0\n    t_hash = 0\n    h = 1\n    for i in range(m - 1):\n        h = (h * base) % mod\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    # Slide the window\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            # Verify character by character\n            match = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    match = False\n                    break\n            if match:\n                result.append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return result"
+    },
+    {
+      "iteration": 2,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return list(range(n + 1))\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash - use larger prime to reduce collisions\n    base = 256\n    mod = 1000000007\n    result = []\n    # Compute hash of pattern and first window\n    p_hash = 0\n    t_hash = 0\n    h = pow(base, m - 1, mod)\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    # Slide the window\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            # Verify character by character\n            match = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    match = False\n                    break\n            if match:\n                result.append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return result"
+    },
+    {
+      "iteration": 3,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return list(range(n + 1))\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash - use larger prime to reduce collisions\n    base = 256\n    mod = 1000000007\n    result = []\n    append = result.append\n    # Compute hash of pattern and first window\n    p_hash = 0\n    t_hash = 0\n    h = pow(base, m - 1, mod)\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    # Slide the window\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            if text[i:i + m] == pattern:\n                append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return result"
+    },
+    {
+      "iteration": 4,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return list(range(n + 1))\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash - use larger prime to reduce collisions\n    base = 256\n    mod = 1000000007\n    result = []\n    append = result.append\n    # Compute hash of pattern and first window\n    p_hash = 0\n    t_hash = 0\n    h = pow(base, m - 1, mod)\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    # Slide the window\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            if text[i:i + m] == pattern:\n                append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return result"
+    },
+    {
+      "iteration": 5,
+      "code": "def find_all(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    if m == 0:\n        return list(range(n + 1))\n    if m > n:\n        return []\n    # Rabin-Karp with rolling hash - use larger prime to reduce collisions\n    base = 256\n    mod = 1000000007\n    result = []\n    append = result.append\n    # Compute hash of pattern and first window\n    p_hash = 0\n    t_hash = 0\n    h = pow(base, m - 1, mod)\n    for i in range(m):\n        p_hash = (base * p_hash + ord(pattern[i])) % mod\n        t_hash = (base * t_hash + ord(text[i])) % mod\n    # Slide the window\n    for i in range(n - m + 1):\n        if p_hash == t_hash:\n            if text[i:i + m] == pattern:\n                append(i)\n        if i < n - m:\n            t_hash = (base * (t_hash - ord(text[i]) * h) + ord(text[i + m])) % mod\n            if t_hash < 0:\n                t_hash += mod\n    return result"
+    }
+  ],
+  "evaluated": [
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 7.734,
+      "correct": true,
+      "iteration": 0,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 12.892,
+      "correct": true,
+      "iteration": 1,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 12.69,
+      "correct": true,
+      "iteration": 2,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 10.94,
+      "correct": true,
+      "iteration": 3,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 11.013,
+      "correct": true,
+      "iteration": 4,
+      "condition": "cautious_self_correction"
+    },
+    {
+      "score": 1.0,
+      "error": null,
+      "time_ms": 10.497,
+      "correct": true,
+      "iteration": 5,
+      "condition": "cautious_self_correction"
+    }
+  ]
+}
