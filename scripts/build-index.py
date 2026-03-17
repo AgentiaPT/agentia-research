@@ -129,6 +129,86 @@ def main():
 
     print(f"Wrote {len(projects)} projects to {out_path}")
 
+    # Generate projects/README.md (full catalog)
+    generate_projects_readme(projects)
+
+    # Update root README.md (latest 10)
+    update_root_readme(projects[:10])
+
+
+PAGES_BASE = "https://agentiapt.github.io/agentia-research"
+
+
+def make_table_row(p, relative_to_root=True):
+    """Build a markdown table row for a project."""
+    title = p["title"]
+    folder = p["id"]
+    path_prefix = "projects/" if relative_to_root else ""
+    desc = p["description"][:120] + ("..." if len(p["description"]) > 120 else "")
+    status = (p["status"] or "—").capitalize()
+    date = p["date"] or "—"
+
+    # Live demo links
+    demos = []
+    for f in p.get("htmlFiles", []):
+        label = f.replace(".html", "").replace("-", " ").replace("_", " ").title()
+        demos.append(f"[{label}]({PAGES_BASE}/projects/{folder}/{f})")
+    demo_col = ", ".join(demos) if demos else "—"
+
+    return f"| [{title}]({path_prefix}{folder}/) | {desc} | {demo_col} | {status} | {date} |"
+
+
+def generate_projects_readme(projects):
+    """Generate projects/README.md with full project catalog."""
+    header = """# Projects
+
+> **Note:** All projects are authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. Content may contain errors — verify independently.
+
+Complete catalog of all research projects, newest first.
+
+| Project | Description | Live Demo | Status | Date |
+|---------|-------------|-----------|--------|------|
+"""
+    rows = [make_table_row(p, relative_to_root=False) for p in projects]
+
+    readme_path = os.path.join(PROJECTS_DIR, "README.md")
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.write(header)
+        f.write("\n".join(rows))
+        f.write("\n")
+
+    print(f"Wrote projects/README.md with {len(projects)} projects")
+
+
+def update_root_readme(projects):
+    """Update the projects table in the root README.md (between markers)."""
+    root = os.path.dirname(PROJECTS_DIR)
+    readme_path = os.path.join(root, "README.md")
+
+    with open(readme_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    table_header = "| Project | Description | Live Demo | Status | Date |\n|---------|-------------|-----------|--------|------|\n"
+    rows = [make_table_row(p, relative_to_root=True) for p in projects]
+    table = table_header + "\n".join(rows)
+
+    # Replace between markers
+    begin = "<!-- BEGIN PROJECTS -->"
+    end = "<!-- END PROJECTS -->"
+    start_idx = content.find(begin)
+    end_idx = content.find(end)
+
+    if start_idx == -1 or end_idx == -1:
+        print("WARNING: Could not find project markers in README.md")
+        return
+
+    new_content = content[:start_idx + len(begin)] + "\n" + table + "\n" + content[end_idx:]
+
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.write(new_content)
+
+    print(f"Updated root README.md with {len(projects)} latest projects")
+
 
 if __name__ == "__main__":
     main()
