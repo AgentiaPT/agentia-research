@@ -153,8 +153,6 @@ Key data from ~1,000 engineers:
 - Big companies: Copilot (56%, procurement-driven). Startups: Claude Code (75%), Cursor (42%)
 - Directors/senior leaders use Claude Code at **2x the rate** of junior levels
 
-Sonar Summit keynote: "With fewer engineers writing code by hand and the rise of parallel agents, traditional workflows like pull requests are starting to feel **unfit for the new pace**."
-
 ### Addy Osmani — Beyond Vibe Coding Audiobook + AI Codecon
 **March 10 | [beyond.addy.ie](https://beyond.addy.ie/2026-trends/#:~:text=conductor%20mode,developer%20directs%20a%20single%20agent) · [O'Reilly AI Codecon](https://www.oreilly.com/AI-Codecon/cfp.html#:~:text=hosted%20by%20Addy%20Osmani%20and%20Tim%20O%E2%80%99Reilly)**
 
@@ -353,7 +351,7 @@ BuzzFeed data scientist, long-time AI skeptic: **"It's impossible to publicly sa
 ### DHH — The Loudest Reversal
 **January 4, 2026 | [X/Twitter](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/#:~:text=not%20letting%20AI%20write%20any%20code%20directly)**
 
-Ruby on Rails creator: **"This is the most exciting thing we've made computers do since we connected them to the internet."**
+Ruby on Rails creator: **"Half the resistance was simply that the models weren't good enough yet. I spent more time rewriting what it wrote than if I'd done it from scratch. That has now flipped."**
 
 ### ThePrimeagen — The Principled Minimalist
 **2026 | [ByteIota](https://byteiota.com/theprimeagens-99-hits-542-stars-day-ai-for-skilled-devs/#:~:text=streamline%20requests%20to%20AI%20and%20limit%20them%20to%20restricted%20areas)**
@@ -401,23 +399,13 @@ Measured LLM output at a **60% "drek rate"** — modulated by user skill. Progra
 
 ## Key Quotes of the Week
 
-> "You can't just rip out a system that's deeply embedded overnight." — **Pentagon CTO Emil Michael** on Palantir still using Claude despite blacklist ([CNBC](https://www.cnbc.com/2026/03/12/karp-palantir-anthropic-claude-pentagon-blacklist.html))
-
 > "It feels like we might be speaking out of both sides of our mouths." — **Deep Ganguli**, Anthropic societal-impacts lead ([Time](https://time.com/article/2026/03/11/anthropic-claude-disruptive-company-pentagon/#:~:text=speaking%20out%20of%20both%20sides%20of%20our%20mouths))
-
-> "It's 2026 and this is an exponential curve, and we don't have time to sit around and feel pity for ourselves." — **Steve Yegge** ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/from-ides-to-ai-agents-with-steve#:~:text=eight%20levels,multi-agent%20orchestration))
-
-> "The ability to orchestrate and audit AI output becomes the hallmark of a great engineer." — **Gergely Orosz**, Sonar Summit keynote ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/ai-tooling-2026#:~:text=Claude%20Code%20has%20gone%20from%20zero%20to%20be%20the%20%231%20tool))
 
 > "The skills that are so often dismissed as 'soft' turned out to be the hard ones." — **Ethan Mollick** ([One Useful Thing](https://www.oneusefulthing.org/p/management-as-ai-superpower#:~:text=The%20skills%20that%20are%20so%20often%20dismissed%20as%20%E2%80%9Csoft%E2%80%9D%20turned%20out%20to%20be%20the%20hard%20ones))
 
-> "I'd say politely... it's utter BS. He has a fundamental misunderstanding as to what software engineering is." — **Grady Booch**, on Amodei's automation claims ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/the-third-golden-age-of-software#:~:text=Grady%20responds%20to%20Dario%20Amodei))
+> "AI systems behave unpredictably by design. The same input produces different outputs. The model hallucinates. The agent takes a different path. This isn't a failure mode. It's the feature." — **Charity Majors** ([Honeycomb](https://www.honeycomb.io/blog/honeycomb-10-year-manifesto-part-1#:~:text=The%20model%20hallucinates.%20The%20agent%20takes%20a%20different%20path))
 
-> "The model hallucinates. The agent takes a different path. This isn't a failure mode. It's the feature." — **Charity Majors** ([Honeycomb](https://www.honeycomb.io/blog/honeycomb-10-year-manifesto-part-1#:~:text=The%20model%20hallucinates.%20The%20agent%20takes%20a%20different%20path))
-
-> "This is the most exciting thing we've made computers do since we connected them to the internet." — **DHH** ([X/Twitter](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/))
-
-> "You do not need AI or an AI agent to reset passwords. Oh my God, people, please." — **Kelsey Hightower** ([TechTarget](https://www.techtarget.com/searchitoperations/video/Kelsey-Hightowers-advice-for-platform-engineers-as-AI-looms))
+> "Half the resistance was simply that the models weren't good enough yet. I spent more time rewriting what it wrote than if I'd done it from scratch. That has now flipped." — **DHH** ([X/Twitter](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/))
 
 > "One of the dumbest things I've ever heard" — **AWS CEO Matt Garman** on replacing junior developers with AI ([Hakia](https://hakia.com/news/junior-developer-crisis-2026/#:~:text=one%20of%20the%20dumbest%20things%20I%E2%80%99ve%20ever%20heard))
 
