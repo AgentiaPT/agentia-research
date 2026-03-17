@@ -44,6 +44,9 @@ def extract_description(body):
         para = para.strip()
         if not para or para.startswith("#"):
             continue
+        # Skip blockquotes (e.g. AI authorship disclaimer)
+        if para.startswith(">"):
+            continue
         # Skip horizontal rules
         if re.match(r"^-{3,}$", para):
             continue

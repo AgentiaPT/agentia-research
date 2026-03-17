@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-17T13:31:42.825677+00:00",
+  "generated": "2026-03-17T13:35:04.463700+00:00",
   "projects": [
     {
       "id": "9992-2026-03-17-git-secret-detection",
@@ -16,7 +16,7 @@
         "tools",
         "gitleaks"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "Comprehensive landscape analysis of tools, practices, and patterns for preventing secrets and sensitive data from leaking into git repositories. Special attention to AI-authored content risks and PII detection beyond traditional API key scanning.",
       "files": [
         "README.md"
       ],
@@ -37,7 +37,7 @@
         "hardening",
         "guide"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "Claude Code ships with a sandbox that provides OS-level process isolation for all Bash commands. On Linux and WSL2 this uses [bubblewrap (bwrap)](https://github.com/containers/bubblewrap), creating isolated namespaces for PID, network, mount, IPC, UTS, and cgroup. On macOS it uses Apple's native Seatbelt framework.",
       "files": [
         "README.md"
       ],
@@ -57,7 +57,7 @@
         "experiment",
         "optimization"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "An empirical experiment testing whether LLMs can genuinely improve code through iterative self-reflection — or whether \"self-correction\" is just resampling in disguise.",
       "files": [
         "README.md",
         "analyze.py",
@@ -82,7 +82,7 @@
         "voices",
         "industry"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. This edition covers **March 8–13, 2026**, organized around recurring themes rather than raw chronology.",
       "files": [
         "2026-03-13.md",
         "README.md",
@@ -106,7 +106,7 @@
         "gradient-descent",
         "inference-time"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "When an LLM generates an output, critiques it, and refines it iteratively, is this process formally analogous to gradient descent on a loss function? The answer is: partially yes, with important caveats.",
       "files": [
         "README.md"
       ],
@@ -126,7 +126,7 @@
         "scaling",
         "research-survey"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "Inference-time compute scaling (also called \"test-time compute\" or \"test-time scaling\") refers to the practice of allocating additional computational resources *during inference* -- when a model is generating its response -- rather than during training. Instead of making a model smarter by training it longer on more data (training-time scaling), you make it smarter by letting it \"think\" longer on each problem.",
       "files": [
         "README.md"
       ],
@@ -146,7 +146,7 @@
         "self-correction",
         "constitutional-ai"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "A deep research survey on self-refinement, self-correction, and iterative improvement in large language models.",
       "files": [
         "README.md",
         "research.html"
@@ -169,7 +169,7 @@
         "context-window",
         "tooling"
       ],
-      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "description": "How much of Claude's 200K context window do `CLAUDE.md` and config files consume before the conversation even starts?",
       "files": [
         "README.md",
         "analyze.py",
