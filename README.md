@@ -1,5 +1,10 @@
 # agentIA Research
 
+[![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-blueviolet)](https://docs.anthropic.com/en/docs/claude-code)
+[![License](https://img.shields.io/badge/Code-Apache%202.0-blue)](LICENSE)
+[![License](https://img.shields.io/badge/Content-CC%20BY%204.0-green)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub Pages](https://img.shields.io/badge/Portal-Live-orange)](https://agentiapt.github.io/agentia-research/)
+
 **Open AI-Powered Research & Experiments**
 
 > **Disclaimer:** All research and code in this repository is authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality are prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
