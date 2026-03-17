@@ -5,7 +5,7 @@ status: complete
 tags: [ai, news, weekly, voices, industry]
 ---
 
-> **Note:** This project was authored by [Claude Code](https://claude.ai/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 ## Overview
 

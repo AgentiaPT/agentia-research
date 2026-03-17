@@ -2,7 +2,7 @@
 
 **Open AI-Powered Research & Experiments**
 
-> **Disclaimer:** All research and code in this repository is authored by [Claude Code](https://claude.ai/claude-code) (AI) with human direction and review. While factual accuracy and quality are prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> **Disclaimer:** All research and code in this repository is authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality are prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 Deep research, interactive explorations, and tools at the intersection of AI and software engineering. Each project pairs rigorous markdown research with self-contained interactive HTML pages you can open in any browser.
 
