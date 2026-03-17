@@ -1,0 +1,185 @@
+{
+  "generated": "2026-03-17T13:31:42.825677+00:00",
+  "projects": [
+    {
+      "id": "9992-2026-03-17-git-secret-detection",
+      "slug": "git-secret-detection",
+      "title": "Git Secret Detection & Sensitive Information Leak Prevention",
+      "date": "2026-03-17",
+      "status": "complete",
+      "tags": [
+        "security",
+        "secrets",
+        "pre-commit",
+        "PII",
+        "devops",
+        "tools",
+        "gitleaks"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "README.md"
+      ],
+      "htmlFiles": [],
+      "path": "projects/9992-2026-03-17-git-secret-detection"
+    },
+    {
+      "id": "9993-2026-03-17-claude-code-sandbox-hardening",
+      "slug": "claude-code-sandbox-hardening",
+      "title": "Hardening the Claude Code Sandbox: A Practical Security Guide",
+      "date": "2026-03-17",
+      "status": "complete",
+      "tags": [
+        "ai",
+        "claude-code",
+        "security",
+        "sandbox",
+        "hardening",
+        "guide"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "README.md"
+      ],
+      "htmlFiles": [],
+      "path": "projects/9993-2026-03-17-claude-code-sandbox-hardening"
+    },
+    {
+      "id": "9994-2026-03-15-self-correction-experiment",
+      "slug": "self-correction-experiment",
+      "title": "Can LLMs Self-Improve Code Without Feedback? An Empirical Test",
+      "date": "2026-03-15",
+      "status": "draft",
+      "tags": [
+        "ai",
+        "llm",
+        "self-correction",
+        "experiment",
+        "optimization"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "README.md",
+        "analyze.py",
+        "optimization-prompt.md",
+        "run_experiment.py",
+        "run_via_agents.py",
+        "tasks.py"
+      ],
+      "htmlFiles": [],
+      "path": "projects/9994-2026-03-15-self-correction-experiment"
+    },
+    {
+      "id": "9995-2026-03-13-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI News Feed — March 8–13, 2026",
+      "date": "2026-03-13",
+      "status": "complete",
+      "tags": [
+        "ai",
+        "news",
+        "weekly",
+        "voices",
+        "industry"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "2026-03-13.md",
+        "README.md",
+        "explorer.html"
+      ],
+      "htmlFiles": [
+        "explorer.html"
+      ],
+      "path": "projects/9995-2026-03-13-ai-news-feed"
+    },
+    {
+      "id": "9996-2026-03-14-self-improvement-gradient-descent",
+      "slug": "self-improvement-gradient-descent",
+      "title": "Iterative Self-Improvement at Inference Time vs. Gradient Descent During Training",
+      "date": "2026-03-14",
+      "status": "complete",
+      "tags": [
+        "ai",
+        "llm",
+        "self-improvement",
+        "gradient-descent",
+        "inference-time"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "README.md"
+      ],
+      "htmlFiles": [],
+      "path": "projects/9996-2026-03-14-self-improvement-gradient-descent"
+    },
+    {
+      "id": "9997-2026-03-14-inference-time-compute",
+      "slug": "inference-time-compute",
+      "title": "Inference-Time Compute Scaling in Large Language Models",
+      "date": "2026-03-14",
+      "status": "complete",
+      "tags": [
+        "ai",
+        "llm",
+        "inference-time-compute",
+        "scaling",
+        "research-survey"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "README.md"
+      ],
+      "htmlFiles": [],
+      "path": "projects/9997-2026-03-14-inference-time-compute"
+    },
+    {
+      "id": "9998-2026-03-14-llm-self-improvement",
+      "slug": "llm-self-improvement",
+      "title": "Why LLMs Improve When They Critique and Refine Their Own Outputs",
+      "date": "2026-03-14",
+      "status": "complete",
+      "tags": [
+        "ai",
+        "llm",
+        "self-refinement",
+        "self-correction",
+        "constitutional-ai"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "README.md",
+        "research.html"
+      ],
+      "htmlFiles": [
+        "research.html"
+      ],
+      "path": "projects/9998-2026-03-14-llm-self-improvement"
+    },
+    {
+      "id": "9999-2026-03-14-claudemd-token-budget",
+      "slug": "claudemd-token-budget",
+      "title": "CLAUDE.md Token Budget Analyzer",
+      "date": "2026-03-14",
+      "status": "complete",
+      "tags": [
+        "ai",
+        "claude-code",
+        "tokens",
+        "context-window",
+        "tooling"
+      ],
+      "description": "> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.",
+      "files": [
+        "README.md",
+        "analyze.py",
+        "dashboard.html",
+        "report.md"
+      ],
+      "htmlFiles": [
+        "dashboard.html"
+      ],
+      "path": "projects/9999-2026-03-14-claudemd-token-budget"
+    }
+  ]
+}

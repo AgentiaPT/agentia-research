@@ -55,9 +55,6 @@ credentials.json
 *.ckpt
 *.bin
 
-# Generated
-projects/index.json
-
 # Temp
 *.tmp
 *.log

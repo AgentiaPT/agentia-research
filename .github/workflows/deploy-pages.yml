@@ -22,15 +22,10 @@ jobs:
       - name: Generate project index
         run: python3 scripts/build-index.py
 
-      - name: Prepare site
-        run: |
-          mkdir -p _site
-          rsync -a --exclude='.git' --exclude='_site' --exclude='node_modules' . _site/
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '_site'
+          path: '.'
 
   deploy:
     environment:
