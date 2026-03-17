@@ -7,6 +7,8 @@ tags: [ai, llm, inference-time-compute, scaling, research-survey]
 
 # Inference-Time Compute Scaling in Large Language Models
 
+> **Note:** This project was authored by [Claude Code](https://claude.ai/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+
 **A Research Survey -- March 2026**
 
 ---

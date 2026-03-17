@@ -7,6 +7,8 @@ tags: [ai, llm, self-correction, experiment, optimization]
 
 # Can LLMs Self-Improve Code Without Feedback?
 
+> **Note:** This project was authored by [Claude Code](https://claude.ai/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+
 An empirical experiment testing whether LLMs can genuinely improve code through iterative self-reflection — or whether "self-correction" is just resampling in disguise.
 
 ## Hypothesis

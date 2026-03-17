@@ -7,6 +7,8 @@ tags: [ai, claude-code, tokens, context-window, tooling]
 
 # CLAUDE.md Token Budget Analyzer
 
+> **Note:** This project was authored by [Claude Code](https://claude.ai/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+
 How much of Claude's 200K context window do `CLAUDE.md` and config files consume before the conversation even starts?
 
 ## What This Does

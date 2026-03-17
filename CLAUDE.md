@@ -46,6 +46,14 @@ tags: [tag1, tag2]
 ---
 ```
 
+**AI authorship disclaimer** — every project README **must** include the following blockquote immediately after the first `#` heading:
+
+```markdown
+> **Note:** This project was authored by [Claude Code](https://claude.ai/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+```
+
+This is non-negotiable for a public repository where most content is AI-generated. Never omit it.
+
 The `ongoing` status is for periodic/living research that receives new editions over time (e.g., news feeds, trend tracking). These projects are never "complete" — they accumulate dated entries in an `editions/` subdirectory.
 
 Content can live in the README itself (simple projects) or in separate files alongside it (long-form essays, multi-file research). Interactive pages go in the same directory (e.g., `explorer.html`, `simulator.html`).

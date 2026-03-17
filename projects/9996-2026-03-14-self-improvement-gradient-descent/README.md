@@ -7,6 +7,8 @@ tags: [ai, llm, self-improvement, gradient-descent, inference-time]
 
 # Iterative Self-Improvement at Inference Time vs. Gradient Descent During Training
 
+> **Note:** This project was authored by [Claude Code](https://claude.ai/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+
 ## A Theoretical Investigation
 
 **Date**: 2026-03-14
