@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-17T13:41:40.289476+00:00",
+  "generated": "2026-03-17T16:02:11.019642+00:00",
   "projects": [
     {
       "id": "9992-2026-03-17-git-secret-detection",
@@ -82,9 +82,8 @@
         "voices",
         "industry"
       ],
-      "description": "A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. This edition covers **March 8–13, 2026**, organized around recurring themes rather than raw chronology.",
+      "description": "A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. Organized around recurring themes rather than raw chronology.",
       "files": [
-        "2026-03-13.md",
         "README.md",
         "explorer.html"
       ],
