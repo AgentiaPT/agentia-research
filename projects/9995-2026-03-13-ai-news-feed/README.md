@@ -401,25 +401,25 @@ Measured LLM output at a **60% "drek rate"** — modulated by user skill. Progra
 
 ## Key Quotes of the Week
 
-> "You can't just rip out a system that's deeply embedded overnight." — **Pentagon CTO Emil Michael** on Palantir still using Claude despite blacklist
+> "You can't just rip out a system that's deeply embedded overnight." — **Pentagon CTO Emil Michael** on Palantir still using Claude despite blacklist ([CNBC](https://www.cnbc.com/2026/03/12/karp-palantir-anthropic-claude-pentagon-blacklist.html))
 
-> "It feels like we might be speaking out of both sides of our mouths." — **Deep Ganguli**, Anthropic societal-impacts lead
+> "It feels like we might be speaking out of both sides of our mouths." — **Deep Ganguli**, Anthropic societal-impacts lead ([Time](https://time.com/article/2026/03/11/anthropic-claude-disruptive-company-pentagon/#:~:text=speaking%20out%20of%20both%20sides%20of%20our%20mouths))
 
-> "It's 2026 and this is an exponential curve, and we don't have time to sit around and feel pity for ourselves." — **Steve Yegge**
+> "It's 2026 and this is an exponential curve, and we don't have time to sit around and feel pity for ourselves." — **Steve Yegge** ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/from-ides-to-ai-agents-with-steve#:~:text=eight%20levels,multi-agent%20orchestration))
 
-> "The ability to orchestrate and audit AI output becomes the hallmark of a great engineer." — **Gergely Orosz**, Sonar Summit keynote
+> "The ability to orchestrate and audit AI output becomes the hallmark of a great engineer." — **Gergely Orosz**, Sonar Summit keynote ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/ai-tooling-2026#:~:text=Claude%20Code%20has%20gone%20from%20zero%20to%20be%20the%20%231%20tool))
 
-> "The skills that are so often dismissed as 'soft' turned out to be the hard ones." — **Ethan Mollick**, on management as AI superpower
+> "The skills that are so often dismissed as 'soft' turned out to be the hard ones." — **Ethan Mollick** ([One Useful Thing](https://www.oneusefulthing.org/p/management-as-ai-superpower#:~:text=The%20skills%20that%20are%20so%20often%20dismissed%20as%20%E2%80%9Csoft%E2%80%9D%20turned%20out%20to%20be%20the%20hard%20ones))
 
-> "I'd say politely... it's utter BS. He has a fundamental misunderstanding as to what software engineering is." — **Grady Booch**, on Amodei's automation claims
+> "I'd say politely... it's utter BS. He has a fundamental misunderstanding as to what software engineering is." — **Grady Booch**, on Amodei's automation claims ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/the-third-golden-age-of-software#:~:text=Grady%20responds%20to%20Dario%20Amodei))
 
-> "The model hallucinates. The agent takes a different path. This isn't a failure mode. It's the feature." — **Charity Majors**
+> "The model hallucinates. The agent takes a different path. This isn't a failure mode. It's the feature." — **Charity Majors** ([Honeycomb](https://www.honeycomb.io/blog/honeycomb-10-year-manifesto-part-1#:~:text=The%20model%20hallucinates.%20The%20agent%20takes%20a%20different%20path))
 
-> "This is the most exciting thing we've made computers do since we connected them to the internet." — **DHH**, after reversing his AI skepticism
+> "This is the most exciting thing we've made computers do since we connected them to the internet." — **DHH** ([X/Twitter](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/))
 
-> "You do not need AI or an AI agent to reset passwords. Oh my God, people, please." — **Kelsey Hightower**
+> "You do not need AI or an AI agent to reset passwords. Oh my God, people, please." — **Kelsey Hightower** ([TechTarget](https://www.techtarget.com/searchitoperations/video/Kelsey-Hightowers-advice-for-platform-engineers-as-AI-looms))
 
-> "One of the dumbest things I've ever heard" — **AWS CEO Matt Garman** on replacing junior developers with AI
+> "One of the dumbest things I've ever heard" — **AWS CEO Matt Garman** on replacing junior developers with AI ([Hakia](https://hakia.com/news/junior-developer-crisis-2026/#:~:text=one%20of%20the%20dumbest%20things%20I%E2%80%99ve%20ever%20heard))
 
 ---
 
