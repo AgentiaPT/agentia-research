@@ -349,9 +349,11 @@ Mason at Thoughtworks, citing analysis by Birgitta Boeckeler: realistic net cycl
 BuzzFeed data scientist, long-time AI skeptic: **"It's impossible to publicly say 'Opus 4.5 and the models that came after it are an order of magnitude better than coding LLMs released just months before' without sounding like an AI hype booster, but it's the counterintuitive truth."**
 
 ### DHH — The Loudest Reversal
-**January 4, 2026 | [X/Twitter](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/#:~:text=not%20letting%20AI%20write%20any%20code%20directly)**
+**January 4, 2026 | [X/Twitter](https://x.com/dhh)**
 
-Ruby on Rails creator: **"Half the resistance was simply that the models weren't good enough yet. I spent more time rewriting what it wrote than if I'd done it from scratch. That has now flipped."**
+Ruby on Rails creator. On Lex Fridman's podcast (summer 2025): AI coding tools "didn't do as good a job as most junior programmers." Then January 4, 2026: **"Half the resistance was simply that the models weren't good enough yet. I spent more time rewriting what it wrote than if I'd done it from scratch. That has now flipped."** ([source](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/#:~:text=not%20letting%20AI%20write%20any%20code%20directly))
+
+And: **"This is the most exciting thing we've made computers do since we connected them to the internet."**
 
 ### ThePrimeagen — The Principled Minimalist
 **2026 | [ByteIota](https://byteiota.com/theprimeagens-99-hits-542-stars-day-ai-for-skilled-devs/#:~:text=streamline%20requests%20to%20AI%20and%20limit%20them%20to%20restricted%20areas)**
@@ -405,7 +407,9 @@ Measured LLM output at a **60% "drek rate"** — modulated by user skill. Progra
 
 > "AI systems behave unpredictably by design. The same input produces different outputs. The model hallucinates. The agent takes a different path. This isn't a failure mode. It's the feature." — **Charity Majors** ([Honeycomb](https://www.honeycomb.io/blog/honeycomb-10-year-manifesto-part-1#:~:text=The%20model%20hallucinates.%20The%20agent%20takes%20a%20different%20path))
 
-> "Half the resistance was simply that the models weren't good enough yet. I spent more time rewriting what it wrote than if I'd done it from scratch. That has now flipped." — **DHH** ([X/Twitter](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/))
+> "This is the most exciting thing we've made computers do since we connected them to the internet." — **DHH** ([X/Twitter](https://x.com/dhh))
+
+> "Half the resistance was simply that the models weren't good enough yet. I spent more time rewriting what it wrote than if I'd done it from scratch. That has now flipped." — **DHH** ([X/Twitter](https://www.treycausey.com/commonplace/2026-01-04-x-com-dhh-status-2007504187568074843/#:~:text=not%20letting%20AI%20write%20any%20code%20directly))
 
 > "One of the dumbest things I've ever heard" — **AWS CEO Matt Garman** on replacing junior developers with AI ([Hakia](https://hakia.com/news/junior-developer-crisis-2026/#:~:text=one%20of%20the%20dumbest%20things%20I%E2%80%99ve%20ever%20heard))
 
