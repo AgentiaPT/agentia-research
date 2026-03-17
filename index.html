@@ -561,7 +561,8 @@ footer a:hover {
           }).join('')
         : '';
 
-      return `<a class="card status-${status}" href="${p.path || ('projects/' + p.id)}/" style="animation-delay:${i * 0.06}s">
+      const repoBase = 'https://github.com/AgentiaPT/agentia-research/tree/main/';
+      return `<a class="card status-${status}" href="${repoBase}${p.path || ('projects/' + p.id)}" style="animation-delay:${i * 0.06}s">
         ${statusLabel ? `<span class="status-badge">${statusLabel}</span>` : ''}
         <h3>${escHtml(p.title || p.id)}</h3>
         <span class="date">${formatDate(p.date)}</span>
