@@ -13,6 +13,22 @@ A curated, thematic AI news feed tracking the voices, signals, and narratives th
 
 Open the [Explorer](https://agentiapt.github.io/agentia-research/projects/9995-2026-03-13-ai-news-feed/explorer.html) for a visual dashboard with voice position maps, signal radar, and theme analysis.
 
+## Contents
+
+1. [Amazon Outage — Velocity vs. Quality](#1-the-amazon-outage-story--velocity-vs-quality-live)
+2. ["Coding After Coders" — NYT Magazine](#2-coding-after-coders--nyt-magazines-70-developer-epic)
+3. [Anthropic's 72-Hour Earthquake](#3-anthropics-72-hour-earthquake)
+4. [Key Voices This Week](#4-key-voices-this-week) — Willison, Yegge, Orosz, Osmani, Beck
+5. [Code Quality & Security](#5-code-quality--security--the-verification-crisis) — 1.7x more issues, verification crisis
+6. [Open Source Crisis](#6-the-open-source-crisis--agent-scale-attack) — OpenClaw, reputation farming
+7. [ROME Goes Rogue](#7-ai-agent-safety--rome-goes-rogue) — Alibaba agent mines crypto autonomously
+8. [Junior Pipeline Collapse](#8-the-junior-pipeline-collapse) — 73% hiring drop
+9. [Model Releases & Tools](#9-model-releases--tools) — GPT-5.4, Karpathy's autoresearch
+10. [Mollick — Management as AI Superpower](#10-ethan-mollick--management-as-ai-superpower)
+11. [Adjacent Voices](#11-adjacent-voices--the-extended-network) — Booch, Debois, Majors, Farley, Dogan, Hashimoto, Mason
+12. [Contrarians](#12-the-contrarians--skeptics--converts-worth-tracking) — Woolf, DHH, Primeagen, Cantrill, Hightower, Troy
+13. [Signals & Radar](#13-signals--radar) | [Key Quotes](#key-quotes-of-the-week) | [Voice Tracker](#voice-tracker)
+
 ---
 
 ## The Week's Narrative
