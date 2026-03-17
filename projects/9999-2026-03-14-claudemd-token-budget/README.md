@@ -43,5 +43,5 @@ Outputs `report.md` and `dashboard.html` in this directory.
 |------|---------|
 | `analyze.py` | Python analyzer — zero dependencies, runs anywhere |
 | `report.md` | Generated markdown report with tables |
-| `dashboard.html` | Standalone HTML dashboard — open in any browser |
+| [`dashboard.html`](https://agentiapt.github.io/agentia-research/projects/9999-2026-03-14-claudemd-token-budget/dashboard.html) | Standalone HTML dashboard — open in any browser |
 | `README.md` | This file |

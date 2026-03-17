@@ -58,6 +58,8 @@ The `ongoing` status is for periodic/living research that receives new editions 
 
 Content can live in the README itself (simple projects) or in separate files alongside it (long-form essays, multi-file research). Interactive pages go in the same directory (e.g., `explorer.html`, `simulator.html`).
 
+**HTML file links** — all links to `.html` files in project READMEs, the root README, and anywhere in the repo **must** use the GitHub Pages URL so they render as live pages, not raw source. Format: `https://agentiapt.github.io/agentia-research/projects/<folder>/<file>.html`. Never link to HTML files using relative paths or `github.com/...blob/...` URLs — GitHub shows raw HTML source for those.
+
 When a project is added or completed, update the root README projects table.
 
 ## File Organization (Projects)

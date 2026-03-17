@@ -62,7 +62,7 @@ Stories are filtered through the tracked themes and mapped to relevance for each
 
 ## Interactive Explorer
 
-Open [explorer.html](explorer.html) for a visual dashboard with:
+Open the [Explorer](https://agentiapt.github.io/agentia-research/projects/9995-2026-03-13-ai-news-feed/explorer.html) for a visual dashboard with:
 - Voice position map and stance tracking
 - Signal radar across editions
 - Theme frequency analysis
