@@ -124,7 +124,7 @@ tags = ["pii", "passport"]
 [[rules]]
 id = "drivers-license"
 description = "Driver's license pattern detected"
-regex = '''(?i)(?:driver'?s?\s*licen[sc]e|DL)\s*(?:number|no|#|num)?\s*[:=]\s*[A-Z0-9]{5,15}'''
+regex = '''(?i)(?:driver'?s?\s*licen[sc]e)\s*(?:number|no|#|num)?\s*[:=]\s*[A-Z0-9]{5,15}'''
 tags = ["pii", "license"]
 
 # --- US Street Address ---
