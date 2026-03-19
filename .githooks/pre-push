@@ -2,19 +2,18 @@
 # Git pre-push hook — blocks pushes unless explicitly authorized.
 #
 # This exists because AI agents (Claude Code sessions) repeatedly push to
-# the public remote despite CLAUDE.md instructions forbidding it. Prompt
-# instructions alone are not reliable, so this hook enforces the rule at
-# the git level.
+# the public remote despite instructions forbidding it. Prompt instructions
+# alone are not reliable, so this hook enforces the rule at the git level.
 #
 # To push legitimately, set the environment variable:
 #   ALLOW_PUSH=1 git push ...
 #
-# Interactive users can also just run the push — the hook will prompt for
-# confirmation via stdin (works in terminals, fails in non-interactive
-# environments like CI or agent sessions, which is the desired behavior).
+# Interactive users can also confirm via prompt.
+# Non-interactive environments without ALLOW_PUSH=1 are blocked.
 
 set -euo pipefail
 
+# Allow if ALLOW_PUSH=1 is explicitly set
 if [ "${ALLOW_PUSH:-0}" = "1" ]; then
   exit 0
 fi
