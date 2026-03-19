@@ -1,6 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
+# --- Clean up MCP config files (not needed for this repo) ---
+rm -f /tmp/mcp-config-*.json
+
 # --- Configure git hooks path (works on all environments) ---
 # Use .githooks/ for pre-commit secret scanning (gitleaks + PII detection)
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
