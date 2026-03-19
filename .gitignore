@@ -16,7 +16,7 @@ Thumbs.db
 # Git internals (drvfs workaround artifacts)
 HEAD
 config
-hooks
+/.git/hooks
 objects
 refs
 

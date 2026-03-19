@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# Git pre-push hook — blocks pushes unless explicitly authorized.
+#
+# This exists because AI agents (Claude Code sessions) repeatedly push to
+# the public remote despite CLAUDE.md instructions forbidding it. Prompt
+# instructions alone are not reliable, so this hook enforces the rule at
+# the git level.
+#
+# To push legitimately, set the environment variable:
+#   ALLOW_PUSH=1 git push ...
+#
+# Interactive users can also just run the push — the hook will prompt for
+# confirmation via stdin (works in terminals, fails in non-interactive
+# environments like CI or agent sessions, which is the desired behavior).
+
+set -euo pipefail
+
+if [ "${ALLOW_PUSH:-0}" = "1" ]; then
+  exit 0
+fi
+
+# If running in a terminal, ask for confirmation
+if [ -t 0 ]; then
+  echo ""
+  echo "⚠️  PRE-PUSH GUARD — This is a PUBLIC repository."
+  echo "   Every push is permanently visible on the internet."
+  echo ""
+  read -r -p "Type 'push' to confirm: " CONFIRM
+  if [ "$CONFIRM" = "push" ]; then
+    exit 0
+  fi
+  echo "Push aborted."
+  exit 1
+fi
+
+# Non-interactive (agent/CI) — block unconditionally
+echo ""
+echo "============================================================"
+echo "  ⛔  PUSH BLOCKED by pre-push hook"
+echo "============================================================"
+echo ""
+echo "  This is a PUBLIC repository. Pushing requires explicit"
+echo "  user authorization."
+echo ""
+echo "  If the user asked you to push, retry with:"
+echo "    ALLOW_PUSH=1 git push ..."
+echo ""
+echo "  If the user did NOT ask you to push — STOP."
+echo "  Completing a task is NOT permission to push."
+echo "============================================================"
+echo ""
+exit 1
