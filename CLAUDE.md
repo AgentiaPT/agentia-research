@@ -10,6 +10,7 @@ AI-powered research repository and playground. Each topic produces deep markdown
 - **One question at a time** — never batch multiple questions in a single ask.
 - **Status updates** at natural milestones during long tasks so progress is visible on mobile.
 - **GitHub file links** — whenever mentioning a committed file in chat output, always include a clickable GitHub link to the file on the current branch. Format: `https://github.com/<owner>/<repo>/blob/<branch>/<path>`. Derive `<owner>/<repo>` from the git remote. This is critical for mobile users who can't easily navigate the file tree.
+- **NEVER push to remote without explicit user permission** — this is the single most important safety rule. Commit freely, but treat `git push` as a privileged action that requires the user to say "push", "push it", "send it", or equivalent. Completing a task is NOT permission to push. Being told to "commit" is NOT permission to push. When in doubt, don't push.
 - Adapt output format to the task: code, markdown reports, interactive HTML, essays — whatever fits.
 
 ## Skills
@@ -168,8 +169,10 @@ This is a **public repository** — treat every committed byte as permanently vi
 
 ## Git Workflow
 
+> **⛔ CRITICAL: NEVER run `git push` unless the user has explicitly asked you to push in the current message or a recent message.** This is the #1 safety rule for this public repository. Violations expose unreviewed AI-generated content permanently to the internet. "Commit your work", "finish up", "wrap up", or completing a task are NOT push permission. Only explicit push language ("push", "push it", "send it to remote", "push to origin") counts.
+
 - **Auto-commit** completed work without asking.
-- **Never auto-push** — only push to the remote when the user explicitly requests it. This is a safety gate for a public repository.
+- **NEVER auto-push** — only push to the remote when the user explicitly requests it. This is a safety gate for a public repository. If you are unsure whether the user wants you to push, **do not push** — ask first using AskUserQuestion.
 - Branch naming: `claude/<descriptive-slug>-<id>` (handled by the session).
 - Commit messages: concise, descriptive, no ceremony.
 
