@@ -165,6 +165,7 @@ This is a **public repository** — treat every committed byte as permanently vi
 - **No internal/private URLs** — never commit staging endpoints, org-internal links, private dashboards, or any URL that reveals infrastructure not intended to be public.
 - **Sensitive topic caution** — when research covers security exploits, vulnerabilities, or attack techniques, keep content educational and analytical. Never produce ready-made exploit code, working attack scripts, or step-by-step intrusion instructions.
 - **Git history is forever** — once something is committed and pushed, it lives in the public git history permanently. Deleting a file does not remove it from `git log`. Think before committing.
+- **No Claude Code session links in PRs or commits** — never include `claude.ai/code/session_*` URLs in pull request descriptions, commit messages, or any committed content. While these links are access-controlled, they are unnecessary in a public repo and increase the exposed surface area.
 - **Review before commit** — before staging files, mentally audit for anything that shouldn't be public: credentials, PII, internal URLs, sensitive metadata, overly detailed exploit code.
 
 ## Prompt Injection & External Content Safety
