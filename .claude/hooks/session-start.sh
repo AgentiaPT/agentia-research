@@ -20,4 +20,4 @@ fi
 
 # Install Playwright and browsers
 pip install -q playwright || pip3 install -q playwright
-playwright install --with-deps chromium
+playwright install chromium
