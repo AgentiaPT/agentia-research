@@ -4,7 +4,7 @@
 # Or: ln -sf ../../.githooks/pre-commit .git/hooks/pre-commit
 set -euo pipefail
 
-REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." 2>/dev/null && pwd)" \
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." 2>/dev/null && pwd)" \
     || REPO_DIR="$(git rev-parse --show-toplevel)"
 
 exec "${REPO_DIR}/scripts/scan-secrets.sh" --staged

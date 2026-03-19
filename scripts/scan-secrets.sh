@@ -6,6 +6,12 @@
 #   ./scripts/scan-secrets.sh --diff HEAD  # scan specific diff
 set -uo pipefail  # no -e: we handle exit codes manually
 
+# Allow skipping gitleaks entirely (e.g., SKIP=gitleaks git commit ...)
+if [[ "${SKIP:-}" == *gitleaks* ]]; then
+    echo "Skipping gitleaks scan (SKIP=$SKIP)"
+    exit 0
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 CONFIG="${REPO_DIR}/.gitleaks.toml"
