@@ -2,6 +2,8 @@
 
 AI-powered research repository and playground. Each topic produces deep markdown research and, when appropriate, a self-contained interactive HTML page. Sessions are typically started from mobile via Claude Code web, so prompts may be brief — the agent must be self-sufficient and proactive within these rules.
 
+> **⚠️ PUBLIC REPOSITORY** — This repo is publicly visible on GitHub. Every commit, file, and piece of git history is permanently exposed to the internet. All rules below reflect this reality. When in doubt, leave it out.
+
 ## Agent Interaction Rules
 
 - **Always use AskUserQuestion tool** to interact with the user — never output bare questions in text.
@@ -153,9 +155,21 @@ Key visual patterns:
 
 Must work offline.
 
+## Security & Sensitive Information
+
+This is a **public repository** — treat every committed byte as permanently visible to the world.
+
+- **No secrets in code or content** — never hardcode API keys, tokens, passwords, or credentials, even in examples or comments. Use placeholder values like `YOUR_API_KEY_HERE` or `<token>` if illustrating an API call.
+- **No real personal data** — never include real names, email addresses, IP addresses, phone numbers, or any PII in research content, sample data, or code. Use synthetic or anonymized data instead.
+- **No internal/private URLs** — never commit staging endpoints, org-internal links, private dashboards, or any URL that reveals infrastructure not intended to be public.
+- **Sensitive topic caution** — when research covers security exploits, vulnerabilities, or attack techniques, keep content educational and analytical. Never produce ready-made exploit code, working attack scripts, or step-by-step intrusion instructions.
+- **Git history is forever** — once something is committed and pushed, it lives in the public git history permanently. Deleting a file does not remove it from `git log`. Think before committing.
+- **Review before commit** — before staging files, mentally audit for anything that shouldn't be public: credentials, PII, internal URLs, sensitive metadata, overly detailed exploit code.
+
 ## Git Workflow
 
-- **Auto-commit and auto-push** completed work without asking.
+- **Auto-commit** completed work without asking.
+- **Never auto-push** — only push to the remote when the user explicitly requests it. This is a safety gate for a public repository.
 - Branch naming: `claude/<descriptive-slug>-<id>` (handled by the session).
 - Commit messages: concise, descriptive, no ceremony.
 
