@@ -25,7 +25,7 @@ Software is following the same curve. And we are standing at the printing press 
 
 ### Before Gutenberg: The Scribe Economy
 
-Before the mid-15th century, every book had to be copied by hand. Monks spent months or years recreating a single text. Books were chained to library shelves. In the 14th century, [80% of English adults couldn't even spell their names](https://brewminate.com/the-printing-press-and-its-impact-on-literacy/#:~:text=80%20percent%20of%20English%20adults). Hardly 10% of Italians could read Dante's *Divine Comedy* at the time of its first printing in 1321.
+Before the mid-15th century, every book had to be copied by hand. Monks spent months or years recreating a single text. Books were chained to library shelves. In the 14th century, [80% of English adults couldn't even spell their names](https://brewminate.com/the-printing-press-and-its-impact-on-literacy/#:~:text=80%20percent%20of%20English%20adults). Hardly 10% of Italians could read Dante's *Divine Comedy* at the time of its completion around 1320 — and the poem wouldn't appear in [printed form until 1472](https://en.wikipedia.org/wiki/Divine_Comedy#:~:text=first%20appeared%20in%20print%20in%201472).
 
 Why learn to read when there was practically nothing *to* read?
 
@@ -33,14 +33,14 @@ Why learn to read when there was practically nothing *to* read?
 
 Gutenberg's movable-type press, around 1440, could produce [up to 3,600 pages per workday](https://en.wikipedia.org/wiki/Printing_press#:~:text=3%2C600%20pages%20per%20workday) — compared to 40 by hand-printing and a handful by hand-copying. The consequences were staggering:
 
-| Metric | Before 1450 | By 1500 (50 years later) |
-|--------|-------------|--------------------------|
-| Books in Europe | Tens of thousands | [15–20 million](https://www.worldhistory.org/article/1632/the-printing-revolution-in-renaissance-europe/#:~:text=15%20to%2020%20million) |
+| Metric | Before 1450 | By 1500s–1550 (~100 years later) |
+|--------|-------------|----------------------------------|
+| Books in Europe | Tens of thousands | [~2 million by 1500s, up to 20 million by 1550](https://www.worldhistory.org/article/1632/the-printing-revolution-in-renaissance-europe/#:~:text=2%20million%20books%20were%20printed) |
 | Production speed | ~40 pages/day | ~3,600 pages/day |
 | Price per book | Months of wages | Affordable to merchants |
 | Literacy (England) | ~30% (1440) | Rising steadily |
 
-Within 50 years, the [entire classical canon had been reprinted and widely distributed throughout Europe](https://journalism.university/introduction-to-journalism-and-mass-communication/gutenbergs-printing-press-democratization-knowledge/#:~:text=entire%20classical%20canon%20had%20been%20reprinted). The sharp increase in literacy [broke the monopoly of the literate elite](https://en.wikipedia.org/wiki/Printing_press#:~:text=broke%20the%20monopoly%20of%20the%20literate%20elite) on education and bolstered the emerging middle class.
+Within a century, millions of books flooded Europe. The sharp increase in literacy [broke the monopoly of the literate elite](https://en.wikipedia.org/wiki/Printing_press#:~:text=broke%20the%20monopoly%20of%20the%20literate%20elite) on education and bolstered the emerging middle class.
 
 ### The Full Arc: From Scribes to Social Media
 
@@ -98,11 +98,11 @@ Andrej Karpathy laid out the clearest framing of this shift in his [keynote at Y
 
 > We moved from telling the machine **how** to do something, to **showing** it what to do, to simply **telling** it what we want.
 
-Karpathy also coined the term **"vibe coding"** — [programming through natural language](https://ai.plainenglish.io/andrej-karpathy-software-1-0-software-2-0-and-software-3-0-where-ai-is-heading-7ebc4ac582be#:~:text=vibe%20coding) that makes everyone a potential programmer. His line: **"The hottest new programming language is English."**
+Separately, Karpathy coined the term **"vibe coding"** in a [viral tweet on February 2, 2025](https://x.com/karpathy/status/1886192184808149383#:~:text=vibe%20coding) — describing a workflow where you ["fully give in to the vibes, embrace exponentials, and forget that the code even exists."](https://x.com/karpathy/status/1886192184808149383#:~:text=fully%20give%20in%20to%20the%20vibes) Collins Dictionary later named it [Word of the Year 2025](https://en.wikipedia.org/wiki/Vibe_coding#:~:text=Collins%20Dictionary). His line: **"The hottest new programming language is English."**
 
 Jensen Huang reinforced this at the [World Government Summit in Dubai](https://www.thehrobserver.com/technology/jensen-huang-on-ai-everybody-in-the-world-is-now-a-programmer/#:~:text=Everybody%20in%20the%20world%20is%20now%20a%20programmer) (February 2024):
 
-> "Everybody in the world is now a programmer. This is the miracle of AI. For the very first time, the technology divide has been completely closed."
+> "It is our job to create computing technology such that nobody has to program and that the programming language is human. Everybody in the world is now a programmer. [...] For the very first time, the technology divide has been completely closed."
 
 And again at [London Tech Week](https://dig.watch/updates/nvidias-huang-the-new-programming-language-is-human/#:~:text=new%20programming%20language%20is%20human) (June 2025): **"The new programming language is human."**
 
@@ -116,7 +116,7 @@ If the writing parallel holds — and the data suggests it does — here is what
 
 Just as the number of books went from tens of thousands to millions in 50 years, the number of software applications will undergo a similar explosion. But the timescale will be compressed — years, not decades.
 
-We currently have roughly **[9 million apps across major app stores](https://www.statista.com/statistics/276623/number-of-apps-available-in-leading-app-stores/)**. Expect this to feel quaint within a decade. When anyone can describe an app and have it built in hours, the number of "apps" (broadly defined) could reach hundreds of millions or billions — many of them personal, single-use, or hyper-niche.
+We currently have roughly **[8.9 million apps across major app stores](https://www.bankmycell.com/blog/number-of-mobile-apps-worldwide#:~:text=8.93%20million)**. Expect this to feel quaint within a decade. When anyone can describe an app and have it built in hours, the number of "apps" (broadly defined) could reach hundreds of millions or billions — many of them personal, single-use, or hyper-niche.
 
 ### 2. Single-Use and Personal Software
 
@@ -152,7 +152,7 @@ When everyone can produce mediocre code via prompting, the scarce skills become:
 - **Security** — understanding attack surfaces that prompt-engineers can't see
 - **Taste** — knowing what to build, not just how
 
-As one analyst put it: [**"The skill of 2026 is not writing a QuickSort algorithm; it is looking at an AI-generated QuickSort and instantly spotting that it uses an unstable pivot"**](https://www.itpro.com/software/development/ai-software-development-2026-vibe-coding-security#:~:text=skill%20of%202026) — requiring *higher* expertise, not lower.
+The emerging reality: the ability to *review* AI-generated code and catch what the model missed — subtle race conditions, insecure defaults, architectural dead-ends — requires *higher* expertise, not lower.
 
 ---
 
@@ -168,11 +168,11 @@ AI-generated software will follow the same pattern: more malware, more phishing 
 
 ### The Quality Crisis
 
-The data already shows this. In 2025, [average PR sizes increased by 150%, leading to a 9% rise in bug counts](https://www.itpro.com/software/development/ai-software-development-2026-vibe-coding-security#:~:text=150%25). Code ships faster, but defects ship faster too. [Broken Access Control now leads in Python, Go, Java, and C++](https://www.getpanto.ai/blog/github-copilot-statistics#:~:text=Broken%20Access%20Control) — languages where AI-assisted vibe coding scaffolds endpoints missing critical auth checks.
+The data already shows this. In 2025, studies show [average PR sizes increased by up to 150%, with a 9% rise in bug counts](https://www.index.dev/blog/ai-coding-assistants-roi-productivity#:~:text=PR%20size%20up%20to%20%2B150%25). Code ships faster, but defects ship faster too. Broken Access Control now leads vulnerability rankings in Python, Go, Java, and C++ — languages where AI-assisted vibe coding often scaffolds endpoints missing critical auth checks.
 
 ### The Expertise Paradox
 
-A controlled experiment by METR on experienced open-source developers found that on complex, novel tasks, [senior developers were 19% slower when using AI](https://www.itpro.com/software/development/ai-software-development-2026-vibe-coding-security#:~:text=19%25%20slower). The tools that help beginners can actively hinder experts on hard problems — creating a false sense of capability while masking the difficulty of real engineering.
+A [randomized controlled trial by METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/#:~:text=19%25%20longer) (July 2025) found that when 16 experienced open-source developers were allowed to use AI tools on tasks in repos where they had an average of 5 years of experience, they took **19% longer** to complete issues. Strikingly, developers *believed* AI had sped them up by 20% — even as the data showed the opposite. The tools that help beginners can actively hinder experts on hard problems.
 
 ### The Trust Problem
 
@@ -207,7 +207,7 @@ But here's what the writing parallel *can't* tell us: what happens when software
 
 We might be looking not at a printing press moment, but at something genuinely new — a technology that doesn't just lower the barrier to production, but starts producing *on its own*. That's not writing's story. That's a story we haven't lived through yet.
 
-The one thing we can say with confidence: the volume of software in the world is about to become, in the most literal sense, unimaginable. The 9 million apps of 2025 will look like the tens of thousands of books in 1450 Europe — a quaint, constrained world that existed only because creating software was hard.
+The one thing we can say with confidence: the volume of software in the world is about to become, in the most literal sense, unimaginable. The 8.9 million apps of 2025 will look like the tens of thousands of books in 1450 Europe — a quaint, constrained world that existed only because creating software was hard.
 
 It's not hard anymore.
 
@@ -219,7 +219,8 @@ It's not hard anymore.
 - [GitHub Copilot Statistics 2026 — Users, Revenue & Adoption](https://www.getpanto.ai/blog/github-copilot-statistics)
 - [GitHub Copilot crosses 20M all-time users — TechCrunch](https://techcrunch.com/2025/07/30/github-copilot-crosses-20-million-all-time-users/)
 - [Top 100 Developer Productivity Statistics with AI Tools 2026](https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools)
-- [AI could truly transform software development in 2026 — IT Pro](https://www.itpro.com/software/development/ai-software-development-2026-vibe-coding-security)
+- [AI Coding Assistant ROI: Real Productivity Data 2025 — Index.dev](https://www.index.dev/blog/ai-coding-assistants-roi-productivity)
+- [Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity — METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
 - ['Engineer' is so 2025. In AI land, everyone's a 'builder' now — SF Standard](https://sfstandard.com/2026/03/05/engineer-2025-ai-land-everyone-s-builder-now/)
 - [Andrej Karpathy: Software Is Changing (Again)](https://catalaize.substack.com/p/andrej-karpathy-software-is-changing)
 - [Karpathy: Software 1.0, 2.0, and 3.0](https://ai.plainenglish.io/andrej-karpathy-software-1-0-software-2-0-and-software-3-0-where-ai-is-heading-7ebc4ac582be)
@@ -232,3 +233,7 @@ It's not hard anymore.
 - [Anthropic 2026 Agentic Coding Trends Report](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf)
 - [How AI Is Reshaping Software Development in 2026 — Medium](https://medium.com/@tobore/how-ai-is-reshaping-software-development-and-the-tech-industry-in-2026-4ec7f7a801df)
 - [Mastering the AI Code Revolution in 2026 — BayTech Consulting](https://www.baytechconsulting.com/blog/mastering-ai-code-revolution-2026)
+- [Andrej Karpathy coins "vibe coding" — X/Twitter (Feb 2, 2025)](https://x.com/karpathy/status/1886192184808149383)
+- [Vibe coding — Wikipedia](https://en.wikipedia.org/wiki/Vibe_coding)
+- [Divine Comedy — Wikipedia](https://en.wikipedia.org/wiki/Divine_Comedy)
+- [How Many Apps Are There in the World (2026) — BankMyCell](https://www.bankmycell.com/blog/number-of-mobile-apps-worldwide)
