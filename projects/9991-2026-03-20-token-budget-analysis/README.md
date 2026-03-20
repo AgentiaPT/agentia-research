@@ -37,6 +37,28 @@ When asked if NVIDIA is spending $2 billion on tokens for its engineering team, 
 
 This isn't just a CEO selling GPUs. It's a signal that the **unit of enterprise productivity investment is shifting from human hours and software seats to tokens consumed**.
 
+### The Supporting Chorus
+
+Huang isn't alone. The framing is converging from multiple directions:
+
+> "We, as the producers of this technology, have a duty and an obligation to be honest about what is coming. [...] AI could wipe out half of all entry-level white-collar jobs and spike unemployment to 10% to 20% in the next one to five years."
+>
+> — Dario Amodei, Anthropic CEO, [60 Minutes / Axios](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=AI%20could%20wipe%20out%20half%20of%20all%20entry-level%20white-collar%20jobs)
+
+Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — implicitly acknowledging that tokens are becoming a measurable unit of economic activity worthy of taxation.
+
+> "We're not going to hire any new engineers this year. We're seeing 30 percent productivity increase on engineering."
+>
+> — Marc Benioff, Salesforce CEO, [Q4 2025 Earnings Call](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/#:~:text=30%20percent%20productivity%20increase)
+
+And from the venture capital world, Bessemer Venture Partners' 2026 AI Pricing Playbook states plainly:
+
+> "Unlike traditional software, where serving one more customer costs virtually nothing, every AI query incurs a non-trivial expense."
+>
+> — [Bessemer Venture Partners, AI Pricing Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=every%20AI%20query%20incurs%20a%20non-trivial%20expense)
+
+Meanwhile, a16z's 100-trillion-token study reports that OpenRouter alone processes **over 1 trillion tokens per day** as of late 2025, with OpenAI's API averaging **8.6 trillion tokens per day**. The fastest-growing behavior is "agentic inference" — autonomous multi-step workflows that consume tokens 24/7 without human oversight ([a16z State of AI](https://a16z.com/state-of-ai/#:~:text=agentic%20inference)).
+
 ---
 
 ## The Thesis: Three Budget Lines Converge on Tokens
@@ -92,6 +114,31 @@ The third vector is more subtle but equally powerful. Traditional developer tool
 - Claude Code Max: **$200/month** ($2,400/year) — pure token consumption
 
 The tool **is** the tokens. The IDE is becoming a thin shell around a token stream. Every "tool" purchase is increasingly a token purchase in disguise.
+
+### The Cloud Provider Dimension
+
+The hyperscalers are building the infrastructure to make this shift inevitable:
+
+- **Azure** sells Provisioned Throughput Units (PTUs) for OpenAI models — model-agnostic quota units that let enterprises carve up token capacity like bandwidth. GPT-4o runs $10–15/million tokens, but enterprise deployments consistently run **15–40% above advertised token costs** due to hidden overhead ([Inference.net](https://inference.net/content/azure-openai-pricing-explained#:~:text=15%E2%80%9340%25))
+- **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS Inferentia chips are **30–40% cheaper per inference** than equivalent NVIDIA H100 capacity ([DigitalOcean](https://www.digitalocean.com/resources/articles/comparing-aws-azure-gcp#:~:text=30-40%25%20cheaper))
+- **Google Vertex AI** reduced Gemini serving unit costs by **78% over 2025** through model and infrastructure optimizations ([PitchGrade](https://pitchgrade.com/research/azure-vs-gcp-vs-aws#:~:text=78%25))
+- **~75% of enterprises** now run multi-cloud, picking each provider for its genuine strength rather than going all-in on one
+
+All three are converging on the same model: **token-based consumption billing** with optional reserved capacity for predictability. The cloud cost line item IS the token budget — it's just not called that yet.
+
+### The VC Perspective: New Pricing Playbooks
+
+Bessemer Venture Partners' 2026 playbook identifies three emerging charge metrics that map directly to the token-budget thesis:
+
+| Model | Mechanism | Example | Token Connection |
+|-------|-----------|---------|-----------------|
+| **Consumption** | Per token / API call | Claude API, OpenAI API | Direct token pricing |
+| **Workflow** | Per completed task | Intercom Fin ($0.99/resolved ticket) | Tokens abstracted behind outcomes |
+| **Outcome** | Per successful result | EvenUp (per legal document) | Tokens fully hidden from buyer |
+
+The key insight: **tokens are the underlying unit in all three models** — they're just surfaced differently. Consumption pricing exposes them. Workflow pricing bundles them. Outcome pricing hides them entirely. But the cost structure underneath is always inference compute = tokens.
+
+AI-first SaaS startups are hitting ~$100M ARR in ~18 months (vs. ~7 years for traditional cloud companies), but at gross margins of **50–60%** instead of 80–90% ([Bessemer](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=50%E2%80%9360%25)). The "inference tax" is real, and it's compressing margins across the entire software industry.
 
 ---
 
@@ -218,3 +265,12 @@ But the smart companies will treat this as **reallocation, not replacement**. Kl
 - [Monetizely — Economics of AI-First B2B SaaS](https://www.getmonetizely.com/blogs/the-economics-of-ai-first-b2b-saas-in-2026)
 - [Computerworld — Nvidia CEO Talks Up Tokenomics](https://www.computerworld.com/article/4146468/nvidia-ceo-huang-talks-up-tokenomics-the-new-currency-for-ai.html)
 - [RCR Wireless — Agents, Inference and Token Economics](https://www.rcrwireless.com/20260318/ai-infrastructure/agents-inference-token-economics-nvidia-ai)
+- [Fortune — Anthropic CEO Warning on AI Job Loss](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/)
+- [Bessemer Venture Partners — AI Pricing and Monetization Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook)
+- [a16z — State of AI: 100 Trillion Token Study](https://a16z.com/state-of-ai/)
+- [a16z — Notes on AI Apps in 2026](https://a16z.com/notes-on-ai-apps-in-2026/)
+- [DigitalOcean — Comparing AWS, Azure, GCP for Startups in 2026](https://www.digitalocean.com/resources/articles/comparing-aws-azure-gcp)
+- [Inference.net — Azure OpenAI Pricing Explained](https://inference.net/content/azure-openai-pricing-explained)
+- [PitchGrade — Azure vs GCP vs AWS: Who Is Winning 2026](https://pitchgrade.com/research/azure-vs-gcp-vs-aws)
+- [Fortune — Klarna CEO on AI Workforce Shrinkage](https://fortune.com/2026/02/17/klarnas-ceo-dario-amodei-ai-white-collar-workforce-shrink-2030/)
+- [SF Standard — AI Writes the Code Now](https://sfstandard.com/2026/02/19/ai-writes-code-now-s-left-software-engineers/)
