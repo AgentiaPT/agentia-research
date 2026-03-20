@@ -17,6 +17,7 @@ Deep research, interactive explorations, and tools at the intersection of AI and
 <!-- BEGIN PROJECTS -->
 | Project | Description | Live Demo | Status | Date |
 |---------|-------------|-----------|--------|------|
+| [AI News Feed — Week 12: March 14–20, 2026](projects/9991-2026-03-19-ai-news-feed-w12/) | Platform consolidation week: Anthropic acquires Bun, OpenAI builds superapp, Supermicro chip smuggling, Bezos $100B man... | [Explorer](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-19-ai-news-feed-w12/explorer.html) | Complete | 2026-03-20 |
 | [Git Secret Detection & Sensitive Information Leak Prevention](projects/9992-2026-03-17-git-secret-detection/) | Comprehensive landscape analysis of tools, practices, and patterns for preventing secrets and sensitive data from leakin... | — | Complete | 2026-03-17 |
 | [Hardening the Claude Code Sandbox: A Practical Security Guide](projects/9993-2026-03-17-claude-code-sandbox-hardening/) | Claude Code ships with a sandbox that provides OS-level process isolation for all Bash commands. On Linux and WSL2 this ... | — | Complete | 2026-03-17 |
 | [Can LLMs Self-Improve Code Without Feedback? An Empirical Test](projects/9994-2026-03-15-self-correction-experiment/) | An empirical experiment testing whether LLMs can genuinely improve code through iterative self-reflection — or whether "... | — | Draft | 2026-03-15 |

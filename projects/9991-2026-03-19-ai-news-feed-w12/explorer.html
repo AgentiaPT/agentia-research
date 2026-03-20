@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Feed — Week 12: March 14–20, 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2d3a;
+    --text: #e0e0e0;
+    --muted: #8890a0;
+    --accent: #6c8cff;
+    --green: #4caf50;
+    --red: #ef5350;
+    --orange: #ff9800;
+    --yellow: #ffd54f;
+    --purple: #b388ff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .container { grid-template-columns: 1fr; padding: 12px; }
+    .sidebar { display: none; }
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .nav-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .nav-section h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 6px 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+
+  .nav-link:hover { background: var(--border); }
+  .nav-link.active { background: rgba(108, 140, 255, 0.15); color: var(--accent); }
+
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .filter-chip {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+
+  .filter-chip:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-chip.active { background: rgba(108, 140, 255, 0.15); border-color: var(--accent); color: var(--accent); }
+
+  .main {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .stat-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .stat-box .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .stat-box .label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover { border-color: var(--accent); }
+
+  .card h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .card .meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .card .summary {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+  }
+
+  .card .analysis {
+    color: var(--text);
+    font-size: 0.88rem;
+    border-left: 3px solid var(--accent);
+    padding-left: 14px;
+    margin-top: 12px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 0.65rem;
+    border-radius: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .tag-platform { background: rgba(108,140,255,0.15); color: var(--accent); }
+  .tag-competition { background: rgba(179,136,255,0.15); color: var(--purple); }
+  .tag-geopolitics { background: rgba(239,83,80,0.15); color: var(--red); }
+  .tag-industrial { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .tag-infrastructure { background: rgba(76,175,80,0.15); color: var(--green); }
+  .tag-labor { background: rgba(255,213,79,0.15); color: var(--yellow); }
+  .tag-security { background: rgba(239,83,80,0.15); color: var(--red); }
+  .tag-legal { background: rgba(179,136,255,0.15); color: var(--purple); }
+  .tag-opsec { background: rgba(255,152,0,0.15); color: var(--orange); }
+
+  .impact-bar {
+    display: inline-block;
+    width: 60px;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .impact-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  .quote-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+
+  .quote-card blockquote {
+    font-style: italic;
+    color: var(--text);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--purple);
+    padding-left: 14px;
+  }
+
+  .quote-card .attribution {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  .signal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+
+  .signal-table th {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--border);
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .signal-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+
+  .signal-table tr:hover td { background: rgba(108,140,255,0.04); }
+
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hidden { display: none !important; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .week-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.82rem;
+  }
+
+  .week-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.15s;
+  }
+
+  .week-nav a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="nav-section">
+      <h3>Stories</h3>
+      <a class="nav-link active" data-target="all" onclick="showAll()">All Stories</a>
+      <a class="nav-link" data-target="story-1" onclick="scrollToStory('story-1')">Anthropic Ecosystem</a>
+      <a class="nav-link" data-target="story-2" onclick="scrollToStory('story-2')">OpenAI Consolidates</a>
+      <a class="nav-link" data-target="story-3" onclick="scrollToStory('story-3')">Chip Wars</a>
+      <a class="nav-link" data-target="story-4" onclick="scrollToStory('story-4')">Bezos Manufacturing</a>
+      <a class="nav-link" data-target="story-5" onclick="scrollToStory('story-5')">Bot Takeover</a>
+      <a class="nav-link" data-target="story-6" onclick="scrollToStory('story-6')">DoorDash Tasks</a>
+      <a class="nav-link" data-target="story-7" onclick="scrollToStory('story-7')">Azure Bypasses</a>
+      <a class="nav-link" data-target="story-8" onclick="scrollToStory('story-8')">FSF vs Anthropic</a>
+      <a class="nav-link" data-target="story-9" onclick="scrollToStory('story-9')">Antspace Exposed</a>
+    </div>
+
+    <div class="nav-section">
+      <h3>Filter by Theme</h3>
+      <div class="filter-chips">
+        <button class="filter-chip active" data-theme="all" onclick="filterTheme('all')">All</button>
+        <button class="filter-chip" data-theme="platform" onclick="filterTheme('platform')">Platform</button>
+        <button class="filter-chip" data-theme="competition" onclick="filterTheme('competition')">Competition</button>
+        <button class="filter-chip" data-theme="geopolitics" onclick="filterTheme('geopolitics')">Geopolitics</button>
+        <button class="filter-chip" data-theme="industrial" onclick="filterTheme('industrial')">Industrial</button>
+        <button class="filter-chip" data-theme="infrastructure" onclick="filterTheme('infrastructure')">Infrastructure</button>
+        <button class="filter-chip" data-theme="security" onclick="filterTheme('security')">Security</button>
+        <button class="filter-chip" data-theme="legal" onclick="filterTheme('legal')">Legal</button>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <h3>Sections</h3>
+      <a class="nav-link" onclick="scrollToEl('signals')">Signal Radar</a>
+      <a class="nav-link" onclick="scrollToEl('quotes')">Key Quotes</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="week-nav">
+      <a href="https://agentiapt.github.io/agentia-research/projects/9995-2026-03-13-ai-news-feed/explorer.html">&larr; Week 1 (Mar 8–13)</a>
+      <span style="color:var(--muted)">Week 12 &middot; Mar 14–20, 2026</span>
+      <span style="color:var(--border)">Next week &rarr;</span>
+    </div>
+
+    <h1>AI News Feed — Week 12</h1>
+    <p class="subtitle">March 14–20, 2026 &middot; Platform consolidation, chip wars, and the bot takeover</p>
+
+    <div class="stats-grid">
+      <div class="stat-box"><div class="value">9</div><div class="label">Stories</div></div>
+      <div class="stat-box"><div class="value">15+</div><div class="label">Sources</div></div>
+      <div class="stat-box"><div class="value">8</div><div class="label">Themes</div></div>
+      <div class="stat-box"><div class="value">7</div><div class="label">Key Quotes</div></div>
+    </div>
+
+    <!-- Story Cards -->
+    <div id="story-1" class="card story-card" data-themes="platform">
+      <h2>Anthropic's Ecosystem Play</h2>
+      <div class="meta">
+        <span class="tag tag-platform">Platform</span>
+        <span>Multiple dates</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:95%;background:var(--accent)"></span></span></span>
+      </div>
+      <p class="summary">Five coordinated moves — Bun acquisition, Claude Code hitting $1B ARR, 2x usage promotion, enterprise "SaaSpocalypse," and Channels research preview — consolidate Anthropic's position as the developer platform.</p>
+      <div class="analysis"><strong>Why it matters:</strong> Anthropic is vertically integrating from JavaScript runtime (Bun) to communication layer (Channels). When Claude Code runs on Bun with Channels pushing events from Telegram/Discord, Anthropic controls the entire developer experience end-to-end. The $1B milestone in 6 months makes this the fastest-growing developer tool in history.</div>
+    </div>
+
+    <div id="story-2" class="card story-card" data-themes="competition platform">
+      <h2>OpenAI Consolidates: Superapp + Astral</h2>
+      <div class="meta">
+        <span class="tag tag-competition">Competition</span>
+        <span class="tag tag-platform">Platform</span>
+        <span>Mar 19</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:90%;background:var(--purple)"></span></span></span>
+      </div>
+      <p class="summary">OpenAI folds ChatGPT, Codex, and browser into a desktop superapp while acquiring Astral (uv, Ruff, ty) — the dominant Python toolchain. Direct response to Anthropic's ecosystem strategy.</p>
+      <div class="analysis"><strong>Why it matters:</strong> The mirror acquisitions — Anthropic buys Bun (JS runtime), OpenAI buys Astral (Python toolchain) — reveal both companies' conviction that owning developer infrastructure wins the AI coding war. Fidji Simo's admission of "spreading across too many apps" is the clearest acknowledgment yet that Anthropic's focused approach was winning.</div>
+    </div>
+
+    <div id="story-3" class="card story-card" data-themes="geopolitics">
+      <h2>Supermicro Co-Founder Charged in $2.5B Chip Smuggling</h2>
+      <div class="meta">
+        <span class="tag tag-geopolitics">Geopolitics</span>
+        <span>Mar 20</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:85%;background:var(--red)"></span></span></span>
+      </div>
+      <p class="summary">DOJ charged Supermicro co-founder and two others with smuggling $2.5B in Nvidia AI servers to China via Taiwan. Shares collapsed 28%, erasing ~$5B in market value. Dell rose 6%.</p>
+      <div class="analysis"><strong>Why it matters:</strong> Highest-profile AI export control prosecution yet. The scheme — routing servers through Taiwan, repackaging into unmarked boxes — reveals the enormous profit incentives for circumventing chip controls. Supply chain trust is now a first-order concern.</div>
+    </div>
+
+    <div id="story-4" class="card story-card" data-themes="industrial">
+      <h2>Bezos's $100B Manufacturing AI Fund</h2>
+      <div class="meta">
+        <span class="tag tag-industrial">Industrial</span>
+        <span>Mar 19</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:80%;background:var(--orange)"></span></span></span>
+      </div>
+      <p class="summary">Jeff Bezos seeks $100B to acquire and automate manufacturing companies in chipmaking, defense, and aerospace. Connected to Project Prometheus, where he serves as co-CEO.</p>
+      <div class="analysis"><strong>Why it matters:</strong> AI ambitions expanding from software into the physical economy. Bezos is betting AI can do to manufacturing what AWS did to computing — at a scale larger than most sovereign wealth funds' annual deployment.</div>
+    </div>
+
+    <div id="story-5" class="card story-card" data-themes="infrastructure">
+      <h2>Bot Traffic Will Exceed Human by 2027</h2>
+      <div class="meta">
+        <span class="tag tag-infrastructure">Infrastructure</span>
+        <span>Mar 19</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:82%;background:var(--green)"></span></span></span>
+      </div>
+      <p class="summary">Cloudflare CEO Matthew Prince at SXSW: AI agents visit 1,000x more sites than humans for the same task. Bot traffic will exceed human traffic by 2027. Unlike COVID spikes, "we don't see anything that's going to slow it down."</p>
+      <div class="analysis"><strong>Why it matters:</strong> When bots outnumber humans online, everything changes — business models (who's the "user"?), security (bot-vs-bot default), and economics (bandwidth driven by machine traffic). Your primary API consumer may soon be an AI agent, not a human.</div>
+    </div>
+
+    <div id="story-6" class="card story-card" data-themes="infrastructure labor">
+      <h2>DoorDash Tasks: Digitizing the Physical World</h2>
+      <div class="meta">
+        <span class="tag tag-infrastructure">Infrastructure</span>
+        <span class="tag tag-labor">Labor</span>
+        <span>Mar 19</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:70%;background:var(--yellow)"></span></span></span>
+      </div>
+      <p class="summary">DoorDash launches Tasks — 8M Dashers can earn by photographing restaurants, mapping hotel entrances, auditing shelves, and assisting stuck autonomous vehicles. 2M+ tasks already completed.</p>
+      <div class="analysis"><strong>Why it matters:</strong> DoorDash is building one of the largest human-in-the-loop data collection networks. The gig economy is becoming the physical labor layer for AI systems — but the question is whether this creates sustainable work or micro-tasks AI will eventually automate away.</div>
+    </div>
+
+    <div id="story-7" class="card story-card" data-themes="security">
+      <h2>Four Azure Sign-In Log Bypasses</h2>
+      <div class="meta">
+        <span class="tag tag-security">Security</span>
+        <span>Mar 20</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:78%;background:var(--red)"></span></span></span>
+      </div>
+      <p class="summary">Researcher Nyxgeek disclosed third and fourth Azure Entra ID sign-in log bypasses. Unlike earlier ones (password validation only), these return fully functional tokens invisibly — via SQL column overflow from 35,000 repeated scope values.</p>
+      <div class="analysis"><strong>Why it matters:</strong> Four bypasses in three years — each exploiting different mechanisms — suggests systemic weakness in Microsoft's auth logging architecture, not isolated bugs. If attackers authenticate without generating logs, the entire enterprise detection model breaks.</div>
+    </div>
+
+    <div id="story-8" class="card story-card" data-themes="legal">
+      <h2>FSF: Freedom, Not Money, from Anthropic</h2>
+      <div class="meta">
+        <span class="tag tag-legal">Legal</span>
+        <span>Mar 13</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:72%;background:var(--purple)"></span></span></span>
+      </div>
+      <p class="summary">The Free Software Foundation weighs in on Bartz v. Anthropic: they don't want damages — they want Anthropic to share complete training inputs, model weights, and source code with every user. The copyleft position on AI training.</p>
+      <div class="analysis"><strong>Why it matters:</strong> First major articulation of the GPL's "viral" licensing logic applied to LLMs. If courts accepted this, every model trained on GPL/FDL-licensed works would need to open-source weights and training data. The freedom-vs-proprietary debate that defined software for 40 years is coming to AI.</div>
+    </div>
+
+    <div id="story-9" class="card story-card" data-themes="opsec">
+      <h2>Antspace Reverse-Engineered</h2>
+      <div class="meta">
+        <span class="tag tag-opsec">Opsec</span>
+        <span>This week</span>
+        <span>Impact: <span class="impact-bar"><span class="impact-bar-fill" style="width:55%;background:var(--orange)"></span></span></span>
+      </div>
+      <p class="summary">A developer reverse-engineered Anthropic's internal development platform (Antspace) and published a detailed architecture breakdown. The blog post was later restricted (403), suggesting Anthropic wasn't comfortable with the exposure.</p>
+      <div class="analysis"><strong>Why it matters:</strong> Rare window into how the company building Claude actually builds Claude. Highlights operational security risks when internal tooling is reverse-engineered — especially for a company of this prominence.</div>
+    </div>
+
+    <!-- Signal Radar -->
+    <h3 id="signals" class="section-title">Signal Radar</h3>
+    <div class="card">
+      <table class="signal-table">
+        <thead>
+          <tr><th>Signal</th><th>Theme</th><th>Impact</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Anthropic acquires Bun + $1B ARR</td><td><span class="tag tag-platform">Platform</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:95%;background:var(--accent)"></span></span></td></tr>
+          <tr><td>Claude Code Channels (MCP)</td><td><span class="tag tag-platform">Platform</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:88%;background:var(--accent)"></span></span></td></tr>
+          <tr><td>OpenAI superapp + Astral</td><td><span class="tag tag-competition">Competition</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:90%;background:var(--purple)"></span></span></td></tr>
+          <tr><td>Supermicro $2.5B smuggling charges</td><td><span class="tag tag-geopolitics">Geopolitics</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:85%;background:var(--red)"></span></span></td></tr>
+          <tr><td>Bezos $100B manufacturing fund</td><td><span class="tag tag-industrial">Industrial</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:80%;background:var(--orange)"></span></span></td></tr>
+          <tr><td>Bot > human traffic by 2027</td><td><span class="tag tag-infrastructure">Infrastructure</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:82%;background:var(--green)"></span></span></td></tr>
+          <tr><td>DoorDash Tasks: 2M+ completed</td><td><span class="tag tag-labor">Labor</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:70%;background:var(--yellow)"></span></span></td></tr>
+          <tr><td>4 Azure sign-in log bypasses</td><td><span class="tag tag-security">Security</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:78%;background:var(--red)"></span></span></td></tr>
+          <tr><td>FSF copyleft position on LLMs</td><td><span class="tag tag-legal">Legal</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:72%;background:var(--purple)"></span></span></td></tr>
+          <tr><td>Antspace reverse-engineered</td><td><span class="tag tag-opsec">Opsec</span></td><td><span class="impact-bar"><span class="impact-bar-fill" style="width:55%;background:var(--orange)"></span></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Key Quotes -->
+    <h3 id="quotes" class="section-title">Key Quotes</h3>
+
+    <div class="quote-card">
+      <blockquote>"We realised we were spreading our efforts across too many apps and stacks, and that we need to simplify our efforts."</blockquote>
+      <div class="attribution">— Fidji Simo, OpenAI CEO of Applications</div>
+    </div>
+
+    <div class="quote-card">
+      <blockquote>"Companies go through phases of exploration and phases of refocus; both are critical. But when new bets start to work, like we're seeing now with Codex, it's very important to double down on them and avoid distractions."</blockquote>
+      <div class="attribution">— Fidji Simo, on X</div>
+    </div>
+
+    <div class="quote-card">
+      <blockquote>"Bun represents exactly the kind of technical excellence we want to bring into Anthropic."</blockquote>
+      <div class="attribution">— Mike Krieger, Anthropic CPO</div>
+    </div>
+
+    <div class="quote-card">
+      <blockquote>"Your agent or the bot that's doing that will often go to 1,000 times the number of sites that an actual human would visit."</blockquote>
+      <div class="attribution">— Matthew Prince, Cloudflare CEO</div>
+    </div>
+
+    <div class="quote-card">
+      <blockquote>"You can't deliver to a door you can't find or get someone milk if you don't know what's on the shelf."</blockquote>
+      <div class="attribution">— Ethan Beatty, GM of DoorDash Tasks</div>
+    </div>
+
+    <div class="quote-card">
+      <blockquote>"We urge Anthropic and other LLM developers that train models using huge datasets downloaded from the Internet to provide these LLMs to their users in freedom."</blockquote>
+      <div class="attribution">— Free Software Foundation</div>
+    </div>
+
+    <div class="quote-card">
+      <blockquote>"By knowing about Microsoft's past mistakes, we can try to prepare for their future failures."</blockquote>
+      <div class="attribution">— Nyxgeek, security researcher</div>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:0.75rem;margin-top:32px;padding-bottom:24px;">
+      AI News Feed — Week 12 &middot; March 14–20, 2026 &middot; <a href="https://github.com/AgentiaPT/agentia-research/blob/main/projects/9991-2026-03-19-ai-news-feed-w12/README.md">Full Report</a>
+    </p>
+  </main>
+</div>
+
+<script>
+function filterTheme(theme) {
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  document.querySelector(`.filter-chip[data-theme="${theme}"]`).classList.add('active');
+
+  document.querySelectorAll('.story-card').forEach(card => {
+    if (theme === 'all') {
+      card.classList.remove('hidden');
+    } else {
+      const themes = card.dataset.themes.split(' ');
+      card.classList.toggle('hidden', !themes.includes(theme));
+    }
+  });
+}
+
+function scrollToStory(id) {
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.querySelector(`[data-target="${id}"]`).classList.add('active');
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function scrollToEl(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function showAll() {
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.querySelector('[data-target="all"]').classList.add('active');
+  filterTheme('all');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
