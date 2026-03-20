@@ -1,8 +1,13 @@
+---
+title: "The Civilization That Forgot How to Code"
+date: 2026-03-18
+status: complete
+tags: [vibe-coding, software-engineering, ai, essay, history]
+---
+
 # The Civilization That Forgot How to Code
 
-*March 2026*
-
----
+> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 ## I. The Tax on Progress
 

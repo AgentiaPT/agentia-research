@@ -1,6 +1,49 @@
 {
-  "generated": "2026-03-17T16:24:29.005813+00:00",
+  "generated": "2026-03-20T19:31:36.944838+00:00",
   "projects": [
+    {
+      "id": "9986-2026-03-18-vibe-coding-essay",
+      "slug": "vibe-coding-essay",
+      "title": "The Civilization That Forgot How to Code",
+      "date": "2026-03-18",
+      "status": "complete",
+      "tags": [
+        "vibe-coding",
+        "software-engineering",
+        "ai",
+        "essay",
+        "history"
+      ],
+      "description": "Around 370 BCE, Socrates made an argument against writing. In Plato's *Phaedrus*, he warned that the written word would [\"create forgetfulness in the learners' souls\"](https://fs.blog/an-old-argument-against-writing/#:~:text=create%20forgetfulness%20in%20the%20learners%27%20souls) — that people who relied on text would \"appear as though they were all-knowing, but to actually be learners of nothing.\" They would become hearers of many things but knowers of nothing.",
+      "files": [
+        "PLAN.md",
+        "README.md",
+        "exploration-notes.md",
+        "macro-beats-reflection.md"
+      ],
+      "htmlFiles": [],
+      "path": "projects/9986-2026-03-18-vibe-coding-essay"
+    },
+    {
+      "id": "9990-2026-03-20-software-democratization",
+      "slug": "software-democratization",
+      "title": "The Gutenberg Parallel: Software Democratization and the Coming Volume Explosion",
+      "date": "2026-03-20",
+      "status": "complete",
+      "tags": [
+        "software-engineering",
+        "ai",
+        "democratization",
+        "history",
+        "future"
+      ],
+      "description": "What is happening now with software happened before with writing. The pattern is unmistakable: a skill once reserved for a trained elite is being democratized by a new technology, and the volume of output is about to explode in ways that are hard to imagine.",
+      "files": [
+        "README.md"
+      ],
+      "htmlFiles": [],
+      "path": "projects/9990-2026-03-20-software-democratization"
+    },
     {
       "id": "9992-2026-03-17-git-secret-detection",
       "slug": "git-secret-detection",
