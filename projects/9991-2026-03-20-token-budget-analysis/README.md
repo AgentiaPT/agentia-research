@@ -233,6 +233,31 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 
 ---
 
+## Who Wins, Who Loses
+
+### Winners
+
+| Player | Why |
+|--------|-----|
+| **NVIDIA** | Sells the "picks and shovels." Every dollar shifted to tokens flows through their GPUs. Huang isn't just describing the future — he's engineering it. |
+| **Senior engineers** | The "amplified 10x" worker. Fewer of them, paid more, armed with massive token budgets. The skill premium widens. |
+| **Anthropic / OpenAI** | Token vendors. Their revenue is directly proportional to enterprise token consumption. Anthropic's Claude Code at $100–200/dev/month is the thin end of the wedge. |
+| **Cloud hyperscalers** | Azure PTUs, AWS MUs, GCP Vertex — they're the token delivery layer. Multi-cloud strategies mean multiple token pipes. |
+| **AI-native startups** | Born without legacy headcount or SaaS stack. Can operate with 5 engineers + massive token budgets vs. competitor's 50. Hit $100M ARR in 18 months (Bessemer data). |
+| **FinOps / AI cost management** | New category of tooling for metering, attributing, and capping token spend. The "Datadog of tokens." |
+
+### Losers
+
+| Player | Why |
+|--------|-----|
+| **Junior developers** | Entry point into the profession is narrowing. ~20% employment drop already. Talent pipeline breaking. |
+| **Per-seat SaaS vendors** | Business model under existential threat. Can't compete with AI agents that charge per outcome, not per seat. |
+| **Traditional IT procurement** | Trained for predictable annual contracts, now facing variable token invoices with 500–1,000% cost surprises. |
+| **Companies that overcorrect** | Klarna pattern: cut too deep, quality craters, expensive rehiring. 55% of AI layoff companies regretted it. |
+| **Developing economies** | Outsourced development and BPO sectors face demand compression as token-augmented teams in high-cost geographies need fewer offshore resources. |
+
+---
+
 ## The Bottom Line
 
 Huang's framing crystallizes a transition that was already underway but lacked a memorable articulation:
