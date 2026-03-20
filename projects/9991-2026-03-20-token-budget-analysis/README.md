@@ -41,9 +41,11 @@ This isn't just a CEO selling GPUs. It's a signal that the **unit of enterprise 
 
 Huang isn't alone. The framing is converging from multiple directions:
 
-> "We, as the producers of this technology, have a duty and an obligation to be honest about what is coming. [...] AI could wipe out half of all entry-level white-collar jobs and spike unemployment to 10% to 20% in the next one to five years."
+> "We, as the producers of this technology, have a duty and an obligation to be honest about what is coming."
+
+> "[AI] could eliminate half of all entry-level white-collar jobs within five years [causing] unemployment to spike to between 10% and 20%."
 >
-> — Dario Amodei, Anthropic CEO, [Axios interview, May 2025](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=AI%20could%20wipe%20out%20half%20of%20all%20entry-level%20white-collar%20jobs)
+> — Dario Amodei, Anthropic CEO, [Axios interview, May 2025](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=half%20of%20all%20entry-level%20white-collar%20jobs)
 
 Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — a 3% levy on AI company revenue from language models, with proceeds going to government for redistribution. He acknowledged: "Obviously, that's not in my economic interest, but I think that would be a reasonable solution" ([Axios / The Decoder](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/#:~:text=token%20tax)). The implication: tokens are becoming a measurable unit of economic activity worthy of taxation.
 
@@ -72,7 +74,7 @@ Traditional per-seat SaaS is being hollowed out. When an AI agent can draft cont
 **The numbers:**
 - Global SaaS market: **$315.7 billion** in 2025, projected to reach $375.6B in 2026 at 18.7% CAGR ([Fortune Business Insights via BetterCloud](https://www.bettercloud.com/monitor/saas-industry/#:~:text=315))
 - Average enterprise AI-native app spending: **$1.2M/year** — up 108% YoY ([Zylo 2026 SaaS Management Index](https://zylo.com/blog/ai-cost/#:~:text=1.2M))
-- Gartner forecasts **40% of enterprise SaaS** will include outcome-based (token/usage) pricing elements by end of 2026, up from 15% in 2022 ([Gartner via NxCode](https://www.nxcode.io/resources/news/saas-pricing-strategy-guide-2026#:~:text=40%25)). Seat-based pricing dropped from 21% to 15% of SaaS companies in just 12 months.
+- Gartner forecasts **40% of enterprise SaaS** will include outcome-based (token/usage) pricing elements by end of 2026, up from 15% in 2022 ([Gartner via NxCode](https://www.nxcode.io/resources/news/saas-pricing-strategy-guide-2026#:~:text=40%25)). Seat-based pricing dropped from 21% to 15% of SaaS companies in just 12 months ([Growth Unhinged / Kyle Poyar](https://www.growthunhinged.com/p/2025-state-of-b2b-monetization#:~:text=21%25%20to%2015%25)).
 
 **The pricing model is already breaking:**
 - Microsoft added Copilot to M365 and raised prices 5–33% across SKUs (E5 at 5.3%, E3 at 8.3%, F3 at 25%, F1 at 33%) ([Licenseware](https://licenseware.io/software-price-increases-2025-2026/#:~:text=Copilot))
@@ -90,7 +92,7 @@ This is the more uncomfortable conversation, but the data is unambiguous:
 - Salesforce announced **zero engineering hires** for 2025, citing 30% productivity gains from AI ([Salesforce Ben](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/#:~:text=zero%20engineering%20hires))
 - Klarna shrank from **5,527 to 3,422 employees** (38% reduction), claiming AI does the work of 700 customer service agents ([Fast Company](https://www.fastcompany.com/91468582/klarna-tried-to-replace-its-workforce-with-ai#:~:text=5%2C527%20to%203%2C422))
 - 25% of enterprises are now limiting future headcount due to AI, up from 21% three months prior ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=25%25))
-- Junior developer employment dropped **~20%** while senior roles grew ([CIO](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over.html#:~:text=20%25%20drop))
+- Junior developer employment dropped **~20%** since late 2022 (ages 22–25), while developers over 26 saw stable or growing employment ([Stanford Digital Economy Lab / ADP payroll data](https://fortune.com/2025/08/26/stanford-ai-entry-level-jobs-gen-z-erik-brynjolfsson/#:~:text=20%25))
 
 **The math is brutal:**
 
@@ -119,9 +121,9 @@ The tool **is** the tokens. The IDE is becoming a thin shell around a token stre
 
 The hyperscalers are building the infrastructure to make this shift inevitable:
 
-- **Azure** sells Provisioned Throughput Units (PTUs) for OpenAI models — model-agnostic quota units that let enterprises carve up token capacity like bandwidth. GPT-4o runs $10–15/million tokens, but enterprise deployments consistently run **15–40% above advertised token costs** due to hidden overhead ([Inference.net](https://inference.net/content/azure-openai-pricing-explained#:~:text=15%E2%80%9340%25))
-- **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS Inferentia chips are **30–40% cheaper per inference** than equivalent NVIDIA H100 capacity ([DigitalOcean](https://www.digitalocean.com/resources/articles/comparing-aws-azure-gcp#:~:text=30-40%25%20cheaper))
-- **Google Vertex AI** has aggressively cut Gemini pricing — Gemini 1.5 Flash dropped to $0.075/million tokens (input), undercutting most competitors ([PitchGrade](https://pitchgrade.com/research/azure-vs-gcp-vs-aws#:~:text=Gemini))
+- **Azure** sells Provisioned Throughput Units (PTUs) for OpenAI models — model-agnostic quota units that let enterprises carve up token capacity like bandwidth. GPT-4o runs $2.50 (input) to $10.00 (output) per million tokens, but enterprise deployments consistently run **15–40% above advertised token costs** due to hidden overhead ([Inference.net](https://inference.net/content/azure-openai-pricing-explained#:~:text=15%E2%80%9340%25))
+- **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS claims Inferentia/Trainium chips deliver **30–40% better price-performance** than equivalent GPU instances ([AWS](https://aws.amazon.com/machine-learning/inferentia/#:~:text=price%20performance))
+- **Google Vertex AI** has aggressively cut Gemini pricing — Gemini 1.5 Flash dropped to $0.075/million tokens (input), undercutting most competitors ([Google Developers Blog](https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/#:~:text=price))
 - **~75% of enterprises** now run multi-cloud, picking each provider for its genuine strength rather than going all-in on one ([Gartner](https://www.gartner.com/en/articles/cloud-computing-trends#:~:text=multi-cloud))
 
 All three are converging on the same model: **token-based consumption billing** with optional reserved capacity for predictability. The cloud cost line item IS the token budget — it's just not called that yet.
@@ -138,7 +140,7 @@ Bessemer Venture Partners' 2026 playbook identifies three emerging charge metric
 
 The key insight: **tokens are the underlying unit in all three models** — they're just surfaced differently. Consumption pricing exposes them. Workflow pricing bundles them. Outcome pricing hides them entirely. But the cost structure underneath is always inference compute = tokens.
 
-AI-first SaaS startups are hitting ~$100M ARR in ~18 months (vs. ~7 years for traditional cloud companies) ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2025#:~:text=100M%20ARR)), but at gross margins of **50–60%** instead of 80–90% ([Bessemer Pricing Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=50%E2%80%9360%25)). The "inference tax" is real, and it's compressing margins across the entire software industry.
+AI-first SaaS startups are hitting ~$100M ARR in ~18 months (vs. ~7 years for traditional cloud companies) ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2026#:~:text=100M%20ARR)), but at gross margins of **50–60%** instead of 80–90% ([Bessemer Pricing Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=50%E2%80%9360%25)). The "inference tax" is real, and it's compressing margins across the entire software industry.
 
 ---
 
@@ -175,7 +177,7 @@ The key insight: **total cost per engineer may go up**, but **cost per unit of o
 
 ### Signal 1: CFOs Can't Budget for Tokens
 
-> "AI invoices often arrive as dense ledgers of token counts, model tiers, and throughput metrics that may be opaque to finance teams."
+> "AI invoices often arrive as dense ledgers of token counts, model tiers and throughput metrics that may be opaque to finance teams."
 >
 > — [PYMNTS](https://www.pymnts.com/artificial-intelligence-2/2026/cfos-scramble-as-ai-pricing-breaks-traditional-saas-billing-model/#:~:text=dense%20ledgers%20of%20token%20counts)
 
@@ -191,7 +193,7 @@ Stanford's 2025 AI Index Report shows inference cost for GPT-3.5-level performan
 
 ### Signal 4: The Talent Pipeline Is Already Breaking
 
-Companies eliminating junior roles in 2026 may find themselves competing for scarce mid-level talent by 2029 — the same pattern that followed the 2008 financial crisis ([CIO](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over.html#:~:text=pipeline)). AWS CEO Matt Garman called replacing juniors with AI ["one of the dumbest things I've ever heard"](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over.html#:~:text=dumbest).
+Companies eliminating junior roles in 2026 may find themselves competing for scarce mid-level talent by 2029 — the same pattern that followed the 2008 financial crisis. AWS CEO Matt Garman called replacing juniors with AI ["one of the dumbest things I've ever heard"](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-stop-replacing-workers-with-ai/496087#:~:text=dumbest), warning: "If you have no talent pipeline that you're building and no junior people that you're mentoring... at some point, that whole thing explodes on itself."
 
 ### Signal 5: Klarna's Cautionary Tale
 
@@ -208,7 +210,7 @@ Jensen Huang is not a neutral observer. Every dollar redirected to token budgets
 Unlike a $150K salary (fixed, predictable, amortized), token budgets are **variable and opaque**. A runaway agentic loop could burn $50K in a weekend. CFOs trained on predictable SaaS costs are not equipped for this volatility. As one analysis noted, vendors lure customers with generous pilot credits, then production routinely reveals [500–1,000% cost underestimation](https://www.gartner.com/en/articles/run-a-pilot-before-buying-ai-tools#:~:text=cost) (Gartner).
 
 ### 3. The ROI Is Unproven at Scale
-Only **13% of enterprises** report achieving measurable AI ROI at scale ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=13%25)). 55% of companies that laid off workers due to AI **later regretted the decision** ([Forrester via Gloat](https://gloat.com/blog/ai-workforce-trends-for-c-suite/#:~:text=55%25)).
+Only **13% of enterprises** report achieving measurable AI ROI at scale ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=13%25)). 55% of companies that laid off workers due to AI **later regretted the decision** ([Forrester Predictions 2026 via HR Executive](https://hrexecutive.com/the-ai-layoff-trap-why-half-will-be-quietly-rehired/#:~:text=55%25)).
 
 ### 4. The Talent Pipeline Collapse
 If you stop hiring juniors because AI writes their code, who reviews AI output in 5 years? The 2008 hiring freeze created a 3–5 year experience gap that haunted the industry. We're building a bigger one.
@@ -243,7 +245,7 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 | **Senior engineers** | The "amplified 10x" worker. Fewer of them, paid more, armed with massive token budgets. The skill premium widens. |
 | **Anthropic / OpenAI** | Token vendors. Their revenue is directly proportional to enterprise token consumption. Anthropic's Claude Code at $100–200/dev/month is the thin end of the wedge. |
 | **Cloud hyperscalers** | Azure PTUs, AWS MUs, GCP Vertex — they're the token delivery layer. Multi-cloud strategies mean multiple token pipes. |
-| **AI-native startups** | Born without legacy headcount or SaaS stack. Can operate with 5 engineers + massive token budgets vs. competitor's 50. Hit $100M ARR in ~18 months ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2025#:~:text=100M%20ARR)). |
+| **AI-native startups** | Born without legacy headcount or SaaS stack. Can operate with 5 engineers + massive token budgets vs. competitor's 50. Hit $100M ARR in ~18 months ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2026#:~:text=100M%20ARR)). |
 | **FinOps / AI cost management** | New category of tooling for metering, attributing, and capping token spend. The "Datadog of tokens." |
 
 ### Losers
@@ -284,9 +286,11 @@ But the smart companies will treat this as **reallocation, not replacement**. Kl
 - [Licenseware — Software Price Increases 2025–2026](https://licenseware.io/software-price-increases-2025-2026/)
 - [Salesforce Ben — Zero Engineering Hires](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/)
 - [Fast Company — Klarna Tried to Replace Its Workforce with AI](https://www.fastcompany.com/91468582/klarna-tried-to-replace-its-workforce-with-ai)
-- [CIO — Demand for Junior Developers Softens](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over.html)
+- [Stanford Digital Economy Lab / Fortune — AI Entry-Level Jobs Impact](https://fortune.com/2025/08/26/stanford-ai-entry-level-jobs-gen-z-erik-brynjolfsson/)
+- [Entrepreneur — AWS CEO on Replacing Junior Staff with AI](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-stop-replacing-workers-with-ai/496087)
 - [ETR Research — Tech Budgets Tighten, AI Rises](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026)
-- [Gloat — AI Workforce Trends for C-Suites 2026](https://gloat.com/blog/ai-workforce-trends-for-c-suite/)
+- [HR Executive — Forrester: The AI Layoff Trap](https://hrexecutive.com/the-ai-layoff-trap-why-half-will-be-quietly-rehired/)
+- [Growth Unhinged — 2025 State of B2B Monetization](https://www.growthunhinged.com/p/2025-state-of-b2b-monetization)
 - [Monetizely — Economics of AI-First B2B SaaS](https://www.getmonetizely.com/blogs/the-economics-of-ai-first-b2b-saas-in-2026)
 - [Computerworld — Nvidia CEO Talks Up Tokenomics](https://www.computerworld.com/article/4146468/nvidia-ceo-huang-talks-up-tokenomics-the-new-currency-for-ai.html)
 - [RCR Wireless — Agents, Inference and Token Economics](https://www.rcrwireless.com/20260318/ai-infrastructure/agents-inference-token-economics-nvidia-ai)
@@ -294,9 +298,9 @@ But the smart companies will treat this as **reallocation, not replacement**. Kl
 - [Bessemer Venture Partners — AI Pricing and Monetization Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook)
 - [a16z — State of AI: 100 Trillion Token Study](https://a16z.com/state-of-ai/)
 - [a16z — Notes on AI Apps in 2026](https://a16z.com/notes-on-ai-apps-in-2026/)
-- [DigitalOcean — Comparing AWS, Azure, GCP for Startups in 2026](https://www.digitalocean.com/resources/articles/comparing-aws-azure-gcp)
+- [AWS — Inferentia ML Inference Chip](https://aws.amazon.com/machine-learning/inferentia/)
 - [Inference.net — Azure OpenAI Pricing Explained](https://inference.net/content/azure-openai-pricing-explained)
-- [PitchGrade — Azure vs GCP vs AWS: Who Is Winning 2026](https://pitchgrade.com/research/azure-vs-gcp-vs-aws)
+- [Google Developers Blog — Gemini 1.5 Flash Updates](https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/)
 - [Fortune — Klarna CEO on AI Workforce Shrinkage](https://fortune.com/2026/02/17/klarnas-ceo-dario-amodei-ai-white-collar-workforce-shrink-2030/)
 - [SF Standard — AI Writes the Code Now](https://sfstandard.com/2026/02/19/ai-writes-code-now-s-left-software-engineers/)
 - [Stanford HAI — 2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report)
