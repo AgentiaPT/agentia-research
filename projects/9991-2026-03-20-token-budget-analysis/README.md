@@ -45,11 +45,11 @@ Huang isn't alone. The framing is converging from multiple directions:
 >
 > — Dario Amodei, Anthropic CEO, [60 Minutes / Axios](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=AI%20could%20wipe%20out%20half%20of%20all%20entry-level%20white-collar%20jobs)
 
-Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — implicitly acknowledging that tokens are becoming a measurable unit of economic activity worthy of taxation.
+Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — a 3% levy on every revenue-generating token, with proceeds going to government for redistribution. He acknowledged: "Obviously, that's not in my economic interest, but I think that would be a reasonable solution" ([Axios / The Decoder](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/#:~:text=token%20tax)). The implication: tokens are becoming a measurable unit of economic activity worthy of taxation.
 
-> "We're not going to hire any new engineers this year. We're seeing 30 percent productivity increase on engineering."
+> "We're not going to hire any new engineers this year. We're seeing 30 percent productivity increase on engineering, and we're going to really continue to ride that up."
 >
-> — Marc Benioff, Salesforce CEO, [Q4 2025 Earnings Call](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/#:~:text=30%20percent%20productivity%20increase)
+> — Marc Benioff, Salesforce CEO, [Q4 FY2025 Earnings Call, Feb 26, 2025](https://www.techradar.com/pro/salesforce-ceo-says-no-plans-to-hire-more-engineers-as-ai-is-doing-a-great-job#:~:text=30%20percent%20productivity%20increase)
 
 And from the venture capital world, Bessemer Venture Partners' 2026 AI Pricing Playbook states plainly:
 
@@ -70,9 +70,9 @@ The pressure to redirect existing budgets to token budgets comes from three conv
 Traditional per-seat SaaS is being hollowed out. When an AI agent can draft contracts, triage support tickets, generate marketing copy, and reconcile invoices — the value shifts from **access** (a seat) to **work done** (tokens consumed).
 
 **The numbers:**
-- Global SaaS market: **$315 billion** in 2026, growing at 20% CAGR ([BetterCloud](https://www.bettercloud.com/monitor/saas-industry/#:~:text=315%20billion))
+- Global SaaS market: **$315.7 billion** in 2025, projected to reach $375.6B in 2026 at 18.7% CAGR ([Fortune Business Insights via BetterCloud](https://www.bettercloud.com/monitor/saas-industry/#:~:text=315))
 - Average enterprise AI-native app spending: **$1.2M/year** — up 108% YoY ([Zylo 2026 SaaS Management Index](https://zylo.com/blog/ai-cost/#:~:text=1.2M))
-- Gartner forecasts **40% of enterprise SaaS** will include outcome-based (token/usage) pricing elements by end of 2026, up from 15% ([Gartner via PYMNTS](https://www.pymnts.com/artificial-intelligence-2/2026/cfos-scramble-as-ai-pricing-breaks-traditional-saas-billing-model/#:~:text=40%25))
+- Gartner forecasts **40% of enterprise SaaS** will include outcome-based (token/usage) pricing elements by end of 2026, up from 15% in 2022 ([Gartner via NxCode](https://www.nxcode.io/resources/news/saas-pricing-strategy-guide-2026#:~:text=40%25)). Seat-based pricing dropped from 21% to 15% of SaaS companies in just 12 months.
 
 **The pricing model is already breaking:**
 - Microsoft added Copilot to M365 and raised prices 16–33% across SKUs ([Licenseware](https://licenseware.io/software-price-increases-2025-2026/#:~:text=16.7))
@@ -89,7 +89,7 @@ This is the more uncomfortable conversation, but the data is unambiguous:
 **Hiring freezes are real:**
 - Salesforce announced **zero engineering hires** for 2025, citing 30% productivity gains from AI ([Salesforce Ben](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/#:~:text=zero%20engineering%20hires))
 - Klarna shrank from **5,527 to 3,422 employees** (38% reduction), claiming AI does the work of 700 customer service agents ([Fast Company](https://www.fastcompany.com/91468582/klarna-tried-to-replace-its-workforce-with-ai#:~:text=5%2C527%20to%203%2C422))
-- 30% of enterprises are now limiting future headcount due to AI, up from 21% in July 2025 ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=30%25))
+- 25% of enterprises are now limiting future headcount due to AI, up from 21% three months prior ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=25%25))
 - Junior developer employment dropped **~20%** while senior roles grew ([CIO](https://www.cio.com/article/4062024/demand-for-junior-developers-softens-as-ai-takes-over.html#:~:text=20%25%20drop))
 
 **The math is brutal:**
@@ -179,7 +179,7 @@ The key insight: **total cost per engineer may go up**, but **cost per unit of o
 >
 > — [PYMNTS](https://www.pymnts.com/artificial-intelligence-2/2026/cfos-scramble-as-ai-pricing-breaks-traditional-saas-billing-model/#:~:text=dense%20ledgers%20of%20token%20counts)
 
-84% of enterprises saw gross margin erosion of >6% due to unmetered AI infrastructure costs ([Mavvrik Report](https://www.pymnts.com/artificial-intelligence-2/2026/cfos-scramble-as-ai-pricing-breaks-traditional-saas-billing-model/#:~:text=84%25)). Vendors routinely see 500–1,000% cost underestimation when scaling from pilot to production.
+84% of enterprises saw gross margin erosion of >6% due to unmetered AI infrastructure costs, with 80% missing AI forecasts by more than 25% ([Mavvrik 2025 State of AI Cost Governance Report](https://www.mavvrik.ai/2025-state-of-ai-cost-management-research-finds-85-of-companies-miss-ai-forecasts-by-10/#:~:text=84%25), survey of 372 enterprises). Only 15% of companies forecast AI costs within ±10%, and nearly 1 in 4 miss by more than 50%.
 
 ### Signal 2: AI-First SaaS Margins Are Collapsing
 
@@ -187,7 +187,7 @@ Traditional SaaS gross margins: **70–90%**. AI-first SaaS gross margins: **20�
 
 ### Signal 3: Inference Costs Are Plummeting (Enabling the Shift)
 
-Stanford's AI Index shows inference cost for GPT-3.5-level performance dropped **280x** between November 2022 and October 2024. Hardware costs decline ~30% annually, energy efficiency improves ~40%/year. Token prices will keep falling, making Huang's vision more affordable every quarter.
+Stanford's 2025 AI Index Report shows inference cost for GPT-3.5-level performance (MMLU 64.8) dropped **280x** — from $20/million tokens to $0.07/million tokens — between November 2022 and October 2024. Enterprise AI hardware costs fell 30% in the last year, with new hardware also 40% more energy efficient ([Stanford HAI](https://hai.stanford.edu/ai-index/2025-ai-index-report#:~:text=280)). Token prices will keep falling, making Huang's vision more affordable every quarter.
 
 ### Signal 4: The Talent Pipeline Is Already Breaking
 
@@ -254,7 +254,7 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 | **Per-seat SaaS vendors** | Business model under existential threat. Can't compete with AI agents that charge per outcome, not per seat. |
 | **Traditional IT procurement** | Trained for predictable annual contracts, now facing variable token invoices with 500–1,000% cost surprises. |
 | **Companies that overcorrect** | Klarna pattern: cut too deep, quality craters, expensive rehiring. 55% of AI layoff companies regretted it. |
-| **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk. 80,000 jobs cut in 18 months at TCS/Infosys/Wipro. IT index fell 24% in Feb 2026. BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
+| **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk ([India AI Impact Summit 2026](https://news.outsourceaccelerator.com/indian-it-jobs-at-risk/#:~:text=5.8)). ~63K jobs cut at TCS (12.2K), Infosys (26K), Wipro (24.5K). Nifty IT index fell ~21% in Feb 2026 ([Business Standard](https://www.business-standard.com/markets/news/ai-fears-deepen-it-rout-as-nifty-it-index-hits-30-month-low-down-21-126022400970_1.html#:~:text=21%25)). BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
 
 ---
 
@@ -299,3 +299,9 @@ But the smart companies will treat this as **reallocation, not replacement**. Kl
 - [PitchGrade — Azure vs GCP vs AWS: Who Is Winning 2026](https://pitchgrade.com/research/azure-vs-gcp-vs-aws)
 - [Fortune — Klarna CEO on AI Workforce Shrinkage](https://fortune.com/2026/02/17/klarnas-ceo-dario-amodei-ai-white-collar-workforce-shrink-2030/)
 - [SF Standard — AI Writes the Code Now](https://sfstandard.com/2026/02/19/ai-writes-code-now-s-left-software-engineers/)
+- [Stanford HAI — 2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report)
+- [Mavvrik — 2025 State of AI Cost Governance Report](https://www.mavvrik.ai/2025-state-of-ai-cost-management-research-finds-85-of-companies-miss-ai-forecasts-by-10/)
+- [The Decoder — Anthropic CEO Proposes Token Tax](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/)
+- [TechRadar — Salesforce No Plans to Hire More Engineers](https://www.techradar.com/pro/salesforce-ceo-says-no-plans-to-hire-more-engineers-as-ai-is-doing-a-great-job)
+- [Business Standard — Nifty IT Hits 30-Month Low](https://www.business-standard.com/markets/news/ai-fears-deepen-it-rout-as-nifty-it-index-hits-30-month-low-down-21-126022400970_1.html)
+- [Outsource Accelerator — 5.8M Indian IT Jobs at Risk](https://news.outsourceaccelerator.com/indian-it-jobs-at-risk/)
