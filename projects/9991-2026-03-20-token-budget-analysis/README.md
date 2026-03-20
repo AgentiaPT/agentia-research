@@ -43,9 +43,9 @@ Huang isn't alone. The framing is converging from multiple directions:
 
 > "We, as the producers of this technology, have a duty and an obligation to be honest about what is coming. [...] AI could wipe out half of all entry-level white-collar jobs and spike unemployment to 10% to 20% in the next one to five years."
 >
-> — Dario Amodei, Anthropic CEO, [60 Minutes / Axios](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=AI%20could%20wipe%20out%20half%20of%20all%20entry-level%20white-collar%20jobs)
+> — Dario Amodei, Anthropic CEO, [Axios interview, May 2025](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=AI%20could%20wipe%20out%20half%20of%20all%20entry-level%20white-collar%20jobs)
 
-Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — a 3% levy on every revenue-generating token, with proceeds going to government for redistribution. He acknowledged: "Obviously, that's not in my economic interest, but I think that would be a reasonable solution" ([Axios / The Decoder](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/#:~:text=token%20tax)). The implication: tokens are becoming a measurable unit of economic activity worthy of taxation.
+Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — a 3% levy on AI company revenue from language models, with proceeds going to government for redistribution. He acknowledged: "Obviously, that's not in my economic interest, but I think that would be a reasonable solution" ([Axios / The Decoder](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/#:~:text=token%20tax)). The implication: tokens are becoming a measurable unit of economic activity worthy of taxation.
 
 > "We're not going to hire any new engineers this year. We're seeing 30 percent productivity increase on engineering, and we're going to really continue to ride that up."
 >
@@ -75,7 +75,7 @@ Traditional per-seat SaaS is being hollowed out. When an AI agent can draft cont
 - Gartner forecasts **40% of enterprise SaaS** will include outcome-based (token/usage) pricing elements by end of 2026, up from 15% in 2022 ([Gartner via NxCode](https://www.nxcode.io/resources/news/saas-pricing-strategy-guide-2026#:~:text=40%25)). Seat-based pricing dropped from 21% to 15% of SaaS companies in just 12 months.
 
 **The pricing model is already breaking:**
-- Microsoft added Copilot to M365 and raised prices 16–33% across SKUs ([Licenseware](https://licenseware.io/software-price-increases-2025-2026/#:~:text=16.7))
+- Microsoft added Copilot to M365 and raised prices 5–33% across SKUs (E5 at 5.3%, E3 at 8.3%, F3 at 25%, F1 at 33%) ([Licenseware](https://licenseware.io/software-price-increases-2025-2026/#:~:text=Copilot))
 - Adobe restructured Creative Cloud with up to 27% effective increases, bundling AI as justification ([Licenseware](https://licenseware.io/software-price-increases-2025-2026/#:~:text=27))
 - Docker implemented 67–80% price increases ([Licenseware](https://licenseware.io/software-price-increases-2025-2026/#:~:text=67))
 - Atlassian raised Data Center products 15–40% ([Licenseware](https://licenseware.io/software-price-increases-2025-2026/#:~:text=15%E2%80%9340))
@@ -110,7 +110,7 @@ A $250K/year engineer with $250K in token budget = **$500K total cost, but 10x o
 The third vector is more subtle but equally powerful. Traditional developer tooling — IDEs, CI/CD, monitoring, testing, documentation — is being consumed by AI agents that operate on tokens:
 
 - GitHub Copilot Business: **$19/user/month** ($228/year) — but it runs on tokens under the hood
-- Cursor Business: **$32/user/month** ($384/year) — explicitly token-metered
+- Cursor Business: **$32/user/month** billed annually ($384/year) — explicitly token-metered
 - Claude Code Max: **$200/month** ($2,400/year) — pure token consumption
 
 The tool **is** the tokens. The IDE is becoming a thin shell around a token stream. Every "tool" purchase is increasingly a token purchase in disguise.
@@ -121,8 +121,8 @@ The hyperscalers are building the infrastructure to make this shift inevitable:
 
 - **Azure** sells Provisioned Throughput Units (PTUs) for OpenAI models — model-agnostic quota units that let enterprises carve up token capacity like bandwidth. GPT-4o runs $10–15/million tokens, but enterprise deployments consistently run **15–40% above advertised token costs** due to hidden overhead ([Inference.net](https://inference.net/content/azure-openai-pricing-explained#:~:text=15%E2%80%9340%25))
 - **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS Inferentia chips are **30–40% cheaper per inference** than equivalent NVIDIA H100 capacity ([DigitalOcean](https://www.digitalocean.com/resources/articles/comparing-aws-azure-gcp#:~:text=30-40%25%20cheaper))
-- **Google Vertex AI** reduced Gemini serving unit costs by **78% over 2025** through model and infrastructure optimizations ([PitchGrade](https://pitchgrade.com/research/azure-vs-gcp-vs-aws#:~:text=78%25))
-- **~75% of enterprises** now run multi-cloud, picking each provider for its genuine strength rather than going all-in on one
+- **Google Vertex AI** has aggressively cut Gemini pricing — Gemini 1.5 Flash dropped to $0.075/million tokens (input), undercutting most competitors ([PitchGrade](https://pitchgrade.com/research/azure-vs-gcp-vs-aws#:~:text=Gemini))
+- **~75% of enterprises** now run multi-cloud, picking each provider for its genuine strength rather than going all-in on one ([Gartner](https://www.gartner.com/en/articles/cloud-computing-trends#:~:text=multi-cloud))
 
 All three are converging on the same model: **token-based consumption billing** with optional reserved capacity for predictability. The cloud cost line item IS the token budget — it's just not called that yet.
 
@@ -138,7 +138,7 @@ Bessemer Venture Partners' 2026 playbook identifies three emerging charge metric
 
 The key insight: **tokens are the underlying unit in all three models** — they're just surfaced differently. Consumption pricing exposes them. Workflow pricing bundles them. Outcome pricing hides them entirely. But the cost structure underneath is always inference compute = tokens.
 
-AI-first SaaS startups are hitting ~$100M ARR in ~18 months (vs. ~7 years for traditional cloud companies), but at gross margins of **50–60%** instead of 80–90% ([Bessemer](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=50%E2%80%9360%25)). The "inference tax" is real, and it's compressing margins across the entire software industry.
+AI-first SaaS startups are hitting ~$100M ARR in ~18 months (vs. ~7 years for traditional cloud companies) ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2025#:~:text=100M%20ARR)), but at gross margins of **50–60%** instead of 80–90% ([Bessemer Pricing Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=50%E2%80%9360%25)). The "inference tax" is real, and it's compressing margins across the entire software industry.
 
 ---
 
@@ -183,7 +183,7 @@ The key insight: **total cost per engineer may go up**, but **cost per unit of o
 
 ### Signal 2: AI-First SaaS Margins Are Collapsing
 
-Traditional SaaS gross margins: **70–90%**. AI-first SaaS gross margins: **20–60%** ([Monetizely](https://www.getmonetizely.com/blogs/the-economics-of-ai-first-b2b-saas-in-2026#:~:text=20%E2%80%9360)). The difference is tokens. Every inference costs real compute. This is forcing the entire SaaS industry toward consumption pricing — which is just token pricing with extra steps.
+Traditional SaaS gross margins: **70–90%**. AI-first SaaS gross margins: **25–60%** ([Monetizely](https://www.getmonetizely.com/blogs/the-economics-of-ai-first-b2b-saas-in-2026#:~:text=50-60%25%20gross%20margin)). The difference is tokens. Every inference costs real compute. This is forcing the entire SaaS industry toward consumption pricing — which is just token pricing with extra steps.
 
 ### Signal 3: Inference Costs Are Plummeting (Enabling the Shift)
 
@@ -205,7 +205,7 @@ Klarna cut 38% of its workforce, claiming AI replaced 700 customer service agent
 Jensen Huang is not a neutral observer. Every dollar redirected to token budgets flows through NVIDIA GPUs. His incentive is to maximize token consumption. The 10x productivity claim is aspirational, not empirical at scale.
 
 ### 2. Token Costs Are Unpredictable
-Unlike a $150K salary (fixed, predictable, amortized), token budgets are **variable and opaque**. A runaway agentic loop could burn $50K in a weekend. CFOs trained on predictable SaaS costs are not equipped for this volatility. As one analysis noted, vendors lure customers with generous pilot credits, then production routinely reveals [500–1,000% cost underestimation](https://zylo.com/blog/ai-cost/#:~:text=500).
+Unlike a $150K salary (fixed, predictable, amortized), token budgets are **variable and opaque**. A runaway agentic loop could burn $50K in a weekend. CFOs trained on predictable SaaS costs are not equipped for this volatility. As one analysis noted, vendors lure customers with generous pilot credits, then production routinely reveals [500–1,000% cost underestimation](https://www.gartner.com/en/articles/run-a-pilot-before-buying-ai-tools#:~:text=cost) (Gartner).
 
 ### 3. The ROI Is Unproven at Scale
 Only **13% of enterprises** report achieving measurable AI ROI at scale ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=13%25)). 55% of companies that laid off workers due to AI **later regretted the decision** ([Forrester via Gloat](https://gloat.com/blog/ai-workforce-trends-for-c-suite/#:~:text=55%25)).
@@ -243,7 +243,7 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 | **Senior engineers** | The "amplified 10x" worker. Fewer of them, paid more, armed with massive token budgets. The skill premium widens. |
 | **Anthropic / OpenAI** | Token vendors. Their revenue is directly proportional to enterprise token consumption. Anthropic's Claude Code at $100–200/dev/month is the thin end of the wedge. |
 | **Cloud hyperscalers** | Azure PTUs, AWS MUs, GCP Vertex — they're the token delivery layer. Multi-cloud strategies mean multiple token pipes. |
-| **AI-native startups** | Born without legacy headcount or SaaS stack. Can operate with 5 engineers + massive token budgets vs. competitor's 50. Hit $100M ARR in 18 months (Bessemer data). |
+| **AI-native startups** | Born without legacy headcount or SaaS stack. Can operate with 5 engineers + massive token budgets vs. competitor's 50. Hit $100M ARR in ~18 months ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2025#:~:text=100M%20ARR)). |
 | **FinOps / AI cost management** | New category of tooling for metering, attributing, and capping token spend. The "Datadog of tokens." |
 
 ### Losers
