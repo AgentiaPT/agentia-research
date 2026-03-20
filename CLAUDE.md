@@ -63,7 +63,7 @@ Content can live in the README itself (simple projects) or in separate files alo
 
 **HTML file links** — all links to `.html` files in project READMEs, the root README, and anywhere in the repo **must** use the GitHub Pages URL so they render as live pages, not raw source. Format: `https://agentiapt.github.io/agentia-research/projects/<folder>/<file>.html`. Never link to HTML files using relative paths or `github.com/...blob/...` URLs — GitHub shows raw HTML source for those.
 
-When a project is added or completed, update the root README projects table.
+When a project is added or completed, update the root README projects table by running `python3 scripts/build-index.py`. The table includes **estimated word count** and **reading time** columns (computed from all `.md` files in the project directory at ~238 wpm). These metrics are generated automatically by the build script — do not hardcode them.
 
 ## File Organization (Projects)
 
