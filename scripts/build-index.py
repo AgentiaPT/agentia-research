@@ -2,9 +2,12 @@
 """Generate projects/index.json from project README.md frontmatter."""
 
 import json
+import math
 import os
 import re
 from datetime import datetime, timezone
+
+WORDS_PER_MINUTE = 238  # average adult reading speed
 
 
 PROJECTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "projects")
@@ -64,6 +67,33 @@ def extract_description(body):
     return ""
 
 
+def count_words(directory):
+    """Count words across all .md files in a project directory."""
+    total = 0
+    for fname in os.listdir(directory):
+        if not fname.endswith(".md"):
+            continue
+        fpath = os.path.join(directory, fname)
+        if not os.path.isfile(fpath):
+            continue
+        with open(fpath, "r", encoding="utf-8") as f:
+            text = f.read()
+        # Strip YAML frontmatter
+        text = re.sub(r"^---\s*\n.*?\n---\s*\n", "", text, count=1, flags=re.DOTALL)
+        # Strip HTML tags
+        text = re.sub(r"<[^>]+>", "", text)
+        # Strip markdown images/links syntax but keep text
+        text = re.sub(r"!\[.*?\]\(.*?\)", "", text)
+        text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
+        total += len(text.split())
+    return total
+
+
+def reading_time(word_count):
+    """Estimate reading time in minutes (rounded up, minimum 1)."""
+    return max(1, math.ceil(word_count / WORDS_PER_MINUTE))
+
+
 def extract_slug(folder_name):
     """Extract slug from NNNN-YYYY-MM-DD-slug format."""
     m = re.match(r"^\d{4}-\d{4}-\d{2}-\d{2}-(.+)$", folder_name)
@@ -104,6 +134,8 @@ def main():
         files = sorted(f for f in os.listdir(entry_path) if os.path.isfile(os.path.join(entry_path, f)))
         html_files = [f for f in files if f.endswith(".html")]
 
+        words = count_words(entry_path)
+
         projects.append({
             "id": entry,
             "slug": extract_slug(entry),
@@ -115,6 +147,8 @@ def main():
             "files": files,
             "htmlFiles": html_files,
             "path": f"projects/{entry}",
+            "wordCount": words,
+            "readingTime": reading_time(words),
         })
 
     output = {
@@ -139,6 +173,13 @@ def main():
 PAGES_BASE = "https://agentiapt.github.io/agentia-research"
 
 
+def format_word_count(n):
+    """Format word count as human-friendly string (e.g. 1.2k, 15.4k)."""
+    if n >= 1000:
+        return f"{n / 1000:.1f}k"
+    return str(n)
+
+
 def make_table_row(p, relative_to_root=True):
     """Build a markdown table row for a project."""
     title = p["title"]
@@ -147,6 +188,8 @@ def make_table_row(p, relative_to_root=True):
     desc = p["description"][:120] + ("..." if len(p["description"]) > 120 else "")
     status = (p["status"] or "—").capitalize()
     date = p["date"] or "—"
+    words = format_word_count(p.get("wordCount", 0))
+    read_min = f"{p.get('readingTime', 1)} min"
 
     # Live demo links
     demos = []
@@ -155,7 +198,7 @@ def make_table_row(p, relative_to_root=True):
         demos.append(f"[{label}]({PAGES_BASE}/projects/{folder}/{f})")
     demo_col = ", ".join(demos) if demos else "—"
 
-    return f"| [{title}]({path_prefix}{folder}/) | {desc} | {demo_col} | {status} | {date} |"
+    return f"| [{title}]({path_prefix}{folder}/) | {desc} | {demo_col} | {words} | {read_min} | {status} | {date} |"
 
 
 def generate_projects_readme(projects):
@@ -166,8 +209,8 @@ def generate_projects_readme(projects):
 
 Complete catalog of all research projects, newest first.
 
-| Project | Description | Live Demo | Status | Date |
-|---------|-------------|-----------|--------|------|
+| Project | Description | Live Demo | Words | Read Time | Status | Date |
+|---------|-------------|-----------|------:|-----------|--------|------|
 """
     rows = [make_table_row(p, relative_to_root=False) for p in projects]
 
@@ -188,7 +231,7 @@ def update_root_readme(projects):
     with open(readme_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    table_header = "| Project | Description | Live Demo | Status | Date |\n|---------|-------------|-----------|--------|------|\n"
+    table_header = "| Project | Description | Live Demo | Words | Read Time | Status | Date |\n|---------|-------------|-----------|------:|-----------|--------|------|\n"
     rows = [make_table_row(p, relative_to_root=True) for p in projects]
     table = table_header + "\n".join(rows)
 
