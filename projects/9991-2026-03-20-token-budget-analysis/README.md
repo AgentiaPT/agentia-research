@@ -254,7 +254,7 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 | **Per-seat SaaS vendors** | Business model under existential threat. Can't compete with AI agents that charge per outcome, not per seat. |
 | **Traditional IT procurement** | Trained for predictable annual contracts, now facing variable token invoices with 500–1,000% cost surprises. |
 | **Companies that overcorrect** | Klarna pattern: cut too deep, quality craters, expensive rehiring. 55% of AI layoff companies regretted it. |
-| **Developing economies** | Outsourced development and BPO sectors face demand compression as token-augmented teams in high-cost geographies need fewer offshore resources. |
+| **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk. 80,000 jobs cut in 18 months at TCS/Infosys/Wipro. IT index fell 24% in Feb 2026. BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
 
 ---
 
