@@ -92,7 +92,7 @@ This is the more uncomfortable conversation, but the data is unambiguous:
 - Salesforce announced **zero engineering hires** for 2025, citing 30% productivity gains from AI ([Salesforce Ben](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/#:~:text=zero%20engineering%20hires))
 - Klarna shrank from **5,527 to 3,422 employees** (38% reduction), claiming AI does the work of 700 customer service agents ([Fast Company](https://www.fastcompany.com/91468582/klarna-tried-to-replace-its-workforce-with-ai#:~:text=5%2C527%20to%203%2C422))
 - 25% of enterprises are now limiting future headcount due to AI, up from 21% three months prior ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=25%25))
-- Junior developer employment dropped **~20%** since late 2022 (ages 22–25), while developers over 26 saw stable or growing employment ([Stanford Digital Economy Lab / ADP payroll data](https://fortune.com/2025/08/26/stanford-ai-entry-level-jobs-gen-z-erik-brynjolfsson/#:~:text=20%25))
+- Software developer employment for ages 22–25 dropped **~20%** since late 2022, while developers over 30 grew 6–12% — a **13% relative decline** across all AI-exposed entry-level roles ([Stanford Digital Economy Lab / ADP payroll data](https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/#:~:text=13%25%20relative%20decline))
 
 **The math is brutal:**
 
@@ -112,7 +112,7 @@ A $250K/year engineer with $250K in token budget = **$500K total cost, but 10x o
 The third vector is more subtle but equally powerful. Traditional developer tooling — IDEs, CI/CD, monitoring, testing, documentation — is being consumed by AI agents that operate on tokens:
 
 - GitHub Copilot Business: **$19/user/month** ($228/year) — but it runs on tokens under the hood
-- Cursor Business: **$32/user/month** billed annually ($384/year) — explicitly token-metered
+- Cursor Teams: **$32/user/month** billed annually ($384/year) — explicitly token-metered
 - Claude Code Max: **$200/month** ($2,400/year) — pure token consumption
 
 The tool **is** the tokens. The IDE is becoming a thin shell around a token stream. Every "tool" purchase is increasingly a token purchase in disguise.
@@ -122,7 +122,7 @@ The tool **is** the tokens. The IDE is becoming a thin shell around a token stre
 The hyperscalers are building the infrastructure to make this shift inevitable:
 
 - **Azure** sells Provisioned Throughput Units (PTUs) for OpenAI models — model-agnostic quota units that let enterprises carve up token capacity like bandwidth. GPT-4o runs $2.50 (input) to $10.00 (output) per million tokens, but enterprise deployments consistently run **15–40% above advertised token costs** due to hidden overhead ([Inference.net](https://inference.net/content/azure-openai-pricing-explained#:~:text=15%E2%80%9340%25))
-- **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS claims Inferentia/Trainium chips deliver **30–40% better price-performance** than equivalent GPU instances ([AWS](https://aws.amazon.com/machine-learning/inferentia/#:~:text=price%20performance))
+- **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS claims Inferentia chips deliver **up to 2.3x higher throughput and up to 70% lower cost** per inference vs. comparable GPU instances ([AWS](https://aws.amazon.com/machine-learning/inferentia/#:~:text=70%25%20lower%20cost))
 - **Google Vertex AI** has aggressively cut Gemini pricing — Gemini 1.5 Flash dropped to $0.075/million tokens (input), undercutting most competitors ([Google Developers Blog](https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/#:~:text=price))
 - **~75% of enterprises** now run multi-cloud, picking each provider for its genuine strength rather than going all-in on one ([Gartner](https://www.gartner.com/en/articles/cloud-computing-trends#:~:text=multi-cloud))
 
@@ -193,7 +193,7 @@ Stanford's 2025 AI Index Report shows inference cost for GPT-3.5-level performan
 
 ### Signal 4: The Talent Pipeline Is Already Breaking
 
-Companies eliminating junior roles in 2026 may find themselves competing for scarce mid-level talent by 2029 — the same pattern that followed the 2008 financial crisis. AWS CEO Matt Garman called replacing juniors with AI ["one of the dumbest things I've ever heard"](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-stop-replacing-workers-with-ai/496087#:~:text=dumbest), warning: "If you have no talent pipeline that you're building and no junior people that you're mentoring... at some point, that whole thing explodes on itself."
+Companies eliminating junior roles in 2026 may find themselves competing for scarce mid-level talent by 2029 — the same pattern that followed the 2008 financial crisis. AWS CEO Matt Garman called replacing juniors with AI ["one of the dumbest things I've ever heard"](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-stop-replacing-workers-with-ai/496087#:~:text=dumbest), warning: ["If you have no talent pipeline that you're building and no junior people that you're mentoring and bringing up through the company... at some point, that whole thing explodes on itself."](https://www.wired.com/story/aws-ceo-matt-garman-ai-replace-junior-devs/#:~:text=talent%20pipeline)
 
 ### Signal 5: Klarna's Cautionary Tale
 
@@ -207,7 +207,7 @@ Klarna cut 38% of its workforce, claiming AI replaced 700 customer service agent
 Jensen Huang is not a neutral observer. Every dollar redirected to token budgets flows through NVIDIA GPUs. His incentive is to maximize token consumption. The 10x productivity claim is aspirational, not empirical at scale.
 
 ### 2. Token Costs Are Unpredictable
-Unlike a $150K salary (fixed, predictable, amortized), token budgets are **variable and opaque**. A runaway agentic loop could burn $50K in a weekend. CFOs trained on predictable SaaS costs are not equipped for this volatility. As one analysis noted, vendors lure customers with generous pilot credits, then production routinely reveals [500–1,000% cost underestimation](https://www.gartner.com/en/articles/run-a-pilot-before-buying-ai-tools#:~:text=cost) (Gartner).
+Unlike a $150K salary (fixed, predictable, amortized), token budgets are **variable and opaque**. A runaway agentic loop could burn $50K in a weekend. CFOs trained on predictable SaaS costs are not equipped for this volatility. As one analysis noted, vendors lure customers with generous pilot credits, then production routinely reveals [500–1,000% cost underestimation](https://www.gartner.com/en/newsroom/press-releases/2024-05-20-gartner-says-cfos-must-address-four-enterprise-ai-stalls#:~:text=500) (Gartner).
 
 ### 3. The ROI Is Unproven at Scale
 Only **13% of enterprises** report achieving measurable AI ROI at scale ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=13%25)). 55% of companies that laid off workers due to AI **later regretted the decision** ([Forrester Predictions 2026 via HR Executive](https://hrexecutive.com/the-ai-layoff-trap-why-half-will-be-quietly-rehired/#:~:text=55%25)).
@@ -286,8 +286,9 @@ But the smart companies will treat this as **reallocation, not replacement**. Kl
 - [Licenseware — Software Price Increases 2025–2026](https://licenseware.io/software-price-increases-2025-2026/)
 - [Salesforce Ben — Zero Engineering Hires](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/)
 - [Fast Company — Klarna Tried to Replace Its Workforce with AI](https://www.fastcompany.com/91468582/klarna-tried-to-replace-its-workforce-with-ai)
-- [Stanford Digital Economy Lab / Fortune — AI Entry-Level Jobs Impact](https://fortune.com/2025/08/26/stanford-ai-entry-level-jobs-gen-z-erik-brynjolfsson/)
+- [Stanford Digital Economy Lab — "Canaries in the Coal Mine?" (Brynjolfsson, Chandar, Chen)](https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/)
 - [Entrepreneur — AWS CEO on Replacing Junior Staff with AI](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-stop-replacing-workers-with-ai/496087)
+- [WIRED — AWS CEO Matt Garman on Junior Developers and AI](https://www.wired.com/story/aws-ceo-matt-garman-ai-replace-junior-devs/)
 - [ETR Research — Tech Budgets Tighten, AI Rises](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026)
 - [HR Executive — Forrester: The AI Layoff Trap](https://hrexecutive.com/the-ai-layoff-trap-why-half-will-be-quietly-rehired/)
 - [Growth Unhinged — 2025 State of B2B Monetization](https://www.growthunhinged.com/p/2025-state-of-b2b-monetization)
