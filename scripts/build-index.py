@@ -68,28 +68,20 @@ def extract_description(body):
 
 
 def count_words(directory):
-    """Count words across all .md files in a project directory."""
-    total = 0
-    for fname in os.listdir(directory):
-        if not fname.endswith(".md"):
-            continue
-        # Exclude task.md (internal tracking, not research output)
-        if fname == "task.md":
-            continue
-        fpath = os.path.join(directory, fname)
-        if not os.path.isfile(fpath):
-            continue
-        with open(fpath, "r", encoding="utf-8") as f:
-            text = f.read()
-        # Strip YAML frontmatter
-        text = re.sub(r"^---\s*\n.*?\n---\s*\n", "", text, count=1, flags=re.DOTALL)
-        # Strip HTML tags
-        text = re.sub(r"<[^>]+>", "", text)
-        # Strip markdown images/links syntax but keep text
-        text = re.sub(r"!\[.*?\]\(.*?\)", "", text)
-        text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
-        total += len(text.split())
-    return total
+    """Count words in the project's main README.md only."""
+    readme_path = os.path.join(directory, "README.md")
+    if not os.path.isfile(readme_path):
+        return 0
+    with open(readme_path, "r", encoding="utf-8") as f:
+        text = f.read()
+    # Strip YAML frontmatter
+    text = re.sub(r"^---\s*\n.*?\n---\s*\n", "", text, count=1, flags=re.DOTALL)
+    # Strip HTML tags
+    text = re.sub(r"<[^>]+>", "", text)
+    # Strip markdown images/links syntax but keep text
+    text = re.sub(r"!\[.*?\]\(.*?\)", "", text)
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
+    return len(text.split())
 
 
 def reading_time(word_count):
