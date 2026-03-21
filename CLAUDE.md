@@ -166,6 +166,7 @@ When a task involves research or analysis:
 - **Voice diversity** — when surveying a topic, include named experts/practitioners with their actual positions, not generic summaries.
 - **Living research** — for ongoing topics, use dated entries within the project folder (e.g., `editions/2026-03-14.md`).
 - For long-form essays: use modular sections, subdirectories for sections/sources when needed.
+- **Human commentary** — research essays and analysis pieces should include human perspective using the `> 🧑‍💻 **RQuintino:**` blockquote format. At natural breakpoints in the essay, ask the user for their views (one question at a time via AskUserQuestion) and weave their responses into the text as commentary blocks. This creates a human-AI dialogue that distinguishes the repo's research from pure AI output. See the vibe coding, Gutenberg parallel, and token budget essays for examples.
 
 ## Interactive HTML Standards
 
