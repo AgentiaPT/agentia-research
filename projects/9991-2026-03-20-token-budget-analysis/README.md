@@ -124,7 +124,7 @@ The hyperscalers are building the infrastructure to make this shift inevitable:
 - **Azure** sells Provisioned Throughput Units (PTUs) for OpenAI models — model-agnostic quota units that let enterprises carve up token capacity like bandwidth. GPT-4o runs $2.50 (input) to $10.00 (output) per million tokens, but enterprise deployments consistently run **15–40% above advertised token costs** due to hidden overhead ([Inference.net](https://inference.net/content/azure-openai-pricing-explained#:~:text=15%E2%80%9340%25))
 - **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS claims Inferentia chips deliver **up to 2.3x higher throughput and up to 70% lower cost** per inference vs. comparable Amazon EC2 instances ([AWS](https://aws.amazon.com/machine-learning/inferentia/#:~:text=70%25%20lower%20cost))
 - **Google Vertex AI** has aggressively cut Gemini pricing — Gemini 1.5 Flash dropped to $0.075/million tokens (input), undercutting most competitors ([Google Developers Blog](https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/#:~:text=price))
-- **~75% of enterprises** now run multi-cloud, picking each provider for its genuine strength rather than going all-in on one ([Gartner](https://www.gartner.com/en/articles/cloud-computing-trends#:~:text=multi-cloud))
+- Enterprises increasingly run **multi-cloud**, picking each provider for its genuine strength rather than going all-in on one
 
 All three are converging on the same model: **token-based consumption billing** with optional reserved capacity for predictability. The cloud cost line item IS the token budget — it's just not called that yet.
 
@@ -181,7 +181,7 @@ The key insight: **total cost per engineer may go up**, but **cost per unit of o
 >
 > — [PYMNTS](https://www.pymnts.com/artificial-intelligence-2/2026/cfos-scramble-as-ai-pricing-breaks-traditional-saas-billing-model/#:~:text=dense%20ledgers%20of%20token%20counts)
 
-84% of enterprises saw gross margin erosion of >6% due to unmetered AI infrastructure costs, with 80% missing AI forecasts by more than 25% ([Mavvrik 2025 State of AI Cost Governance Report](https://www.mavvrik.ai/2025-state-of-ai-cost-management-research-finds-85-of-companies-miss-ai-forecasts-by-10/#:~:text=84%25), survey of 372 enterprises). Only 15% of companies forecast AI costs within ±10%, and nearly 1 in 4 miss by more than 50%.
+85% of companies miss AI cost forecasts by more than 10% ([Mavvrik 2025 State of AI Cost Governance Report](https://www.mavvrik.ai/2025-state-of-ai-cost-management-research-finds-85-of-companies-miss-ai-forecasts-by-10/#:~:text=85%25%20of%20Companies%20Miss%20AI%20Forecasts)).
 
 ### Signal 2: AI-First SaaS Margins Are Collapsing
 
