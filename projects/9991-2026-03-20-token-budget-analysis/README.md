@@ -111,7 +111,7 @@ This is the more uncomfortable conversation, but the data is unambiguous:
 
 A $250K/year engineer with $250K in token budget = **$500K total cost, but 10x output**. Compare that to hiring two more $250K engineers ($500K + benefits/overhead = $700K+) for maybe 3x output. The ROI math writes itself.
 
-> 🧑‍💻 **RQuintino:** The "AI manager" role — directing token spend, reviewing AI output — feels like a temporary transition to me. AI managing AI is coming. Humans will just set goals.
+> 🧑‍💻 **RQuintino:** The "AI manager" role — directing token spend, reviewing AI output — feels like a temporary transition to me. AI managing AI is coming. Humans will just set goals. But this raises the stakes for impact of any error. Extreme leverage can have devastating effects. Historically, more automation demanded more determinism — which is something we don't have with current AI.
 
 ### 3. Tool License Budgets → Token Budgets
 
