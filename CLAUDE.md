@@ -105,7 +105,18 @@ open-source options. Build an interactive comparison page.
 
 **HTML file links** — all links to `.html` files in project READMEs, the root README, and anywhere in the repo **must** use the GitHub Pages URL so they render as live pages, not raw source. Format: `https://agentiapt.github.io/agentia-research/projects/<folder>/<file>.html`. Never link to HTML files using relative paths or `github.com/...blob/...` URLs — GitHub shows raw HTML source for those.
 
-When a project is added or completed, update the root README projects table by running `python3 scripts/build-index.py`. The table includes **estimated word count** and **reading time** columns (computed from the project's main `README.md` at ~238 wpm). These metrics are generated automatically by the build script — do not hardcode them.
+### Keeping the README Projects Table Up to Date
+
+> **⚠️ MANDATORY** — The root `README.md` projects table **must** be updated by running `python3 scripts/build-index.py` whenever any of the following happen:
+>
+> - A **new project folder** is created
+> - A project's **status changes** (e.g., draft → complete)
+> - A project's **README.md content changes** significantly (affects word count / reading time)
+> - A project is **deleted or renamed**
+>
+> Run the script, then **commit the updated `README.md`, `projects/README.md`, and `projects/index.json`** together with the project changes — never leave them out of sync. This is the most common mistake in this repo: finishing a project but forgetting to regenerate the index.
+
+The table includes **estimated word count** and **reading time** columns (computed from the project's main `README.md` at ~238 wpm). These metrics are generated automatically by the build script — do not hardcode them.
 
 ## File Organization (Projects)
 
