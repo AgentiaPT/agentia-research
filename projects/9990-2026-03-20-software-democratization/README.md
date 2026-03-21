@@ -9,6 +9,8 @@ tags: [software-engineering, ai, democratization, history, future]
 
 > **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
+> **About the comments in this essay:** The blockquotes marked with 💬 **Human** are real-time thoughts from the human directing this research — a software engineer with a broad generalist background. They were added after the AI draft as a conversation layer, capturing honest reactions, disagreements, and personal experience. Think of it as margin notes in a living dialogue between human and machine.
+
 ---
 
 ## The Thesis
@@ -18,6 +20,8 @@ What is happening now with software happened before with writing. The pattern is
 Writing went from scribes to the printing press to typewriters to word processors to blogging to social media. At every step, the cost of production collapsed, gatekeepers lost power, volume exploded, and the quality distribution widened — more noise, but also more signal in absolute terms.
 
 Software is following the same curve. And we are standing at the printing press moment.
+
+> 💬 **Human:** Honestly, I think this undersells it. The analogy isn't scribes → printing press. It's more like going from *Egyptian hieroglyphics* to *computer printing* — all at once. We're not just skipping one revolution; we're compressing several into a single moment. And that's both thrilling and terrifying at the same time — the duality IS the point. Society adapted to the printing press over centuries. We're getting months. The excitement and the fear aren't separate reactions — they're the same reaction.
 
 ---
 
@@ -129,6 +133,8 @@ This is the category that doesn't exist yet but will dominate by volume. Just as
 
 These aren't "apps" in the traditional sense. They're **utterances** — software as speech.
 
+> 💬 **Human:** I'm not just nodding along here — I'm *living* this right now. I'm literally directing AI to produce deep research essays from my phone on a Saturday. I would never have hired a developer for this. I would never have written this myself. And it's not just personal — it's reshaping how teams and entire businesses work too. The "personal software" framing is real, but it's actually bigger than personal. Every knowledge worker is about to become a software creator whether they realize it or not.
+
 ### 3. The "Long Tail" Becomes Infinite
 
 Previously uneconomical software becomes viable. A tool serving 50 beekeepers in Portugal? Never worth building at $100K+ development costs. At $0 marginal cost with AI? Why not?
@@ -154,6 +160,8 @@ When everyone can produce mediocre code via prompting, the scarce skills become:
 
 The emerging reality: the ability to *review* AI-generated code and catch what the model missed — subtle race conditions, insecure defaults, architectural dead-ends — requires *higher* expertise, not lower.
 
+> 💬 **Human:** I genuinely don't know where I land on this one. On one hand, I *feel* more valuable than ever — my diverse, generalist background across software development, web security, and architecture means I can steer AI effectively and catch things others miss. The combination of broad experience + AI amplification is incredibly powerful. But on the other hand... will the demand keep up? If AI makes everyone 10x more productive, do you need 10x fewer professionals? I'm not confident the "pros become more valuable" narrative holds long-term. It might be true today. It might not be true in five years. I'm genuinely uncertain, and I think anyone who claims to know is bluffing.
+
 ---
 
 ## Part IV: The Uncomfortable Parallels
@@ -174,9 +182,13 @@ The data already shows this. In 2025, studies show [average PR sizes increased b
 
 A [randomized controlled trial by METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/#:~:text=19%25%20longer) (July 2025) found that when 16 experienced open-source developers were allowed to use AI tools on tasks in repos where they had an average of 5 years of experience, they took **19% longer** to complete issues. Strikingly, developers *believed* AI had sped them up by 20% — even as the data showed the opposite. The tools that help beginners can actively hinder experts on hard problems.
 
+> 💬 **Human:** I respect the METR study, but 16 developers on specific tasks? That's way too narrow to draw sweeping conclusions. What AI allows me to do *right now* for knowledge work and coding is insane — genuinely transformative. Things that would have taken days take hours. Things I never would have attempted, I now do casually. That said, it still requires constant steering, a lot of guard rails, and real risk mitigation. It's not autopilot — it's more like power steering. You're still driving, but you can take corners you never could before.
+
 ### The Trust Problem
 
 [Only 33% of developers say they trust AI-generated code](https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools#:~:text=33%25%20say%20they%20trust). Developer sentiment toward AI tools [dropped from 70%+ positive in 2023–2024 to 60% in 2025](https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools#:~:text=60%25). As one industry watcher noted, Boris Cherny — who created Claude Code — [predicted the demise of his own profession](https://sfstandard.com/2026/03/05/engineer-2025-ai-land-everyone-s-builder-now/#:~:text=Boris%20Cherny), saying "today coding is practically solved." Not everyone agrees.
+
+> 💬 **Human:** Here's where I'll push back on the "trust crisis" framing. I have quite a bit of background in software development and web security, and I'll say it honestly: AI currently beats most developers. Not all. Not on everything. And not without supervision. But as a *starting point*, if you weight everything — breadth of knowledge, speed, consistency, awareness of best practices — it's very hard to beat. The average developer ships code with the same bugs and security holes, just slower. The 33% trust number tells me more about developer ego and unfamiliarity with the tools than about actual AI code quality. The real question isn't "is AI code trustworthy?" — it's "compared to what?"
 
 ---
 
@@ -204,6 +216,8 @@ How strong is the writing–software parallel? Let's score it across key dimensi
 The direction is clear. The timeline is compressed. The volume explosion is already measurable in the data.
 
 But here's what the writing parallel *can't* tell us: what happens when software can write software? The printing press didn't write new books. Blogs didn't generate their own posts. But AI-generated software can generate *more* AI-generated software. This creates a recursive feedback loop that has no precedent in the writing democratization story.
+
+> 💬 **Human:** This is where the Gutenberg analogy breaks down completely, and I think the essay should own that more forcefully. The printing press was a *tool*. It did exactly what the operator told it to do. It never decided to print a different book, or improve its own typesetting, or compose a pamphlet on its own. What we're building now has *agency*. It proposes, iterates, and generates things its operators didn't explicitly ask for. That's not a printing press. That's a new kind of author. And honestly? That's the part nobody — including me — really knows how to think about yet.
 
 We might be looking not at a printing press moment, but at something genuinely new — a technology that doesn't just lower the barrier to production, but starts producing *on its own*. That's not writing's story. That's a story we haven't lived through yet.
 
