@@ -105,6 +105,10 @@ regexes = [
   '''255\.255\.\d+\.\d+''',
   '''169\.254\.\d+\.\d+''',
 ]
+# SVG path data in HTML files contains decimal sequences gitleaks misreads as IPv4
+paths = [
+  '''\.html$''',
+]
 
 # --- Date of Birth ---
 [[rules]]
