@@ -37,7 +37,7 @@ When asked if NVIDIA is spending $2 billion on tokens for its engineering team, 
 
 This isn't just a CEO selling GPUs. It's a signal that the **unit of enterprise productivity investment is shifting from human hours and software seats to tokens consumed**.
 
-> 🧑‍💻 **RQuintino:** Already happening. I already have a quite reasonable token budget today. I don't see a horizon where I would subcontract anyone or hire to do X, except maybe for regulated or certificate-required professionals. It feels like empowerment — but clearly a new kind of dependency. When Claude breaks, I usually take a break, take a walk, read, or go pen & paper. That tells you everything about how deep the dependency already is.
+> 🧑‍💻 **RQuintino:** Already happening. I already have a quite reasonable token budget today. I don't see a horizon where I would subcontract anyone or hire to do X, except maybe for regulated or certificate-required professionals. It feels like empowerment — but clearly a new kind of dependency. When Claude breaks, I usually take a break, take a walk, read, or go pen & paper.
 
 ### The Supporting Chorus
 
@@ -86,7 +86,7 @@ Traditional per-seat SaaS is being hollowed out. When an AI agent can draft cont
 
 These aren't normal inflation adjustments. Vendors are **monetizing AI features they've embedded** — charging for tokens under the hood while maintaining the illusion of seat-based pricing. The mask is coming off.
 
-> 🧑‍💻 **RQuintino:** Unless the SaaS has some specific offering beyond software, it's getting much easier to just evolve my own tools. More and more, Claude is all you need — app building with integrated intelligence and connectors, plus markdown for personal and company OS. The per-seat model is already dead for me.
+> 🧑‍💻 **RQuintino:** Unless the SaaS has some specific offering beyond software, it's getting much easier to just evolve my own tools. More and more, Claude is all you need — app building with integrated intelligence and connectors, plus markdown for personal and company OS.
 
 ### 2. HR/Headcount Budgets → Token Budgets
 
@@ -111,7 +111,7 @@ This is the more uncomfortable conversation, but the data is unambiguous:
 
 A $250K/year engineer with $250K in token budget = **$500K total cost, but 10x output**. Compare that to hiring two more $250K engineers ($500K + benefits/overhead = $700K+) for maybe 3x output. The ROI math writes itself.
 
-> 🧑‍💻 **RQuintino:** The "AI manager" role — directing token spend, reviewing AI output — feels like a temporary transition to me. AI managing AI is coming. Humans will just set goals. That makes the ROI math even more extreme, but also more unsettling.
+> 🧑‍💻 **RQuintino:** The "AI manager" role — directing token spend, reviewing AI output — feels like a temporary transition to me. AI managing AI is coming. Humans will just set goals.
 
 ### 3. Tool License Budgets → Token Budgets
 
@@ -201,7 +201,7 @@ Stanford's 2025 AI Index Report shows inference cost for GPT-3.5-level performan
 
 Companies eliminating junior roles in 2026 may find themselves competing for scarce mid-level talent by 2029 — the same pattern that followed the 2008 financial crisis. AWS CEO Matt Garman called replacing juniors with AI ["one of the dumbest things I've ever heard"](https://www.entrepreneur.com/business-news/amazon-web-services-ceo-stop-replacing-workers-with-ai/496087#:~:text=dumbest), warning: ["If you have no talent pipeline that you're building and no junior people that you're mentoring and bringing up through the company... at some point, that whole thing explodes on itself."](https://www.wired.com/story/aws-ceo-matt-garman-ai-replace-junior-devs/#:~:text=talent%20pipeline)
 
-> 🧑‍💻 **RQuintino:** The pipeline will evolve, not die. It's a hybrid path — less syntax, more architecture and systems thinking. The entry point shifts, but the need for humans who understand *why* systems work (not just *how* to type them) doesn't go away. At least not yet.
+> 🧑‍💻 **RQuintino:** The pipeline will evolve, not die. It's a hybrid path — less syntax, more architecture and systems thinking.
 
 ### Signal 5: Klarna's Cautionary Tale
 
@@ -244,7 +244,7 @@ And more recently, Taleb warned that AI will trigger widespread software bankrup
 
 The irony is sharp: Taleb has long praised Silicon Valley's ecosystem of many small, failure-tolerant startups as a textbook example of antifragility — many entrepreneurs fail, but they fail small. What he warns against is the *concentration* of that ecosystem's output into a few dominant infrastructure providers. The token budget thesis accelerates exactly this concentration.
 
-> 🧑‍💻 **RQuintino:** This is what scares me most — and at the corporate scale, not the personal one. When everyone depends on the same AI infrastructure, a single failure cascades across the entire economy. It's not just vendor lock-in. It's civilization-level fragility. We're building a world where a single API outage can paralyze entire industries simultaneously. Taleb would call this the mother of all fragilities — and he'd be right.
+> 🧑‍💻 **RQuintino:** This is what scares me most — and at the corporate scale, not the personal one. When everyone depends on the same AI infrastructure, a single failure cascades across the entire economy.
 
 ---
 
@@ -286,7 +286,7 @@ The irony is sharp: Taleb has long praised Silicon Valley's ecosystem of many sm
 | **Companies that overcorrect** | Klarna pattern: cut too deep, quality craters, expensive rehiring. 55% of AI layoff companies regretted it. |
 | **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk ([India AI Impact Summit 2026](https://news.outsourceaccelerator.com/indian-it-jobs-at-risk/#:~:text=5.8)). ~62K jobs cut at TCS (~12K), Infosys (~26K), Wipro (~24.5K). Nifty IT index fell ~21% in Feb 2026 ([Business Standard](https://www.business-standard.com/markets/news/ai-fears-deepen-it-rout-as-nifty-it-index-hits-30-month-low-down-21-126022400970_1.html#:~:text=21%25)). BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
 
-> 🧑‍💻 **RQuintino:** The offshore disruption feels fundamentally different from the junior developer problem. Offshore IT was always about cost arbitrage — AI eliminates the arbitrage entirely. It's not evolution, it's extinction of that model. But honestly, I'm really unsure on this one. These economies have surprised before.
+> 🧑‍💻 **RQuintino:** The offshore disruption maybe feels fundamentally different from the junior developer problem. Offshore IT was always about cost arbitrage — AI eliminates the arbitrage entirely. But honestly, I'm really unsure on this one.
 
 ---
 
@@ -302,9 +302,7 @@ The convergence of these three forces means **"token budget" will become a stand
 
 But the smart companies will treat this as **reallocation, not replacement**. Klarna's public admission of going too far is the canary in the coal mine. The winning formula isn't "fire humans, buy tokens." It's "amplify fewer, better humans with more tokens" — exactly what Huang described, even if his motivation is selling the picks and shovels.
 
-> 🧑‍💻 **RQuintino:** A token tax is likely inevitable — when enough jobs are displaced, governments will tax AI usage the way they tax everything else. But my actual preference is different: impose much lower work hours limits while keeping same or even higher incomes. Let AI productivity gains fund shorter work weeks, not just fatter corporate margins. The technology should buy us *time*, not just efficiency.
->
-> And to a 25-year-old software engineer reading this: the path forward is hybrid. Master AI tooling aggressively — but keep your architectural thinking and systems intuition sharp. Less syntax, more *why*. The ones who understand what they're building, not just how to prompt for it, will be the ones setting the goals when AI manages AI. That transition is coming faster than any of us are comfortable admitting.
+> 🧑‍💻 **RQuintino:** A token tax is likely inevitable. Or — my actual preference — imposing much lower work hours limits while keeping same or even higher incomes.
 
 ---
 

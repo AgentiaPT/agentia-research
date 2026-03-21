@@ -167,6 +167,7 @@ When a task involves research or analysis:
 - **Living research** — for ongoing topics, use dated entries within the project folder (e.g., `editions/2026-03-14.md`).
 - For long-form essays: use modular sections, subdirectories for sections/sources when needed.
 - **Human commentary** — research essays and analysis pieces should include human perspective using the `> 🧑‍💻 **RQuintino:**` blockquote format. At natural breakpoints in the essay, ask the user for their views (one question at a time via AskUserQuestion) and weave their responses into the text as commentary blocks. This creates a human-AI dialogue that distinguishes the repo's research from pure AI output. See the vibe coding, Gutenberg parallel, and token budget essays for examples.
+  - **⚠️ NEVER fabricate human commentary.** The `🧑‍💻 RQuintino:` blocks must contain **only** what the user actually said — cleaned up for grammar and spelling, but never embellished, extended, or paraphrased with invented opinions. Do not add conclusions, interpretations, or extra sentences the user did not express. If the user's answer is short, the commentary block should be short. Putting words in someone's mouth in a public repository is unacceptable.
 
 ## Interactive HTML Standards
 
