@@ -140,7 +140,7 @@ Bessemer Venture Partners' 2026 playbook identifies three emerging charge metric
 
 The key insight: **tokens are the underlying unit in all three models** — they're just surfaced differently. Consumption pricing exposes them. Workflow pricing bundles them. Outcome pricing hides them entirely. But the cost structure underneath is always inference compute = tokens.
 
-AI-first SaaS startups are hitting ~$100M ARR in ~18 months (vs. ~7 years for traditional cloud companies) ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2026#:~:text=100M%20ARR)), but at gross margins of **50–60%** instead of 80–90% ([Bessemer Pricing Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=50%E2%80%9360%25)). The "inference tax" is real, and it's compressing margins across the entire software industry.
+AI-first SaaS startups are hitting ~$100M ARR in ~18 months (vs. ~7 years for traditional cloud companies) ([Bessemer Venture Partners](https://www.bvp.com/atlas/state-of-health-ai-2026#:~:text=100M%20ARR)), but at gross margins of **50–60%** instead of 80–90% ([Bessemer Pricing Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook#:~:text=50%E2%80%9360%25)). The "inference tax" is real, and it's compressing margins across the entire software industry.
 
 ---
 
@@ -185,7 +185,7 @@ The key insight: **total cost per engineer may go up**, but **cost per unit of o
 
 ### Signal 2: AI-First SaaS Margins Are Collapsing
 
-Traditional SaaS gross margins: **70–90%**. AI-first SaaS gross margins: **25–60%** ([Monetizely](https://www.getmonetizely.com/blogs/the-economics-of-ai-first-b2b-saas-in-2026#:~:text=50-60%25%20gross%20margin)). The difference is tokens. Every inference costs real compute. This is forcing the entire SaaS industry toward consumption pricing — which is just token pricing with extra steps.
+Traditional SaaS gross margins: **70–90%**. AI-first SaaS gross margins: **50–60%** ([Monetizely](https://www.getmonetizely.com/blogs/the-economics-of-ai-first-b2b-saas-in-2026#:~:text=50-60%25%20gross%20margin)). The difference is tokens. Every inference costs real compute. This is forcing the entire SaaS industry toward consumption pricing — which is just token pricing with extra steps.
 
 ### Signal 3: Inference Costs Are Plummeting (Enabling the Shift)
 
@@ -197,7 +197,7 @@ Companies eliminating junior roles in 2026 may find themselves competing for sca
 
 ### Signal 5: Klarna's Cautionary Tale
 
-Klarna cut 38% of its workforce, claiming AI replaced 700 customer service agents. Then CEO Siemiatkowski publicly admitted ["We went too far"](https://www.fastcompany.com/91468582/klarna-tried-to-replace-its-workforce-with-ai#:~:text=We%20went%20too%20far) — customer satisfaction cratered, and they're now rehiring humans. The lesson: **token budgets augment headcount budgets; they don't wholesale replace them**.
+Klarna cut 38% of its workforce, claiming AI replaced 700 customer service agents. Then CEO Siemiatkowski admitted to Bloomberg that cost had been ["a too predominant evaluation factor"](https://fortune.com/2025/05/09/klarna-ai-humans-return-on-investment/#:~:text=too%20predominant%20evaluation%20factor) in organizing the transition, leading to lower quality — and the company began rehiring humans. The lesson: **token budgets augment headcount budgets; they don't wholesale replace them**.
 
 ---
 
@@ -245,7 +245,7 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 | **Senior engineers** | The "amplified 10x" worker. Fewer of them, paid more, armed with massive token budgets. The skill premium widens. |
 | **Anthropic / OpenAI** | Token vendors. Their revenue is directly proportional to enterprise token consumption. Anthropic's Claude Code at $100–200/dev/month is the thin end of the wedge. |
 | **Cloud hyperscalers** | Azure PTUs, AWS MUs, GCP Vertex — they're the token delivery layer. Multi-cloud strategies mean multiple token pipes. |
-| **AI-native startups** | Born without legacy headcount or SaaS stack. Can operate with 5 engineers + massive token budgets vs. competitor's 50. Hit $100M ARR in ~18 months ([Bessemer State of the Cloud](https://www.bvp.com/atlas/state-of-the-cloud-2026#:~:text=100M%20ARR)). |
+| **AI-native startups** | Born without legacy headcount or SaaS stack. Can operate with 5 engineers + massive token budgets vs. competitor's 50. Hit $100M ARR in ~18 months ([Bessemer Venture Partners](https://www.bvp.com/atlas/state-of-health-ai-2026#:~:text=100M%20ARR)). |
 | **FinOps / AI cost management** | New category of tooling for metering, attributing, and capping token spend. The "Datadog of tokens." |
 
 ### Losers
@@ -256,7 +256,7 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 | **Per-seat SaaS vendors** | Business model under existential threat. Can't compete with AI agents that charge per outcome, not per seat. |
 | **Traditional IT procurement** | Trained for predictable annual contracts, now facing variable token invoices with 500–1,000% cost surprises. |
 | **Companies that overcorrect** | Klarna pattern: cut too deep, quality craters, expensive rehiring. 55% of AI layoff companies regretted it. |
-| **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk ([India AI Impact Summit 2026](https://news.outsourceaccelerator.com/indian-it-jobs-at-risk/#:~:text=5.8)). ~64K jobs cut at TCS (~13.2K), Infosys (~26K), Wipro (~24.5K). Nifty IT index fell ~21% in Feb 2026 ([Business Standard](https://www.business-standard.com/markets/news/ai-fears-deepen-it-rout-as-nifty-it-index-hits-30-month-low-down-21-126022400970_1.html#:~:text=21%25)). BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
+| **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk ([India AI Impact Summit 2026](https://news.outsourceaccelerator.com/indian-it-jobs-at-risk/#:~:text=5.8)). ~62K jobs cut at TCS (~12K), Infosys (~26K), Wipro (~24.5K). Nifty IT index fell ~21% in Feb 2026 ([Business Standard](https://www.business-standard.com/markets/news/ai-fears-deepen-it-rout-as-nifty-it-index-hits-30-month-low-down-21-126022400970_1.html#:~:text=21%25)). BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
 
 ---
 
@@ -297,6 +297,7 @@ But the smart companies will treat this as **reallocation, not replacement**. Kl
 - [RCR Wireless — Agents, Inference and Token Economics](https://www.rcrwireless.com/20260318/ai-infrastructure/agents-inference-token-economics-nvidia-ai)
 - [Fortune — Anthropic CEO Warning on AI Job Loss](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/)
 - [Bessemer Venture Partners — AI Pricing and Monetization Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook)
+- [Bessemer Venture Partners — State of Health AI 2026](https://www.bvp.com/atlas/state-of-health-ai-2026)
 - [a16z — State of AI: 100 Trillion Token Study](https://a16z.com/state-of-ai/)
 - [a16z — Notes on AI Apps in 2026](https://a16z.com/notes-on-ai-apps-in-2026/)
 - [AWS — Inferentia ML Inference Chip](https://aws.amazon.com/machine-learning/inferentia/)
