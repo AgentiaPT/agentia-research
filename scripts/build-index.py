@@ -73,6 +73,9 @@ def count_words(directory):
     for fname in os.listdir(directory):
         if not fname.endswith(".md"):
             continue
+        # Exclude task.md (internal tracking, not research output)
+        if fname == "task.md":
+            continue
         fpath = os.path.join(directory, fname)
         if not os.path.isfile(fpath):
             continue

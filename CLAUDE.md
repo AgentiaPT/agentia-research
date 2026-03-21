@@ -61,6 +61,48 @@ The `ongoing` status is for periodic/living research that receives new editions 
 
 Content can live in the README itself (simple projects) or in separate files alongside it (long-form essays, multi-file research). Interactive pages go in the same directory (e.g., `explorer.html`, `simulator.html`).
 
+### task.md — Session Continuity & Intent Tracking
+
+Every new project folder **must** have a `task.md` created as the **very first file** after the folder itself — before README.md, before any research or code. This file is the agent's memory across sessions, since Claude Code remote sessions don't preserve conversation history reliably.
+
+**Purpose**: Capture original intent, track evolving requirements, and log progress so any future session can pick up exactly where the last one left off.
+
+**What goes in task.md**:
+
+- **Original request** — the user's initial prompt/message, copied nearly verbatim. Apply only minimal edits: fix obvious grammar/spelling errors and **redact any sensitive information** (API keys, real names, internal URLs, etc.) since this file will be public.
+- **Requirements & decisions** — as the conversation evolves, append new requirements, clarifications, and design decisions the user provides. Capture the *why* behind choices.
+- **Progress tracking** — maintain a running log of completed tasks, current work in progress, and planned next steps. Update this continuously as milestones are reached.
+
+**Format**: Freeform markdown — organize naturally per project. The only hard requirement is that the original user request appears near the top and progress is trackable.
+
+**Update frequency**: Update continuously after each milestone, decision, or significant progress. This is critical — if a session crashes mid-work, the last committed task.md is the only record of what happened.
+
+**Index exclusion**: `task.md` is internal tracking, not research output. It is excluded from word count and reading time calculations in the project index.
+
+**Example**:
+
+```markdown
+# Task: LLM Evaluation Framework
+
+## Original Request
+
+Research and compare different LLM evaluation frameworks, focusing on
+open-source options. Build an interactive comparison page.
+
+## Requirements & Decisions
+
+- User wants focus on open-source tools (2026-03-21)
+- Include pricing comparison even for free tools (compute costs) (2026-03-21)
+
+## Progress
+
+- [x] Created project folder and scaffolding
+- [x] Initial web research on evaluation frameworks
+- [ ] Deep-dive comparison of top 5 frameworks
+- [ ] Interactive HTML comparison page
+- [ ] Fact-check all claims and sources
+```
+
 **HTML file links** — all links to `.html` files in project READMEs, the root README, and anywhere in the repo **must** use the GitHub Pages URL so they render as live pages, not raw source. Format: `https://agentiapt.github.io/agentia-research/projects/<folder>/<file>.html`. Never link to HTML files using relative paths or `github.com/...blob/...` URLs — GitHub shows raw HTML source for those.
 
 When a project is added or completed, update the root README projects table by running `python3 scripts/build-index.py`. The table includes **estimated word count** and **reading time** columns (computed from all `.md` files in the project directory at ~238 wpm). These metrics are generated automatically by the build script — do not hardcode them.
