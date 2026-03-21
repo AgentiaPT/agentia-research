@@ -3,6 +3,11 @@ title: "Why LLMs Improve When They Critique and Refine Their Own Outputs"
 date: 2026-03-14
 status: complete
 tags: [ai, llm, self-refinement, self-correction, constitutional-ai]
+explorers:
+  - file: research.html
+    title: The Paradox of Self-Improvement
+    description: Interactive research essay on why LLMs produce better output when forced to critique and refine their own work
+    screenshot: research-screenshot.png
 ---
 
 # Why LLMs Improve When They Critique and Refine Their Own Outputs

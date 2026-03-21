@@ -211,6 +211,46 @@ Key visual patterns:
 
 Must work offline.
 
+### Explorer Screenshots & Index Metadata
+
+Every interactive HTML file (explorer, dashboard, simulator, etc.) **must** have a screenshot and metadata so the index page can display a proper preview card with thumbnail, title, and description.
+
+**Step 1: Add `explorers` metadata to the project's README.md frontmatter:**
+
+```yaml
+---
+title: "Project Title"
+date: YYYY-MM-DD
+status: complete
+tags: [tag1, tag2]
+explorers:
+  - file: explorer.html
+    title: Token Budget Calculator
+    description: Interactive calculator modeling enterprise budget shifts from SaaS seats to AI tokens
+    screenshot: explorer-screenshot.png
+---
+```
+
+Each explorer entry has:
+- **file** (required) — the HTML filename
+- **title** (required) — human-readable name shown on the index card
+- **description** (required) — one-line summary of what the explorer does
+- **screenshot** (required) — filename of the screenshot PNG in the same directory
+
+**Step 2: Take a screenshot using Playwright CLI:**
+
+```bash
+npx playwright screenshot --viewport-size="1280,720" \
+  "file:///absolute/path/to/explorer.html" \
+  "projects/NNNN-date-slug/explorer-screenshot.png"
+```
+
+Use `1280x720` viewport for consistent aspect ratio. The screenshot filename must match the `screenshot` field in frontmatter.
+
+**Step 3: Run `python3 scripts/build-index.py`** to regenerate the index with the new explorer metadata.
+
+The index page (`index.html`) renders explorer previews as compact cards inside each project card, showing the screenshot thumbnail alongside the title and description. HTML files without frontmatter metadata will fall back to a simple badge (filename only, no screenshot).
+
 ## Security & Sensitive Information
 
 This is a **public repository** — treat every committed byte as permanently visible to the world.

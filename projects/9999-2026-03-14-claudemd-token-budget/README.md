@@ -3,6 +3,11 @@ title: "CLAUDE.md Token Budget Analyzer"
 date: 2026-03-14
 status: complete
 tags: [ai, claude-code, tokens, context-window, tooling]
+explorers:
+  - file: dashboard.html
+    title: Token Budget Dashboard
+    description: Visual breakdown of CLAUDE.md token consumption with per-file usage, context window budget, and optimization tips
+    screenshot: dashboard-screenshot.png
 ---
 
 # CLAUDE.md Token Budget Analyzer
