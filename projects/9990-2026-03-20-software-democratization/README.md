@@ -9,7 +9,7 @@ tags: [software-engineering, ai, democratization, history, future]
 
 > **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
-> **About the comments in this essay:** The blockquotes marked with 💬 **Human** are thoughts from the human directing this research — a software engineer with a broad generalist background. They were collected through a Q&A conversation after the AI draft was written, then lightly edited by the AI for readability and flow. The core ideas and opinions are the human's; the exact phrasing is a collaboration. Think of it as margin notes in a dialogue between human and machine — imperfect, honest, and not fully polished on purpose.
+> **About the comments in this essay:** The blockquotes marked with 🧑‍💻 **RQuintino** are thoughts from the human directing this research — a software engineer with a broad generalist background. They were collected through a Q&A conversation after the AI draft was written, then lightly edited by the AI for readability and flow. The core ideas and opinions are the human's; the exact phrasing is a collaboration. Think of it as margin notes in a dialogue between human and machine — imperfect, honest, and not fully polished on purpose.
 
 ---
 
@@ -21,7 +21,7 @@ Writing went from scribes to the printing press to typewriters to word processor
 
 Software is following the same curve. And we are standing at the printing press moment.
 
-> 💬 **Human:** Feels to me that the analogy is that the AI coding disruption is like going from Egyptian writing to computer printing, all at once. Not one step on the curve — the whole curve, compressed into a single moment. And it's both exciting and terrifying at the same time. That duality *is* the point.
+> 🧑‍💻 **RQuintino:** Feels to me that the analogy is that the AI coding disruption is like going from Egyptian writing to computer printing, all at once. Not one step on the curve — the whole curve, compressed into a single moment. And it's both exciting and terrifying at the same time. That duality *is* the point.
 
 ---
 
@@ -133,7 +133,7 @@ This is the category that doesn't exist yet but will dominate by volume. Just as
 
 These aren't "apps" in the traditional sense. They're **utterances** — software as speech.
 
-> 💬 **Human:** I'm already living this. I ask AI to build things I'd never have hired a developer for. But it's also bigger than "personal" — it's reshaping how businesses and teams work too, not just individuals.
+> 🧑‍💻 **RQuintino:** I'm already living this. I ask AI to build things I'd never have hired a developer for. But it's also bigger than "personal" — it's reshaping how businesses and teams work too, not just individuals.
 
 ### 3. The "Long Tail" Becomes Infinite
 
@@ -160,7 +160,7 @@ When everyone can produce mediocre code via prompting, the scarce skills become:
 
 The emerging reality: the ability to *review* AI-generated code and catch what the model missed — subtle race conditions, insecure defaults, architectural dead-ends — requires *higher* expertise, not lower.
 
-> 💬 **Human:** Really not sure about this one. I certainly feel much more valuable with all my past professional and diverse generalist knowledge — but I'm just not sure if the demand will keep up. I'm just... not sure.
+> 🧑‍💻 **RQuintino:** Really not sure about this one. I certainly feel much more valuable with all my past professional and diverse generalist knowledge — but I'm just not sure if the demand will keep up. I'm just... not sure.
 
 ---
 
@@ -182,13 +182,13 @@ The data already shows this. In 2025, studies show [average PR sizes increased b
 
 A [randomized controlled trial by METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/#:~:text=19%25%20longer) (July 2025) found that when 16 experienced open-source developers were allowed to use AI tools on tasks in repos where they had an average of 5 years of experience, they took **19% longer** to complete issues. Strikingly, developers *believed* AI had sped them up by 20% — even as the data showed the opposite. The tools that help beginners can actively hinder experts on hard problems.
 
-> 💬 **Human:** Way too narrow. It's insane these days what AI allows me to do for knowledge work and coding. Though it still requires steering frequently, and a lot of guard rails and risk mitigations.
+> 🧑‍💻 **RQuintino:** Way too narrow. It's insane these days what AI allows me to do for knowledge work and coding. Though it still requires steering frequently, and a lot of guard rails and risk mitigations.
 
 ### The Trust Problem
 
 [Only 33% of developers say they trust AI-generated code](https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools#:~:text=33%25%20say%20they%20trust). Developer sentiment toward AI tools [dropped from 70%+ positive in 2023–2024 to 60% in 2025](https://www.index.dev/blog/developer-productivity-statistics-with-ai-tools#:~:text=60%25). As one industry watcher noted, Boris Cherny — who created Claude Code — [predicted the demise of his own profession](https://sfstandard.com/2026/03/05/engineer-2025-ai-land-everyone-s-builder-now/#:~:text=Boris%20Cherny), saying "today coding is practically solved." Not everyone agrees.
 
-> 💬 **Human:** I have quite some background in software development and web security, and I honestly feel that AI currently beats most developers — as long as it has access to online resources. Not meaning it's perfect, but meaning it's very hard to beat. Probably a much better starting point than the average developer, if we weight everything.
+> 🧑‍💻 **RQuintino:** I have quite some background in software development and web security, and I honestly feel that AI currently beats most developers — as long as it has access to online resources. Not meaning it's perfect, but meaning it's very hard to beat. Probably a much better starting point than the average developer, if we weight everything.
 
 ---
 
@@ -217,7 +217,7 @@ The direction is clear. The timeline is compressed. The volume explosion is alre
 
 But here's what the writing parallel *can't* tell us: what happens when software can write software? The printing press didn't write new books. Blogs didn't generate their own posts. But AI-generated software can generate *more* AI-generated software. This creates a recursive feedback loop that has no precedent in the writing democratization story.
 
-> 💬 **Human:** Yes — this is where the analogy breaks down completely.
+> 🧑‍💻 **RQuintino:** Yes — this is where the analogy breaks down completely.
 
 We might be looking not at a printing press moment, but at something genuinely new — a technology that doesn't just lower the barrier to production, but starts producing *on its own*. That's not writing's story. That's a story we haven't lived through yet.
 
