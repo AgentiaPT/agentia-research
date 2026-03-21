@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-21T17:47:13.863523+00:00",
+  "generated": "2026-03-21T19:11:17.514668+00:00",
   "projects": [
     {
       "id": "9986-2026-03-18-vibe-coding-essay",
@@ -22,6 +22,7 @@
         "macro-beats-reflection.md"
       ],
       "htmlFiles": [],
+      "explorers": [],
       "path": "projects/9986-2026-03-18-vibe-coding-essay",
       "wordCount": 7737,
       "readingTime": 33
@@ -44,6 +45,7 @@
         "README.md"
       ],
       "htmlFiles": [],
+      "explorers": [],
       "path": "projects/9990-2026-03-20-software-democratization",
       "wordCount": 3581,
       "readingTime": 16
@@ -65,10 +67,19 @@
       "description": "**Interactive Explorer:** [Token Budget Calculator](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-20-token-budget-analysis/explorer.html)",
       "files": [
         "README.md",
+        "explorer-screenshot.png",
         "explorer.html"
       ],
       "htmlFiles": [
         "explorer.html"
+      ],
+      "explorers": [
+        {
+          "file": "explorer.html",
+          "title": "Token Budget Calculator",
+          "description": "Interactive calculator modeling enterprise budget shifts from SaaS seats and headcount to AI token budgets",
+          "screenshot": "explorer-screenshot.png"
+        }
       ],
       "path": "projects/9991-2026-03-20-token-budget-analysis",
       "wordCount": 3693,
@@ -94,6 +105,7 @@
         "README.md"
       ],
       "htmlFiles": [],
+      "explorers": [],
       "path": "projects/9992-2026-03-17-git-secret-detection",
       "wordCount": 3442,
       "readingTime": 15
@@ -117,6 +129,7 @@
         "README.md"
       ],
       "htmlFiles": [],
+      "explorers": [],
       "path": "projects/9993-2026-03-17-claude-code-sandbox-hardening",
       "wordCount": 2643,
       "readingTime": 12
@@ -144,6 +157,7 @@
         "tasks.py"
       ],
       "htmlFiles": [],
+      "explorers": [],
       "path": "projects/9994-2026-03-15-self-correction-experiment",
       "wordCount": 397,
       "readingTime": 2
@@ -164,10 +178,19 @@
       "description": "A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. Organized around recurring themes rather than raw chronology.",
       "files": [
         "README.md",
+        "explorer-screenshot.png",
         "explorer.html"
       ],
       "htmlFiles": [
         "explorer.html"
+      ],
+      "explorers": [
+        {
+          "file": "explorer.html",
+          "title": "AI News Feed Dashboard",
+          "description": "Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes",
+          "screenshot": "explorer-screenshot.png"
+        }
       ],
       "path": "projects/9995-2026-03-13-ai-news-feed",
       "wordCount": 4464,
@@ -191,6 +214,7 @@
         "README.md"
       ],
       "htmlFiles": [],
+      "explorers": [],
       "path": "projects/9996-2026-03-14-self-improvement-gradient-descent",
       "wordCount": 3971,
       "readingTime": 17
@@ -213,6 +237,7 @@
         "README.md"
       ],
       "htmlFiles": [],
+      "explorers": [],
       "path": "projects/9997-2026-03-14-inference-time-compute",
       "wordCount": 3207,
       "readingTime": 14
@@ -233,10 +258,19 @@
       "description": "A deep research survey on self-refinement, self-correction, and iterative improvement in large language models.",
       "files": [
         "README.md",
+        "research-screenshot.png",
         "research.html"
       ],
       "htmlFiles": [
         "research.html"
+      ],
+      "explorers": [
+        {
+          "file": "research.html",
+          "title": "The Paradox of Self-Improvement",
+          "description": "Interactive research essay on why LLMs produce better output when forced to critique and refine their own work",
+          "screenshot": "research-screenshot.png"
+        }
       ],
       "path": "projects/9998-2026-03-14-llm-self-improvement",
       "wordCount": 7062,
@@ -259,11 +293,20 @@
       "files": [
         "README.md",
         "analyze.py",
+        "dashboard-screenshot.png",
         "dashboard.html",
         "report.md"
       ],
       "htmlFiles": [
         "dashboard.html"
+      ],
+      "explorers": [
+        {
+          "file": "dashboard.html",
+          "title": "Token Budget Dashboard",
+          "description": "Visual breakdown of CLAUDE.md token consumption with per-file usage, context window budget, and optimization tips",
+          "screenshot": "dashboard-screenshot.png"
+        }
       ],
       "path": "projects/9999-2026-03-14-claudemd-token-budget",
       "wordCount": 254,

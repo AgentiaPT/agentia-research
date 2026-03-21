@@ -3,6 +3,11 @@ title: "The Great Budget Reallocation: From SaaS Seats and Headcount to Token Bu
 date: 2026-03-20
 status: complete
 tags: [ai-economics, token-budgets, saas, workforce, nvidia, enterprise-strategy]
+explorers:
+  - file: explorer.html
+    title: Token Budget Calculator
+    description: Interactive calculator modeling enterprise budget shifts from SaaS seats and headcount to AI token budgets
+    screenshot: explorer-screenshot.png
 ---
 
 # The Great Budget Reallocation: From SaaS Seats and Headcount to Token Budgets

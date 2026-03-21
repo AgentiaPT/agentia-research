@@ -3,6 +3,11 @@ title: "AI News Feed — March 8–13, 2026"
 date: 2026-03-13
 status: complete
 tags: [ai, news, weekly, voices, industry]
+explorers:
+  - file: explorer.html
+    title: AI News Feed Dashboard
+    description: Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes
+    screenshot: explorer-screenshot.png
 ---
 
 # AI News Feed — March 8–13, 2026

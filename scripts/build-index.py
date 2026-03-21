@@ -21,8 +21,12 @@ def parse_frontmatter(text):
     raw = m.group(1)
     body = text[m.end():]
     meta = {}
-    for line in raw.splitlines():
+    lines = raw.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
         if ":" not in line:
+            i += 1
             continue
         key, val = line.split(":", 1)
         key = key.strip()
@@ -34,10 +38,38 @@ def parse_frontmatter(text):
                 meta[key] = [t.strip().strip("'\"") for t in inner.group(1).split(",") if t.strip()]
             else:
                 meta[key] = []
+        elif key == "explorers":
+            # parse nested explorer list (YAML-like)
+            explorers = []
+            i += 1
+            while i < len(lines):
+                line = lines[i]
+                if line.startswith("  - "):
+                    # start of a new explorer entry
+                    entry = {}
+                    # parse "  - key: value" on the first line
+                    first_kv = line[4:]  # strip "  - "
+                    if ":" in first_kv:
+                        ek, ev = first_kv.split(":", 1)
+                        entry[ek.strip()] = ev.strip().strip("'\"")
+                    i += 1
+                    # parse continuation lines "    key: value"
+                    while i < len(lines) and lines[i].startswith("    ") and not lines[i].startswith("  - "):
+                        cline = lines[i].strip()
+                        if ":" in cline:
+                            ek, ev = cline.split(":", 1)
+                            entry[ek.strip()] = ev.strip().strip("'\"")
+                        i += 1
+                    explorers.append(entry)
+                else:
+                    break
+            meta[key] = explorers
+            continue  # don't increment i again
         else:
             # strip surrounding quotes
             val = val.strip("'\"")
             meta[key] = val
+        i += 1
     return meta, body
 
 
@@ -131,6 +163,28 @@ def main():
 
         words = count_words(entry_path)
 
+        # Build explorers list: use frontmatter metadata if available, fallback to auto-detect
+        explorers_meta = meta.get("explorers", [])
+        explorers = []
+        for em in explorers_meta:
+            if "file" in em and em["file"] in html_files:
+                explorers.append({
+                    "file": em["file"],
+                    "title": em.get("title", em["file"].replace(".html", "").replace("-", " ").replace("_", " ").title()),
+                    "description": em.get("description", ""),
+                    "screenshot": em.get("screenshot", ""),
+                })
+        # Add any html files not covered by frontmatter metadata
+        covered_files = {e["file"] for e in explorers}
+        for hf in html_files:
+            if hf not in covered_files:
+                explorers.append({
+                    "file": hf,
+                    "title": hf.replace(".html", "").replace("-", " ").replace("_", " ").title(),
+                    "description": "",
+                    "screenshot": "",
+                })
+
         projects.append({
             "id": entry,
             "slug": extract_slug(entry),
@@ -141,6 +195,7 @@ def main():
             "description": description,
             "files": files,
             "htmlFiles": html_files,
+            "explorers": explorers,
             "path": f"projects/{entry}",
             "wordCount": words,
             "readingTime": reading_time(words),
