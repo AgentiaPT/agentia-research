@@ -15,7 +15,7 @@ tags: [ai-economics, token-budgets, saas, workforce, nvidia, enterprise-strategy
 
 ## The Catalyst: Jensen Huang's $250K Token Budget
 
-At NVIDIA's GTC 2026 conference (March 16–20, 2026), CEO Jensen Huang dropped what may be the most consequential framing of the AI era's economic impact on enterprise budgets:
+At NVIDIA's GTC 2026 conference (March 16–19, 2026), CEO Jensen Huang dropped what may be the most consequential framing of the AI era's economic impact on enterprise budgets:
 
 > "If that $500,000 engineer did not consume at least $250,000 worth of tokens, I am going to be deeply alarmed."
 >
@@ -47,7 +47,7 @@ Huang isn't alone. The framing is converging from multiple directions:
 >
 > — Dario Amodei, Anthropic CEO, [Axios interview, May 2025](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=half%20of%20all%20entry-level%20white-collar%20jobs)
 
-Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — a 3% levy on AI company revenue from language models, with proceeds going to government for redistribution. He acknowledged: "Obviously, that's not in my economic interest, but I think that would be a reasonable solution" ([Axios / The Decoder](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/#:~:text=token%20tax)). The implication: tokens are becoming a measurable unit of economic activity worthy of taxation.
+Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — perhaps a 3% levy on AI company revenue from model usage, with proceeds going to government for redistribution. He acknowledged: "Obviously, that's not in my economic interest, but I think that would be a reasonable solution" ([Axios / The Decoder](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/#:~:text=token%20tax)). The implication: tokens are becoming a measurable unit of economic activity worthy of taxation.
 
 > "We're not going to hire any new engineers this year. We're seeing 30 percent productivity increase on engineering, and we're going to really continue to ride that up."
 >
@@ -92,7 +92,7 @@ This is the more uncomfortable conversation, but the data is unambiguous:
 - Salesforce announced **zero engineering hires** for 2025, citing 30% productivity gains from AI ([Salesforce Ben](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/#:~:text=zero%20engineering%20hires))
 - Klarna shrank from **5,527 to 3,422 employees** (38% reduction), claiming AI does the work of 700 customer service agents ([Fast Company](https://www.fastcompany.com/91468582/klarna-tried-to-replace-its-workforce-with-ai#:~:text=5%2C527%20to%203%2C422))
 - 25% of enterprises are now limiting future headcount due to AI, up from 21% three months prior ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=25%25))
-- Software developer employment for ages 22–25 dropped **~20%** since late 2022, while developers over 30 grew 6–12% — a **13% relative decline** across all AI-exposed entry-level roles ([Stanford Digital Economy Lab / ADP payroll data](https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/#:~:text=13%25%20relative%20decline))
+- Software developer employment for ages 22–25 dropped **~20%** since late 2022, while developers over 30 grew 6–12% — a **13–16% relative decline** across all AI-exposed entry-level roles (depending on methodology) ([Stanford Digital Economy Lab / ADP payroll data](https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/#:~:text=13%25%20relative%20decline))
 
 **The math is brutal:**
 
@@ -122,7 +122,7 @@ The tool **is** the tokens. The IDE is becoming a thin shell around a token stre
 The hyperscalers are building the infrastructure to make this shift inevitable:
 
 - **Azure** sells Provisioned Throughput Units (PTUs) for OpenAI models — model-agnostic quota units that let enterprises carve up token capacity like bandwidth. GPT-4o runs $2.50 (input) to $10.00 (output) per million tokens, but enterprise deployments consistently run **15–40% above advertised token costs** due to hidden overhead ([Inference.net](https://inference.net/content/azure-openai-pricing-explained#:~:text=15%E2%80%9340%25))
-- **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS claims Inferentia chips deliver **up to 2.3x higher throughput and up to 70% lower cost** per inference vs. comparable GPU instances ([AWS](https://aws.amazon.com/machine-learning/inferentia/#:~:text=70%25%20lower%20cost))
+- **AWS Bedrock** uses Model Units (MUs) — throughput slices priced per tokens-per-minute. AWS claims Inferentia chips deliver **up to 2.3x higher throughput and up to 70% lower cost** per inference vs. comparable Amazon EC2 instances ([AWS](https://aws.amazon.com/machine-learning/inferentia/#:~:text=70%25%20lower%20cost))
 - **Google Vertex AI** has aggressively cut Gemini pricing — Gemini 1.5 Flash dropped to $0.075/million tokens (input), undercutting most competitors ([Google Developers Blog](https://developers.googleblog.com/en/gemini-15-flash-updates-google-ai-studio-gemini-api/#:~:text=price))
 - **~75% of enterprises** now run multi-cloud, picking each provider for its genuine strength rather than going all-in on one ([Gartner](https://www.gartner.com/en/articles/cloud-computing-trends#:~:text=multi-cloud))
 
@@ -207,7 +207,7 @@ Klarna cut 38% of its workforce, claiming AI replaced 700 customer service agent
 Jensen Huang is not a neutral observer. Every dollar redirected to token budgets flows through NVIDIA GPUs. His incentive is to maximize token consumption. The 10x productivity claim is aspirational, not empirical at scale.
 
 ### 2. Token Costs Are Unpredictable
-Unlike a $150K salary (fixed, predictable, amortized), token budgets are **variable and opaque**. A runaway agentic loop could burn $50K in a weekend. CFOs trained on predictable SaaS costs are not equipped for this volatility. As one analysis noted, vendors lure customers with generous pilot credits, then production routinely reveals [500–1,000% cost underestimation](https://www.gartner.com/en/newsroom/press-releases/2024-05-20-gartner-says-cfos-must-address-four-enterprise-ai-stalls#:~:text=500) (Gartner).
+Unlike a $150K salary (fixed, predictable, amortized), token budgets are **variable and opaque**. A runaway agentic loop could burn $50K in a weekend. CFOs trained on predictable SaaS costs are not equipped for this volatility. Gartner found that CFOs routinely underestimate AI costs by [500–1,000%](https://www.gartner.com/en/newsroom/press-releases/2024-05-20-gartner-says-cfos-must-address-four-enterprise-ai-stalls#:~:text=500), partly because generous pilot credits mask true production costs.
 
 ### 3. The ROI Is Unproven at Scale
 Only **13% of enterprises** report achieving measurable AI ROI at scale ([ETR Research](https://research.etr.ai/etr-data-drop/tech-budgets-tighten-what-2025-tells-us-about-2026#:~:text=13%25)). 55% of companies that laid off workers due to AI **later regretted the decision** ([Forrester Predictions 2026 via HR Executive](https://hrexecutive.com/the-ai-layoff-trap-why-half-will-be-quietly-rehired/#:~:text=55%25)).
@@ -256,7 +256,7 @@ More tokens ≠ better output. Unreviewed AI-generated code at scale introduces 
 | **Per-seat SaaS vendors** | Business model under existential threat. Can't compete with AI agents that charge per outcome, not per seat. |
 | **Traditional IT procurement** | Trained for predictable annual contracts, now facing variable token invoices with 500–1,000% cost surprises. |
 | **Companies that overcorrect** | Klarna pattern: cut too deep, quality craters, expensive rehiring. 55% of AI layoff companies regretted it. |
-| **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk ([India AI Impact Summit 2026](https://news.outsourceaccelerator.com/indian-it-jobs-at-risk/#:~:text=5.8)). ~63K jobs cut at TCS (12.2K), Infosys (26K), Wipro (24.5K). Nifty IT index fell ~21% in Feb 2026 ([Business Standard](https://www.business-standard.com/markets/news/ai-fears-deepen-it-rout-as-nifty-it-index-hits-30-month-low-down-21-126022400970_1.html#:~:text=21%25)). BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
+| **Developing economies / offshore IT** | India's IT sector has 5.8M professionals at risk ([India AI Impact Summit 2026](https://news.outsourceaccelerator.com/indian-it-jobs-at-risk/#:~:text=5.8)). ~64K jobs cut at TCS (~13.2K), Infosys (~26K), Wipro (~24.5K). Nifty IT index fell ~21% in Feb 2026 ([Business Standard](https://www.business-standard.com/markets/news/ai-fears-deepen-it-rout-as-nifty-it-index-hits-30-month-low-down-21-126022400970_1.html#:~:text=21%25)). BPO employment could drop from 4M to <1M by 2030 ([Outsource Accelerator](https://news.outsourceaccelerator.com/ai-indian-bpo-jobs-2030/#:~:text=four%20million%20to%20fewer%20than%20one%20million)). |
 
 ---
 
