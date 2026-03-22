@@ -233,7 +233,7 @@ Willison's distinction between "agentic engineering" and "vibe coding" is [becom
 
 Addy Osmani's [crisper version](https://addyosmani.com/blog/agentic-engineering/#:~:text=Vibe%20coding%20%3D%20YOLO): "Vibe coding = YOLO. Agentic engineering = AI does the implementation, human owns the architecture, quality, and correctness."
 
-On the one-year anniversary of coining "vibe coding" (Feb 4, 2026), Karpathy himself endorsed this: "my current favorite [alternative term] is agentic engineering."
+On the one-year anniversary of coining "vibe coding" (Feb 2, 2026), Karpathy himself endorsed this: "my current favorite [alternative term] is agentic engineering."
 
 ---
 ## 5. The Specification Revolution — When Specs Matter More Than Code
@@ -327,7 +327,7 @@ The numbers continue to escalate from the [previous edition's 73% junior hiring 
 
 ### The AI-Washing Counter-Narrative
 
-Sam Altman at India AI Impact Summit (Feb): some companies engaging in **"AI washing"** — [falsely attributing layoffs to AI](https://fortune.com/2026/02/19/sam-altman-confirms-ai-washing-job-displacement-layoffs/#:~:text=AI%20washing). NBER research: 90% of executives say AI has had **no impact** on workplace employment in the last three years. Only **16%** of layoffs between 2020–2026 directly blamed on AI; major reasons are overexpansion (2021–22), M&A, and cost-cutting.
+Sam Altman at India AI Impact Summit (Feb): some companies engaging in **"AI washing"** — [falsely attributing layoffs to AI](https://fortune.com/2026/02/19/sam-altman-confirms-ai-washing-job-displacement-layoffs/#:~:text=AI%20washing). NBER research: 90% of executives say AI has had **no impact** on workplace employment in the last three years. Only **~7–8%** of early 2026 layoffs directly cited AI as the reason (Challenger data); major drivers remain overexpansion (2021–22), M&A, and cost-cutting.
 
 But Altman also acknowledged: "I would expect that the real impact of AI doing jobs in the next few years will begin to be palpable."
 
@@ -484,7 +484,7 @@ Agentic AI on free tier. Flat **$0.25/review**. Planner Agent, Developer Flow ag
 | Patrick Debois | DevOps founder | AI-native bridge | "Context Is the New Code" — Context Development Lifecycle |
 | Kent Beck | Independent | Pragmatic optimist | TDD as immutable annotations (via Allstacks, Thoughtworks) |
 | Gergely Orosz | Pragmatic Engineer | Measured analyst | Quality warning — agents increase output, degrade quality |
-| Kelsey Hightower | Retired/Google | Engineering sanity | "MCP is a gift to the proxy community" (HAProxyConf, Mar 20) |
+| Kelsey Hightower | Retired/Google | Engineering sanity | "MCP is a gift to the proxy community" ([HAProxyConf 2025](https://www.haproxyconf.com/presentations/the-fundamentals/)) |
 | Ethan Mollick | Wharton | Academic researcher | "Shape of the Thing" (Mar 12, borderline) |
 | Mitchell Hashimoto | Vercel board | Architect-first | Joined Vercel board (Mar 18) |
 | Grady Booch | Independent | Calibrated skeptic | No new content this week |
