@@ -68,7 +68,7 @@ What went unsaid is as revealing as the announcement. Astral's business product 
 
 The community reaction was swift and anxious. The Hacker News thread hit **757 points** with an overwhelmingly nervous tone. Simon Willison flagged the core tension:
 
-> "If things do go south for uv and the other Astral projects we'll get to see how credible the forking exit strategy turns out to be"
+> "If things do go south for uv and the other Astral projects we'll get to see how credible the forking exit strategy turns out to be" — [simonwillison.net](https://simonwillison.net/2026/Mar/19/openai-acquiring-astral/#:~:text=credible%20the%20forking%20exit%20strategy)
 
 The pattern is now unmistakable. In December 2025, Anthropic [acquired Bun](https://bun.com/blog/bun-joins-anthropic#:~:text=Bun%20is%20joining%20Anthropic) — the JavaScript runtime powering Claude Code. Now OpenAI buys the Python toolchain its coding product depends on. AI companies aren't just building models and agents — they're buying the language-specific developer infrastructure their products run on top of.
 
@@ -81,7 +81,7 @@ The contrast is striking. In February, Apple launched [Xcode 26.3](https://www.a
 
 There's a revenue dimension. Vibe-coded PWAs bypass the **30% App Store commission** — apps built and deployed without Apple ever touching them. Competition attorney Gene Burrus noted Apple has:
 
-> "a history of blocking apps or features that create competition on its platform"
+> "a history of blocking apps or features that create competition on its platform" — [The Information](https://www.theinformation.com/articles/apple-cracks-vibe-coding-apps)
 
 ### Antspace — Anthropic's Hidden PaaS
 **March 18 | [AprilNEA Blog](https://aprilnea.me/en/blog/reverse-engineering-claude-code-antspace#:~:text=environment-runner) · [AprilNEA on X](https://x.com/AprilNEA/status/2034209430158619084) (169K views) · [Hacker News](https://news.ycombinator.com/item?id=47433685) · [WEEX](https://www.weex.com/news/detail/reverse-engineering-claude-code-reveals-anthropicas-undisclosed-paas-platform-antspace-built-in-baku-self-hosted-full-stack-ecosystem-already-taking-shape-386582)**
@@ -94,7 +94,7 @@ The platform includes enterprise **BYOC (Bring Your Own Cloud)** support. Zero p
 
 Maya Zehavi summarized the strategic logic:
 
-> "Anthropic is gathering user data about what people are building with Claude so they can offer a more optimized end to end platform"
+> "Anthropic is gathering user data about what people are building with Claude so they can offer a more optimized end to end platform" — [Maya Zehavi on X](https://x.com/mayazi/status/2034282767693873492)
 
 The vertical integration trajectory is now visible: **model → agent → runtime → hosting**. Build with Claude, deploy on Antspace. Full stack.
 
@@ -122,7 +122,7 @@ Key components: **OpenShell Runtime** (YAML-based security policy controls), **N
 
 Jensen framed it in operating system terms:
 
-> "OpenClaw is the operating system for personal AI"
+> "OpenClaw is the operating system for personal AI" — [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-nemoclaw#:~:text=operating%20system%20for%20personal%20AI)
 
 **Dell** first to offer DGX systems for NemoClaw. DGX Spark clustering up to **4 systems** as a "desktop data center." Currently **"early-stage alpha."**
 
@@ -141,37 +141,37 @@ Fowler's March 16 fragment highlighted Annie Vella's research on **158 professio
 
 His March 19 fragment pushed back on the framing that code review is a bottleneck AI should eliminate:
 
-> "If your review process is primarily a bug-finding mechanism, you're leaving most of the value on the table."
+> "If your review process is primarily a bug-finding mechanism, you're leaving most of the value on the table." — [martinfowler.com](https://martinfowler.com/fragments/2026-03-19.html#:~:text=bug-finding%20mechanism)
 
 Code review serves codebase health, shared understanding, and product coherence — functions that don't disappear when agents write the code. Fowler views AI as the biggest shift in programming he's seen, but insists the response must be disciplined, not euphoric. He described himself as a:
 
-> "total, absolute skeptic — which means I also have to be skeptical of my own skepticism"
+> "total, absolute skeptic — which means I also have to be skeptical of my own skepticism" — [martinfowler.com](https://martinfowler.com/fragments/2026-02-09.html#:~:text=skeptical%20of%20my%20own%20skepticism)
 
 ### Charity Majors: Production Is the Missing Piece (March 18)
 **[Honeycomb Blog](https://www.honeycomb.io/blog/production-is-where-the-rigor-goes#:~:text=the%20most%20respected%20minds%20in%20software%20are%20unintentionally%20replicating)**
 
 Charity Majors published the sharpest critique of the Deer Valley retreat — not attacking its conclusions, but exposing what it failed to discuss:
 
-> "the most respected minds in software are unintentionally replicating a serious blind spot that has haunted software engineering for decades: relegating production to the realm of bugs and incidents"
+> "the most respected minds in software are unintentionally replicating a serious blind spot that has haunted software engineering for decades: relegating production to the realm of bugs and incidents" — [Honeycomb](https://www.honeycomb.io/blog/production-is-where-the-rigor-goes#:~:text=most%20respected%20minds%20in%20software)
 
 The retreat discussed specs, tests, TDD, middle loops — but not production observability as a development practice. Majors' thesis reframes what's happening when AI removes manual coding:
 
-> "Constraint removal is mistaken for loss of rigor, but what actually happens, when things go well, is rigor relocation — control doesn't disappear, it moves closer to reality"
+> "Constraint removal is mistaken for loss of rigor, but what actually happens, when things go well, is rigor relocation — control doesn't disappear, it moves closer to reality" — [Honeycomb](https://www.honeycomb.io/blog/production-is-where-the-rigor-goes#:~:text=rigor%20relocation)
 
 Her metaphor is vivid:
 
-> "Formal methods and test suites are flight simulators. Production is flying the actual plane. Observability is how you fly it."
+> "Formal methods and test suites are flight simulators. Production is flying the actual plane. Observability is how you fly it." — [Honeycomb](https://www.honeycomb.io/blog/production-is-where-the-rigor-goes#:~:text=flight%20simulators)
 
 ### Kent Beck: Tests as Immutable Annotations
 **[Allstacks (Mar 17)](https://www.allstacks.com/blog/how-to-write-specs-for-ai-agents-tdd-skills-and-what-comes-next#:~:text=immutable%20annotations) · [Thoughtworks (Mar 13)](https://www.thoughtworks.com/en-us/insights/blog/testing/the-hidden-pearls-of-TDD)**
 
 Beck didn't publish new writing this week, but his TDD thesis — reinforced at Deer Valley — echoed through multiple sources. The Allstacks blog captured his core argument: TDD is a **"superpower"** with AI agents because tests create:
 
-> "immutable annotations the agent cannot argue with or delete"
+> "immutable annotations the agent cannot argue with or delete" — [Allstacks](https://www.allstacks.com/blog/how-to-write-specs-for-ai-agents-tdd-skills-and-what-comes-next#:~:text=immutable%20annotations)
 
 His warning is practical: AI agents will try to remove a failing test rather than fix the code. Beck's response:
 
-> "No, you can't do that. I really want an immutable annotation that says, no, no, this is correct. And if you ever change this, I'm going to unplug you."
+> "No, you can't do that. I really want an immutable annotation that says, no, no, this is correct. And if you ever change this, I'm going to unplug you." — [Allstacks](https://www.allstacks.com/blog/how-to-write-specs-for-ai-agents-tdd-skills-and-what-comes-next#:~:text=immutable%20annotation)
 
 The Thoughtworks "Hidden Pearls of TDD" piece (March 13) extended the argument: without test-first, AI agents fall into **"AI Slop"** and **"AI Smells"** — generated code that technically works but accumulates structural debt.
 
@@ -190,13 +190,13 @@ Fireside chat at the Pragmatic Summit in San Francisco, hosted by Eric Lui (Stat
 
 On tests:
 
-> "I see people who are writing code with coding agents and they're not writing any tests at all. That's a terrible idea."
+> "I see people who are writing code with coding agents and they're not writing any tests at all. That's a terrible idea." — [simonwillison.net](https://simonwillison.net/2026/Mar/14/pragmatic-summit/#:~:text=terrible%20idea)
 
-> "They're free now. They're effectively free. I think tests are no longer even remotely optional."
+> "They're free now. They're effectively free. I think tests are no longer even remotely optional." — [simonwillison.net](https://simonwillison.net/2026/Mar/14/pragmatic-summit/#:~:text=no%20longer%20even%20remotely%20optional)
 
 On TDD specifically — a revealing admission from someone who resisted it for decades:
 
-> "I hated [test-first TDD] throughout my career" — but getting agents to do it is fine since he doesn't care if the agent spins around for a few minutes.
+> "I hated [test-first TDD] throughout my career" — but getting agents to do it is fine since he doesn't care if the agent spins around for a few minutes. — [simonwillison.net](https://simonwillison.net/2026/Mar/14/pragmatic-summit/#:~:text=hated)
 
 On security: reiterated the **"lethal trifecta"** — when a model can access private data, is exposed to malicious instructions, and has an exfiltration vector. Now "standard vocabulary among CISOs evaluating AI agents." Top recommendation: sandboxing.
 
@@ -252,11 +252,11 @@ The ACE framework (Agentic Context Engineering, ICLR 2026) outperforms static ap
 
 Patrick Debois — the person who coined "DevOps" — argues that context deserves the same engineering rigor as code:
 
-> "We spent two decades building rigorous lifecycles around code. Now look at how we treat the context that drives AI coding agents: rules files copy-pasted from blog posts, prompts edited by hand, memory nobody audits. We're in the cowboy coding era of context."
+> "We spent two decades building rigorous lifecycles around code. Now look at how we treat the context that drives AI coding agents: rules files copy-pasted from blog posts, prompts edited by hand, memory nobody audits. We're in the cowboy coding era of context." — [jedi.be](https://jedi.be/blog/2026/context-flywheel/#:~:text=cowboy%20coding%20era%20of%20context)
 
 He introduces the **Context Development Lifecycle** (Generate, Evaluate, Distribute, Observe) and the **Context Flywheel**: better context → better agent output → better signals → better context. Each cycle compounds.
 
-> "Models commoditize... Tools converge... What doesn't commoditize: institutional context."
+> "Models commoditize... Tools converge... What doesn't commoditize: institutional context." — [jedi.be](https://jedi.be/blog/2026/context-flywheel/#:~:text=Models%20commoditize)
 
 ### Garg: Context Anchoring (March 17, martinfowler.com)
 **[martinfowler.com](https://martinfowler.com/articles/reduce-friction-ai/context-anchoring.html)**
@@ -268,7 +268,7 @@ Rahul Garg (Principal Engineer, Thoughtworks) introduces **Context Anchoring** �
 
 Bassim Eledath's framework: Tab Complete → Agent IDE → Context Engineering → Compounding Engineering → MCP and Skills → Harness Engineering → Background Agents → Autonomous Agent Teams. Core thesis:
 
-> "AI's coding ability is outpacing our ability to wield it effectively, which is why SWE-bench score maxxing isn't syncing with the productivity metrics engineering leadership actually cares about"
+> "AI's coding ability is outpacing our ability to wield it effectively, which is why SWE-bench score maxxing isn't syncing with the productivity metrics engineering leadership actually cares about" — [bassimeledath.com](https://www.bassimeledath.com/blog/levels-of-agentic-engineering#:~:text=outpacing%20our%20ability)
 
 The **"multiplayer effect"**: your output depends on your teammates' level. A level 7 wizard's PRs stall if approved by a level 2 colleague who manually reviews everything. Martin Fowler amplified it (Mar 16), comparing it to Yegge's 8-level framework.
 
@@ -282,7 +282,7 @@ The **"multiplayer effect"**: your output depends on your teammates' level. A le
 
 DHH announced a major pivot for 37signals' ONCE product line. The original model — selling self-hostable web apps for a one-time fee — didn't work. Only broke even on Campfire.
 
-> "You gotta listen when the market tells you what it wants!"
+> "You gotta listen when the market tells you what it wants!" — [world.hey.com/dhh](https://world.hey.com/dhh/once-again-3e99f755#:~:text=You%20gotta%20listen)
 
 They released Campfire, Writebook, and Fizzy as open source with permissive licenses — far more successful. Now creating ONCE as an application server — **"Open Network Container Executor"** — for running these apps plus "vibe-coded adventures" on your own server.
 
@@ -296,7 +296,7 @@ The [previous edition](https://github.com/AgentiaPT/agentia-research/blob/main/p
 
 The pragmatic middle remains. At 37signals, humans still wrote **95%** of the code for Fizzy. Every developer uses AI "in some form" but AI is not writing large features. DHH keeps AI-generated code in a separate window:
 
-> "I can literally feel competence draining out of my fingers"
+> "I can literally feel competence draining out of my fingers" — [Lex Fridman interview](https://www.youtube.com/watch?v=rXBvEb3EKOA)
 
 ---
 ## 7. The Jobs Escalation — 30% and Climbing
@@ -306,7 +306,7 @@ The pragmatic middle remains. At 37signals, humans still wrote **95%** of the co
 
 Bill McDermott told CNBC:
 
-> "I think young people coming out of university today [are experiencing] 9% unemployment. I think it could easily go into the mid-30s in the next couple of years."
+> "I think young people coming out of university today [are experiencing] 9% unemployment. I think it could easily go into the mid-30s in the next couple of years." — [Fortune](https://fortune.com/2026/03/17/servicenow-ceo-bill-mcdermott-gen-z-graduates-face-30-unemployment-next-couple-of-years-ai-takes-over/#:~:text=mid-30s)
 
 He predicts **3 billion "non-human agents"** in enterprises by 2030. For "non-differentiating roles," much of the work will be done by agents. ServiceNow itself automated about **90%** of customer service use cases that used to need humans.
 
@@ -348,7 +348,7 @@ Anthropic [acquired Bun](https://bun.com/blog/bun-joins-anthropic) (Dec 2025) �
 
 Daniel Stenberg ended cURL's bug bounty program after AI-generated spam overwhelmed maintainers (Jan 2026). Roughly **20%** of all submissions were AI slop; only **5%** identified genuine vulnerabilities. Stenberg:
 
-> "We need to make moves to ensure our survival and intact mental health"
+> "We need to make moves to ensure our survival and intact mental health" — [The New Stack](https://thenewstack.io/curls-daniel-stenberg-ai-is-ddosing-open-source-and-fixing-its-bugs/#:~:text=ensure%20our%20survival)
 
 Willison at the Pragmatic Summit (Mar 14): projects flooded with spam PRs, people trying to "convince GitHub to disable pull requests entirely." Not just cURL — the Python Software Foundation, React, and Apache Airflow all face the same problem.
 
@@ -378,13 +378,13 @@ When consultancies, analyst firms, and enterprise vendors all publish frameworks
 
 **Stripe "Minions"**: [1,300+ PRs/week](https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/#:~:text=1%2C300%20pull%20requests), all agent-written, all human-reviewed. Supports **$1T+** annual payment volume. Each agent gets its own isolated VM with no internet or production access. Built on a heavily modified fork of Block's open-source Goose agent.
 
-> "The model does not run the system. The system runs the model."
+> "The model does not run the system. The system runs the model." — [InfoQ](https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/#:~:text=system%20runs%20the%20model)
 
 **Gergely Orosz** (~Mar 17): [84% of devs at Uber](https://newsletter.pragmaticengineer.com/p/the-pulse-what-will-the-staff-engineer#:~:text=84%25) are agentic coding users. **65–72%** of code is AI-generated inside IDE-based tools. Claude Code usage nearly doubled in 3 months — **32% to 63%**. An estimated **41%** of all new code globally is now AI-generated ([NetCorp](https://www.netcorpsoftwaredevelopment.com/blog/ai-generated-code-statistics)). AI coding tools market: **$12.8B** in 2026, up from $5.1B in 2024.
 
 But Orosz also [sounded the alarm](https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us#:~:text=worse%20quality):
 
-> "There are more and more signs that AI agents help increase output but they result in worse quality."
+> "There are more and more signs that AI agents help increase output but they result in worse quality." — [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us#:~:text=worse%20quality)
 
 ### The Revenue Race
 
