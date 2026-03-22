@@ -1,4 +1,4 @@
-# Task: AI News Feed — March 14–21, 2026
+# Task: AI × Software Engineering — March 14–21, 2026
 
 ## Original Request
 

@@ -7,7 +7,7 @@ tags: [security, secrets, pre-commit, PII, devops, tools, gitleaks]
 
 # Git Secret Detection & Sensitive Information Leak Prevention
 
-> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> ✨ This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 Comprehensive landscape analysis of tools, practices, and patterns for preventing secrets and sensitive data from leaking into git repositories. Special attention to AI-authored content risks and PII detection beyond traditional API key scanning.
 

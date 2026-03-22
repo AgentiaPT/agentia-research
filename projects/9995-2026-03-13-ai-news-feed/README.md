@@ -1,20 +1,20 @@
 ---
-title: "AI News Feed — March 8–13, 2026"
+title: "AI × Software Engineering — March 8–13, 2026"
 date: 2026-03-13
 status: complete
 tags: [ai, news, weekly, voices, industry]
 explorers:
   - file: explorer.html
-    title: AI News Feed Dashboard
+    title: AI × Software Engineering Dashboard
     description: Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes
     screenshot: explorer-screenshot.png
 ---
 
-# AI News Feed — March 8–13, 2026
+# AI × Software Engineering — March 8–13, 2026
 
-> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> ✨ This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
-A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. Organized around recurring themes rather than raw chronology.
+A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engineering. Organized around recurring themes rather than raw chronology.
 
 Open the [Explorer](https://agentiapt.github.io/agentia-research/projects/9995-2026-03-13-ai-news-feed/explorer.html) for a visual dashboard with voice position maps, signal radar, and theme analysis.
 

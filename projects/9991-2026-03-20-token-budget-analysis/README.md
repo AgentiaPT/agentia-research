@@ -12,7 +12,7 @@ explorers:
 
 # The Great Budget Reallocation: From SaaS Seats and Headcount to Token Budgets
 
-> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> ✨ This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 **Interactive Explorer:** [Token Budget Calculator](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-20-token-budget-analysis/explorer.html)
 

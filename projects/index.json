@@ -1,10 +1,10 @@
 {
-  "generated": "2026-03-22T08:31:49.381783+00:00",
+  "generated": "2026-03-22T11:26:20.844067+00:00",
   "projects": [
     {
       "id": "9985-2026-03-21-ai-news-feed",
       "slug": "ai-news-feed",
-      "title": "AI News Feed — March 14–21, 2026",
+      "title": "AI × Software Engineering — March 14–21, 2026",
       "date": "2026-03-21",
       "status": "draft",
       "tags": [
@@ -16,7 +16,7 @@
         "agentic-sdlc",
         "vibe-coding"
       ],
-      "description": "A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. Organized around recurring themes rather than raw chronology. Continues from [the March 8–13 edition](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md).",
+      "description": "A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engineering. Organized around recurring themes rather than raw chronology. Continues from [the March 8–13 edition](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md).",
       "files": [
         "README.md",
         "sources.md",
@@ -25,7 +25,7 @@
       "htmlFiles": [],
       "explorers": [],
       "path": "projects/9985-2026-03-21-ai-news-feed",
-      "wordCount": 5630,
+      "wordCount": 5704,
       "readingTime": 24
     },
     {
@@ -109,7 +109,7 @@
         }
       ],
       "path": "projects/9991-2026-03-20-token-budget-analysis",
-      "wordCount": 3693,
+      "wordCount": 3713,
       "readingTime": 16
     },
     {
@@ -192,7 +192,7 @@
     {
       "id": "9995-2026-03-13-ai-news-feed",
       "slug": "ai-news-feed",
-      "title": "AI News Feed — March 8–13, 2026",
+      "title": "AI × Software Engineering — March 8–13, 2026",
       "date": "2026-03-13",
       "status": "complete",
       "tags": [
@@ -202,7 +202,7 @@
         "voices",
         "industry"
       ],
-      "description": "A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. Organized around recurring themes rather than raw chronology.",
+      "description": "A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engineering. Organized around recurring themes rather than raw chronology.",
       "files": [
         "README.md",
         "explorer-screenshot.png",
@@ -214,13 +214,13 @@
       "explorers": [
         {
           "file": "explorer.html",
-          "title": "AI News Feed Dashboard",
+          "title": "AI × Software Engineering Dashboard",
           "description": "Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes",
           "screenshot": "explorer-screenshot.png"
         }
       ],
       "path": "projects/9995-2026-03-13-ai-news-feed",
-      "wordCount": 4464,
+      "wordCount": 4465,
       "readingTime": 19
     },
     {

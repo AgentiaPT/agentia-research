@@ -1,4 +1,4 @@
-# Source Scratchpad — AI News Feed March 14–21, 2026
+# Source Scratchpad — AI × Software Engineering March 14–21, 2026
 
 All candidate sources verified during research. Organized by beat.
 
