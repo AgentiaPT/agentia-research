@@ -21,7 +21,7 @@ The numbers continue to escalate from the [previous edition's 73% junior hiring 
 ### The Cuts Continue
 
 - **Atlassian** (Mar 11): 1,600 jobs (~10%), 900+ in R&D, [CTO replaced](https://www.cnbc.com/2026/03/11/atlassian-slashes-10percent-of-workforce-to-self-fund-investments-in-ai.html#:~:text=self-fund%20further%20investment%20in%20AI). Cost: $225–236M. This five months after publicly pledging to hire more engineers
-- **Block** (Feb 26): [4,000 jobs (~40%)](https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey). Jack Dorsey: "Within the next year, I believe the majority of companies will reach the same conclusion." Stock surged **23%** on announcement
+- **Block** (Feb 26): [4,000 jobs (~40%)](https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey). Jack Dorsey: "Within the next year, I believe the majority of companies will reach the same conclusion." Stock surged **~20%** on announcement
 - Tech layoffs globally [surpassed 45,000](https://www.storyboard18.com/brand-makers/tech-layoffs-cross-45000-as-amazon-block-atlassian-meta-cut-jobs-92612.htm) by early March 2026
 
 ### The AI-Washing Counter-Narrative

@@ -17,7 +17,7 @@ When consultancies, analyst firms, and enterprise vendors all publish frameworks
 
 > "The model does not run the system. The system runs the model."
 
-**Gergely Orosz** (~Mar 17): [84% of devs at Uber](https://newsletter.pragmaticengineer.com/p/the-pulse-what-will-the-staff-engineer#:~:text=84%25) are agentic coding users. **65–72%** of code is AI-generated inside IDE-based tools. Claude Code usage nearly doubled in 3 months — **32% to 63%**. GitHub reports over **51%** of all committed code is now AI-generated or substantially AI-assisted. AI coding tools market: **$12.8B** in 2026, up from $5.1B in 2024.
+**Gergely Orosz** (~Mar 17): [84% of devs at Uber](https://newsletter.pragmaticengineer.com/p/the-pulse-what-will-the-staff-engineer#:~:text=84%25) are agentic coding users. **65–72%** of code is AI-generated inside IDE-based tools. Claude Code usage nearly doubled in 3 months — **32% to 63%**. An estimated **41%** of all new code globally is now AI-generated ([NetCorp](https://www.netcorpsoftwaredevelopment.com/blog/ai-generated-code-statistics)). AI coding tools market: **$12.8B** in 2026, up from $5.1B in 2024.
 
 But Orosz also [sounded the alarm](https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us#:~:text=worse%20quality):
 

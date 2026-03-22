@@ -322,7 +322,7 @@ The numbers continue to escalate from the [previous edition's 73% junior hiring 
 ### The Cuts Continue
 
 - **Atlassian** (Mar 11): 1,600 jobs (~10%), 900+ in R&D, [CTO replaced](https://www.cnbc.com/2026/03/11/atlassian-slashes-10percent-of-workforce-to-self-fund-investments-in-ai.html#:~:text=self-fund%20further%20investment%20in%20AI). Cost: $225–236M. This five months after publicly pledging to hire more engineers
-- **Block** (Feb 26): [4,000 jobs (~40%)](https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey). Jack Dorsey: "Within the next year, I believe the majority of companies will reach the same conclusion." Stock surged **23%** on announcement
+- **Block** (Feb 26): [4,000 jobs (~40%)](https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey). Jack Dorsey: "Within the next year, I believe the majority of companies will reach the same conclusion." Stock surged **~20%** on announcement
 - Tech layoffs globally [surpassed 45,000](https://www.storyboard18.com/brand-makers/tech-layoffs-cross-45000-as-amazon-block-atlassian-meta-cut-jobs-92612.htm) by early March 2026
 
 ### The AI-Washing Counter-Narrative
@@ -380,7 +380,7 @@ When consultancies, analyst firms, and enterprise vendors all publish frameworks
 
 > "The model does not run the system. The system runs the model."
 
-**Gergely Orosz** (~Mar 17): [84% of devs at Uber](https://newsletter.pragmaticengineer.com/p/the-pulse-what-will-the-staff-engineer#:~:text=84%25) are agentic coding users. **65–72%** of code is AI-generated inside IDE-based tools. Claude Code usage nearly doubled in 3 months — **32% to 63%**. GitHub reports over **51%** of all committed code is now AI-generated or substantially AI-assisted. AI coding tools market: **$12.8B** in 2026, up from $5.1B in 2024.
+**Gergely Orosz** (~Mar 17): [84% of devs at Uber](https://newsletter.pragmaticengineer.com/p/the-pulse-what-will-the-staff-engineer#:~:text=84%25) are agentic coding users. **65–72%** of code is AI-generated inside IDE-based tools. Claude Code usage nearly doubled in 3 months — **32% to 63%**. An estimated **41%** of all new code globally is now AI-generated ([NetCorp](https://www.netcorpsoftwaredevelopment.com/blog/ai-generated-code-statistics)). AI coding tools market: **$12.8B** in 2026, up from $5.1B in 2024.
 
 But Orosz also [sounded the alarm](https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us#:~:text=worse%20quality):
 
