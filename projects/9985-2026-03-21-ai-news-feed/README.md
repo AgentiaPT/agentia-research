@@ -179,3 +179,325 @@ The Thoughtworks "Hidden Pearls of TDD" piece (March 13) extended the argument: 
 
 ---
 
+## 4. Simon Willison — Defining Agentic Engineering
+
+Simon Willison published five posts in seven days — the most prolific voice this week, and increasingly the practitioner defining the vocabulary for how professionals use AI coding tools.
+
+### Pragmatic Summit Fireside (March 14)
+**[simonwillison.net](https://simonwillison.net/2026/Mar/14/pragmatic-summit/#:~:text=tests%20are%20no%20longer%20even%20remotely%20optional)**
+
+Fireside chat at the Pragmatic Summit in San Francisco, hosted by Eric Lui (Statsig). Willison described the stages of AI adoption for developers, from occasional ChatGPT questions to "that moment where the agent writes more code than you do."
+
+On tests:
+
+> "I see people who are writing code with coding agents and they're not writing any tests at all. That's a terrible idea."
+
+> "They're free now. They're effectively free. I think tests are no longer even remotely optional."
+
+On TDD specifically — a revealing admission from someone who resisted it for decades:
+
+> "I hated [test-first TDD] throughout my career" — but getting agents to do it is fine since he doesn't care if the agent spins around for a few minutes.
+
+On security: reiterated the **"lethal trifecta"** — when a model can access private data, is exposed to malicious instructions, and has an exfiltration vector. Now "standard vocabulary among CISOs evaluating AI agents." Top recommendation: sandboxing.
+
+On open source: "agents love open source" — great at recommending libraries and stitching things together. But projects are flooded with junk contributions; people are trying to "convince GitHub to disable pull requests entirely."
+
+### NICAR Workshop — Coding Agents for Data Analysis (March 16)
+**[simonwillison.net](https://simonwillison.net/2026/Mar/16/coding-agents-for-data-analysis/) · [Workshop handout](https://simonw.github.io/nicar-2026-coding-agents/)**
+
+Three-hour workshop at NICAR 2026 for data journalists — demonstrating Claude Code and OpenAI Codex for data exploration, analysis, and cleaning. Participants burned **$23** of Codex tokens total. Exercises used Python, SQLite, and Datasette.
+
+Key insight: coding agents aren't just for developers. They can explore data, run statistical summaries, spot outliers, find correlations, scrape websites, and handle JavaScript-rendered pages. Highlight: had Claude Code vibe-code interactive Leaflet heat map visualizations for a trees database.
+
+### GPT-5.4 Mini and Nano (March 17)
+**[simonwillison.net](https://simonwillison.net/2026/Mar/17/mini-and-nano/)**
+
+Coverage of OpenAI's new smaller models. GPT-5.4-nano outperforms previous GPT-5 mini at max reasoning effort. New mini is **2x faster** than predecessor. GPT-5.4-nano is cheaper than Gemini 3.1 Flash-Lite. Simon tested by having Codex produce pelican-riding-bicycle SVGs across reasoning effort levels. The nano can describe **76,000 photos for $52**.
+
+### OpenAI/Astral Analysis (March 19)
+**[simonwillison.net](https://simonwillison.net/2026/Mar/19/openai-acquiring-astral/)**
+
+Questioned whether it's a talent or product acquisition — Astral's business product (pyx, private PyPI registry) conspicuously absent from announcements. Noted OpenAI's broader acquisition spree: Promptfoo, OpenClaw, Crixet. Flagged that if things go south, it tests "how viable the forking exit strategy really is."
+
+### Turbo Pascal Deconstructed (March 20)
+**[simonwillison.net](https://simonwillison.net/2026/Mar/20/turbo-pascal/)**
+
+Had Claude decompile and annotate Borland's 1985 Turbo Pascal 3.02 binary (**39,731 bytes** — a full IDE + compiler). Built an interactive artifact with labeled segments and reconstructed, annotated source code — done in regular claude.ai chat, not Claude Code.
+
+### The Vocabulary Question
+
+Willison's distinction between "agentic engineering" and "vibe coding" is [becoming industry standard](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/#:~:text=professional%20software%20engineers%20using%20coding%20agents):
+
+- **Vibe coding**: "coding where you pay no attention to the code at all" — the original Karpathy definition
+- **Agentic engineering**: "professional software engineers using coding agents to improve and accelerate their work by amplifying their existing expertise"
+
+Addy Osmani's [crisper version](https://addyosmani.com/blog/agentic-engineering/#:~:text=Vibe%20coding%20%3D%20YOLO): "Vibe coding = YOLO. Agentic engineering = AI does the implementation, human owns the architecture, quality, and correctness."
+
+On the one-year anniversary of coining "vibe coding" (Feb 4, 2026), Karpathy himself endorsed this: "my current favorite [alternative term] is agentic engineering."
+
+---
+## 5. The Specification Revolution — When Specs Matter More Than Code
+
+Multiple independent sources converged this week on the same thesis: specification quality is now the highest-leverage engineering artifact. When agents are the primary consumers of specs, precision accelerates rather than slows delivery.
+
+### Osmani: "Stop Using /init for AGENTS.md" (March 14)
+**[addyosmani.com](https://addyosmani.com/blog/agents-md/#:~:text=auto-generated%20AGENTS.md%20files%20hurt%20agent%20performance)**
+
+Research shows auto-generated AGENTS.md files hurt agent performance and inflate costs by **20%+** — they duplicate what agents can already discover. Two papers published in early 2026 suggest the `/init` ritual may have made agents "slower, more expensive, and no more accurate."
+
+The ACE framework (Agentic Context Engineering, ICLR 2026) outperforms static approaches by **12.3%**. Good mental model: treat AGENTS.md as a living list of codebase smells you haven't fixed yet. Human-written files help only when they contain non-discoverable information. Everything else is noise.
+
+### Debois: "Context Is the New Code" (March 16–18, QCon London)
+**[QCon London](https://qconlondon.com/presentation/mar2026/context-new-code) · [jedi.be](https://jedi.be/blog/2026/context-flywheel/#:~:text=Models%20commoditize)**
+
+Patrick Debois — the person who coined "DevOps" — argues that context deserves the same engineering rigor as code:
+
+> "We spent two decades building rigorous lifecycles around code. Now look at how we treat the context that drives AI coding agents: rules files copy-pasted from blog posts, prompts edited by hand, memory nobody audits. We're in the cowboy coding era of context."
+
+He introduces the **Context Development Lifecycle** (Generate, Evaluate, Distribute, Observe) and the **Context Flywheel**: better context → better agent output → better signals → better context. Each cycle compounds.
+
+> "Models commoditize... Tools converge... What doesn't commoditize: institutional context."
+
+### Garg: Context Anchoring (March 17, martinfowler.com)
+**[martinfowler.com](https://martinfowler.com/articles/reduce-friction-ai/context-anchoring.html)**
+
+Rahul Garg (Principal Engineer, Thoughtworks) introduces **Context Anchoring** — maintaining a living document that captures decisions, constraints, and current state as a feature evolves. The problem it addresses: AI forgets decisions made early in conversations, leading to contradictions. Part of the [Patterns for Reducing Friction in AI-Assisted Development](https://martinfowler.com/articles/reduce-friction-ai/) series.
+
+### Eledath: 8 Levels of Agentic Engineering (March 10, amplified March 16)
+**[bassimeledath.com](https://www.bassimeledath.com/blog/levels-of-agentic-engineering#:~:text=AI%E2%80%99s%20coding%20ability%20is%20outpacing) · [Fowler (Mar 16)](https://martinfowler.com/fragments/2026-03-16.html)**
+
+Bassim Eledath's framework: Tab Complete → Agent IDE → Context Engineering → Compounding Engineering → MCP and Skills → Harness Engineering → Background Agents → Autonomous Agent Teams. Core thesis:
+
+> "AI's coding ability is outpacing our ability to wield it effectively, which is why SWE-bench score maxxing isn't syncing with the productivity metrics engineering leadership actually cares about"
+
+The **"multiplayer effect"**: your output depends on your teammates' level. A level 7 wizard's PRs stall if approved by a level 2 colleague who manually reviews everything. Martin Fowler amplified it (Mar 16), comparing it to Yegge's 8-level framework.
+
+**Why this matters:** Osmani, Debois, Garg, and Eledath are all pointing at the same thing from different angles. The old bottleneck was "how fast can we write code?" The new bottleneck is "how good are our specs, context, and harnesses?" When agents generate code at near-zero marginal cost, the quality of what you feed them becomes the differentiator.
+
+---
+## 6. DHH — The Enabler Completes the Arc
+
+### ONCE (Again)
+**March 16 | [world.hey.com/dhh](https://world.hey.com/dhh/once-again-3e99f755#:~:text=You%20gotta%20listen%20when%20the%20market%20tells%20you%20what%20it%20wants)**
+
+DHH announced a major pivot for 37signals' ONCE product line. The original model — selling self-hostable web apps for a one-time fee — didn't work. Only broke even on Campfire.
+
+> "You gotta listen when the market tells you what it wants!"
+
+They released Campfire, Writebook, and Fizzy as open source with permissive licenses — far more successful. Now creating ONCE as an application server — **"Open Network Container Executor"** — for running these apps plus "vibe-coded adventures" on your own server.
+
+### The Arc: Skeptic → Convert → Enabler
+
+The [previous edition](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md) documented DHH's dramatic reversal from AI skeptic to convert. This week completes a three-stage arc:
+
+- **Skeptic**: "I spent more time rewriting what it wrote than if I'd done it from scratch"
+- **Convert**: "This is the most exciting thing we've made computers do since we connected them to the internet"
+- **Enabler**: Now building open-source infrastructure specifically for running vibe-coded apps
+
+The pragmatic middle remains. At 37signals, humans still wrote **95%** of the code for Fizzy. Every developer uses AI "in some form" but AI is not writing large features. DHH keeps AI-generated code in a separate window:
+
+> "I can literally feel competence draining out of my fingers"
+
+---
+## 7. The Jobs Escalation — 30% and Climbing
+
+### ServiceNow CEO: Mid-30s Unemployment for Graduates
+**March 17 | [Fortune](https://fortune.com/2026/03/17/servicenow-ceo-bill-mcdermott-gen-z-graduates-face-30-unemployment-next-couple-of-years-ai-takes-over/#:~:text=mid-30s%20in%20the%20next%20couple%20of%20years)**
+
+Bill McDermott told CNBC:
+
+> "I think young people coming out of university today [are experiencing] 9% unemployment. I think it could easily go into the mid-30s in the next couple of years."
+
+He predicts **3 billion "non-human agents"** in enterprises by 2030. For "non-differentiating roles," much of the work will be done by agents. ServiceNow itself automated about **90%** of customer service use cases that used to need humans.
+
+### The Data Stack
+
+The numbers continue to escalate from the [previous edition's 73% junior hiring drop](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md):
+
+- Federal Reserve Bank of New York: underemployment for recent grads at **42.5%** — highest since 2020
+- **58%** of Gen Z graduates (2024–2025) still looking for their first job ([Kickresume](https://www.kickresume.com/))
+- US job postings down **32%** since ChatGPT launched (Federal Reserve data)
+- **5.6%** unemployment for recent grads aged 22–27 vs 4.2% general population
+
+### The Cuts Continue
+
+- **Atlassian** (Mar 11): 1,600 jobs (~10%), 900+ in R&D, [CTO replaced](https://www.cnbc.com/2026/03/11/atlassian-slashes-10percent-of-workforce-to-self-fund-investments-in-ai.html#:~:text=self-fund%20further%20investment%20in%20AI). Cost: $225–236M. This five months after publicly pledging to hire more engineers
+- **Block** (Feb 26): [4,000 jobs (~40%)](https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey). Jack Dorsey: "Within the next year, I believe the majority of companies will reach the same conclusion." Stock surged **23%** on announcement
+- Tech layoffs globally [surpassed 45,000](https://www.storyboard18.com/brand-makers/tech-layoffs-cross-45000-as-amazon-block-atlassian-meta-cut-jobs-92612.htm) by early March 2026
+
+### The AI-Washing Counter-Narrative
+
+Sam Altman at India AI Impact Summit (Feb): some companies engaging in **"AI washing"** — [falsely attributing layoffs to AI](https://fortune.com/2026/02/19/sam-altman-confirms-ai-washing-job-displacement-layoffs/#:~:text=AI%20washing). NBER research: 90% of executives say AI has had **no impact** on workplace employment in the last three years. Only **16%** of layoffs between 2020–2026 directly blamed on AI; major reasons are overexpansion (2021–22), M&A, and cost-cutting.
+
+But Altman also acknowledged: "I would expect that the real impact of AI doing jobs in the next few years will begin to be palpable."
+
+**Why this matters:** The previous edition documented a 73% drop in junior hiring. This week escalates: the CEO of a company that sells AI automation predicts 30%+ graduate unemployment. The Atlassian contradiction (pledging to hire, then cutting 10% five months later) and Altman's "AI washing" acknowledgment reveal the murk. Is this structural displacement or corporate excuse-making? Both. The answer is both.
+
+---
+## 8. Open Source Under Pressure
+
+Three tensions colliding simultaneously.
+
+### Corporate Acquisition
+
+OpenAI [acquires Astral](https://openai.com/index/openai-to-acquire-astral/) (Mar 19) — uv, ruff, ty. Community anxiety: 757 HN points, "overwhelmingly anxious." The fear articulated on Hacker News: "tools don't break, they just stop evolving for independent use cases and start evolving for Codex's use case."
+
+Anthropic [acquired Bun](https://bun.com/blog/bun-joins-anthropic) (Dec 2025) — the JS runtime powering Claude Code. $0 revenue, $26M raised, now fully funded by Anthropic. Pattern: AI companies buying the language toolchains their products run on.
+
+### AI Slop Attacks
+
+Daniel Stenberg ended cURL's bug bounty program after AI-generated spam overwhelmed maintainers (Jan 2026). Roughly **20%** of all submissions were AI slop; only **5%** identified genuine vulnerabilities. Stenberg:
+
+> "We need to make moves to ensure our survival and intact mental health"
+
+Willison at the Pragmatic Summit (Mar 14): projects flooded with spam PRs, people trying to "convince GitHub to disable pull requests entirely." Not just cURL — the Python Software Foundation, React, and Apache Airflow all face the same problem.
+
+Sources: [The New Stack](https://thenewstack.io/curls-daniel-stenberg-ai-is-ddosing-open-source-and-fixing-its-bugs/#:~:text=ensure%20our%20survival) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/curl-ending-bug-bounty-program-after-flood-of-ai-slop-reports/)
+
+### The Ironic Counter-Move (March 20)
+
+AI companies began [funding $12.5M in open source security grants](https://www.resultsense.com/news/2026-03-20-ai-companies-fund-open-source-security) through Alpha-Omega and OpenSSF. The companies whose tools generate the spam are now funding grants to help overworked maintainers deal with it.
+
+**Why this matters:** Open source is simultaneously the foundation of agentic engineering ("agents love open source" — Willison) AND under threat from both AI spam and corporate acquisition. The irony isn't lost on anyone.
+
+---
+## 9. Agentic SDLC Goes Mainstream
+
+When consultancies, analyst firms, and enterprise vendors all publish frameworks for the same thing simultaneously, that's how you know a paradigm has crystallized.
+
+### Enterprise Frameworks
+
+- **PwC**: ["Agentic SDLC in Practice: The Rise of Autonomous Software Delivery"](https://www.pwc.com/m1/en/publications/2026/docs/future-of-solutions-dev-and-delivery-in-the-rise-of-gen-ai.pdf) — major report covering the full lifecycle from requirements to operations
+- **Thoughtworks**: ["Preparing your team for the agentic software development life cycle"](https://www.thoughtworks.com/en-us/insights/articles/preparing-your-team-for-agentic-software-development-life-cycle#:~:text=agents%20as%20team%20members) — agents as team members, non-deterministic engineering, shared memory layers
+- **Forrester**: [Defining the market](https://www.forrester.com/blogs/agentic-software-development-defining-the-next-phase-of-ai-driven-engineering-tools/) for "Agentic Software Development" — forces teams to rethink roles, workflows, expectations
+- **GitLab/TCS**: [Partnership](https://about.gitlab.com/blog/agentic-sdlc-gitlab-and-tcs-deliver-intelligent-orchestration-across-the-enterprise/) for enterprise agentic SDLC orchestration
+- **EY.ai PDLC** (Mar 18): [Claims](https://www.ey.com/en_us/newsroom/2026/03/ernst-young-llp-and-8090-launch-ey-ai-pdlc) 70% productivity increase, 80x faster delivery, 95%+ automated test coverage
+- **GitLab 18.10** (Mar 19–20): [Agentic AI on free tier](https://about.gitlab.com/blog/gitlab-18-10-agentic-ai-now-open-to-even-more-teams-on-gitlab/), code reviews at **$0.25** each — "Pay for what AI does, not how many people use it"
+
+### Production Proof Points
+
+**Stripe "Minions"**: [1,300+ PRs/week](https://www.infoq.com/news/2026/03/stripe-autonomous-coding-agents/#:~:text=1%2C300%20pull%20requests), all agent-written, all human-reviewed. Supports **$1T+** annual payment volume. Each agent gets its own isolated VM with no internet or production access. Built on a heavily modified fork of Block's open-source Goose agent.
+
+> "The model does not run the system. The system runs the model."
+
+**Gergely Orosz** (~Mar 17): [84% of devs at Uber](https://newsletter.pragmaticengineer.com/p/the-pulse-what-will-the-staff-engineer#:~:text=84%25) are agentic coding users. **65–72%** of code is AI-generated inside IDE-based tools. Claude Code usage nearly doubled in 3 months — **32% to 63%**. GitHub reports over **51%** of all committed code is now AI-generated or substantially AI-assisted. AI coding tools market: **$12.8B** in 2026, up from $5.1B in 2024.
+
+But Orosz also [sounded the alarm](https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us#:~:text=worse%20quality):
+
+> "There are more and more signs that AI agents help increase output but they result in worse quality."
+
+### The Revenue Race
+
+| Company | ARR | Notable |
+|---------|-----|---------|
+| OpenAI | ~$25B | 910M weekly active users, 9M paying businesses |
+| Anthropic | ~$19B | Doubled from $9B in months; could surpass OpenAI by mid-2026 |
+| Claude Code | $2.5B | Doubled since start of 2026 |
+| Cursor | ~$50B valuation talks | 1M+ daily users, 50K businesses |
+
+Sources: [The Information](https://www.theinformation.com/articles/openai-tops-25-billion-annualized-revenue-anthropic-narrows-gap) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-03/anthropic-nears-20-billion-revenue-run-rate-amid-pentagon-feud) · [Epoch AI](https://epoch.ai/data-insights/anthropic-openai-revenue) · [Quartz](https://qz.com/anthropic-claude-ai-business-revenue-pentagon-openai-chatgpt)
+
+---
+## 10. Footnotes — Model & Tool Updates
+
+### Cursor Composer 2 (March 19)
+**[cursor.com](https://cursor.com/blog/composer-2) · [VentureBeat](https://venturebeat.com/technology/cursors-new-coding-model-composer-2-is-here-it-beats-claude-opus-4-6-but/)**
+
+In-house coding model built on Kimi K2.5 (Chinese open-source). Scores **61.7%** on Terminal-Bench 2.0, beating Claude Opus 4.6 (**58.0%**); still trails GPT-5.4 (**75.1%**). **86% cheaper** than Composer 1.5: $0.50/M input, $2.50/M output. Training innovation: "compaction-in-the-loop RL" — builds summarization into training, reduces compaction error by 50%. Three Composer releases in five months.
+
+### Claude Code March Updates
+**[Changelog](https://code.claude.com/docs/en/changelog) · [Roundup](https://pasqualepillitteri.it/en/news/381/claude-code-march-2026-updates)**
+
+Voice mode (push-to-talk with spacebar) rolling out. `/loop` for recurring tasks. `/effort` with **"ultrathink"** keyword for max effort. Opus 4.6 default, **1M token context**, max output to 64K tokens. `--bare` flag for scripted calls. `/color` for multi-session management. MCP Elicitation Support — servers request structured input mid-task. 10 new voice mode languages.
+
+### GitHub Copilot March Updates
+**[Changelog](https://github.blog/changelog/label/copilot/)**
+
+GPT-5.4 mini [GA](https://github.blog/changelog/2026-03-17-gpt-5-4-mini-is-now-generally-available-for-github-copilot/) (Mar 17). GPT-5.3-Codex [long-term support](https://github.blog/changelog/2026-03-18-gpt-5-3-codex-long-term-support-in-github-copilot/) (Mar 18), replacing GPT-4.1. Coding agent [50% faster](https://github.blog/changelog/2026-03-19-copilot-coding-agent-now-starts-work-50-faster/) (Mar 19). Major [JetBrains agentic update](https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/) (Mar 11): custom agents, sub-agents, plan agent, auto-approve MCP, AGENTS.md/CLAUDE.md support.
+
+### OpenAI Codex March Updates
+**[Changelog](https://developers.openai.com/codex/changelog) · [GPT-5.3-Codex](https://openai.com/index/introducing-gpt-5-3-codex/)**
+
+GPT-5.3-Codex: "first model instrumental in creating itself," 25% faster. Codex Security in research preview (Mar 6). Windows app (Mar 4). Web search for local tasks. Linear integration — mention @Codex in an issue to kick off a cloud task.
+
+### GPT-5.4 Mini & Nano (March 17)
+
+Mini: 2x faster, .33x premium request multiplier in Copilot. Nano: smallest/cheapest GPT-5.4 variant, cheaper than Gemini 3.1 Flash-Lite. Willison: [can describe 76,000 photos for $52](https://simonwillison.net/2026/Mar/17/mini-and-nano/).
+
+### GitLab 18.10 (March 19–20)
+**[gitlab.com](https://about.gitlab.com/blog/gitlab-18-10-agentic-ai-now-open-to-even-more-teams-on-gitlab/)**
+
+Agentic AI on free tier. Flat **$0.25/review**. Planner Agent, Developer Flow agents. Agentic false positive detection for security scanning (GA).
+
+---
+## 11. Signals & Radar
+
+| Signal | Why It Matters | Action |
+|--------|---------------|--------|
+| **Antspace discovery** | Anthropic building full-stack PaaS — model→agent→runtime→hosting | Monitor for public launch; assess Vercel competitive impact |
+| **OpenAI/Astral acquisition** | AI companies buying dev toolchains their products depend on | Track uv/ruff evolution for Codex bias; evaluate fork viability |
+| **Apple blocks vibe coding apps** | Platform gatekeeping begins — controls what AI-built apps can run | Watch for regulatory response; track PWA vs native app dynamics |
+| **Vera Rubin / $1T demand** | Purpose-built agentic silicon; inference replacing training as demand driver | Infrastructure planning for agent-scale workloads |
+| **Deer Valley three-way split** | Rigor debate crystallizes — specs vs production vs tests | Build complete systems covering all three; none alone is sufficient |
+| **Specification revolution** | Osmani, Debois, Garg converge on spec quality as highest-leverage artifact | Invest in AGENTS.md quality, context anchoring, harness engineering |
+| **ServiceNow CEO 30% warning** | Graduate unemployment escalation from 7% → predicted 30%+ | Monitor entry-level pipeline; revisit hiring and mentorship strategies |
+| **Stripe Minions at scale** | 1,300 agent PRs/week supporting $1T+ payment volume | Study their "system runs the model" architecture pattern |
+| **Cursor Composer 2** | IDE company ships competitive model — vertical integration everywhere | Track whether Cursor model + IDE integration beats API-only players |
+| **DHH ONCE pivot** | Loudest skeptic-turned-convert now builds vibe coding infrastructure | Monitor ONCE adoption as vibe coding deployment story |
+| **AI companies fund OSS grants** | Irony: tools that generate spam fund grants to fix the damage | Track whether grants address structural problems or just PR |
+| **Orosz quality warning** | AI agents increase output but degrade quality — data from Amazon, Uber | Essential counterweight to productivity hype; quality metrics urgently needed |
+| **Context as competitive moat** | Debois: "models commoditize, context compounds" | Invest in institutional context capture before it becomes competitive disadvantage |
+
+---
+
+## Key Quotes of the Week
+
+> "OpenClaw is the operating system for personal AI." — **Jensen Huang**, NVIDIA GTC ([NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-nemoclaw#:~:text=operating%20system%20for%20personal%20AI))
+
+> "Formal methods and test suites are flight simulators. Production is flying the actual plane. Observability is how you fly it." — **Charity Majors** ([Honeycomb](https://www.honeycomb.io/blog/production-is-where-the-rigor-goes#:~:text=flight%20simulators))
+
+> "You gotta listen when the market tells you what it wants!" — **DHH** ([world.hey.com](https://world.hey.com/dhh/once-again-3e99f755#:~:text=You%20gotta%20listen))
+
+> "I think it could easily go into the mid-30s in the next couple of years." — **Bill McDermott**, ServiceNow CEO ([Fortune](https://fortune.com/2026/03/17/servicenow-ceo-bill-mcdermott-gen-z-graduates-face-30-unemployment-next-couple-of-years-ai-takes-over/#:~:text=mid-30s))
+
+> "Tests are no longer even remotely optional." — **Simon Willison** ([simonwillison.net](https://simonwillison.net/2026/Mar/14/pragmatic-summit/#:~:text=no%20longer%20even%20remotely%20optional))
+
+> "AI's coding ability is outpacing our ability to wield it effectively." — **Bassim Eledath**, amplified by Martin Fowler ([bassimeledath.com](https://www.bassimeledath.com/blog/levels-of-agentic-engineering#:~:text=outpacing%20our%20ability))
+
+> "We're in the cowboy coding era of context." — **Patrick Debois** ([QCon London](https://qconlondon.com/presentation/mar2026/context-new-code#:~:text=cowboy%20coding%20era%20of%20context))
+
+> "I really want an immutable annotation that says, no, no, this is correct. And if you ever change this, I'm going to unplug you." — **Kent Beck** ([Allstacks](https://www.allstacks.com/blog/how-to-write-specs-for-ai-agents-tdd-skills-and-what-comes-next#:~:text=immutable%20annotation))
+
+> "There are more and more signs that AI agents help increase output but result in worse quality." — **Gergely Orosz** ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us#:~:text=worse%20quality))
+
+---
+
+## Voice Tracker
+
+| Voice | Affiliation | Stance | Key Contribution This Week |
+|-------|------------|--------|---------------------------|
+| Simon Willison | Independent | Pragmatic optimist | 5 posts — agentic engineering vocabulary, NICAR workshop, Astral analysis |
+| Martin Fowler | Thoughtworks | Calibrated skeptic | **NEW** — Middle loop, supervisory engineering, code review defense |
+| Charity Majors | Honeycomb | Practitioner | "Production Is Where the Rigor Goes" — Deer Valley critical response |
+| DHH | 37signals | Convert → Enabler | ONCE pivot — building open-source vibe coding infrastructure |
+| Addy Osmani | Google Cloud AI | Framework builder | AGENTS.md research — spec quality data, 20%+ performance hit |
+| Patrick Debois | DevOps founder | AI-native bridge | "Context Is the New Code" — Context Development Lifecycle |
+| Kent Beck | Independent | Pragmatic optimist | TDD as immutable annotations (via Allstacks, Thoughtworks) |
+| Gergely Orosz | Pragmatic Engineer | Measured analyst | Quality warning — agents increase output, degrade quality |
+| Kelsey Hightower | Retired/Google | Engineering sanity | "MCP is a gift to the proxy community" (HAProxyConf, Mar 20) |
+| Ethan Mollick | Wharton | Academic researcher | "Shape of the Thing" (Mar 12, borderline) |
+| Mitchell Hashimoto | Vercel board | Architect-first | Joined Vercel board (Mar 18) |
+| Grady Booch | Independent | Calibrated skeptic | No new content this week |
+| Dave Farley | CD Training | Discipline advocate | No new content this week |
+| Bryan Cantrill | Oxide | Systems contrarian | No new content this week |
+| Chelsea Troy | U of Chicago/Mozilla | Empirical skeptic | No new content this week |
+| ThePrimeagen | Independent | Principled minimalist | PrimeTime shorts (sycophancy, Dario) |
+| Mike Mason | Independent | Data realist | No new content this week |
+| Max Woolf | Independent | Pragmatic skeptic | No new content this week |
+| Daniel Stenberg | cURL | Open source defender | "100 curl graphs" (Mar 15) |
+
+## Methodology
+
+Curated from a network of primary sources: simonwillison.net, martinfowler.com, Pragmatic Engineer, One Useful Thing, Honeycomb blog, world.hey.com/dhh, addyosmani.com, jedi.be, bassimeledath.com, CNBC, NVIDIA Blog, Tom's Hardware, Fortune, Bloomberg, The Information, TechCrunch, MacRumors, 9to5Mac, AppleInsider, VentureBeat, InfoQ, GitHub Blog, OpenAI Blog, Anthropic, Cursor, GitLab, Allstacks, Thoughtworks, QCon London, The Register, SiliconANGLE, Quartz, and others.
+
+Stories filtered through tracked themes and mapped to relevance for AI-powered software engineering.
