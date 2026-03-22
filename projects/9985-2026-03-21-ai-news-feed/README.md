@@ -81,7 +81,7 @@ The contrast is striking. In February, Apple launched [Xcode 26.3](https://www.a
 
 There's a revenue dimension. Vibe-coded PWAs bypass the **30% App Store commission** — apps built and deployed without Apple ever touching them. Competition attorney Gene Burrus noted Apple has:
 
-> "a history of blocking apps or features that create competition on its platform" — [The Information](https://www.theinformation.com/articles/apple-cracks-vibe-coding-apps)
+> "a history of blocking apps or features that create competition on its platform" — **Gene Burrus** via [The Decoder](https://the-decoder.com/apple-reportedly-blocks-vibe-coding-apps-from-publishing-updates/#:~:text=history%20of%20blocking%20apps%20or%20features), originally reported by [The Information](https://www.theinformation.com/articles/apple-cracks-vibe-coding-apps)
 
 ### Antspace — Anthropic's Hidden PaaS
 **March 18 | [AprilNEA Blog](https://aprilnea.me/en/blog/reverse-engineering-claude-code-antspace#:~:text=environment-runner) · [AprilNEA on X](https://x.com/AprilNEA/status/2034209430158619084) (169K views) · [Hacker News](https://news.ycombinator.com/item?id=47433685) · [WEEX](https://www.weex.com/news/detail/reverse-engineering-claude-code-reveals-anthropicas-undisclosed-paas-platform-antspace-built-in-baku-self-hosted-full-stack-ecosystem-already-taking-shape-386582)**
