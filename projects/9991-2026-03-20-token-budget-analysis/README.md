@@ -49,10 +49,10 @@ This isn't just a CEO selling GPUs. It's a signal that the **unit of enterprise 
 Huang isn't alone. The framing is converging from multiple directions:
 
 > "We, as the producers of this technology, have a duty and an obligation to be honest about what is coming."
-
+>
 > "[AI] could eliminate half of all entry-level white-collar jobs within five years [causing] unemployment to spike to between 10% and 20%."
 >
-> — Dario Amodei, Anthropic CEO, [Axios interview, May 2025](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=half%20of%20all%20entry-level%20white-collar%20jobs)
+> — **Dario Amodei**, Anthropic CEO, [Axios interview, May 2025](https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/#:~:text=duty%20and%20an%20obligation%20to%20be%20honest)
 
 Amodei went further, proposing a **"token tax"** on AI model usage to manage the transition — perhaps a 3% levy on AI company revenue from model usage, with proceeds going to government for redistribution. He acknowledged: "Obviously, that's not in my economic interest, but I think that would be a reasonable solution" ([Axios / The Decoder](https://the-decoder.com/anthropic-ceo-predicts-20-unemployment-from-ai-and-suggests-taxing-every-ai-responseanthropic-ceo-predicts-massive-job-losses-and-proposes-a-token-tax/#:~:text=token%20tax)). The implication: tokens are becoming a measurable unit of economic activity worthy of taxation.
 
