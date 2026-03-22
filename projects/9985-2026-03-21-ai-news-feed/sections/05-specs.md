@@ -7,7 +7,7 @@ Multiple independent sources converged this week on the same thesis: specificati
 
 Research shows auto-generated AGENTS.md files hurt agent performance and inflate costs by **20%+** — they duplicate what agents can already discover. Two papers published in early 2026 suggest the `/init` ritual may have made agents "slower, more expensive, and no more accurate."
 
-The ACE framework (Agentic Context Engineering, ICLR 2026) outperforms static approaches by **12.3%**. Good mental model: treat AGENTS.md as a living list of codebase smells you haven't fixed yet. Human-written files help only when they contain non-discoverable information. Everything else is noise.
+The ACE framework (Agentic Context Engineering, ICLR 2026) outperforms static approaches by **10.6%** on agent benchmarks and **8.6%** on domain-specific tasks. Good mental model: treat AGENTS.md as a living list of codebase smells you haven't fixed yet. Human-written files help only when they contain non-discoverable information. Everything else is noise.
 
 ### Debois: "Context Is the New Code" (March 16–18, QCon London)
 **[QCon London](https://qconlondon.com/presentation/mar2026/context-new-code) · [jedi.be](https://jedi.be/blog/2026/context-flywheel/#:~:text=Models%20commoditize)**
