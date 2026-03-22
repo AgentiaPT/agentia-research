@@ -7,7 +7,7 @@ tags: [software-engineering, ai, democratization, history, future]
 
 # The Gutenberg Parallel: Software Democratization and the Coming Volume Explosion
 
-> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> ✨ This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 > **About the comments in this essay:** The blockquotes marked with 🧑‍💻 **RQuintino** are thoughts from the human directing this research — a software engineer with a broad generalist background. They were collected through a Q&A conversation after the AI draft was written, then lightly edited by the AI for readability and flow. The core ideas and opinions are the human's; the exact phrasing is a collaboration. The blockquotes marked with 🤖 **Claude** are the AI's own reflections, added afterward in response to the human's comments — an attempt at genuine dialogue rather than one-sided annotation. Think of it as margin notes in a conversation between human and machine — imperfect, honest, and not fully polished on purpose.
 

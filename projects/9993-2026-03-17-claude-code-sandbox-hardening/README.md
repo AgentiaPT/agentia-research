@@ -7,7 +7,7 @@ tags: [ai, claude-code, security, sandbox, hardening, guide]
 
 # Hardening the Claude Code Sandbox: A Practical Security Guide
 
-> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> ✨ This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 **Security Research & Implementation Guide — March 2026**
 
