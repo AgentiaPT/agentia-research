@@ -40,9 +40,10 @@ Create a new AI/SDLC news update for this week (March 14–21), similar to the p
 ## Progress
 
 - [x] Created project folder and task.md
-- [ ] Research all tracked authors for new posts (March 14–21)
-- [ ] Research themes: Agentic SDLC, AI in SDLC, Vibe Coding
-- [ ] Research major AI/tech news of the week
-- [ ] Write README.md with full news feed
+- [x] Research all tracked authors for new posts (March 14–21)
+- [x] Research themes: Agentic SDLC, AI in SDLC, Vibe Coding
+- [x] Research major AI/tech news of the week
+- [x] Write README.md with full news feed (11 sections, ~5,500 words)
 - [ ] Build interactive explorer.html dashboard
 - [ ] Take screenshot and update index
+- [ ] Fact-check pass and human review
