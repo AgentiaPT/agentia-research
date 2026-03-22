@@ -1,6 +1,33 @@
 {
-  "generated": "2026-03-21T19:11:17.514668+00:00",
+  "generated": "2026-03-22T08:31:49.381783+00:00",
   "projects": [
+    {
+      "id": "9985-2026-03-21-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI News Feed — March 14–21, 2026",
+      "date": "2026-03-21",
+      "status": "draft",
+      "tags": [
+        "ai",
+        "news",
+        "weekly",
+        "voices",
+        "industry",
+        "agentic-sdlc",
+        "vibe-coding"
+      ],
+      "description": "A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engineering. Organized around recurring themes rather than raw chronology. Continues from [the March 8–13 edition](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md).",
+      "files": [
+        "README.md",
+        "sources.md",
+        "task.md"
+      ],
+      "htmlFiles": [],
+      "explorers": [],
+      "path": "projects/9985-2026-03-21-ai-news-feed",
+      "wordCount": 5630,
+      "readingTime": 24
+    },
     {
       "id": "9986-2026-03-18-vibe-coding-essay",
       "slug": "vibe-coding-essay",

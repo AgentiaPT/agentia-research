@@ -6,6 +6,7 @@ Complete catalog of all research projects, newest first.
 
 | Project | Description | Live Demo | Words | Read Time | Status | Date |
 |---------|-------------|-----------|------:|-----------|--------|------|
+| [AI News Feed — March 14–21, 2026](9985-2026-03-21-ai-news-feed/) | A curated, thematic AI news feed tracking the voices, signals, and narratives that matter for AI-powered software engine... | — | 5.6k | 24 min | Draft | 2026-03-21 |
 | [The Civilization That Forgot How to Code](9986-2026-03-18-vibe-coding-essay/) | Around 370 BCE, Socrates made an argument against writing. In Plato's *Phaedrus*, he warned that the written word would ... | — | 7.7k | 33 min | Complete | 2026-03-18 |
 | [The Gutenberg Parallel: Software Democratization and the Coming Volume Explosion](9990-2026-03-20-software-democratization/) | What is happening now with software happened before with writing. The pattern is unmistakable: a skill once reserved for... | — | 3.6k | 16 min | Complete | 2026-03-20 |
 | [The Great Budget Reallocation: From SaaS Seats and Headcount to Token Budgets](9991-2026-03-20-token-budget-analysis/) | **Interactive Explorer:** [Token Budget Calculator](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-2... | [Explorer](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-20-token-budget-analysis/explorer.html) | 3.7k | 16 min | Complete | 2026-03-20 |

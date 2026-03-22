@@ -62,20 +62,20 @@ The deepest signal: multiple independent sources converged on the same insight �
 ### OpenAI Acquires Astral
 **March 19 | [OpenAI](https://openai.com/index/openai-to-acquire-astral/#:~:text=we%20are%20thrilled%20to%20announce) · [Astral](https://astral.sh/blog/openai#:~:text=Astral%20is%20joining%20OpenAI) · [Simon Willison](https://simonwillison.net/2026/Mar/19/openai-acquiring-astral/#:~:text=if%20things%20go%20south) · [CNBC](https://www.cnbc.com/2026/03/19/openai-to-acquire-developer-tooling-startup-astral.html) · [The Register](https://www.theregister.com/2026/03/19/openai_aims_for_the_stars/) · [SiliconANGLE](https://siliconangle.com/2026/03/19/openai-acquires-open-source-python-tooling-startup-astral/)**
 
-OpenAI announced the acquisition of Astral, the company behind three tools that have become critical Python infrastructure: **uv** (126M monthly downloads), **ruff** (1,000x faster linting), and **ty** (type checking) — all written in Rust for speed. The Astral team joins Codex, which now has **2M+ weekly active users** and has tripled since January.
+OpenAI announced the acquisition of Astral, the company behind three tools that have become critical Python infrastructure: **uv** (126M monthly downloads), **ruff** (10–100x faster linting), and **ty** (type checking) — all written in Rust for speed. The Astral team joins Codex, which now has **2M+ weekly active users** and has tripled since January.
 
 What went unsaid is as revealing as the announcement. Astral's business product — **pyx**, a private PyPI registry aimed at enterprise customers — was conspicuously absent from both posts. No mention of its fate, no commitment to continued development.
 
 The community reaction was swift and anxious. The Hacker News thread hit **757 points** with an overwhelmingly nervous tone. Simon Willison flagged the core tension:
 
-> "if things go south, it tests how viable the forking exit strategy really is"
+> "If things do go south for uv and the other Astral projects we'll get to see how credible the forking exit strategy turns out to be"
 
 The pattern is now unmistakable. In December 2025, Anthropic [acquired Bun](https://bun.com/blog/bun-joins-anthropic#:~:text=Bun%20is%20joining%20Anthropic) — the JavaScript runtime powering Claude Code. Now OpenAI buys the Python toolchain its coding product depends on. AI companies aren't just building models and agents — they're buying the language-specific developer infrastructure their products run on top of.
 
 ### Apple's Double Move
 **March 18 | [MacRumors](https://www.macrumors.com/2026/03/18/apple-blocks-updates-for-vibe-coding-apps/#:~:text=Guideline%202.5.2) · [9to5Mac](https://9to5mac.com/2026/03/18/apple-pushing-back-on-vibe-coding-iphone-apps-developers-say/) · [AppleInsider](https://appleinsider.com/articles/26/03/18/bad-vibes-apple-blocks-updates-for-some-ai-coding-apps-in-the-app-store) · [The Information](https://www.theinformation.com/articles/apple-cracks-vibe-coding-apps)**
 
-Apple quietly blocked App Store updates for vibe coding apps — **Replit** and **Vibecode** — citing Guideline 2.5.2, which prohibits apps from running arbitrary code that alters functionality outside App Store review. Replit has fallen from **#1 to #3** in developer tools since its last approved update in January.
+Apple quietly blocked App Store updates for vibe coding apps — **Replit** and **Vibecode** — citing Guideline 2.5.2, which prohibits apps from running arbitrary code that alters functionality outside App Store review. Replit has seen declining App Store rankings since its last approved update in January.
 
 The contrast is striking. In February, Apple launched [Xcode 26.3](https://www.apple.com/newsroom/2026/02/xcode-26-point-3-unlocks-the-power-of-agentic-coding/#:~:text=agents%20can%20create%20files%2C%20build%20projects%2C%20run%20tests) with Claude Agent and OpenAI Codex built in — agents that can create files, build projects, run tests, and take visual snapshots. Apple's distinction: Xcode produces apps submitted through App Review. Vibe coding apps generate and run software that **bypasses review entirely**.
 
@@ -132,7 +132,7 @@ Jensen framed it in operating system terms:
 
 ## 3. The Deer Valley Reverberations — Where Does the Rigor Go?
 
-In February 2026, Martin Fowler and Thoughtworks hosted 50 leaders — including Kent Beck and Steve Yegge — in Deer Valley, Utah, at the birthplace of the Agile Manifesto, to confront AI-native software development. No new manifesto emerged. But this week, three tracked voices published divergent responses — revealing a fundamental disagreement about **where** engineering rigor should live in the age of agents.
+In February 2026, Martin Fowler and Thoughtworks hosted practitioners, researchers, and enterprise leaders — including Kent Beck and Steve Yegge — in Deer Valley, Utah (near Snowbird, where the Agile Manifesto was signed in 2001), to confront AI-native software development. No new manifesto emerged. But this week, three tracked voices published divergent responses — revealing a fundamental disagreement about **where** engineering rigor should live in the age of agents.
 
 ### Martin Fowler: The Middle Loop (March 16, 19)
 **[martinfowler.com (Mar 16)](https://martinfowler.com/fragments/2026-03-16.html#:~:text=supervisory%20engineering%20work) · [martinfowler.com (Mar 19)](https://martinfowler.com/fragments/2026-03-19.html#:~:text=If%20your%20review%20process%20is%20primarily%20a%20bug-finding%20mechanism)**
