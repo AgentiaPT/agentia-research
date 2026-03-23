@@ -30,7 +30,10 @@ Open the [Explorer](https://agentiapt.github.io/agentia-research/projects/9985-2
 8. [Open Source Under Pressure](#8-open-source-under-pressure) — Acquisitions, AI slop, grants irony
 9. [Agentic SDLC Goes Mainstream](#9-agentic-sdlc-goes-mainstream) — PwC, Stripe Minions, revenue race
 10. [Footnotes — Model & Tool Updates](#10-footnotes--model--tool-updates) — Composer 2, Claude Code, Copilot, Codex, GitLab
-11. [Signals & Radar](#11-signals--radar) | [Key Quotes](#key-quotes-of-the-week) | [Voice Tracker](#voice-tracker)
+11. [Comprehension Debt](#11-comprehension-debt--the-hidden-cost-of-ai-speed) — Osmani coins the term, Anthropic's 17% study, false confidence
+12. [The Agent Harness Revolution](#12-the-agent-harness-revolution--skills-context-and-structured-loops) — Skills, WISC, Superpowers, compound engineering
+13. [Autonomous Loops Go Mainstream](#13-autonomous-loops-go-mainstream) — Ralph pattern, scheduled tasks, /loop, night-shift agents
+14. [Signals & Radar](#14-signals--radar) | [Key Quotes](#key-quotes-of-the-week) | [Voice Tracker](#voice-tracker)
 
 ---
 
@@ -50,6 +53,9 @@ This week is **the consolidation**. Every layer of the stack made its move — a
 | **Production** | Charity Majors | "Production is where the rigor goes" — Deer Valley critique |
 | **Practice** | Willison / Osmani / Debois | Agentic engineering vocabulary, specification revolution |
 | **Infrastructure** | DHH | ONCE (Again) — open-source runtime for vibe-coded apps |
+| **Understanding** | Osmani | Comprehension Debt — the hidden cost nobody's measuring |
+| **Harness** | Mistele / Medin / Shihipar | Skills, WISC, harness engineering goes from blog posts to discipline |
+| **Autonomy** | Huntley / Colmant | Ralph loops + scheduled tasks — agents run unsupervised |
 
 The unifying thesis: **last week proved the old way breaks. This week, the new scaffolding is being erected — from silicon to process to org structure.** The tension is between consolidators who want control (OpenAI acquiring toolchains, Apple gatekeeping, Anthropic building Antspace) and practitioners who want clarity (Fowler defining the middle loop, Willison defining agentic engineering, Debois defining context lifecycles).
 
@@ -429,8 +435,147 @@ Mini: 2x faster, .33x premium request multiplier in Copilot. Nano: smallest/chea
 
 Agentic AI on free tier. Flat **$0.25/review**. Planner Agent, Developer Flow agents. Agentic false positive detection for security scanning (GA).
 
+### Claude Code Channels (March 20)
+**[VentureBeat](https://venturebeat.com/orchestration/anthropic-just-shipped-an-openclaw-killer-called-claude-code-channels) · [DEV Community](https://dev.to/ji_ai/claude-code-channels-how-anthropic-built-a-two-way-bridge-between-telegram-and-your-terminal-2dpn)**
+
+Research preview: control Claude Code sessions from **Telegram or Discord**. Messages sent from the chat app reach the Claude Code session running on your local machine, which executes work and replies through the same channel. Built on MCP as a two-way bridge. Requires v2.1.80+. Positioned as Anthropic's answer to OpenClaw's messaging integrations — but with the agent running locally, not in the cloud.
+
+### Claude Cowork Dispatch (March 17)
+**[Geeky Gadgets](https://www.geeky-gadgets.com/claude-cowork-dispatch-guide/) · [MacStories](https://www.macstories.net/stories/hands-on-with-claude-dispatch-for-cowork/) · [COEY](https://coey.com/resources/blog/2026/03/17/anthropic-dispatch-turns-claude-into-your-always-on-creative-coworker/)**
+
+Phone-to-desktop feature within Claude Cowork. Send instructions from your phone, Claude executes on your desktop — accessing local files, connected applications, and 38+ plugins. Setup: scan a QR code. All processing stays local. Available on Max ($100/month) and Pro ($20/month). macOS only; complex multi-app tasks have **~50% success rate**. Ethan Mollick (Wharton): "covers 90% of what I was trying to use OpenClaw for, but feels far less likely to upload my entire drive to a malware site."
+
+### Google Stitch — Vibe Design (March 18)
+**[Google Blog](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) · [Muzli](https://muz.li/blog/google-just-introduced-vibe-design-heres-what-it-means-for-ui-designers/)**
+
+Google Labs shipped "vibe design" — describe a business objective or desired feeling, Stitch generates matching design directions. March 2026 update added: **Infinite Canvas**, **Voice Canvas** (speak to design), **Instant Prototypes**, and **DESIGN.md** export format. Free during beta (350 standard + 200 pro generations/month). Figma stock declined **~12%** over two days after the announcement.
+
+### Moat v0.4 — Agent Container Sandboxing (March 19)
+**[GitHub](https://github.com/majorcontext/moat) · [Dan Pupius](https://writing.pupius.co.uk/a-moat-for-your-agents-90b51a630d14)**
+
+Open-source CLI by Dan Pupius (with Andy Bonventre, former Go open source lead at Google and product security lead at Stripe Link). Runs AI agents (Claude Code, Codex) in containers with credential injection at the network layer via a TLS-intercepting proxy, plus full audit logging with tamper-evident hash-chaining. Credentials never reach the agent directly. v0.4 adds HTTP request rules, `moat exec`, env:// resolver, Rancher Desktop support, Ollama sidecar, host clipboard bridging. `brew install moat`.
+
 ---
-## 11. Signals & Radar
+
+## 11. Comprehension Debt — The Hidden Cost of AI Speed
+
+**March 17 | [addyosmani.com](https://addyosmani.com/blog/comprehension-debt/#:~:text=growing%20gap%20between%20how%20much%20code%20exists) · [Medium](https://medium.com/@addyosmani/comprehension-debt-the-hidden-cost-of-ai-generated-code-285a25dac57e)**
+
+Addy Osmani coined a term that instantly became vocabulary: **comprehension debt** — "the growing gap between how much code exists in your system and how much of it any human being genuinely understands."
+
+Unlike technical debt, which announces itself through friction — slow builds, tangled dependencies — comprehension debt **breeds false confidence**. The codebase looks clean. The tests are green. But the underlying theory of the system is quietly evaporating.
+
+### The Anthropic Study
+
+Osmani cites a recent Anthropic study (["How AI Impacts Skill Formation"](https://arxiv.org/abs/2601.20245)) that gave the concept empirical teeth. In a randomized controlled trial with **52 software engineers**, participants using AI assistance completed tasks in roughly the same time as the control group, but scored **17% lower** on a follow-up comprehension quiz (50% vs. 67%). The biggest declines were in **debugging** — the skill most dependent on understanding *why* code works, not just *that* it works. Developers using AI for passive delegation ("just make it work") scored **below 40%**; those using it for conceptual inquiry scored **above 65%**.
+
+### The Spec Problem
+
+Osmani pushes back on the idea that better specs solve everything:
+
+> "There is often no correct spec. Requirements emerge through building. Edge cases reveal themselves through use." — [addyosmani.com](https://addyosmani.com/blog/comprehension-debt/#:~:text=there%20is%20often%20no%20correct%20spec)
+
+AI doesn't change this — it adds a new layer of implicit decisions made without human deliberation. And it inverts the review dynamic:
+
+> "When code was expensive to produce, senior engineers could review faster than junior engineers could write. AI flips this: a junior engineer can now generate code faster than a senior engineer can critically audit it." — [addyosmani.com](https://addyosmani.com/blog/comprehension-debt/#:~:text=When%20code%20was%20expensive%20to%20produce%2C%20senior%20engineers%20could%20review%20faster%20than%20junior%20engineers%20could%20write)
+
+### The Scarcest Resource
+
+> "As AI volume scales, the engineer who maintains a coherent, system-level mental model becomes the scarcest, most valuable resource on the team. The job isn't just generating code; it's comprehension." — [addyosmani.com](https://addyosmani.com/blog/comprehension-debt/#:~:text=scarcest%2C%20most%20valuable%20resource)
+
+Tyler Folkman quantified the velocity mismatch: "AI generates 5–7x faster than developers absorb." PR volume climbing. Review capacity flat.
+
+**Why this matters:** Comprehension debt names what Gergely Orosz was warning about (Section 9) — agents increase output but degrade quality. The Anthropic study provides the first controlled evidence. And Osmani's framing as *debt* implies it compounds: the longer you don't pay it, the more expensive the eventual reckoning. This is the intellectual counterweight to every "10x productivity" claim — the cost that doesn't show up in velocity metrics.
+
+---
+
+## 12. The Agent Harness Revolution — Skills, Context, and Structured Loops
+
+This week crystallized something that's been building for months: **harness engineering** — the discipline of configuring, constraining, and orchestrating AI coding agents — emerged as a named field with multiple converging practitioners.
+
+### The Thesis: It's Not a Model Problem
+
+Kyle Mistele's ["Skill Issue: Harness Engineering for Coding Agents"](https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents) (March 12, amplified this week by [Pete Hodgson](https://www.linkedin.com/in/pete-hodgson/) on March 16) laid the foundation. After dozens of projects and hundreds of agent sessions:
+
+> "It's not a model problem. It's a configuration problem." — [HumanLayer](https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents#:~:text=not%20a%20model%20problem)
+
+Hodgson's endorsement distilled the key takeaways: keep AGENTS.md super small, curate tight custom tools, use skills or plugins, lean heavily on sub-agents for context management, and above all — **obsess over deterministic feedback loops**. He called that last point "the #1 thing teams are missing out on today."
+
+### Thariq Shihipar: How Anthropic Uses Skills (March 18)
+**[LinkedIn](https://www.linkedin.com/in/thariq-shihipar/)**
+
+A Member of Technical Staff at Anthropic wrote in-depth about how the Claude Code team uses skills internally. His admission: "I started writing this thinking I knew everything about skills, but to be honest I learned a lot through the process as well. There is so much room for creativity with skills." The post revealed that skills are becoming Anthropic's primary abstraction for agent behavior customization — more powerful and composable than static rules files.
+
+### Cole Medin: WISC Framework (March 17)
+**[YouTube](https://www.youtube.com/watch?v=wisc-framework-claude-code)**
+
+After 2,000+ hours using Claude Code across production codebases, Medin identified context management as the root cause of ~80% of agent failures. His WISC framework (inspired by Anthropic's research):
+
+- **W**rite — externalize agent memory (git log as long-term memory, progress files for cross-session state)
+- **I**solate — keep main context clean (subagents for research, scout pattern for doc preview)
+- **S**elect — just in time, not just in case (global rules, on-demand context, skills with progressive disclosure)
+- **C**ompress — only when you have to (handoffs for custom session summaries, targeted /compact)
+
+He cited Anthropic data showing subagents produce a **90.2% improvement** in task outcomes, and Chroma's research showing that performance degrades as context grows — more tokens is not always better.
+
+### Superpowers: 95K Stars (Created October 2025, surging March 2026)
+**[GitHub — obra/superpowers](https://github.com/obra/superpowers)**
+
+Jesse Vincent's agentic skills framework crossed **95,000 GitHub stars** — enforcing a structured workflow: Brainstorm → Spec → Plan → TDD → Subagent Development → Review → Finalize. Mandatory TDD, fresh subagents per task, git worktree isolation, code review gates. Works across Claude Code, Cursor, Codex, OpenCode, and Gemini CLI. MIT licensed.
+
+The growth pattern mirrors the broader signal: practitioners want **structure**, not just raw capability. A methodology that forces spec-first, test-first, review-gated development resonated because it solves the exact problems Osmani, Orosz, and Mistele have been documenting.
+
+### The /insights Feedback Loop (March 19)
+**Valentin Huang · [LinkedIn](https://www.linkedin.com/in/valentin-huang/)**
+
+Huang described a three-step meta-loop for Claude Code optimization: `/insights` → summarize → apply. The `/insights` command scans local session history (~30 days), generates an HTML report on interaction patterns, friction points, and strengths — then the user distills recommendations and applies them to CLAUDE.md and conventions.
+
+> "Claude Code gets better at YOUR codebase over time, but only if you close the loop." — **Valentin Huang**
+
+### The Compound-Engineering Plugin (March 20)
+**Theophile Cousin · [LinkedIn](https://www.linkedin.com/in/theophile-cousin/)**
+
+A plugin adding structured phases: Brainstorm → Plan → Work → Review → Compound → Repeat. The key insight: most people jump straight to Work. The compounding happens in the steps before it. Cousin described using it to stress-test reasoning between Temporal vs Prefect vs DBT before writing any code.
+
+**Why this matters:** Harness engineering is no longer a collection of blog-post tricks. It's converging into a discipline with named frameworks (WISC), popular toolkits (Superpowers), official endorsement (Anthropic's Shihipar), feedback loops (/insights), and a clear thesis (Mistele/Hodgson). The pattern matches Debois's Context Development Lifecycle (Section 5) — both are about treating agent configuration with the same rigor as code. Eledath's 8 Levels framework (Section 5) placed harness engineering at Level 6 — this week, it became the default level for serious practitioners.
+
+---
+
+## 13. Autonomous Loops Go Mainstream
+
+The Ralph Wiggum technique — Geoffrey Huntley's absurdly simple concept of a bash loop that feeds Claude Code back into itself — crossed from fringe experiment to mainstream practice this week, backed by official Anthropic features.
+
+### The Ralph Pattern
+**[ghuntley.com](https://ghuntley.com/loop/) · [GitHub](https://github.com/ghuntley/how-to-ralph-wiggum) · [The Register (Jan 2026)](https://www.theregister.com/2026/01/27/ralph_wiggum_claude_loops/) · [Anthropic Plugin](https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md)**
+
+Named after Ralph Wiggum from The Simpsons — embodying persistence despite setbacks — the technique is `while :; do cat PROMPT.md | claude-code ; done`. Each iteration sees the modified codebase from previous attempts, including git history and changed files. Self-correcting through accumulated context.
+
+Huntley ran Ralph for **three months continuously**, building a complete programming language with an LLVM compiler producing binaries for macOS, Linux, and Windows — a language that didn't exist in any LLM training data. Anthropic noticed, and the Ralph Wiggum plugin is now in [Claude Code's official plugin directory](https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md).
+
+### Jeremie Colmant: The Night Shift (March 20)
+**[LinkedIn](https://www.linkedin.com/in/jeremie-colmant/)**
+
+Colmant combined Ralph with **Cortex MCP** (20,000+ memory fragments) and **18 scheduled jobs** to create an autonomous AI engineer that found an enhancement, implemented it, and committed — while he slept:
+
+> "Every cycle: Review its previous work through git history & Cortex → Read production metrics → Open the source code → Spot the highest-impact improvement → Implement, test, commit, ready for review." — **Jeremie Colmant**
+
+Tight guardrails: small scope, one focused enhancement per cycle. Every change versioned through git, every decision reviewable. No human in the loop, but full traceability.
+
+### Matthias Georgi: Scheduled Tasks for Code Reviews (March 21)
+**[LinkedIn](https://www.linkedin.com/in/matthias-georgi/)**
+
+An engineer at Meta described using Claude Code's new **scheduled tasks** feature to automate code reviews: GLM-based agents perform constant codebase optimizations (fixing types, linter warnings), and an Opus-level model verifies the work of the "lower-IQ" agents on a schedule. Agent reviewing agent, asynchronously.
+
+### Claude Code /loop (March 2026)
+**[Changelog](https://code.claude.com/docs/en/changelog)**
+
+Anthropic shipped `/loop` — execute a prompt at regular intervals (e.g., `/loop 5m check the deploy`). A lightweight cron job inside your session. Combined with Channels (message Claude from Telegram/Discord) and Dispatch (phone-to-desktop), the trajectory is clear: agents that run continuously, supervised asynchronously from wherever you are.
+
+**Why this matters:** The shift from "agent as tool you invoke" to "agent as process that runs" is the week's most consequential paradigm change. Colmant's setup — autonomous agent + persistent memory + scheduled execution + git traceability — is what "Level 8: Autonomous Agent Teams" looks like in Eledath's framework (Section 5). The guardrails matter as much as the autonomy: small scope, one change per cycle, full git history, human review before merge. Without those, you get Osmani's comprehension debt compounding overnight. With them, you get an engineering colleague who works the night shift.
+
+---
+
+## 14. Signals & Radar
 
 | Signal | Why It Matters | Action |
 |--------|---------------|--------|
@@ -447,6 +592,56 @@ Agentic AI on free tier. Flat **$0.25/review**. Planner Agent, Developer Flow ag
 | **AI companies fund OSS grants** | Irony: tools that generate spam fund grants to fix the damage | Track whether grants address structural problems or just PR |
 | **Orosz quality warning** | AI agents increase output but degrade quality — data from Amazon, Uber | Essential counterweight to productivity hype; quality metrics urgently needed |
 | **Context as competitive moat** | Debois: "models commoditize, context compounds" | Invest in institutional context capture before it becomes competitive disadvantage |
+| **Comprehension debt** | Osmani coins the term; Anthropic study shows 17% comprehension drop with AI assistance | Measure comprehension, not just velocity; treat code understanding as an asset |
+| **Harness engineering convergence** | Multiple frameworks (WISC, Superpowers, compound-engineering) converge on same patterns | Adopt structured agent workflows; invest in skills and context management |
+| **Autonomous loops** | Ralph pattern goes official; Claude Code /loop and scheduled tasks ship | Build guardrails for unattended agents: small scope, git traceability, review gates |
+| **Claude Code Channels + Dispatch** | Asynchronous phone-to-agent workflows; OpenClaw-competitive messaging integrations | Evaluate for team workflows; monitor reliability maturation |
+| **Google Stitch "vibe design"** | Figma stock dropped ~12%; DESIGN.md export format creates new spec artifact | Track design-to-code pipeline convergence; assess Figma competitive response |
+| **Moat v0.4** | Agent sandboxing with credential injection at network layer; tamper-evident audit logs | Evaluate for production agent deployments; complement to NemoClaw's approach |
+
+---
+
+## 15. From Our Research — Cross-References
+
+Several themes in this edition intersect directly with deep-dive research published in this repository over the past two weeks. These essays provide extended analysis, empirical data, and human commentary that complement the news coverage above.
+
+### Comprehension Debt × "The Civilization That Forgot How to Code"
+
+Section §11's coverage of Osmani coining "comprehension debt" and the Anthropic study (17% lower comprehension with AI assistance) validates the central thesis of our long-form essay on vibe coding and cognitive deskilling. The essay explores the verifier's paradox — automation atrophies the skill needed to verify automated work (Bainbridge's "Ironies of Automation") — and traces the historical pattern through writing, agriculture, and metallurgy. Where §11 reports the emerging term, the essay asks: what happens to a civilization that can generate code faster than it can understand it?
+
+**→ [The Civilization That Forgot How to Code](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9986-2026-03-18-vibe-coding-essay/README.md)** — 10,000+ word essay with human-AI dialogue on deskilling, the METR study (developers 19% slower with AI but believing 20% faster), and the verifier's paradox.
+
+### Jobs Escalation × "The Great Budget Reallocation"
+
+Section §7's ServiceNow CEO warning (graduate unemployment → 30%+) and §9's revenue race ($25B OpenAI, $19B Anthropic, Cursor $50B valuation talks) map directly onto our token budget analysis. The essay models the enterprise budget shift from SaaS seats and headcount to AI token budgets, anchored by Jensen Huang's $250K-tokens-per-$500K-salary thesis and NVIDIA spending $2B on inference tokens. The hiring freezes reported in §7 (Atlassian 1,600, Block 4,000) are the leading indicators of the reallocation the essay quantifies.
+
+**→ [The Great Budget Reallocation](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9991-2026-03-20-token-budget-analysis/README.md)** — Enterprise budget modeling with interactive calculator showing SaaS→token migration scenarios. | [Token Budget Calculator](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-20-token-budget-analysis/explorer.html)
+
+### Specification Revolution × "The Gutenberg Parallel"
+
+Section §5's convergence on specification quality as the highest-leverage artifact — Osmani's AGENTS.md research, Debois's "Context Is the New Code," Garg's context anchoring — echoes our Gutenberg parallel essay's argument that software is democratizing along the same curve as writing after the printing press. The "41% of code is AI-generated" statistic appears in both. Where the news tracks the current convergence, the essay traces the 600-year arc: scribes didn't vanish, they became editors. Developers aren't disappearing — they're becoming orchestrators and specification writers.
+
+**→ [The Gutenberg Parallel](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9990-2026-03-20-software-democratization/README.md)** — Historical analysis mapping the printing press democratization curve onto software's current trajectory.
+
+### Agent Harness Revolution × Sandbox Hardening & Token Budget Analysis
+
+Section §12's emergence of harness engineering as a named discipline — WISC framework, Superpowers methodology, skills as primary abstraction — connects to two of our technical projects. The sandbox hardening research addresses the security layer that harness engineering assumes but rarely specifies: what happens when agents run autonomously with access to credentials, SSH keys, and shell history? The CLAUDE.md token budget analysis tackles the resource constraint side: how much of your context window does harness configuration consume before the agent even starts working?
+
+**→ [Claude Code Sandbox Hardening](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9993-2026-03-17-claude-code-sandbox-hardening/README.md)** — Practical security audit and hardening guide for Claude Code's sandbox (bubblewrap/Seatbelt).
+**→ [CLAUDE.md Token Budget Analysis](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9999-2026-03-14-claudemd-token-budget/README.md)** — Measuring config file token consumption and optimization opportunities. | [Token Analyzer](https://agentiapt.github.io/agentia-research/projects/9999-2026-03-14-claudemd-token-budget/explorer.html)
+
+### Autonomous Loops × Self-Improvement Theory
+
+Section §13's coverage of autonomous loops going mainstream — the Ralph Wiggum pattern, Colmant's night-shift engineer, scheduled review agents — is the practical manifestation of the theoretical work in our inference-time compute and self-improvement research. The gradient descent analogy essay asks whether iterative self-critique with fixed weights produces genuinely better outputs or just different sampling. The autonomous loop practitioners are, in effect, running that experiment in production: does `while :; do claude-code; done` actually converge on better code, or does it need external verification (Kent Beck's immutable tests, Charity Majors's production observability) to make progress?
+
+**→ [Self-Improvement as Gradient Descent](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9996-2026-03-14-self-improvement-gradient-descent/README.md)** — Theoretical investigation of whether self-refine loops approximate gradient descent at inference time.
+**→ [Inference-Time Compute](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9997-2026-03-14-inference-time-compute/README.md)** — Survey of test-time scaling research showing smaller models with more inference compute can outperform larger models.
+
+### Open Source Under Pressure × Git Secret Detection
+
+Section §8's coverage of AI slop attacks (20% of cURL submissions AI-generated), corporate acquisitions of open-source tools, and the ironic $12.5M OSS security grants provides the "why now" context for our secret detection research. When AI agents generate 41% of code and submit automated PRs at scale, the attack surface for leaked credentials expands proportionally. The secret detection project implements the defense-in-depth stack (pre-commit hooks, CI scanning, push protection) that the news section identifies as urgently needed.
+
+**→ [Git Secret Detection](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9992-2026-03-17-git-secret-detection/README.md)** — Tools, patterns, and implementation for preventing secrets and PII from leaking into git repositories.
 
 ---
 
@@ -470,6 +665,14 @@ Agentic AI on free tier. Flat **$0.25/review**. Planner Agent, Developer Flow ag
 
 > "There are more and more signs that AI agents help increase output but result in worse quality." — **Gergely Orosz** ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us#:~:text=worse%20quality))
 
+> "As AI volume scales, the engineer who maintains a coherent, system-level mental model becomes the scarcest, most valuable resource on the team." — **Addy Osmani** ([addyosmani.com](https://addyosmani.com/blog/comprehension-debt/#:~:text=scarcest%2C%20most%20valuable%20resource))
+
+> "It's not a model problem. It's a configuration problem." — **Kyle Mistele** ([HumanLayer](https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents#:~:text=not%20a%20model%20problem))
+
+> "Claude Code gets better at YOUR codebase over time, but only if you close the loop." — **Valentin Huang**
+
+> "The AI engineer is now on the night shift. And honestly? What a shift." — **Jeremie Colmant**
+
 ---
 
 ## Voice Tracker
@@ -480,12 +683,11 @@ Agentic AI on free tier. Flat **$0.25/review**. Planner Agent, Developer Flow ag
 | Martin Fowler | Thoughtworks | Calibrated skeptic | **NEW** — Middle loop, supervisory engineering, code review defense |
 | Charity Majors | Honeycomb | Practitioner | "Production Is Where the Rigor Goes" — Deer Valley critical response |
 | DHH | 37signals | Convert → Enabler | ONCE pivot — building open-source vibe coding infrastructure |
-| Addy Osmani | Google Cloud AI | Framework builder | AGENTS.md research — spec quality data, 20%+ performance hit |
+| Addy Osmani | Google Cloud AI | Framework builder | AGENTS.md research + **Comprehension Debt** — coined the term, Anthropic 17% study |
 | Patrick Debois | DevOps founder | AI-native bridge | "Context Is the New Code" — Context Development Lifecycle |
 | Kent Beck | Independent | Pragmatic optimist | TDD as immutable annotations (via Allstacks, Thoughtworks) |
 | Gergely Orosz | Pragmatic Engineer | Measured analyst | Quality warning — agents increase output, degrade quality |
 | Kelsey Hightower | Retired/Google | Engineering sanity | "MCP is a gift to the proxy community" ([HAProxyConf 2025](https://www.haproxyconf.com/presentations/the-fundamentals/)) |
-| Ethan Mollick | Wharton | Academic researcher | "Shape of the Thing" (Mar 12, borderline) |
 | Mitchell Hashimoto | Vercel board | Architect-first | Joined Vercel board (Mar 18) |
 | Grady Booch | Independent | Calibrated skeptic | No new content this week |
 | Dave Farley | CD Training | Discipline advocate | No new content this week |
@@ -494,10 +696,19 @@ Agentic AI on free tier. Flat **$0.25/review**. Planner Agent, Developer Flow ag
 | ThePrimeagen | Independent | Principled minimalist | PrimeTime shorts (sycophancy, Dario) |
 | Mike Mason | Independent | Data realist | No new content this week |
 | Max Woolf | Independent | Pragmatic skeptic | No new content this week |
+| Kyle Mistele | HumanLayer | Practitioner | **NEW** — "Skill Issue: Harness Engineering" — named the discipline |
+| Cole Medin | Dynamous AI | Practitioner | **NEW** — WISC framework for context management (2,000+ hrs Claude Code) |
+| Pete Hodgson | Enterprise consultant | Practitioner | **NEW** — Amplified harness engineering; "#1 thing teams miss: feedback loops" |
+| Thariq Shihipar | Anthropic (Claude Code) | Insider | **NEW** — How Anthropic uses skills internally |
+| Jeremie Colmant | eaQbe | Practitioner | **NEW** — Ralph + Cortex: autonomous overnight agent with full traceability |
+| Jesse Vincent | obra/Superpowers | Framework builder | **NEW** — Superpowers hits 95K stars; structured agent methodology |
+| Geoffrey Huntley | Independent | Provocateur | Ralph Wiggum technique creator — now official Anthropic plugin |
+| Valentin Huang | Harvestr.io | Practitioner | **NEW** — /insights feedback loop for continuous Claude Code improvement |
+| Ethan Mollick | Wharton | Academic researcher | "Shape of the Thing" (Mar 12, borderline) + Dispatch vs OpenClaw |
 | Daniel Stenberg | cURL | Open source defender | "100 curl graphs" (Mar 15) |
 
 ## Methodology
 
-Curated from a network of primary sources: simonwillison.net, martinfowler.com, Pragmatic Engineer, One Useful Thing, Honeycomb blog, world.hey.com/dhh, addyosmani.com, jedi.be, bassimeledath.com, CNBC, NVIDIA Blog, Tom's Hardware, Fortune, Bloomberg, The Information, TechCrunch, MacRumors, 9to5Mac, AppleInsider, VentureBeat, InfoQ, GitHub Blog, OpenAI Blog, Anthropic, Cursor, GitLab, Allstacks, Thoughtworks, QCon London, The Register, SiliconANGLE, Quartz, and others.
+Curated from a network of primary sources: simonwillison.net, martinfowler.com, Pragmatic Engineer, One Useful Thing, Honeycomb blog, world.hey.com/dhh, addyosmani.com, jedi.be, bassimeledath.com, humanlayer.dev, ghuntley.com, CNBC, NVIDIA Blog, Tom's Hardware, Fortune, Bloomberg, The Information, TechCrunch, MacRumors, 9to5Mac, AppleInsider, VentureBeat, InfoQ, GitHub Blog, OpenAI Blog, Anthropic, Cursor, GitLab, Allstacks, Thoughtworks, QCon London, The Register, SiliconANGLE, Quartz, LinkedIn practitioner posts (cross-referenced against primary sources), and others.
 
 Stories filtered through tracked themes and mapped to relevance for AI-powered software engineering.
