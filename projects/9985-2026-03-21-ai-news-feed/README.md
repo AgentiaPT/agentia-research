@@ -601,6 +601,50 @@ Anthropic shipped `/loop` — execute a prompt at regular intervals (e.g., `/loo
 
 ---
 
+## 15. From Our Research — Cross-References
+
+Several themes in this edition intersect directly with deep-dive research published in this repository over the past two weeks. These essays provide extended analysis, empirical data, and human commentary that complement the news coverage above.
+
+### Comprehension Debt × "The Civilization That Forgot How to Code"
+
+Section §11's coverage of Osmani coining "comprehension debt" and the Anthropic study (17% lower comprehension with AI assistance) validates the central thesis of our long-form essay on vibe coding and cognitive deskilling. The essay explores the verifier's paradox — automation atrophies the skill needed to verify automated work (Bainbridge's "Ironies of Automation") — and traces the historical pattern through writing, agriculture, and metallurgy. Where §11 reports the emerging term, the essay asks: what happens to a civilization that can generate code faster than it can understand it?
+
+**→ [The Civilization That Forgot How to Code](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9986-2026-03-18-vibe-coding-essay/README.md)** — 10,000+ word essay with human-AI dialogue on deskilling, the METR study (developers 19% slower with AI but believing 20% faster), and the verifier's paradox.
+
+### Jobs Escalation × "The Great Budget Reallocation"
+
+Section §7's ServiceNow CEO warning (graduate unemployment → 30%+) and §9's revenue race ($25B OpenAI, $19B Anthropic, Cursor $50B valuation talks) map directly onto our token budget analysis. The essay models the enterprise budget shift from SaaS seats and headcount to AI token budgets, anchored by Jensen Huang's $250K-tokens-per-$500K-salary thesis and NVIDIA spending $2B on inference tokens. The hiring freezes reported in §7 (Atlassian 1,600, Block 4,000) are the leading indicators of the reallocation the essay quantifies.
+
+**→ [The Great Budget Reallocation](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9991-2026-03-20-token-budget-analysis/README.md)** — Enterprise budget modeling with interactive calculator showing SaaS→token migration scenarios. | [Token Budget Calculator](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-20-token-budget-analysis/explorer.html)
+
+### Specification Revolution × "The Gutenberg Parallel"
+
+Section §5's convergence on specification quality as the highest-leverage artifact — Osmani's AGENTS.md research, Debois's "Context Is the New Code," Garg's context anchoring — echoes our Gutenberg parallel essay's argument that software is democratizing along the same curve as writing after the printing press. The "41% of code is AI-generated" statistic appears in both. Where the news tracks the current convergence, the essay traces the 600-year arc: scribes didn't vanish, they became editors. Developers aren't disappearing — they're becoming orchestrators and specification writers.
+
+**→ [The Gutenberg Parallel](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9990-2026-03-20-software-democratization/README.md)** — Historical analysis mapping the printing press democratization curve onto software's current trajectory.
+
+### Agent Harness Revolution × Sandbox Hardening & Token Budget Analysis
+
+Section §12's emergence of harness engineering as a named discipline — WISC framework, Superpowers methodology, skills as primary abstraction — connects to two of our technical projects. The sandbox hardening research addresses the security layer that harness engineering assumes but rarely specifies: what happens when agents run autonomously with access to credentials, SSH keys, and shell history? The CLAUDE.md token budget analysis tackles the resource constraint side: how much of your context window does harness configuration consume before the agent even starts working?
+
+**→ [Claude Code Sandbox Hardening](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9993-2026-03-17-claude-code-sandbox-hardening/README.md)** — Practical security audit and hardening guide for Claude Code's sandbox (bubblewrap/Seatbelt).
+**→ [CLAUDE.md Token Budget Analysis](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9999-2026-03-14-claudemd-token-budget/README.md)** — Measuring config file token consumption and optimization opportunities. | [Token Analyzer](https://agentiapt.github.io/agentia-research/projects/9999-2026-03-14-claudemd-token-budget/explorer.html)
+
+### Autonomous Loops × Self-Improvement Theory
+
+Section §13's coverage of autonomous loops going mainstream — the Ralph Wiggum pattern, Colmant's night-shift engineer, scheduled review agents — is the practical manifestation of the theoretical work in our inference-time compute and self-improvement research. The gradient descent analogy essay asks whether iterative self-critique with fixed weights produces genuinely better outputs or just different sampling. The autonomous loop practitioners are, in effect, running that experiment in production: does `while :; do claude-code; done` actually converge on better code, or does it need external verification (Kent Beck's immutable tests, Charity Majors's production observability) to make progress?
+
+**→ [Self-Improvement as Gradient Descent](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9996-2026-03-14-self-improvement-gradient-descent/README.md)** — Theoretical investigation of whether self-refine loops approximate gradient descent at inference time.
+**→ [Inference-Time Compute](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9997-2026-03-14-inference-time-compute/README.md)** — Survey of test-time scaling research showing smaller models with more inference compute can outperform larger models.
+
+### Open Source Under Pressure × Git Secret Detection
+
+Section §8's coverage of AI slop attacks (20% of cURL submissions AI-generated), corporate acquisitions of open-source tools, and the ironic $12.5M OSS security grants provides the "why now" context for our secret detection research. When AI agents generate 41% of code and submit automated PRs at scale, the attack surface for leaked credentials expands proportionally. The secret detection project implements the defense-in-depth stack (pre-commit hooks, CI scanning, push protection) that the news section identifies as urgently needed.
+
+**→ [Git Secret Detection](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9992-2026-03-17-git-secret-detection/README.md)** — Tools, patterns, and implementation for preventing secrets and PII from leaking into git repositories.
+
+---
+
 ## Key Quotes of the Week
 
 > "OpenClaw is the operating system for personal AI." — **Jensen Huang**, NVIDIA GTC ([NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-nemoclaw#:~:text=operating%20system%20for%20personal%20AI))
