@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T11:26:20.844067+00:00",
+  "generated": "2026-03-23T12:11:40.457617+00:00",
   "projects": [
     {
       "id": "9985-2026-03-21-ai-news-feed",
@@ -19,14 +19,24 @@
       "description": "A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engineering. Organized around recurring themes rather than raw chronology. Continues from [the March 8–13 edition](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md).",
       "files": [
         "README.md",
+        "explorer.html",
         "sources.md",
         "task.md"
       ],
-      "htmlFiles": [],
-      "explorers": [],
+      "htmlFiles": [
+        "explorer.html"
+      ],
+      "explorers": [
+        {
+          "file": "explorer.html",
+          "title": "AI × Software Engineering Dashboard",
+          "description": "Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes",
+          "screenshot": "explorer-screenshot.png"
+        }
+      ],
       "path": "projects/9985-2026-03-21-ai-news-feed",
-      "wordCount": 5704,
-      "readingTime": 24
+      "wordCount": 8025,
+      "readingTime": 34
     },
     {
       "id": "9986-2026-03-18-vibe-coding-essay",
