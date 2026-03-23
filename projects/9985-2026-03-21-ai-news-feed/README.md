@@ -467,7 +467,7 @@ Unlike technical debt, which announces itself through friction — slow builds, 
 
 ### The Anthropic Study
 
-Osmani cites a recent Anthropic study ("How AI Impacts Skill Formation") that gave the concept empirical teeth. In a randomized controlled trial with **52 software engineers**, participants using AI assistance completed tasks in roughly the same time as the control group, but scored **17% lower** on a follow-up comprehension quiz (50% vs. 67%). The biggest declines were in **debugging** — the skill most dependent on understanding *why* code works, not just *that* it works.
+Osmani cites a recent Anthropic study (["How AI Impacts Skill Formation"](https://arxiv.org/abs/2601.20245)) that gave the concept empirical teeth. In a randomized controlled trial with **52 software engineers**, participants using AI assistance completed tasks in roughly the same time as the control group, but scored **17% lower** on a follow-up comprehension quiz (50% vs. 67%). The biggest declines were in **debugging** — the skill most dependent on understanding *why* code works, not just *that* it works. Developers using AI for passive delegation ("just make it work") scored **below 40%**; those using it for conceptual inquiry scored **above 65%**.
 
 ### The Spec Problem
 
@@ -475,7 +475,9 @@ Osmani pushes back on the idea that better specs solve everything:
 
 > "There is often no correct spec. Requirements emerge through building. Edge cases reveal themselves through use." — [addyosmani.com](https://addyosmani.com/blog/comprehension-debt/#:~:text=there%20is%20often%20no%20correct%20spec)
 
-AI doesn't change this — it adds a new layer of implicit decisions made without human deliberation. Translating a natural language spec into working code involves an enormous number of implicit decisions — edge cases, error handling, performance tradeoffs. AI makes those decisions without anyone noticing.
+AI doesn't change this — it adds a new layer of implicit decisions made without human deliberation. And it inverts the review dynamic:
+
+> "When code was expensive to produce, senior engineers could review faster than junior engineers could write. AI flips this: a junior engineer can now generate code faster than a senior engineer can critically audit it." — [addyosmani.com](https://addyosmani.com/blog/comprehension-debt/#:~:text=When%20code%20was%20expensive%20to%20produce%2C%20senior%20engineers%20could%20review%20faster%20than%20junior%20engineers%20could%20write)
 
 ### The Scarcest Resource
 
