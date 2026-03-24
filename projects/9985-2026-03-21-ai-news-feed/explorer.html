@@ -783,8 +783,8 @@
 <div class="footer">
   <p>
     <a href="https://github.com/AgentiaPT/agentia-research">agentIA Research</a> — AI × Software Engineering Explorer
-    · <a href="README.md">Overview</a>
-    · <a href="README.md">Edition: Mar 14–21, 2026</a>
+    · <a href="https://github.com/AgentiaPT/agentia-research/blob/main/projects/9985-2026-03-21-ai-news-feed/README.md">Edition 2: Mar 14–21</a>
+    · <a href="https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md">Edition 1: Mar 8–13</a>
   </p>
 </div>
 
@@ -850,7 +850,8 @@ const editions = [
     body: 'Last week proved the old way breaks. This week, the new scaffolding is being erected — from silicon to process to org structure. OpenAI acquires Astral. Apple gatekeeps vibe coding. NVIDIA ships agentic silicon. Fowler, Majors, and Beck debate where rigor goes. Osmani coins Comprehension Debt. Harness engineering converges into a named discipline. Autonomous loops go mainstream with Ralph, /loop, and scheduled tasks.',
     tags: ['agentic', 'quality', 'adoption', 'roles'],
     voices: 26,
-    sources: 60
+    sources: 60,
+    link: 'https://github.com/AgentiaPT/agentia-research/blob/main/projects/9985-2026-03-21-ai-news-feed/README.md'
   },
   {
     date: 'March 8–13, 2026',
@@ -858,7 +859,8 @@ const editions = [
     body: 'Three storylines collided: Amazon\'s vibe-coding outages proved velocity-without-discipline fails catastrophically. Anthropic launched Code Review, sued the Pentagon, landed Time\'s cover, and partnered with Microsoft — all in 72 hours. The NYT Magazine published the most comprehensive piece yet on AI\'s impact on programming, interviewing 70+ developers.',
     tags: ['quality', 'adoption', 'agentic', 'safety'],
     voices: 17,
-    sources: 30
+    sources: 30,
+    link: 'https://github.com/AgentiaPT/agentia-research/blob/main/projects/9995-2026-03-13-ai-news-feed/README.md'
   }
 ];
 
@@ -965,9 +967,10 @@ function renderTimeline() {
       <div class="te-date">${e.date}</div>
       <div class="te-title">${e.title}</div>
       <div class="te-body">${e.body}</div>
-      <div style="display:flex;gap:16px;margin-top:8px;font-size:0.75rem;color:var(--muted)">
+      <div style="display:flex;gap:16px;align-items:center;margin-top:8px;font-size:0.75rem;color:var(--muted)">
         <span>${e.voices} voices</span>
         <span>${e.sources}+ sources</span>
+        <a href="${e.link}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;margin-left:auto;font-weight:500">Read full edition &rarr;</a>
       </div>
       <div class="te-tags">${e.tags.map(t => {
         const colors = { agentic: '', quality: 'red', adoption: 'orange', roles: 'purple', security: 'cyan', safety: 'yellow' };
