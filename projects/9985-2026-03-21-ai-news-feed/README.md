@@ -487,6 +487,8 @@ Tyler Folkman quantified the velocity mismatch: "AI generates 5–7x faster than
 
 **Why this matters:** Comprehension debt names what Gergely Orosz was warning about (Section 9) — agents increase output but degrade quality. The Anthropic study provides the first controlled evidence. And Osmani's framing as *debt* implies it compounds: the longer you don't pay it, the more expensive the eventual reckoning. This is the intellectual counterweight to every "10x productivity" claim — the cost that doesn't show up in velocity metrics.
 
+> 🧑‍💻 **RQuintino:** Tech debt was always a nuanced trade-off for me, not an all-or-nothing zero-debt obsession. But comprehension debt is a much weaker argument. The payoff of freeing yourself from needing to comprehend is huge — I don't understand, nor could I possibly understand, 95% of Vela's code. Vela is today a 12K JSX application that I use for all my presentation sessions: PDF export (vectorial), SI integration, lots of features, all vibe-coded on Claude Artifacts starting February 14. It evolved every time I needed to create a new deck for customer teams or my classes. Never — and I mean never — was there any kind of lack of agility, until today. In my whole career it was the most tech-debt-free experience ever, at least in outcomes. Except for security risks or costly failures, human comprehension won't do much for agility the way it did before.
+
 ---
 
 ## 12. The Agent Harness Revolution — Skills, Context, and Structured Loops
