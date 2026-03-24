@@ -1,7 +1,7 @@
 ---
 title: "AI × Software Engineering — March 14–21, 2026"
 date: 2026-03-21
-status: draft
+status: complete
 tags: [ai, news, weekly, voices, industry, agentic-sdlc, vibe-coding]
 explorers:
   - file: explorer.html
