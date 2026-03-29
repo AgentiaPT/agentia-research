@@ -50,8 +50,10 @@ Create a new weekly edition of AI × Software Engineering news feed. Only news f
 
 - [x] Created project folder and task.md
 - [x] Lisa loop research (5 min) — 6 parallel agents covering all leads, voices, and industry news
-- [x] Write README.md with full news feed (12 sections, ~7,000 words)
+- [x] Write README.md with full news feed (12 sections, ~7,500 words)
 - [x] Build interactive explorer.html dashboard
 - [x] Take screenshot and update index
-- [ ] Fact-check pass (pending user review)
-- [ ] Human commentary (pending user input)
+- [x] Fact-check pass (3 rounds — quotes verified against source, all claims checked)
+- [x] Added hackerbot-claw AI agent backstory to supply chain section
+- [x] Added Pretext as Karpathy Loop real-world example
+- [ ] Human commentary (user will add after review)
