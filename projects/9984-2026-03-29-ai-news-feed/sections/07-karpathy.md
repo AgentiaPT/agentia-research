@@ -43,4 +43,12 @@ Karpathy's stated next step:
 
 autoresearch works because ML training has a clean scalar metric. Most software engineering doesn't. The SWE-CI paper (Section 6) shows that agents struggle precisely where metrics are ambiguous — maintaining complex codebases where "correct" isn't a single number. Karpathy's loop is a proof of concept for domains with clear optimization targets. Extending it to general software development remains an open problem.
 
+### In Practice: Pretext and the Convergence Loop
+
+A possible real-world example emerged this week. **Cheng Lou** (Midjourney engineer, former React/ReasonML contributor) released **[Pretext](https://github.com/chenglou/pretext)** — a 15KB pure TypeScript library that measures and lays out text without touching the DOM, achieving **300–600x speedups** over traditional browser reflows. The repo includes `CLAUDE.md` and `AGENTS.md` files, and **Addy Osmani** [described the development process](https://www.linkedin.com/in/AIO-addyosmani/) as built by "showing Claude Code and Codex the browser's ground truth and having them measure and iterate until the algorithm converged."
+
+If accurate, this is the Karpathy Loop applied to systems engineering: the browser's `measureText()` API provides the scalar ground truth, AI agents propose algorithmic improvements, and mismatches against real rendering get rejected — iterate for weeks until convergence. The human defines the metric (pixel-perfect text measurement), the agents explore the search space (algorithmic approaches to predicting layout without DOM).
+
+*Note: Cheng Lou has not publicly detailed the development methodology. The AI-assisted framing comes from Osmani's description and the presence of agent configuration files in the repo. The library's quality is independently verifiable — the [demos](https://chenglou.me/pretext/) speak for themselves.*
+
 **Why this matters:** Karpathy isn't just proposing a tool — he's proposing a **workflow paradigm**. The human sets the objective function, the agents explore the search space. This inverts the traditional relationship: instead of humans writing code and AI assisting, humans define metrics and AI does all the work. For domains where that inversion is possible, the productivity gap between "human in the loop" and "human sets the loop" may be orders of magnitude.
