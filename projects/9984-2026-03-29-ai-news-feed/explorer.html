@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI × Software Engineering Explorer — March 22–29, 2026</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2d3a;
+    --text: #e0e0e0;
+    --muted: #8890a0;
+    --accent: #6c8cff;
+    --green: #4caf50;
+    --red: #ef5350;
+    --orange: #ff9800;
+    --yellow: #ffd54f;
+    --purple: #b388ff;
+    --cyan: #4dd0e1;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg); color: var(--text);
+    min-height: 100vh; line-height: 1.6;
+  }
+  .header {
+    text-align: center; padding: 48px 24px 32px;
+    max-width: 900px; margin: 0 auto;
+  }
+  .header h1 {
+    font-size: 2rem; font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .header .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+  .tag {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 0.75rem; font-weight: 500;
+    background: rgba(108,140,255,0.15); color: var(--accent);
+  }
+  .tag.red { background: rgba(239,83,80,0.15); color: var(--red); }
+  .tag.orange { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .tag.green { background: rgba(76,175,80,0.15); color: var(--green); }
+  .tag.purple { background: rgba(179,136,255,0.15); color: var(--purple); }
+  .tag.cyan { background: rgba(77,208,225,0.15); color: var(--cyan); }
+  .layout {
+    display: grid; grid-template-columns: 220px 1fr; gap: 24px;
+    max-width: 1400px; margin: 0 auto; padding: 0 24px 48px;
+  }
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+  }
+  .sidebar {
+    position: sticky; top: 24px; align-self: start;
+    max-height: calc(100vh - 48px); overflow-y: auto;
+    scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+  }
+  .nav-section {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  }
+  .nav-section h3 {
+    font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--muted); margin-bottom: 12px;
+  }
+  .nav-link {
+    display: block; padding: 6px 10px; color: var(--text);
+    text-decoration: none; font-size: 0.8rem; border-radius: 6px;
+    cursor: pointer; transition: background 0.15s;
+  }
+  .nav-link:hover { background: var(--border); }
+  .nav-link.active { background: rgba(108,140,255,0.15); color: var(--accent); }
+  .main { overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px; margin-bottom: 20px;
+  }
+  .card h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 16px; }
+  .card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+  }
+  .stat-box {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px; text-align: center;
+  }
+  .stat-box .value { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+  .stat-box .label { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+  .stat-box .value.red { color: var(--red); }
+  .stat-box .value.orange { color: var(--orange); }
+  .stat-box .value.green { color: var(--green); }
+
+  /* Signal radar */
+  .signal-list { list-style: none; }
+  .signal-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px; border-bottom: 1px solid var(--border);
+  }
+  .signal-item:last-child { border-bottom: none; }
+  .signal-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+  .signal-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+  .signal-desc { font-size: 0.8rem; color: var(--muted); }
+
+  /* Voice map */
+  .voice-map {
+    position: relative; width: 100%; height: 480px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 8px; overflow: hidden;
+  }
+  .axis-label {
+    position: absolute; font-size: 0.7rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .axis-label.top { top: 8px; left: 50%; transform: translateX(-50%); }
+  .axis-label.bottom { bottom: 8px; left: 50%; transform: translateX(-50%); }
+  .axis-label.left { left: 8px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+  .axis-label.right { right: 8px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+  .axis-line-h, .axis-line-v { position: absolute; background: var(--border); }
+  .axis-line-h { width: 100%; height: 1px; top: 50%; left: 0; opacity: 0.4; }
+  .axis-line-v { height: 100%; width: 1px; left: 50%; top: 0; opacity: 0.4; }
+  .voice-dot {
+    position: absolute; width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem; font-weight: 600; cursor: pointer;
+    transition: all 0.2s; transform: translate(-50%, -50%);
+    border: 2px solid transparent;
+  }
+  .voice-dot:hover {
+    transform: translate(-50%, -50%) scale(1.3); z-index: 10;
+    border-color: white;
+  }
+  .voice-dot .voice-tooltip {
+    display: none; position: absolute; bottom: calc(100% + 8px);
+    left: 50%; transform: translateX(-50%);
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 14px; white-space: nowrap;
+    font-size: 0.78rem; z-index: 20; min-width: 180px; text-align: left;
+  }
+  .voice-dot:hover .voice-tooltip { display: block; }
+  .voice-tooltip .vt-name { font-weight: 600; color: var(--text); }
+  .voice-tooltip .vt-topic { color: var(--muted); font-size: 0.72rem; margin-top: 2px; }
+
+  /* Quotes */
+  .quote-card {
+    background: var(--bg); border-left: 3px solid var(--accent);
+    padding: 16px 20px; margin-bottom: 12px; border-radius: 0 8px 8px 0;
+  }
+  .quote-text { font-size: 0.9rem; font-style: italic; color: var(--text); margin-bottom: 8px; }
+  .quote-author { font-size: 0.8rem; color: var(--accent); font-weight: 500; }
+
+  /* Theme bars */
+  .theme-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+  }
+  .theme-bar:last-child { border-bottom: none; }
+  .theme-name { font-size: 0.85rem; min-width: 160px; }
+  .theme-fill {
+    height: 20px; border-radius: 4px; transition: width 0.5s ease;
+  }
+  .theme-count { font-size: 0.75rem; color: var(--muted); min-width: 30px; }
+
+  /* Voice list */
+  .voice-row {
+    display: grid; grid-template-columns: 28px 1fr 2fr auto;
+    gap: 12px; align-items: center; padding: 10px 0;
+    border-bottom: 1px solid var(--border); font-size: 0.85rem;
+  }
+  .voice-row:last-child { border-bottom: none; }
+  .voice-status { font-size: 1rem; text-align: center; }
+  .voice-name { font-weight: 600; }
+  .voice-topic { color: var(--muted); font-size: 0.8rem; }
+  @media (max-width: 600px) {
+    .voice-row { grid-template-columns: 28px 1fr; }
+    .voice-topic, .voice-row > :last-child { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>AI × Software Engineering</h1>
+  <div class="subtitle">Weekly Explorer — March 22–29, 2026</div>
+  <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;">
+    <span class="tag red">supply-chain</span>
+    <span class="tag orange">security</span>
+    <span class="tag">agentic-sdlc</span>
+    <span class="tag purple">vibe-coding</span>
+    <span class="tag cyan">voices</span>
+    <span class="tag green">research</span>
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <nav class="nav-section">
+      <h3>Sections</h3>
+      <a class="nav-link" onclick="scrollToSection('stats')">Overview</a>
+      <a class="nav-link" onclick="scrollToSection('signals')">Signal Radar</a>
+      <a class="nav-link" onclick="scrollToSection('themes')">Theme Coverage</a>
+      <a class="nav-link" onclick="scrollToSection('voicemap')">Voice Position Map</a>
+      <a class="nav-link" onclick="scrollToSection('quotes')">Key Quotes</a>
+      <a class="nav-link" onclick="scrollToSection('voicelist')">Voice Tracker</a>
+    </nav>
+    <div class="nav-section">
+      <h3>This Week</h3>
+      <p style="font-size:0.78rem;color:var(--muted);">The Reckoning — speed without verification breaks everything. Supply chain attacks chain through security tools, frontier models leak via CMS defaults, and 75% of agents break code they're meant to maintain.</p>
+    </div>
+  </aside>
+
+  <div class="main">
+
+    <!-- Stats -->
+    <div id="stats" class="stats-grid">
+      <div class="stat-box"><div class="value red">500K</div><div class="label">Credentials Stolen (LiteLLM)</div></div>
+      <div class="stat-box"><div class="value orange">3,000</div><div class="label">Anthropic Docs Leaked</div></div>
+      <div class="stat-box"><div class="value">93%</div><div class="label">Permission Prompts Approved</div></div>
+      <div class="stat-box"><div class="value green">700</div><div class="label">Karpathy Experiments</div></div>
+      <div class="stat-box"><div class="value red">75%</div><div class="label">Agents Break Working Code</div></div>
+      <div class="stat-box"><div class="value">172</div><div class="label">Downvotes on Copilot Policy</div></div>
+      <div class="stat-box"><div class="value orange">59,121</div><div class="label">Tech Layoffs YTD</div></div>
+      <div class="stat-box"><div class="value green">7,851%</div><div class="label">AI Agent Traffic Growth</div></div>
+    </div>
+
+    <!-- Signal Radar -->
+    <div id="signals" class="card">
+      <h2>Signal Radar</h2>
+      <ul class="signal-list">
+        <li class="signal-item">
+          <span class="signal-icon">🔴</span>
+          <div>
+            <div class="signal-title">Supply chain attacks chain through security tools</div>
+            <div class="signal-desc">TeamPCP weaponized Trivy (a security scanner) to backdoor LiteLLM — 500K credentials stolen. The tools meant to protect became the attack vector.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🔴</span>
+          <div>
+            <div class="signal-title">Frontier model details leaked via CMS misconfiguration</div>
+            <div class="signal-desc">Anthropic's CMS default exposed ~3,000 internal documents including Claude Mythos — "step change" in capabilities, unprecedented cyber capabilities.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🟠</span>
+          <div>
+            <div class="signal-title">75% agent regression rate in long-term maintenance</div>
+            <div class="signal-desc">SWE-CI paper: agents that pass all tests still break codebases over time. Only Claude Opus exceeds 50% zero-regression rate.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🟠</span>
+          <div>
+            <div class="signal-title">Platform data defaults eroding developer trust</div>
+            <div class="signal-desc">GitHub opted all Copilot users into AI training data collection by default. 172 downvotes, near-universal community backlash.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🟠</span>
+          <div>
+            <div class="signal-title">Sora's $15M/day cost collapse</div>
+            <div class="signal-desc">OpenAI shut down Sora after six months — $15M/day inference costs against $2.1M total lifetime revenue. Disney drops $1B partnership.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🟢</span>
+          <div>
+            <div class="signal-title">AI pentesting for vibe-coded apps</div>
+            <div class="signal-desc">Lovable + Aikido: automated agent-based security testing integrated into the build flow. $100/test.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🟢</span>
+          <div>
+            <div class="signal-title">Reasoning-blind classifiers for agent safety</div>
+            <div class="signal-desc">Claude Code Auto Mode uses a classifier that can't see the agent's reasoning — preventing self-justification of dangerous actions.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🟢</span>
+          <div>
+            <div class="signal-title">Autonomous research loops entering production</div>
+            <div class="signal-desc">Karpathy autoresearch: 700 experiments, 11% speedup. Shopify CEO: 19% gains. 35 agents ran 333 experiments unsupervised.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🟢</span>
+          <div>
+            <div class="signal-title">Human pair programming → agent pair programming</div>
+            <div class="signal-desc">JetBrains sunsets Code With Me, replaces with ACP agent integration. Product strategy now explicitly agent-first.</div>
+          </div>
+        </li>
+        <li class="signal-item">
+          <span class="signal-icon">🔵</span>
+          <div>
+            <div class="signal-title">Anthropic IPO (October 2026)</div>
+            <div class="signal-desc">Bloomberg reports Anthropic considering an IPO as soon as October 2026. Pentagon appeal in Ninth Circuit pending.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Theme Coverage -->
+    <div id="themes" class="card">
+      <h2>Theme Coverage</h2>
+      <div class="theme-bar">
+        <span class="theme-name">Supply Chain Security</span>
+        <div class="theme-fill" style="width:90%;background:var(--red);"></div>
+        <span class="theme-count">3</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">Agentic SDLC</span>
+        <div class="theme-fill" style="width:85%;background:var(--accent);"></div>
+        <span class="theme-count">3</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">Model Capabilities</span>
+        <div class="theme-fill" style="width:75%;background:var(--purple);"></div>
+        <span class="theme-count">2</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">Vibe Coding</span>
+        <div class="theme-fill" style="width:65%;background:var(--orange);"></div>
+        <span class="theme-count">2</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">Code Quality</span>
+        <div class="theme-fill" style="width:60%;background:var(--yellow);"></div>
+        <span class="theme-count">2</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">Developer Trust</span>
+        <div class="theme-fill" style="width:55%;background:var(--cyan);"></div>
+        <span class="theme-count">2</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">AI Research</span>
+        <div class="theme-fill" style="width:50%;background:var(--green);"></div>
+        <span class="theme-count">1</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">Jobs & Economy</span>
+        <div class="theme-fill" style="width:45%;background:var(--red);"></div>
+        <span class="theme-count">1</span>
+      </div>
+      <div class="theme-bar">
+        <span class="theme-name">AI Policy & Law</span>
+        <div class="theme-fill" style="width:40%;background:var(--muted);"></div>
+        <span class="theme-count">1</span>
+      </div>
+    </div>
+
+    <!-- Voice Position Map -->
+    <div id="voicemap" class="card">
+      <h2>Voice Position Map</h2>
+      <p>Horizontal: Practitioner ← → Theorist | Vertical: Cautious ↑ Accelerationist ↓</p>
+      <div class="voice-map">
+        <div class="axis-line-h"></div>
+        <div class="axis-line-v"></div>
+        <span class="axis-label top">Cautious</span>
+        <span class="axis-label bottom">Accelerationist</span>
+        <span class="axis-label left">Practitioner</span>
+        <span class="axis-label right">Theorist</span>
+
+        <!-- Active voices this week -->
+        <div class="voice-dot" style="left:22%;top:38%;background:rgba(76,175,80,0.3);color:var(--green);">SW
+          <div class="voice-tooltip"><div class="vt-name">Simon Willison</div><div class="vt-topic">Supply chain cooldown, LiteLLM response</div></div>
+        </div>
+        <div class="voice-dot" style="left:32%;top:42%;background:rgba(108,140,255,0.3);color:var(--accent);">AO
+          <div class="voice-tooltip"><div class="vt-name">Addy Osmani</div><div class="vt-topic">Code Agent Orchestra, "not generation but coordination"</div></div>
+        </div>
+        <div class="voice-dot" style="left:65%;top:32%;background:rgba(179,136,255,0.3);color:var(--purple);">MF
+          <div class="voice-tooltip"><div class="vt-name">Martin Fowler</div><div class="vt-topic">"Both booster and doomer", ADRs</div></div>
+        </div>
+        <div class="voice-dot" style="left:45%;top:78%;background:rgba(255,152,0,0.3);color:var(--orange);">AK
+          <div class="voice-tooltip"><div class="vt-name">Andrej Karpathy</div><div class="vt-topic">"Humans are the bottleneck", autoresearch</div></div>
+        </div>
+        <div class="voice-dot" style="left:55%;top:35%;background:rgba(255,213,79,0.3);color:var(--yellow);">KB
+          <div class="voice-tooltip"><div class="vt-name">Kent Beck</div><div class="vt-topic">"Nobody Knows" — Still Burning series</div></div>
+        </div>
+        <div class="voice-dot" style="left:30%;top:55%;background:rgba(77,208,225,0.3);color:var(--cyan);">KH
+          <div class="voice-tooltip"><div class="vt-name">Kelsey Hightower</div><div class="vt-topic">KubeCon EU Amsterdam</div></div>
+        </div>
+        <div class="voice-dot" style="left:15%;top:45%;background:rgba(239,83,80,0.3);color:var(--red);">DS
+          <div class="voice-tooltip"><div class="vt-name">Daniel Stenberg</div><div class="vt-topic">NTLM beast, curl security</div></div>
+        </div>
+        <div class="voice-dot" style="left:28%;top:60%;background:rgba(179,136,255,0.3);color:var(--purple);">MH
+          <div class="voice-tooltip"><div class="vt-name">Mitchell Hashimoto</div><div class="vt-topic">Ghostty AI bug fix, AI PR policy</div></div>
+        </div>
+
+        <!-- Inactive but tracked -->
+        <div class="voice-dot" style="left:40%;top:72%;background:rgba(136,144,160,0.2);color:var(--muted);">SY
+          <div class="voice-tooltip"><div class="vt-name">Steve Yegge</div><div class="vt-topic">Inactive this week</div></div>
+        </div>
+        <div class="voice-dot" style="left:48%;top:42%;background:rgba(136,144,160,0.2);color:var(--muted);">GO
+          <div class="voice-tooltip"><div class="vt-name">Gergely Orosz</div><div class="vt-topic">Inactive this week</div></div>
+        </div>
+        <div class="voice-dot" style="left:70%;top:50%;background:rgba(136,144,160,0.2);color:var(--muted);">EM
+          <div class="voice-tooltip"><div class="vt-name">Ethan Mollick</div><div class="vt-topic">Inactive this week</div></div>
+        </div>
+        <div class="voice-dot" style="left:78%;top:30%;background:rgba(136,144,160,0.2);color:var(--muted);">GB
+          <div class="voice-tooltip"><div class="vt-name">Grady Booch</div><div class="vt-topic">Inactive this week</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Quotes -->
+    <div id="quotes" class="card">
+      <h2>Key Quotes of the Week</h2>
+
+      <div class="quote-card">
+        <div class="quote-text">"To get the most out of the tools that have become available now, you have to remove yourself as the bottleneck."</div>
+        <div class="quote-author">Andrej Karpathy</div>
+      </div>
+
+      <div class="quote-card" style="border-left-color:var(--red);">
+        <div class="quote-text">"Nothing in the governing statute supports the Orwellian notion that an American company may be branded a potential adversary and saboteur of the U.S. for expressing disagreement with the government."</div>
+        <div class="quote-author">Judge Rita F. Lin</div>
+      </div>
+
+      <div class="quote-card" style="border-left-color:var(--orange);">
+        <div class="quote-text">"When asked to evaluate work they've produced, agents tend to respond by confidently praising the work — even when, to a human observer, the quality is obviously mediocre."</div>
+        <div class="quote-author">Anthropic Engineering</div>
+      </div>
+
+      <div class="quote-card" style="border-left-color:var(--cyan);">
+        <div class="quote-text">"Almost nobody's figured out how to make everything work together as smoothly as possible... And that's the actual hard problem here. Not generation, but coordination."</div>
+        <div class="quote-author">Addy Osmani</div>
+      </div>
+
+      <div class="quote-card" style="border-left-color:var(--purple);">
+        <div class="quote-text">"Powerful technologies rarely yield simple consequences."</div>
+        <div class="quote-author">Martin Fowler</div>
+      </div>
+
+      <div class="quote-card" style="border-left-color:var(--green);">
+        <div class="quote-text">"AI assisted PRs are now only allowed for accepted issues. Drive-by AI PRs will be closed without question. Bad AI drivers will be banned from all future contributions."</div>
+        <div class="quote-author">Mitchell Hashimoto</div>
+      </div>
+
+      <div class="quote-card" style="border-left-color:var(--yellow);">
+        <div class="quote-text">"Old skills are losing leverage, and nobody has the answers — not even the people who've been doing this for 30 years."</div>
+        <div class="quote-author">Kent Beck</div>
+      </div>
+    </div>
+
+    <!-- Voice Tracker -->
+    <div id="voicelist" class="card">
+      <h2>Voice Tracker (23 Voices)</h2>
+      <div class="voice-row" style="font-weight:600;color:var(--muted);border-bottom:2px solid var(--border);">
+        <span></span><span>Name</span><span>This Week</span><span>Status</span>
+      </div>
+      <div class="voice-row"><span class="voice-status">✅</span><span class="voice-name">Simon Willison</span><span class="voice-topic">Supply chain cooldown, LiteLLM response, Auto Mode coverage</span><span class="tag green">Active</span></div>
+      <div class="voice-row"><span class="voice-status">✅</span><span class="voice-name">Addy Osmani</span><span class="voice-topic">Code Agent Orchestra, O'Reilly AI CodeCon</span><span class="tag green">Active</span></div>
+      <div class="voice-row"><span class="voice-status">✅</span><span class="voice-name">Martin Fowler</span><span class="voice-topic">Anthropic AI study, ADRs, "both booster and doomer"</span><span class="tag green">Active</span></div>
+      <div class="voice-row"><span class="voice-status">✅</span><span class="voice-name">Andrej Karpathy</span><span class="voice-topic">AutoResearch, "humans are bottleneck"</span><span class="tag green">Active</span></div>
+      <div class="voice-row"><span class="voice-status">✅</span><span class="voice-name">Kent Beck</span><span class="voice-topic">"Nobody Knows" / Still Burning series</span><span class="tag green">Active</span></div>
+      <div class="voice-row"><span class="voice-status">✅</span><span class="voice-name">Kelsey Hightower</span><span class="voice-topic">KubeCon EU Amsterdam</span><span class="tag green">Active</span></div>
+      <div class="voice-row"><span class="voice-status">✅</span><span class="voice-name">Daniel Stenberg</span><span class="voice-topic">NTLM beast, curl meeting, HTTP/3 talk</span><span class="tag green">Active</span></div>
+      <div class="voice-row"><span class="voice-status">📌</span><span class="voice-name">Mitchell Hashimoto</span><span class="voice-topic">Ghostty AI bug fix, Vercel board, AI PR policy</span><span class="tag orange">Earlier</span></div>
+      <div class="voice-row"><span class="voice-status">📌</span><span class="voice-name">Clive Thompson</span><span class="voice-topic">NYT Magazine "Coding After Coders" (still driving discussion)</span><span class="tag orange">Earlier</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Steve Yegge</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Gergely Orosz</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Ethan Mollick</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Grady Booch</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Patrick Debois</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Charity Majors</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Dave Farley</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">DHH</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">ThePrimeagen</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Bryan Cantrill</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Jaana Dogan</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Mike Mason</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Max Woolf</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+      <div class="voice-row"><span class="voice-status">❌</span><span class="voice-name">Chelsea Troy</span><span class="voice-topic">—</span><span class="tag">Quiet</span></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card" style="text-align:center;">
+      <p style="font-size:0.8rem;">AI × Software Engineering — Edition 3 (March 22–29, 2026)</p>
+      <p style="font-size:0.75rem;">Previous: <a href="https://agentiapt.github.io/agentia-research/projects/9985-2026-03-21-ai-news-feed/explorer.html" style="color:var(--accent);">March 14–21</a> · <a href="https://agentiapt.github.io/agentia-research/projects/9995-2026-03-13-ai-news-feed/explorer.html" style="color:var(--accent);">March 8–13</a></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+</body>
+</html>
