@@ -1,6 +1,46 @@
 {
-  "generated": "2026-03-24T08:53:43.197506+00:00",
+  "generated": "2026-03-29T08:36:19.226159+00:00",
   "projects": [
+    {
+      "id": "9984-2026-03-29-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI × Software Engineering — March 22–29, 2026",
+      "date": "2026-03-29",
+      "status": "complete",
+      "tags": [
+        "ai",
+        "news",
+        "weekly",
+        "voices",
+        "industry",
+        "supply-chain",
+        "security",
+        "agentic-sdlc",
+        "vibe-coding"
+      ],
+      "description": "A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engineering. Organized around recurring themes rather than raw chronology. Continues from [the March 14–21 edition](https://github.com/AgentiaPT/agentia-research/blob/main/projects/9985-2026-03-21-ai-news-feed/README.md).",
+      "files": [
+        "README.md",
+        "explorer-screenshot.png",
+        "explorer.html",
+        "outline.md",
+        "task.md"
+      ],
+      "htmlFiles": [
+        "explorer.html"
+      ],
+      "explorers": [
+        {
+          "file": "explorer.html",
+          "title": "AI × Software Engineering Dashboard",
+          "description": "Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes",
+          "screenshot": "explorer-screenshot.png"
+        }
+      ],
+      "path": "projects/9984-2026-03-29-ai-news-feed",
+      "wordCount": 7191,
+      "readingTime": 31
+    },
     {
       "id": "9985-2026-03-21-ai-news-feed",
       "slug": "ai-news-feed",
