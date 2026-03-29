@@ -34,6 +34,6 @@ But the most provocative finding is the **TDD prompting paradox**: giving agents
 Broader industry data reinforces the pattern:
 
 - AI generates **42% of code** but correlates with **23.5% more incidents** and **30% higher failure rates**
-- AI speeds code reviews by **91%** but slows experienced developers by **19%**
+- AI makes PR review times **91% longer** (more PRs, slower reviews) and slows experienced developers by **19%**
 
 **Why this matters:** The AI coding debate has been stuck on "can agents write code?" The answer is clearly yes. The real question — "can agents maintain software?" — is getting its first rigorous answer, and it's a sobering one. The SWE-CI benchmark shifts the evaluation from "does this patch work?" to "does this patch work without breaking everything else?" That's the difference between a coding assistant and a software engineer.

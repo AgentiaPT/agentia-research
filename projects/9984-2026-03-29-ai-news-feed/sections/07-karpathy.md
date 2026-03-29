@@ -20,7 +20,7 @@ On March 23, Karpathy framed the thesis:
 
 In a Fortune interview from the No Priors podcast (March 21), he revealed he hasn't typed a line of code **"probably since December"** and described his current state:
 
-> "an extremely large change... a state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
+> "an extremely large change... the state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
 
 On the relationship to historical neural architecture search:
 

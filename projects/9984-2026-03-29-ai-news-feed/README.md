@@ -302,7 +302,7 @@ But the most provocative finding is the **TDD prompting paradox**: giving agents
 Broader industry data reinforces the pattern:
 
 - AI generates **42% of code** but correlates with **23.5% more incidents** and **30% higher failure rates**
-- AI speeds code reviews by **91%** but slows experienced developers by **19%**
+- AI makes PR review times **91% longer** (more PRs, slower reviews) and slows experienced developers by **19%**
 
 **Why this matters:** The AI coding debate has been stuck on "can agents write code?" The answer is clearly yes. The real question — "can agents maintain software?" — is getting its first rigorous answer, and it's a sobering one. The SWE-CI benchmark shifts the evaluation from "does this patch work?" to "does this patch work without breaking everything else?" That's the difference between a coding assistant and a software engineer.
 
@@ -330,7 +330,7 @@ On March 23, Karpathy framed the thesis:
 
 In a Fortune interview from the No Priors podcast (March 21), he revealed he hasn't typed a line of code **"probably since December"** and described his current state:
 
-> "an extremely large change... a state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
+> "an extremely large change... the state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
 
 On the relationship to historical neural architecture search:
 
