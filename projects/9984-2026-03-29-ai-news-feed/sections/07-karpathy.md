@@ -18,9 +18,9 @@ On March 23, Karpathy framed the thesis:
 
 > "To get the most out of the tools that have become available now, you have to remove yourself as the bottleneck" — [WinBuzzer](https://winbuzzer.com/2026/03/23/karpathy-humans-bottleneck-ai-research-xcxwbn/#:~:text=remove%20yourself%20as%20the%20bottleneck)
 
-In a Fortune interview from the No Priors podcast (March 21), he revealed he hasn't typed a line of code **"probably since December"** and described his current state:
+In a Fortune interview from the No Priors podcast (March 21), he revealed he hasn't typed a line of code **"probably since December"**, calling it **"an extremely large change."** He described his current mindset:
 
-> "an extremely large change... the state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
+> "I'm just like in the state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
 
 On the relationship to historical neural architecture search:
 

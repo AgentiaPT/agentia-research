@@ -328,9 +328,9 @@ On March 23, Karpathy framed the thesis:
 
 > "To get the most out of the tools that have become available now, you have to remove yourself as the bottleneck" — [WinBuzzer](https://winbuzzer.com/2026/03/23/karpathy-humans-bottleneck-ai-research-xcxwbn/#:~:text=remove%20yourself%20as%20the%20bottleneck)
 
-In a Fortune interview from the No Priors podcast (March 21), he revealed he hasn't typed a line of code **"probably since December"** and described his current state:
+In a Fortune interview from the No Priors podcast (March 21), he revealed he hasn't typed a line of code **"probably since December"**, calling it **"an extremely large change."** He described his current mindset:
 
-> "an extremely large change... the state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
+> "I'm just like in the state of psychosis of trying to figure out what's possible, trying to push it to the limit" — [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis)
 
 On the relationship to historical neural architecture search:
 
@@ -406,7 +406,7 @@ Willison's week was dominated by the LiteLLM supply chain attack. Multiple posts
 
 - **March 26** — Co-hosted the third **O'Reilly AI CodeCon: Software Craftsmanship in the Age of AI**. His talk "[Orchestrating Coding Agents](https://talks.addy.ie/oreilly-codecon-march-2026/)" covered three tiers of agentic tools (single-agent, multi-agent local, cloud-based) and coordination patterns.
 
-> "Almost nobody's figured out how to make everything work together as smoothly as possible... And that's the actual hard problem here. Not generation, but coordination" — [Addy Osmani](https://talks.addy.ie/oreilly-codecon-march-2026/#:~:text=Not%20generation%2C%20but%20coordination)
+> "Almost nobody's figured out how to make everything work together as smoothly as possible. [...] And that's the actual hard problem here. Not generation, but coordination" — [Addy Osmani](https://www.oreilly.com/radar/what-developers-actually-need-to-know-right-now/#:~:text=Not%20generation%2C%20but%20coordination)
 
 Published the companion blog post "[The Code Agent Orchestra](https://addyosmani.com/blog/code-agent-orchestra/)" — key finding: **three focused agents consistently outperform one generalist agent working three times as long.**
 
@@ -431,7 +431,7 @@ See [Section 7](#7-karpathys-autoresearch--humans-are-the-bottleneck) for full c
 ### Kent Beck — Nobody Knows
 **Active | [tidyfirst.substack.com](https://tidyfirst.substack.com/)**
 
-- **~March 25** — "[Nobody Knows](https://tidyfirst.substack.com/p/nobody-knows)" — kicks off a new series called **"Still Burning"**, described as "a fireside manifest for geeks navigating a world that's shifted under their feet. Old skills are losing leverage, and nobody has the answers."
+- **~March 25** — "[Nobody Knows](https://tidyfirst.substack.com/p/nobody-knows)" — kicks off a new series called **"Still Burning"** — "Honest conversations about fear, uncertainty, and what it means to build things when the ground keeps shifting." From the episode: "Old skills are losing leverage, and nobody has the answers."
 
 Ongoing themes: AI as an "unpredictable genie," TDD as a superpower when working with agents, and **"programming deflation"** — knowing what's worth building becomes the scarce skill.
 
@@ -623,8 +623,8 @@ Users flooded GitHub and Reddit reporting sessions burning out in minutes instea
 > "When asked to evaluate work they've produced, agents tend to respond by confidently praising the work — even when, to a human observer, the quality is obviously mediocre"
 > — **Anthropic Engineering** · [Anthropic](https://www.anthropic.com/engineering/harness-design-long-running-apps)
 
-> "Almost nobody's figured out how to make everything work together as smoothly as possible... And that's the actual hard problem here. Not generation, but coordination"
-> — **Addy Osmani** · [O'Reilly AI CodeCon](https://talks.addy.ie/oreilly-codecon-march-2026/)
+> "Almost nobody's figured out how to make everything work together as smoothly as possible. [...] And that's the actual hard problem here. Not generation, but coordination"
+> — **Addy Osmani** · [O'Reilly Radar](https://www.oreilly.com/radar/what-developers-actually-need-to-know-right-now/)
 
 > "Powerful technologies rarely yield simple consequences"
 > — **Martin Fowler** · [martinfowler.com](https://martinfowler.com/fragments/2026-03-26.html)

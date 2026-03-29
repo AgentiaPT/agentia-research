@@ -17,7 +17,7 @@ Willison's week was dominated by the LiteLLM supply chain attack. Multiple posts
 
 - **March 26** — Co-hosted the third **O'Reilly AI CodeCon: Software Craftsmanship in the Age of AI**. His talk "[Orchestrating Coding Agents](https://talks.addy.ie/oreilly-codecon-march-2026/)" covered three tiers of agentic tools (single-agent, multi-agent local, cloud-based) and coordination patterns.
 
-> "Almost nobody's figured out how to make everything work together as smoothly as possible... And that's the actual hard problem here. Not generation, but coordination" — [Addy Osmani](https://talks.addy.ie/oreilly-codecon-march-2026/#:~:text=Not%20generation%2C%20but%20coordination)
+> "Almost nobody's figured out how to make everything work together as smoothly as possible. [...] And that's the actual hard problem here. Not generation, but coordination" — [Addy Osmani](https://www.oreilly.com/radar/what-developers-actually-need-to-know-right-now/#:~:text=Not%20generation%2C%20but%20coordination)
 
 Published the companion blog post "[The Code Agent Orchestra](https://addyosmani.com/blog/code-agent-orchestra/)" — key finding: **three focused agents consistently outperform one generalist agent working three times as long.**
 
@@ -42,7 +42,7 @@ See [Section 7](#7-karpathys-autoresearch--humans-are-the-bottleneck) for full c
 ### Kent Beck — Nobody Knows
 **Active | [tidyfirst.substack.com](https://tidyfirst.substack.com/)**
 
-- **~March 25** — "[Nobody Knows](https://tidyfirst.substack.com/p/nobody-knows)" — kicks off a new series called **"Still Burning"**, described as "a fireside manifest for geeks navigating a world that's shifted under their feet. Old skills are losing leverage, and nobody has the answers."
+- **~March 25** — "[Nobody Knows](https://tidyfirst.substack.com/p/nobody-knows)" — kicks off a new series called **"Still Burning"** — "Honest conversations about fear, uncertainty, and what it means to build things when the ground keeps shifting." From the episode: "Old skills are losing leverage, and nobody has the answers."
 
 Ongoing themes: AI as an "unpredictable genie," TDD as a superpower when working with agents, and **"programming deflation"** — knowing what's worth building becomes the scarce skill.
 
