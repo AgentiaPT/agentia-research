@@ -20,7 +20,7 @@ Open the [Explorer](https://agentiapt.github.io/agentia-research/projects/9984-2
 
 ## Contents
 
-1. [The Supply Chain Reckoning](#1-the-supply-chain-reckoning--litellm-trivy-and-the-teampcp-campaign) — LiteLLM backdoored, 500K credentials stolen, Trivy weaponized
+1. [The Supply Chain Reckoning](#1-the-supply-chain-reckoning--litellm-trivy-and-the-teampcp-campaign) — LiteLLM backdoored, est. 500K credentials stolen, Trivy weaponized
 2. [The Mythos Leak](#2-the-mythos-leak--anthropics-next-frontier-exposed) — Claude Mythos/Capybara revealed via misconfigured CMS, "step change" in capabilities
 3. [Claude Code Goes Autonomous](#3-claude-code-goes-autonomous--auto-mode-and-long-running-harnesses) — Auto Mode, harness design for multi-hour sessions, three-agent architecture
 4. [The Data Training Backlash](#4-the-data-training-backlash--github-copilot-opts-you-in) — Copilot training on user data by default, 172 downvotes, developer revolt
