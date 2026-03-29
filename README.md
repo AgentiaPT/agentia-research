@@ -17,6 +17,7 @@ Deep research, interactive explorations, and tools at the intersection of AI and
 <!-- BEGIN PROJECTS -->
 | Project | Description | Live Demo | Words | Read Time | Status | Date |
 |---------|-------------|-----------|------:|-----------|--------|------|
+| [AI × Software Engineering — March 22–29, 2026](projects/9984-2026-03-29-ai-news-feed/) | A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engine... | [Explorer](https://agentiapt.github.io/agentia-research/projects/9984-2026-03-29-ai-news-feed/explorer.html) | 7.2k | 31 min | Draft | 2026-03-29 |
 | [AI × Software Engineering — March 14–21, 2026](projects/9985-2026-03-21-ai-news-feed/) | A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engine... | [Explorer](https://agentiapt.github.io/agentia-research/projects/9985-2026-03-21-ai-news-feed/explorer.html) | 9.3k | 40 min | Complete | 2026-03-21 |
 | [The Civilization That Forgot How to Code](projects/9986-2026-03-18-vibe-coding-essay/) | Around 370 BCE, Socrates made an argument against writing. In Plato's *Phaedrus*, he warned that the written word would ... | — | 7.7k | 33 min | Complete | 2026-03-18 |
 | [The Gutenberg Parallel: Software Democratization and the Coming Volume Explosion](projects/9990-2026-03-20-software-democratization/) | What is happening now with software happened before with writing. The pattern is unmistakable: a skill once reserved for... | — | 3.6k | 16 min | Complete | 2026-03-20 |
@@ -26,7 +27,6 @@ Deep research, interactive explorations, and tools at the intersection of AI and
 | [Can LLMs Self-Improve Code Without Feedback? An Empirical Test](projects/9994-2026-03-15-self-correction-experiment/) | An empirical experiment testing whether LLMs can genuinely improve code through iterative self-reflection — or whether "... | — | 397 | 2 min | Draft | 2026-03-15 |
 | [AI × Software Engineering — March 8–13, 2026](projects/9995-2026-03-13-ai-news-feed/) | A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engine... | [Explorer](https://agentiapt.github.io/agentia-research/projects/9995-2026-03-13-ai-news-feed/explorer.html) | 4.5k | 19 min | Complete | 2026-03-13 |
 | [Iterative Self-Improvement at Inference Time vs. Gradient Descent During Training](projects/9996-2026-03-14-self-improvement-gradient-descent/) | When an LLM generates an output, critiques it, and refines it iteratively, is this process formally analogous to gradien... | — | 4.0k | 17 min | Complete | 2026-03-14 |
-| [Inference-Time Compute Scaling in Large Language Models](projects/9997-2026-03-14-inference-time-compute/) | Inference-time compute scaling (also called "test-time compute" or "test-time scaling") refers to the practice of alloca... | — | 3.2k | 14 min | Complete | 2026-03-14 |
 <!-- END PROJECTS -->
 
 [View all projects &rarr;](projects/)
