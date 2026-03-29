@@ -8,7 +8,7 @@ The layoff numbers keep climbing, but this week's Fortune CFO survey added a new
 
 | Metric | Figure |
 |--------|--------|
-| Tech workers laid off in 2026 YTD | **59,121** (704/day average) |
+| Tech workers laid off in 2026 YTD | **~55,000–60,000** (varies by tracker) |
 | Directly attributed to AI/automation | **~9,200** (~1 in 5) |
 | Pace vs. 2025 | Running ahead of full-year total of 245,953 |
 

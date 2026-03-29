@@ -29,7 +29,7 @@ Open the [Explorer](https://agentiapt.github.io/agentia-research/projects/9984-2
 7. [Karpathy's AutoResearch](#7-karpathys-autoresearch--humans-are-the-bottleneck) — 700 experiments, 11% training speedup, "simulate a research community"
 8. [Anthropic vs. The Pentagon](#8-anthropic-vs-the-pentagon--first-amendment-wins-round-one) — Federal judge blocks DOD ban, "classic illegal retaliation"
 9. [The Voice Tracker](#9-the-voice-tracker--who-said-what) — Fowler, Hightower, Hashimoto, Stenberg, and 19 others
-10. [The Jobs Escalation Continues](#10-the-jobs-escalation-continues--cfos-admit-9x) — CFOs expect 9x increase in AI layoffs, 59K tech workers cut YTD
+10. [The Jobs Escalation Continues](#10-the-jobs-escalation-continues--cfos-admit-9x) — CFOs expect 9x increase in AI layoffs, ~55-60K tech workers cut YTD
 11. [Model & Tool Updates](#11-model--tool-updates--footnotes) — Cursor Composer 2, Windsurf pricing backlash, Mistral Voxtral TTS, benchmarks
 12. [Signals & Radar](#12-signals--radar) | [Key Quotes](#key-quotes-of-the-week) | [Voice Tracker](#voice-tracker-table)
 
@@ -394,7 +394,7 @@ The timing — the same week as the Mythos leak — creates a striking juxtaposi
 
 Willison's week was dominated by the LiteLLM supply chain attack. Multiple posts:
 
-- **March 24** — [Package Managers Need to Cool Down](https://simonwillison.net/2026/Mar/24/package-managers-need-to-cool-down/) — arguing for dependency cooldown periods before installing updated packages, directly inspired by the LiteLLM attack.
+- **March 24** — Linked Andrew Nesbitt's [Package Managers Need to Cool Down](https://simonwillison.net/2026/Mar/24/package-managers-need-to-cool-down/) — arguing for dependency cooldown periods before installing updated packages, directly inspired by the LiteLLM attack.
 - **March 25** — Covered both the **LiteLLM hack analysis** (46,996 downloads of exploited packages in 46 minutes) and **Claude Code Auto Mode** (new permissions mode as alternative to `--dangerously-skip-permissions`). Also linked to [Thoughts on slowing the fuck down](https://simonwillison.net/2026/Mar/25/thoughts-on-slowing-the-fuck-down/) via Mario Zechner on agentic engineering trends.
 - **March 26** — [My minute-by-minute response to the LiteLLM malware attack](https://simonwillison.net/2026/Mar/26/response-to-the-litellm-malware-attack/) — Callum McMahon's Claude transcripts used during the vulnerability response. Also linked [Quantization from the ground up](https://simonwillison.net/2026/Mar/26/quantization-from-the-ground-up/) — Sam Rose's interactive essay on LLM quantization.
 - **March 27** — "Vibe coding SwiftUI apps is a lot of fun"
@@ -476,7 +476,7 @@ The layoff numbers keep climbing, but this week's Fortune CFO survey added a new
 
 | Metric | Figure |
 |--------|--------|
-| Tech workers laid off in 2026 YTD | **59,121** (704/day average) |
+| Tech workers laid off in 2026 YTD | **~55,000–60,000** (varies by tracker) |
 | Directly attributed to AI/automation | **~9,200** (~1 in 5) |
 | Pace vs. 2025 | Running ahead of full-year total of 245,953 |
 

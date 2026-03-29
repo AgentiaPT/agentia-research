@@ -5,7 +5,7 @@
 
 Willison's week was dominated by the LiteLLM supply chain attack. Multiple posts:
 
-- **March 24** — [Package Managers Need to Cool Down](https://simonwillison.net/2026/Mar/24/package-managers-need-to-cool-down/) — arguing for dependency cooldown periods before installing updated packages, directly inspired by the LiteLLM attack.
+- **March 24** — Linked Andrew Nesbitt's [Package Managers Need to Cool Down](https://simonwillison.net/2026/Mar/24/package-managers-need-to-cool-down/) — arguing for dependency cooldown periods before installing updated packages, directly inspired by the LiteLLM attack.
 - **March 25** — Covered both the **LiteLLM hack analysis** (46,996 downloads of exploited packages in 46 minutes) and **Claude Code Auto Mode** (new permissions mode as alternative to `--dangerously-skip-permissions`). Also linked to [Thoughts on slowing the fuck down](https://simonwillison.net/2026/Mar/25/thoughts-on-slowing-the-fuck-down/) via Mario Zechner on agentic engineering trends.
 - **March 26** — [My minute-by-minute response to the LiteLLM malware attack](https://simonwillison.net/2026/Mar/26/response-to-the-litellm-malware-attack/) — Callum McMahon's Claude transcripts used during the vulnerability response. Also linked [Quantization from the ground up](https://simonwillison.net/2026/Mar/26/quantization-from-the-ground-up/) — Sam Rose's interactive essay on LLM quantization.
 - **March 27** — "Vibe coding SwiftUI apps is a lot of fun"
