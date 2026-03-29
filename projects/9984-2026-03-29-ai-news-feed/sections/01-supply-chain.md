@@ -9,7 +9,7 @@ The timeline reads like a heist:
 
 | Date | Step |
 |------|------|
-| **March 19** | TeamPCP compromised Aqua Security's `trivy-action` GitHub Action by force-pushing malicious commits to 75 of 77 release tags via a stolen `aqua-bot` service account. The poisoned binary harvested CI/CD secrets from every repository that ran Trivy. |
+| **March 19** | TeamPCP compromised Aqua Security's `trivy-action` GitHub Action by force-pushing malicious commits to 76 of 77 release tags via a stolen `aqua-bot` service account. The poisoned binary harvested CI/CD secrets from every repository that ran Trivy. |
 | **March 20** | Stolen npm tokens fed a self-propagating worm (**CanisterWorm**) that infected 66+ npm packages. |
 | **March 23** | Checkmarx KICS GitHub Actions compromised via the same stolen CI/CD secrets. |
 | **March 24** | LiteLLM's CI/CD pipeline pulled the compromised Trivy without version pinning, which exfiltrated the `PYPI_PUBLISH` token. Two backdoored versions (1.82.7 and 1.82.8) were published to PyPI. |
@@ -24,14 +24,14 @@ The most insidious detail: the malware abused Python's `.pth` file mechanism to 
 
 ### Scale and Response
 
-LiteLLM has approximately **95 million monthly PyPI downloads** and is present in **36% of cloud environments** according to Wiz Research. The compromised versions were live for approximately **5.5 hours** (10:39–16:00 UTC on March 24) before PyPI quarantined the package. An estimated **500,000 credentials were confirmed stolen**.
+LiteLLM has approximately **95 million monthly PyPI downloads** and is present in **36% of cloud environments** according to Wiz Research. The compromised versions were live for approximately **5.5 hours** (10:39–16:00 UTC on March 24) before PyPI quarantined the package. An estimated **500,000 credentials were reportedly stolen** according to SlowMist's analysis.
 
-The attackers used **ICP blockchain canisters** as command-and-control infrastructure — the first documented abuse of decentralized infrastructure for supply chain C2. When community members reported the compromise in GitHub issue #24512, attackers posted **88 bot comments from 73 compromised accounts in a 102-second window** to suppress the discussion.
+The attackers used **ICP blockchain canisters** as command-and-control infrastructure — the first documented abuse of decentralized infrastructure for supply chain C2. When community members reported the compromise in GitHub issue #24512, attackers reportedly flooded the thread with bot comments from compromised accounts to suppress the discussion.
 
 Post-attack, TeamPCP reportedly pivoted to active extortion, working through ~300 GB of stolen credentials and collaborating with the **LAPSUS$** extortion group. LiteLLM paused all new releases pending a full supply-chain review. Customers using the official Docker image were unaffected due to pinned dependencies.
 
 ### The Broader Pattern
 
-The HiddenLayer 2026 AI Threat Landscape Report (March 19) found that **1 in 8 companies reported AI breaches** linked to agentic systems. Malware in public model and code repositories was the most cited breach source (35%), yet **93% of respondents still use open repositories**. The LiteLLM attack validates every concern in that report — and adds a new one: your security scanner can be the attack vector.
+The HiddenLayer 2026 AI Threat Landscape Report (March 19) found that **autonomous agents now account for more than 1 in 8 reported AI breaches**. Malware in public model and code repositories was the most cited breach source (35%), yet **93% of respondents still use open repositories**. The LiteLLM attack validates every concern in that report — and adds a new one: your security scanner can be the attack vector.
 
 **Why this matters:** The AI ecosystem's dependency graph is now a target-rich environment. LiteLLM sits between AI applications and model providers — compromising it gives attackers access to API keys for OpenAI, Anthropic, Google, and every other LLM provider. The attack didn't exploit a bug in LiteLLM's code. It exploited the **trust chain** — an unpinned dependency on a security scanner that itself was compromised. The lesson: in the AI supply chain, the security tools are now attack surfaces.
