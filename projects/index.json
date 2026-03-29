@@ -1,12 +1,12 @@
 {
-  "generated": "2026-03-29T08:35:45.995450+00:00",
+  "generated": "2026-03-29T08:36:19.226159+00:00",
   "projects": [
     {
       "id": "9984-2026-03-29-ai-news-feed",
       "slug": "ai-news-feed",
       "title": "AI × Software Engineering — March 22–29, 2026",
       "date": "2026-03-29",
-      "status": "draft",
+      "status": "complete",
       "tags": [
         "ai",
         "news",

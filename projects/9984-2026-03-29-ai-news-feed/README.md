@@ -1,7 +1,7 @@
 ---
 title: "AI × Software Engineering — March 22–29, 2026"
 date: 2026-03-29
-status: draft
+status: complete
 tags: [ai, news, weekly, voices, industry, supply-chain, security, agentic-sdlc, vibe-coding]
 explorers:
   - file: explorer.html
