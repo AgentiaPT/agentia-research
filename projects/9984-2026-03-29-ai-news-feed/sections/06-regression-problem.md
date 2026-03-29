@@ -7,7 +7,7 @@ Two papers published in March converge on the same uncomfortable finding: AI cod
 
 Authors **Jialong Chen, Xander Xu** (equal contributors), **Hu Wei, Chuan Chen, Bing Zhao** (Sun Yat-sen University & Alibaba Group) built the first benchmark on the **Continuous Integration loop** — not isolated patches, but sequential commits to the same codebase over months.
 
-The setup: **18 models from 8 providers** across **100 real Python repositories**, each spanning approximately **233 days and 71 consecutive commits**. The benchmark introduces **EvoScore**, a metric that penalizes short-term optimization and weights later iterations more heavily.
+The setup: **18 models from 8 providers** across **100 tasks drawn from 68 real Python repositories**, each spanning approximately **233 days and 71 consecutive commits**. The benchmark introduces **EvoScore**, a metric that penalizes short-term optimization and weights later iterations more heavily.
 
 The results:
 

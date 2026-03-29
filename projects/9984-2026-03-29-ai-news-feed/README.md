@@ -275,7 +275,7 @@ Two papers published in March converge on the same uncomfortable finding: AI cod
 
 Authors **Jialong Chen, Xander Xu** (equal contributors), **Hu Wei, Chuan Chen, Bing Zhao** (Sun Yat-sen University & Alibaba Group) built the first benchmark on the **Continuous Integration loop** — not isolated patches, but sequential commits to the same codebase over months.
 
-The setup: **18 models from 8 providers** across **100 real Python repositories**, each spanning approximately **233 days and 71 consecutive commits**. The benchmark introduces **EvoScore**, a metric that penalizes short-term optimization and weights later iterations more heavily.
+The setup: **18 models from 8 providers** across **100 tasks drawn from 68 real Python repositories**, each spanning approximately **233 days and 71 consecutive commits**. The benchmark introduces **EvoScore**, a metric that penalizes short-term optimization and weights later iterations more heavily.
 
 The results:
 
@@ -344,7 +344,7 @@ Karpathy's stated next step:
 
 ### Community Response
 
-- **21,000+ GitHub stars** and **8.6 million views** on the announcement within days
+- **58,000+ GitHub stars** and **8.6 million views** on the announcement within days
 - **Varun Mathur** (CEO, Hyperspace AI) distributed the loop across a peer-to-peer network — on March 8–9, **35 autonomous agents** ran **333 experiments** completely unsupervised
 - **Shopify CEO Tobias Lutke** reported a **19% performance gain** after 37 overnight experiments using autoresearch
 - Karpathy also revealed **"Dobby the House Elf"** — a home automation agent that controls his home via WhatsApp
