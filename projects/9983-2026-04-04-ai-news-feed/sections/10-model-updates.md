@@ -23,8 +23,9 @@
 
 - **$122B funding round closed** (March 31) — largest private round in history. $852B valuation. Amazon ($50B, $35B contingent on IPO/AGI milestone), NVIDIA ($30B), SoftBank ($30B). First retail investor participation ($3B). Revenue: $2B/month, 900M weekly active users, 50M subscribers. IPO expected later in 2026 ([TechCrunch](https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round))
 - **Acquired TBPN** — daily tech talk show (April 2). $30M+ revenue trajectory. Reports to Chris Lehane. Sam Altman: *"I don't expect them to go any easier on us."* ([TechCrunch](https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/))
-- **Codex-only seats** — New pricing tier for API-focused teams
-- CNBC noted OpenAI's M&A strategy draws questions — "[chasing vibes](https://www.cnbc.com/2026/04/03/chasing-vibes-openai-ma-strategy-gets-more-confusing-with-tbpn-.html#:~:text=chasing%20vibes)"
+- **Codex major update** (March 30) — first-class plugin system, multi-agent v2 with path-based agent addressing, pay-as-you-go team pricing (April 2). Plugin architecture positions Codex to compete with Claude Code's extension ecosystem ([OpenAI Changelog](https://developers.openai.com/codex/changelog))
+- **Sora shutdown** — App closes April 26, API September 24. Was costing ~$1M/day to operate. Disney's $1B partnership collapsed. Strategic pivot: kill video generation, free compute for coding/enterprise ([TechCrunch](https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/))
+- CNBC noted M&A strategy draws questions — TBPN buy labeled "[chasing vibes](https://www.cnbc.com/2026/04/03/chasing-vibes-openai-ma-strategy-gets-more-confusing-with-tbpn-.html#:~:text=chasing%20vibes)"
 
 ### Microsoft
 
@@ -34,6 +35,10 @@
 ### NVIDIA
 
 - **Vera Rubin platform in full production** — next-gen chips entered production ahead of schedule. 10× reduction in inference token cost, 4× fewer GPUs to train MoE models vs. Blackwell. Vera Rubin NVL72: 72 GPUs in a single rack. AWS, Google Cloud, Microsoft, OCI deploying in H2 2026 ([NVIDIA](https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform))
+
+### Alibaba
+
+- **Qwen 3.6-Plus** (April 2) — hybrid linear-attention + sparse MoE architecture. 1M-token context window. Rivals Claude Opus 4.5 on benchmarks. Native multimodal: generates frontend pages, produces code from screenshots. Priced at ~$0.29/M input tokens — significantly cheaper than Western competitors ([Caixin Global](https://www.caixinglobal.com/2026-04-02/alibaba-releases-qwen-36-plus-ai-model-with-enhanced-coding-capabilities-102430395.html))
 
 ### Windsurf
 

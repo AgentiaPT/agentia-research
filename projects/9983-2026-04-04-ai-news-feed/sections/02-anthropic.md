@@ -22,10 +22,11 @@ An Anthropic spokesperson called it:
 
 > "A release packaging issue caused by human error, not a security breach. No sensitive customer data or credentials were involved or exposed." — [CNBC](https://www.cnbc.com/2026/03/31/anthropic-leak-claude-code-internal-source.html#:~:text=A%20release%20packaging%20issue%20caused%20by%20human%20error)
 
-The leaked code revealed **dozens of unreleased feature flags**, including:
-- **Session review** — Claude reviewing what it did in its latest session to study for improvements
-- **Cross-conversation learning** — transferring learnings across conversations
-- **Persistent assistant** — Claude Code running in background mode while the user is idle
+The leaked code revealed **44 hidden feature flags** and unreleased capabilities, including:
+- **KAIROS** — an autonomous daemon mode where Claude operates as a persistent, always-on background agent. Referenced 150+ times in the source. Includes "autoDream" — background memory consolidation that runs while the user is idle ([The Information](https://www.theinformation.com/newsletters/ai-agenda/claude-code-leak-reveals-always-kairos-agent) · [The New Stack](https://thenewstack.io/claude-code-source-leak/))
+- **Coordinator Mode** — native multi-agent orchestration where a master Claude spawns parallel worker agents
+- **ULTRAPLAN** — offloads planning to a remote Opus 4.6 session with up to 30 minutes of dedicated think time
+- **Voice mode** with push-to-talk interface
 
 ### Act 3: The DMCA Fiasco (April 1)
 
