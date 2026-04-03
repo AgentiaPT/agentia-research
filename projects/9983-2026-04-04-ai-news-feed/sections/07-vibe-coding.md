@@ -17,6 +17,8 @@ Multiple studies converged on the same conclusion this week:
 
 The Escape.tech study is particularly damning: scanning 5,600 apps built with vibe coding tools, researchers found over 2,000 vulnerabilities and more than **400 exposed secrets** — API keys, credentials, and tokens left in production endpoints.
 
+A **CMU study** quantified the speed-quality tradeoff directly: developers adopting Cursor saw a **281% increase in lines of code** in the first month, but gains didn't last. AI-generated code introduces **1.7× more total issues** than human-written code — maintainability errors 1.64× higher, logic errors 1.75× higher, security findings 1.57× higher ([CMU Strudel Lab](https://cmustrudel.github.io/papers/msr2026agarwal.pdf)).
+
 ### Why AI Code Fails Security Reviews
 
 The pattern isn't random. AI models:

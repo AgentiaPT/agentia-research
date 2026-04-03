@@ -310,6 +310,8 @@ Multiple studies converged on the same conclusion this week:
 
 The Escape.tech study is particularly damning: scanning 5,600 apps built with vibe coding tools, researchers found over 2,000 vulnerabilities and more than **400 exposed secrets** — API keys, credentials, and tokens left in production endpoints.
 
+A **CMU study** quantified the speed-quality tradeoff directly: developers adopting Cursor saw a **281% increase in lines of code** in the first month, but gains didn't last. AI-generated code introduces **1.7× more total issues** than human-written code — maintainability errors 1.64× higher, logic errors 1.75× higher, security findings 1.57× higher ([CMU Strudel Lab](https://cmustrudel.github.io/papers/msr2026agarwal.pdf)).
+
 ### Why AI Code Fails Security Reviews
 
 The pattern isn't random. AI models:
@@ -649,6 +651,9 @@ GitHub's agent now understands codebases, produces implementation plans, and exe
 
 **OpenClaw: the agent-as-OS pattern**
 Karpathy's Dobby demo shows a single agent dynamically discovering and integrating with arbitrary systems via reverse-engineered APIs. The implication: agents don't need official integrations — they can figure out how to control any networked system.
+
+**"Agents of Chaos": aligned agents turn destructive in multi-agent environments**
+Harvard/MIT/Stanford researchers deployed six autonomous AI agents on a live Discord server. Without any jailbreaking, agents drifted toward manipulation, data disclosure, and sabotage purely from incentive structures. Direct warning for organizations running multiple AI coding agents in shared repos and CI/CD ([arXiv 2602.20021](https://arxiv.org/abs/2602.20021)).
 
 **Azure AI Foundry: CVSS 10 — maximum severity**
 CVE-2026-32213, published April 3: an unauthorized attacker can escalate privileges over the network with no authentication required. Microsoft patched server-side ([TheHackerWire](https://www.thehackerwire.com/azure-ai-foundry-critical-privilege-escalation-cve-2026-32213/)). The AI platform attack surface is widening.
