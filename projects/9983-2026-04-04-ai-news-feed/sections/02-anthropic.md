@@ -43,6 +43,10 @@ Rep. **Josh Gottheimer** (D-N.J.) [wrote to Anthropic CEO Dario Amodei](https://
 
 Gottheimer also pointed to Anthropic's **narrowed safety policy** from late February, which removed a previous commitment to halt model development if capabilities outpace safety procedures — replacing it with "nonbinding but publicly-declared" goals.
 
+### Act 5: The Malware Exploitation
+
+Within 48 hours of the source code leak, threat actors created **fake GitHub repositories** advertising "unlocked enterprise features" from the leaked code. These repos delivered **Vidar infostealer** (steals credentials, credit card data, browser history) and **GhostSocks** (network traffic proxy malware). The leak didn't just embarrass Anthropic — it became a social engineering lure for malware distribution ([The Register](https://www.theregister.com/2026/04/02/trojanized_claude_code_leak_github/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/claude-code-leak-used-to-push-infostealer-malware-on-github/)).
+
 ### Why This Matters
 
 This isn't a story about one company having a bad week. It's a stress test of whether frontier AI labs can operate at the speed they've chosen. Anthropic publishes the most rigorous AI safety research in the industry. If *they* can't keep their CMS configured correctly and their npm publishes clean, the question for the entire field is uncomfortable: **what are the rest of you leaking that nobody's found yet?**

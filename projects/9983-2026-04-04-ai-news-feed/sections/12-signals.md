@@ -36,6 +36,15 @@ GitHub's agent now understands codebases, produces implementation plans, and exe
 **OpenClaw: the agent-as-OS pattern**
 Karpathy's Dobby demo shows a single agent dynamically discovering and integrating with arbitrary systems via reverse-engineered APIs. The implication: agents don't need official integrations — they can figure out how to control any networked system.
 
+**Azure AI Foundry: CVSS 10 — maximum severity**
+CVE-2026-32213, published April 3: an unauthorized attacker can escalate privileges over the network with no authentication required. Microsoft patched server-side ([TheHackerWire](https://www.thehackerwire.com/azure-ai-foundry-critical-privilege-escalation-cve-2026-32213/)). The AI platform attack surface is widening.
+
+**Autonomous jailbreak: 97% success rate**
+Nature Communications published research showing large reasoning models can autonomously jailbreak other AI models with a 97.14% overall success rate. Claude 4 Sonnet was the most resistant (50% refusal rate). Makes jailbreaking scalable and accessible to non-experts ([Nature Communications](https://www.nature.com/articles/s41467-026-69010-1)).
+
+**California AI executive order (March 30)**
+Governor Newsom signed an order requiring AI companies seeking state contracts to explain policies on illegal content, bias, and civil rights. Also reserves California's right to overrule federal AI supply chain risk designations.
+
 ### 🔵 Watch Signals
 
 **Claude Mythos "Capybara" tier**
@@ -44,11 +53,17 @@ If the leaked specifications are accurate, Mythos represents a step-change in ca
 **Congressional oversight of AI lab security**
 Gottheimer's letter may be the opening move in a broader push for mandatory security standards at frontier AI labs. The precedent: if your models pose national security risks, your operational security practices are now Congress's business.
 
+**Axios attack attributed to North Korea**
+Microsoft (Sapphire Sleet) and Google (UNC1069) both attributed the Axios npm compromise to DPRK state actors. Nation-state supply chain attacks are now targeting JavaScript's most-downloaded libraries.
+
 **"AI-washing" layoffs narrative going mainstream**
 Andreessen, Fortune, and Bloomberg all published competing analyses of whether AI is actually causing layoffs or just providing cover. The narrative is splitting — which means policy responses will diverge too.
 
 **OpenAI's media strategy**
 Acquiring TBPN ($30M revenue trajectory) and placing it under the strategy org signals that OpenAI views narrative control as a strategic priority, not a PR function. Editorial independence pledges will be tested.
+
+**Microsoft threat report: "Agent ecosystem will become the most attacked surface"**
+Microsoft's April 2 report warns that AI is reducing friction across the entire attack lifecycle. The barrier to sophisticated attacks "has collapsed." ([Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/))
 
 ---
 

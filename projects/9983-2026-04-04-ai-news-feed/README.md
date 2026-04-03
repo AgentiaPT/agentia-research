@@ -108,6 +108,10 @@ Rep. **Josh Gottheimer** (D-N.J.) [wrote to Anthropic CEO Dario Amodei](https://
 
 Gottheimer also pointed to Anthropic's **narrowed safety policy** from late February, which removed a previous commitment to halt model development if capabilities outpace safety procedures — replacing it with "nonbinding but publicly-declared" goals.
 
+### Act 5: The Malware Exploitation
+
+Within 48 hours of the source code leak, threat actors created **fake GitHub repositories** advertising "unlocked enterprise features" from the leaked code. These repos delivered **Vidar infostealer** (steals credentials, credit card data, browser history) and **GhostSocks** (network traffic proxy malware). The leak didn't just embarrass Anthropic — it became a social engineering lure for malware distribution ([The Register](https://www.theregister.com/2026/04/02/trojanized_claude_code_leak_github/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/claude-code-leak-used-to-push-infostealer-malware-on-github/)).
+
 ### Why This Matters
 
 This isn't a story about one company having a bad week. It's a stress test of whether frontier AI labs can operate at the speed they've chosen. Anthropic publishes the most rigorous AI safety research in the industry. If *they* can't keep their CMS configured correctly and their npm publishes clean, the question for the entire field is uncomfortable: **what are the rest of you leaking that nobody's found yet?**
@@ -147,6 +151,10 @@ The attacker gained access to the Axios maintainer's publishing credentials and 
 2. **Installed a Remote Access Trojan** (RAT) for persistent access
 
 The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage across both modern and legacy codebases.
+
+**Attribution:** Microsoft attributed the attack to **Sapphire Sleet**, a North Korean state actor. Google attributed it to **UNC1069**, a financially motivated DPRK-nexus threat group active since at least 2018. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window before the compromise was detected ([Microsoft](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package)).
+
+**Collateral damage:** Users who installed or updated Claude Code via npm on March 31 between 00:21 and 03:29 UTC may have pulled a trojanized version of Axios containing a cross-platform RAT — making Anthropic's own tool briefly a malware delivery vector.
 
 ### The AI Amplification Problem
 
@@ -621,6 +629,15 @@ GitHub's agent now understands codebases, produces implementation plans, and exe
 **OpenClaw: the agent-as-OS pattern**
 Karpathy's Dobby demo shows a single agent dynamically discovering and integrating with arbitrary systems via reverse-engineered APIs. The implication: agents don't need official integrations — they can figure out how to control any networked system.
 
+**Azure AI Foundry: CVSS 10 — maximum severity**
+CVE-2026-32213, published April 3: an unauthorized attacker can escalate privileges over the network with no authentication required. Microsoft patched server-side ([TheHackerWire](https://www.thehackerwire.com/azure-ai-foundry-critical-privilege-escalation-cve-2026-32213/)). The AI platform attack surface is widening.
+
+**Autonomous jailbreak: 97% success rate**
+Nature Communications published research showing large reasoning models can autonomously jailbreak other AI models with a 97.14% overall success rate. Claude 4 Sonnet was the most resistant (50% refusal rate). Makes jailbreaking scalable and accessible to non-experts ([Nature Communications](https://www.nature.com/articles/s41467-026-69010-1)).
+
+**California AI executive order (March 30)**
+Governor Newsom signed an order requiring AI companies seeking state contracts to explain policies on illegal content, bias, and civil rights. Also reserves California's right to overrule federal AI supply chain risk designations.
+
 ### 🔵 Watch Signals
 
 **Claude Mythos "Capybara" tier**
@@ -629,11 +646,17 @@ If the leaked specifications are accurate, Mythos represents a step-change in ca
 **Congressional oversight of AI lab security**
 Gottheimer's letter may be the opening move in a broader push for mandatory security standards at frontier AI labs. The precedent: if your models pose national security risks, your operational security practices are now Congress's business.
 
+**Axios attack attributed to North Korea**
+Microsoft (Sapphire Sleet) and Google (UNC1069) both attributed the Axios npm compromise to DPRK state actors. Nation-state supply chain attacks are now targeting JavaScript's most-downloaded libraries.
+
 **"AI-washing" layoffs narrative going mainstream**
 Andreessen, Fortune, and Bloomberg all published competing analyses of whether AI is actually causing layoffs or just providing cover. The narrative is splitting — which means policy responses will diverge too.
 
 **OpenAI's media strategy**
 Acquiring TBPN ($30M revenue trajectory) and placing it under the strategy org signals that OpenAI views narrative control as a strategic priority, not a PR function. Editorial independence pledges will be tested.
+
+**Microsoft threat report: "Agent ecosystem will become the most attacked surface"**
+Microsoft's April 2 report warns that AI is reducing friction across the entire attack lifecycle. The barrier to sophisticated attacks "has collapsed." ([Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/))
 
 ---
 

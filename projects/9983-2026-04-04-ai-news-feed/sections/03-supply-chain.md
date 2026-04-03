@@ -32,6 +32,10 @@ The attacker gained access to the Axios maintainer's publishing credentials and 
 
 The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage across both modern and legacy codebases.
 
+**Attribution:** Microsoft attributed the attack to **Sapphire Sleet**, a North Korean state actor. Google attributed it to **UNC1069**, a financially motivated DPRK-nexus threat group active since at least 2018. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window before the compromise was detected ([Microsoft](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package)).
+
+**Collateral damage:** Users who installed or updated Claude Code via npm on March 31 between 00:21 and 03:29 UTC may have pulled a trojanized version of Axios containing a cross-platform RAT — making Anthropic's own tool briefly a malware delivery vector.
+
 ### The AI Amplification Problem
 
 A detail buried in the week's research deserves its own spotlight: a study analyzing **117,000 dependency changes** across thousands of GitHub repositories found that **AI coding agents choose package versions with known vulnerabilities 50% more often than human developers** ([Digital Today](https://www.digitaltoday.co.kr/en/view/45305/tech-insight-why-software-supply-chains-are-being-breached-quickly-amid-the-spread-of-ai-coding#:~:text=50%20percent%20more%20often%20than%20humans)).
