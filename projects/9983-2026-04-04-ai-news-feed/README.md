@@ -27,7 +27,7 @@ explorers:
 3. [Supply Chain Siege — TeamPCP and the Axios Bomb](#3-supply-chain-siege--teampcp-and-the-axios-bomb)
 4. [Google's Open Model Play — Gemma 4 Under Apache 2.0](#4-googles-open-model-play--gemma-4-under-apache-20)
 5. [Oracle's 6am Email and the Great Layoff Reckoning](#5-oracles-6am-email-and-the-great-layoff-reckoning)
-6. [GitHub Copilot Goes Cloud-Native](#6-github-copilot-goes-cloud-native)
+6. [The Agent IDE Era — Copilot and Cursor 3](#6-github-copilot-goes-cloud-native)
 7. [Vibe Coding's Security Reckoning](#7-vibe-codings-security-reckoning)
 8. [Karpathy's Psychosis and the Agent-First Future](#8-karpathys-psychosis-and-the-agent-first-future)
 9. [Voice Tracker](#9-voice-tracker)
@@ -285,9 +285,25 @@ Organization admins can now:
 
 This addresses the enterprise deployment gap: IT teams can standardize how Copilot's agent runs across the organization while maintaining central control.
 
+### Copilot SDK (April 2)
+
+GitHub also released the **Copilot SDK in public preview** — building blocks to embed Copilot's agentic capabilities into external apps. Available for Node.js/TypeScript, Python, Go, .NET, and Java. This opens Copilot's agent infrastructure to the broader developer tools ecosystem.
+
+### Cursor 3: The Agent Management IDE (April 2)
+
+The same week, **Cursor shipped its biggest update ever** — a ground-up redesign centered on managing multiple AI agents rather than writing code directly ([Cursor Blog](https://cursor.com/blog/cursor-3)):
+
+- **Agents Window** — run many agents in parallel across repos and environments (local, worktrees, cloud, SSH)
+- **Design Mode** — annotate and target UI elements in a browser view, giving agents pixel-precise feedback
+- **/worktree** — creates isolated git worktrees so agent changes don't conflict
+- **/best-of-n** — runs the same task across multiple models in parallel worktrees, then compares outcomes
+- **Composer 2** — frontier coding model scoring 61.3 on CursorBench (37% improvement) and 73.7 on SWE-bench Multilingual
+
+Cursor 3 represents a philosophical shift: **the developer becomes an orchestrator supervising multiple agents**, not a line-by-line coder.
+
 ### Why This Matters
 
-The three updates form a coherent story: Copilot cloud agent is being positioned as a full development peer, not a typing accelerator. Research-then-plan-then-code is how human developers work. Signed commits solve the audit trail problem. Org-level controls solve the governance problem. GitHub is systematically removing the reasons enterprises say "not yet" to agentic development.
+GitHub and Cursor both shipped agent-management paradigms in the same week. The convergence is clear: AI development tools are no longer autocomplete engines — they're autonomous workflow platforms. The developer's job is shifting from "write code" to "direct agents, review output, maintain architecture." Research-plan-code (Copilot), multi-agent orchestration (Cursor 3), and signed commits (both) all point to the same future.
 
 ---
 
@@ -328,6 +344,10 @@ The pattern isn't random. AI models:
 **Databricks** released "[Passing the Security Vibe Check](https://www.databricks.com/blog/passing-security-vibe-check-dangers-vibe-coding#:~:text=Dangers%20of%20Vibe%20Coding)" arguing that the problem isn't vibe coding itself but the absence of guardrails: review gates, automated SAST/DAST, and human oversight of architecture decisions.
 
 A **TechRxiv survey** on systemic risks in autonomous development workflows found that nearly half of all AI-generated code contains security flaws, with no improvement across larger or newer models — suggesting the problem is structural, not a temporary capability gap.
+
+### Apple Cracks Down
+
+Apple [removed the AI app builder "Anything"](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/#:~:text=Apple%20steps%20up%20crackdown%20on%20vibe%20coding%20apps) from the App Store on March 30, escalating enforcement against vibe coding platforms. Apple also blocked updates for **Replit and Vibecode**, citing App Store rule 2.5.2 — apps cannot run code that changes how they function post-review. The core issue: vibe coding apps generate and execute code inside embedded web views that Apple never reviewed.
 
 ### The Harvard Perspective
 
@@ -553,11 +573,14 @@ When the person who coined "vibe coding" says he hasn't written code in four mon
 
 - **Qwen 3.6-Plus** (April 2) — hybrid linear-attention + sparse MoE architecture. 1M-token context window. Rivals Claude Opus 4.5 on benchmarks. Native multimodal: generates frontend pages, produces code from screenshots. Priced at ~$0.29/M input tokens — significantly cheaper than Western competitors ([Caixin Global](https://www.caixinglobal.com/2026-04-02/alibaba-releases-qwen-36-plus-ai-model-with-enhanced-coding-capabilities-102430395.html))
 
+### Cursor
+
+- **Cursor 3** (April 2) — ground-up redesign: Agents Window, Design Mode, /worktree, /best-of-n. Composer 2 model: 61.3 CursorBench, 73.7 SWE-bench Multilingual (see [§6](#6-github-copilot-goes-cloud-native))
+
 ### Windsurf
 
-- Completed shift from credit-based to **quota-based pricing** ($20/mo Pro = Cursor parity, $40/seat Teams, $200/mo Max)
-- **GPT-5.4 Mini** available at 1x credits
-- **Arena Mode** for side-by-side model comparison in the IDE
+- **GPT-5.1 and GPT-5.1-Codex** now available; **Gemini 3 Pro** preview added
+- Completed shift from credit-based to **quota-based pricing** ($20/mo Pro, $40/seat Teams, $200/mo Max)
 
 ### OpenClaw
 

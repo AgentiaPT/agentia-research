@@ -36,6 +36,10 @@ The pattern isn't random. AI models:
 
 A **TechRxiv survey** on systemic risks in autonomous development workflows found that nearly half of all AI-generated code contains security flaws, with no improvement across larger or newer models — suggesting the problem is structural, not a temporary capability gap.
 
+### Apple Cracks Down
+
+Apple [removed the AI app builder "Anything"](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/#:~:text=Apple%20steps%20up%20crackdown%20on%20vibe%20coding%20apps) from the App Store on March 30, escalating enforcement against vibe coding platforms. Apple also blocked updates for **Replit and Vibecode**, citing App Store rule 2.5.2 — apps cannot run code that changes how they function post-review. The core issue: vibe coding apps generate and execute code inside embedded web views that Apple never reviewed.
+
 ### The Harvard Perspective
 
 The Harvard Gazette [published a feature](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/) examining vibe coding as a window into broader AI adoption patterns — not just for software, but as a template for how AI transforms professional work more generally. *(Full article behind paywall — see [pending.md](pending.md) for extraction request.)*

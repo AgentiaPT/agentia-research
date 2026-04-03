@@ -26,6 +26,22 @@ Organization admins can now:
 
 This addresses the enterprise deployment gap: IT teams can standardize how Copilot's agent runs across the organization while maintaining central control.
 
+### Copilot SDK (April 2)
+
+GitHub also released the **Copilot SDK in public preview** — building blocks to embed Copilot's agentic capabilities into external apps. Available for Node.js/TypeScript, Python, Go, .NET, and Java. This opens Copilot's agent infrastructure to the broader developer tools ecosystem.
+
+### Cursor 3: The Agent Management IDE (April 2)
+
+The same week, **Cursor shipped its biggest update ever** — a ground-up redesign centered on managing multiple AI agents rather than writing code directly ([Cursor Blog](https://cursor.com/blog/cursor-3)):
+
+- **Agents Window** — run many agents in parallel across repos and environments (local, worktrees, cloud, SSH)
+- **Design Mode** — annotate and target UI elements in a browser view, giving agents pixel-precise feedback
+- **/worktree** — creates isolated git worktrees so agent changes don't conflict
+- **/best-of-n** — runs the same task across multiple models in parallel worktrees, then compares outcomes
+- **Composer 2** — frontier coding model scoring 61.3 on CursorBench (37% improvement) and 73.7 on SWE-bench Multilingual
+
+Cursor 3 represents a philosophical shift: **the developer becomes an orchestrator supervising multiple agents**, not a line-by-line coder.
+
 ### Why This Matters
 
-The three updates form a coherent story: Copilot cloud agent is being positioned as a full development peer, not a typing accelerator. Research-then-plan-then-code is how human developers work. Signed commits solve the audit trail problem. Org-level controls solve the governance problem. GitHub is systematically removing the reasons enterprises say "not yet" to agentic development.
+GitHub and Cursor both shipped agent-management paradigms in the same week. The convergence is clear: AI development tools are no longer autocomplete engines — they're autonomous workflow platforms. The developer's job is shifting from "write code" to "direct agents, review output, maintain architecture." Research-plan-code (Copilot), multi-agent orchestration (Cursor 3), and signed commits (both) all point to the same future.

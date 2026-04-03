@@ -40,11 +40,14 @@
 
 - **Qwen 3.6-Plus** (April 2) — hybrid linear-attention + sparse MoE architecture. 1M-token context window. Rivals Claude Opus 4.5 on benchmarks. Native multimodal: generates frontend pages, produces code from screenshots. Priced at ~$0.29/M input tokens — significantly cheaper than Western competitors ([Caixin Global](https://www.caixinglobal.com/2026-04-02/alibaba-releases-qwen-36-plus-ai-model-with-enhanced-coding-capabilities-102430395.html))
 
+### Cursor
+
+- **Cursor 3** (April 2) — ground-up redesign: Agents Window, Design Mode, /worktree, /best-of-n. Composer 2 model: 61.3 CursorBench, 73.7 SWE-bench Multilingual (see [§6](#6-github-copilot-goes-cloud-native))
+
 ### Windsurf
 
-- Completed shift from credit-based to **quota-based pricing** ($20/mo Pro = Cursor parity, $40/seat Teams, $200/mo Max)
-- **GPT-5.4 Mini** available at 1x credits
-- **Arena Mode** for side-by-side model comparison in the IDE
+- **GPT-5.1 and GPT-5.1-Codex** now available; **Gemini 3 Pro** preview added
+- Completed shift from credit-based to **quota-based pricing** ($20/mo Pro, $40/seat Teams, $200/mo Max)
 
 ### OpenClaw
 
