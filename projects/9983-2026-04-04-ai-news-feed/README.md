@@ -531,13 +531,19 @@ When the person who coined "vibe coding" says he hasn't written code in four mon
 
 ### OpenAI
 
-- **Acquired TBPN** — daily tech talk show hosted by John Coogan and Jordi Hays (April 2). On track for $30M+ revenue in 2026. Reports to Chris Lehane (strategy org). Editorial independence pledged. Sam Altman: *"I don't expect them to go any easier on us."* ([TechCrunch](https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/))
-- **Codex-only seats** — New pricing tier for API-focused teams ([TipRanks](https://www.tipranks.com/news/the-fly/ai-daily-openai-acquires-tbpn-rolls-out-codex-only-seats-thefly-news))
-- CNBC noted OpenAI's M&A strategy draws questions — the TBPN buy labeled as "[chasing vibes](https://www.cnbc.com/2026/04/03/chasing-vibes-openai-ma-strategy-gets-more-confusing-with-tbpn-.html#:~:text=chasing%20vibes)" by some analysts
+- **$122B funding round closed** (March 31) — largest private round in history. $852B valuation. Amazon ($50B, $35B contingent on IPO/AGI milestone), NVIDIA ($30B), SoftBank ($30B). First retail investor participation ($3B). Revenue: $2B/month, 900M weekly active users, 50M subscribers. IPO expected later in 2026 ([TechCrunch](https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round))
+- **Acquired TBPN** — daily tech talk show (April 2). $30M+ revenue trajectory. Reports to Chris Lehane. Sam Altman: *"I don't expect them to go any easier on us."* ([TechCrunch](https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/))
+- **Codex-only seats** — New pricing tier for API-focused teams
+- CNBC noted OpenAI's M&A strategy draws questions — "[chasing vibes](https://www.cnbc.com/2026/04/03/chasing-vibes-openai-ma-strategy-gets-more-confusing-with-tbpn-.html#:~:text=chasing%20vibes)"
 
 ### Microsoft
 
-- **Three new in-house AI models** — speech transcription, voice generation, and an upgraded image creator. Signals Microsoft building foundational AI independently, not just relying on OpenAI partnership ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) — *(403, details from search snippets)*)
+- **Three new in-house AI models** — speech transcription, voice generation, and an upgraded image creator. Building foundational AI independently ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) — *(403)*)
+- **$10B Japan AI investment** (April 3, 2026–2029) — infrastructure, cybersecurity, partnerships with Sakura Internet, SoftBank, NTT Data, NEC, Fujitsu, Hitachi. Goal: train 1M AI professionals by 2030
+
+### NVIDIA
+
+- **Vera Rubin platform in full production** — next-gen chips entered production ahead of schedule. 10× reduction in inference token cost, 4× fewer GPUs to train MoE models vs. Blackwell. Vera Rubin NVL72: 72 GPUs in a single rack. AWS, Google Cloud, Microsoft, OCI deploying in H2 2026 ([NVIDIA](https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform))
 
 ### Windsurf
 
@@ -563,6 +569,7 @@ When the person who coined "vibe coding" says he hasn't written code in four mon
 | Worst first quarter since | **2023** | Bloomberg |
 | March layoffs citing AI | **15,341** (25% of total) | Bloomberg |
 | Oracle layoffs (March 31) | **20,000–30,000** (~18% workforce) | [CNBC](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) |
+| Meta layoffs (March 25–April 2) | **hundreds** (potentially 15K total) | [NBC News](https://www.nbcnews.com/tech/social-media/meta-layoffs-hundreds-employees-five-divisions-vr-ai-who-rcna265127) |
 | Block layoffs (Q1) | **4,000** (~40% workforce) | [eWeek](https://www.eweek.com/news/more-tech-layoffs-ai-job-impact-2026/) |
 | CFO projected AI cuts 2026 | **0.4%** of roles (502K of 125M) | [Fortune](https://fortune.com/2026/03/24/cfo-survey-ai-job-cuts-productivity-paradox-2026/) |
 | AI infra jobs needed (US) | **500,000** (data centers + grid) | [Goldman Sachs](https://fortune.com/2026/04/02/ford-ceo-jim-farley-essential-economy-blue-collar-goldman-sachs/) |
@@ -588,6 +595,14 @@ Despite the layoff headlines, AI-adjacent hiring continues:
 - **AI infrastructure** engineers (Oracle laying off traditional roles while building AI data centers)
 
 The emerging pattern: **AI is reorganizing the labor market, not uniformly shrinking it.** White-collar knowledge work faces the most disruption, while physical infrastructure and AI safety roles are growing — but the people being displaced aren't the same people filling the new positions.
+
+### The Capital Behind the Cuts
+
+The scale of AI investment this week provides context for the layoffs. **Q1 2026 venture funding hit $300 billion** — a record — with AI accounting for **$242 billion (80%)** of the total. The four largest rounds alone (OpenAI $122B, Anthropic $30B, xAI $20B, Waymo $16B) totaled $188 billion. Amazon, Meta, Google, and Microsoft are collectively expected to invest **$650 billion** in AI infrastructure within a single year ([Crunchbase](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/)). That money has to come from somewhere — and increasingly, it's coming from headcount.
+
+### The Junior Developer Squeeze
+
+Entry-level hiring at the 15 biggest tech firms **fell 25%** from 2023–2024. Job postings for "junior developer" or "entry-level software engineer" are down **~40%** compared to pre-2022 levels. Yet overall demand for software developers has **increased 34%** since AI coding assistants went mainstream, and "AI Integration Engineer" is the fastest-growing developer title (+156% YoY). AI is creating a barbell effect: entry-level shrinks, senior/AI-specialized grows ([IEEE Spectrum](https://spectrum.ieee.org/ai-effect-entry-level-jobs)).
 
 ---
 

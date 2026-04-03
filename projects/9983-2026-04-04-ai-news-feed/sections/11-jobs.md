@@ -8,6 +8,7 @@
 | Worst first quarter since | **2023** | Bloomberg |
 | March layoffs citing AI | **15,341** (25% of total) | Bloomberg |
 | Oracle layoffs (March 31) | **20,000–30,000** (~18% workforce) | [CNBC](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) |
+| Meta layoffs (March 25–April 2) | **hundreds** (potentially 15K total) | [NBC News](https://www.nbcnews.com/tech/social-media/meta-layoffs-hundreds-employees-five-divisions-vr-ai-who-rcna265127) |
 | Block layoffs (Q1) | **4,000** (~40% workforce) | [eWeek](https://www.eweek.com/news/more-tech-layoffs-ai-job-impact-2026/) |
 | CFO projected AI cuts 2026 | **0.4%** of roles (502K of 125M) | [Fortune](https://fortune.com/2026/03/24/cfo-survey-ai-job-cuts-productivity-paradox-2026/) |
 | AI infra jobs needed (US) | **500,000** (data centers + grid) | [Goldman Sachs](https://fortune.com/2026/04/02/ford-ceo-jim-farley-essential-economy-blue-collar-goldman-sachs/) |
@@ -33,3 +34,11 @@ Despite the layoff headlines, AI-adjacent hiring continues:
 - **AI infrastructure** engineers (Oracle laying off traditional roles while building AI data centers)
 
 The emerging pattern: **AI is reorganizing the labor market, not uniformly shrinking it.** White-collar knowledge work faces the most disruption, while physical infrastructure and AI safety roles are growing — but the people being displaced aren't the same people filling the new positions.
+
+### The Capital Behind the Cuts
+
+The scale of AI investment this week provides context for the layoffs. **Q1 2026 venture funding hit $300 billion** — a record — with AI accounting for **$242 billion (80%)** of the total. The four largest rounds alone (OpenAI $122B, Anthropic $30B, xAI $20B, Waymo $16B) totaled $188 billion. Amazon, Meta, Google, and Microsoft are collectively expected to invest **$650 billion** in AI infrastructure within a single year ([Crunchbase](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/)). That money has to come from somewhere — and increasingly, it's coming from headcount.
+
+### The Junior Developer Squeeze
+
+Entry-level hiring at the 15 biggest tech firms **fell 25%** from 2023–2024. Job postings for "junior developer" or "entry-level software engineer" are down **~40%** compared to pre-2022 levels. Yet overall demand for software developers has **increased 34%** since AI coding assistants went mainstream, and "AI Integration Engineer" is the fastest-growing developer title (+156% YoY). AI is creating a barbell effect: entry-level shrinks, senior/AI-specialized grows ([IEEE Spectrum](https://spectrum.ieee.org/ai-effect-entry-level-jobs)).

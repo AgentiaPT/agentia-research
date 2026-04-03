@@ -21,13 +21,19 @@
 
 ### OpenAI
 
-- **Acquired TBPN** — daily tech talk show hosted by John Coogan and Jordi Hays (April 2). On track for $30M+ revenue in 2026. Reports to Chris Lehane (strategy org). Editorial independence pledged. Sam Altman: *"I don't expect them to go any easier on us."* ([TechCrunch](https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/))
-- **Codex-only seats** — New pricing tier for API-focused teams ([TipRanks](https://www.tipranks.com/news/the-fly/ai-daily-openai-acquires-tbpn-rolls-out-codex-only-seats-thefly-news))
-- CNBC noted OpenAI's M&A strategy draws questions — the TBPN buy labeled as "[chasing vibes](https://www.cnbc.com/2026/04/03/chasing-vibes-openai-ma-strategy-gets-more-confusing-with-tbpn-.html#:~:text=chasing%20vibes)" by some analysts
+- **$122B funding round closed** (March 31) — largest private round in history. $852B valuation. Amazon ($50B, $35B contingent on IPO/AGI milestone), NVIDIA ($30B), SoftBank ($30B). First retail investor participation ($3B). Revenue: $2B/month, 900M weekly active users, 50M subscribers. IPO expected later in 2026 ([TechCrunch](https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round))
+- **Acquired TBPN** — daily tech talk show (April 2). $30M+ revenue trajectory. Reports to Chris Lehane. Sam Altman: *"I don't expect them to go any easier on us."* ([TechCrunch](https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/))
+- **Codex-only seats** — New pricing tier for API-focused teams
+- CNBC noted OpenAI's M&A strategy draws questions — "[chasing vibes](https://www.cnbc.com/2026/04/03/chasing-vibes-openai-ma-strategy-gets-more-confusing-with-tbpn-.html#:~:text=chasing%20vibes)"
 
 ### Microsoft
 
-- **Three new in-house AI models** — speech transcription, voice generation, and an upgraded image creator. Signals Microsoft building foundational AI independently, not just relying on OpenAI partnership ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) — *(403, details from search snippets)*)
+- **Three new in-house AI models** — speech transcription, voice generation, and an upgraded image creator. Building foundational AI independently ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) — *(403)*)
+- **$10B Japan AI investment** (April 3, 2026–2029) — infrastructure, cybersecurity, partnerships with Sakura Internet, SoftBank, NTT Data, NEC, Fujitsu, Hitachi. Goal: train 1M AI professionals by 2030
+
+### NVIDIA
+
+- **Vera Rubin platform in full production** — next-gen chips entered production ahead of schedule. 10× reduction in inference token cost, 4× fewer GPUs to train MoE models vs. Blackwell. Vera Rubin NVL72: 72 GPUs in a single rack. AWS, Google Cloud, Microsoft, OCI deploying in H2 2026 ([NVIDIA](https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform))
 
 ### Windsurf
 
