@@ -1,47 +1,34 @@
-## 3. Supply Chain Siege — TeamPCP and the Axios Bomb
+## 3. The Axios Bomb — North Korea Hits npm's Most-Downloaded HTTP Library
 
-**March 19 – March 31 | [Palo Alto Unit42](https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks/) · [InfoQ](https://www.infoq.com/news/2026/04/axios-supply-chain/) · [The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/) · [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/)**
+**March 31 | [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package) · [The Hacker News](https://thehackernews.com/2026/04/google-attributes-axios-npm-supply.html)**
 
-Last week's edition covered the opening salvos of the TeamPCP campaign. This week, the full scope became clear — and then Axios fell.
+On March 31 — the same day Anthropic leaked its source code — attackers compromised the official **Axios package on npm**, one of the most widely-used HTTP libraries in the JavaScript ecosystem with **over 70 million downloads per week**.
 
-### TeamPCP: When Security Tools Become Weapons
+### The Attack
 
-Between March 19 and March 27, threat group **TeamPCP** executed a methodical, escalating campaign that compromised four widely-used open-source projects:
+Between 00:21 and 03:20 UTC, the attacker gained access to the Axios maintainer's publishing credentials, changed the maintainer's email to an attacker-controlled account, and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency (`plain-crypto-js`). On install, the code:
 
-| Date | Target | Vector |
-|---|---|---|
-| March 19 | **Trivy** (Aqua Security) | Incomplete credential rotation → force-push to 76/77 version tags |
-| March 23 | **KICS** / Checkmarx AST | GitHub Actions compromise |
-| March 24 | **LiteLLM** (AI gateway) | PyPI registry poisoning |
-| March 27 | **Telnyx** (communications) | PyPI registry poisoning |
+1. **Contacted C2 servers** and downloaded OS-specific payloads (macOS, Windows, Linux)
+2. **Stole credentials** — cloud access keys, database passwords, API tokens
+3. **Installed a Remote Access Trojan** (RAT) for persistent access
 
-The attack on Trivy was particularly devastating. TeamPCP exploited an incomplete credential rotation following a minor breach in late February, then **force-pushed malicious code to 76 of 77 version tags** in the `aquasecurity/trivy-action` repository and all tags in `aquasecurity/setup-trivy`. Every CI/CD pipeline pinned to a Trivy version tag was potentially compromised.
+The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage across both modern and legacy codebases. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window.
 
-> "We know of over 1,000 impacted SaaS environments right now that are actively dealing with this particular threat actor." — **Charles Carmakal**, Mandiant Consulting CTO, [via The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/#:~:text=over%201%2C000%20impacted%20SaaS%20environments)
+### North Korean Attribution
 
-The irony is bitter: **the vulnerability scanner became the vulnerability**. Organizations running Trivy specifically to *detect* supply chain threats were instead *introducing* them.
+Both Microsoft and Google independently attributed the attack to **North Korean state actors**:
 
-### The Axios Bomb (March 31)
+- Microsoft identified the infrastructure as belonging to **Sapphire Sleet**, a DPRK group active since 2020 focused on cryptocurrency and financial targets
+- Google attributed it to **UNC1069**, a financially motivated North Korea-nexus threat actor active since at least 2018
 
-On the same day Anthropic leaked its source code, attackers compromised the official **Axios package on npm** — one of the most widely-used HTTP libraries in the JavaScript ecosystem, with **over 70 million downloads per week**.
+### Collateral Damage
 
-The attacker gained access to the Axios maintainer's publishing credentials and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency. On install, the code:
+Users who installed or updated Claude Code via npm on March 31 between 00:21 and 03:29 UTC may have pulled a trojanized version of Axios containing a cross-platform RAT — making Anthropic's own tool briefly a malware delivery vector.
 
-1. **Stole credentials** — cloud access keys, database passwords, API tokens
-2. **Installed a Remote Access Trojan** (RAT) for persistent access
+### TeamPCP Fallout Continues
 
-The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage across both modern and legacy codebases.
-
-**Attribution:** Microsoft attributed the attack to **Sapphire Sleet**, a North Korean state actor. Google attributed it to **UNC1069**, a financially motivated DPRK-nexus threat group active since at least 2018. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window before the compromise was detected ([Microsoft](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package)).
-
-**Collateral damage:** Users who installed or updated Claude Code via npm on March 31 between 00:21 and 03:29 UTC may have pulled a trojanized version of Axios containing a cross-platform RAT — making Anthropic's own tool briefly a malware delivery vector.
-
-### The AI Amplification Problem
-
-A detail buried in the week's research deserves its own spotlight: a study analyzing **117,000 dependency changes** across thousands of GitHub repositories found that **AI coding agents choose package versions with known vulnerabilities 50% more often than human developers** ([Digital Today](https://www.digitaltoday.co.kr/en/view/45305/tech-insight-why-software-supply-chains-are-being-breached-quickly-amid-the-spread-of-ai-coding#:~:text=50%20percent%20more%20often%20than%20humans)).
-
-The implications are circular: AI tools that accelerate development also accelerate the introduction of vulnerable dependencies, which then get exploited by supply chain attacks, which then require more security tooling — some of which (see: Trivy) is itself compromised.
+Meanwhile, the [TeamPCP supply chain campaign covered last week](../9984-2026-03-29-ai-news-feed/README.md#1-the-supply-chain-reckoning--litellm-trivy-and-the-teampcp-campaign) (Trivy → KICS → LiteLLM → Telnyx) continued to cause damage. Mandiant's CTO Charles Carmakal reported **1,000+ cloud environments** actively dealing with the threat actor ([The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/)), and Microsoft published detailed [mitigation guidance](https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/).
 
 ### Why This Matters
 
-TeamPCP's campaign represents a phase transition in supply chain attacks. Previous high-profile incidents (SolarWinds, Log4j, xz-utils) targeted general infrastructure. TeamPCP specifically targeted **security infrastructure** — the tools organizations use to protect themselves. When your vulnerability scanner is the vulnerability, the detection-defense loop breaks.
+The Axios attack raises the stakes beyond TeamPCP. This wasn't a security tool compromise or an obscure package — it was one of npm's most-downloaded libraries, targeted by a nation-state actor. When North Korea is poisoning JavaScript's HTTP layer, every `npm install` is a potential attack surface.

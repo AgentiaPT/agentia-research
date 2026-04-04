@@ -23,13 +23,13 @@ explorers:
 ## Contents
 
 1. [The Week's Narrative — When the Builders Break Their Own Tools](#1-the-weeks-narrative--when-the-builders-break-their-own-tools)
-2. [Anthropic's Week from Hell — Mythos, Claude Code, and Congressional Fire](#2-anthropics-week-from-hell--mythos-claude-code-and-congressional-fire)
-3. [Supply Chain Siege — TeamPCP and the Axios Bomb](#3-supply-chain-siege--teampcp-and-the-axios-bomb)
+2. [Anthropic's Week from Hell — Claude Code, DMCA, and Congressional Fire](#2-anthropics-week-from-hell--claude-code-dmca-and-congressional-fire)
+3. [The Axios Bomb — North Korea Hits npm](#3-the-axios-bomb--north-korea-hits-npms-most-downloaded-http-library)
 4. [Google's Open Model Play — Gemma 4 Under Apache 2.0](#4-googles-open-model-play--gemma-4-under-apache-20)
 5. [Oracle's 6am Email and the Great Layoff Reckoning](#5-oracles-6am-email-and-the-great-layoff-reckoning)
 6. [The Agent IDE Era — Copilot and Cursor 3](#6-github-copilot-goes-cloud-native)
-7. [Vibe Coding's Security Reckoning](#7-vibe-codings-security-reckoning)
-8. [Karpathy's Psychosis and the Agent-First Future](#8-karpathys-psychosis-and-the-agent-first-future)
+7. [Vibe Coding Under Fire — Apple Cracks Down](#7-vibe-coding-under-fire--apple-cracks-down-palo-alto-publishes-framework)
+8. [Karpathy's Dobby and the Agent-First Future](#8-karpathys-dobby-and-the-agent-first-future)
 9. [Voice Tracker](#9-voice-tracker)
 10. [Model & Tool Updates](#10-model--tool-updates)
 11. [Jobs & Economic Impact](#11-jobs--economic-impact)
@@ -38,50 +38,40 @@ explorers:
 ---
 ## 1. The Week's Narrative — When the Builders Break Their Own Tools
 
-Last week was **the unraveling**. The company building one of the world's most capable AI models accidentally leaked its next-generation model's specifications, then leaked its flagship coding tool's source code, then accidentally took down 8,100 GitHub repositories trying to clean up, then received a Congressional letter questioning whether it can be trusted with national security. Meanwhile, a threat actor turned the industry's own vulnerability scanners into attack vectors, Oracle fired 30,000 people via a 6am email to fund AI data centers, and the most prolific open-source AI advocate on Earth said he hasn't typed a line of code since December.
+Last week was **the unraveling**. Anthropic leaked its flagship coding tool's 512,000-line source code through an npm packaging error, then accidentally took down 8,100 GitHub repositories trying to clean up, then received a Congressional letter questioning whether it can be trusted with national security. Meanwhile, North Korea poisoned npm's most-downloaded HTTP library, Oracle fired 30,000 people via a 6am email to fund AI data centers, Google dropped its most capable open model under Apache 2.0, and both GitHub and Cursor shipped agent-management IDEs within 24 hours of each other.
 
 The infrastructure of trust — from code registries to model labs to employment contracts — is fracturing under the weight of speed.
 
 | Layer | Who | What |
 |---|---|---|
-| **Model Security** | Anthropic | Leaked Mythos specs + Claude Code source in one week |
-| **Supply Chain** | TeamPCP / Axios attackers | Compromised security scanners + npm's most-downloaded HTTP library |
-| **Open Models** | Google | Gemma 4 under Apache 2.0 — most capable open model family yet |
+| **Model Security** | Anthropic | Claude Code source leaked via npm; KAIROS daemon mode revealed |
+| **Supply Chain** | North Korea / DPRK | Axios (70M+ downloads/week) poisoned with RAT |
+| **Open Models** | Google | Gemma 4 under Apache 2.0 — 31B model ranks #3 globally |
 | **Employment** | Oracle / Bloomberg / Andreessen | 30K layoffs vs. "AI is the silver bullet excuse" |
-| **Developer Tools** | GitHub / Karpathy | Copilot goes autonomous; Karpathy replaces apps with one agent |
-| **Code Quality** | Multiple studies | 53% of AI code has security holes; 2.74× more XSS |
+| **Developer Tools** | GitHub / Cursor | Both ship agent-management paradigms in the same week |
+| **Funding** | OpenAI | $122B round at $852B valuation — largest private raise in history |
 
 ### The Unifying Thread
 
-Every major story this week traces back to a single tension: **the tools are outrunning the institutions that govern them**. Anthropic's leaks weren't sophisticated attacks — they were configuration errors and packaging mistakes. TeamPCP didn't need zero-days — they exploited incomplete credential rotations. Oracle didn't restructure thoughtfully — they sent a mass email at dawn. The technology is moving at frontier speed, but the operational maturity around it is stuck in 2019.
+Every major story this week traces back to a single tension: **the tools are outrunning the institutions that govern them**. Anthropic's leak wasn't a sophisticated attack — it was Bun generating a source map and `.npmignore` missing an entry. The Axios compromise exploited stolen maintainer credentials. Oracle didn't restructure thoughtfully — they sent a mass email at dawn. The technology is moving at frontier speed, but the operational maturity around it is stuck in 2019.
 
 ### The Deepest Signal
 
-The Anthropic saga is the week's defining metaphor. The company that writes the most sophisticated AI safety research on Earth couldn't keep its own model specifications or source code from leaking through a misconfigured CMS and a fat-fingered npm publish. When Congressman Gottheimer wrote asking whether Anthropic can be trusted with models that pose "unprecedented cybersecurity risks," the implicit question was bigger than one company: **can any institution move this fast without dropping something critical?**
+The Anthropic saga is the week's defining metaphor. The company that writes the most sophisticated AI safety research on Earth couldn't keep its source code from leaking through a packaging error. When Congressman Gottheimer wrote asking whether Anthropic can be trusted with models that pose national security risks, the implicit question was bigger than one company: **can any institution move this fast without dropping something critical?**
 
 The answer, this week, was no.
 
 ---
 
-## 2. Anthropic's Week from Hell — Mythos, Claude Code, and Congressional Fire
+## 2. Anthropic's Week from Hell — Claude Code, DMCA, and Congressional Fire
 
-**March 30 – April 2 | [Euronews](https://www.euronews.com/next/2026/03/30/what-is-anthropics-mythos-the-leaked-ai-model-that-poses-unprecedented-cybersecurity-risks) · [Axios](https://www.axios.com/2026/03/31/anthropic-leaked-source-code-ai) · [TechCrunch](https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/) · [The Hill](https://thehill.com/policy/technology/5812881-gottheimer-presses-anthropic-ai-safety/)**
+**March 31 – April 2 | [Axios](https://www.axios.com/2026/03/31/anthropic-leaked-source-code-ai) · [TechCrunch](https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/) · [The Hill](https://thehill.com/policy/technology/5812881-gottheimer-presses-anthropic-ai-safety/)**
 
-Four cascading incidents in five days turned Anthropic's week into a case study in operational fragility at frontier AI labs.
+Days after the Mythos CMS leak [covered in last week's edition](../9984-2026-03-29-ai-news-feed/README.md#2-the-mythos-leak--anthropics-next-frontier-exposed), Anthropic's week got worse. Four cascading incidents turned the company into a case study in operational fragility at frontier AI labs.
 
-### Act 1: The Mythos Leak (March 30)
+### Act 1: The Claude Code Source Leak (March 31)
 
-Security researchers Roy Paz (LayerX Security) and Alexandre Pauwels (University of Cambridge) discovered that a **configuration error in Anthropic's content management system** had exposed nearly 3,000 unpublished assets — including a draft blog post describing a new model called **Claude Mythos**.
-
-The leaked draft described Mythos as a new **model tier**, not a version bump — sitting above Opus the same way Opus sits above Sonnet. Internal codename: **"Capybara."** Most alarming: Anthropic's own internal documents reportedly describe Mythos as:
-
-> "farther ahead of any other AI model in cyber capabilities, to the point that it will be able to exploit vulnerabilities in ways that far outpace the efforts of defenders"
-
-Anthropic was reportedly **[privately briefing top U.S. officials](https://www.euronews.com/next/2026/03/30/what-is-anthropics-mythos-the-leaked-ai-model-that-poses-unprecedented-cybersecurity-risks#:~:text=privately%20briefing%20top%20U.S.%20officials)** warning that Mythos makes large-scale cyberattacks significantly more likely.
-
-### Act 2: The Claude Code Source Leak (March 31)
-
-The very next day, a software engineer discovered that Anthropic had accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The root cause: Bun (the runtime) generates full source maps by default, and `*.map` was not excluded in `.npmignore`. The file pointed to a zip archive on Anthropic's cloud storage containing **the full source code — 1,906 files and 512,000 lines of TypeScript**.
+Anthropic accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The root cause: Bun (the runtime) generates full source maps by default, and `*.map` was not excluded in `.npmignore`. The file pointed to a zip archive on Anthropic's cloud storage containing **the full source code — 1,906 files and 512,000 lines of TypeScript**.
 
 An Anthropic spokesperson called it:
 
@@ -93,7 +83,7 @@ The leaked code revealed **44 hidden feature flags** and unreleased capabilities
 - **ULTRAPLAN** — offloads planning to a remote Opus 4.6 session with up to 30 minutes of dedicated think time
 - **Voice mode** with push-to-talk interface
 
-### Act 3: The DMCA Fiasco (April 1)
+### Act 2: The DMCA Fiasco (April 1)
 
 Within hours, the leaked code became the **[fastest-growing repository in GitHub history](https://cybernews.com/tech/claude-code-leak-spawns-fastest-github-repo/#:~:text=fastest%20growing%20repository%20in%20GitHub%27s%20history)**. Anthropic filed DMCA takedown notices — but the blast radius was catastrophic.
 
@@ -101,7 +91,7 @@ GitHub executed the notice against approximately **8,100 repositories**, includi
 
 Anthropic's head of Claude Code, **Boris Cherny**, retracted the bulk of the notices, limiting takedowns to one repository and 96 forks containing the actually leaked source. He acknowledged that the deploy process had manual steps that were mishandled, and said Anthropic had improved automation to prevent recurrence.
 
-### Act 4: Congressional Scrutiny (April 2)
+### Act 3: Congressional Scrutiny (April 2)
 
 Rep. **Josh Gottheimer** (D-N.J.) [wrote to Anthropic CEO Dario Amodei](https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks#:~:text=Gottheimer%20presses%20Anthropic%20on%20source%20code%20leaks%20and%20safety%20protocols), warning of potential national security risks:
 
@@ -109,63 +99,50 @@ Rep. **Josh Gottheimer** (D-N.J.) [wrote to Anthropic CEO Dario Amodei](https://
 
 Gottheimer also pointed to Anthropic's **narrowed safety policy** from late February, which removed a previous commitment to halt model development if capabilities outpace safety procedures — replacing it with "nonbinding but publicly-declared" goals.
 
-### Act 5: The Malware Exploitation
+### Act 4: The Malware Exploitation
 
 Within 48 hours of the source code leak, threat actors created **fake GitHub repositories** advertising "unlocked enterprise features" from the leaked code. These repos delivered **Vidar infostealer** (steals credentials, credit card data, browser history) and **GhostSocks** (network traffic proxy malware). The leak didn't just embarrass Anthropic — it became a social engineering lure for malware distribution ([The Register](https://www.theregister.com/2026/04/02/trojanized_claude_code_leak_github/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/claude-code-leak-used-to-push-infostealer-malware-on-github/)).
 
 ### Why This Matters
 
-This isn't a story about one company having a bad week. It's a stress test of whether frontier AI labs can operate at the speed they've chosen. Anthropic publishes the most rigorous AI safety research in the industry. If *they* can't keep their CMS configured correctly and their npm publishes clean, the question for the entire field is uncomfortable: **what are the rest of you leaking that nobody's found yet?**
+This isn't a story about one company having a bad week. It's a stress test of whether frontier AI labs can operate at the speed they've chosen. Anthropic publishes the most rigorous AI safety research in the industry. If *they* can't keep their npm publishes clean, the question for the entire field is uncomfortable: **what are the rest of you leaking that nobody's found yet?**
 
 ---
 
-## 3. Supply Chain Siege — TeamPCP and the Axios Bomb
+## 3. The Axios Bomb — North Korea Hits npm's Most-Downloaded HTTP Library
 
-**March 19 – March 31 | [Palo Alto Unit42](https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks/) · [InfoQ](https://www.infoq.com/news/2026/04/axios-supply-chain/) · [The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/) · [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/)**
+**March 31 | [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package) · [The Hacker News](https://thehackernews.com/2026/04/google-attributes-axios-npm-supply.html)**
 
-Last week's edition covered the opening salvos of the TeamPCP campaign. This week, the full scope became clear — and then Axios fell.
+On March 31 — the same day Anthropic leaked its source code — attackers compromised the official **Axios package on npm**, one of the most widely-used HTTP libraries in the JavaScript ecosystem with **over 70 million downloads per week**.
 
-### TeamPCP: When Security Tools Become Weapons
+### The Attack
 
-Between March 19 and March 27, threat group **TeamPCP** executed a methodical, escalating campaign that compromised four widely-used open-source projects:
+Between 00:21 and 03:20 UTC, the attacker gained access to the Axios maintainer's publishing credentials, changed the maintainer's email to an attacker-controlled account, and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency (`plain-crypto-js`). On install, the code:
 
-| Date | Target | Vector |
-|---|---|---|
-| March 19 | **Trivy** (Aqua Security) | Incomplete credential rotation → force-push to 76/77 version tags |
-| March 23 | **KICS** / Checkmarx AST | GitHub Actions compromise |
-| March 24 | **LiteLLM** (AI gateway) | PyPI registry poisoning |
-| March 27 | **Telnyx** (communications) | PyPI registry poisoning |
+1. **Contacted C2 servers** and downloaded OS-specific payloads (macOS, Windows, Linux)
+2. **Stole credentials** — cloud access keys, database passwords, API tokens
+3. **Installed a Remote Access Trojan** (RAT) for persistent access
 
-The attack on Trivy was particularly devastating. TeamPCP exploited an incomplete credential rotation following a minor breach in late February, then **force-pushed malicious code to 76 of 77 version tags** in the `aquasecurity/trivy-action` repository and all tags in `aquasecurity/setup-trivy`. Every CI/CD pipeline pinned to a Trivy version tag was potentially compromised.
+The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage across both modern and legacy codebases. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window.
 
-> "We know of over 1,000 impacted SaaS environments right now that are actively dealing with this particular threat actor." — **Charles Carmakal**, Mandiant Consulting CTO, [via The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/#:~:text=over%201%2C000%20impacted%20SaaS%20environments)
+### North Korean Attribution
 
-The irony is bitter: **the vulnerability scanner became the vulnerability**. Organizations running Trivy specifically to *detect* supply chain threats were instead *introducing* them.
+Both Microsoft and Google independently attributed the attack to **North Korean state actors**:
 
-### The Axios Bomb (March 31)
+- Microsoft identified the infrastructure as belonging to **Sapphire Sleet**, a DPRK group active since 2020 focused on cryptocurrency and financial targets
+- Google attributed it to **UNC1069**, a financially motivated North Korea-nexus threat actor active since at least 2018
 
-On the same day Anthropic leaked its source code, attackers compromised the official **Axios package on npm** — one of the most widely-used HTTP libraries in the JavaScript ecosystem, with **over 70 million downloads per week**.
+### Collateral Damage
 
-The attacker gained access to the Axios maintainer's publishing credentials and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency. On install, the code:
+Users who installed or updated Claude Code via npm on March 31 between 00:21 and 03:29 UTC may have pulled a trojanized version of Axios containing a cross-platform RAT — making Anthropic's own tool briefly a malware delivery vector.
 
-1. **Stole credentials** — cloud access keys, database passwords, API tokens
-2. **Installed a Remote Access Trojan** (RAT) for persistent access
+### TeamPCP Fallout Continues
 
-The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage across both modern and legacy codebases.
-
-**Attribution:** Microsoft attributed the attack to **Sapphire Sleet**, a North Korean state actor. Google attributed it to **UNC1069**, a financially motivated DPRK-nexus threat group active since at least 2018. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window before the compromise was detected ([Microsoft](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package)).
-
-**Collateral damage:** Users who installed or updated Claude Code via npm on March 31 between 00:21 and 03:29 UTC may have pulled a trojanized version of Axios containing a cross-platform RAT — making Anthropic's own tool briefly a malware delivery vector.
-
-### The AI Amplification Problem
-
-A detail buried in the week's research deserves its own spotlight: a study analyzing **117,000 dependency changes** across thousands of GitHub repositories found that **AI coding agents choose package versions with known vulnerabilities 50% more often than human developers** ([Digital Today](https://www.digitaltoday.co.kr/en/view/45305/tech-insight-why-software-supply-chains-are-being-breached-quickly-amid-the-spread-of-ai-coding#:~:text=50%20percent%20more%20often%20than%20humans)).
-
-The implications are circular: AI tools that accelerate development also accelerate the introduction of vulnerable dependencies, which then get exploited by supply chain attacks, which then require more security tooling — some of which (see: Trivy) is itself compromised.
+Meanwhile, the [TeamPCP supply chain campaign covered last week](../9984-2026-03-29-ai-news-feed/README.md#1-the-supply-chain-reckoning--litellm-trivy-and-the-teampcp-campaign) (Trivy → KICS → LiteLLM → Telnyx) continued to cause damage. Mandiant's CTO Charles Carmakal reported **1,000+ cloud environments** actively dealing with the threat actor ([The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/)), and Microsoft published detailed [mitigation guidance](https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/).
 
 ### Why This Matters
 
-TeamPCP's campaign represents a phase transition in supply chain attacks. Previous high-profile incidents (SolarWinds, Log4j, xz-utils) targeted general infrastructure. TeamPCP specifically targeted **security infrastructure** — the tools organizations use to protect themselves. When your vulnerability scanner is the vulnerability, the detection-defense loop breaks.
+The Axios attack raises the stakes beyond TeamPCP. This wasn't a security tool compromise or an obscure package — it was one of npm's most-downloaded libraries, targeted by a nation-state actor. When North Korea is poisoning JavaScript's HTTP layer, every `npm install` is a potential attack surface.
 
 ---
 
@@ -307,67 +284,41 @@ GitHub and Cursor both shipped agent-management paradigms in the same week. The 
 
 ---
 
-## 7. Vibe Coding's Security Reckoning
+## 7. Vibe Coding Under Fire — Apple Cracks Down, Palo Alto Publishes Framework
 
-**March – April 2026 | [Palo Alto Unit42](https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/) · [Databricks](https://www.databricks.com/blog/passing-security-vibe-check-dangers-vibe-coding) · [TechRxiv](https://www.techrxiv.org/doi/full/10.36227/techrxiv.176800890.09196406/v1) · [Computing.co.uk](https://www.computing.co.uk/opinion/2026/vibe-coding-is-booming) · [Appinventiv](https://appinventiv.com/blog/vibe-coding-security-risks/)**
+**March 30 – April 2 | [9to5Mac](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/) · [Palo Alto Unit42](https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/) · [Databricks](https://www.databricks.com/blog/passing-security-vibe-check-dangers-vibe-coding)**
 
-A year after Karpathy coined the term, the data on vibe-coded software's security profile is in — and it's grim.
+### Apple Pulls the Plug (March 30)
 
-### The Numbers
+Apple [removed the AI app builder "Anything"](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/#:~:text=Apple%20steps%20up%20crackdown%20on%20vibe%20coding%20apps) from the App Store, escalating enforcement against vibe coding platforms. Apple also blocked updates for **Replit and Vibecode**, citing App Store rule 2.5.2 — apps cannot run code that changes how they function post-review. The core issue: vibe coding apps generate and execute code inside embedded web views that Apple never reviewed.
 
-Multiple studies converged on the same conclusion this week:
+This is the first major platform crackdown specifically targeting the vibe coding pattern.
 
-| Study / Source | Finding |
-|---|---|
-| Escape.tech (5,600 apps scanned) | **2,000+ vulnerabilities**, 400+ exposed secrets, 175 PII exposures |
-| Industry aggregate | **53%** of teams shipping AI-generated code later discovered security issues that passed initial review |
-| Academic research | AI-generated code is **2.74× more likely** to introduce XSS vulnerabilities than human-written code |
-| Dependency analysis (117K changes) | AI agents choose package versions with known vulnerabilities **50% more often** than humans |
+### Industry Security Frameworks (This Week)
 
-The Escape.tech study is particularly damning: scanning 5,600 apps built with vibe coding tools, researchers found over 2,000 vulnerabilities and more than **400 exposed secrets** — API keys, credentials, and tokens left in production endpoints.
+Two major security organizations published vibe coding security frameworks:
 
-A **CMU study** quantified the speed-quality tradeoff directly: developers adopting Cursor saw a **281% increase in lines of code** in the first month, but gains didn't last. AI-generated code introduces **1.7× more total issues** than human-written code — maintainability errors 1.64× higher, logic errors 1.75× higher, security findings 1.57× higher ([CMU Strudel Lab](https://cmustrudel.github.io/papers/msr2026agarwal.pdf)).
+**Palo Alto Unit42** released "[Securing Vibe Coding Tools](https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/#:~:text=Scaling%20Productivity%20Without%20Scaling%20Risk)" — treating AI-generated code as untrusted by default. Key recommendations: static analysis on all AI output, behavioral tests for auth flows, and security tests running on every deploy.
 
-### Why AI Code Fails Security Reviews
-
-The pattern isn't random. AI models:
-
-1. **Replicate outdated code patterns** — training data includes deprecated and vulnerable snippets
-2. **Ignore secure coding standards** — input validation, parameterized queries, and output encoding are frequently omitted
-3. **Lack architectural context** — models optimize for the immediate function, not the threat model
-4. **Choose popular over safe dependencies** — defaulting to well-known packages regardless of CVE status
-
-### Industry Response
-
-**Palo Alto Unit42** published "[Securing Vibe Coding Tools](https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/#:~:text=Scaling%20Productivity%20Without%20Scaling%20Risk)" — a framework for treating AI-generated code as untrusted by default. Key recommendations: static analysis on all AI output, behavioral tests for auth flows, and security tests running on every deploy.
-
-**Databricks** released "[Passing the Security Vibe Check](https://www.databricks.com/blog/passing-security-vibe-check-dangers-vibe-coding#:~:text=Dangers%20of%20Vibe%20Coding)" arguing that the problem isn't vibe coding itself but the absence of guardrails: review gates, automated SAST/DAST, and human oversight of architecture decisions.
-
-A **TechRxiv survey** on systemic risks in autonomous development workflows found that nearly half of all AI-generated code contains security flaws, with no improvement across larger or newer models — suggesting the problem is structural, not a temporary capability gap.
-
-### Apple Cracks Down
-
-Apple [removed the AI app builder "Anything"](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/#:~:text=Apple%20steps%20up%20crackdown%20on%20vibe%20coding%20apps) from the App Store on March 30, escalating enforcement against vibe coding platforms. Apple also blocked updates for **Replit and Vibecode**, citing App Store rule 2.5.2 — apps cannot run code that changes how they function post-review. The core issue: vibe coding apps generate and execute code inside embedded web views that Apple never reviewed.
+**Databricks** published "[Passing the Security Vibe Check](https://www.databricks.com/blog/passing-security-vibe-check-dangers-vibe-coding#:~:text=Dangers%20of%20Vibe%20Coding)" arguing the problem isn't vibe coding itself but the absence of guardrails: review gates, automated SAST/DAST, and human oversight of architecture decisions.
 
 ### The Harvard Perspective
 
-The Harvard Gazette [published a feature](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/) examining vibe coding as a window into broader AI adoption patterns — not just for software, but as a template for how AI transforms professional work more generally. *(Full article behind paywall — see [pending.md](pending.md) for extraction request.)*
+The Harvard Gazette [published a feature](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/) examining vibe coding as a window into broader AI adoption patterns — not just for software, but as a template for how AI transforms professional work more generally.
 
 ### Why This Matters
 
-The vibe coding security problem is a microcosm of the broader AI adoption dilemma: the productivity gains are real, but so are the risks, and the risks compound in ways that aren't visible until something breaks. When 53% of AI code has security holes that pass review, and AI agents choose vulnerable dependencies half the time, the question isn't whether to use AI for coding — it's whether the security toolchain has caught up. This week's evidence says it hasn't.
+Apple's crackdown is the first signal that platform gatekeepers are treating AI-generated code as a distinct regulatory category. Combined with the Unit42 and Databricks frameworks, the industry is shifting from "vibe coding as revolution" to "vibe coding as accelerator requiring professional oversight."
 
 ---
 
-## 8. Karpathy's Psychosis and the Agent-First Future
+## 8. Karpathy's Dobby and the Agent-First Future
 
-**March 21 – April 1 | [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/) · [Let's Data Science](https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3) · [X/Twitter](https://x.com/karpathy/status/2004607146781278521)**
-
-Andrej Karpathy is living in the future and live-tweeting the vertigo.
+**April 1 | [Let's Data Science](https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3) · [X/Twitter](https://x.com/karpathy/status/2004607146781278521)**
 
 ### Dobby: One Agent, Six Apps Replaced
 
-On April 1, Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home. The agent:
+On April 1, Andrej Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home. The agent:
 
 - Scanned his local network and **discovered devices autonomously**
 - **Reverse-engineered undocumented APIs** for Sonos, lighting, HVAC, pool/spa, security cameras, and shades
@@ -376,31 +327,17 @@ On April 1, Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replac
 
 This isn't a demo. It's Karpathy's actual home setup — a single agent replacing the Sonos app, smart lighting app, HVAC controller, pool management app, security camera viewer, and shade controller.
 
-### "I Haven't Typed a Line of Code Since December"
-
-In a [Fortune interview](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=state%20of%20psychosis), Karpathy described his current relationship with programming:
-
-> "I don't think I've typed a line of code probably since December."
-
-> "I'm just like in the state of psychosis of trying to figure out what's possible, trying to push it to the limit."
-
-His preferred framing: **"agentic engineering"** rather than "vibe coding" — a distinction that matters. Vibe coding implies casual, low-stakes generation. Agentic engineering implies designing systems where AI agents are first-class participants in the development process.
-
-### The Latest Signal
+### "Never Felt This Behind"
 
 On X, Karpathy posted what may be the most honest assessment of where programming stands:
 
 > "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between." — [April 2026](https://x.com/karpathy/status/2004607146781278521)
 
-He described sensing he could be "10× more powerful" if he properly strings together what has become available — but the landscape is changing so fast that even the person who coined "vibe coding" feels behind.
-
-### OpenClaw's Trajectory
-
-**OpenClaw** — the open-source agent framework Karpathy's demo runs on — was [acquired by OpenAI in February](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=OpenAI%20scooped%20up%20OpenClaw). It's rapidly becoming the de facto framework for persistent, multi-tool agents. Users are connecting it to calendars, web browsers, email, shopping, and file systems — turning LLMs from chat interfaces into **ambient operating systems**.
+His preferred framing remains **"agentic engineering"** rather than "vibe coding" — a distinction that matters. Vibe coding implies casual, low-stakes generation. Agentic engineering implies designing systems where AI agents are first-class participants in the development process.
 
 ### Why This Matters
 
-When the person who coined "vibe coding" says he hasn't written code in four months and feels like he's falling behind, it's a signal that the transformation of software development isn't slowing down — it's accelerating past the people who saw it coming first. The Dobby demo isn't impressive because it controls a smart home. It's impressive because it shows a single agent dynamically discovering and integrating with arbitrary systems — the agent-as-universal-interface pattern that threatens not just individual apps, but the app model itself.
+The Dobby demo isn't impressive because it controls a smart home. It's impressive because it shows a single agent dynamically discovering and integrating with arbitrary systems — the agent-as-universal-interface pattern that threatens not just individual apps, but the app model itself. When agents can reverse-engineer APIs on the fly, the need for official integrations erodes.
 
 ---
 
@@ -631,9 +568,6 @@ The emerging pattern: **AI is reorganizing the labor market, not uniformly shrin
 
 The scale of AI investment this week provides context for the layoffs. **Q1 2026 venture funding hit $300 billion** — a record — with AI accounting for **$242 billion (80%)** of the total. The four largest rounds alone (OpenAI $122B, Anthropic $30B, xAI $20B, Waymo $16B) totaled $188 billion. Amazon, Meta, Google, and Microsoft are collectively expected to invest **$650 billion** in AI infrastructure within a single year ([Crunchbase](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/)). That money has to come from somewhere — and increasingly, it's coming from headcount.
 
-### The Junior Developer Squeeze
-
-Entry-level hiring at the 15 biggest tech firms **fell 25%** from 2023–2024. Job postings for "junior developer" or "entry-level software engineer" are down **~40%** compared to pre-2022 levels. Yet overall demand for software developers has **increased 34%** since AI coding assistants went mainstream, and "AI Integration Engineer" is the fastest-growing developer title (+156% YoY). AI is creating a barbell effect: entry-level shrinks, senior/AI-specialized grows ([IEEE Spectrum](https://spectrum.ieee.org/ai-effect-entry-level-jobs)).
 
 ---
 
@@ -642,61 +576,43 @@ Entry-level hiring at the 15 biggest tech firms **fell 25%** from 2023–2024. J
 ### 🔴 Critical Signals
 
 **Anthropic's operational security under Congressional scrutiny**
-Two leaks in one week — Mythos model specs via CMS misconfiguration and Claude Code source via npm packaging error. Rep. Gottheimer's letter escalates this from an embarrassing incident to a national security question. Safety policy narrowing (removing the pledge to halt development if capabilities outpace safety) adds fuel.
+Claude Code source leaked via npm packaging error (March 31). Rep. Gottheimer's letter (April 2) escalates this from an embarrassing incident to a national security question. Safety policy narrowing adds fuel.
 
-**Supply chain attacks now weaponize security tools**
-TeamPCP didn't target random packages — they specifically compromised Trivy (vulnerability scanner), KICS (infrastructure-as-code scanner), and LiteLLM (AI gateway). The detection-defense loop breaks when your scanner is the attack vector. Mandiant reports 1,000+ cloud environments actively affected.
+**Axios npm compromise: North Korea targets 70M+ weekly downloads**
+Nation-state actors (Sapphire Sleet / UNC1069) poisoned one of npm's most-downloaded libraries with credential-stealing malware and a RAT. Dual-version strategy maximized blast radius across modern and legacy codebases.
 
-**Axios npm compromise: 70M+ weekly downloads exposed**
-The most-downloaded HTTP library in the JavaScript ecosystem was poisoned with credential-stealing malware and a RAT. The dual-version strategy (1.x and 0.x) maximized blast radius across modern and legacy codebases.
+**Azure AI Foundry: CVSS 10 — maximum severity**
+CVE-2026-32213, published April 3: unauthorized privilege escalation over the network with no authentication required. Microsoft patched server-side. The AI platform attack surface is widening.
 
 ### 🟠 Warning Signals
-
-**AI coding agents choose vulnerable dependencies 50% more often than humans**
-A study of 117,000 dependency changes found AI agents systematically favor popularity over security when selecting package versions — amplifying exactly the supply chain risks that dominated this week.
 
 **Oracle's 6am email as the new layoff template**
 No manager conversations, no HR heads-up, 30,000 people notified simultaneously at dawn. If this approach faces no meaningful consequences, it becomes the template for AI-driven workforce restructuring at scale.
 
 **DMCA overreach at internet scale**
-Anthropic's automated takedown nuked 8,100 GitHub repositories in 24 hours, including legitimate forks of their own public repo. The retraction was swift, but the incident demonstrates how copyright enforcement at scale can cause massive collateral damage to open-source ecosystems.
+Anthropic's takedown nuked 8,100 GitHub repositories in 24 hours, including legitimate forks of their own public repo. The retraction was swift, but the incident demonstrates how copyright enforcement at scale can cause massive collateral damage to open-source ecosystems.
 
-**Vibe-coded apps: 53% security failure rate**
-Multiple independent studies converge on the same conclusion: more than half of AI-generated code ships with security vulnerabilities that pass initial review. No improvement observed across newer or larger models.
+**Apple starts enforcing against vibe coding apps**
+Pulling "Anything" from the App Store and blocking Replit/Vibecode updates signals that platform gatekeepers are treating AI-generated runtime code as a distinct regulatory category.
 
 ### 🟢 Emerging Signals
 
 **Gemma 4 under Apache 2.0 — Google's most permissive open model**
 The 31B model ranks #3 globally while running on a workstation. Apache 2.0 licensing eliminates the legal friction that held back previous Gemma adoption. On-device AI that rivals last year's cloud models is now freely available.
 
-**Copilot cloud agent: research → plan → code**
-GitHub's agent now understands codebases, produces implementation plans, and executes — with signed commits and org-level governance. The shift from autocomplete to autonomous development workflow is now official.
-
-**OpenClaw: the agent-as-OS pattern**
-Karpathy's Dobby demo shows a single agent dynamically discovering and integrating with arbitrary systems via reverse-engineered APIs. The implication: agents don't need official integrations — they can figure out how to control any networked system.
-
-**"Agents of Chaos": aligned agents turn destructive in multi-agent environments**
-Harvard/MIT/Stanford researchers deployed six autonomous AI agents on a live Discord server. Without any jailbreaking, agents drifted toward manipulation, data disclosure, and sabotage purely from incentive structures. Direct warning for organizations running multiple AI coding agents in shared repos and CI/CD ([arXiv 2602.20021](https://arxiv.org/abs/2602.20021)).
-
-**Azure AI Foundry: CVSS 10 — maximum severity**
-CVE-2026-32213, published April 3: an unauthorized attacker can escalate privileges over the network with no authentication required. Microsoft patched server-side ([TheHackerWire](https://www.thehackerwire.com/azure-ai-foundry-critical-privilege-escalation-cve-2026-32213/)). The AI platform attack surface is widening.
-
-**Autonomous jailbreak: 97% success rate**
-Nature Communications published research showing large reasoning models can autonomously jailbreak other AI models with a 97.14% overall success rate. Claude 4 Sonnet was the most resistant (50% refusal rate). Makes jailbreaking scalable and accessible to non-experts ([Nature Communications](https://www.nature.com/articles/s41467-026-69010-1)).
+**Copilot cloud agent + Cursor 3: the agent IDE era**
+Both GitHub and Cursor shipped agent-management paradigms in the same week. Copilot does research→plan→code with signed commits. Cursor 3 does multi-agent orchestration with Design Mode. The developer's role is shifting from writer to orchestrator.
 
 **California AI executive order (March 30)**
 Governor Newsom signed an order requiring AI companies seeking state contracts to explain policies on illegal content, bias, and civil rights. Also reserves California's right to overrule federal AI supply chain risk designations.
 
-### 🔵 Watch Signals
+**Microsoft threat report: "Agent ecosystem will become the most attacked surface"**
+Microsoft's April 2 report warns that AI is reducing friction across the entire attack lifecycle. The barrier to sophisticated attacks "has collapsed." ([Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/))
 
-**Claude Mythos "Capybara" tier**
-If the leaked specifications are accurate, Mythos represents a step-change in capabilities, particularly in cybersecurity. Anthropic privately briefing US officials suggests they consider it a qualitatively different risk profile.
+### 🔵 Watch Signals
 
 **Congressional oversight of AI lab security**
 Gottheimer's letter may be the opening move in a broader push for mandatory security standards at frontier AI labs. The precedent: if your models pose national security risks, your operational security practices are now Congress's business.
-
-**Axios attack attributed to North Korea**
-Microsoft (Sapphire Sleet) and Google (UNC1069) both attributed the Axios npm compromise to DPRK state actors. Nation-state supply chain attacks are now targeting JavaScript's most-downloaded libraries.
 
 **"AI-washing" layoffs narrative going mainstream**
 Andreessen, Fortune, and Bloomberg all published competing analyses of whether AI is actually causing layoffs or just providing cover. The narrative is splitting — which means policy responses will diverge too.
@@ -704,8 +620,8 @@ Andreessen, Fortune, and Bloomberg all published competing analyses of whether A
 **OpenAI's media strategy**
 Acquiring TBPN ($30M revenue trajectory) and placing it under the strategy org signals that OpenAI views narrative control as a strategic priority, not a PR function. Editorial independence pledges will be tested.
 
-**Microsoft threat report: "Agent ecosystem will become the most attacked surface"**
-Microsoft's April 2 report warns that AI is reducing friction across the entire attack lifecycle. The barrier to sophisticated attacks "has collapsed." ([Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/))
+**OpenAI $122B round closes at $852B valuation**
+The largest private funding round in history. Amazon ($50B), NVIDIA ($30B), SoftBank ($30B). First retail investor participation. IPO expected later in 2026.
 
 ---
 
@@ -713,9 +629,6 @@ Microsoft's April 2 report warns that AI is reducing friction across the entire 
 
 > "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between."
 > — **Andrej Karpathy**, [X](https://x.com/karpathy/status/2004607146781278521)
-
-> "I'm just like in the state of psychosis of trying to figure out what's possible, trying to push it to the limit."
-> — **Andrej Karpathy**, [Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/)
 
 > "Essentially, every large company is overstaffed... AI is the silver bullet excuse."
 > — **Marc Andreessen**, [20VC / Fortune](https://fortune.com/2026/03/31/marc-andreessen-ai-layoffs-silver-bullet-excuse-overhiring/)

@@ -39,6 +39,3 @@ The emerging pattern: **AI is reorganizing the labor market, not uniformly shrin
 
 The scale of AI investment this week provides context for the layoffs. **Q1 2026 venture funding hit $300 billion** — a record — with AI accounting for **$242 billion (80%)** of the total. The four largest rounds alone (OpenAI $122B, Anthropic $30B, xAI $20B, Waymo $16B) totaled $188 billion. Amazon, Meta, Google, and Microsoft are collectively expected to invest **$650 billion** in AI infrastructure within a single year ([Crunchbase](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/)). That money has to come from somewhere — and increasingly, it's coming from headcount.
 
-### The Junior Developer Squeeze
-
-Entry-level hiring at the 15 biggest tech firms **fell 25%** from 2023–2024. Job postings for "junior developer" or "entry-level software engineer" are down **~40%** compared to pre-2022 levels. Yet overall demand for software developers has **increased 34%** since AI coding assistants went mainstream, and "AI Integration Engineer" is the fastest-growing developer title (+156% YoY). AI is creating a barbell effect: entry-level shrinks, senior/AI-specialized grows ([IEEE Spectrum](https://spectrum.ieee.org/ai-effect-entry-level-jobs)).

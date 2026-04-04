@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T07:21:41.891157+00:00",
+  "generated": "2026-04-04T07:27:42.350023+00:00",
   "projects": [
     {
       "id": "9982-2026-04-03-ai-thought-leaders-weekly",
@@ -58,8 +58,8 @@
         }
       ],
       "path": "projects/9983-2026-04-04-ai-news-feed",
-      "wordCount": 7409,
-      "readingTime": 32
+      "wordCount": 6143,
+      "readingTime": 26
     },
     {
       "id": "9984-2026-03-29-ai-news-feed",
