@@ -447,6 +447,41 @@ Copy this checklist into `task.md` at project creation and update it throughout 
 
 ---
 
+## April Fools' Day Warning
+
+**Any edition covering March 28 – April 4 will overlap with April 1.** This requires extra scrutiny:
+
+### Stories to be suspicious of
+
+- Anything published **only on April 1** with no follow-up coverage on April 2+
+- Stories that sound too perfect, too absurd, or too convenient
+- Product announcements from companies with a history of April Fools' jokes (Google is notorious)
+- Blog posts from individual developers/influencers — higher prank risk than institutional outlets
+- Academic papers or "studies" with suspiciously round numbers or outlandish conclusions
+
+### Verification steps for April 1 stories
+
+1. **Check the publication date carefully** — many outlets publish April Fools' content on March 31 evening (to catch early readers)
+2. **Look for corroboration** — a real story will have coverage from multiple independent outlets by April 2–3
+3. **Check the outlet's April Fools' history** — Google, ThinkGeek, CERN, and many tech companies have traditions
+4. **Read the full article** — pranks often contain tells (absurd details, tongue-in-cheek language, disclaimer at the bottom)
+5. **Check if the company acknowledged it** — real product launches have changelog entries, docs updates, and API availability. Pranks don't.
+6. **When in doubt, hold** — don't include the story. If it's real, it'll still be there next week.
+
+### Known safe categories on April 1
+
+- GitHub Changelog entries (GitHub doesn't prank their changelog)
+- CVE publications
+- SEC filings, earnings reports
+- DMCA notices (legal filings aren't pranks)
+- npm/PyPI package publications (registry timestamps are real)
+
+### From this session: Claude Code's `/buddy` command
+
+Claude Code's April 1 changelog included `/buddy` — "hatch a small creature that watches you code." This was an **actual April Fools' easter egg** in the product. It's real code, but it's a joke feature — don't report it as a product development.
+
+---
+
 ## Common Mistakes
 
 | Mistake | Prevention |
@@ -458,6 +493,8 @@ Copy this checklist into `task.md` at project creation and update it throughout 
 | Forgetting to run build-index.py | It's in the checklist — run after every change to project READMEs |
 | Explorer stats don't match README after edits | Update both in the same commit |
 | Session timeout loses work | Commit after every 2–3 sections, use part files for HTML |
+| Including April Fools' jokes as real news | Corroborate April 1 stories against April 2+ coverage from multiple outlets |
+| Including satire/parody sources | Verify the outlet is a legitimate news source, not a satirical site |
 
 ---
 
