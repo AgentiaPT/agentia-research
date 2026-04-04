@@ -27,7 +27,7 @@ Major companies cutting jobs while explicitly citing AI: **Meta, Google, Amazon,
 
 On the same day Oracle sent its mass email, Marc Andreessen [told the 20VC podcast](https://fortune.com/2026/03/31/marc-andreessen-ai-layoffs-silver-bullet-excuse-overhiring/#:~:text=silver%20bullet%20excuse) that AI layoffs are largely a farce:
 
-> "Essentially, every large company is overstaffed" by at least 25%, with most overstaffed by 50% and some by 75%. AI is the "silver bullet excuse" for cleaning up post-COVID hiring binges.
+> "Essentially, every large company is overstaffed. It's at least overstaffed by 25%. I think most large companies are overstaffed by 50%. I think a lot of them are overstaffed by 75%." ... "Now they all have the silver bullet excuse: Ah, it's AI."
 
 Andreessen argued that "AI literally until December was not actually good enough to do any of the jobs that they're actually cutting." His position: AI *boosts* productivity for remaining workers rather than *replacing* workers.
 

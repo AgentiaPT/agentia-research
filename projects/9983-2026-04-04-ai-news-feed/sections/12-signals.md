@@ -8,7 +8,7 @@ Two leaks in one week — Mythos model specs via CMS misconfiguration and Claude
 **Supply chain attacks now weaponize security tools**
 TeamPCP didn't target random packages — they specifically compromised Trivy (vulnerability scanner), KICS (infrastructure-as-code scanner), and LiteLLM (AI gateway). The detection-defense loop breaks when your scanner is the attack vector. Mandiant reports 1,000+ cloud environments actively affected.
 
-**Axios npm compromise: 100M+ weekly downloads exposed**
+**Axios npm compromise: 70M+ weekly downloads exposed**
 The most-downloaded HTTP library in the JavaScript ecosystem was poisoned with credential-stealing malware and a RAT. The dual-version strategy (1.x and 0.x) maximized blast radius across modern and legacy codebases.
 
 ### 🟠 Warning Signals
@@ -87,7 +87,7 @@ Microsoft's April 2 report warns that AI is reducing friction across the entire 
 > "A release packaging issue caused by human error, not a security breach."
 > — **Anthropic spokesperson**, [CNBC](https://www.cnbc.com/2026/03/31/anthropic-leak-claude-code-internal-source.html)
 
-> "If Claude is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
+> "Claude is a critical part of our national security operations. If it is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
 > — **Rep. Josh Gottheimer**, [Axios](https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks)
 
 > "I don't expect them to go any easier on us, am sure I'll do my part to help enable that with occasional stupid decisions."

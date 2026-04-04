@@ -16,7 +16,7 @@ Anthropic was reportedly **[privately briefing top U.S. officials](https://www.e
 
 ### Act 2: The Claude Code Source Leak (March 31)
 
-The very next day, a software engineer discovered that Anthropic had accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The file pointed to a zip archive on Anthropic's cloud storage containing **the full source code — nearly 2,000 files and 500,000 lines of code**.
+The very next day, a software engineer discovered that Anthropic had accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The root cause: Bun (the runtime) generates full source maps by default, and `*.map` was not excluded in `.npmignore`. The file pointed to a zip archive on Anthropic's cloud storage containing **the full source code — 1,906 files and 512,000 lines of TypeScript**.
 
 An Anthropic spokesperson called it:
 
@@ -40,7 +40,7 @@ Anthropic's head of Claude Code, **Boris Cherny**, retracted the bulk of the not
 
 Rep. **Josh Gottheimer** (D-N.J.) [wrote to Anthropic CEO Dario Amodei](https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks#:~:text=Gottheimer%20presses%20Anthropic%20on%20source%20code%20leaks%20and%20safety%20protocols), warning of potential national security risks:
 
-> "If Claude is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
+> "Claude is a critical part of our national security operations. If it is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
 
 Gottheimer also pointed to Anthropic's **narrowed safety policy** from late February, which removed a previous commitment to halt model development if capabilities outpace safety procedures — replacing it with "nonbinding but publicly-declared" goals.
 

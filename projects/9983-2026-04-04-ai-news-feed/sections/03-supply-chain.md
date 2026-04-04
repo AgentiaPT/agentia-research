@@ -23,7 +23,7 @@ The irony is bitter: **the vulnerability scanner became the vulnerability**. Org
 
 ### The Axios Bomb (March 31)
 
-On the same day Anthropic leaked its source code, attackers compromised the official **Axios package on npm** — one of the most widely-used HTTP libraries in the JavaScript ecosystem, with **over 100 million downloads per week**.
+On the same day Anthropic leaked its source code, attackers compromised the official **Axios package on npm** — one of the most widely-used HTTP libraries in the JavaScript ecosystem, with **over 70 million downloads per week**.
 
 The attacker gained access to the Axios maintainer's publishing credentials and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency. On install, the code:
 

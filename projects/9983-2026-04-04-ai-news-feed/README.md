@@ -81,7 +81,7 @@ Anthropic was reportedly **[privately briefing top U.S. officials](https://www.e
 
 ### Act 2: The Claude Code Source Leak (March 31)
 
-The very next day, a software engineer discovered that Anthropic had accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The file pointed to a zip archive on Anthropic's cloud storage containing **the full source code — nearly 2,000 files and 500,000 lines of code**.
+The very next day, a software engineer discovered that Anthropic had accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The root cause: Bun (the runtime) generates full source maps by default, and `*.map` was not excluded in `.npmignore`. The file pointed to a zip archive on Anthropic's cloud storage containing **the full source code — 1,906 files and 512,000 lines of TypeScript**.
 
 An Anthropic spokesperson called it:
 
@@ -105,7 +105,7 @@ Anthropic's head of Claude Code, **Boris Cherny**, retracted the bulk of the not
 
 Rep. **Josh Gottheimer** (D-N.J.) [wrote to Anthropic CEO Dario Amodei](https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks#:~:text=Gottheimer%20presses%20Anthropic%20on%20source%20code%20leaks%20and%20safety%20protocols), warning of potential national security risks:
 
-> "If Claude is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
+> "Claude is a critical part of our national security operations. If it is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
 
 Gottheimer also pointed to Anthropic's **narrowed safety policy** from late February, which removed a previous commitment to halt model development if capabilities outpace safety procedures — replacing it with "nonbinding but publicly-declared" goals.
 
@@ -144,7 +144,7 @@ The irony is bitter: **the vulnerability scanner became the vulnerability**. Org
 
 ### The Axios Bomb (March 31)
 
-On the same day Anthropic leaked its source code, attackers compromised the official **Axios package on npm** — one of the most widely-used HTTP libraries in the JavaScript ecosystem, with **over 100 million downloads per week**.
+On the same day Anthropic leaked its source code, attackers compromised the official **Axios package on npm** — one of the most widely-used HTTP libraries in the JavaScript ecosystem, with **over 70 million downloads per week**.
 
 The attacker gained access to the Axios maintainer's publishing credentials and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency. On install, the code:
 
@@ -241,7 +241,7 @@ Major companies cutting jobs while explicitly citing AI: **Meta, Google, Amazon,
 
 On the same day Oracle sent its mass email, Marc Andreessen [told the 20VC podcast](https://fortune.com/2026/03/31/marc-andreessen-ai-layoffs-silver-bullet-excuse-overhiring/#:~:text=silver%20bullet%20excuse) that AI layoffs are largely a farce:
 
-> "Essentially, every large company is overstaffed" by at least 25%, with most overstaffed by 50% and some by 75%. AI is the "silver bullet excuse" for cleaning up post-COVID hiring binges.
+> "Essentially, every large company is overstaffed. It's at least overstaffed by 25%. I think most large companies are overstaffed by 50%. I think a lot of them are overstaffed by 75%." ... "Now they all have the silver bullet excuse: Ah, it's AI."
 
 Andreessen argued that "AI literally until December was not actually good enough to do any of the jobs that they're actually cutting." His position: AI *boosts* productivity for remaining workers rather than *replacing* workers.
 
@@ -647,7 +647,7 @@ Two leaks in one week — Mythos model specs via CMS misconfiguration and Claude
 **Supply chain attacks now weaponize security tools**
 TeamPCP didn't target random packages — they specifically compromised Trivy (vulnerability scanner), KICS (infrastructure-as-code scanner), and LiteLLM (AI gateway). The detection-defense loop breaks when your scanner is the attack vector. Mandiant reports 1,000+ cloud environments actively affected.
 
-**Axios npm compromise: 100M+ weekly downloads exposed**
+**Axios npm compromise: 70M+ weekly downloads exposed**
 The most-downloaded HTTP library in the JavaScript ecosystem was poisoned with credential-stealing malware and a RAT. The dual-version strategy (1.x and 0.x) maximized blast radius across modern and legacy codebases.
 
 ### 🟠 Warning Signals
@@ -726,7 +726,7 @@ Microsoft's April 2 report warns that AI is reducing friction across the entire 
 > "A release packaging issue caused by human error, not a security breach."
 > — **Anthropic spokesperson**, [CNBC](https://www.cnbc.com/2026/03/31/anthropic-leak-claude-code-internal-source.html)
 
-> "If Claude is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
+> "Claude is a critical part of our national security operations. If it is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
 > — **Rep. Josh Gottheimer**, [Axios](https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks)
 
 > "I don't expect them to go any easier on us, am sure I'll do my part to help enable that with occasional stupid decisions."
