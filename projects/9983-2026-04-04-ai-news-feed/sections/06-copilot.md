@@ -2,7 +2,7 @@
 
 **April 1–3 | [GitHub Blog](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/) · [GitHub Changelog](https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits/) · [GitHub Docs](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent)**
 
-Three updates in three days signal that GitHub's Copilot is completing its transformation from "code suggestion tool" to "autonomous development workflow."
+After last week's [data training backlash](../9984-2026-03-29-ai-news-feed/README.md#4-the-data-training-backlash--github-copilot-opts-you-in), GitHub pivoted to shipping capability. Three updates in three days signal that Copilot is completing its transformation from "code suggestion tool" to "autonomous development workflow."
 
 ### Research, Plan, and Code (April 1)
 

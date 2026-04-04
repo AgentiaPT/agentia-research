@@ -2,6 +2,8 @@
 
 **March 30 – April 2 | [9to5Mac](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/) · [Palo Alto Unit42](https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/) · [Databricks](https://www.databricks.com/blog/passing-security-vibe-check-dangers-vibe-coding)**
 
+Last week we covered [Lovable + Aikido shipping the first AI pentesting for vibe-coded apps](../9984-2026-03-29-ai-news-feed/README.md#5-vibe-coding-gets-a-security-layer--lovable--aikido). This week, the response escalated from tooling to enforcement.
+
 ### Apple Pulls the Plug (March 30)
 
 Apple [removed the AI app builder "Anything"](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/#:~:text=Apple%20steps%20up%20crackdown%20on%20vibe%20coding%20apps) from the App Store, escalating enforcement against vibe coding platforms. Apple also blocked updates for **Replit and Vibecode**, citing App Store rule 2.5.2 — apps cannot run code that changes how they function post-review. The core issue: vibe coding apps generate and execute code inside embedded web views that Apple never reviewed.

@@ -2,9 +2,11 @@
 
 **April 1 | [Let's Data Science](https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3) · [X/Twitter](https://x.com/karpathy/status/2004607146781278521)**
 
+Two weeks after his [autoresearch loop ran 700 experiments autonomously](../9984-2026-03-29-ai-news-feed/README.md#7-karpathys-autoresearch--humans-are-the-bottleneck), Karpathy shifted from AI-doing-research to AI-running-his-home.
+
 ### Dobby: One Agent, Six Apps Replaced
 
-On April 1, Andrej Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home. The agent:
+On April 1, Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home. The agent:
 
 - Scanned his local network and **discovered devices autonomously**
 - **Reverse-engineered undocumented APIs** for Sonos, lighting, HVAC, pool/spa, security cameras, and shades

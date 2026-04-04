@@ -2,7 +2,7 @@
 
 **March 31 – April 2 | [CNBC](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) · [Rolling Out](https://rollingout.com/2026/03/31/oracle-slashes-30000-jobs-with-a-cold-6/) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-02/us-job-cut-announcements-in-tech-keep-rising-with-ai-adoption) · [Fortune](https://fortune.com/2026/03/31/marc-andreessen-ai-layoffs-silver-bullet-excuse-overhiring/)**
 
-Oracle fired between 20,000 and 30,000 employees — roughly **18% of its global workforce** — via a single email sent at 6:00am EST on March 31. No manager conversations. No HR heads-up. No advance notice. Workers in the US, India, and other regions all received the same termination notice from "Oracle Leadership" at nearly the same hour, with some noting April 3 as their formal last day.
+The [jobs escalation we tracked two weeks ago](../9985-2026-03-21-ai-news-feed/README.md#7-the-jobs-escalation--30-and-climbing) — and the [CFO survey showing 9× increases](../9984-2026-03-29-ai-news-feed/README.md#10-the-jobs-escalation-continues--cfos-admit-9x) last week — hit a new peak. Oracle fired between 20,000 and 30,000 employees — roughly **18% of its global workforce** — via a single email sent at 6:00am EST on March 31. No manager conversations. No HR heads-up. No advance notice. Workers in the US, India, and other regions all received the same termination notice from "Oracle Leadership" at nearly the same hour, with some noting April 3 as their formal last day.
 
 ### The Money Trail
 

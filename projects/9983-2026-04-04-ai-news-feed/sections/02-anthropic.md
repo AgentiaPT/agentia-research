@@ -2,7 +2,7 @@
 
 **March 31 – April 2 | [Axios](https://www.axios.com/2026/03/31/anthropic-leaked-source-code-ai) · [TechCrunch](https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/) · [The Hill](https://thehill.com/policy/technology/5812881-gottheimer-presses-anthropic-ai-safety/)**
 
-Days after the Mythos CMS leak [covered in last week's edition](../9984-2026-03-29-ai-news-feed/README.md#2-the-mythos-leak--anthropics-next-frontier-exposed), Anthropic's week got worse. Four cascading incidents turned the company into a case study in operational fragility at frontier AI labs.
+Days after the Mythos CMS leak [covered in last week's edition](../9984-2026-03-29-ai-news-feed/README.md#2-the-mythos-leak--anthropics-next-frontier-exposed), and with the [Pentagon First Amendment case](../9984-2026-03-29-ai-news-feed/README.md#8-anthropic-vs-the-pentagon--first-amendment-wins-round-one) still pending, Anthropic's week got worse. Four cascading incidents turned the company into a case study in operational fragility at frontier AI labs.
 
 ### Act 1: The Claude Code Source Leak (March 31)
 
@@ -12,7 +12,7 @@ An Anthropic spokesperson called it:
 
 > "A release packaging issue caused by human error, not a security breach. No sensitive customer data or credentials were involved or exposed." — [CNBC](https://www.cnbc.com/2026/03/31/anthropic-leak-claude-code-internal-source.html#:~:text=A%20release%20packaging%20issue%20caused%20by%20human%20error)
 
-The leaked code revealed **44 hidden feature flags** and unreleased capabilities, including:
+The leaked code — far more revealing than last week's [Auto Mode and harness architecture](../9984-2026-03-29-ai-news-feed/README.md#3-claude-code-goes-autonomous--auto-mode-and-long-running-harnesses) disclosures — revealed **44 hidden feature flags** and unreleased capabilities, including:
 - **KAIROS** — an autonomous daemon mode where Claude operates as a persistent, always-on background agent. Referenced 150+ times in the source. Includes "autoDream" — background memory consolidation that runs while the user is idle ([The Information](https://www.theinformation.com/newsletters/ai-agenda/claude-code-leak-reveals-always-kairos-agent) · [The New Stack](https://thenewstack.io/claude-code-source-leak/))
 - **Coordinator Mode** — native multi-agent orchestration where a master Claude spawns parallel worker agents
 - **ULTRAPLAN** — offloads planning to a remote Opus 4.6 session with up to 30 minutes of dedicated think time

@@ -67,7 +67,7 @@ The answer, this week, was no.
 
 **March 31 – April 2 | [Axios](https://www.axios.com/2026/03/31/anthropic-leaked-source-code-ai) · [TechCrunch](https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/) · [The Hill](https://thehill.com/policy/technology/5812881-gottheimer-presses-anthropic-ai-safety/)**
 
-Days after the Mythos CMS leak [covered in last week's edition](../9984-2026-03-29-ai-news-feed/README.md#2-the-mythos-leak--anthropics-next-frontier-exposed), Anthropic's week got worse. Four cascading incidents turned the company into a case study in operational fragility at frontier AI labs.
+Days after the Mythos CMS leak [covered in last week's edition](../9984-2026-03-29-ai-news-feed/README.md#2-the-mythos-leak--anthropics-next-frontier-exposed), and with the [Pentagon First Amendment case](../9984-2026-03-29-ai-news-feed/README.md#8-anthropic-vs-the-pentagon--first-amendment-wins-round-one) still pending, Anthropic's week got worse. Four cascading incidents turned the company into a case study in operational fragility at frontier AI labs.
 
 ### Act 1: The Claude Code Source Leak (March 31)
 
@@ -77,7 +77,7 @@ An Anthropic spokesperson called it:
 
 > "A release packaging issue caused by human error, not a security breach. No sensitive customer data or credentials were involved or exposed." — [CNBC](https://www.cnbc.com/2026/03/31/anthropic-leak-claude-code-internal-source.html#:~:text=A%20release%20packaging%20issue%20caused%20by%20human%20error)
 
-The leaked code revealed **44 hidden feature flags** and unreleased capabilities, including:
+The leaked code — far more revealing than last week's [Auto Mode and harness architecture](../9984-2026-03-29-ai-news-feed/README.md#3-claude-code-goes-autonomous--auto-mode-and-long-running-harnesses) disclosures — revealed **44 hidden feature flags** and unreleased capabilities, including:
 - **KAIROS** — an autonomous daemon mode where Claude operates as a persistent, always-on background agent. Referenced 150+ times in the source. Includes "autoDream" — background memory consolidation that runs while the user is idle ([The Information](https://www.theinformation.com/newsletters/ai-agenda/claude-code-leak-reveals-always-kairos-agent) · [The New Stack](https://thenewstack.io/claude-code-source-leak/))
 - **Coordinator Mode** — native multi-agent orchestration where a master Claude spawns parallel worker agents
 - **ULTRAPLAN** — offloads planning to a remote Opus 4.6 session with up to 30 minutes of dedicated think time
@@ -193,7 +193,7 @@ Gemma 4 under Apache 2.0 is Google's clearest statement yet that the open model 
 
 **March 31 – April 2 | [CNBC](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) · [Rolling Out](https://rollingout.com/2026/03/31/oracle-slashes-30000-jobs-with-a-cold-6/) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-02/us-job-cut-announcements-in-tech-keep-rising-with-ai-adoption) · [Fortune](https://fortune.com/2026/03/31/marc-andreessen-ai-layoffs-silver-bullet-excuse-overhiring/)**
 
-Oracle fired between 20,000 and 30,000 employees — roughly **18% of its global workforce** — via a single email sent at 6:00am EST on March 31. No manager conversations. No HR heads-up. No advance notice. Workers in the US, India, and other regions all received the same termination notice from "Oracle Leadership" at nearly the same hour, with some noting April 3 as their formal last day.
+The [jobs escalation we tracked two weeks ago](../9985-2026-03-21-ai-news-feed/README.md#7-the-jobs-escalation--30-and-climbing) — and the [CFO survey showing 9× increases](../9984-2026-03-29-ai-news-feed/README.md#10-the-jobs-escalation-continues--cfos-admit-9x) last week — hit a new peak. Oracle fired between 20,000 and 30,000 employees — roughly **18% of its global workforce** — via a single email sent at 6:00am EST on March 31. No manager conversations. No HR heads-up. No advance notice. Workers in the US, India, and other regions all received the same termination notice from "Oracle Leadership" at nearly the same hour, with some noting April 3 as their formal last day.
 
 ### The Money Trail
 
@@ -238,7 +238,7 @@ The emerging picture: AI is simultaneously the *cause* of some layoffs, the *exc
 
 **April 1–3 | [GitHub Blog](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/) · [GitHub Changelog](https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits/) · [GitHub Docs](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent)**
 
-Three updates in three days signal that GitHub's Copilot is completing its transformation from "code suggestion tool" to "autonomous development workflow."
+After last week's [data training backlash](../9984-2026-03-29-ai-news-feed/README.md#4-the-data-training-backlash--github-copilot-opts-you-in), GitHub pivoted to shipping capability. Three updates in three days signal that Copilot is completing its transformation from "code suggestion tool" to "autonomous development workflow."
 
 ### Research, Plan, and Code (April 1)
 
@@ -288,6 +288,8 @@ GitHub and Cursor both shipped agent-management paradigms in the same week. The 
 
 **March 30 – April 2 | [9to5Mac](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/) · [Palo Alto Unit42](https://unit42.paloaltonetworks.com/securing-vibe-coding-tools/) · [Databricks](https://www.databricks.com/blog/passing-security-vibe-check-dangers-vibe-coding)**
 
+Last week we covered [Lovable + Aikido shipping the first AI pentesting for vibe-coded apps](../9984-2026-03-29-ai-news-feed/README.md#5-vibe-coding-gets-a-security-layer--lovable--aikido). This week, the response escalated from tooling to enforcement.
+
 ### Apple Pulls the Plug (March 30)
 
 Apple [removed the AI app builder "Anything"](https://9to5mac.com/2026/03/30/apple-steps-up-crackdown-on-vibe-coding-apps-pulls-anything-from-the-app-store/#:~:text=Apple%20steps%20up%20crackdown%20on%20vibe%20coding%20apps) from the App Store, escalating enforcement against vibe coding platforms. Apple also blocked updates for **Replit and Vibecode**, citing App Store rule 2.5.2 — apps cannot run code that changes how they function post-review. The core issue: vibe coding apps generate and execute code inside embedded web views that Apple never reviewed.
@@ -316,9 +318,11 @@ Apple's crackdown is the first signal that platform gatekeepers are treating AI-
 
 **April 1 | [Let's Data Science](https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3) · [X/Twitter](https://x.com/karpathy/status/2004607146781278521)**
 
+Two weeks after his [autoresearch loop ran 700 experiments autonomously](../9984-2026-03-29-ai-news-feed/README.md#7-karpathys-autoresearch--humans-are-the-bottleneck), Karpathy shifted from AI-doing-research to AI-running-his-home.
+
 ### Dobby: One Agent, Six Apps Replaced
 
-On April 1, Andrej Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home. The agent:
+On April 1, Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home. The agent:
 
 - Scanned his local network and **discovered devices autonomously**
 - **Reverse-engineered undocumented APIs** for Sonos, lighting, HVAC, pool/spa, security cameras, and shades
