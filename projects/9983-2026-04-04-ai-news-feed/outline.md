@@ -91,7 +91,7 @@ The week Anthropic leaked its own future, supply chains crumbled again, Oracle c
 
 ## 9. Voice Tracker
 
-### Active (✅) — 11 voices
+### Active (✅) — 14 voices
 | Voice | Key Topic | Source |
 |---|---|---|
 | Andrej Karpathy | Dobby agent demo, "agentic engineering" | Fortune, X |
@@ -105,15 +105,17 @@ The week Anthropic leaked its own future, supply chains crumbled again, Oracle c
 | Steve Yegge | "Vibe Maintainer" — AI-generated PR workflow | Medium |
 | Guillermo Rauch | "Agent responsibly" — enterprise agent playbook | Vercel Blog |
 | Swyx | Hosted Andreessen on Latent Space | Latent Space |
+| Theo Browne | Claude Code leak video, 162K views | YouTube |
+| Aaron Levie | Jevons Paradox — AI makes everyone busier | Diginomica, X |
+| Teresa Torres | Vibe coding doom loop, agent scheduling | Product Talk |
 
 ### Inactive (❌)
 | Voice | Notes |
 |---|---|
-| Gergely Orosz | No specific items this week |
-| Theo Browne | Active on T3 Chat, no major AI takes |
+| Gergely Orosz | Likely active (paywalled), not confirmed |
 | Kent C. Dodds | Not active this week |
 | Addy Osmani | Not active this week |
-| Kelsey Hightower | Not active this week |
+| Kelsey Hightower | Keynoting Nutanix .NEXT April 7–9 |
 
 ## 10. Model & Tool Updates
 

@@ -522,17 +522,46 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 **Theme:** The podcast that captures the frontier conversation in real time.
 
+### ✅ Theo Browne — Active
+
+**[YouTube](https://www.youtube.com/watch?v=theo-claude-code-leak)**
+
+- Published **"BREAKING: Claude Code source leaked"** (April 1) — 162K+ views
+- Called Anthropic's closed-source strategy "the biggest fumble in the AI era"
+- Flagged cache invalidation bugs in Claude Code costing users 10–20× more in tokens
+
+**Theme:** The YouTuber who turns AI drama into engineering analysis.
+
+### ✅ Aaron Levie (Box CEO) — Present
+
+**[Diginomica](https://diginomica.com/ai-work-smarter-just-as-hard-box-aaron-levie) · [X](https://x.com/levie)**
+
+- Applied **Jevons Paradox** to AI knowledge work: AI makes tasks cheaper, so companies do *more* work, not less
+- "AI means we'll work smarter, but just as hard" — scope expands to fill the capacity AI creates
+- Every field will see the same pattern: automation doesn't reduce workload, it raises ambition
+
+**Theme:** The CEO who explains why AI agents make everyone busier, not lazier.
+
+### ✅ Teresa Torres — Active
+
+**[Product Talk](https://www.producttalk.org/vibe-coding-best-practices/)**
+
+- Published **"Vibe Coding Best Practices: Avoid the Doom Loop"** — separate planning (markdown) from coding, use a separate AI reviewer agent
+- Built a **personal agent scheduling system** using macOS LaunchAgent + Claude Code headless — 4 components: agent identity, scheduler, tasks, scripts
+- Hosting Claude Code Office Hours (April 1)
+
+**Theme:** The product coach who treats AI agents as a design problem, not a coding problem.
+
 ---
 
 ### Voices Not Active This Week
 
 | Voice | Last Active | Notes |
 |---|---|---|
-| Gergely Orosz | Ongoing newsletter | No specific March 30–April 4 items found |
-| Theo Browne | Ongoing T3 Chat | Active on T3 Chat development, no major AI takes this week |
+| Gergely Orosz | Ongoing newsletter | Likely active (paywalled), not confirmed this week |
 | Kent C. Dodds | Earlier 2026 | Not active this week |
 | Addy Osmani | Earlier 2026 | Not active this week |
-| Kelsey Hightower | Earlier 2026 | Not active this week |
+| Kelsey Hightower | Earlier 2026 | Keynoting Nutanix .NEXT (April 7–9), posts on AI precision |
 
 ---
 
@@ -542,7 +571,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 |---|---|---|---|
 | Andrej Karpathy | ✅ | Dobby agent demo, "agentic engineering" | Fortune, X |
 | Simon Willison | ✅ | AI state of the union, dark factories | Lenny's Newsletter |
-| Marc Andreessen | ✅ | Latent Space podcast, agent-first architecture, layoff contrarian | Latent Space, 20VC, Fortune |
+| Marc Andreessen | ✅ | Latent Space podcast, agent architecture, layoff contrarian | Latent Space, 20VC, Fortune |
 | Boris Cherny | ✅ | Claude Code DMCA retraction, OpenClaw billing | TechCrunch |
 | Josh Gottheimer | ✅ | National security concerns re: Anthropic | Axios, The Hill |
 | Charles Carmakal | ✅ | TeamPCP impact: 1,000+ environments | The Register |
@@ -551,8 +580,10 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 | Steve Yegge | ✅ | "Vibe Maintainer" — AI-generated PR workflow | Medium |
 | Guillermo Rauch | ✅ | "Agent responsibly" — enterprise agent playbook | Vercel Blog |
 | Swyx | ✅ | Hosted Andreessen on Latent Space | Latent Space |
-| Gergely Orosz | ❌ | — | — |
-| Theo Browne | ❌ | — | — |
+| Theo Browne | ✅ | Claude Code leak video, 162K views | YouTube |
+| Aaron Levie | ✅ | Jevons Paradox — AI makes everyone busier | Diginomica, X |
+| Teresa Torres | ✅ | Vibe coding doom loop, agent scheduling | Product Talk |
+| Gergely Orosz | ❌ | Likely active (paywalled) | — |
 
 ---
 
