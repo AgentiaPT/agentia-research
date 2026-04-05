@@ -44,7 +44,7 @@ The infrastructure of trust — from code registries to model labs to employment
 
 | Layer | Who | What |
 |---|---|---|
-| **Model Security** | Anthropic | Claude Code source leaked via npm; KAIROS daemon mode revealed |
+| **Model Security** | Anthropic | Claude Code source leaked via npm; KAIROS daemon mode revealed; OpenClaw subscription block |
 | **Supply Chain** | North Korea / DPRK | Axios (70M+ downloads/week) poisoned with RAT |
 | **Open Models** | Google | Gemma 4 under Apache 2.0 — 31B model ranks #3 globally |
 | **Employment** | Oracle / Bloomberg / Andreessen | 30K layoffs vs. "AI is the silver bullet excuse" |
@@ -431,11 +431,12 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 - Called AI layoffs a **"farce"** — companies 75% overstaffed, AI is the "silver bullet excuse"
 - Argued "AI literally until December was not actually good enough to do any of the jobs they're cutting"
-- Position: AI boosts productivity for remaining workers rather than replacing them
+- **Latent Space podcast** (April 3): "Those days are just over" — called LLM + shell + filesystem + cron "one of the biggest software architecture breakthroughs in decades"
+- Agents as the new Unix: state lives in files, portable across models and runtimes
 
-> "Essentially, every large company is overstaffed."
+> "We've always lived in a world in which software is this precious thing that you have to think about very carefully... Those days are just over."
 
-**Theme:** The loudest voice saying the emperor has no layoff clothes.
+**Theme:** From layoff contrarian to agent-architecture evangelist — the most active voice of the week.
 
 ### ✅ Boris Cherny (Anthropic) — Active
 
@@ -490,6 +491,37 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 **Theme:** Building the narrative infrastructure, not just the model infrastructure.
 
+### ✅ Steve Yegge — Active
+
+**[Medium](https://steve-yegge.medium.com/vibe-maintainer-a2273a841040)**
+
+- Published **"Vibe Maintainer"** — workflow for managing dozens of AI-generated PRs per day
+- 99% of incoming PRs are AI-generated; maintains 88% merge rate
+- "With coding agents of 2026, everyone who loves your software is a credible threat to forking you"
+- Inverts traditional OSS: fix contributor code yourself, optimize for community throughput
+
+**Theme:** The veteran engineer who turned open-source maintenance into agent orchestration.
+
+### ✅ Guillermo Rauch (Vercel) — Active
+
+**[Vercel Blog](https://vercel.com/blog/agent-responsibly)**
+
+- Published **"Agent responsibly"** — Vercel's internal guidance for shipping agent-written code
+- After Opus 4.5: agents now do most of Vercel's coding
+- Self-driving deployments, continuous validation, gated pipelines with canary analysis
+- Key distinction: *leveraging* AI vs. *relying* on it
+
+**Theme:** The first major enterprise playbook for agent-generated production code.
+
+### ✅ Swyx (Latent Space) — Active
+
+**[Latent Space](https://www.latent.space/p/pmarca)**
+
+- Hosted the **Marc Andreessen episode** (April 3) — one of the most-discussed AI podcasts of the week
+- Topics: Death of the Browser, agents as the new Unix, OpenClaw ecosystem, self-modifying agents
+
+**Theme:** The podcast that captures the frontier conversation in real time.
+
 ---
 
 ### Voices Not Active This Week
@@ -497,11 +529,9 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 | Voice | Last Active | Notes |
 |---|---|---|
 | Gergely Orosz | Ongoing newsletter | No specific March 30–April 4 items found |
-| Swyx (Latent Space) | Ongoing podcast | AIE Europe prep (April 8–10), no episode this specific week |
 | Theo Browne | Ongoing T3 Chat | Active on T3 Chat development, no major AI takes this week |
 | Kent C. Dodds | Earlier 2026 | Not active this week |
 | Addy Osmani | Earlier 2026 | Not active this week |
-| Steve Yegge | Earlier 2026 | Not active this week |
 | Kelsey Hightower | Earlier 2026 | Not active this week |
 
 ---
@@ -512,14 +542,16 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 |---|---|---|---|
 | Andrej Karpathy | ✅ | Dobby agent demo, "agentic engineering" | Fortune, X |
 | Simon Willison | ✅ | AI state of the union, dark factories | Lenny's Newsletter |
-| Marc Andreessen | ✅ | AI layoffs as "silver bullet excuse" | 20VC, Fortune |
-| Boris Cherny | ✅ | Claude Code DMCA retraction | TechCrunch |
+| Marc Andreessen | ✅ | Latent Space podcast, agent-first architecture, layoff contrarian | Latent Space, 20VC, Fortune |
+| Boris Cherny | ✅ | Claude Code DMCA retraction, OpenClaw billing | TechCrunch |
 | Josh Gottheimer | ✅ | National security concerns re: Anthropic | Axios, The Hill |
 | Charles Carmakal | ✅ | TeamPCP impact: 1,000+ environments | The Register |
 | Jim Farley | ✅ | Essential economy vs AI disruption | Fortune |
 | Sam Altman | ✅ | TBPN acquisition | CNBC |
+| Steve Yegge | ✅ | "Vibe Maintainer" — AI-generated PR workflow | Medium |
+| Guillermo Rauch | ✅ | "Agent responsibly" — enterprise agent playbook | Vercel Blog |
+| Swyx | ✅ | Hosted Andreessen on Latent Space | Latent Space |
 | Gergely Orosz | ❌ | — | — |
-| Swyx | ❌ | — | — |
 | Theo Browne | ❌ | — | — |
 
 ---
@@ -530,7 +562,10 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 - **300K max_tokens** now available on the Message Batches API for Claude Opus 4.6 and Sonnet 4.6 (beta header for long-form generation)
 - **1M context window migration**: Anthropic retiring the 1M context beta for Claude Sonnet 4.5 and Sonnet 4 on **April 30, 2026**. Users must migrate to Sonnet 4.6 or Opus 4.6, which support 1M tokens at standard pricing with no beta header
-- Claude Code v2.1.88 pulled and re-released after source map leak (see [§2](#2-anthropics-week-from-hell--mythos-claude-code-and-congressional-fire))
+- Claude Code v2.1.88 pulled and re-released after source map leak (see [§2](#2-anthropics-week-from-hell--claude-code-dmca-and-congressional-fire))
+- **Claude Code auto mode** blog post (March 24, widely discussed this week): two-layer safety classifier replacing `--dangerously-skip-permissions`. 0.4% false positive rate, 17% miss rate on real overeager actions. Classifier is "reasoning-blind by design" — sees only user messages and tool calls, not Claude's reasoning ([Anthropic Engineering](https://www.anthropic.com/engineering/claude-code-auto-mode))
+- **OpenClaw subscription block** (April 4): third-party harnesses can no longer use Claude subscription allowances. Claude Code CLI remains included. See [§2 Act 5](#act-5-openclaw-subscription-block-april-4)
+- **Emotions research** (April 2–3): "[Emotion concepts and their function in a large language model](https://www.anthropic.com/research/emotion-concepts-function)" — 171 emotion-related internal representations found in Claude Sonnet 4.5. See [§2 Act 6](#act-6-emotions-research-april-23)
 
 ### Google
 
@@ -557,6 +592,15 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 - **Three new in-house AI models** — speech transcription, voice generation, and an upgraded image creator. Building foundational AI independently ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) — *(403)*)
 - **$10B Japan AI investment** (April 3, 2026–2029) — infrastructure, cybersecurity, partnerships with Sakura Internet, SoftBank, NTT Data, NEC, Fujitsu, Hitachi. Goal: train 1M AI professionals by 2030
+
+### Playwright
+
+- **Playwright 1.59** (April 1–2) — Microsoft's most AI-agent-aware release yet ([Release notes](https://playwright.dev/docs/release-notes)):
+  - **Screencast API** (`page.screencast`) — video recording with action annotations, real-time JPEG frame streaming for vision models, custom HTML overlays and chapter titles. Enables "agentic video receipts" — agents produce video proof of their testing work
+  - **`browser.bind()`** — shared browser sessions where multiple clients (CLI, MCP server, scripts) connect simultaneously. Opens collaborative + agent-driven debugging
+  - **CLI debugger for agents** — `npx playwright test --debug=cli` for automated debugging in agentic workflows
+  - **Dashboard** — `playwright-cli show` to view all bound browsers, statuses, and enable manual intervention
+  - **CLI trace analysis** — `npx playwright trace` to explore traces from command line (agents can understand test failures without a GUI)
 
 ### NVIDIA
 
@@ -665,6 +709,15 @@ Governor Newsom signed an order requiring AI companies seeking state contracts t
 **Microsoft threat report: "Agent ecosystem will become the most attacked surface"**
 Microsoft's April 2 report warns that AI is reducing friction across the entire attack lifecycle. The barrier to sophisticated attacks "has collapsed." ([Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/))
 
+**"Dark code" enters mainstream vocabulary**
+Dan Shapiro's "dark factory" concept — fully automated code production where no human writes, reads, or reviews the output — gained traction this week through Julian Harris, Simon Willison, and multiple LinkedIn discussions. StrongDM publicly revealed operating a dark factory since mid-2025. The question is no longer whether dark code exists, but how much of production software is already dark code that nobody's audited ([danshapiro.com](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/)).
+
+**GitHub Octoverse: AI-driven code velocity accelerating**
+GitHub's [Octoverse data](https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/) shows **986 million code pushes** in 2025 (+25.1% YoY), with merged PR volume up **29%**. Copilot generates **46% of code** written by developers and is adopted by 90% of Fortune 100. Industry observers are projecting dramatically higher growth curves for 2026 as agentic coding tools go mainstream — one LinkedIn analysis extrapolated a **14-fold increase** in code commits by year-end.
+
+**Playwright 1.59: testing infrastructure goes agent-first**
+Microsoft's Playwright 1.59 shipped screencast APIs, shared browser sessions, and CLI debugging specifically designed for AI agents — not humans. When a testing framework explicitly builds for agent consumers, it signals that the developer tools ecosystem is reorienting around AI-first workflows.
+
 ### 🔵 Watch Signals
 
 **Congressional oversight of AI lab security**
@@ -697,6 +750,9 @@ The largest private funding round in history. Amazon ($50B), NVIDIA ($30B), Soft
 
 > "Claude is a critical part of our national security operations. If it is replicated, we sacrifice the competitive edge we have worked so diligently to maintain in all facets of our national security."
 > — **Rep. Josh Gottheimer**, [Axios](https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks)
+
+> "We've always lived in a world in which software is this precious thing that you have to think about very carefully... Those days are just over."
+> — **Marc Andreessen**, [Latent Space](https://www.latent.space/p/pmarca)
 
 > "I don't expect them to go any easier on us, am sure I'll do my part to help enable that with occasional stupid decisions."
 > — **Sam Altman** on TBPN acquisition, [CNBC](https://www.cnbc.com/2026/04/02/openai-acquires-tech-podcast-tbpn.html)
