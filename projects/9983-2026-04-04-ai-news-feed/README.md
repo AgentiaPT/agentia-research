@@ -109,7 +109,7 @@ On the last day of the week, Anthropic emailed subscribers that **third-party ha
 
 Boris Cherny explained the rationale:
 
-> "Our subscriptions weren't built for the usage patterns of these third-party tools." — **Boris Cherny**, Head of Claude Code, [TechCrunch](https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/#:~:text=subscriptions%20weren%27t%20built%20for%20the%20usage%20patterns)
+> "Anthropic's subscriptions weren't built for the usage patterns of these third-party tools." — **Boris Cherny**, Head of Claude Code, [TechCrunch](https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/#:~:text=subscriptions%20weren%27t%20built%20for%20the%20usage%20patterns)
 
 Crucially, **Claude Code CLI remains included** with subscriptions. Approved surfaces: Claude.ai (consumers), Claude Code (developers), metered API (everyone else). Peter Steinberger [noted](https://news.ycombinator.com/item?id=47633396) that OpenClaw can be configured to route through the Claude Code CLI — slower, but functional. The harness is where the real control lives.
 
@@ -160,7 +160,7 @@ Meanwhile, the [TeamPCP supply chain campaign covered last week](../9984-2026-03
 
 One company decided the supply chain problem was unsolvable through conventional means. **Charles Herring**, co-founder of cybersecurity firm WitFoo, eliminated **all 450 external dependencies** from their analytics platform — a "nuclear code fork" that brought every line of third-party code in-house ([charlesherring.com](https://www.charlesherring.com/blog/nuclear-code-fork)).
 
-The scope: **7.35 million lines** of code across 32,708 files internalized. 450 Go packages forked and detached. 693MB of npm caches frozen. The cost: **$200 in AI tokens** and **two days** of work, using Claude to automate the migration. Fourteen previously undetected vulnerabilities were found and fixed during the process.
+The scope: **7.35 million lines** of code across 32,708 files internalized. 450 Go packages forked and detached. 693MB of npm caches frozen. The cost: **$200 in AI tokens** and **four labor days** of work (March 29–30), using Claude to automate the migration. Fourteen previously undetected vulnerabilities were found and fixed during the process.
 
 Herring's rationale was blunt: after watching Trivy get its version tags silently rewritten, LiteLLM get backdoored through its own CI/CD, and Log4j sit undetected for eight years despite Apache's formal review process — the liability exposure of trusting upstream maintainers became existential. A follow-up post, "[Why the Fork](https://www.charlesherring.com/blog/why-the-fork)," addressed objections about abandoning open-source collaboration.
 
@@ -342,7 +342,7 @@ This is the flip side of vibe coding's security story — when the entire contri
 
 ### Vercel: "Agent Responsibly"
 
-Vercel CEO **Guillermo Rauch** published "[Agent responsibly](https://vercel.com/blog/agent-responsibly)" — internal guidance on how Vercel ships agent-generated code in production. After Opus 4.5 made agents the primary code authors at Vercel, the team established guardrails:
+Vercel published "[Agent responsibly](https://vercel.com/blog/agent-responsibly)" — internal guidance on how Vercel ships agent-generated code in production, authored by engineer **Matthew Binshtok** and shared by CEO **Guillermo Rauch**. After Opus 4.5 made agents the primary code authors at Vercel, the team established guardrails:
 
 - **Self-driving deployments** — every change rolls out through gated pipelines with canary analysis; degradation triggers automatic rollback
 - **Continuous validation** — infrastructure tests itself continuously (load tests, chaos experiments, disaster recovery), not just at deploy time
@@ -389,7 +389,7 @@ Two days after Karpathy's Dobby demo, **Marc Andreessen** appeared on the **Late
 
 > "If you need new software to do X, Y, or Z, you're just going to wave your hand and get it."
 
-Andreessen called the LLM + shell + filesystem + markdown + cron loop "one of the biggest software architecture breakthroughs in decades" — agents whose state lives in files, portable across models and runtimes. Self-modifying agents that extend themselves may redefine what software is. The discussion covered real-world OpenClaw use cases (health dashboards, sleep monitoring, rewriting firmware on robot dogs) and drew parallels to the early web.
+Andreessen called the combination of LLM + shell + filesystem + markdown + cron loop "one of the biggest software architecture breakthroughs in decades" — agents whose state lives in files, portable across models and runtimes. Self-modifying agents that extend themselves may redefine what software is. The discussion covered real-world OpenClaw use cases (health dashboards, sleep monitoring, rewriting firmware on robot dogs) and drew parallels to the early web.
 
 ### Why This Matters
 
@@ -504,9 +504,9 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### ✅ Guillermo Rauch (Vercel) — Active
 
-**[Vercel Blog](https://vercel.com/blog/agent-responsibly)**
+**[Vercel Blog](https://vercel.com/blog/agent-responsibly) · [LinkedIn](https://www.linkedin.com/posts/rauchg_agent-responsibly-vercel-activity-7444548391558283264)**
 
-- Published **"Agent responsibly"** — Vercel's internal guidance for shipping agent-written code
+- Shared **"Agent responsibly"** (authored by Matthew Binshtok) — Vercel's internal guidance for shipping agent-written code
 - After Opus 4.5: agents now do most of Vercel's coding
 - Self-driving deployments, continuous validation, gated pipelines with canary analysis
 - Key distinction: *leveraging* AI vs. *relying* on it
