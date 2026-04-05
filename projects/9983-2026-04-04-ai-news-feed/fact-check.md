@@ -222,12 +222,12 @@
 
 | # | ID | Section | Issue | Severity | Status |
 |---|-----|---------|-------|----------|--------|
-| 1 | FC-001 | §8 L380 | Karpathy tweet dated "April 2026" — actual date: **December 27, 2025** | **HIGH** | 🔴 OPEN |
-| 2 | FC-002 | §9 L527 | Theo Browne YouTube URL `?v=theo-claude-code-leak` is a **fabricated placeholder** | **HIGH** | 🔴 OPEN |
-| 3 | FC-003 | §3 L163 | "four labor days (March 29–30)" — 2 calendar days ≠ 4 labor days | **MEDIUM** | 🔴 OPEN |
-| 4 | FC-004 | §6 L275 | "The agent now runs on Claude Sonnet 4.6" — Copilot is multi-model; Sonnet 4.6 is available, not exclusive | **MEDIUM** | 🔴 OPEN |
-| 5 | FC-005 | §5 L239 | Jack Dorsey called "CEO" — actual title is "Block Head" | **LOW** | 🔴 OPEN |
-| 6 | FC-006 | §7 L345 | "After Opus 4.5 made agents the primary code authors at Vercel" — unconfirmed claim | **LOW** | 🔴 OPEN |
+| 1 | FC-001 | §8 L380 | Karpathy tweet dated "April 2026" — actual date: **December 27, 2025** | **HIGH** | ✅ FIXED (Run 1) |
+| 2 | FC-002 | §9 L527 | Theo Browne YouTube URL `?v=theo-claude-code-leak` is a **fabricated placeholder** | **HIGH** | ✅ FIXED (Run 1) — URL removed, marked pending manual verification |
+| 3 | FC-003 | §3 L163 | "four labor days (March 29–30)" — 2 calendar days ≠ 4 labor days | **MEDIUM** | ✅ FIXED (Run 1) — changed to "two calendar days" |
+| 4 | FC-004 | §6 L275 | "The agent now runs on Claude Sonnet 4.6" — Copilot is multi-model; Sonnet 4.6 is available, not exclusive | **MEDIUM** | ✅ FIXED (Run 1) — changed to "supports…as a model option" |
+| 5 | FC-005 | §5 L239 | Jack Dorsey called "CEO" — actual title is "Block Head" | **LOW** | ✅ FIXED (Run 1) — changed to "Block's Jack Dorsey" |
+| 6 | FC-006 | §7 L345 | "After Opus 4.5 made agents the primary code authors at Vercel" — unconfirmed claim | **LOW** | ✅ FIXED (Run 1) — generalized to "As coding agents became primary code authors" |
 
 ---
 
@@ -257,3 +257,25 @@
 - §10: Qwen 3.6-Plus pricing "~$0.29/M" is approximate; OpenRouter lists ~$0.26/M
 - §11: "Q1 venture funding $300 billion" — some Crunchbase headlines say "nearly $300B"
 - §8: Andreessen's "biggest breakthrough" quote also includes "markdown" in the full formulation
+
+---
+
+## Fixes Applied — Run 1
+
+**Commit:** `7f5c1c8` — "Fact-check fixes: 6 corrections"
+
+| # | ID | What changed | Before | After |
+|---|-----|-------------|--------|-------|
+| 1 | FC-001 | §8 Karpathy tweet date | "April 2026" | "December 2025" |
+| 2 | FC-002 | §9 Theo Browne YouTube link | `[YouTube](https://www.youtube.com/watch?v=theo-claude-code-leak)` | `YouTube` (no link) + "(video URL pending manual verification)" |
+| 3 | FC-003 | §3 WitFoo timeframe | "four labor days of work (March 29–30)" | "two calendar days of work (March 29–30)" |
+| 4 | FC-004 | §6 Copilot model claim | "The agent now runs on Claude Sonnet 4.6" | "The agent supports Claude Sonnet 4.6 as a model option alongside other providers" |
+| 5 | FC-005 | §5 Dorsey title | "Block CEO Jack Dorsey" | "Block's Jack Dorsey" |
+| 6 | FC-006 | §7 Vercel/Opus claim | "After Opus 4.5 made agents the primary code authors at Vercel" | "As coding agents became primary code authors at Vercel" |
+| 6b | FC-006 | §9 Vercel voice tracker | "After Opus 4.5: agents now do most of Vercel's coding" | "Coding agents now do most of Vercel's coding" |
+
+### Remaining Manual Actions
+
+- [ ] **FC-002**: Find real Theo Browne YouTube video URL and restore the link
+- [ ] Verify 10 unreachable sources listed above (all returned HTTP 403)
+- [ ] Consider adding per-model context window note in §4 (256K vs 128K for edge models)
