@@ -160,7 +160,7 @@ Meanwhile, the [TeamPCP supply chain campaign covered last week](../9984-2026-03
 
 One company decided the supply chain problem was unsolvable through conventional means. **Charles Herring**, co-founder of cybersecurity firm WitFoo, eliminated **all 450 external dependencies** from their analytics platform — a "nuclear code fork" that brought every line of third-party code in-house ([charlesherring.com](https://www.charlesherring.com/blog/nuclear-code-fork)).
 
-The scope: **7.35 million lines** of code across 32,708 files internalized. 450 Go packages forked and detached. 693MB of npm caches frozen. The cost: **$200 in AI tokens** and **four labor days** of work (March 29–30), using Claude to automate the migration. Fourteen previously undetected vulnerabilities were found and fixed during the process.
+The scope: **7.35 million lines** of code across 32,708 files internalized. 450 Go packages forked and detached. 693MB of npm caches frozen. The cost: **$200 in AI tokens** and **two calendar days** of work (March 29–30), using Claude to automate the migration. Fourteen previously undetected vulnerabilities were found and fixed during the process.
 
 Herring's rationale was blunt: after watching Trivy get its version tags silently rewritten, LiteLLM get backdoored through its own CI/CD, and Log4j sit undetected for eight years despite Apache's formal review process — the liability exposure of trusting upstream maintainers became existential. A follow-up post, "[Why the Fork](https://www.charlesherring.com/blog/why-the-fork)," addressed objections about abandoning open-source collaboration.
 
@@ -236,7 +236,7 @@ Bloomberg [reported](https://www.bloomberg.com/news/articles/2026-04-02/us-job-c
 | Oracle alone | **20,000–30,000** |
 | Cash freed (Oracle) | **$8–10B** for AI infra |
 
-Major companies cutting jobs while explicitly citing AI: **Meta, Google, Amazon, Block, Atlassian, Pinterest, Salesforce**. Block CEO Jack Dorsey eliminated 4,000 jobs — roughly 40% of Block's workforce — citing the "growing capability of AI tools to perform a wider range of tasks."
+Major companies cutting jobs while explicitly citing AI: **Meta, Google, Amazon, Block, Atlassian, Pinterest, Salesforce**. Block's Jack Dorsey eliminated 4,000 jobs — roughly 40% of Block's workforce — citing the "growing capability of AI tools to perform a wider range of tasks."
 
 ### The Counternarrative: Andreessen's "Silver Bullet"
 
@@ -272,7 +272,7 @@ After last week's [data training backlash](../9984-2026-03-29-ai-news-feed/READM
 - **Produce an implementation plan** for review before writing any code
 - **Research** a codebase and answer questions about architecture and conventions
 
-This is the shift from "suggest code when I type" to "understand the problem, plan the approach, execute the solution." The agent now runs on **Claude Sonnet 4.6**.
+This is the shift from "suggest code when I type" to "understand the problem, plan the approach, execute the solution." The agent supports **Claude Sonnet 4.6** as a model option alongside other providers.
 
 ### Commit Signing (April 3)
 
@@ -342,7 +342,7 @@ This is the flip side of vibe coding's security story — when the entire contri
 
 ### Vercel: "Agent Responsibly"
 
-Vercel published "[Agent responsibly](https://vercel.com/blog/agent-responsibly)" — internal guidance on how Vercel ships agent-generated code in production, authored by engineer **Matthew Binshtok** and shared by CEO **Guillermo Rauch**. After Opus 4.5 made agents the primary code authors at Vercel, the team established guardrails:
+Vercel published "[Agent responsibly](https://vercel.com/blog/agent-responsibly)" — internal guidance on how Vercel ships agent-generated code in production, authored by engineer **Matthew Binshtok** and shared by CEO **Guillermo Rauch**. As coding agents became primary code authors at Vercel, the team established guardrails:
 
 - **Self-driving deployments** — every change rolls out through gated pipelines with canary analysis; degradation triggers automatic rollback
 - **Continuous validation** — infrastructure tests itself continuously (load tests, chaos experiments, disaster recovery), not just at deploy time
@@ -377,7 +377,7 @@ This isn't a demo. It's Karpathy's actual home setup — a single agent replacin
 
 On X, Karpathy posted what may be the most honest assessment of where programming stands:
 
-> "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between." — [April 2026](https://x.com/karpathy/status/2004607146781278521)
+> "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between." — [December 2025](https://x.com/karpathy/status/2004607146781278521)
 
 His preferred framing remains **"agentic engineering"** rather than "vibe coding" — a distinction that matters. Vibe coding implies casual, low-stakes generation. Agentic engineering implies designing systems where AI agents are first-class participants in the development process.
 
@@ -507,7 +507,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 **[Vercel Blog](https://vercel.com/blog/agent-responsibly) · [LinkedIn](https://www.linkedin.com/posts/rauchg_agent-responsibly-vercel-activity-7444548391558283264)**
 
 - Shared **"Agent responsibly"** (authored by Matthew Binshtok) — Vercel's internal guidance for shipping agent-written code
-- After Opus 4.5: agents now do most of Vercel's coding
+- Coding agents now do most of Vercel's coding
 - Self-driving deployments, continuous validation, gated pipelines with canary analysis
 - Key distinction: *leveraging* AI vs. *relying* on it
 
@@ -524,9 +524,9 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### ✅ Theo Browne — Active
 
-**[YouTube](https://www.youtube.com/watch?v=theo-claude-code-leak)**
+**YouTube**
 
-- Published **"BREAKING: Claude Code source leaked"** (April 1) — 162K+ views
+- Published **"BREAKING: Claude Code source leaked"** (April 1) — 162K+ views *(video URL pending manual verification)*
 - Called Anthropic's closed-source strategy "the biggest fumble in the AI era"
 - Flagged cache invalidation bugs in Claude Code costing users 10–20× more in tokens
 
