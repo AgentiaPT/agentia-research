@@ -92,6 +92,33 @@ Use `WebFetch` on key articles to extract exact quotes, dates, and details. Many
 
 ---
 
+## Outline Sync Protocol
+
+The `outline.md` file serves as a **live table of contents** that mirrors the article's actual structure at all times. It is the single source of truth for what the article contains.
+
+### Rules
+
+1. **Every edit to README.md must be followed by an update to outline.md** — no exceptions. If you add a subsection, quote, or story to the article, add the corresponding entry to the outline.
+2. **outline.md structure mirrors README.md structure** — same section numbers, same subsection names, same order. Each section in the outline lists its key items as bullet points.
+3. **Pending additions** live at the bottom of the outline under `## Pending Additions` with checkboxes. When integrated into the article, move the item into the appropriate section and check the box.
+4. **Commit outline changes together with article changes** — always in the same commit, never separately.
+5. **The outline header includes a sync warning** reminding editors to keep it in sync.
+
+### What the outline tracks per section
+
+- Section title (matching the `##` heading in README.md)
+- Key stories/subsections as bullet points
+- Named sources and key quotes
+- Tables (noted as "table: description")
+- For Voice Tracker (§9): active/inactive status table
+- For Signals (§12): color-coded signal categories
+
+### When to rebuild the outline from scratch
+
+If the outline drifts significantly from the article (e.g., after a major restructuring), regenerate it by reading README.md section by section and extracting the structure. This should be rare — incremental sync is the norm.
+
+---
+
 ## Phase 2: Outline (~3 minutes)
 
 Create `outline.md` with:
