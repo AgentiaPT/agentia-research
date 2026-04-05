@@ -664,9 +664,9 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 | Metric | Figure | Source |
 |---|---|---|
-| Tech layoffs Q1 2026 | **52,000+** | [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-02/us-job-cut-announcements-in-tech-keep-rising-with-ai-adoption) |
-| Worst first quarter since | **2023** | Bloomberg |
-| March layoffs citing AI | **15,341** (25% of total) | Bloomberg |
+| Tech layoffs Q1 2026 | **52,000+** | [Challenger, Gray & Christmas](https://www.challengergray.com/blog/challenger-report-march-cuts-rise-25-from-february-ai-leads-reasons/) via [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-02/us-job-cut-announcements-in-tech-keep-rising-with-ai-adoption) |
+| Worst first quarter since | **2023** | Challenger, Gray & Christmas |
+| March layoffs citing AI | **15,341** (25% of total) | Challenger, Gray & Christmas |
 | Oracle layoffs (March 31) | **20,000–30,000** (~18% workforce) | [CNBC](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) |
 | Meta layoffs (March 25–April 2) | **hundreds** (potentially 15K total) | [NBC News](https://www.nbcnews.com/tech/social-media/meta-layoffs-hundreds-employees-five-divisions-vr-ai-who-rcna265127) |
 | Block layoffs (Q1) | **4,000** (~40% workforce) | [eWeek](https://www.eweek.com/news/more-tech-layoffs-ai-job-impact-2026/) |

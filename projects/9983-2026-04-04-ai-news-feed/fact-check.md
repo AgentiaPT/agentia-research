@@ -279,3 +279,91 @@
 - [ ] **FC-002**: Find real Theo Browne YouTube video URL and restore the link
 - [ ] Verify 10 unreachable sources listed above (all returned HTTP 403)
 - [ ] Consider adding per-model context window note in §4 (256K vs 128K for edge models)
+
+---
+
+## Run 2 — April 5, 2026 (Reputation-Impact Re-verification)
+
+**Operator:** Claude Code (automated)
+**Scope:** Targeted re-verification of highest reputation-risk claims — direct quotes, named-individual attributions, company-specific numbers
+**Methodology:**
+- All claims ranked into 4 tiers by reputation impact if wrong
+- Tier 1 (catastrophic: defamation, misquoting) and Tier 2 (serious: wrong numbers for named companies) re-verified
+- Primary sources fetched where possible; web search for secondary reproduction of quotes
+- 3 parallel agents + direct manual verification
+
+### Reputation Impact Ranking
+
+**Tier 1 — Critical (misquoting named individuals, false nation-state attribution)**
+
+| # | Claim | Section | Re-verification | Status |
+|---|-------|---------|----------------|--------|
+| T1-1 | Gottheimer: "Claude is a critical part of our national security…" | §2/§12 | **EXACT MATCH** — confirmed via Axios, X, Inc., The Hill | ✅ |
+| T1-2 | Andreessen: "overstaffed by 25%…50%…75%…silver bullet excuse" | §5 | **EXACT MATCH** — Fortune, Benzinga, Yahoo Finance all reproduce verbatim | ✅ |
+| T1-3 | Andreessen: "Those days are just over" (Latent Space) | §8 | **CANNOT VERIFY** — Latent Space transcript 403/paywalled; no secondary source reproduces exact wording | ⚠️ NEEDS MANUAL CHECK |
+| T1-4 | Karpathy: "I've never felt this much behind as a programmer…" | §8 | **EXACT MATCH** — direct X post confirmed (status/2004607146781278521) | ✅ |
+| T1-5 | Altman: "I don't expect them to go any easier on us…" | §10 | **EXACT MATCH** — X post (sama/status/2039773740586918137) + CNBC | ✅ |
+| T1-6 | Carmakal: "over 1,000 impacted SaaS environments" | §3/§12 | **EXACT MATCH** — full quote: "We know of over 1,000 impacted SaaS environments right now that are actively dealing with this particular threat actor" (The Register, CSO, SANS ISC) | ✅ |
+| T1-7 | Anthropic spokesperson: "release packaging issue caused by human error…" | §2 | **CANNOT VERIFY directly** — CNBC 403; confirmed by multiple Run 1 agents via secondary sources | ⚠️ NEEDS MANUAL CHECK |
+| T1-8 | Boris Cherny: "subscriptions weren't built for these usage patterns" | §2 | **CANNOT VERIFY directly** — TechCrunch 403; confirmed by Run 1 agents | ⚠️ NEEDS MANUAL CHECK |
+| T1-9 | North Korean attribution: Sapphire Sleet + UNC1069 | §3 | **CONFIRMED** — Microsoft and Google both published independent attribution reports | ✅ |
+| T1-10 | Yegge: "credible threat to forking you" | §7 | **CANNOT VERIFY directly** — Medium 403; article exists, content confirmed thematically | ⚠️ NEEDS MANUAL CHECK |
+| T1-11 | Jim Farley: AI eliminates half of white-collar jobs, 600K+500K shortfall | §9/§11 | **CANNOT VERIFY directly** — Fortune 403 | ⚠️ NEEDS MANUAL CHECK |
+
+**Result: 6/11 EXACT MATCH, 0 INCORRECT, 5 CANNOT VERIFY (all behind 403 paywalls)**
+
+---
+
+**Tier 2 — High (wrong numbers attributed to named companies)**
+
+| # | Claim | Section | Re-verification | Status |
+|---|-------|---------|----------------|--------|
+| T2-1 | Oracle 20K–30K layoffs (~18% of 162K workforce) | §5 | **CONFIRMED** — 18% accurate at top of range (30K/162K). Midpoint would be ~15%. Defensible as stated. | ✅ |
+| T2-2 | Block 4,000 jobs (~40% workforce) | §5 | **CONFIRMED** — 4,000 of 10,205 = 39.2%. Article's "roughly 40%" is more precise than press "nearly half" | ✅ |
+| T2-3 | DMCA: 8,100 repos → retracted to 1 + 96 forks | §2 | **CONFIRMED** — TechCrunch, WinBuzzer, PiunikaWeb all report 8,100 and the 1+96 retraction | ✅ |
+| T2-4 | OpenAI $122B/$852B, Amazon $50B ($35B contingent), NVIDIA $30B, SoftBank $30B, retail $3B | §10 | **CONFIRMED** — all amounts verified via SEC filings (GeekWire), CNBC, Bloomberg | ✅ |
+| T2-5 | Sora ~$1M/day, Disney $1B collapsed | §10 | **CONFIRMED** — TechCrunch ($1M/day), Variety+Deadline ($1B Disney) | ✅ |
+| T2-6 | Axios: 3% userbase, 70M+ downloads, versions 1.14.1/0.30.4 | §3 | **CONFIRMED** — all technical details match Microsoft and Google reports | ✅ |
+| T2-7 | 52K Q1 tech layoffs, 15,341 citing AI (25%) | §5/§11 | **CONFIRMED** — numbers correct; primary source is Challenger, Gray & Christmas (not Bloomberg) | ✅ (attribution FIXED in this run) |
+| T2-8 | WitFoo: 450 deps, 7.35M lines, 32,708 files, $200, 14 vulns | §3 | **CONFIRMED** — all numbers match Herring's blog. $200 = tokens + GitHub Actions (not purely AI tokens) | ✅ |
+
+**Result: 8/8 CONFIRMED**
+
+---
+
+### New Issues Found — Run 2
+
+| # | ID | Section | Issue | Severity | Status |
+|---|-----|---------|-------|----------|--------|
+| 7 | FC-007 | §11 L667-669 | Layoff data (52K, 15,341) attributed to "Bloomberg" — primary source is **Challenger, Gray & Christmas**. Bloomberg reported on Challenger data. | **MEDIUM** | ✅ FIXED (Run 2) |
+
+### Fixes Applied — Run 2
+
+**Commit:** (pending)
+
+| # | ID | What changed | Before | After |
+|---|-----|-------------|--------|-------|
+| 7 | FC-007 | §11 Jobs table source attribution | "Bloomberg" for 52K and 15,341 rows | "Challenger, Gray & Christmas via Bloomberg" and "Challenger, Gray & Christmas" |
+
+### Quotes Requiring Manual Verification (403 sources)
+
+These 5 direct quotes could not be independently verified because primary sources returned HTTP 403. They were confirmed in Run 1 via agent secondary-source checks, but exact wording has not been matched against the original:
+
+| # | Quote | Attributed to | Primary source (403) |
+|---|-------|--------------|---------------------|
+| 1 | "Those days are just over" + surrounding context | Marc Andreessen | Latent Space (latent.space/p/pmarca) |
+| 2 | "release packaging issue caused by human error…" | Anthropic spokesperson | CNBC |
+| 3 | "subscriptions weren't built for these usage patterns" | Boris Cherny | TechCrunch |
+| 4 | "credible threat to forking you" | Steve Yegge | Medium |
+| 5 | Jim Farley workforce numbers (half of white-collar, 600K+500K) | Jim Farley via Fortune | Fortune |
+
+### Updated Aggregate (Runs 1 + 2 combined)
+
+| Category | Run 1 | Run 2 re-check | Combined |
+|----------|-------|----------------|----------|
+| ✅ Confirmed / Exact match | 75 | 14 re-confirmed | 75 |
+| ⚠️ Imprecise / Partial | 4 | 0 new | 3 (1 fixed) |
+| ❌ Incorrect / Fabricated | 2 | 0 new | 0 (2 fixed) |
+| 🔴 Issues found | 6 | 1 new | 7 total |
+| 🟢 Issues fixed | 6 | 1 | **7 total (all fixed)** |
+| ⚠️ Quotes needing manual check | — | 5 | 5 |
