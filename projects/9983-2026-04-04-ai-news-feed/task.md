@@ -22,9 +22,9 @@ Create the weekly AI × Software Engineering news update covering March 30 – A
 - [x] Take screenshot (explorer-screenshot.png)
 - [x] Source documentation (sources.md — 60+ sources)
 - [x] Run build-index.py and commit
-- [ ] Fact-check pass — verify all quotes exact, dates correct, numbers accurate
+- [x] Fact-check pass — Run 1 (82 claims, 6 fixes) + Run 2 (reputation re-verification, 1 fix)
+- [ ] 403 sources review — 3/11 verified (Harvard Gazette, VentureBeat, InfoQ) via user-provided text April 6. 8 remaining — see pending.md
 - [ ] Human commentary integration — user picks and commentary blocks
-- [ ] 403 sources review — see pending.md for URLs user can check
 
 ## Key Stories This Week
 

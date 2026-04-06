@@ -20,7 +20,7 @@ Two major security organizations published vibe coding security frameworks:
 
 ### The Harvard Perspective
 
-The Harvard Gazette [published a feature](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/) examining vibe coding as a window into broader AI adoption patterns — not just for software, but as a template for how AI transforms professional work more generally.
+The Harvard Gazette [published a feature](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/#:~:text=Vibe%20coding%20privileges%20people%20who%20are%20strong%20verbal%20communicators) on Karen Brennan, Timothy E. Wirth Professor of Practice in Learning Technologies at Harvard GSE, who taught a six-week vibe coding course to 92 students with no prior AI or coding experience required. Brennan's key insight: vibe coding *"privileges people who are strong verbal communicators, which is an important equity consideration."* Students got stuck in frustrated loops — prompting AI, getting generic results, unable to articulate what to change. Her broader thesis: the central practices of vibe coding — imagining possibilities, composing prompts, critically evaluating output — are becoming *"central life practices."* As she put it: *"Maybe it's less 'vibe coding' and more 'vibe everything.'"*
 
 ### Why This Matters
 

@@ -127,19 +127,19 @@ This isn't a story about one company having a bad week. It's a stress test of wh
 
 ## 3. The Axios Bomb — North Korea Hits npm's Most-Downloaded HTTP Library
 
-**March 31 | [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package) · [The Hacker News](https://thehackernews.com/2026/04/google-attributes-axios-npm-supply.html)**
+**March 31 | [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) · [Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package) · [The Hacker News](https://thehackernews.com/2026/04/google-attributes-axios-npm-supply.html) · [InfoQ](https://www.infoq.com/news/2026/04/axios-supply-chain/)**
 
-On March 31 — the same day Anthropic leaked its source code — attackers compromised the official **Axios package on npm**, one of the most widely-used HTTP libraries in the JavaScript ecosystem with **over 70 million downloads per week**.
+On March 31 — the same day Anthropic leaked its source code — attackers compromised the official **Axios package on npm**, one of the most widely-used HTTP libraries in the JavaScript ecosystem with **over 100 million weekly downloads**.
 
 ### The Attack
 
-Between 00:21 and 03:20 UTC, the attacker gained access to the Axios maintainer's publishing credentials, changed the maintainer's email to an attacker-controlled account, and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency (`plain-crypto-js`). On install, the code:
+Between 00:21 and 03:20 UTC, the attacker gained access to the Axios maintainer's publishing credentials — likely via a long-lived npm token — changed the maintainer's email to an attacker-controlled account, and released two poisoned versions (**1.14.1** and **0.30.4**) containing a hidden malicious dependency (`plain-crypto-js`, a typosquat of the legitimate `crypto-js` library). Neither version appeared in the official Axios GitHub release tags, an immediate red flag. On install, the code:
 
 1. **Contacted C2 servers** and downloaded OS-specific payloads (macOS, Windows, Linux)
 2. **Stole credentials** — cloud access keys, database passwords, API tokens
 3. **Installed a Remote Access Trojan** (RAT) for persistent access
 
-The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage across both modern and legacy codebases. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window.
+The dual version strategy (one on the 1.x branch, one on the 0.x branch) was designed to maximize coverage — both branches poisoned within 39 minutes of each other, meaning any project on a caret range like `^1.14.0` or `^0.30.0` would silently pull the malicious code on its next install. [Socket](https://socket.dev)'s automated scanner flagged the malicious `plain-crypto-js` dependency within **six minutes** of it appearing on the registry. Roughly **3% of the Axios userbase** downloaded the malicious versions during the three-hour window.
 
 ### North Korean Attribution
 
@@ -330,7 +330,7 @@ Two major security organizations published vibe coding security frameworks:
 
 ### The Harvard Perspective
 
-The Harvard Gazette [published a feature](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/) examining vibe coding as a window into broader AI adoption patterns — not just for software, but as a template for how AI transforms professional work more generally.
+The Harvard Gazette [published a feature](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/#:~:text=Vibe%20coding%20privileges%20people%20who%20are%20strong%20verbal%20communicators) on Karen Brennan, Timothy E. Wirth Professor of Practice in Learning Technologies at Harvard GSE, who taught a six-week vibe coding course to 92 students with no prior AI or coding experience required. Brennan's key insight: vibe coding *"privileges people who are strong verbal communicators, which is an important equity consideration."* Students got stuck in frustrated loops — prompting AI, getting generic results, unable to articulate what to change. Her broader thesis: the central practices of vibe coding — imagining possibilities, composing prompts, critically evaluating output — are becoming *"central life practices."* As she put it: *"Maybe it's less 'vibe coding' and more 'vibe everything.'"*
 
 ### Steve Yegge's "Vibe Maintainer"
 
@@ -621,7 +621,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### Microsoft
 
-- **Three new in-house AI models** — speech transcription, voice generation, and an upgraded image creator. Building foundational AI independently ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) — *(403)*)
+- **Three new in-house AI models** — MAI-Transcribe-1, MAI-Voice-1, and MAI-Image-2, available via Microsoft Foundry. MAI-Transcribe-1 achieves 3.8% avg WER on FLEURS (beats Whisper-large-v3 on all 25 benchmarked languages), built by a team of ~10 engineers using half the GPUs of competitors. MAI-Voice-1 generates 60 seconds of audio in 1 second ($22/1M chars). MAI-Image-2 priced at $5/1M input tokens. Suleyman: *"We're now a top three lab just under OpenAI and Gemini."* First output from Microsoft's superintelligence team, formed October 2025 after the OpenAI contract renegotiation freed Microsoft to independently pursue frontier models ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google#:~:text=We%E2%80%99re%20now%20a%20top%20three%20lab%20just%20under%20OpenAI%20and%20Gemini))
 - **$10B Japan AI investment** (April 3, 2026–2029) — infrastructure, cybersecurity, partnerships with Sakura Internet, SoftBank, NTT Data, NEC, Fujitsu, Hitachi. Goal: train 1M AI professionals by 2030
 
 ### Playwright

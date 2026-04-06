@@ -50,7 +50,7 @@
 | 2 | Poisoned versions: 1.14.1 and 0.30.4 | ✅ CONFIRMED | All sources consistent |
 | 3 | Malicious dependency: plain-crypto-js | ✅ CONFIRMED | Google Cloud Blog, Elastic |
 | 4 | Attack window: 00:21–03:20 UTC (~3 hours) | ✅ CONFIRMED | Google Cloud Blog |
-| 5 | Axios: 70M+ weekly downloads | ✅ CONFIRMED | Conservative — some sources say 100M+ combined |
+| 5 | Axios: 100M+ weekly downloads | ✅ CONFIRMED | InfoQ confirms "over 100 million weekly downloads"; article updated from 70M+ |
 | 6 | ~3% of userbase downloaded malicious versions | ✅ CONFIRMED | Multiple sources |
 | 7 | Microsoft attributed to Sapphire Sleet (DPRK, since 2020) | ✅ CONFIRMED | Microsoft Threat Intelligence |
 | 8 | Google attributed to UNC1069 (since 2018) | ✅ CONFIRMED | Google Threat Intelligence Group |
@@ -235,10 +235,10 @@
 
 | # | URL | What to verify | Section |
 |---|-----|---------------|---------|
-| 1 | [Harvard Gazette — Vibe Coding](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/) | Full article content, expert quotes | §7 |
-| 2 | [VentureBeat — Microsoft 3 AI Models](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) | Model names, specs, dates | §10 |
+| 1 | [Harvard Gazette — Vibe Coding](https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/) | Full article content, expert quotes | §7 | ✅ VERIFIED (user-provided text, April 6) |
+| 2 | [VentureBeat — Microsoft 3 AI Models](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google) | Model names, specs, dates | §10 | ✅ VERIFIED (user-provided text, April 6) |
 | 3 | [Lenny's Newsletter — Simon Willison](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union) | Full interview, "dark factories" quotes | §9 |
-| 4 | [InfoQ — Axios Supply Chain](https://www.infoq.com/news/2026/04/axios-supply-chain/) | Technical details of attack | §3 |
+| 4 | [InfoQ — Axios Supply Chain](https://www.infoq.com/news/2026/04/axios-supply-chain/) | Technical details of attack | §3 | ✅ VERIFIED (user-provided text, April 6) |
 | 5 | [GitHub Blog — Copilot Cloud Agent](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/) | Full changelog entry | §6 |
 | 6 | [Anthropic — Emotions Research](https://www.anthropic.com/research/emotion-concepts-function) | Direct paper (confirmed via secondary sources) | §2 |
 | 7 | [Steve Yegge — Vibe Maintainer](https://steve-yegge.medium.com/vibe-maintainer-a2273a841040) | Exact stats: 88% merge, 99% AI-generated | §7/§9 |
@@ -253,7 +253,7 @@
 
 - §4: 256K context only applies to 26B/31B models; edge models (2B/4B) have 128K
 - §4: Audio processing only on edge models (2B/4B), not 26B/31B
-- §3: Axios "70M+ weekly downloads" is conservative — some sources say 100M+ combined
+- §3: Axios downloads updated to "100M+ weekly" per InfoQ source (was "70M+", now resolved)
 - §10: Qwen 3.6-Plus pricing "~$0.29/M" is approximate; OpenRouter lists ~$0.26/M
 - §11: "Q1 venture funding $300 billion" — some Crunchbase headlines say "nearly $300B"
 - §8: Andreessen's "biggest breakthrough" quote also includes "markdown" in the full formulation
@@ -367,3 +367,70 @@ These 5 direct quotes could not be independently verified because primary source
 | 🔴 Issues found | 6 | 1 new | 7 total |
 | 🟢 Issues fixed | 6 | 1 | **7 total (all fixed)** |
 | ⚠️ Quotes needing manual check | — | 5 | 5 |
+
+---
+
+## Run 3 — April 6, 2026 (Manual Source Verification)
+
+**Operator:** User-provided article text + Claude Code
+**Scope:** 3 of 11 unreachable (403) sources verified via user-supplied full article text
+
+### Sources Verified
+
+**1. Harvard Gazette — "Vibe coding may offer insight into our AI future" (§7)**
+- Author: Jacob Sweet, Harvard Staff Writer. Published April 1, 2026.
+- Subject: Karen Brennan, Timothy E. Wirth Professor of Practice in Learning Technologies, Harvard GSE
+- Six-week course, 92 students, co-designed with doctoral student Jacob Wolf
+- Term "vibe coding" attributed to Andrej Karpathy, February 2025
+- Tools used in course: Replit, Figma Make, Claude Code
+- **Article updated**: §7 expanded from one-sentence summary to include Brennan's equity insight, "vibe everything" thesis, and student frustration loops
+
+**2. VentureBeat — "Microsoft launches 3 new AI models" (§10)**
+- Models: MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2 (available via Microsoft Foundry + MAI Playground)
+- MAI-Transcribe-1: 3.8% avg WER on FLEURS, beats Whisper-large-v3 on all 25 languages, built by ~10 engineers
+- MAI-Voice-1: 60s audio in 1s, $22/1M chars
+- MAI-Image-2: $5/1M input tokens, $33/1M image output tokens, top-3 on Arena.ai
+- Suleyman quote: "We're now a top three lab just under OpenAI and Gemini"
+- Superintelligence team formed October 2025 after OpenAI contract renegotiation
+- Microsoft stock down ~17% YTD, worst quarter since 2008 financial crisis
+- Jacob Andreou (ex-Snap) took over as EVP of Copilot experience
+- **Article updated**: §10 Microsoft bullet expanded with model names, specs, pricing, Suleyman quote, team size
+
+**3. InfoQ — "Axios Supply Chain Attack" (§3)**
+- Author: Daniel Curtis (UI Development Manager, Griffiths Waite, Birmingham UK)
+- Confirms: 100M+ weekly downloads (article updated from "70M+")
+- Confirms: plain-crypto-js is typosquat of crypto-js (added to article)
+- Confirms: Neither compromised version in official GitHub release tags (added to article)
+- Confirms: Long-lived npm token as likely attack vector (added to article)
+- Confirms: Socket flagged within 6 minutes (added to article)
+- Confirms: Both branches poisoned within 39 minutes of each other (added to article)
+- New detail: Attacker's npm permissions exceeded collaborator's, briefly preventing revocation
+- New detail: Feross Aboukhadijeh (Socket founder) quote on X
+- New detail: Karpathy's close call — resolved to unaffected 1.13.5 but dependency was unpinned
+- New detail: `ignore-scripts=true` in ~/.npmrc would have mitigated; Bun/pnpm don't run install scripts by default
+- Remediation published by: Wiz, Snyk, Aikido, StepSecurity
+- **Article updated**: §3 enriched with attack vector, typosquat detail, Socket detection speed, 39-min window, release tag discrepancy
+
+### Changes Applied — Run 3
+
+| # | Section | Change | Source |
+|---|---------|--------|--------|
+| 1 | §3 L132 | "70M+ weekly downloads" → "100M+ weekly downloads" | InfoQ |
+| 2 | §3 L136 | Added "likely via long-lived npm token" attack vector | InfoQ |
+| 3 | §3 L136 | Added "typosquat of crypto-js" for plain-crypto-js | InfoQ |
+| 4 | §3 L136 | Added "Neither version appeared in official GitHub release tags" | InfoQ |
+| 5 | §3 L142 | Added Socket 6-minute detection, 39-minute poisoning window, caret range detail | InfoQ |
+| 6 | §3 header | Added InfoQ as source link | InfoQ |
+| 7 | §7 L333 | Expanded Harvard Gazette from 1 sentence to full paragraph with Brennan quotes and course details | Harvard Gazette |
+| 8 | §10 L624 | Expanded Microsoft from 1 sentence to full bullet with model names, specs, pricing, Suleyman quote | VentureBeat |
+
+### Remaining 403 Sources (8 of 11)
+
+- [ ] Lenny's Newsletter — Simon Willison interview
+- [ ] GitHub Blog — Copilot Cloud Agent changelog
+- [ ] HumAI Blog — AI News April 2026
+- [ ] Steve Yegge — "Vibe Maintainer" Medium post
+- [ ] Vercel — "Agent Responsibly" blog
+- [ ] Theo Browne — YouTube video (real URL still needed)
+- [ ] Teresa Torres — Product Talk
+- [ ] Anthropic — Emotions Research paper
