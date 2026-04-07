@@ -1,23 +1,6 @@
 {
-  "generated": "2026-04-04T07:27:42.350023+00:00",
+  "generated": "2026-04-07T06:57:58.075618+00:00",
   "projects": [
-    {
-      "id": "9982-2026-04-03-ai-thought-leaders-weekly",
-      "slug": "ai-thought-leaders-weekly",
-      "title": "9982-2026-04-03-ai-thought-leaders-weekly",
-      "date": "",
-      "status": "",
-      "tags": [],
-      "description": "",
-      "files": [
-        "task.md"
-      ],
-      "htmlFiles": [],
-      "explorers": [],
-      "path": "projects/9982-2026-04-03-ai-thought-leaders-weekly",
-      "wordCount": 0,
-      "readingTime": 1
-    },
     {
       "id": "9983-2026-04-04-ai-news-feed",
       "slug": "ai-news-feed",
@@ -41,6 +24,7 @@
         "README.md",
         "explorer-screenshot.png",
         "explorer.html",
+        "fact-check.md",
         "outline.md",
         "pending.md",
         "sources.md",
@@ -58,8 +42,8 @@
         }
       ],
       "path": "projects/9983-2026-04-04-ai-news-feed",
-      "wordCount": 6143,
-      "readingTime": 26
+      "wordCount": 8933,
+      "readingTime": 38
     },
     {
       "id": "9984-2026-03-29-ai-news-feed",
