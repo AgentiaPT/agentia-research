@@ -529,9 +529,9 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### ✅ Theo Browne — Active
 
-**YouTube**
+**[YouTube](https://www.youtube.com/@t3dotgg)**
 
-- Published **"BREAKING: Claude Code source leaked"** (April 1) — 162K+ views *(video URL pending manual verification)*
+- Published **["BREAKING: Claude Code source leaked"](https://www.youtube.com/watch?v=Wvj1mTqyzsQ)** (April 1) — 162K+ views
 - Called Anthropic's closed-source strategy "the biggest fumble in the AI era"
 - Flagged cache invalidation bugs in Claude Code costing users 10–20× more in tokens
 

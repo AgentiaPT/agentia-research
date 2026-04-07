@@ -243,7 +243,7 @@
 | 6 | [Anthropic — Emotions Research](https://www.anthropic.com/research/emotion-concepts-function) | Direct paper (confirmed via secondary sources) | §2 | ✅ VERIFIED (user-provided text, April 7) |
 | 7 | [Steve Yegge — Vibe Maintainer](https://steve-yegge.medium.com/vibe-maintainer-a2273a841040) | Exact stats: 88% merge, 99% AI-generated | §7/§9 | ✅ VERIFIED (user-provided text, April 7) |
 | 8 | [Vercel — Agent Responsibly](https://vercel.com/blog/agent-responsibly) | Opus 4.5 claim, Azure outage, chaos experiments | §7 | ✅ VERIFIED (user-provided text, April 7) — "primary code authors" claim softened |
-| 9 | Theo Browne YouTube video | **Real URL needed** — placeholder in article is fabricated | §9 |
+| 9 | [Theo Browne YouTube video](https://www.youtube.com/watch?v=Wvj1mTqyzsQ) | Real URL provided by user | §9 | ✅ VERIFIED (user-provided URL, April 7) |
 | 10 | [Teresa Torres — Product Talk](https://www.producttalk.org/vibe-coding-best-practices/) | LaunchAgent + Claude Code headless scheduling details | §9 | ✅ VERIFIED (user-provided text, April 7) |
 | 11 | [HumAI Blog — AI News April 2026](https://www.humai.blog/ai-news-trends-april-2026-complete-monthly-digest/) | General cross-reference | General |
 
@@ -276,7 +276,7 @@
 
 ### Remaining Manual Actions
 
-- [ ] **FC-002**: Find real Theo Browne YouTube video URL and restore the link
+- [x] **FC-002**: Real Theo Browne YouTube URL provided by user — https://www.youtube.com/watch?v=Wvj1mTqyzsQ
 - [ ] Verify 10 unreachable sources listed above (all returned HTTP 403)
 - [ ] Consider adding per-model context window note in §4 (256K vs 128K for edge models)
 
@@ -431,6 +431,6 @@ These 5 direct quotes could not be independently verified because primary source
 - [x] HumAI Blog — AI News April 2026 — verified April 7, general cross-ref corroborates coverage, no corrections
 - [x] Steve Yegge — "Vibe Maintainer" Medium post — verified April 7, all stats match (99% AI PRs, 88% merge, 20K/13K stars, fork quote exact)
 - [x] Vercel — "Agent Responsibly" blog — verified April 7, softened "primary code authors" claim (unsupported by source)
-- [ ] Theo Browne — YouTube video (real URL still needed)
+- [x] Theo Browne — YouTube video — real URL provided April 7: https://www.youtube.com/watch?v=Wvj1mTqyzsQ
 - [x] Teresa Torres — Product Talk — verified April 7, all details match, enriched with specific agents and Obsidian detail
 - [ ] Anthropic — Emotions Research paper
