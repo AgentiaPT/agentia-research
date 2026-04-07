@@ -71,7 +71,7 @@ Days after the Mythos CMS leak [covered in last week's edition](../9984-2026-03-
 
 ### Act 1: The Claude Code Source Leak (March 31)
 
-Anthropic accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The root cause: Bun (the runtime) generates full source maps by default, and `*.map` was not excluded in `.npmignore`. The file pointed to a zip archive on Anthropic's cloud storage containing **the full source code — 1,906 files and 512,000 lines of TypeScript**.
+Anthropic accidentally bundled a **59.8MB source map file** into Claude Code version 2.1.88 on the npm registry. The root cause: Bun (the runtime) generates full source maps by default, and `*.map` was not excluded in `.npmignore`. The file pointed to a zip archive on Anthropic's **Cloudflare R2 bucket** containing **the full source code — 1,906 files and 512,000 lines of TypeScript**.
 
 An Anthropic spokesperson called it:
 
@@ -171,7 +171,7 @@ Users who installed or updated Claude Code via npm on March 31 between 00:21 and
 
 ### TeamPCP Fallout Continues
 
-Meanwhile, the [TeamPCP supply chain campaign covered last week](../9984-2026-03-29-ai-news-feed/README.md#1-the-supply-chain-reckoning--litellm-trivy-and-the-teampcp-campaign) (Trivy → KICS → LiteLLM → Telnyx) continued to cause damage. Mandiant's CTO Charles Carmakal reported **1,000+ cloud environments** actively dealing with the threat actor ([The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/)), and Microsoft published detailed [mitigation guidance](https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/).
+Meanwhile, the [TeamPCP supply chain campaign covered last week](../9984-2026-03-29-ai-news-feed/README.md#1-the-supply-chain-reckoning--litellm-trivy-and-the-teampcp-campaign) (Trivy → KICS → LiteLLM → Telnyx) continued to cause damage. Mandiant's CTO Charles Carmakal reported **1,000+ cloud environments** actively dealing with the threat actor ([The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected_following/)), and Microsoft published detailed [mitigation guidance](https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/).
 
 ### The Nuclear Fork Response
 
@@ -381,7 +381,7 @@ Two weeks after his [autoresearch loop ran 700 experiments autonomously](../9984
 
 ### Dobby: One Agent, Six Apps Replaced
 
-On April 1, Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home. The agent:
+On April 1, Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home ([Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=Dobby) · [Storyboard18](https://www.storyboard18.com/digital/dobby-the-elf-claw-andrej-karpathy-shows-how-ai-now-runs-his-home-and-most-of-his-coding-93270.htm)). The agent:
 
 - Scanned his local network and **discovered devices autonomously**
 - **Reverse-engineered undocumented APIs** for Sonos, lighting, HVAC, pool/spa, security cameras, and shades
@@ -394,11 +394,11 @@ This isn't a demo. It's Karpathy's actual home setup — a single agent replacin
 
 On X, Karpathy posted what may be the most honest assessment of where programming stands:
 
-> "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between." — [December 2025](https://x.com/karpathy/status/2004607146781278521)
+> "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between." — [December 26, 2025](https://x.com/karpathy/status/2004607146781278521)
 
 His preferred framing remains **"agentic engineering"** rather than "vibe coding" — a distinction that matters. Vibe coding implies casual, low-stakes generation. Agentic engineering implies designing systems where AI agents are first-class participants in the development process.
 
-### Andreessen on the Latent Space Podcast: "Those Days Are Just Over"
+### Andreessen on the Latent Space Podcast: "The Days of Precious Software Are Just Over"
 
 Two days after Karpathy's Dobby demo, **Marc Andreessen** appeared on the **Latent Space podcast** (April 3) for "[The Death of the Browser, Pi + OpenClaw, and Why 'This Time Is Different'](https://www.latent.space/p/pmarca)" — his most detailed articulation of the agent-first thesis:
 
@@ -420,10 +420,10 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### ✅ Andrej Karpathy — Very Active
 
-**[X/Twitter](https://x.com/karpathy) · [Fortune Interview](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/)**
+**[X/Twitter](https://x.com/karpathy) · [Let's Data Science](https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3) · [Fortune (March 21)](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/)**
 
-- Demonstrated **Dobby**, an OpenClaw agent replacing 6+ home apps via WhatsApp
-- Described being in a "state of psychosis" trying to explore what's possible
+- Demonstrated **Dobby**, an OpenClaw agent replacing 6+ home apps via WhatsApp (April 1)
+- Described being in a "state of psychosis" trying to explore what's possible (Fortune, March 21 — widely discussed this week)
 - Said he hasn't typed a line of code since December
 - Framing shift: prefers **"agentic engineering"** over "vibe coding"
 - Posted about feeling "never this much behind as a programmer"
@@ -484,7 +484,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### ✅ Charles Carmakal (Mandiant) — Active
 
-**[The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/)**
+**[The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected_following/)**
 
 - Quantified TeamPCP's impact: 1,000+ SaaS environments actively dealing with the threat
 - Provided technical analysis of supply chain attack scope
@@ -793,13 +793,13 @@ The largest private funding round in history. Amazon ($50B), NVIDIA ($30B), Soft
 ## Key Quotes of the Week
 
 > "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between."
-> — **Andrej Karpathy**, [X](https://x.com/karpathy/status/2004607146781278521)
+> — **Andrej Karpathy**, December 26, 2025, [X](https://x.com/karpathy/status/2004607146781278521)
 
 > "Essentially, every large company is overstaffed... AI is the silver bullet excuse."
 > — **Marc Andreessen**, [20VC / Fortune](https://fortune.com/2026/03/31/marc-andreessen-ai-layoffs-silver-bullet-excuse-overhiring/)
 
 > "We know of over 1,000 impacted SaaS environments right now that are actively dealing with this particular threat actor."
-> — **Charles Carmakal**, Mandiant Consulting CTO, [The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected/)
+> — **Charles Carmakal**, Mandiant Consulting CTO, [The Register](https://www.theregister.com/2026/03/24/1k_cloud_environments_infected_following/)
 
 > "A release packaging issue caused by human error, not a security breach."
 > — **Anthropic spokesperson**, [CNBC](https://www.cnbc.com/2026/03/31/anthropic-leak-claude-code-internal-source.html)
