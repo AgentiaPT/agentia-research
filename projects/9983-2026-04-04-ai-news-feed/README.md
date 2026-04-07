@@ -29,7 +29,7 @@ explorers:
 5. [Oracle's 6am Email and the Great Layoff Reckoning](#5-oracles-6am-email-and-the-great-layoff-reckoning)
 6. [The Agent IDE Era — Copilot and Cursor 3](#6-github-copilot-goes-cloud-native)
 7. [Vibe Coding Under Fire — Apple Cracks Down](#7-vibe-coding-under-fire--apple-cracks-down-palo-alto-publishes-framework)
-8. [Karpathy's Dobby and the Agent-First Future](#8-karpathys-dobby-and-the-agent-first-future)
+8. [Andreessen's Agent-First Thesis](#8-andreessens-agent-first-thesis--the-days-of-precious-software-are-just-over)
 9. [Voice Tracker](#9-voice-tracker)
 10. [Model & Tool Updates](#10-model--tool-updates)
 11. [Jobs & Economic Impact](#11-jobs--economic-impact)
@@ -373,34 +373,13 @@ Apple's crackdown is the first signal that platform gatekeepers are treating AI-
 
 ---
 
-## 8. Karpathy's Dobby and the Agent-First Future
+## 8. Andreessen's Agent-First Thesis — "The Days of Precious Software Are Just Over"
 
-**April 1 | [Let's Data Science](https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3) · [X/Twitter](https://x.com/karpathy/status/2004607146781278521)**
+**April 3 | [Latent Space](https://www.latent.space/p/pmarca)**
 
-Two weeks after his [autoresearch loop ran 700 experiments autonomously](../9984-2026-03-29-ai-news-feed/README.md#7-karpathys-autoresearch--humans-are-the-bottleneck), Karpathy shifted from AI-doing-research to AI-running-his-home.
+### Andreessen on the Latent Space Podcast
 
-### Dobby: One Agent, Six Apps Replaced
-
-On April 1, Karpathy demonstrated **Dobby** — an OpenClaw AI agent that replaced six separate smartphone apps in his home ([Fortune](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/#:~:text=Dobby) · [Storyboard18](https://www.storyboard18.com/digital/dobby-the-elf-claw-andrej-karpathy-shows-how-ai-now-runs-his-home-and-most-of-his-coding-93270.htm)). The agent:
-
-- Scanned his local network and **discovered devices autonomously**
-- **Reverse-engineered undocumented APIs** for Sonos, lighting, HVAC, pool/spa, security cameras, and shades
-- Uses **WhatsApp as the primary interface** — Karpathy sends natural-language messages, Dobby executes
-- Detects FedEx deliveries via security cameras and sends alerts
-
-This isn't a demo. It's Karpathy's actual home setup — a single agent replacing the Sonos app, smart lighting app, HVAC controller, pool management app, security camera viewer, and shade controller.
-
-### "Never Felt This Behind"
-
-On X, Karpathy posted what may be the most honest assessment of where programming stands:
-
-> "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between." — [December 26, 2025](https://x.com/karpathy/status/2004607146781278521)
-
-His preferred framing remains **"agentic engineering"** rather than "vibe coding" — a distinction that matters. Vibe coding implies casual, low-stakes generation. Agentic engineering implies designing systems where AI agents are first-class participants in the development process.
-
-### Andreessen on the Latent Space Podcast: "The Days of Precious Software Are Just Over"
-
-Two days after Karpathy's Dobby demo, **Marc Andreessen** appeared on the **Latent Space podcast** (April 3) for "[The Death of the Browser, Pi + OpenClaw, and Why 'This Time Is Different'](https://www.latent.space/p/pmarca)" — his most detailed articulation of the agent-first thesis:
+**Marc Andreessen** appeared on the **Latent Space podcast** (April 3) for "[The Death of the Browser, Pi + OpenClaw, and Why 'This Time Is Different'](https://www.latent.space/p/pmarca)" — his most detailed articulation of the agent-first thesis:
 
 > "We've always lived in a world in which software is this precious thing that you have to think about very carefully. It was really hard to generate good software, and there was only a small number of people who could do it. Those days are just over." — **Marc Andreessen**, [Latent Space](https://www.latent.space/p/pmarca#:~:text=Those%20days%20are%20just%20over)
 
@@ -410,7 +389,7 @@ Andreessen called the combination of LLM + shell + filesystem + markdown + cron 
 
 ### Why This Matters
 
-The Dobby demo isn't impressive because it controls a smart home. It's impressive because it shows a single agent dynamically discovering and integrating with arbitrary systems — the agent-as-universal-interface pattern that threatens not just individual apps, but the app model itself. When agents can reverse-engineer APIs on the fly, the need for official integrations erodes. And when Andreessen frames the agent loop as a successor to the browser — from the man who built Mosaic — the claim carries historical weight.
+When Andreessen frames the agent loop as a successor to the browser — from the man who built Mosaic — the claim carries historical weight. The agent-as-universal-interface pattern threatens not just individual apps, but the app model itself. When agents can reverse-engineer APIs on the fly, the need for official integrations erodes.
 
 ---
 
@@ -418,19 +397,14 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 **Active voices this week: March 30 – April 4, 2026**
 
-### ✅ Andrej Karpathy — Very Active
+### ✅ Andrej Karpathy — Present
 
-**[X/Twitter](https://x.com/karpathy) · [Let's Data Science](https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3) · [Fortune (March 21)](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/)**
+**[X/Twitter](https://x.com/karpathy)**
 
-- Demonstrated **Dobby**, an OpenClaw agent replacing 6+ home apps via WhatsApp (April 1)
-- Described being in a "state of psychosis" trying to explore what's possible (Fortune, March 21 — widely discussed this week)
-- Said he hasn't typed a line of code since December
-- Framing shift: prefers **"agentic engineering"** over "vibe coding"
-- Posted about feeling "never this much behind as a programmer"
+- Karpathy's influence continued this week through ongoing community discussion of his OpenClaw agent work and "agentic engineering" framing
+- His December 2025 observation — *"I've never felt this much behind as a programmer"* — remained the most-cited quote in the agentic engineering discourse ([X, December 26, 2025](https://x.com/karpathy/status/2004607146781278521))
 
-> "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between."
-
-**Theme:** The architect of vibe coding is now living in the post-coding era.
+**Theme:** The architect of vibe coding whose prior work set this week's agenda.
 
 ### ✅ Simon Willison — Active
 
@@ -594,7 +568,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 | Voice | Active | Key Topic | Source |
 |---|---|---|---|
-| Andrej Karpathy | ✅ | Dobby agent demo, "agentic engineering" | Fortune, X |
+| Andrej Karpathy | ✅ | "Agentic engineering" framing, ongoing influence | X |
 | Simon Willison | ✅ | 95% AI code, dark factories, Challenger prediction, agentic engineering | Lenny's Newsletter |
 | Marc Andreessen | ✅ | Latent Space podcast, agent architecture, layoff contrarian | Latent Space, 20VC, Fortune |
 | Boris Cherny | ✅ | Claude Code DMCA retraction, OpenClaw billing | TechCrunch |
@@ -677,7 +651,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### OpenClaw
 
-- The agent framework powering Karpathy's Dobby (see [§8](#8-karpathys-psychosis-and-the-agent-first-future))
+- The agent framework behind the OpenClaw ecosystem (see [§8](#8-andreessens-agent-first-thesis--the-days-of-precious-software-are-just-over))
 - Acquired by OpenAI in February — rapidly becoming the de facto persistent agent framework ([VentureBeat](https://venturebeat.com/technology/openais-acquisition-of-openclaw-signals-the-beginning-of-the-end-of-the))
 - Users connecting it to calendars, browsers, email, shopping, files — the "ambient OS" pattern
 

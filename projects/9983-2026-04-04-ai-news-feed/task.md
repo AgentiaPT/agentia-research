@@ -34,5 +34,5 @@ Create the weekly AI × Software Engineering news update covering March 30 – A
 4. **Oracle 30K layoffs**: 6am email, $8-10B freed for AI data centers
 5. **GitHub Copilot cloud agent**: Research/plan/code, commit signing, org controls
 6. **Vibe coding security**: 53% failure rate, 2.74x more XSS, 50% more vulnerable deps
-7. **Karpathy Dobby**: One agent replacing 6 apps, "haven't coded since December"
+7. **Andreessen agent-first thesis**: "Days of precious software are over", Latent Space podcast
 8. **Jobs debate**: 52K Q1 layoffs vs Andreessen "silver bullet excuse" vs Fortune counterarguments
