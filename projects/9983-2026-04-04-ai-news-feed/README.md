@@ -552,7 +552,10 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 **[Product Talk](https://www.producttalk.org/vibe-coding-best-practices/)**
 
 - Published **"Vibe Coding Best Practices: Avoid the Doom Loop"** — separate planning (markdown) from coding, use a separate AI reviewer agent
-- Built a **personal agent scheduling system** using macOS LaunchAgent + Claude Code headless — 4 components: agent identity, scheduler, tasks, scripts
+- Built a **personal agent scheduling system** using macOS LaunchAgent + Claude Code headless — 4 components: agent identity (markdown), scheduler (LaunchAgent cron), tasks (markdown with frontmatter), scripts (per-agent utilities)
+- Running agents: sales-admin (pre-meeting prep at 4:15am, post-meeting follow-up at 11:30am/4pm), podcast-manager, coding-manager
+- All stored in Obsidian — model-agnostic, works across Claude Code, Codex, or any CLI
+- Inspired by Claire Vo's OpenClaw setup on Lenny's podcast — *"It did not inspire me to install OpenClaw. But it did inspire me to build a team of agents."*
 - Hosting Claude Code Office Hours (April 1)
 
 **Theme:** The product coach who treats AI agents as a design problem, not a coding problem.

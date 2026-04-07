@@ -244,7 +244,7 @@
 | 7 | [Steve Yegge — Vibe Maintainer](https://steve-yegge.medium.com/vibe-maintainer-a2273a841040) | Exact stats: 88% merge, 99% AI-generated | §7/§9 | ✅ VERIFIED (user-provided text, April 7) |
 | 8 | [Vercel — Agent Responsibly](https://vercel.com/blog/agent-responsibly) | Opus 4.5 claim, Azure outage, chaos experiments | §7 | ✅ VERIFIED (user-provided text, April 7) — "primary code authors" claim softened |
 | 9 | Theo Browne YouTube video | **Real URL needed** — placeholder in article is fabricated | §9 |
-| 10 | [Teresa Torres — Product Talk](https://www.producttalk.org/vibe-coding-best-practices/) | LaunchAgent + Claude Code headless scheduling details | §9 |
+| 10 | [Teresa Torres — Product Talk](https://www.producttalk.org/vibe-coding-best-practices/) | LaunchAgent + Claude Code headless scheduling details | §9 | ✅ VERIFIED (user-provided text, April 7) |
 | 11 | [HumAI Blog — AI News April 2026](https://www.humai.blog/ai-news-trends-april-2026-complete-monthly-digest/) | General cross-reference | General |
 
 ---
@@ -432,5 +432,5 @@ These 5 direct quotes could not be independently verified because primary source
 - [x] Steve Yegge — "Vibe Maintainer" Medium post — verified April 7, all stats match (99% AI PRs, 88% merge, 20K/13K stars, fork quote exact)
 - [x] Vercel — "Agent Responsibly" blog — verified April 7, softened "primary code authors" claim (unsupported by source)
 - [ ] Theo Browne — YouTube video (real URL still needed)
-- [ ] Teresa Torres — Product Talk
+- [x] Teresa Torres — Product Talk — verified April 7, all details match, enriched with specific agents and Obsidian detail
 - [ ] Anthropic — Emotions Research paper
