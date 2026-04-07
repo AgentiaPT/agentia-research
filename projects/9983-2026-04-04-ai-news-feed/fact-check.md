@@ -428,7 +428,7 @@ These 5 direct quotes could not be independently verified because primary source
 
 - [ ] Lenny's Newsletter — Simon Willison interview
 - [x] GitHub Blog — Copilot Cloud Agent changelog — verified April 7, all §6 claims match
-- [ ] HumAI Blog — AI News April 2026
+- [x] HumAI Blog — AI News April 2026 — verified April 7, general cross-ref corroborates coverage, no corrections
 - [ ] Steve Yegge — "Vibe Maintainer" Medium post
 - [ ] Vercel — "Agent Responsibly" blog
 - [ ] Theo Browne — YouTube video (real URL still needed)
