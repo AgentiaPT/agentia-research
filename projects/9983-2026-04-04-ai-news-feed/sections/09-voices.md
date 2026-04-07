@@ -18,13 +18,18 @@
 
 ### ✅ Simon Willison — Active
 
-**[simonwillison.net](https://simonwillison.net/) · [Lenny's Newsletter](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union)**
+**[simonwillison.net](https://simonwillison.net/) · [Lenny's Newsletter](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union#:~:text=probably%2095%25%20of%20the%20code%20that%20I%20produce)**
 
 - Published "AI state of the union" interview on Lenny's Newsletter (April 2)
-- Discussed **inflection points**, **dark factories** (fully automated production), and **automation timelines**
+- *"Today, probably 95% of the code that I produce, I didn't type it myself."*
+- *"I write so much of my code on my phone, it's wild. I can get good work done walking the dog along the beach."*
+- Discussed **dark factories** — StrongDM running fully automated code production since August 2025, spending **$10K/day on tokens** for simulated QA swarms
+- *"I can fire up four agents in parallel and have them work on four different problems. By 11 AM, I am wiped out."* — the cognitive exhaustion of agentic engineering
+- Predicted a **"Challenger disaster of AI"** — comparing current AI safety complacency to the normalization of deviance that preceded the Space Shuttle Challenger disaster: *"We've been using these systems in increasingly unsafe ways. This is going to catch up with us."*
+- Coined "agentic engineering" to distinguish professional AI-assisted development from vibe coding
 - Released **datasette-extract 0.3a0** — importing unstructured data into structured tables using LLMs (April 1)
 
-**Theme:** Pragmatic optimism with eyes open — sees the inflection point clearly.
+**Theme:** Pragmatic optimism with eyes open — sees the inflection point clearly, warns of the crash ahead.
 
 ### ✅ Marc Andreessen — Very Active
 
@@ -112,7 +117,7 @@
 | Voice | Active | Key Topic | Source |
 |---|---|---|---|
 | Andrej Karpathy | ✅ | Dobby agent demo, "agentic engineering" | Fortune, X |
-| Simon Willison | ✅ | AI state of the union, dark factories | Lenny's Newsletter |
+| Simon Willison | ✅ | 95% AI code, dark factories, Challenger prediction, agentic engineering | Lenny's Newsletter |
 | Marc Andreessen | ✅ | AI layoffs as "silver bullet excuse" | 20VC, Fortune |
 | Boris Cherny | ✅ | Claude Code DMCA retraction | TechCrunch |
 | Josh Gottheimer | ✅ | National security concerns re: Anthropic | Axios, The Hill |

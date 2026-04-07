@@ -426,7 +426,7 @@ These 5 direct quotes could not be independently verified because primary source
 
 ### Remaining 403 Sources (8 of 11)
 
-- [ ] Lenny's Newsletter — Simon Willison interview
+- [x] Lenny's Newsletter — Simon Willison interview — verified April 7, quotes added (95% code, dark factories, Challenger prediction, exhaustion)
 - [x] GitHub Blog — Copilot Cloud Agent changelog — verified April 7, all §6 claims match
 - [x] HumAI Blog — AI News April 2026 — verified April 7, general cross-ref corroborates coverage, no corrections
 - [ ] Steve Yegge — "Vibe Maintainer" Medium post
