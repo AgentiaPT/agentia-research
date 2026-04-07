@@ -240,7 +240,7 @@
 | 3 | [Lenny's Newsletter — Simon Willison](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union) | Full interview, "dark factories" quotes | §9 |
 | 4 | [InfoQ — Axios Supply Chain](https://www.infoq.com/news/2026/04/axios-supply-chain/) | Technical details of attack | §3 | ✅ VERIFIED (user-provided text, April 6) |
 | 5 | [GitHub Blog — Copilot Cloud Agent](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/) | Full changelog entry | §6 | ✅ VERIFIED (user-provided text, April 7) |
-| 6 | [Anthropic — Emotions Research](https://www.anthropic.com/research/emotion-concepts-function) | Direct paper (confirmed via secondary sources) | §2 |
+| 6 | [Anthropic — Emotions Research](https://www.anthropic.com/research/emotion-concepts-function) | Direct paper (confirmed via secondary sources) | §2 | ✅ VERIFIED (user-provided text, April 7) |
 | 7 | [Steve Yegge — Vibe Maintainer](https://steve-yegge.medium.com/vibe-maintainer-a2273a841040) | Exact stats: 88% merge, 99% AI-generated | §7/§9 | ✅ VERIFIED (user-provided text, April 7) |
 | 8 | [Vercel — Agent Responsibly](https://vercel.com/blog/agent-responsibly) | Opus 4.5 claim, Azure outage, chaos experiments | §7 |
 | 9 | Theo Browne YouTube video | **Real URL needed** — placeholder in article is fabricated | §9 |
