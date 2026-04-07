@@ -45,7 +45,7 @@ The infrastructure of trust — from code registries to model labs to employment
 | Layer | Who | What |
 |---|---|---|
 | **Model Security** | Anthropic | Claude Code source leaked via npm; KAIROS daemon mode revealed; OpenClaw subscription block |
-| **Supply Chain** | North Korea / DPRK | Axios (70M+ downloads/week) poisoned with RAT |
+| **Supply Chain** | North Korea / DPRK | Axios (100M+ downloads/week) poisoned with RAT |
 | **Open Models** | Google | Gemma 4 under Apache 2.0 — 31B model ranks #3 globally |
 | **Employment** | Oracle / Bloomberg / Andreessen | 30K layoffs vs. "AI is the silver bullet excuse" |
 | **Developer Tools** | GitHub / Cursor | Both ship agent-management paradigms in the same week |
@@ -205,8 +205,8 @@ Google introduced **Gemma 4** on April 2 — four open-weight models built on th
 | Gemma 4 31B Dense | 31B | Workstations, servers |
 
 Key capabilities:
-- **256K context window**
-- **Native vision and audio processing**
+- **256K context window** (26B/31B models; edge models support 128K)
+- **Native vision and audio processing** (audio on edge models only)
 - Fluency in **140+ languages**
 - Native function calling for agentic workflows
 
@@ -253,7 +253,7 @@ Bloomberg [reported](https://www.bloomberg.com/news/articles/2026-04-02/us-job-c
 | Oracle alone | **20,000–30,000** |
 | Cash freed (Oracle) | **$8–10B** for AI infra |
 
-Major companies cutting jobs while explicitly citing AI: **Meta, Google, Amazon, Block, Atlassian, Pinterest, Salesforce**. Block's Jack Dorsey eliminated 4,000 jobs — roughly 40% of Block's workforce — citing the "growing capability of AI tools to perform a wider range of tasks."
+Major companies cutting jobs while explicitly citing AI: **Meta, Google, Amazon, Block, Atlassian, Pinterest, Salesforce**. Block's Jack Dorsey eliminated 4,000 jobs — roughly 40% of Block's workforce — citing the "growing capability of AI tools to perform a wider range of tasks" ([Fortune](https://fortune.com/2026/02/27/block-jack-dorsey-ceo-xyz-stock-square-4000-ai-layoffs/) · [CNBC](https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html)).
 
 ### The Counternarrative: Andreessen's "Silver Bullet"
 
@@ -289,7 +289,7 @@ After last week's [data training backlash](../9984-2026-03-29-ai-news-feed/READM
 - **Produce an implementation plan** for review before writing any code
 - **Research** a codebase and answer questions about architecture and conventions
 
-This is the shift from "suggest code when I type" to "understand the problem, plan the approach, execute the solution." The agent supports **Claude Sonnet 4.6** as a model option alongside other providers.
+This is the shift from "suggest code when I type" to "understand the problem, plan the approach, execute the solution." The agent supports **Claude Sonnet 4.6** as a model option alongside other providers ([GitHub Docs](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent)).
 
 ### Commit Signing (April 3)
 
@@ -305,7 +305,7 @@ This addresses the enterprise deployment gap: IT teams can standardize how Copil
 
 ### Copilot SDK (April 2)
 
-GitHub also released the **Copilot SDK in public preview** — building blocks to embed Copilot's agentic capabilities into external apps. Available for Node.js/TypeScript, Python, Go, .NET, and Java. This opens Copilot's agent infrastructure to the broader developer tools ecosystem.
+GitHub also released the **Copilot SDK in public preview** — building blocks to embed Copilot's agentic capabilities into external apps. Available for Node.js/TypeScript, Python, Go, .NET, and Java ([GitHub Changelog](https://github.blog/changelog/2026-04-02-copilot-sdk-in-public-preview/)). This opens Copilot's agent infrastructure to the broader developer tools ecosystem.
 
 ### Cursor 3: The Agent Management IDE (April 2)
 
@@ -647,7 +647,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 ### Microsoft
 
 - **Three new in-house AI models** — MAI-Transcribe-1, MAI-Voice-1, and MAI-Image-2, available via Microsoft Foundry. MAI-Transcribe-1 achieves 3.8% avg WER on FLEURS (beats Whisper-large-v3 on all 25 benchmarked languages), built by a team of ~10 engineers using half the GPUs of competitors. MAI-Voice-1 generates 60 seconds of audio in 1 second ($22/1M chars). MAI-Image-2 priced at $5/1M input tokens. Suleyman: *"We're now a top three lab just under OpenAI and Gemini."* First output from Microsoft's superintelligence team, formed October 2025 after the OpenAI contract renegotiation freed Microsoft to independently pursue frontier models ([VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google#:~:text=We%E2%80%99re%20now%20a%20top%20three%20lab%20just%20under%20OpenAI%20and%20Gemini))
-- **$10B Japan AI investment** (April 3, 2026–2029) — infrastructure, cybersecurity, partnerships with Sakura Internet, SoftBank, NTT Data, NEC, Fujitsu, Hitachi. Goal: train 1M AI professionals by 2030
+- **$10B Japan AI investment** (April 3, 2026–2029) — infrastructure, cybersecurity, partnerships with Sakura Internet, SoftBank, NTT Data, NEC, Fujitsu, Hitachi. Goal: train 1M AI professionals by 2030 ([Microsoft Source Asia](https://news.microsoft.com/source/asia/2026/04/03/microsoft-deepens-its-commitment-to-japan-with-10-billion-investment-in-ai-infrastructure-cybersecurity-workforce/) · [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-03/microsoft-drafts-10-billion-investment-plan-in-ai-hungry-japan))
 
 ### Playwright
 
@@ -672,13 +672,13 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 
 ### Windsurf
 
-- **GPT-5.1 and GPT-5.1-Codex** now available; **Gemini 3 Pro** preview added
-- Completed shift from credit-based to **quota-based pricing** ($20/mo Pro, $40/seat Teams, $200/mo Max)
+- **GPT-5.1 and GPT-5.1-Codex** now available; **Gemini 3 Pro** preview added ([Windsurf Changelog](https://windsurf.com/changelog))
+- Completed shift from credit-based to **quota-based pricing** ($20/mo Pro, $40/seat Teams, $200/mo Max) ([Windsurf Docs](https://docs.windsurf.com/windsurf/models))
 
 ### OpenClaw
 
 - The agent framework powering Karpathy's Dobby (see [§8](#8-karpathys-psychosis-and-the-agent-first-future))
-- Acquired by OpenAI in February — rapidly becoming the de facto persistent agent framework
+- Acquired by OpenAI in February — rapidly becoming the de facto persistent agent framework ([VentureBeat](https://venturebeat.com/technology/openais-acquisition-of-openclaw-signals-the-beginning-of-the-end-of-the))
 - Users connecting it to calendars, browsers, email, shopping, files — the "ambient OS" pattern
 
 ---
@@ -734,11 +734,11 @@ The scale of AI investment this week provides context for the layoffs. **Q1 2026
 **Anthropic's operational security under Congressional scrutiny**
 Claude Code source leaked via npm packaging error (March 31). Rep. Gottheimer's letter (April 2) escalates this from an embarrassing incident to a national security question. Safety policy narrowing adds fuel.
 
-**Axios npm compromise: North Korea targets 70M+ weekly downloads**
+**Axios npm compromise: North Korea targets 100M+ weekly downloads**
 Nation-state actors (Sapphire Sleet / UNC1069) poisoned one of npm's most-downloaded libraries with credential-stealing malware and a RAT. Dual-version strategy maximized blast radius across modern and legacy codebases.
 
 **Azure AI Foundry: CVSS 10 — maximum severity**
-CVE-2026-32213, published April 3: unauthorized privilege escalation over the network with no authentication required. Microsoft patched server-side. The AI platform attack surface is widening.
+CVE-2026-32213, published April 3: unauthorized privilege escalation over the network with no authentication required. Microsoft patched server-side. The AI platform attack surface is widening ([TheHackerWire](https://www.thehackerwire.com/azure-ai-foundry-critical-privilege-escalation-cve-2026-32213/)).
 
 ### 🟠 Warning Signals
 
@@ -760,16 +760,16 @@ The 31B model ranks #3 globally while running on a workstation. Apache 2.0 licen
 Both GitHub and Cursor shipped agent-management paradigms in the same week. Copilot does research→plan→code with signed commits. Cursor 3 does multi-agent orchestration with Design Mode. The developer's role is shifting from writer to orchestrator.
 
 **California AI executive order (March 30)**
-Governor Newsom signed an order requiring AI companies seeking state contracts to explain policies on illegal content, bias, and civil rights. Also reserves California's right to overrule federal AI supply chain risk designations.
+Governor Newsom signed an order requiring AI companies seeking state contracts to explain policies on illegal content, bias, and civil rights. Also reserves California's right to overrule federal AI supply chain risk designations ([Governor of California](https://www.gov.ca.gov/2026/03/30/as-trump-rolls-back-protections-governor-newsom-signs-first-of-its-kind-executive-order-to-strengthen-ai-protections-and-responsible-use/)).
 
 **Microsoft threat report: "Agent ecosystem will become the most attacked surface"**
 Microsoft's April 2 report warns that AI is reducing friction across the entire attack lifecycle. The barrier to sophisticated attacks "has collapsed." ([Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/))
 
 **"Dark code" enters mainstream vocabulary**
-Dan Shapiro's "dark factory" concept — fully automated code production where no human writes, reads, or reviews the output — gained traction this week through Julian Harris, Simon Willison, and multiple LinkedIn discussions. StrongDM publicly revealed operating a dark factory since mid-2025. The question is no longer whether dark code exists, but how much of production software is already dark code that nobody's audited ([danshapiro.com](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/)).
+Dan Shapiro's "dark factory" concept — fully automated code production where no human writes, reads, or reviews the output — gained traction this week through Simon Willison ([Lenny's Newsletter](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union)) and multiple discussions. StrongDM publicly revealed operating a dark factory since mid-2025. The question is no longer whether dark code exists, but how much of production software is already dark code that nobody's audited ([danshapiro.com](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/)).
 
 **GitHub Octoverse: AI-driven code velocity accelerating**
-GitHub's [Octoverse data](https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/) shows **986 million code pushes** in 2025 (+25.1% YoY), with merged PR volume up **29%**. Copilot generates **46% of code** written by developers and is adopted by 90% of Fortune 100. Industry observers are projecting dramatically higher growth curves for 2026 as agentic coding tools go mainstream — one LinkedIn analysis extrapolated a **14-fold increase** in code commits by year-end.
+GitHub's [Octoverse data](https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/) shows **986 million code pushes** in 2025 (+25.1% YoY), with merged PR volume up **29%**. Copilot generates **46% of code** written by developers and is adopted by 90% of Fortune 100. Industry observers are projecting dramatically higher growth curves for 2026 as agentic coding tools go mainstream.
 
 **Playwright 1.59: testing infrastructure goes agent-first**
 Microsoft's Playwright 1.59 shipped screencast APIs, shared browser sessions, and CLI debugging specifically designed for AI agents — not humans. When a testing framework explicitly builds for agent consumers, it signals that the developer tools ecosystem is reorienting around AI-first workflows.
