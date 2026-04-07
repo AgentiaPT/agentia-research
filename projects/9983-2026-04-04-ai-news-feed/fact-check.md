@@ -241,7 +241,7 @@
 | 4 | [InfoQ — Axios Supply Chain](https://www.infoq.com/news/2026/04/axios-supply-chain/) | Technical details of attack | §3 | ✅ VERIFIED (user-provided text, April 6) |
 | 5 | [GitHub Blog — Copilot Cloud Agent](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/) | Full changelog entry | §6 | ✅ VERIFIED (user-provided text, April 7) |
 | 6 | [Anthropic — Emotions Research](https://www.anthropic.com/research/emotion-concepts-function) | Direct paper (confirmed via secondary sources) | §2 |
-| 7 | [Steve Yegge — Vibe Maintainer](https://steve-yegge.medium.com/vibe-maintainer-a2273a841040) | Exact stats: 88% merge, 99% AI-generated | §7/§9 |
+| 7 | [Steve Yegge — Vibe Maintainer](https://steve-yegge.medium.com/vibe-maintainer-a2273a841040) | Exact stats: 88% merge, 99% AI-generated | §7/§9 | ✅ VERIFIED (user-provided text, April 7) |
 | 8 | [Vercel — Agent Responsibly](https://vercel.com/blog/agent-responsibly) | Opus 4.5 claim, Azure outage, chaos experiments | §7 |
 | 9 | Theo Browne YouTube video | **Real URL needed** — placeholder in article is fabricated | §9 |
 | 10 | [Teresa Torres — Product Talk](https://www.producttalk.org/vibe-coding-best-practices/) | LaunchAgent + Claude Code headless scheduling details | §9 |
@@ -429,7 +429,7 @@ These 5 direct quotes could not be independently verified because primary source
 - [x] Lenny's Newsletter — Simon Willison interview — verified April 7, quotes added (95% code, dark factories, Challenger prediction, exhaustion)
 - [x] GitHub Blog — Copilot Cloud Agent changelog — verified April 7, all §6 claims match
 - [x] HumAI Blog — AI News April 2026 — verified April 7, general cross-ref corroborates coverage, no corrections
-- [ ] Steve Yegge — "Vibe Maintainer" Medium post
+- [x] Steve Yegge — "Vibe Maintainer" Medium post — verified April 7, all stats match (99% AI PRs, 88% merge, 20K/13K stars, fork quote exact)
 - [ ] Vercel — "Agent Responsibly" blog
 - [ ] Theo Browne — YouTube video (real URL still needed)
 - [ ] Teresa Torres — Product Talk
