@@ -1,7 +1,7 @@
 ---
 title: "AI × Software Engineering — March 30 – April 4, 2026"
 date: 2026-04-04
-status: draft
+status: complete
 tags: [ai, news, weekly, anthropic, supply-chain, security, layoffs, open-models, agentic-sdlc, vibe-coding]
 explorers:
   - file: explorer.html
