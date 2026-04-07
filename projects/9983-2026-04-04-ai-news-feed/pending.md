@@ -8,7 +8,7 @@
 | 2 | ~~[VentureBeat — Microsoft 3 AI Models](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google)~~ | ~~Model names, specs, dates~~ | ~~§10 Model Updates~~ | ✅ Verified April 6 |
 | 3 | [Lenny's Newsletter — Simon Willison](https://www.lennysnewsletter.com/p/an-ai-state-of-the-union) | Full interview, quotes | §9 Voice Tracker |
 | 4 | ~~[InfoQ — Axios Supply Chain](https://www.infoq.com/news/2026/04/axios-supply-chain/)~~ | ~~Technical details~~ | ~~§3 Supply Chain~~ | ✅ Verified April 6 |
-| 5 | [GitHub Blog — Copilot Cloud Agent](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/) | Full changelog | §6 Copilot |
+| 5 | ~~[GitHub Blog — Copilot Cloud Agent](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/)~~ | ~~Full changelog~~ | ~~§6 Copilot~~ | ✅ Verified April 7 |
 | 6 | [HumAI Blog — AI News April 2026](https://www.humai.blog/ai-news-trends-april-2026-complete-monthly-digest/) | Comprehensive items | General |
 
 ## Completed User Highlights (April 5 session)
