@@ -342,7 +342,7 @@ This is the flip side of vibe coding's security story — when the entire contri
 
 ### Vercel: "Agent Responsibly"
 
-Vercel published "[Agent responsibly](https://vercel.com/blog/agent-responsibly)" — internal guidance on how Vercel ships agent-generated code in production, authored by engineer **Matthew Binshtok** and shared by CEO **Guillermo Rauch**. As coding agents became primary code authors at Vercel, the team established guardrails:
+Vercel published "[Agent responsibly](https://vercel.com/blog/agent-responsibly#:~:text=leverage%20agents%2C%20don%E2%80%99t%20rely%20on%20them)" — internal guidance on how Vercel ships agent-generated code in production, authored by engineer **Matthew Binshtok** and shared by CEO **Guillermo Rauch**. As coding agents became a major part of Vercel's development workflow, the team established guardrails:
 
 - **Self-driving deployments** — every change rolls out through gated pipelines with canary analysis; degradation triggers automatic rollback
 - **Continuous validation** — infrastructure tests itself continuously (load tests, chaos experiments, disaster recovery), not just at deploy time
@@ -512,7 +512,7 @@ The Dobby demo isn't impressive because it controls a smart home. It's impressiv
 **[Vercel Blog](https://vercel.com/blog/agent-responsibly) · [LinkedIn](https://www.linkedin.com/posts/rauchg_agent-responsibly-vercel-activity-7444548391558283264)**
 
 - Shared **"Agent responsibly"** (authored by Matthew Binshtok) — Vercel's internal guidance for shipping agent-written code
-- Coding agents now do most of Vercel's coding
+- Coding agents are a major part of Vercel's workflow — blog focuses on guardrails for shipping agent code safely
 - Self-driving deployments, continuous validation, gated pipelines with canary analysis
 - Key distinction: *leveraging* AI vs. *relying* on it
 
