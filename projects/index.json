@@ -1,6 +1,50 @@
 {
-  "generated": "2026-03-29T08:36:19.226159+00:00",
+  "generated": "2026-04-07T06:57:58.075618+00:00",
   "projects": [
+    {
+      "id": "9983-2026-04-04-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI × Software Engineering — March 30 – April 4, 2026",
+      "date": "2026-04-04",
+      "status": "draft",
+      "tags": [
+        "ai",
+        "news",
+        "weekly",
+        "anthropic",
+        "supply-chain",
+        "security",
+        "layoffs",
+        "open-models",
+        "agentic-sdlc",
+        "vibe-coding"
+      ],
+      "description": "**Previous edition:** [March 22–29, 2026](../9984-2026-03-29-ai-news-feed/README.md)",
+      "files": [
+        "README.md",
+        "explorer-screenshot.png",
+        "explorer.html",
+        "fact-check.md",
+        "outline.md",
+        "pending.md",
+        "sources.md",
+        "task.md"
+      ],
+      "htmlFiles": [
+        "explorer.html"
+      ],
+      "explorers": [
+        {
+          "file": "explorer.html",
+          "title": "AI × Software Engineering Dashboard",
+          "description": "Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes",
+          "screenshot": "explorer-screenshot.png"
+        }
+      ],
+      "path": "projects/9983-2026-04-04-ai-news-feed",
+      "wordCount": 8933,
+      "readingTime": 38
+    },
     {
       "id": "9984-2026-03-29-ai-news-feed",
       "slug": "ai-news-feed",
@@ -24,6 +68,7 @@
         "explorer-screenshot.png",
         "explorer.html",
         "outline.md",
+        "sources.md",
         "task.md"
       ],
       "htmlFiles": [
@@ -38,8 +83,8 @@
         }
       ],
       "path": "projects/9984-2026-03-29-ai-news-feed",
-      "wordCount": 7191,
-      "readingTime": 31
+      "wordCount": 7562,
+      "readingTime": 32
     },
     {
       "id": "9985-2026-03-21-ai-news-feed",
