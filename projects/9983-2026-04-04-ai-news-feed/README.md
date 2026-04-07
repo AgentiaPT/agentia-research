@@ -766,9 +766,6 @@ The largest private funding round in history. Amazon ($50B), NVIDIA ($30B), Soft
 
 ## Key Quotes of the Week
 
-> "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between."
-> — **Andrej Karpathy**, December 26, 2025, [X](https://x.com/karpathy/status/2004607146781278521)
-
 > "Essentially, every large company is overstaffed... AI is the silver bullet excuse."
 > — **Marc Andreessen**, [20VC / Fortune](https://fortune.com/2026/03/31/marc-andreessen-ai-layoffs-silver-bullet-excuse-overhiring/)
 
