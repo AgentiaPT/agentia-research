@@ -486,7 +486,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 ### ✅ Addy Osmani — Active
 
-**[LinkedIn](https://www.linkedin.com/in/nicedoc/) · [GitHub](https://github.com/nicedoc/chrome-devtools-mcp)**
+**[LinkedIn](https://www.linkedin.com/in/addyosmani/) · [GitHub](https://github.com/ChromeDevTools/chrome-devtools-mcp)**
 
 - Launched [**Patterns.dev Agent Skills**](https://github.com/PatternsDev/skills) (52 skills) with Hassan Djirdeh — JS, React, Vue patterns packaged for coding agents
 - Shipped **Chrome DevTools MCP Server v0.21.0** — Lighthouse via MCP, memory leak detection, a11y debugging, multi-agent `pageId` routing
@@ -675,9 +675,9 @@ Works with [Claude Code, Cursor, and Codex](https://github.com/PatternsDev/skill
 
 ### Chrome DevTools MCP Server v0.21.0
 
-**[GitHub](https://github.com/nicedoc/chrome-devtools-mcp/releases/tag/v0.21.0) · [Announcement](https://www.linkedin.com/in/nicedoc/)**
+**[GitHub](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v0.21.0) · [Announcement](https://www.linkedin.com/in/addyosmani/)**
 
-The Chrome DevTools MCP server ([ChromeDevTools/chrome-devtools-mcp](https://github.com/nicedoc/chrome-devtools-mcp)) shipped major agent-workflow features, promoted by Addy Osmani:
+The Chrome DevTools MCP server ([ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)) shipped major agent-workflow features, promoted by Addy Osmani:
 
 - **Lighthouse performance audits via MCP** — automated Core Web Vitals and LCP optimization in agent workflows
 - **Memory leak detection skill** — using `take_memory_snapshot` tool for autonomous leak detection
