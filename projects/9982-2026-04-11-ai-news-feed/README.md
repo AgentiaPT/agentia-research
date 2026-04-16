@@ -154,7 +154,7 @@ In one demonstration, GLM-5.1 [autonomously worked on a coding task for **8 hour
 | Spec | Detail |
 |---|---|
 | **Architecture** | Mixture of Experts (754B total, ~40B active per token) |
-| **Context window** | 200K tokens input, 128K output |
+| **Context window** | 200K tokens input, 131K output |
 | **License** | MIT — unrestricted commercial use |
 | **Frameworks** | vLLM, SGLang, Transformers, KTransformers |
 | **Local deployment** | Quantized builds run on Mac Studio or multi-GPU setups via Ollama |
