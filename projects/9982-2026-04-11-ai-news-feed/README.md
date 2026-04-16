@@ -1,5 +1,5 @@
 ---
-title: "AI × Software Engineering — April 5–15, 2026"
+title: "AI × Software Engineering — April 5–16, 2026"
 date: 2026-04-11
 status: draft
 tags: [ai, news, weekly, developer-tools, agentic-engineering, supply-chain, testing, open-source, layoffs]
@@ -10,7 +10,7 @@ explorers:
     screenshot: explorer-screenshot.png
 ---
 
-# AI × Software Engineering — April 5–15, 2026
+# AI × Software Engineering — April 5–16, 2026
 
 > **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
@@ -47,9 +47,10 @@ DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "in
 | **Developer Tools** | Claude Managed Agents launched at $0.08/hr | Build-vs-buy math for agent infrastructure just changed |
 | **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
 | **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains) | The industry crossed from "trying AI" to "AI is how we work" |
-| **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs | The first public company to quantify AI engineering displacement at scale |
+| **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs; 71K+ industry-wide | The first public company to quantify AI engineering displacement at scale |
 | **Security** | Anthropic's Mythos finds decades-old zero-days autonomously | AI vulnerability scanning just leapfrogged your entire security pipeline |
 | **Supply Chain** | Axios CVE published, CPU-Z compromised, Trivy fallout continues | Third consecutive week of major attacks — across three different vectors |
+| **Revenue War** | OpenAI accuses Anthropic of $8B revenue inflation (April 12) | Your vendor choice depends on who's actually winning — and the numbers are disputed |
 
 ### The Unifying Thread
 
@@ -233,11 +234,9 @@ The 85–90% adoption line means AI tools are no longer a competitive advantage 
 
 ## 5. Snap's 65% Metric — What It Means for Your Engineering Org
 
-**April 15 | [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) · [TechRepublic](https://www.techrepublic.com/article/news-snap-ai-layoffs-april-2026/) · [Fast Company](https://www.fastcompany.com/91527233/snap-snapchat-layoffs-today-job-cuts-as-ceo-evan-spiegel-touts-ai-advances)**
+**April 15 | [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) · [TechRepublic](https://www.techrepublic.com/article/news-snap-ai-layoffs-april-2026/) · [Fast Company](https://www.fastcompany.com/91527233/snap-snapchat-layoffs-today-job-cuts-as-ceo-evan-spiegel-touts-ai-advances) · [Forbes](https://www.forbes.com/sites/maryroeloffs/2026/04/15/snap-blames-1000-layoffs-on-ai-and-these-companies-have-done-the-same/)**
 
-*Note: This story broke on April 15, after our standard April 5–11 coverage window, but was included due to its significance for the edition's engineering workforce theme.*
-
-When Snap CEO Evan Spiegel announced 1,000 layoffs (16% of workforce) this week, the headline number wasn't the layoffs — it was the justification: **AI now generates more than 65% of all new code at Snap.**
+When Snap CEO Evan Spiegel announced 1,000 layoffs (16% of workforce) on April 15, the headline number wasn't the layoffs — it was the justification: **AI now generates more than 65% of all new code at Snap.**
 
 This is the first time a public company CEO has quantified AI code generation at this scale. And the number will appear in every board presentation and investor call across the industry for the next quarter.
 
@@ -265,12 +264,16 @@ This is the first time a public company CEO has quantified AI code generation at
 | Company | Cuts | % Workforce | AI Cited? |
 |---|---|---|---|
 | **Snap** | 1,000 + 300 open roles | 16% | Yes — explicitly |
+| **Oracle** | 20,000–30,000 | — | Yes — AI/data center pivot |
+| **Block** | 4,000+ | ~45% | Yes — AI restructuring |
+| **Atlassian** | 1,600 | 10% | Yes — AI investment |
+| **Pinterest** | ~800 | 15% | Yes — AI reallocation |
 | **GoPro** | ~23% workforce | 23% | Restructuring |
-| **Pendo** | ~90 | 10% | Not stated |
+| **Pendo** | ~90 | 10% | Yes — "accelerate AI investment" |
 | **Taboola** | 100 | 5% | Not stated |
 | **Qualcomm** | Undisclosed | — | Yes — chip design |
 
-Q1 2026 tech layoffs have reached approximately **52,000+**. AI is cited in an increasing proportion — but Snap is the first to provide a specific code generation metric as justification.
+Through mid-April 2026, **80+ tech companies have cut 71,000+ jobs**, with [Forbes reporting](https://www.forbes.com/sites/maryroeloffs/2026/04/15/snap-blames-1000-layoffs-on-ai-and-these-companies-have-done-the-same/) that **48% of cuts explicitly cite AI adoption** as a driver. Snap is the first to provide a specific code generation metric as justification — but the pattern is industry-wide.
 
 ---
 
@@ -390,7 +393,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 ## 9. Voice Tracker
 
-**Active voices this week: April 5–11, 2026**
+**Active voices: April 5–16, 2026**
 
 ### ✅ DHH (David Heinemeier Hansson) — Very Active
 
@@ -458,6 +461,28 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **Theme:** Shipping both the most dangerous AI security tool and the most accessible agent infrastructure — in the same week.
 
+### ✅ Simon Willison — Active (April 15–16)
+
+**[Blog](https://simonwillison.net/)**
+
+- Released Datasette 1.0a27 with new CSRF protection and `RenameTableEvent`
+- Referenced Karpathy's "LLM knowledge base" concept — the widening gap in AI understanding based on model access
+- Built custom preview UI for Datasette's news system using Claude.ai and Claude Artifacts
+- Continues bridging practical open-source tooling with AI-powered development workflows
+
+**Theme:** Willison's late-window activity demonstrates the Karpathy knowledge-base concept spreading to practical developer tooling.
+
+### ✅ Denise Dresser (OpenAI CRO) — Active (April 12)
+
+**[WinBuzzer](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) · [The Decoder](https://the-decoder.com/openais-cro-says-new-spud-model-will-make-all-its-key-products-significantly-better/) · [Office Chai](https://officechai.com/ai/anthropic-is-overstating-its-revenue-run-rate-by-8-billion-openai-tells-employees/)**
+
+- Leaked "Sunday Memo" (April 12) accusing Anthropic of overstating revenue by $8B through gross vs. net accounting
+- Previewed "Spud" model — positioning it as a generational leap in reasoning and agent capabilities
+- Criticized Anthropic's "fear-based" AI strategy and alleged compute reliability issues
+- Framed OpenAI's enterprise strategy around the new "Frontier" agent platform
+
+**Theme:** The first direct public attack from one AI lab's executive on another's financials — with IPO implications for both.
+
 ---
 
 ### Voice Summary Table
@@ -470,7 +495,8 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 | Andrej Karpathy | ✅ | LLM knowledge bases, agentic engineering framing | X, GitHub |
 | Evan Spiegel | ✅ | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
 | Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
-| Simon Willison | ❌ | Technical commentary, no headline takes this week | — |
+| Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | Blog (April 15-16) |
+| Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 12) |
 | Marc Andreessen | ❌ | No this-week public statements | — |
 | Steve Yegge | ❌ | Not active this week | — |
 | Kelsey Hightower | ❌ | Nutanix keynote was prior week | — |
@@ -519,12 +545,30 @@ AI-native CI/CD is becoming the standard for productive teams this quarter:
 
 | Metric | Anthropic | OpenAI |
 |---|---|---|
-| **Annualized revenue** | $30B | $24B |
+| **Annualized revenue** | $30B (gross) | $24B (net) |
 | **Primary driver** | Enterprise API + Claude Code | ChatGPT subscriptions |
 | **Enterprise customers ($1M+/yr)** | 1,000+ | Not disclosed |
 | **What it means for hiring** | Enterprise dev tools driving growth | Consumer product driving growth |
 
 Anthropic overtaking OpenAI in revenue — driven by enterprise API and Claude Code adoption — signals where engineering hiring dollars are flowing: toward teams building AI-integrated products, not toward teams maintaining pre-AI codebases.
+
+### The Revenue Accounting War (April 12–14)
+
+**April 12 | [WinBuzzer](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) · [The Decoder](https://the-decoder.com/openais-cro-says-new-spud-model-will-make-all-its-key-products-significantly-better/) · [Office Chai](https://officechai.com/ai/anthropic-is-overstating-its-revenue-run-rate-by-8-billion-openai-tells-employees/) · [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)**
+
+A leaked memo from OpenAI CRO Denise Dresser (April 12) turned the quiet revenue competition into an open war. The key accusation: **Anthropic overstates its revenue by approximately $8 billion** through accounting differences.
+
+| Method | Anthropic | OpenAI |
+|---|---|---|
+| **Accounting** | Gross (books full invoice incl. AWS/Google Cloud cut) | Net (books revenue after Microsoft's share) |
+| **Reported run rate** | $30B | $24B |
+| **OpenAI's claimed real rate** | ~$22B | $24B |
+
+Both methods are legal under US GAAP, but they produce drastically different market perceptions. If Dresser's analysis is accurate, OpenAI is actually ahead.
+
+**Why this matters for engineering teams:** Your vendor-picking decisions — Claude vs. GPT, Anthropic API vs. OpenAI API — depend partly on which company is actually winning. Revenue determines R&D investment, model improvement velocity, and long-term platform stability. An [April 14 TechCrunch report](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/) noted that some OpenAI investors are getting "second thoughts," with Sapphire Ventures' Jai Das comparing OpenAI to "the Netscape of AI" — a trailblazer, but perhaps not the ultimate winner.
+
+The memo also previewed **"Spud"** — OpenAI's next model, promising superior reasoning and an agent-first enterprise platform called "Frontier." Both companies expect IPOs in 2026, making these revenue narratives market-moving.
 
 ### Capital Flows
 
@@ -538,6 +582,8 @@ Anthropic overtaking OpenAI in revenue — driven by enterprise API and Claude C
 ### The Tension for Engineering Leaders
 
 Snap's Spiegel made the implicit explicit: if AI generates 65% of code, you need fewer engineers to generate code — but you need better engineers to architect, review, and operate AI-generated systems. The engineering manager's challenge in 2026 isn't "should we use AI?" (85–90% already do). It's "how do we restructure teams for an agent-first workflow while maintaining code quality and developing junior talent?"
+
+The scale is staggering: [Forbes reports](https://www.forbes.com/sites/maryroeloffs/2026/04/15/snap-blames-1000-layoffs-on-ai-and-these-companies-have-done-the-same/) that **80+ tech companies have cut 71,000+ jobs in 2026**, with **48% explicitly citing AI adoption** as a driver. Oracle alone is cutting 20,000–30,000. Block cut 4,000. Atlassian cut 1,600 to "accelerate AI investment." The pattern is clear: engineering budgets are being reallocated from headcount to compute.
 
 ---
 
@@ -564,6 +610,9 @@ Data transparency, algorithmic discrimination testing, content labeling. Enginee
 
 **Junior engineer pipeline under threat**
 Beck, Fowler, and DHH all flagged this independently: if AI agents handle the work that juniors traditionally learned from, the path from junior to senior engineer breaks. No one has a solution yet.
+
+**Revenue accounting war clouds vendor decisions**
+OpenAI's leaked memo accusing Anthropic of $8B revenue inflation (April 12) — combined with TechCrunch reporting investor "second thoughts" (April 14) — means the competitive landscape between Claude and GPT is murkier than the headline numbers suggest. Engineering teams choosing between APIs should consider that neither company's revenue narrative may be entirely reliable heading into dual IPOs.
 
 ### 🟢 Emerging Signals
 
@@ -611,3 +660,6 @@ A Molotov cocktail was thrown at Sam Altman's home (April 10). The suspect had a
 
 > "We need to evolve our social safety nets to keep pace with technological change — including by taxing automated labor."
 > — **OpenAI**, "Industrial Policy for the Intelligence Age", [TechCrunch](https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/)
+
+> "OpenAI is the Netscape of AI — a trailblazer, but perhaps not the ultimate winner."
+> — **Jai Das**, Managing Director at Sapphire Ventures, [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)

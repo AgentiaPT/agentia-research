@@ -1,4 +1,4 @@
-# Task: AI × Software Engineering — April 5–11, 2026
+# Task: AI × Software Engineering — April 5–16, 2026
 
 ## Original Request
 
@@ -7,7 +7,7 @@ Start working on last week's edition six software news update. Check past editio
 ## Requirements & Decisions
 
 - New project folder 9982-2026-04-11-ai-news-feed
-- Only news published April 5–11, 2026
+- Only news published April 5–16, 2026 (extended from original April 5-11 window to cover through current date)
 - Follow the 12-section format from previous editions (see runbook)
 - Track all voices from previous editions + any new voices
 - Check previous edition's "watch" signals for follow-ups
@@ -81,6 +81,15 @@ Previous draft was too generic AI industry news (corporate revenue wars, geopoli
 - Added AI-powered CI/CD trends to Model & Tool Updates
 - Updated all sources
 
+## Temporal Window Extension (April 16, 2026)
+
+Extended edition window from April 5-11 to April 5-16 to capture late-breaking stories. Key additions:
+- OpenAI CRO Denise Dresser's leaked "Sunday Memo" (April 12) accusing Anthropic of $8B revenue inflation
+- TechCrunch (April 14): Anthropic's rise giving OpenAI investors second thoughts
+- Forbes (April 15): broader layoff picture — 80+ companies, 71K+ jobs, 48% AI-linked
+- Simon Willison becomes active voice (April 15-16): Datasette 1.0a27, Karpathy references
+- Runbook updated: date window now always = previous edition end date + 1 to current date
+
 ## Progress
 
 - [x] Created project folder (9982) and task.md
@@ -94,4 +103,6 @@ Previous draft was too generic AI industry news (corporate revenue wars, geopoli
 - [x] Fact-check pass (13 major claims verified)
 - [x] Fact-check pass #2 (thorough, April 16 — 30+ claims verified against primary sources, corrections applied)
 - [x] Run build-index.py and commit
+- [x] Temporal window extension to April 5-16 (outline, runbook, task.md updated)
+- [ ] Update README.md content for extended window
 - [ ] Human commentary integration
