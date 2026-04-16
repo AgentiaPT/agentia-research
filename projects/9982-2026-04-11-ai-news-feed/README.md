@@ -47,7 +47,7 @@ DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "in
 | **Developer Tools** | Claude Managed Agents ($0.08/hr); Desktop redesign + Routines (April 14); Cursor 3 (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
 | **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 58 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
 | **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
-| **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains); Pragmatic Engineer survey: 46% love Claude Code vs 9% Copilot | The industry crossed from "trying AI" to "AI is how we work" |
+| **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains); 46% love Claude Code vs 9% Copilot (Pragmatic Eng survey, 906 devs) | The industry crossed from "trying AI" to "AI is how we work" |
 | **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs; 71K+ industry-wide | The first public company to quantify AI engineering displacement at scale |
 | **Security** | Anthropic's Mythos finds decades-old zero-days; Adversa AI exposes Claude Code deny rules bypass; source leak analysis reveals hidden feature flags | Both the scanner and the scanned are AI — and both have vulnerabilities |
 | **Supply Chain** | Axios CVE published, CPU-Z compromised, Trivy fallout continues | Third consecutive week of major attacks — across three different vectors |
@@ -612,17 +612,17 @@ The [npm sourcemap leak covered last week](../9983-2026-04-04-ai-news-feed/READM
 
 Anthropic blocked third-party harnesses (like OpenClaw) from Claude subscriptions on April 4. Then **temporarily banned OpenClaw creator Peter Steinberger's account** around April 10. Steinberger criticized the timing, saying features were copied into Anthropic's harness before locking out open source. He subsequently migrated OpenClaw to OpenAI Codex OAuth.
 
-The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully subscription-eligible — this is intentional, not a workaround. The harness is where Anthropic controls fair use boundaries, context management, and caching. As one observer noted: **"The model and the harness are no longer separable layers."**
+The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully subscription-eligible — this is intentional, not a workaround. The harness is where Anthropic controls fair use boundaries, context management, and caching. The emerging consensus: **the model and the harness are no longer separable layers** — they should be understood as a single product.
 
 ### Developer Tools Landscape
 
 | Tool | What Changed (April 1–16) | Adoption |
 |---|---|---|
-| **Claude Code** | Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions | 18% workplace, 91% CSAT, 46% most-loved ([Pragmatic Engineer survey](https://newsletter.pragmaticengineer.com/)) |
-| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace (largest), 9% most-loved |
-| **Cursor** | **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace, fastest growth |
-| **Windsurf** | **Adaptive Model Selection** — auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
-| **Google Antigravity** | v1.22.2; Linux sandboxing; improved MCP auth; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
+| **Claude Code** | Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 46% most-loved ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/)) |
+| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 9% most-loved |
+| **Cursor** | **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), fastest growth |
+| **Windsurf** | **Adaptive** — intelligent model router that auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
+| **Google Antigravity** | Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
 | **Replit** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
 | **Bolt (StackBlitz)** | Sonnet 4.6 became default model (April 8), replacing Sonnet 4.5/Opus 4.5; MCP server support | AI app builder segment |
 | **Lovable** | No major April product launch; $330M raised at $6.6B (Dec 2025); Anthropic reportedly building competing in-chat app builder ([Sifted](https://sifted.eu/articles/anthropic-lovable-challenger-leak)) | AI app builder segment leader |
@@ -633,7 +633,7 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 **Offline/air-gapped AI coding goes mainstream.** Copilot CLI's BYOK support means air-gapped enterprises (defense, healthcare, finance) can now run AI coding agents without any external network dependency. This was the last major adoption blocker for regulated industries.
 
-**Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 engineers) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months. 56% of developers at 10K+ enterprises use Copilot, but only 9% call it "most loved" vs. Claude Code at 46%.
+**Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 engineers) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months, with 46% naming it "most loved" vs. Copilot at 9%. The [JetBrains AI Pulse survey](https://blog.jetbrains.com/ai-pulse/) (10,000+ developers) shows Copilot at 29% workplace adoption but Claude Code at 18% with the fastest-growing satisfaction scores.
 
 ### Patterns.dev Agent Skills
 
@@ -783,7 +783,7 @@ Claude Managed Agents at this price point shifts the competitive advantage from 
 First open model to beat proprietary on SWE-Bench Pro. Self-hostable, MIT-licensed. The "open source is always behind" narrative no longer holds for coding tasks.
 
 **Tool stacking is the new default**
-Pragmatic Engineer's 2026 survey (906 engineers): 70% run 2–4 tools simultaneously. Claude Code is most-loved (46%) despite Copilot's larger install base (56% at 10K+ enterprises). The winning strategy is workflow design, not tool selection.
+Two independent surveys confirm the shift: Pragmatic Engineer (906 engineers) shows 70% run 2–4 tools simultaneously with Claude Code most-loved (46%); JetBrains AI Pulse (10K+ developers) shows Copilot dominant by install base (29%) but Claude Code leading satisfaction. The winning strategy is workflow design, not tool selection.
 
 **Air-gapped AI coding goes mainstream**
 Copilot CLI's BYOK + local model support means defense, healthcare, and financial services teams can now run AI coding agents with zero external network dependency. The last major enterprise adoption blocker just fell.
@@ -842,5 +842,5 @@ A Molotov cocktail was thrown at Sam Altman's home (April 10). The suspect had a
 > "We've always lived in a world in which software is this precious thing that you have to think about very carefully. Those days are just over."
 > — **Marc Andreessen**, [Latent Space Podcast](https://latent.space/)
 
-> "The model and the harness are no longer separable layers. They should now be understood as a single product."
-> — **John Ginsberg**, AI Engineer, on the OpenClaw billing changes
+> "The model and the harness are no longer separable layers."
+> — Emerging consensus among developers commenting on the OpenClaw billing changes
