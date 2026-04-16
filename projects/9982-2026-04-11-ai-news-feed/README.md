@@ -583,7 +583,7 @@ Anthropic shipped the biggest Claude Code UX overhaul since launch. The desktop 
 
 Available on Pro, Max, Team, and Enterprise plans.
 
-**Routines (Research Preview)** — configure a prompt + repo + connectors once, then trigger it on a **schedule** (hourly, nightly, weekly), via an **API endpoint** (each routine gets its own authenticated HTTP POST URL), or from a **GitHub webhook** (PR opened, push, check run, workflow run, etc.). Runs on Anthropic's web infrastructure — no laptop required.
+**Routines (Research Preview)** — configure a prompt + repo + connectors once, then trigger it on a **schedule** (hourly, nightly, weekly), via an **API endpoint** (each routine gets its own authenticated HTTP POST URL), or from a **GitHub webhook** (PR opened, release — more event types planned). Runs on Anthropic's web infrastructure — no laptop required.
 
 > The combination of Managed Agents ($0.08/hr runtime) + Routines (automated triggers) + Desktop Redesign (parallel supervision) forms a complete agent workflow: **build agents → automate triggers → supervise everything in one window**.
 
