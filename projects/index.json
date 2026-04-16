@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T05:23:02.036502+00:00",
+  "generated": "2026-04-16T05:45:13.932236+00:00",
   "projects": [
     {
       "id": "9982-2026-04-11-ai-news-feed",
@@ -11,12 +11,11 @@
         "ai",
         "news",
         "weekly",
-        "anthropic",
-        "meta",
-        "openai",
-        "cybersecurity",
+        "developer-tools",
+        "agentic-engineering",
         "supply-chain",
-        "regulation",
+        "testing",
+        "open-source",
         "layoffs"
       ],
       "description": "**Previous edition:** [March 30 – April 4, 2026](../9983-2026-04-04-ai-news-feed/README.md)",
@@ -40,8 +39,8 @@
         }
       ],
       "path": "projects/9982-2026-04-11-ai-news-feed",
-      "wordCount": 5932,
-      "readingTime": 25
+      "wordCount": 5553,
+      "readingTime": 24
     },
     {
       "id": "9983-2026-04-04-ai-news-feed",
