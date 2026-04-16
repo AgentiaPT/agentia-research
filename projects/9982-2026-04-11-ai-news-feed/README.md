@@ -181,7 +181,7 @@ Three independent data points converged this week to signal that the engineering
 
 David Heinemeier Hansson — creator of Ruby on Rails, CTO of 37signals, and one of the loudest skeptics of AI coding tools as recently as early 2025 — [published his new workflow](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/). It's unrecognizable from a year ago:
 
-- **Every task starts with an agent.** DHH now instructs Claude Code or [Open Code](https://github.com/nicepkg/open-code) before writing any code himself.
+- **Every task starts with an agent.** DHH now instructs Claude Code or [OpenCode](https://github.com/opencode-ai/opencode) before writing any code himself.
 - **Massive PR throughput.** He described reviewing large batches of pull requests for his Omarchy Linux distribution using AI agents — work he'd previously budgeted much longer for.
 - **Designers write production code.** At 37signals, designers now ship production code using AI agents. The role boundary between "designer" and "developer" is dissolving.
 
@@ -256,7 +256,7 @@ This is the first time a public company CEO has quantified AI code generation at
 
 **1. The metric is real, but context matters.** 65% AI-generated code doesn't mean 65% fewer engineers needed. Code generation is one phase of the SDLC. Architecture, review, debugging, operations, and incident response still require human judgment — and arguably require more of it when AI is generating the code.
 
-**2. "Smaller, faster squads" is the operating model.** Spiegel's memo described a reorganization around smaller teams with higher AI leverage. This matches the pattern at 37signals (DHH), where designers now ship production code and team sizes are shrinking while output increases.
+**2. "Smaller, faster squads" is the operating model.** Spiegel's memo described a reorganization around smaller teams with higher AI leverage. This matches the pattern at 37signals ([DHH](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)), where designers now ship production code and team sizes are shrinking while output increases.
 
 **3. This number becomes a benchmark.** Every CTO will now be asked: "What's your AI code generation percentage?" Whether or not it's a meaningful metric, it's now a metric that boards and investors will track.
 
@@ -306,7 +306,7 @@ Rather than shipping Mythos publicly, Anthropic launched **Project Glasswing** �
 ### What This Means for Engineering Teams
 
 1. **Your vulnerability scanning tools are about to be obsolete.** If an AI model can find 27-year-old bugs that every automated scanner missed, the current generation of SAST/DAST tools is inadequate for the AI era.
-2. **Adversaries will develop comparable capabilities.** Open-source model progress (GLM-5.1 already matches proprietary models on coding benchmarks) suggests the window where only Glasswing partners have AI-powered vulnerability scanning is temporary.
+2. **Adversaries will develop comparable capabilities.** Open-source model progress ([GLM-5.1](https://z.ai/blog/glm-5.1) already matches proprietary models on coding benchmarks) suggests the window where only Glasswing partners have AI-powered vulnerability scanning is temporary.
 3. **Open-source maintainers get help.** The $100M in credits and $4M in donations mean OSS projects that your codebase depends on will get AI-powered security audits. This is the most significant investment in open-source security since Google's Project Zero.
 
 ---
@@ -401,7 +401,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 **[Blog](https://world.hey.com/dhh) · [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) · [Pragmatic Engineer Podcast](https://newsletter.pragmaticengineer.com/)**
 
 - [Published agent-first coding workflow](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) — starts every task with AI agents
-- Reviewed large batches of PRs for [Omarchy Linux](https://github.com/nicepkg/open-code) using Claude Code
+- Reviewed large batches of PRs for [Omarchy Linux](https://github.com/basecamp/omarchy) using Claude Code
 - [Designers at 37signals now ship production code](https://finance.biggo.com/news/7f0977d232d48c73) with AI agents
 - Warned about ["peak programmer"](https://startupfortune.com/why-senior-developers-are-winning-the-ai-coding-era/) compensation for average developers
 
@@ -571,7 +571,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[Anthropic Blog](https://claude.com/blog/claude-code-desktop-redesign) · [MacRumors](https://www.macrumors.com/2026/04/15/anthropic-rebuilds-claude-code-desktop-app/) · [VentureBeat](https://venturebeat.com/orchestration/we-tested-anthropics-redesigned-claude-code-desktop-app-and-routines-heres-what-enterprises-should-know)**
 
-Anthropic shipped the biggest Claude Code UX overhaul since launch. The desktop app was **rebuilt from the ground up for parallel work** — the same week Cursor 3 launched its own multi-agent workspace. The parallel-work arms race is now official.
+Anthropic shipped the biggest Claude Code UX overhaul since launch. The desktop app was **rebuilt from the ground up for parallel work** — the same week [Cursor 3](https://www.cursor.com/blog/cursor-3) launched its own multi-agent workspace. The parallel-work arms race is now official.
 
 | Feature | What It Does | Why It Matters |
 |---|---|---|
@@ -587,7 +587,7 @@ Available on Pro, Max, Team, and Enterprise plans.
 
 **Routines (Research Preview)** — configure a prompt + repo + connectors once, then trigger it on a **schedule** (hourly, nightly, weekly), via an **API endpoint** (each routine gets its own authenticated HTTP POST URL), or from a **GitHub webhook** (PR opened, release — more event types planned). Runs on Anthropic's web infrastructure — no laptop required.
 
-> The combination of Managed Agents ($0.08/hr runtime) + Routines (automated triggers) + Desktop Redesign (parallel supervision) forms a complete agent workflow: **build agents → automate triggers → supervise everything in one window**.
+> The combination of [Managed Agents](https://www.anthropic.com/news/managed-agents) ($0.08/hr runtime) + [Routines](https://claude.com/blog/claude-code-desktop-redesign) (automated triggers) + [Desktop Redesign](https://claude.com/blog/claude-code-desktop-redesign) (parallel supervision) forms a complete agent workflow: **build agents → automate triggers → supervise everything in one window**.
 
 ### Claude Code: Source Leak Aftermath + Security Vulnerability
 
@@ -606,7 +606,7 @@ The [npm sourcemap leak covered last week](../9983-2026-04-04-ai-news-feed/READM
 | **JSON parsed by LLM, not code** | ❌ | Mischaracterized — the code uses standard JSONL for persistence. System prompts are processed by the LLM, but that's how all LLM agents work |
 | **22 image compression retries** | ❌ | The "22" refers to security validators, not image retries. Context compression has a circuit breaker after 3 failures |
 
-**Adversa AI Security Vulnerability (April 1, patched April 6):** Claude Code's permission engine had a **hard-coded 50-subcommand limit**. When a shell command exceeded 50 subcommands (joined by `&&`, `||`, or `;`), **all deny-rule enforcement was silently skipped** — falling back to a generic "ask" prompt with zero indication that security rules were bypassed. A malicious `CLAUDE.md` could craft routine-looking build pipelines that exfiltrate credentials via hard-blocked commands like `curl` and `wget`. Anthropic patched it on April 6 using their tree-sitter parser.
+**[Adversa AI](https://adversa.ai/blog/claude-code-security-bypass-deny-rules-disabled/) Security Vulnerability (April 1, patched April 6):** Claude Code's permission engine had a **hard-coded 50-subcommand limit**. When a shell command exceeded 50 subcommands (joined by `&&`, `||`, or `;`), **all deny-rule enforcement was silently skipped** — falling back to a generic "ask" prompt with zero indication that security rules were bypassed. A malicious `CLAUDE.md` could craft routine-looking build pipelines that exfiltrate credentials via hard-blocked commands like `curl` and `wget`. Anthropic patched it on April 6 using their tree-sitter parser.
 
 ### Claude App Builder Leak — Screenshots Surface (April 12)
 
