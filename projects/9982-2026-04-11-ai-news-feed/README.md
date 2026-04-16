@@ -87,10 +87,10 @@ Early adopters tell the real story:
 
 | Company | Use Case | What Changed |
 |---|---|---|
-| **Notion** | Autonomous workspace management agents | Reduced agent infra team from 8 to 2 engineers |
-| **Asana** | Multi-step project automation | Shipped in days vs. projected months |
-| **Sentry** | Automated error triage and resolution | Agents investigate, classify, and suggest fixes autonomously |
-| **Rakuten** | E-commerce workflow automation | Replaced custom agent orchestration layer entirely |
+| **Notion** | Autonomous workspace management agents | [Early adopter](https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/); reduced agent infrastructure overhead |
+| **Asana** | Multi-step project automation | [Shipped advanced features "dramatically faster"](https://www.techradar.com/pro/go-from-prototype-to-launch-in-days-rather-than-months-anthropic-reveals-claude-managed-agents-promises-to-make-agent-building-10x-faster) |
+| **Sentry** | Automated error triage and resolution | [Agent goes from flagged bug to open PR, fully autonomous](https://www.helpnetsecurity.com/2026/04/09/claude-managed-agents-bring-execution-and-control-to-ai-agent-workflows/) |
+| **Rakuten** | E-commerce workflow automation | [Deploying agents across business functions](https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/) |
 
 ### The Advisor Tool: Multi-Model Orchestration Without the Plumbing
 
@@ -102,7 +102,7 @@ For teams currently running their own model-routing layers (and that's most team
 
 | Platform | Pricing | Key Differentiator |
 |---|---|---|
-| **Claude Managed Agents** | $0.08/hr + tokens | Best code understanding (80.8% SWE-bench Verified), managed sandbox |
+| **Claude Managed Agents** | $0.08/hr + tokens | Best code understanding ([80.8% SWE-bench Verified](https://www.anthropic.com/news/claude-opus-4-6)), managed sandbox |
 | **OpenAI Assistants API** | Per-token only | Largest model ecosystem, function calling |
 | **Google Vertex AI Agents** | Per-prediction | Deepest cloud integration, Gemini models |
 
@@ -142,12 +142,12 @@ GLM-5.1 isn't just a code completion model — it's designed for long-horizon au
 
 | Benchmark | Score | What It Tests |
 |---|---|---|
-| **Terminal-Bench 2.0** | 63.5 | Linux shell engineering tasks |
-| **NL2Repo** | 42.7 | Full repo generation from natural language |
-| **CyberGym** | 68.7 | Cybersecurity reasoning (top score) |
-| **MCP-Atlas** | 71.8 | Multi-step tool use and API orchestration |
+| **Terminal-Bench 2.0** | [63.5](https://github.com/zai-org/GLM-5) | Linux shell engineering tasks |
+| **NL2Repo** | [42.7](https://github.com/zai-org/GLM-5) | Full repo generation from natural language |
+| **CyberGym** | [68.7](https://github.com/zai-org/GLM-5) | Cybersecurity reasoning (top score) |
+| **MCP-Atlas** | [71.8](https://github.com/zai-org/GLM-5) | Multi-step tool use and API orchestration |
 
-In one demonstration, GLM-5.1 autonomously worked on a coding task for **8 hours across 655 cycles** without human intervention — building an entire Linux desktop environment.
+In one demonstration, GLM-5.1 [autonomously worked on a coding task for **8 hours across 655 cycles**](https://venturebeat.com/technology/ai-joins-the-8-hour-work-day-as-glm-ships-5-1-open-source-llm-beating-opus-4-6-and-gpt-5-4-on-swe-bench-pro/) without human intervention — building an entire Linux desktop environment.
 
 ### Practical Specs for Your Infra Team
 
@@ -163,11 +163,11 @@ In one demonstration, GLM-5.1 autonomously worked on a coding task for **8 hours
 
 The narrative for years has been "open source is always 6-18 months behind closed models." GLM-5.1 breaks that pattern for software engineering tasks specifically. For teams with data sovereignty requirements, regulatory constraints, or simply the desire to control their AI stack, there's now an open model that matches or exceeds the best proprietary options on coding benchmarks.
 
-The MIT license means unrestricted commercial use — no revenue thresholds, no special clauses (unlike Meta's Llama license, which imposed restrictions above $700M monthly active users). You can fine-tune, deploy, and modify without restrictions.
+The MIT license means unrestricted commercial use — no revenue thresholds, no special clauses (unlike [Meta's Llama license](https://www.llama.com/llama3/license/), which imposed restrictions above $700M monthly active users). You can fine-tune, deploy, and modify without restrictions.
 
 ### The Meta Contrast
 
-The same week GLM-5.1 launched under MIT, Meta launched **Muse Spark** — its first proprietary model, ending the Llama open-source era. With Meta going closed, Google's Gemma 4 (Apache 2.0) and GLM-5.1 (MIT) are now the only frontier-adjacent open models. If your team built on Llama, it's time to evaluate alternatives.
+The same week GLM-5.1 launched under MIT, Meta [launched **Muse Spark**](https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/) — its first proprietary model, ending the Llama open-source era. With Meta going closed, Google's Gemma 4 (Apache 2.0) and GLM-5.1 (MIT) are now the only frontier-adjacent open models. If your team built on Llama, it's time to evaluate alternatives.
 
 ---
 
