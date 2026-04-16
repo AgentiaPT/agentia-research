@@ -38,28 +38,58 @@ explorers:
 ---
 ## 1. The Week's Narrative — The Agent Takeover
 
-Last week was **the unraveling** — Anthropic leaked its own source code, North Korea poisoned npm, and Oracle fired 30,000 people. This week, the engineering profession crossed a threshold: the tools, the data, and the voices all converged on one message — **agents are no longer assistants, they're the primary workers**.
+Last week was **the unraveling** — Anthropic leaked its own source code [1], North Korea poisoned npm [2], and Oracle fired 30,000 people [3]. This week, the engineering profession crossed a threshold: the tools, the data, and the voices all converged on one message — **agents are no longer assistants, they're the primary workers**.
 
-DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "infuriating" a year ago — now starts every coding task by instructing an AI agent. Kent Beck and Martin Fowler went on The Pragmatic Engineer to compare the current shift to the Agile revolution. JetBrains published data showing 85–90% of developers now use AI tools regularly. Snap's CEO announced AI generates 65% of new code — then laid off 1,000 engineers. And the first open-source model topped SWE-Bench Pro, beating GPT-5.4 in the benchmark that matters most to working developers.
+DHH [4] — the creator of Ruby on Rails, a man who dismissed AI coding tools as "infuriating" a year ago — now starts every coding task by instructing an AI agent [5]. Kent Beck and Martin Fowler went on The Pragmatic Engineer [6] to compare the current shift to the Agile revolution. JetBrains published data [7] showing 85–90% of developers now use AI tools regularly. Snap's CEO announced AI generates 65% of new code — then laid off 1,000 engineers [8]. And the first open-source model topped SWE-Bench Pro [9], beating GPT-5.4 in the benchmark that matters most to working developers.
 
 | Layer | What Happened | Why You Should Care |
 |---|---|---|
-| **Developer Tools** | Claude Managed Agents ($0.08/hr); Desktop redesign + Routines (April 14); Cursor 3 (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
-| **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 58 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
-| **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
-| **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains); 46% love Claude Code vs 9% Copilot (Pragmatic Eng survey, 906 devs) | The industry crossed from "trying AI" to "AI is how we work" |
-| **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs; 71K+ industry-wide | The first public company to quantify AI engineering displacement at scale |
-| **Security** | Anthropic's Mythos finds decades-old zero-days; Adversa AI exposes Claude Code deny rules bypass; source leak analysis reveals hidden feature flags | Both the scanner and the scanned are AI — and both have vulnerabilities |
-| **Supply Chain** | Axios CVE published, CPU-Z compromised, Trivy fallout continues | Third consecutive week of major attacks — across three different vectors |
-| **Platform Wars** | OpenClaw blocked from Claude subscriptions; Steinberger banned; OpenAI accuses Anthropic of $8B revenue inflation | The harness is the product — and vendors are locking it down |
+| **Developer Tools** | Claude Managed Agents [10] ($0.08/hr); Desktop redesign + Routines [11] (April 14); Cursor 3 [12] (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
+| **Developer Experience** | Copilot CLI BYOK/offline [13] (April 7); Patterns.dev 58 Agent Skills [14]; Chrome DevTools MCP v0.21.0 [15] | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
+| **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) [9] | First open-source model to beat GPT-5.4 in coding — you can self-host this |
+| **Workflow Shift** | DHH goes agent-first [5]; 85–90% dev AI adoption [7] (JetBrains); 46% love Claude Code vs 9% Copilot [16] (Pragmatic Eng survey, 906 devs) | The industry crossed from "trying AI" to "AI is how we work" |
+| **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs [8]; 71K+ industry-wide [17] | The first public company to quantify AI engineering displacement at scale |
+| **Security** | Anthropic's Mythos finds decades-old zero-days [18]; Adversa AI exposes Claude Code deny rules bypass [19]; source leak analysis reveals hidden feature flags [20] | Both the scanner and the scanned are AI — and both have vulnerabilities |
+| **Supply Chain** | Axios CVE published [2], CPU-Z compromised [21], Trivy fallout continues [22] | Third consecutive week of major attacks — across three different vectors |
+| **Platform Wars** | OpenClaw blocked from Claude subscriptions; Steinberger banned [23]; OpenAI accuses Anthropic of $8B revenue inflation [24] | The harness is the product — and vendors are locking it down |
 
 ### The Unifying Thread
 
-What makes this week different from the generic "AI is coming" narrative is the specificity. These aren't predictions — they're measurements. DHH's agent-first workflow has him delegating entire features to AI agents and reviewing the resulting PRs. Snap's AI writes 65% of code. GLM-5.1 scores 58.4% on SWE-Bench Pro. JetBrains measured 85–90% adoption. The shift from "AI might change engineering" to "here are the numbers" happened this week.
+What makes this week different from the generic "AI is coming" narrative is the specificity. These aren't predictions — they're measurements. DHH's agent-first workflow [5] has him delegating entire features to AI agents and reviewing the resulting PRs. Snap's AI writes 65% of code [8]. GLM-5.1 scores 58.4% on SWE-Bench Pro [9]. JetBrains measured 85–90% adoption [7]. The shift from "AI might change engineering" to "here are the numbers" happened this week.
 
 ### The Deepest Signal
 
-The Kent Beck and Martin Fowler appearance on The Pragmatic Engineer (April 7) carries the most weight for engineering leaders. These are the people who defined modern software engineering practices — TDD, refactoring, XP, CI. They compared the current AI shift to the magnitude of the Agile revolution. They explicitly discussed how AI amplifies exceptional engineers while making average work automatable. It's the strongest signal yet that engineering management practices need to change.
+The Kent Beck and Martin Fowler appearance on The Pragmatic Engineer [6] (April 7) carries the most weight for engineering leaders. These are the people who defined modern software engineering practices — TDD, refactoring, XP, CI. They compared the current AI shift to the magnitude of the Agile revolution. They explicitly discussed how AI amplifies exceptional engineers while making average work automatable. It's the strongest signal yet that engineering management practices need to change.
+
+<details>
+<summary><strong>Section 1 Sources</strong></summary>
+
+[1]: https://www.axios.com/2026/03/31/anthropic-leaked-source-code-ai — Axios: Anthropic leaked source code
+[2]: https://coderoasis.com/cve-2025-62718-the-axios-crisis-a-critical-ssrf-vuln-a-north-korean-supply-chain-attack-and-why-every-node-js-developer-needs-to-act-right-now/ — CodeRoasis: The Axios Crisis (CVE-2025-62718)
+[3]: https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html — CNBC: Oracle layoffs
+[4]: https://world.hey.com/dhh/promoting-ai-agents-3ee04945 — DHH: Promoting AI agents
+[5]: https://newsletter.pragmaticengineer.com/p/dhhs-new-way-of-writing-code — Pragmatic Engineer: DHH's new way of writing code
+[6]: https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech — Pragmatic Engineer: Cycles of disruption (Beck & Fowler)
+[7]: https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/ — JetBrains: Which AI Coding Tools Do Developers Actually Use?
+[8]: https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html — CNBC: Snap layoffs, 65% AI code
+[9]: https://z.ai/blog/glm-5.1 — Z.ai: GLM-5.1 launch
+[10]: https://www.anthropic.com/news/managed-agents — Anthropic: Claude Managed Agents
+[11]: https://claude.com/blog/claude-code-desktop-redesign — Claude Code Desktop Redesign + Routines
+[12]: https://cursor.com/blog/cursor-3 — Cursor: Meet the new Cursor (Cursor 3)
+[13]: https://github.blog/changelog/2026-04-07-copilot-cli-now-supports-byok-and-local-models/ — GitHub: Copilot CLI BYOK and local models
+[14]: https://github.com/PatternsDev/skills — Patterns.dev Agent Skills (GitHub)
+[15]: https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v0.21.0 — Chrome DevTools MCP v0.21.0
+[16]: https://newsletter.pragmaticengineer.com/p/ai-tooling-for-software-engineers-2026 — Pragmatic Engineer: AI Tooling for Software Engineers in 2026
+[17]: https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai — Tom's Hardware: 80K tech layoffs in Q1 2026
+[18]: https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html — The Hacker News: Claude Mythos finds zero-days
+[19]: https://adversa.ai/blog/claude-code-security-bypass-deny-rules-disabled/ — Adversa AI: Claude Code deny rules bypass
+[20]: https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/ — Alex Kim: Claude Code source leak analysis
+[21]: https://securelist.com/tr/cpu-z/119365/ — Securelist: CPU-Z supply chain attack
+[22]: https://www.infoq.com/news/2026/04/trivy-supply-chain-attack/ — InfoQ: Trivy supply chain attack
+[23]: https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/ — TechCrunch: OpenClaw creator banned
+[24]: https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/ — WinBuzzer: OpenAI memo attacks Anthropic revenue claims
+
+</details>
 
 ---
 
