@@ -1,12 +1,54 @@
 {
-  "generated": "2026-04-07T06:57:58.075618+00:00",
+  "generated": "2026-04-16T05:23:02.036502+00:00",
   "projects": [
+    {
+      "id": "9982-2026-04-11-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI × Software Engineering — April 5–11, 2026",
+      "date": "2026-04-11",
+      "status": "draft",
+      "tags": [
+        "ai",
+        "news",
+        "weekly",
+        "anthropic",
+        "meta",
+        "openai",
+        "cybersecurity",
+        "supply-chain",
+        "regulation",
+        "layoffs"
+      ],
+      "description": "**Previous edition:** [March 30 – April 4, 2026](../9983-2026-04-04-ai-news-feed/README.md)",
+      "files": [
+        "README.md",
+        "explorer-screenshot.png",
+        "explorer.html",
+        "outline.md",
+        "sources.md",
+        "task.md"
+      ],
+      "htmlFiles": [
+        "explorer.html"
+      ],
+      "explorers": [
+        {
+          "file": "explorer.html",
+          "title": "AI × Software Engineering Dashboard",
+          "description": "Visual dashboard with voice position maps, signal radar, theme coverage, and key quotes",
+          "screenshot": "explorer-screenshot.png"
+        }
+      ],
+      "path": "projects/9982-2026-04-11-ai-news-feed",
+      "wordCount": 5932,
+      "readingTime": 25
+    },
     {
       "id": "9983-2026-04-04-ai-news-feed",
       "slug": "ai-news-feed",
       "title": "AI × Software Engineering — March 30 – April 4, 2026",
       "date": "2026-04-04",
-      "status": "draft",
+      "status": "complete",
       "tags": [
         "ai",
         "news",
@@ -42,8 +84,8 @@
         }
       ],
       "path": "projects/9983-2026-04-04-ai-news-feed",
-      "wordCount": 8933,
-      "readingTime": 38
+      "wordCount": 8612,
+      "readingTime": 37
     },
     {
       "id": "9984-2026-03-29-ai-news-feed",
