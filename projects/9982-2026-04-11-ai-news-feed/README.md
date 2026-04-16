@@ -215,11 +215,11 @@ David Heinemeier Hansson — creator of Ruby on Rails, CTO of 37signals, and one
 - **Massive PR throughput.** He described reviewing large batches of pull requests for his Omarchy Linux distribution using AI agents — work he'd previously budgeted much longer for.
 - **Designers write production code.** At 37signals, designers now ship production code using AI agents. The role boundary between "designer" and "developer" is dissolving.
 
-> "It's not a minor tool upgrade but a fundamental reorganization of the craft."
-> — **DHH**, [April 2026](https://world.hey.com/dhh)
+> "It's more like working on a team and less like working with an overly-zealous pair programmer who can't stop stealing the keyboard."
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=It's%20more%20like%20working%20on%20a%20team%20and%20less%20like%20working%20with%20an%20overly-zealous%20pair%20programmer)
 
-> "For roughly half the PRs, Claude's analysis pertained to technical areas where I had no expertise — the agent was undeniably a better reviewer than I could be in those domains."
-> — **DHH**, on agent-assisted code review
+> "They're fully capable of producing production-grade contributions to real-life code bases."
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=They're%20fully%20capable%20of%20producing%20production-grade%20contributions%20to%20real-life%20code%20bases)
 
 ### Kent Beck & Martin Fowler on The Pragmatic Engineer (April 7)
 
@@ -435,7 +435,8 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 - Designers at 37signals now ship production code with AI agents
 - Warned about "peak programmer" compensation for average developers
 
-> "This is the most exciting thing since the internet."
+> "This is the most exciting thing we've made computers do since we connected them to the internet."
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=This%20is%20the%20most%20exciting%20thing%20we've%20made%20computers%20do%20since%20we%20connected%20them%20to%20the%20internet)
 
 **Theme:** The loudest AI skeptic became the loudest AI convert — and has the workflow receipts to prove it.
 
@@ -443,7 +444,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[Pragmatic Engineer Podcast](https://newsletter.pragmaticengineer.com/) (April 7)**
 
-- Compared current AI shift to past disruptions including Agile and OOP — but Fowler's point was that [AI dwarfs all of them](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech): "Nothing has hit with the magnitude of AI. This is a whole size different from anything we've faced before."
+- Compared current AI shift to past disruptions including Agile and OOP — but Fowler's point was that [AI dwarfs all of them](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech#:~:text=Nothing%20has%20hit%20with%20the%20magnitude%20of%20AI): "Nothing has hit with the magnitude of AI. This is a whole size different from anything we've faced before."
 - Discussed non-determinism challenge in AI-generated code
 - Warned about burnout risk from AI-accelerated pace
 - Flagged junior engineer development as the industry's biggest unaddressed challenge
@@ -469,6 +470,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 - "Agentic engineering" framing — engineers as supervisors of AI agents — now mainstream vocabulary
 
 > "A large fraction of my recent token throughput is going less into manipulating code, and more into manipulating knowledge."
+> — **Andrej Karpathy**, [X](https://x.com/karpathy/status/2039805659525644595#:~:text=a%20large%20fraction%20of%20my%20recent%20token%20throughput%20is%20going%20less%20into%20manipulating%20code)
 
 **Theme:** Karpathy defined the vocabulary ("agentic engineering") and now the workflow pattern ("LLM knowledge bases") that the industry is adopting.
 
@@ -870,29 +872,29 @@ A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/0
 
 ## Key Quotes of the Week
 
-> "This is the most exciting thing since the internet."
-> — **DHH**, on AI-assisted coding, [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
+> "This is the most exciting thing we've made computers do since we connected them to the internet."
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=This%20is%20the%20most%20exciting%20thing%20we've%20made%20computers%20do%20since%20we%20connected%20them%20to%20the%20internet)
 
 > "AI now generates more than 65% of all new code at Snap."
-> — **Evan Spiegel**, CEO of Snap, announcing 1,000 layoffs, [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html)
+> — **Evan Spiegel**, CEO of Snap, [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html#:~:text=AI%20now%20generates%20more%20than%2065%25)
 
 > "I can literally feel competence draining out of my fingers!"
-> — **DHH**, on his earlier frustration with AI coding tools — [before becoming an AI convert](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
+> — **DHH**, on his earlier frustration with AI coding tools, [X](https://x.com/dhh/status/1838281814700548312#:~:text=I%20can%20literally%20feel%20competence%20draining%20out%20of%20my%20fingers)
 
 > "AI models have reached a level of coding capability where they can surpass all but the most skilled humans at finding and exploiting software vulnerabilities."
-> — **Anthropic**, on Claude Mythos Preview, [The Hacker News](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html)
+> — **Anthropic**, [Project Glasswing](https://www.anthropic.com/glasswing#:~:text=AI%20models%20have%20reached%20a%20level%20of%20coding%20capability)
 
 > "A large fraction of my recent token throughput is going less into manipulating code, and more into manipulating knowledge."
-> — **Andrej Karpathy**, on LLM knowledge bases, [April 2–3, 2026](https://antigravity.codes/blog/karpathy-llm-knowledge-bases)
+> — **Andrej Karpathy**, [X](https://x.com/karpathy/status/2039805659525644595#:~:text=a%20large%20fraction%20of%20my%20recent%20token%20throughput%20is%20going%20less%20into%20manipulating%20code)
 
 > "We need to evolve our social safety nets to keep pace with technological change — including by taxing automated labor."
-> — **OpenAI**, "Industrial Policy for the Intelligence Age", [TechCrunch](https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/)
+> — **OpenAI**, [TechCrunch](https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/#:~:text=evolve%20our%20social%20safety%20nets%20to%20keep%20pace%20with%20technological%20change)
 
 > "OpenAI is the Netscape of AI — a trailblazer, but perhaps not the ultimate winner."
-> — **Jai Das**, President of Sapphire Ventures, [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)
+> — **Jai Das**, President of Sapphire Ventures, [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/#:~:text=Netscape%20of%20AI)
 
 > "We've always lived in a world in which software is this precious thing that you have to think about very carefully."
-> — **Marc Andreessen**, [Latent Space Podcast](https://latent.space/) ([clip](https://x.com/a16z/status/2040168906770534636))
+> — **Marc Andreessen**, [Latent Space Podcast clip](https://x.com/a16z/status/2040168906770534636#:~:text=software%20is%20this%20precious%20thing)
 
 > "The model and the harness are no longer separable layers."
 > — Developer consensus emerging in [Hacker News discussion](https://news.ycombinator.com/item?id=47665285) on the OpenClaw billing changes
