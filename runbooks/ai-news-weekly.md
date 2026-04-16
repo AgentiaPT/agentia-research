@@ -75,7 +75,7 @@ Spawn **6 research agents simultaneously**, each covering a different topic area
 | **Research papers** | arXiv papers, studies, conference proceedings relevant to AI × software engineering |
 
 Each agent prompt should:
-- Specify the exact date range (e.g., "March 30 to April 4, 2026")
+- Specify the exact date range: previous edition end date + 1 through today (e.g., "April 5 to April 16, 2026")
 - List specific search queries to run
 - Request structured output: what happened, when, source URL, key quotes, why it matters
 
@@ -142,12 +142,14 @@ Create `outline.md` with:
 
 ### Date window discipline
 
-**Only include stories clearly within the edition's week window.** This is the most common editorial mistake. Rules:
+**The edition's date window runs from the previous edition's end date + 1 through the current date (today).** For example, if the previous edition covered March 30 – April 4, the next edition starts on April 5 and extends through whatever date the edition is being finalized. This ensures no gap between editions and that the latest news is always captured.
+
+**Only include stories clearly within the edition's date window.** This is the most common editorial mistake. Rules:
 
 - If a story was covered in a previous edition → **don't retell it**. Reference it with a link: `[covered last week](../9984-.../README.md#section-anchor)`.
-- If a study/paper was published before the week window → **don't include it** even if it's relevant.
-- If ongoing fallout from a previous story has *new developments* this week → **cover the new development only**, with a brief cross-reference to the original.
-- Aggregate stats (e.g., "53% of AI code has security holes") that aren't tied to a specific this-week publication → **don't include**.
+- If a study/paper was published before the date window → **don't include it** even if it's relevant.
+- If ongoing fallout from a previous story has *new developments* within the window → **cover the new development only**, with a brief cross-reference to the original.
+- Aggregate stats (e.g., "53% of AI code has security holes") that aren't tied to a specific publication within the window → **don't include**.
 
 Commit the outline.
 

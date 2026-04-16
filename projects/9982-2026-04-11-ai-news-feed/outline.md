@@ -1,4 +1,4 @@
-# AI × Software Engineering — April 5–11, 2026 — Outline
+# AI × Software Engineering — April 5–16, 2026 — Outline
 
 > **⚠️ This outline must stay in sync with README.md at all times.**
 > After every content edit to the article, update this outline to reflect the change.
@@ -6,14 +6,14 @@
 
 ## Theme: "The Agent Takeover"
 
-The week the engineering profession crossed a threshold: agents are no longer assistants, they're the primary workers. DHH goes agent-first, Beck & Fowler compare it to the Agile revolution, JetBrains says 90% adoption, Snap says 65% AI code → 1,000 layoffs, and the first open-source model tops SWE-Bench Pro.
+The week the engineering profession crossed a threshold: agents are no longer assistants, they're the primary workers. DHH goes agent-first, Beck & Fowler compare it to the Agile revolution, JetBrains says 90% adoption, Snap says 65% AI code → 1,000 layoffs, the first open-source model tops SWE-Bench Pro, and the revenue war between OpenAI and Anthropic spills into public view with accounting accusations.
 
 ---
 
 ## 1. The Week's Narrative — The Agent Takeover
 
 - **Thesis:** The engineering profession crossed from "trying AI tools" to "agent-first is the default workflow" — with specific numbers to prove it
-- **Convergence table:** Developer Tools (Managed Agents $0.08/hr) → Open Source (GLM-5.1 tops SWE-Bench) → Workflow Shift (DHH, 90% adoption) → Engineering Orgs (Snap 65%) → Security (Mythos zero-days) → Supply Chain (third week of attacks)
+- **Convergence table:** Developer Tools (Managed Agents $0.08/hr) → Open Source (GLM-5.1 tops SWE-Bench) → Workflow Shift (DHH, 90% adoption) → Engineering Orgs (Snap 65%) → Security (Mythos zero-days) → Supply Chain (third week of attacks) → Revenue War (OpenAI accuses Anthropic of $8B inflation)
 - **Unifying thread:** These aren't predictions — they're measurements (DHH: 100 PRs in 90 min, Snap: 65%, GLM: 58.4%, JetBrains: 90%)
 - **Deepest signal:** Kent Beck & Martin Fowler on Pragmatic Engineer comparing AI shift to Agile revolution magnitude
 
@@ -60,8 +60,10 @@ The week the engineering profession crossed a threshold: agents are no longer as
   - AI generates 65%+ of new code — first public company CEO to quantify at this scale
   - "Smaller, faster squads" operating model
   - $500M annualized savings; 4 months severance
+  - Irenic Capital activist pressure also a factor
 - **Context for eng leaders:** metric is real but context matters; becomes industry benchmark
-- **Broader layoff table:** Snap, GoPro, Pendo, Taboola, Qualcomm; Q1 total ~52K+
+- **Broader layoff table:** Snap, GoPro, Pendo, Taboola, Qualcomm, Oracle (20-30K), Block (4K), Atlassian (1,600), Pinterest (800); Q1-Q2 total ~71K+
+- **Forbes (April 15):** 80+ tech companies have cut 71K+ jobs in 2026; 48% explicitly linked to AI adoption
 
 ## 6. Project Glasswing — AI Zero-Day Detection
 
@@ -100,11 +102,12 @@ The week the engineering profession crossed a threshold: agents are no longer as
 | Andrej Karpathy | LLM knowledge bases (April 2-3), agentic engineering | X, GitHub |
 | Evan Spiegel | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
 | Dario Amodei | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
+| Simon Willison | Datasette 1.0a27, references Karpathy's LLM knowledge bases, Claude Artifacts usage | Blog (April 15-16) |
+| Denise Dresser (OpenAI CRO) | Sunday Memo accusing Anthropic of $8B revenue inflation, "Spud" model preview | Leaked memo (April 12) |
 
 ### Inactive (❌)
 | Voice | Notes |
 |---|---|
-| Simon Willison | Technical commentary, no headline takes this week |
 | Marc Andreessen | No this-week public statements |
 | Steve Yegge | Not active this week |
 | Kelsey Hightower | Prior week keynote |
@@ -119,8 +122,17 @@ The week the engineering profession crossed a threshold: agents are no longer as
 ## 11. Jobs & Economic Impact
 
 - **Revenue war** — Anthropic $30B vs OpenAI $24B (enterprise API vs consumer)
+- **The Revenue Accounting War (April 12-14):**
+  - OpenAI CRO Denise Dresser leaked memo (April 12) accuses Anthropic of $8B revenue inflation
+  - Anthropic books gross revenue (incl. AWS/Google Cloud cut); OpenAI books net (after Microsoft cut)
+  - If OpenAI's claim holds: Anthropic real run rate ~$22B, behind OpenAI's $24B
+  - TechCrunch (April 14): "Anthropic's rise is giving some OpenAI investors second thoughts"
+  - Sapphire Ventures' Jai Das: OpenAI is "the Netscape of AI" — trailblazer, not guaranteed winner
+  - "Spud" model preview: superior reasoning, agent-first enterprise platform
+  - Both companies expect IPO in 2026 — these numbers define market perception
 - **Capital flows** — Q1 VC $300B, OpenAI $122B round, Meta $115-135B capex
 - **The tension** — 65% AI code → fewer coders, but better engineers needed for architect/review/operate
+- **Broader layoff scale (April 15):** 80+ tech companies, 71K+ jobs cut in 2026; 48% explicitly AI-linked
 
 ## 12. Signals & Radar
 
@@ -133,6 +145,7 @@ The week the engineering profession crossed a threshold: agents are no longer as
 - Meta abandons open source — Llama dependencies at risk
 - 19 new AI bills — compliance is deployment requirement
 - Junior engineer pipeline under threat (Beck, Fowler, DHH flagged)
+- Revenue accounting war — vendor picking decisions depend on who's actually leading; gross vs net accounting obscures real market position
 
 ### 🟢 Emerging
 - Agent infrastructure at commodity pricing ($0.08/hr)
@@ -145,10 +158,11 @@ The week the engineering profession crossed a threshold: agents are no longer as
 - Anthropic IPO (October 2026) — vendor landscape shift
 - Physical threats to AI executives (Altman Molotov cocktail)
 
-### Key Quotes (6)
+### Key Quotes (7)
 1. DHH — "fundamental reorganization of the craft"
 2. Spiegel — "AI now generates more than 65% of all new code at Snap"
 3. DHH — "agent was undeniably a better reviewer than I could be"
 4. Anthropic — "greatly surpasses the ability of most humans to find and exploit software vulnerabilities"
 5. Karpathy — "token throughput is going less into manipulating code, and more into manipulating knowledge"
 6. OpenAI — "taxing automated labor"
+7. Sapphire Ventures' Jai Das — OpenAI is "the Netscape of AI" — trailblazer, not guaranteed winner
