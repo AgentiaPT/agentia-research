@@ -57,7 +57,7 @@ What makes this week different from the generic "AI is coming" narrative is the 
 
 ### The Deepest Signal
 
-The Kent Beck and Martin Fowler appearance on The Pragmatic Engineer (April 7) carries the most weight for engineering leaders. These are the people who defined modern software engineering practices — TDD, refactoring, XP, CI. When they compare the current AI shift to the magnitude of the Agile revolution, and explicitly discuss how AI amplifies exceptional engineers while making average work automatable, it's the strongest signal yet that engineering management practices need to change.
+The Kent Beck and Martin Fowler appearance on The Pragmatic Engineer (April 7) carries the most weight for engineering leaders. These are the people who defined modern software engineering practices — TDD, refactoring, XP, CI. They compared the current AI shift to the magnitude of the Agile revolution. They explicitly discussed how AI amplifies exceptional engineers while making average work automatable. It's the strongest signal yet that engineering management practices need to change.
 
 ---
 
@@ -161,7 +161,7 @@ In one demonstration, GLM-5.1 autonomously worked on a coding task for **8 hours
 
 The narrative for years has been "open source is always 6-18 months behind closed models." GLM-5.1 breaks that pattern for software engineering tasks specifically. For teams with data sovereignty requirements, regulatory constraints, or simply the desire to control their AI stack, there's now an open model that matches or exceeds the best proprietary options on coding benchmarks.
 
-The MIT license means no attribution requirements above $20M revenue (unlike some competitors). You can fine-tune, deploy, and modify without restrictions.
+The MIT license means unrestricted commercial use — no revenue thresholds, no special clauses (unlike Meta's Llama license, which imposed restrictions above $700M monthly active users). You can fine-tune, deploy, and modify without restrictions.
 
 ### The Meta Contrast
 

@@ -91,6 +91,6 @@ Previous draft was too generic AI industry news (corporate revenue wars, geopoli
 - [x] Take screenshot (explorer-screenshot.png)
 - [x] Source documentation (sources.md)
 - [x] Editorial refocus for AI×Software audience (April 16)
-- [ ] Fact-check pass
-- [ ] Run build-index.py and commit
+- [x] Fact-check pass (13 major claims verified)
+- [x] Run build-index.py and commit
 - [ ] Human commentary integration
