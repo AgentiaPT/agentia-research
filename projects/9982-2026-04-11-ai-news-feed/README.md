@@ -1,6 +1,6 @@
 ---
 title: "AI × Software Engineering — April 5–16, 2026"
-date: 2026-04-11
+date: 2026-04-16
 status: draft
 tags: [ai, news, weekly, developer-tools, agentic-engineering, supply-chain, testing, open-source, layoffs]
 explorers:
@@ -34,6 +34,7 @@ explorers:
 10. [Model & Tool Updates](#10-model--tool-updates)
 11. [Jobs & Economic Impact](#11-jobs--economic-impact)
 12. [Signals & Radar](#12-signals--radar)
+13. [Breaking — Claude Opus 4.7 Ships Today](#13-breaking--claude-opus-47-ships-today)
 
 ---
 ## 1. The Week's Narrative — The Agent Takeover
@@ -898,3 +899,115 @@ A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/0
 
 > "The model and the harness are no longer separable layers."
 > — Developer consensus emerging in [Hacker News discussion](https://news.ycombinator.com/item?id=47665285) on the OpenClaw billing changes
+
+---
+
+## 13. Breaking — Claude Opus 4.7 Ships Today
+
+**April 16 | [Anthropic](https://www.anthropic.com/news/claude-opus-4-7) · [The Information](https://www.theinformation.com/briefings/exclusive-anthropic-preps-opus-4-7-model-ai-design-tool) · [Dataconomy](https://dataconomy.com/2026/04/15/anthropic-to-launch-claude-opus-4-7-this-week/) · [The Decoder](https://the-decoder.com/anthropic-prepares-opus-4-7-and-ai-design-tool-vcs-offer-up-to-800-billion-dollars/)**
+
+As this edition went to press, Anthropic shipped **Claude Opus 4.7** — the successor to the model that wrote every word above. Available now across the [Claude API](https://www.anthropic.com/news/claude-opus-4-7), Amazon Bedrock, Google Cloud Vertex AI, and Microsoft Foundry at **the same price as Opus 4.6** ($5/$25 per million tokens, API identifier `claude-opus-4-7`).
+
+### The Leak Trail
+
+The release was the worst-kept secret of the week. Three independent leaks confirmed what [The Information reported on April 14](https://www.theinformation.com/briefings/exclusive-anthropic-preps-opus-4-7-model-ai-design-tool):
+
+| Leak | Date | What It Revealed |
+|---|---|---|
+| **npm source code leak** | March 31 | Internal version strings referencing `opus-4.7` and `sonnet-4.8` in [500K+ lines of exposed TypeScript](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/) |
+| **The Information exclusive** | April 14 | Opus 4.7 + AI design tool launching "as soon as this week" |
+| **Vertex AI console** | April 16 | Model ID `anthropic-claude-opus-4-7` [spotted in Google's quota management page](https://help.apiyi.com/en/claude-opus-4-7-vertex-ai-leak-release-analysis-en.html) with EU region billing configured |
+
+[Polymarket](https://polymarket.com/event/claude-4pt7-released-by) assigned 79% probability to an April 16 release. The market was right.
+
+### The Benchmarks That Matter
+
+Opus 4.7 isn't a marginal upgrade — the coding and vision improvements are substantial:
+
+| Benchmark | Opus 4.7 | Opus 4.6 | Delta |
+|---|---|---|---|
+| **CursorBench** | [70%](https://www.anthropic.com/news/claude-opus-4-7) | 58% | +12 pts |
+| **Rakuten-SWE-Bench** | [3× more tasks resolved](https://www.anthropic.com/news/claude-opus-4-7) | baseline | 3× |
+| **XBOW visual acuity** | [98.5%](https://www.anthropic.com/news/claude-opus-4-7) | 54.5% | +44 pts |
+| **CyberGym** | [73.8](https://www.anthropic.com/news/claude-opus-4-7) | 66.6 | +7.2 |
+| **OfficeQA Pro (Databricks)** | [21% fewer errors](https://www.anthropic.com/news/claude-opus-4-7) | baseline | −21% errors |
+| **BigLaw Bench (Harvey)** | [90.9%](https://www.anthropic.com/news/claude-opus-4-7) | — | — |
+| **Finance Agent** | [State-of-the-art](https://www.anthropic.com/news/claude-opus-4-7) | 0.767 | 0.813 |
+| **93-task coding benchmark** | [13% improvement](https://www.anthropic.com/news/claude-opus-4-7) | baseline | +13% |
+| **Multi-step workflows** | [+14% at fewer tokens](https://www.anthropic.com/news/claude-opus-4-7) | baseline | +14% |
+| **Tool errors** | [⅓ reduction](https://www.anthropic.com/news/claude-opus-4-7) | baseline | −33% |
+
+The **vision leap** is the headline: 98.5% vs 54.5% on visual acuity means Opus 4.7 can reliably read dense screenshots, chemical structures, and technical diagrams at up to 2,576 pixels on the long edge (~3.75 megapixels) — a **3× increase** in supported image resolution.
+
+The **CursorBench jump** (58% → 70%) matters most for working developers — this benchmark measures real IDE-integrated coding workflows, not synthetic puzzles.
+
+### New Features for Developers
+
+| Feature | What It Does |
+|---|---|
+| **`xhigh` effort level** | New tier between `high` and `max` — finer control over reasoning vs. latency. Now the default in Claude Code for all plans |
+| **`/ultrareview` command** | Dedicated code review sessions that flag bugs and design issues. Pro/Max users get three free ultrareviews |
+| **Task budgets (public beta)** | Guide token allocation across longer agentic runs — prevents runaway costs |
+| **Auto mode for Max** | Autonomous decision-making with fewer interruptions — extended from Team/Enterprise |
+| **Higher-res images** | Up to 2,576px long edge, >3× increase from prior models |
+
+### The AI Design Tool — Anthropic Competes With Its Own Customers
+
+Alongside Opus 4.7, Anthropic is shipping an **AI-powered design tool** that generates websites, landing pages, and presentations from natural language prompts. The tool includes a [Figma partnership](https://www.pymnts.com/artificial-intelligence-2/2026/anthropics-new-design-tool-rivals-adobe-and-figma/) to convert AI-generated code into editable design files, plus integration into Microsoft Word and PowerPoint.
+
+The market reacted before launch:
+
+| Stock | Drop | Why |
+|---|---|---|
+| **Figma (FIG)** | [−6%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Direct competition — Figma commands 80-90% UI/UX market share |
+| **Wix** | [−4.7%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Website builder market overlap |
+| **Adobe (ADBE)** | [−2.7%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Creative tool disruption threat |
+| **GoDaddy (GDDY)** | [−3%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Web presence builder overlap |
+
+This is the same pattern as the [OpenClaw billing war](#openclaw-billing-war-april-410) — Anthropic competing with and supplying its own ecosystem simultaneously. Lovable ($6.6B valuation) and Bolt both run on Claude's API. The [leaked app builder screenshots from April 12](#claude-app-builder-leak--screenshots-surface-april-12) now make more sense: the design tool, the app builder, and Opus 4.7 are a coordinated platform play.
+
+### The Dual-Track Strategy
+
+Anthropic now operates two model tiers with very different access:
+
+| | Opus 4.7 | Mythos Preview |
+|---|---|---|
+| **Access** | Generally available | [Restricted to Glasswing partners](https://www.anthropic.com/glasswing) |
+| **Positioning** | Commercial flagship | Cybersecurity / research |
+| **Safety profile** | "Largely well-aligned" | Best-aligned model |
+| **Cyber capabilities** | Differentially reduced | Full capability ([found 27-year-old zero-days](#6-project-glasswing--ai-that-finds-zero-days-faster-than-your-security-team)) |
+| **Next in line** | — | Sonnet 4.8 (leaked in source code, projected May 2026) |
+
+The source code leak also referenced models codenamed **Capybara** — suggesting more announcements are queued.
+
+### The Valuation Signal
+
+The Opus 4.7 + design tool launch arrives as VCs are offering Anthropic valuations of [up to $800 billion](https://the-decoder.com/anthropic-prepares-opus-4-7-and-ai-design-tool-vcs-offer-up-to-800-billion-dollars/) — more than double the [$380B Series G from February](https://fortune.com/2026/02/13/anthropics-380-billion-valuation-vaults-it-next-to-openai-spacex-among-largest-ipo-candidates/). Secondary market trading via Caplight has reached ~$688B. Annualized revenue: $30B, up from $9B at end of 2025. Enterprise customers spending $1M+/year have [doubled in under two months](https://the-decoder.com/anthropic-prepares-opus-4-7-and-ai-design-tool-vcs-offer-up-to-800-billion-dollars/).
+
+### Why This Matters for This Edition
+
+Every theme in sections 1–12 converges here:
+
+- **The Agent Takeover** (§1) — Opus 4.7 is explicitly optimized for agentic workflows: fewer tool errors, loop resistance, multi-step task improvements. The model is being shaped for a world where agents are the primary workers.
+- **Managed Agents at $0.08/hr** (§2) — same pricing, better model underneath. The build-vs-buy math just improved again.
+- **The coding benchmark race** (§3) — CursorBench 70% and 3× Rakuten-SWE-Bench set a new bar. GLM-5.1's SWE-Bench Pro lead may be short-lived.
+- **Tool stacking** (§4) — `/ultrareview`, `xhigh` effort, task budgets — the tooling surface area keeps expanding.
+- **Snap's 65%** (§5) — that number goes higher with a model that resolves 3× more production tasks.
+- **Security** (§6) — Opus 4.7's cyber capabilities are intentionally reduced vs. Mythos. The dual-track is a deliberate safety choice.
+- **Platform wars** (§10) — the design tool makes Anthropic a direct competitor to its own API customers, the same week it blocked OpenClaw.
+
+<details>
+<summary><strong>Section 13 Sources</strong></summary>
+
+1. [Anthropic — Introducing Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)
+2. [The Information — Exclusive: Anthropic Preps Opus 4.7 Model, AI Design Tool](https://www.theinformation.com/briefings/exclusive-anthropic-preps-opus-4-7-model-ai-design-tool)
+3. [Dataconomy — Anthropic To Launch Claude Opus 4.7 This Week](https://dataconomy.com/2026/04/15/anthropic-to-launch-claude-opus-4-7-this-week/)
+4. [The Decoder — Anthropic Prepares Opus 4.7 and AI Design Tool, VCs Offer Up to $800 Billion](https://the-decoder.com/anthropic-prepares-opus-4-7-and-ai-design-tool-vcs-offer-up-to-800-billion-dollars/)
+5. [PYMNTS — Anthropic's New Design Tool Rivals Adobe and Figma](https://www.pymnts.com/artificial-intelligence-2/2026/anthropics-new-design-tool-rivals-adobe-and-figma/)
+6. [Yahoo Finance — Figma and Wix Shares Tumble as Anthropic Targets AI Web Design Market](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html)
+7. [Geeky Gadgets — Claude Opus 4.7 Leaks & Anthropic's Full-Stack AI Studio](https://www.geeky-gadgets.com/claude-opus-4-7-leak-anthropic-updates/)
+8. [Apiyi Blog — Claude Opus 4.7: 5 Key Insights from the Vertex AI Leak](https://help.apiyi.com/en/claude-opus-4-7-vertex-ai-leak-release-analysis-en.html)
+9. [Polymarket — Claude 4.7 Released By...?](https://polymarket.com/event/claude-4pt7-released-by)
+10. [Alex Kim — Claude Code Source Leak Analysis](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/)
+
+</details>

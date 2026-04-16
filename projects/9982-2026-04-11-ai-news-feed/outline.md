@@ -158,6 +158,35 @@ The week the engineering profession crossed a threshold: agents are no longer as
 - Anthropic IPO (October 2026) — vendor landscape shift
 - Physical threats to AI executives (Altman Molotov cocktail)
 
+## 13. Breaking — Claude Opus 4.7 Ships Today
+
+- **Official launch (April 16)** — [anthropic.com/news/claude-opus-4-7](https://www.anthropic.com/news/claude-opus-4-7)
+  - API identifier: `claude-opus-4-7`, pricing unchanged ($5/$25 per M tokens)
+  - Available: Claude API, Bedrock, Vertex AI, Microsoft Foundry
+- **Leak trail:** npm source code (March 31) → The Information exclusive (April 14) → Vertex AI console (April 16)
+  - Polymarket: 79% probability on April 16 — correct
+- **Benchmark improvements over Opus 4.6:**
+  - CursorBench: 70% vs 58% (+12 pts)
+  - Rakuten-SWE-Bench: 3× more production tasks resolved
+  - XBOW visual acuity: 98.5% vs 54.5% (+44 pts)
+  - CyberGym: 73.8 vs 66.6
+  - OfficeQA Pro: 21% fewer errors
+  - BigLaw Bench: 90.9% accuracy
+  - Finance Agent: state-of-the-art (0.813 vs 0.767)
+  - 93-task coding benchmark: 13% improvement
+  - Multi-step workflows: +14% at fewer tokens
+  - Tool errors: ⅓ reduction
+- **New features:** `xhigh` effort level, `/ultrareview` command, task budgets (beta), auto mode for Max, higher-res images (2,576px, 3×)
+- **AI design tool** — websites, presentations, landing pages from natural language
+  - Figma partnership (code → editable design files)
+  - Microsoft Word/PowerPoint integration
+  - Stock impact: Figma -6%, Wix -4.7%, Adobe -2.7%, GoDaddy -3%
+- **Dual-track strategy:** Opus 4.7 (commercial) vs Mythos (restricted/Glasswing)
+  - Sonnet 4.8 leaked in source code, projected May 2026
+  - Capybara codename also found
+- **Valuation:** VCs offering up to $800B (2× from $380B in Feb); secondary market ~$688B
+- **Connection to edition themes:** reinforces agent takeover (§1), managed agents value (§2), coding benchmark race (§3), tool stacking (§4), Snap's metric going higher (§5), deliberate cyber capability reduction (§6), platform wars escalation (§10)
+
 ### Key Quotes (7)
 1. DHH — "fundamental reorganization of the craft"
 2. Spiegel — "AI now generates more than 65% of all new code at Snap"
