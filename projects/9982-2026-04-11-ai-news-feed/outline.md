@@ -4,177 +4,151 @@
 > After every content edit to the article, update this outline to reflect the change.
 > See the [runbook](../../runbooks/ai-news-weekly.md) for the sync protocol.
 
-## Theme: "The Fortress"
+## Theme: "The Agent Takeover"
 
-The week the industry chose defense over disruption. Anthropic withheld its most powerful model for cybersecurity. The Big Three united against Chinese model copying. OpenAI published a policy paper on robot taxes. Meta abandoned open source. And someone threw a Molotov cocktail at Sam Altman's house.
+The week the engineering profession crossed a threshold: agents are no longer assistants, they're the primary workers. DHH goes agent-first, Beck & Fowler compare it to the Agile revolution, JetBrains says 90% adoption, Snap says 65% AI code → 1,000 layoffs, and the first open-source model tops SWE-Bench Pro.
 
 ---
 
-## 1. The Week's Narrative — The Fortress
+## 1. The Week's Narrative — The Agent Takeover
 
-- **Thesis:** After weeks of unraveling (leaks, supply chain attacks, layoffs), the industry pivoted to defense on every front — technological, economic, legal, and physical
-- **Convergence table:** Cybersecurity (Mythos/Glasswing) → Model Defense (anti-copying alliance) → Economic (robot tax) → Legal (Musk trial) → Physical (Altman attack) → Market (Meta goes closed)
-- **Unifying thread:** Every major actor chose to build walls this week
-- **Deepest signal:** The company that leaked its source code last week now withholds its most powerful model as too dangerous to release — the fastest pivot from vulnerability to fortress in tech history
+- **Thesis:** The engineering profession crossed from "trying AI tools" to "agent-first is the default workflow" — with specific numbers to prove it
+- **Convergence table:** Developer Tools (Managed Agents $0.08/hr) → Open Source (GLM-5.1 tops SWE-Bench) → Workflow Shift (DHH, 90% adoption) → Engineering Orgs (Snap 65%) → Security (Mythos zero-days) → Supply Chain (third week of attacks)
+- **Unifying thread:** These aren't predictions — they're measurements (DHH: 100 PRs in 90 min, Snap: 65%, GLM: 58.4%, JetBrains: 90%)
+- **Deepest signal:** Kent Beck & Martin Fowler on Pragmatic Engineer comparing AI shift to Agile revolution magnitude
 
-## 2. Project Glasswing — Anthropic Withholds Its Most Powerful Model
-
-- **Claude Mythos Preview (April 7)** — "Too dangerous to release" model
-  - Autonomously found thousands of zero-day vulnerabilities in every major OS and browser
-  - Bugs dating back 17-27 years (FreeBSD RCE, OpenBSD 27-year bug)
-  - Generated working exploits independently
-  - Biggest shift in vulnerability research since Google's Project Zero (2014)
-- **Project Glasswing** — cybersecurity defense initiative
-  - 40+ partners: AWS, Apple, Google, Microsoft, CrowdStrike, Cisco, NVIDIA, Palo Alto, Linux Foundation
-  - $100M in usage credits + $4M to open-source security organizations
-  - Cyber Verification Program for vetted access
-- **Revenue milestone** — Anthropic surpasses OpenAI ($30B vs $24B annualized)
-  - 1,000+ enterprise customers spending $1M+/year each
-  - 8 of Fortune 10 using Anthropic
-  - IPO discussed for October 2026, ~$380B valuation
-- **Compute deals** — 3.5 GW of TPU compute from Google/Broadcom ($50B+ total US AI infrastructure)
-
-## 3. The Anti-Distillation Alliance — Big Three Unite Against Chinese Model Copying
-
-- **Frontier Model Forum goes operational (April 7)** — OpenAI, Anthropic, Google + Microsoft
-  - Real-time attack intelligence sharing (modeled on cybersecurity ISACs)
-  - Targeting: DeepSeek, Moonshot AI, MiniMax
-  - Anthropic flagged 16M adversarial distillation attacks from 24,000 fake accounts
-- **$1B AI Frontier Fund** — watermarking, detection, legal action
-- **Coordinated lobbying** for stricter export controls and legislative protection
-- **Context:** DeepSeek-R1 release sparked suspicions of training via adversarial distillation
-
-## 4. Meta Goes Closed — Muse Spark and the End of Open-Source AI
-
-- **Muse Spark launch (April 8)** — Meta's first proprietary model
-  - Built by Meta Superintelligence Labs (MSL), led by Alexandr Wang (ex-Scale AI CEO)
-  - Natively multimodal (text + images from pretraining)
-  - Three reasoning modes: Instant, Thinking, Contemplating (parallel sub-agents)
-  - 10x more efficient than Llama 4 Maverick
-  - Health & wellness focus: physician collaboration, nutritional scanning
-- **Business model shift** — no open source, private preview API only, Meta account required
-- **Stock impact** — 9% jump, Meta AI app near top of App Store
-- **$115-135B capex** announced for AI infrastructure
-- **Strategic context** — Llama 4 benchmark controversy, Scale AI acquisition ($14.3B)
-- **Significance** — Google's Gemma 4 becomes the last major Apache 2.0 frontier model
-
-## 5. OpenAI's Robot Tax — The Intelligence Age Policy Blueprint
-
-- **"Industrial Policy for the Intelligence Age" (April 6)** — OpenAI's policy paper
-  - Robot tax on automated labor (comparable rates to displaced human workers)
-  - Public wealth fund seeded by AI company contributions (Alaska Permanent Fund model)
-  - Four-day workweek pilot programs at full pay
-  - Automatic safety nets triggered by AI displacement metrics
-  - Tax base shift from payroll to capital gains/corporate income
-  - AI access framed as a fundamental right
-- **Musk trial escalation (April 7)** — seeks Altman/Brockman ouster
-  - Trial date: April 27, Oakland federal court
-  - $134-150B damages sought (to nonprofit, not Musk)
-  - Core claim: OpenAI betrayed nonprofit mission
-- **Altman Molotov cocktail attack (April 10)** — physical violence against AI leaders
-  - 4 AM attack on SF home, suspect arrested near OpenAI HQ
-  - Suspect (Daniel Moreno-Gama, 20, from Texas) had list of AI executives
-  - Federal charges: attempted murder, arson, destructive devices
-  - Altman blog post: "de-escalate the rhetoric... fewer explosions in fewer homes"
-
-## 6. Claude Managed Agents — Anthropic's Infrastructure Play
+## 2. Claude Managed Agents — $0.08/hr Infrastructure
 
 - **Public beta launch (April 8)** — composable APIs for production agents
   - $0.08 per agent runtime hour + standard token pricing
   - Architecture: brain (reasoning) + hands (sandbox execution) + session (event log)
   - Credential management, stateful sessions, error recovery
-  - Compresses months of agent infrastructure work to days
-- **Early adopters** — Notion, Asana, Sentry, Rakuten
-- **Advisor Tool** — different Claude models in different roles within workflows
-- **Competitive context** — vs OpenAI Assistants API, Google Vertex AI agents
+- **Early adopters:** Notion (reduced agent infra team 8→2), Asana (days vs months), Sentry (autonomous error triage), Rakuten
+- **Advisor Tool** — multi-model orchestration within workflows
+- **Competitive landscape:** vs OpenAI Assistants API, Google Vertex AI agents
+- **AWS Lambda moment for AI agents** — infrastructure becomes commodity
 
-## 7. The Regulatory Wave — 19 New AI Laws and Apple's Crackdown
+## 3. GLM-5.1 — First Open-Source Model Tops SWE-Bench Pro
 
-- **19 AI bills passed into law** in two weeks (late March/early April)
-  - Data transparency, user protections, deepfake restrictions, app store accountability
-  - California and New York leading
-- **Apple vs. Grok** — threatens removal of Musk's xAI chatbot over deepfake generation
-  - Demanded formal content moderation plan
-- **App Store AI spam** — 557K app submissions (24% increase), review delays
-  - Top 1% capture 92% of in-app revenue
-- **Follow-up**: California AI executive order (from last edition's "watch")
+- **Release (April 7)** — 754B MoE, MIT license, Z.ai (Zhipu AI)
+  - SWE-Bench Pro: 58.4% (#1, beating GPT-5.4 at 57.7%)
+  - Terminal-Bench 2.0: 63.5, NL2Repo: 42.7, CyberGym: 68.7, MCP-Atlas: 71.8
+  - 200K context, 128K output, ~40B active params per token
+  - Autonomous 8-hour coding sessions (655 cycles)
+- **Self-hostable** — vLLM, SGLang, Transformers, KTransformers, Ollama
+- **Meta contrast** — Meta launches proprietary Muse Spark same week; GLM-5.1 and Gemma 4 now the open-source options
 
-## 8. Supply Chain: The Siege Continues
+## 4. The Agentic Engineering Inflection
 
-- **Axios CVE published (April 9)** — CVE-2025-62718 (CVSS 9.3), SSRF vulnerability
-  - North Korean attribution confirmed (UNC1069)
-  - 600K downloads during 3-hour poisoning window
-- **CPU-Z supply chain attack (April 9-10)** — official CPUID website compromised
-  - Trojanized ZIPs with Alien RAT variant, 6-hour window
-- **Trivy/TeamPCP continued fallout** — ongoing remediation in 1,000+ cloud environments
-- **Adobe Acrobat Reader** — CVE-2026-34621 (CVSS 8.6), prototype pollution → RCE via PDFs
+- **DHH goes agent-first (April 8)** — every task starts with AI agent
+  - 100 PRs reviewed in 90 minutes via Claude Code
+  - Designers at 37signals ship production code
+  - Quote: "fundamental reorganization of the craft"
+- **Kent Beck & Martin Fowler (April 7)** — Pragmatic Engineer podcast
+  - AI shift = Agile revolution in magnitude
+  - Non-determinism challenge in AI-generated code
+  - Burnout risk warning; junior engineer development concern
+- **JetBrains data (April 2026)** — 90% AI tool adoption, 74% specialized coding tools
+  - Tool leaderboard: Copilot 29%, ChatGPT 28%, Claude Code 18%, Cursor 18%
+  - 41% of production code AI-generated; only 29% fully trust output
+  - Tool stacking is the norm
+- **Implications for engineering managers:** workflow design > tool selection; seniors amplified; junior pipeline at risk
+
+## 5. Snap's 65% Metric — Engineering Org Impact
+
+- **Layoffs (April 15)** — 1,000 jobs + 300 open roles (16% workforce)
+  - AI generates 65%+ of new code — first public company CEO to quantify at this scale
+  - "Smaller, faster squads" operating model
+  - $500M annualized savings; 4 months severance
+- **Context for eng leaders:** metric is real but context matters; becomes industry benchmark
+- **Broader layoff table:** Snap, GoPro, Pendo, Taboola, Qualcomm; Q1 total ~52K+
+
+## 6. Project Glasswing — AI Zero-Day Detection
+
+- **Claude Mythos Preview (April 7)** — found thousands of zero-days
+  - 27-year OpenBSD bug, 17-year FreeBSD RCE, multiple browser zero-days
+  - Model deemed too dangerous for public release
+- **Project Glasswing** — restricted cybersecurity initiative
+  - 40+ partners, $100M credits, $4M OSS donations, Cyber Verification Program
+- **Engineering implications:** SAST/DAST tools approaching obsolescence; adversaries gain capabilities in 6-18 months; OSS dependencies get AI security audits
+
+## 7. Supply Chain: The Siege Continues
+
+- **Axios CVE (April 9)** — CVE-2025-62718 (CVSS 9.3), SSRF, NK attribution
+  - 600K downloads in 3-hour window; versions 1.14.1, 0.30.4
+- **CPU-Z attack (April 9-10)** — vendor website compromise (new vector)
+  - Trojanized ZIPs, Alien RAT, 6-hour window
+- **Adobe Acrobat Reader** — CVE-2026-34621 (CVSS 8.6), actively exploited
+- **Trivy/TeamPCP** — ongoing remediation in 1,000+ environments
+- **Pattern:** Three weeks, three vectors (CI/CD → npm → vendor websites)
+
+## 8. Regulatory Wave — 19 New AI Laws
+
+- **19 bills in two weeks** — data transparency, user protections, algorithmic discrimination, app store accountability
+- **Apple vs. Grok** — deepfake content moderation demands
+- **App Store flood** — 557K submissions (24% increase), review delays
+- **Engineering impact:** compliance in CI/CD pipeline, content labeling, bias testing
 
 ## 9. Voice Tracker
 
 ### Active (✅)
 | Voice | Key Topic | Source |
 |---|---|---|
-| Sam Altman | Molotov attack response, "Building the Future" talk, robot tax paper | CNBC, Blog, TechCrunch |
-| Dario Amodei (implied) | Glasswing announcement, Mythos decision | Anthropic |
-| Elon Musk | Seeks Altman ouster, $134B damages | CNBC, Bloomberg |
-| Evan Spiegel | Snap layoffs, AI generates 65% of code | CNBC, Fast Company |
-| Alexandr Wang | Muse Spark launch, Meta Superintelligence Labs | Meta Blog |
+| DHH | Agent-first workflow, 100 PRs/90min, peak programmer | Blog, Pragmatic Engineer |
+| Kent Beck & Martin Fowler | AI = Agile-scale disruption, non-determinism | Pragmatic Engineer |
+| Gergely Orosz | Published Beck/Fowler and DHH episodes | Pragmatic Engineer |
+| Andrej Karpathy | LLM knowledge bases (April 2-3), agentic engineering | X, GitHub |
+| Evan Spiegel | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
+| Dario Amodei | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
 
 ### Inactive (❌)
 | Voice | Notes |
 |---|---|
-| Andrej Karpathy | No major new statements this week |
-| Simon Willison | Technical commentary, no headline takes |
-| Marc Andreessen | Latent Space from previous week referenced |
-| Gergely Orosz | No specific this-week items found |
+| Simon Willison | Technical commentary, no headline takes this week |
+| Marc Andreessen | No this-week public statements |
 | Steve Yegge | Not active this week |
-| Kelsey Hightower | Nutanix .NEXT keynote was last week |
+| Kelsey Hightower | Prior week keynote |
 
 ## 10. Model & Tool Updates
 
-- **Anthropic** — Claude Mythos Preview (restricted), Claude Managed Agents (public beta), $30B revenue run rate
-- **Meta** — Muse Spark (proprietary, multimodal, 3 reasoning modes, private API)
-- **Zhipu AI** — GLM-5.1 (744B open-source, trained without NVIDIA hardware, surpasses GPT-5.4 in coding)
-- **OpenAI** — "Robot tax" policy paper, Musk trial escalation, $122B round completed
-- **Google** — Broadcom/Anthropic compute deal (3.5 GW TPU)
-- **Claude Code** — 80.8% SWE-bench, 1M-token context beta, fastest-growing dev tool
+- **Dev tool landscape table:** Claude Code, Copilot, Cursor, Windsurf, Google Antigravity
+- **Tool stacking trend** — multiple tools per developer is the norm
+- **AI models for engineering:** GLM-5.1, Claude Mythos, Muse Spark, Gemma 4
+- **AI-powered CI/CD trends:** intelligent test selection (97% reduction), autonomous pipeline maintenance, natural language pipelines
 
 ## 11. Jobs & Economic Impact
 
-- **Snap**: 1,000 jobs (16% workforce), AI generates 65% of code, $500M annualized savings
-- **GoPro**: 23% workforce reduction
-- **Pendo**: 10% (~90 people)
-- **OpenAI robot tax** — proposes government robot tax, public wealth fund, 4-day workweek
-- **Anthropic**: Surpassed OpenAI in revenue ($30B vs $24B), 1,000+ enterprise customers at $1M+
-- **Meta**: $115-135B capex commitment, proprietary pivot
-- **Capital surge**: Q1 VC hit $300B (2x previous year)
+- **Revenue war** — Anthropic $30B vs OpenAI $24B (enterprise API vs consumer)
+- **Capital flows** — Q1 VC $300B, OpenAI $122B round, Meta $115-135B capex
+- **The tension** — 65% AI code → fewer coders, but better engineers needed for architect/review/operate
 
 ## 12. Signals & Radar
 
 ### 🔴 Critical
-- Claude Mythos: AI model too dangerous to release — first major "capability suppression" decision
-- Molotov cocktail attack on Sam Altman's home — AI debate turns physically violent
-- 16M adversarial distillation attacks on US AI models from Chinese firms
+- Snap's 65% — first hard number on AI code replacement
+- AI vulnerability scanning surpasses human capability (Mythos)
+- Third consecutive week of major supply chain attacks
 
 ### 🟠 Warning
-- Meta abandons open source — Muse Spark closes the door on Llama's legacy
-- 19 new AI bills passed into law in two weeks
-- Musk trial (April 27) could force OpenAI structural changes, $134B damages
+- Meta abandons open source — Llama dependencies at risk
+- 19 new AI bills — compliance is deployment requirement
+- Junior engineer pipeline under threat (Beck, Fowler, DHH flagged)
 
 ### 🟢 Emerging
-- Claude Managed Agents at $0.08/hr — agent infrastructure becomes a commodity
-- GLM-5.1: open-source 744B model trained without NVIDIA hardware
-- OpenAI's robot tax: an AI company proposing to tax its own technology
+- Agent infrastructure at commodity pricing ($0.08/hr)
+- GLM-5.1 breaks open-source ceiling on coding benchmarks
+- Tool stacking is the new default workflow
 
 ### 🔵 Watch
-- Anthropic IPO (October 2026, ~$380B valuation)
-- CPU-Z supply chain attack: developer utility websites as attack vectors
-- AI-generated app spam overwhelming App Store review processes
-- Physical security of AI executives becoming an industry concern
+- OpenAI "robot tax" policy paper — affects engineering economics if implemented
+- Musk vs. OpenAI trial (April 27) — enterprise API stability implications
+- Anthropic IPO (October 2026) — vendor landscape shift
+- Physical threats to AI executives (Altman Molotov cocktail)
 
-### Key Quotes (6-7)
-1. Altman — "de-escalate the rhetoric... fewer explosions in fewer homes, figuratively and literally"
-2. Anthropic (on Mythos) — "too dangerous for public release" / capability that "greatly surpasses humans"
-3. Evan Spiegel — AI generates "more than 65% of all new code at Snap"
-4. Musk (court filing) — seeks removal of Altman as officer, $134B to nonprofit
-5. OpenAI policy paper — "AI access as a fundamental right"
+### Key Quotes (6)
+1. DHH — "fundamental reorganization of the craft"
+2. Spiegel — "AI now generates more than 65% of all new code at Snap"
+3. DHH — "agent was undeniably a better reviewer than I could be"
+4. Anthropic — "greatly surpasses the ability of most humans to find and exploit software vulnerabilities"
+5. Karpathy — "token throughput is going less into manipulating code, and more into manipulating knowledge"
+6. OpenAI — "taxing automated labor"

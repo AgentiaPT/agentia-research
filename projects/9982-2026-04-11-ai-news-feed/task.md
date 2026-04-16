@@ -65,15 +65,32 @@ Start working on last week's edition six software news update. Check past editio
 11. **19 new AI bills** — Regulatory wave
 12. **GLM-5.1** — Zhipu AI open-source 744B model without NVIDIA
 
+## Editorial Refocus (April 16, 2026)
+
+Previous draft was too generic AI industry news (corporate revenue wars, geopolitics, Molotov cocktails). Refocused for AI×Software target audience: software devs, engineering managers, CTOs (Pragmatic Engineer style).
+
+**Changes made:**
+- Promoted Claude Managed Agents to §2 (biggest dev tools story)
+- Added §3: GLM-5.1 tops SWE-Bench Pro (first open-source model beating GPT-5.4 in coding)
+- Added §4: Agentic Engineering Inflection — DHH goes agent-first, Kent Beck & Fowler on Pragmatic Engineer, JetBrains 90% survey
+- Reframed §5: Snap's 65% as engineering org strategy, not just layoff news
+- Condensed Glasswing to security-testing focus (cut revenue/IPO/compute details)
+- Cut anti-distillation alliance deep dive (moved to signals — geopolitics, not engineering)
+- Cut robot tax, Musk trial, Molotov cocktail deep dives (moved to watch signals)
+- Refocused voice tracker on engineering voices (added DHH, Beck, Fowler, Orosz as active)
+- Added AI-powered CI/CD trends to Model & Tool Updates
+- Updated all sources
+
 ## Progress
 
 - [x] Created project folder (9982) and task.md
 - [x] Research phase — web searches covering all topic areas (models, tools, security, jobs, voices, papers)
 - [x] Create outline.md with section plan (12 sections, theme: "The Fortress")
-- [ ] Write README.md sections incrementally
-- [ ] Build explorer.html dashboard
-- [ ] Take screenshot (explorer-screenshot.png)
-- [ ] Source documentation (sources.md)
-- [ ] Run build-index.py and commit
+- [x] Write README.md sections incrementally
+- [x] Build explorer.html dashboard
+- [x] Take screenshot (explorer-screenshot.png)
+- [x] Source documentation (sources.md)
+- [x] Editorial refocus for AI×Software audience (April 16)
 - [ ] Fact-check pass
+- [ ] Run build-index.py and commit
 - [ ] Human commentary integration
