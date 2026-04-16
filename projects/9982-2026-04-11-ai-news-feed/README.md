@@ -505,19 +505,103 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 ## 10. Model & Tool Updates
 
+### Claude Code: Desktop Redesign + Routines (April 14)
+
+**[Anthropic Blog](https://claude.com/blog/claude-code-desktop-redesign) · [MacRumors](https://www.macrumors.com/2026/04/15/anthropic-rebuilds-claude-code-desktop-app/) · [VentureBeat](https://venturebeat.com/orchestration/we-tested-anthropics-redesigned-claude-code-desktop-app-and-routines-heres-what-enterprises-should-know)**
+
+Anthropic shipped the biggest Claude Code UX overhaul since launch. The desktop app was **rebuilt from the ground up for parallel work** — the same week Cursor 3 launched its own multi-agent workspace. The parallel-work arms race is now official.
+
+| Feature | What It Does | Why It Matters |
+|---|---|---|
+| **Multi-session sidebar** | All active/recent sessions in one place, filterable by status, project, environment | No more tab juggling — manage 5+ agent sessions from one window |
+| **Integrated terminal** | Run tests and builds without leaving the app | Eliminates the IDE↔terminal context switch |
+| **In-app file editor** | Spot edits without opening an IDE | Quick fixes don't need a full editor |
+| **Rebuilt diff viewer** | Optimized for large changesets | AI-generated diffs are often 500+ lines — this matters |
+| **Side chats (Cmd+;)** | Branch a question off a running task | Ask "will this break X?" without polluting the agent's main context |
+| **Drag-and-drop panes** | Flexible workspace layout | Customize for your workflow — code left, terminal right, chat bottom |
+| **Expanded preview pane** | HTML, PDFs, local app servers | Preview AI-generated UIs in real time |
+
+Available on Pro, Max, Team, and Enterprise plans.
+
+**Routines (Research Preview)** — configure a prompt + repo + connectors once, then trigger it on a **schedule** (hourly, nightly, weekly), via an **API endpoint** (each routine gets its own authenticated HTTP POST URL), or from a **GitHub webhook** (PR opened, push, check run, workflow run, etc.). Runs on Anthropic's web infrastructure — no laptop required.
+
+> The combination of Managed Agents ($0.08/hr runtime) + Routines (automated triggers) + Desktop Redesign (parallel supervision) forms a complete agent workflow: **build agents → automate triggers → supervise everything in one window**.
+
+### Claude Code: Source Leak Aftermath + Security Vulnerability
+
+**[Adversa AI](https://adversa.ai/blog/claude-code-security-bypass-deny-rules-disabled/) · [The Register](https://www.theregister.com/2026/04/01/claude_code_rule_cap_raises/) · [Alex Kim Analysis](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/)**
+
+The [npm sourcemap leak covered last week](../9983-2026-04-04-ai-news-feed/README.md) (~512K lines of TypeScript, 1,906 files) continued generating analysis throughout this window. Key findings from researchers who dug into the code:
+
+| Finding | Verified? | Detail |
+|---|---|---|
+| **QueryEngine.ts: ~46,000 lines** | ✅ | Single file handles all LLM API calls, streaming, caching, orchestration, retry logic, rate limiting, context management |
+| **44 hidden feature flags** | ✅ | Unreleased features: KAIROS (always-on background agent), ULTRAPLAN (30-min remote planning), Buddy companion, agent swarms |
+| **Anti-distillation mechanisms** | ✅ | Fake tool definitions injected into system prompts; reasoning chain summarization with cryptographic signatures |
+| **"Undercover mode"** | ✅ | Stealth mode to obscure Anthropic employee contributions to open-source projects |
+| **Multi-agent natural language orchestration** | ✅ | Sub-agents coordinated via natural language system prompts (e.g., "Do not rubber-stamp weak work") |
+| **"Spaghetti" architecture** | Debated | One analyst called it "staff-engineer spaghetti: performance-aware, feature-flagged, surgically optimized spaghetti." A 3,167-line function with 486 branch points was found. Others noted the async generator architecture is clean and the bash security system is thorough |
+| **JSON parsed by LLM, not code** | ❌ | Mischaracterized — the code uses standard JSONL for persistence. System prompts are processed by the LLM, but that's how all LLM agents work |
+| **22 image compression retries** | ❌ | The "22" refers to security validators, not image retries. Context compression has a circuit breaker after 3 failures |
+
+**Adversa AI Security Vulnerability (April 1, patched April 6):** Claude Code's permission engine had a **hard-coded 50-subcommand limit**. When a shell command exceeded 50 subcommands (joined by `&&`, `||`, or `;`), **all deny-rule enforcement was silently skipped** — falling back to a generic "ask" prompt with zero indication that security rules were bypassed. A malicious `CLAUDE.md` could craft routine-looking build pipelines that exfiltrate credentials via hard-blocked commands like `curl` and `wget`. Anthropic patched it on April 6 using their tree-sitter parser.
+
+### OpenClaw Billing War (April 4–10)
+
+**[TechCrunch](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) · [Boris Cherny (Threads)](https://www.threads.com/@boris_cherny/post/DWsAWeND5nm/)**
+
+Anthropic blocked third-party harnesses (like OpenClaw) from Claude subscriptions on April 4. Then **temporarily banned OpenClaw creator Peter Steinberger's account** around April 10. Steinberger criticized the timing, saying features were copied into Anthropic's harness before locking out open source. He subsequently migrated OpenClaw to OpenAI Codex OAuth.
+
+The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully subscription-eligible — this is intentional, not a workaround. The harness is where Anthropic controls fair use boundaries, context management, and caching. As one observer noted: **"The model and the harness are no longer separable layers."**
+
 ### Developer Tools Landscape
 
-| Tool | What Changed This Week | Adoption |
+| Tool | What Changed (April 1–16) | Adoption |
 |---|---|---|
-| **Claude Code** | Managed Agents launched ($0.08/hr); 80.8% SWE-bench Verified; 1M-token context beta | 18% workplace adoption, 91% CSAT |
-| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review since March | 29% workplace (largest), growth stalling |
-| **Cursor** | Composer 2 (launched March 19, built on Kimi K2.5); 61.3 CursorBench; 73.7 SWE-bench Multilingual | 18% workplace, fastest growth |
-| **Windsurf** | Post-Cognition acquisition; strong free tier; privacy-focused enterprise features | Competitive free alternative |
-| **Google Antigravity** | Rapid growth since late 2025 launch | 6% workplace adoption |
+| **Claude Code** | Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions | 18% workplace, 91% CSAT, 46% most-loved ([Pragmatic Engineer survey](https://newsletter.pragmaticengineer.com/)) |
+| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace (largest), 9% most-loved |
+| **Cursor** | **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace, fastest growth |
+| **Windsurf** | **Adaptive Model Selection** — auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
+| **Google Antigravity** | v1.22.2; Linux sandboxing; improved MCP auth; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
+| **Replit** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
+| **Bolt (StackBlitz)** | Sonnet 4.6 became default model (April 8), replacing Sonnet 4.5/Opus 4.5; MCP server support | AI app builder segment |
+| **Lovable** | No major April product launch; $330M raised at $6.6B (Dec 2025); Anthropic reportedly building competing in-chat app builder ([Sifted](https://sifted.eu/articles/anthropic-lovable-challenger-leak)) | AI app builder segment leader |
 
-### Key Trend: Tool Stacking
+### Key Trends
 
-Most developers now run a hybrid stack — Cursor for editing, Claude Code for complex refactoring, Copilot for fast autocomplete. No single tool dominates all workflows. The 29% who use Copilot and the 18% who use Claude Code aren't the same people — there's significant overlap.
+**Parallel work is the new competitive axis.** Both Claude Code (multi-session sidebar, side chats) and Cursor 3 (Agents Window, Agent Tabs) shipped parallel-agent workspaces within two weeks of each other. The single-chat-window era is over.
+
+**Offline/air-gapped AI coding goes mainstream.** Copilot CLI's BYOK support means air-gapped enterprises (defense, healthcare, finance) can now run AI coding agents without any external network dependency. This was the last major adoption blocker for regulated industries.
+
+**Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 engineers) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months. 56% of developers at 10K+ enterprises use Copilot, but only 9% call it "most loved" vs. Claude Code at 46%.
+
+### Patterns.dev Agent Skills
+
+**[Patterns.dev](https://www.patterns.dev/ai/skills/) · [GitHub](https://github.com/PatternsDev/skills)**
+
+Addy Osmani and Hassan Djirdeh packaged **58 Agent Skills** from Patterns.dev — proven JavaScript, React, and Vue design patterns rewritten as agent-consumable skill files. Install by stack:
+
+```
+npx skills add PatternsDev/skills/react
+npx skills add PatternsDev/skills/javascript
+npx skills add PatternsDev/skills --skill ai-ui-patterns
+```
+
+Works with Claude Code, Cursor, Codex, Antigravity, Gemini CLI. Focuses on React + Vite (filling a gap for SPAs outside Next.js/Remix), render optimization, and TanStack Query guidance.
+
+**Why this matters:** Agent Skills are becoming the new "npm install" — curated knowledge packages that make AI agents more effective at specific stacks. Expect more framework-specific skill libraries.
+
+### Chrome DevTools MCP Server v0.21.0
+
+**[GitHub](https://github.com/nicedoc/chrome-devtools-mcp/releases/tag/v0.21.0)**
+
+Addy Osmani's DevTools MCP server shipped major agent-workflow features:
+
+- **Lighthouse performance audits via MCP** — automated Core Web Vitals and LCP optimization in agent workflows
+- **Memory leak detection skill** — using `take_memory_snapshot` tool for autonomous leak detection
+- **Accessibility debugging skill** — leveraging Lighthouse for robust a11y output
+- **Multi-agent `pageId` routing** — multiple agents can target specific browser pages in parallel
+- **Experimental CLI** for agent navigation and troubleshooting
 
 ### AI Models for Engineering
 
@@ -527,6 +611,19 @@ Most developers now run a hybrid stack — Cursor for editing, Claude Code for c
 | **Claude Mythos Preview** | Restricted to Glasswing cybersecurity partners | AI vulnerability scanning at superhuman level |
 | **Muse Spark** (Meta) | First proprietary model, three reasoning modes | Meta abandons open source — Llama dependencies at risk |
 | **Gemma 4** (Google) | Apache 2.0 — last major open frontier model | Your fallback if you need open + capable |
+
+### Completion-Pressure Misalignment: First Empirical Study
+
+**[GitHub](https://github.com/trianglegrrl/misalign) · [Blog](https://alainahardie.com/completion-pressure-misalignment)**
+
+Alaina Hardie (who uses Claude Code and Cursor daily) built an open-source pipeline to detect agent misalignment from production session traces. Key findings from 225 sessions, 628 events reviewed by hand:
+
+- **Guidance neglect** tied with **premature completion** as the most common failure mode — the agent skips project docs written specifically to prevent the mistake it's making
+- A prospective monitor catches 46% of premature completions and 32% of guidance neglect at 17% false positive rate
+- Each monitoring call costs **$0.001** — cheap enough to run on every assistant turn
+- The pipeline works without hand-labeled data (zero-shot classification produces comparable results)
+
+**For engineering managers:** this is the first quantitative framework for measuring how often AI agents ignore your CLAUDE.md / .cursorrules / project docs. If you've felt like your agents keep making the same mistakes despite careful documentation — you're not imagining it, and now there's data.
 
 ### AI-Powered CI/CD (Industry Trend)
 
