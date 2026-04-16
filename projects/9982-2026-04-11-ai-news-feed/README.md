@@ -672,9 +672,9 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 | Tool | What Changed (April 1–16) | Adoption |
 |---|---|---|
-| **Claude Code** | Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 46% most-loved ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/)) |
-| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 9% most-loved |
-| **Cursor** | **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), fastest growth |
+| **Claude Code** | Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions | 18% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), 46% most-loved ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/)) |
+| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), 9% most-loved |
+| **Cursor** | **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), fastest growth |
 | **Windsurf** | **Adaptive** — intelligent model router that auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
 | **Google Antigravity** | Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
 | **Replit** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
@@ -687,7 +687,7 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 **Offline/air-gapped AI coding goes mainstream.** Copilot CLI's BYOK support means air-gapped enterprises (defense, healthcare, finance) can now run AI coding agents without any external network dependency. This was the last major adoption blocker for regulated industries.
 
-**Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 respondents) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months, with 46% naming it "most loved" vs. Copilot at 9%. The [JetBrains AI Pulse survey](https://blog.jetbrains.com/ai-pulse/) (10,000+ developers) shows Copilot at 29% workplace adoption but Claude Code at 18% with the fastest-growing satisfaction scores.
+**Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 respondents) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months, with 46% naming it "most loved" vs. Copilot at 9%. The [JetBrains AI Pulse survey](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) (10,000+ developers) shows Copilot at 29% workplace adoption but Claude Code at 18% with the fastest-growing satisfaction scores.
 
 ### Patterns.dev Agent Skills
 
