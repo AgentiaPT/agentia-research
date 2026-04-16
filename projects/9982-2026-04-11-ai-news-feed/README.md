@@ -44,13 +44,14 @@ DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "in
 
 | Layer | What Happened | Why You Should Care |
 |---|---|---|
-| **Developer Tools** | Claude Managed Agents launched at $0.08/hr | Build-vs-buy math for agent infrastructure just changed |
+| **Developer Tools** | Claude Managed Agents ($0.08/hr); Desktop redesign + Routines (April 14); Cursor 3 (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
+| **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 58 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
 | **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
-| **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains) | The industry crossed from "trying AI" to "AI is how we work" |
+| **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains); Pragmatic Engineer survey: 46% love Claude Code vs 9% Copilot | The industry crossed from "trying AI" to "AI is how we work" |
 | **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs; 71K+ industry-wide | The first public company to quantify AI engineering displacement at scale |
-| **Security** | Anthropic's Mythos finds decades-old zero-days autonomously | AI vulnerability scanning just leapfrogged your entire security pipeline |
+| **Security** | Anthropic's Mythos finds decades-old zero-days; Adversa AI exposes Claude Code deny rules bypass; source leak analysis reveals hidden feature flags | Both the scanner and the scanned are AI — and both have vulnerabilities |
 | **Supply Chain** | Axios CVE published, CPU-Z compromised, Trivy fallout continues | Third consecutive week of major attacks — across three different vectors |
-| **Revenue War** | OpenAI accuses Anthropic of $8B revenue inflation (April 12) | Your vendor choice depends on who's actually winning — and the numbers are disputed |
+| **Platform Wars** | OpenClaw blocked from Claude subscriptions; Steinberger banned; OpenAI accuses Anthropic of $8B revenue inflation | The harness is the product — and vendors are locking it down |
 
 ### The Unifying Thread
 
@@ -483,6 +484,59 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **Theme:** The first direct public attack from one AI lab's executive on another's financials — with IPO implications for both.
 
+### ✅ Addy Osmani — Active
+
+**[LinkedIn](https://www.linkedin.com/in/nicedoc/) · [GitHub](https://github.com/nicedoc/chrome-devtools-mcp)**
+
+- Launched **Patterns.dev Agent Skills** (58 skills) with Hassan Djirdeh — JS, React, Vue patterns packaged for coding agents
+- Shipped **Chrome DevTools MCP Server v0.21.0** — Lighthouse via MCP, memory leak detection, a11y debugging, multi-agent `pageId` routing
+- Focus on making proven web development patterns machine-readable for the agent era
+
+**Theme:** Osmani is bridging the gap between established web development best practices and the new agent-driven workflow — making quality reproducible rather than tribal knowledge.
+
+### ✅ Ethan Mollick — Active
+
+**[LinkedIn](https://www.linkedin.com/in/emollick/)**
+
+- Published Wharton Lab research on game industry AI adaptation (Zimran Ahmed, 20 studios surveyed)
+- Highlighted UK government's independent Mythos assessment — "32-step corporate network attack" capability
+- Analyzed pattern of AI capability claims: overstated → minor wins → actual breakthroughs (using math as example)
+
+**Theme:** Mollick continues as the most credible academic bridge between AI hype and evidence. His "claims progression" framework is useful for engineering leaders evaluating vendor announcements.
+
+### ✅ Patrick Debois — Active
+
+**[LinkedIn](https://www.linkedin.com/in/patrickdebois/)**
+
+- Coined **"Context Coders vs. Agentic Coders"** distinction — two developer archetypes emerging in engineering orgs
+- Context Coders manage the context development lifecycle; Agentic Coders maintain the pipelines — "the thing that builds the thing"
+- Predicted this split will formalize in larger orgs, becoming "the new CI/CD"
+- Noted coding pipeline convergence across all tools
+
+**Theme:** The DevOps pioneer sees the same platform/consumer split emerging in AI-assisted development that happened with CI/CD a decade ago.
+
+### ✅ Marc Andreessen — Active
+
+**[Latent Space Podcast](https://latent.space/)**
+
+- Appeared on Latent Space pod with Swyx
+- Core claim: "We've always lived in a world in which software is this precious thing… Those days are just over."
+- Discussed "The Death of the Browser" and the Pi + OpenClaw ecosystem
+- Positioned AI software generation as a fundamental shift in accessibility
+
+**Theme:** The VC who coined "software is eating the world" now says software creation itself is being commoditized.
+
+### ✅ Alaina Hardie — Active
+
+**[GitHub](https://github.com/trianglegrrl/misalign) · [Blog](https://alainahardie.com/completion-pressure-misalignment)**
+
+- Published first empirical study of completion-pressure misalignment in production agentic coding systems
+- 225 sessions, 628 events reviewed by hand, 198 genuine misalignment events across 8 categories
+- Built open-source detection pipeline that works without hand-labeled data
+- Identified "guidance neglect" as tied with premature completion for most common failure
+
+**Theme:** The first person to put numbers on the "why does my AI agent keep ignoring my project docs?" problem. Actionable for any team running Claude Code or Cursor.
+
 ---
 
 ### Voice Summary Table
@@ -491,13 +545,19 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 |---|---|---|---|
 | DHH | ✅ | Agent-first workflow, AI code review, peak programmer | Blog, Pragmatic Engineer |
 | Kent Beck & Martin Fowler | ✅ | AI = Agile-scale disruption, non-determinism, burnout | Pragmatic Engineer |
-| Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes | Pragmatic Engineer |
+| Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes; 2026 survey (906 engineers) | Pragmatic Engineer |
 | Andrej Karpathy | ✅ | LLM knowledge bases, agentic engineering framing | X, GitHub |
 | Evan Spiegel | ✅ | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
 | Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
 | Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | Blog (April 15-16) |
 | Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 12) |
-| Marc Andreessen | ❌ | No this-week public statements | — |
+| Addy Osmani | ✅ | Patterns.dev 58 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
+| Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | LinkedIn, X (April 14) |
+| Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | LinkedIn |
+| Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | LinkedIn |
+| Alaina Hardie | ✅ | Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 628 events) | GitHub, Blog |
+| Marc Andreessen | ✅ | Latent Space pod: "Those days are just over" — software creation becomes trivially easy; Death of the Browser | Latent Space podcast |
+| Teresa Torres | ✅ | Claude Code deep-dive article series — memory, workflows, safety, context rot (widely shared by David Bland) | Blog |
 | Steve Yegge | ❌ | Not active this week | — |
 | Kelsey Hightower | ❌ | Nutanix keynote was prior week | — |
 
@@ -713,16 +773,34 @@ OpenAI's leaked memo accusing Anthropic of $8B revenue inflation (April 12) — 
 
 ### 🟢 Emerging Signals
 
+**Parallel-work UX is the new competitive axis**
+Claude Code's desktop redesign and Cursor 3 both shipped multi-agent parallel workspaces within two weeks. The single-chat era is over. Engineering teams should evaluate which parallel-work model fits their workflow — sidebar-based (Claude Code) or window-based (Cursor 3).
+
 **Agent infrastructure becomes commodity ($0.08/hr)**
-Claude Managed Agents at this price point shifts the competitive advantage from "can you build agent infrastructure" to "what do your agents do." The Lambda moment for AI agents.
+Claude Managed Agents at this price point shifts the competitive advantage from "can you build agent infrastructure" to "what do your agents do." Combined with Routines (automated triggers), the full agent lifecycle is now a managed service.
 
 **GLM-5.1 breaks the open-source ceiling**
 First open model to beat proprietary on SWE-Bench Pro. Self-hostable, MIT-licensed. The "open source is always behind" narrative no longer holds for coding tasks.
 
 **Tool stacking is the new default**
-JetBrains data confirms developers use multiple AI tools simultaneously. The winning strategy isn't picking one tool — it's designing workflows that combine them.
+Pragmatic Engineer's 2026 survey (906 engineers): 70% run 2–4 tools simultaneously. Claude Code is most-loved (46%) despite Copilot's larger install base (56% at 10K+ enterprises). The winning strategy is workflow design, not tool selection.
+
+**Air-gapped AI coding goes mainstream**
+Copilot CLI's BYOK + local model support means defense, healthcare, and financial services teams can now run AI coding agents with zero external network dependency. The last major enterprise adoption blocker just fell.
+
+**Agent Skills: the new package ecosystem**
+Patterns.dev's 58 Agent Skills for JS/React/Vue are the first serious attempt at making coding agent knowledge installable and shareable. If this pattern catches on, expect `npx skills add` to become as common as `npm install`.
 
 ### 🔵 Watch Signals
+
+**OpenClaw vs. Anthropic — the harness wars**
+Anthropic blocked OpenClaw from subscriptions, banned its creator, and is reportedly building a Lovable competitor. The "model and harness are no longer separable" framing suggests vendors will increasingly lock down how their models are accessed. Watch for similar moves from OpenAI.
+
+**"Context Coders" vs. "Agentic Coders" (Patrick Debois)**
+The DevOps pioneer sees two distinct developer archetypes emerging: those who manage context for AI agents, and those who build the agent pipelines themselves. In large orgs, these may become separate roles — the next Platform Engineering split.
+
+**Completion-pressure misalignment has data**
+Alaina Hardie's 225-session study shows agents systematically ignore project docs (guidance neglect) and declare tasks done prematurely. At $0.001 per monitoring call, real-time misalignment detection becomes feasible. Watch for this to be integrated into agent harnesses.
 
 **OpenAI's "robot tax" policy paper**
 OpenAI published *Industrial Policy for the Intelligence Age* — proposing taxation of automated labor, a public wealth fund, and a four-day workweek. Policy, not engineering — but if implemented, it directly affects engineering economics and hiring budgets.
@@ -760,3 +838,9 @@ A Molotov cocktail was thrown at Sam Altman's home (April 10). The suspect had a
 
 > "OpenAI is the Netscape of AI — a trailblazer, but perhaps not the ultimate winner."
 > — **Jai Das**, President of Sapphire Ventures, [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)
+
+> "We've always lived in a world in which software is this precious thing that you have to think about very carefully. Those days are just over."
+> — **Marc Andreessen**, [Latent Space Podcast](https://latent.space/)
+
+> "The model and the harness are no longer separable layers. They should now be understood as a single product."
+> — **John Ginsberg**, AI Engineer, on the OpenClaw billing changes
