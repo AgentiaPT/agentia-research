@@ -1,7 +1,7 @@
 ---
 title: "AI × Software Engineering — April 5–16, 2026"
 date: 2026-04-16
-status: draft
+status: complete
 tags: [ai, news, weekly, developer-tools, agentic-engineering, supply-chain, testing, open-source, layoffs]
 explorers:
   - file: explorer.html
