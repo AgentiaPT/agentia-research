@@ -642,20 +642,20 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 | Tool | What Changed (April 1–16) | Adoption |
 |---|---|---|
-| **Claude Code** | Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 46% most-loved ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/)) |
-| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 9% most-loved |
-| **Cursor** | **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), fastest growth |
-| **Windsurf** | **Adaptive** — intelligent model router that auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
-| **Google Antigravity** | Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
-| **Replit** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
+| **Claude Code** | [Desktop redesign](https://claude.com/blog/claude-code-desktop-redesign) (April 14); [Routines](https://claude.com/blog/claude-code-desktop-redesign) research preview; [Managed Agents](https://www.anthropic.com/news/managed-agents) ($0.08/hr); [source leak code analysis](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/); [Adversa AI deny rules patch](https://adversa.ai/blog/claude-code-security-bypass-deny-rules-disabled/) (April 6); [OpenClaw blocked from subscriptions](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 46% most-loved ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/)) |
+| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **[CLI BYOK + local model support](https://github.blog/changelog/2026-04-07-github-copilot-cli-bring-your-own-key/)** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), 9% most-loved |
+| **[Cursor](https://www.cursor.com/)** | **[Cursor 3](https://www.cursor.com/blog/cursor-3)** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace ([JetBrains](https://blog.jetbrains.com/ai-pulse/)), fastest growth |
+| **[Windsurf](https://codeium.com/windsurf)** | **Adaptive** — intelligent model router that auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
+| **[Google Antigravity](https://antigravity.codes/)** | Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
+| **[Replit](https://replit.com/)** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
 | **Bolt (StackBlitz)** | [Sonnet 4.6 became default model](https://bolt.new/blog/sonnet-4.6-in-bolt) (February 2026), replacing earlier Claude versions; MCP server support | AI app builder segment |
 | **Lovable** | No major April product launch; [$330M raised at $6.6B](https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/) (Dec 2025); **Anthropic app builder leak** (April 12) threatens core business — [screenshots show](https://sifted.eu/articles/anthropic-lovable-challenger-leak) full-stack deploy from Claude chat | AI app builder segment leader — but depends on Claude API |
 
 ### Key Trends
 
-**Parallel work is the new competitive axis.** Both Claude Code (multi-session sidebar, side chats) and Cursor 3 (Agents Window, Agent Tabs) shipped parallel-agent workspaces within two weeks of each other. The single-chat-window era is over.
+**Parallel work is the new competitive axis.** Both [Claude Code](https://claude.com/blog/claude-code-desktop-redesign) (multi-session sidebar, side chats) and [Cursor 3](https://www.cursor.com/blog/cursor-3) (Agents Window, Agent Tabs) shipped parallel-agent workspaces within two weeks of each other. The single-chat-window era is over.
 
-**Offline/air-gapped AI coding goes mainstream.** Copilot CLI's BYOK support means air-gapped enterprises (defense, healthcare, finance) can now run AI coding agents without any external network dependency. This was the last major adoption blocker for regulated industries.
+**Offline/air-gapped AI coding goes mainstream.** [Copilot CLI's BYOK support](https://github.blog/changelog/2026-04-07-github-copilot-cli-bring-your-own-key/) means air-gapped enterprises (defense, healthcare, finance) can now run AI coding agents without any external network dependency. This was the last major adoption blocker for regulated industries.
 
 **Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 respondents) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months, with 46% naming it "most loved" vs. Copilot at 9%. The [JetBrains AI Pulse survey](https://blog.jetbrains.com/ai-pulse/) (10,000+ developers) shows Copilot at 29% workplace adoption but Claude Code at 18% with the fastest-growing satisfaction scores.
 
@@ -691,9 +691,9 @@ The Chrome DevTools MCP server ([ChromeDevTools/chrome-devtools-mcp](https://git
 
 | Model | What's New | Why It Matters for Devs |
 |---|---|---|
-| **GLM-5.1** (Z.ai) | 754B MoE, MIT license, #1 SWE-Bench Pro (58.4%) | First self-hostable model to beat proprietary options in coding |
-| **Claude Mythos Preview** | Restricted to Glasswing cybersecurity partners | AI vulnerability scanning at superhuman level |
-| **Muse Spark** (Meta) | First proprietary model, three reasoning modes | Meta abandons open source — Llama dependencies at risk |
+| **[GLM-5.1](https://z.ai/blog/glm-5.1)** (Z.ai) | 754B MoE, MIT license, #1 SWE-Bench Pro (58.4%) | First self-hostable model to beat proprietary options in coding |
+| **[Claude Mythos Preview](https://www.anthropic.com/project/glasswing)** | Restricted to [Glasswing](https://www.anthropic.com/project/glasswing) cybersecurity partners | AI vulnerability scanning at superhuman level |
+| **[Muse Spark](https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/)** (Meta) | First proprietary model, three reasoning modes | Meta abandons open source — Llama dependencies at risk |
 | **Gemma 4** (Google) | Apache 2.0 — last major open frontier model | Your fallback if you need open + capable |
 
 ### Completion-Pressure Misalignment: First Empirical Study
@@ -772,62 +772,62 @@ The scale is staggering: [Tom's Hardware](https://www.tomshardware.com/tech-indu
 
 ### 🔴 Critical Signals
 
-**Snap's 65% — the first hard number on AI code replacement**
-A public company CEO quantified AI code generation and used it to justify 16% workforce reduction. This metric will be cited in board rooms and investor calls industry-wide. Engineering leaders need a response: what's your number, and what does it mean for your team structure?
+**[Snap's 65%](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) — the first hard number on AI code replacement**
+A public company CEO quantified AI code generation and used it to justify [16% workforce reduction](https://www.fastcompany.com/91527233/snap-snapchat-layoffs-today-job-cuts-as-ceo-evan-spiegel-touts-ai-advances). This metric will be cited in board rooms and investor calls industry-wide. Engineering leaders need a response: what's your number, and what does it mean for your team structure?
 
 **AI vulnerability scanning surpasses human capability**
-Anthropic's Claude Mythos [found decades-old zero-days](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html) that every human auditor and automated scanner missed. With open-source models rapidly closing the gap (GLM-5.1 already matches proprietary coding benchmarks), comparable offensive capabilities will emerge. Your current SAST/DAST tooling is approaching obsolescence for advanced threats.
+Anthropic's Claude Mythos [found decades-old zero-days](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html) that every human auditor and automated scanner missed. With open-source models rapidly closing the gap ([GLM-5.1](https://z.ai/blog/glm-5.1) already matches proprietary coding benchmarks), comparable offensive capabilities will emerge. Your current SAST/DAST tooling is approaching obsolescence for advanced threats.
 
 **Third consecutive week of major supply chain attacks**
-TeamPCP → Axios → CPU-Z, across three different vectors (CI/CD → npm → vendor websites). The attack surface is widening faster than most teams' defenses.
+[TeamPCP](../9984-2026-03-29-ai-news-feed/README.md#1-the-supply-chain-reckoning--litellm-trivy-and-the-teampcp-campaign) → [Axios](https://coderoasis.com/cve-2025-62718-the-axios-crisis-a-critical-ssrf-vuln-a-north-korean-supply-chain-attack-and-why-every-node-js-developer-needs-to-act-right-now/) → [CPU-Z](https://securelist.com/tr/cpu-z/119365/), across three different vectors (CI/CD → npm → vendor websites). The attack surface is widening faster than most teams' defenses.
 
 ### 🟠 Warning Signals
 
 **Meta abandons open source — Llama dependencies at risk**
-Muse Spark is proprietary. If your team fine-tuned Llama or built workflows around it, evaluate GLM-5.1 (MIT) or Gemma 4 (Apache 2.0) as replacements.
+[Muse Spark](https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/) is proprietary. If your team fine-tuned Llama or built workflows around it, evaluate [GLM-5.1](https://z.ai/blog/glm-5.1) (MIT) or Gemma 4 (Apache 2.0) as replacements.
 
-**19 new AI bills in two weeks — compliance is now a deployment requirement**
+**[19 new AI bills](https://pluralpolicy.com/blog/the-ai-governance-watch-april-2026-nineteen-new-ai-bills-passed-into-law/) in two weeks — compliance is now a deployment requirement**
 Data transparency, algorithmic discrimination testing, content labeling. Engineering teams shipping AI features need compliance in the pipeline, not as an afterthought.
 
 **Junior engineer pipeline under threat**
-Beck, Fowler, and DHH all flagged this independently: if AI agents handle the work that juniors traditionally learned from, the path from junior to senior engineer breaks. No one has a solution yet.
+[Beck, Fowler](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech), and [DHH](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) all flagged this independently: if AI agents handle the work that juniors traditionally learned from, the path from junior to senior engineer breaks. No one has a solution yet.
 
 **Revenue accounting war clouds vendor decisions**
-OpenAI's leaked memo accusing Anthropic of $8B revenue inflation (April 13) — combined with TechCrunch reporting investor "second thoughts" (April 14) — means the competitive landscape between Claude and GPT is murkier than the headline numbers suggest. Engineering teams choosing between APIs should consider that neither company's revenue narrative may be entirely reliable heading into dual IPOs.
+[OpenAI's leaked memo](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) accusing Anthropic of $8B revenue inflation (April 13) — combined with [TechCrunch reporting investor "second thoughts"](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/) (April 14) — means the competitive landscape between Claude and GPT is murkier than the headline numbers suggest. Engineering teams choosing between APIs should consider that neither company's revenue narrative may be entirely reliable heading into dual IPOs.
 
 ### 🟢 Emerging Signals
 
 **Parallel-work UX is the new competitive axis**
-Claude Code's desktop redesign and Cursor 3 both shipped multi-agent parallel workspaces within two weeks. The single-chat era is over. Engineering teams should evaluate which parallel-work model fits their workflow — sidebar-based (Claude Code) or window-based (Cursor 3).
+[Claude Code's desktop redesign](https://claude.com/blog/claude-code-desktop-redesign) and [Cursor 3](https://www.cursor.com/blog/cursor-3) both shipped multi-agent parallel workspaces within two weeks. The single-chat era is over. Engineering teams should evaluate which parallel-work model fits their workflow — sidebar-based (Claude Code) or window-based (Cursor 3).
 
 **Agent infrastructure becomes commodity ($0.08/hr)**
-Claude Managed Agents at this price point shifts the competitive advantage from "can you build agent infrastructure" to "what do your agents do." Combined with Routines (automated triggers), the full agent lifecycle is now a managed service.
+[Claude Managed Agents](https://www.anthropic.com/news/managed-agents) at this price point shifts the competitive advantage from "can you build agent infrastructure" to "what do your agents do." Combined with [Routines](https://claude.com/blog/claude-code-desktop-redesign) (automated triggers), the full agent lifecycle is now a managed service.
 
-**GLM-5.1 breaks the open-source ceiling**
-First open model to beat proprietary on SWE-Bench Pro. Self-hostable, MIT-licensed. The "open source is always behind" narrative no longer holds for coding tasks.
+**[GLM-5.1](https://z.ai/blog/glm-5.1) breaks the open-source ceiling**
+First open model to beat proprietary on [SWE-Bench Pro](https://z.ai/blog/glm-5.1). Self-hostable, MIT-licensed. The "open source is always behind" narrative no longer holds for coding tasks.
 
 **Tool stacking is the new default**
-Two independent surveys confirm the shift: Pragmatic Engineer (906 respondents) shows 70% run 2–4 tools simultaneously with Claude Code most-loved (46%); JetBrains AI Pulse (10K+ developers) shows Copilot dominant by install base (29%) but Claude Code leading satisfaction. The winning strategy is workflow design, not tool selection.
+Two independent surveys confirm the shift: [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/) (906 respondents) shows 70% run 2–4 tools simultaneously with Claude Code most-loved (46%); [JetBrains AI Pulse](https://blog.jetbrains.com/ai-pulse/) (10K+ developers) shows Copilot dominant by install base (29%) but Claude Code leading satisfaction. The winning strategy is workflow design, not tool selection.
 
 **Air-gapped AI coding goes mainstream**
-Copilot CLI's BYOK + local model support means defense, healthcare, and financial services teams can now run AI coding agents with zero external network dependency. The last major enterprise adoption blocker just fell.
+[Copilot CLI's BYOK + local model support](https://github.blog/changelog/2026-04-07-github-copilot-cli-bring-your-own-key/) means defense, healthcare, and financial services teams can now run AI coding agents with zero external network dependency. The last major enterprise adoption blocker just fell.
 
 **Agent Skills: the new package ecosystem**
-Patterns.dev's 58 Agent Skills for JS/React/Vue are the first serious attempt at making coding agent knowledge installable and shareable. If this pattern catches on, expect `npx skills add` to become as common as `npm install`.
+[Patterns.dev's 58 Agent Skills](https://github.com/PatternsDev/skills) for JS/React/Vue are the first serious attempt at making coding agent knowledge installable and shareable. If this pattern catches on, expect `npx skills add` to become as common as `npm install`.
 
 ### 🔵 Watch Signals
 
 **Anthropic app builder threatens the vibe-coding ecosystem**
 [Leaked screenshots](https://sifted.eu/articles/anthropic-lovable-challenger-leak) (April 13) show a full-stack app builder inside Claude — one-click publish, databases, auth, secrets. Lovable ($6.6B) and Bolt both depend on Claude's API. If Anthropic ships this, it competes with and supplies its own customers simultaneously. The [OpenClaw billing war](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) shows Anthropic is already willing to lock out third-party harnesses.
 
-**"Context Coders" vs. "Agentic Coders" (Patrick Debois)**
+**"Context Coders" vs. "Agentic Coders" ([Patrick Debois](https://www.linkedin.com/in/patrickdebois/))**
 The DevOps pioneer sees two distinct developer archetypes emerging: those who manage context for AI agents, and those who build the agent pipelines themselves. In large orgs, these may become separate roles — the next Platform Engineering split.
 
 **Completion-pressure misalignment has data**
 [Alaina Hardie's 225-session study](https://github.com/trianglegrrl/misalign) shows agents systematically ignore project docs (guidance neglect) and declare tasks done prematurely. The full detection pipeline runs for [~$10 in API calls](https://github.com/trianglegrrl/misalign), making regular audits feasible. Watch for this to be integrated into agent harnesses.
 
 **OpenAI's "robot tax" policy paper**
-OpenAI published *Industrial Policy for the Intelligence Age* — proposing taxation of automated labor, a public wealth fund, and a four-day workweek. Policy, not engineering — but if implemented, it directly affects engineering economics and hiring budgets.
+OpenAI published [*Industrial Policy for the Intelligence Age*](https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/) — proposing taxation of automated labor, a public wealth fund, and a four-day workweek. Policy, not engineering — but if implemented, it directly affects engineering economics and hiring budgets.
 
 **[Musk vs. OpenAI trial](https://www.cnbc.com/2026/04/15/musk-openai-trial-april-27.html) (April 27)**
 $134B damages, potential forced restructuring of OpenAI. If a court rules that an AI lab can't reorganize from nonprofit to for-profit, it sets precedent affecting Anthropic and every "public benefit" AI company. Watch for enterprise API stability implications.
