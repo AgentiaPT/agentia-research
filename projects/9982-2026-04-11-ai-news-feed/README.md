@@ -398,20 +398,21 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 ### ✅ DHH (David Heinemeier Hansson) — Very Active
 
-**[Blog](https://world.hey.com/dhh) · [Pragmatic Engineer Podcast](https://newsletter.pragmaticengineer.com/)**
+**[Blog](https://world.hey.com/dhh) · [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) · [Pragmatic Engineer Podcast](https://newsletter.pragmaticengineer.com/)**
 
-- Published agent-first coding workflow — starts every task with AI agents
-- Reviewed large batches of PRs for Omarchy Linux using Claude Code
-- Designers at 37signals now ship production code with AI agents
-- Warned about "peak programmer" compensation for average developers
+- [Published agent-first coding workflow](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) — starts every task with AI agents
+- Reviewed large batches of PRs for [Omarchy Linux](https://github.com/nicepkg/open-code) using Claude Code
+- [Designers at 37signals now ship production code](https://finance.biggo.com/news/7f0977d232d48c73) with AI agents
+- Warned about ["peak programmer"](https://startupfortune.com/why-senior-developers-are-winning-the-ai-coding-era/) compensation for average developers
 
 > "This is the most exciting thing since the internet."
+> — [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
 
 **Theme:** The loudest AI skeptic became the loudest AI convert — and has the workflow receipts to prove it.
 
 ### ✅ Kent Beck & Martin Fowler — Active
 
-**[Pragmatic Engineer Podcast](https://newsletter.pragmaticengineer.com/) (April 7)**
+**[Pragmatic Engineer Podcast — Cycles of Disruption](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) (April 7)**
 
 - Compared current AI shift to past disruptions including Agile and OOP — but Fowler's point was that [AI dwarfs all of them](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech): "Nothing has hit with the magnitude of AI. This is a whole size different from anything we've faced before."
 - Discussed non-determinism challenge in AI-generated code
@@ -424,9 +425,9 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[The Pragmatic Engineer](https://newsletter.pragmaticengineer.com/)**
 
-- Published Kent Beck & Martin Fowler episode (April 7)
-- Published DHH episode on agent-first coding (April 8)
-- Ongoing coverage of AI disruption in engineering practice
+- Published [Kent Beck & Martin Fowler episode](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) (April 7)
+- Published [DHH episode](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) on agent-first coding (April 8)
+- Ongoing coverage of AI disruption in engineering practice; [2026 survey](https://newsletter.pragmaticengineer.com/) (906 respondents) shows Claude Code most-loved at 46%
 
 **Theme:** The Pragmatic Engineer is becoming the industry's default forum for engineering leaders navigating the AI transition.
 
@@ -439,8 +440,9 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 - "Agentic engineering" framing — engineers as supervisors of AI agents — now mainstream vocabulary
 
 > "A large fraction of my recent token throughput is going less into manipulating code, and more into manipulating knowledge."
+> — [Antigravity Codes](https://antigravity.codes/blog/karpathy-llm-knowledge-bases)
 
-**Theme:** Karpathy defined the vocabulary ("agentic engineering") and now the workflow pattern ("LLM knowledge bases") that the industry is adopting.
+**Theme:** Karpathy defined the vocabulary ("agentic engineering") and now the workflow pattern ("[LLM knowledge bases](https://antigravity.codes/blog/karpathy-llm-knowledge-bases)") that the industry is adopting.
 
 ### ✅ Evan Spiegel (Snap) — Active
 
@@ -456,9 +458,9 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[Anthropic](https://www.anthropic.com/project/glasswing) · [CNBC](https://www.cnbc.com/2026/04/07/anthropic-claude-mythos-ai-hackers-cyberattacks.html)**
 
-- Oversaw Claude Mythos / Project Glasswing — model withheld as too dangerous
-- Launched Claude Managed Agents in public beta
-- Anthropic surpasses OpenAI in revenue ($30B vs $24B annualized)
+- Oversaw [Claude Mythos / Project Glasswing](https://www.anthropic.com/project/glasswing) — model withheld as too dangerous
+- Launched [Claude Managed Agents](https://www.anthropic.com/news/managed-agents) in public beta
+- [Anthropic surpasses OpenAI in revenue](https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/) ($30B vs $24B annualized)
 
 **Theme:** Shipping both the most dangerous AI security tool and the most accessible agent infrastructure — in the same week.
 
@@ -466,9 +468,9 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[Blog](https://simonwillison.net/)**
 
-- Released Datasette 1.0a27 with new CSRF protection and `RenameTableEvent`
-- Referenced Karpathy's "LLM knowledge base" concept — the widening gap in AI understanding based on model access
-- Built custom preview UI for Datasette's news system using Claude.ai and Claude Artifacts
+- [Released Datasette 1.0a27](https://simonwillison.net/2026/Apr/15/datasette-1-0a27/) with new CSRF protection and `RenameTableEvent`
+- Referenced [Karpathy's "LLM knowledge base" concept](https://antigravity.codes/blog/karpathy-llm-knowledge-bases) — the widening gap in AI understanding based on model access
+- Built custom preview UI for Datasette's news system using [Claude.ai](https://claude.ai) and Claude Artifacts
 - Continues bridging practical open-source tooling with AI-powered development workflows
 
 **Theme:** Willison's late-window activity demonstrates the Karpathy knowledge-base concept spreading to practical developer tooling.
@@ -477,10 +479,10 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[WinBuzzer](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) · [The Decoder](https://the-decoder.com/openais-cro-says-new-spud-model-will-make-all-its-key-products-significantly-better/) · [Office Chai](https://officechai.com/ai/anthropic-is-overstating-its-revenue-run-rate-by-8-billion-openai-tells-employees/)**
 
-- Leaked "Sunday Memo" (April 13) accusing Anthropic of overstating revenue by $8B through gross vs. net accounting
-- Previewed "Spud" model — positioning it as a generational leap in reasoning and agent capabilities
-- Criticized Anthropic's "fear-based" AI strategy and alleged compute reliability issues
-- Framed OpenAI's enterprise strategy around the new "Frontier" agent platform
+- [Leaked "Sunday Memo"](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) (April 13) accusing Anthropic of overstating revenue by $8B through gross vs. net accounting
+- Previewed ["Spud" model](https://the-decoder.com/openais-cro-says-new-spud-model-will-make-all-its-key-products-significantly-better/) — positioning it as a generational leap in reasoning and agent capabilities
+- [Criticized Anthropic's "fear-based" AI strategy](https://www.androidheadlines.com/2026/04/openai-leaked-memo-anthropic-revenue-fear-based-strategy.html) and alleged compute reliability issues
+- Framed OpenAI's enterprise strategy around the new ["Frontier" agent platform](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/)
 
 **Theme:** The first direct public attack from one AI lab's executive on another's financials — with IPO implications for both.
 
@@ -488,8 +490,8 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[LinkedIn](https://www.linkedin.com/in/addyosmani/) · [GitHub](https://github.com/ChromeDevTools/chrome-devtools-mcp)**
 
-- Launched [**Patterns.dev Agent Skills**](https://github.com/PatternsDev/skills) (52 skills) with Hassan Djirdeh — JS, React, Vue patterns packaged for coding agents
-- Shipped **Chrome DevTools MCP Server v0.21.0** — Lighthouse via MCP, memory leak detection, a11y debugging, multi-agent `pageId` routing
+- Launched [**Patterns.dev Agent Skills**](https://github.com/PatternsDev/skills) (58 skills) with Hassan Djirdeh — JS, React, Vue patterns packaged for coding agents
+- Shipped [**Chrome DevTools MCP Server v0.21.0**](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v0.21.0) — Lighthouse via MCP, memory leak detection, a11y debugging, multi-agent `pageId` routing
 - Focus on making proven web development patterns machine-readable for the agent era
 
 **Theme:** Osmani is bridging the gap between established web development best practices and the new agent-driven workflow — making quality reproducible rather than tribal knowledge.
@@ -517,10 +519,10 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 ### ✅ Marc Andreessen — Active
 
-**[Latent Space Podcast](https://latent.space/)**
+**[Latent Space Podcast](https://latent.space/) · [Clip](https://x.com/a16z/status/2040168906770534636)**
 
-- Appeared on Latent Space pod with Swyx
-- Core claim: "We've always lived in a world in which software is this precious thing… Those days are just over."
+- Appeared on [Latent Space pod](https://latent.space/) with Swyx
+- Core claim: "We've always lived in a world in which software is this precious thing… Those days are just over." ([clip](https://x.com/a16z/status/2040168906770534636))
 - Discussed "The Death of the Browser" and the Pi + OpenClaw ecosystem
 - Positioned AI software generation as a fundamental shift in accessibility
 
@@ -543,20 +545,20 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 | Voice | Active | Key Topic | Source |
 |---|---|---|---|
-| DHH | ✅ | Agent-first workflow, AI code review, peak programmer | Blog, Pragmatic Engineer |
-| Kent Beck & Martin Fowler | ✅ | AI dwarfs even the Agile revolution, non-determinism, burnout | Pragmatic Engineer |
-| Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes; 2026 survey (906 respondents) | Pragmatic Engineer |
-| Andrej Karpathy | ✅ | LLM knowledge bases, agentic engineering framing | X, GitHub |
-| Evan Spiegel | ✅ | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
-| Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
-| Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | Blog (April 15-16) |
-| Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 13) |
-| Addy Osmani | ✅ | Patterns.dev 58 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
+| DHH | ✅ | Agent-first workflow, AI code review, peak programmer | [Blog](https://world.hey.com/dhh), [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/), [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/) |
+| Kent Beck & Martin Fowler | ✅ | AI dwarfs even the Agile revolution, non-determinism, burnout | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) |
+| Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes; 2026 survey (906 respondents) | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/) |
+| Andrej Karpathy | ✅ | LLM knowledge bases, agentic engineering framing | [X](https://x.com/karpathy), [Antigravity Codes](https://antigravity.codes/blog/karpathy-llm-knowledge-bases) |
+| Evan Spiegel | ✅ | 65% AI code, 1,000 layoffs | [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html), [Fast Company](https://www.fastcompany.com/91527233/snap-snapchat-layoffs-today-job-cuts-as-ceo-evan-spiegel-touts-ai-advances) |
+| Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | [Anthropic](https://www.anthropic.com/project/glasswing), [CNBC](https://www.cnbc.com/2026/04/07/anthropic-claude-mythos-ai-hackers-cyberattacks.html) |
+| Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | [Blog](https://simonwillison.net/) (April 15-16) |
+| Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | [WinBuzzer](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) (April 13) |
+| Addy Osmani | ✅ | Patterns.dev 58 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | [LinkedIn](https://www.linkedin.com/in/addyosmani/), [GitHub](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
 | Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | [X](https://x.com/felixrieseberg/status/2044128194647994585) (April 14) |
-| Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | LinkedIn |
-| Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | LinkedIn |
+| Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | [LinkedIn](https://www.linkedin.com/in/emollick/) |
+| Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | [LinkedIn](https://www.linkedin.com/in/patrickdebois/) |
 | Alaina Hardie | ✅ | Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 198 misalignment events) | [GitHub](https://github.com/trianglegrrl/misalign) |
-| Marc Andreessen | ✅ | Latent Space pod: "Those days are just over" — software creation becomes trivially easy; Death of the Browser | Latent Space podcast |
+| Marc Andreessen | ✅ | Latent Space pod: "Those days are just over" — software creation becomes trivially easy; Death of the Browser | [Latent Space](https://latent.space/), [Clip](https://x.com/a16z/status/2040168906770534636) |
 | Teresa Torres | ✅ | Claude Code deep-dive article series — memory, workflows, safety, context rot (widely shared by David Bland) | [producttalk.org](https://www.producttalk.org/) |
 | Steve Yegge | ❌ | Not active this week | — |
 | Kelsey Hightower | ❌ | Nutanix keynote was prior week | — |
