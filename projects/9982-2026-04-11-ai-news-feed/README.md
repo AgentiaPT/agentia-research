@@ -45,7 +45,7 @@ DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "in
 | Layer | What Happened | Why You Should Care |
 |---|---|---|
 | **Developer Tools** | Claude Managed Agents ($0.08/hr); Desktop redesign + Routines (April 14); Cursor 3 (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
-| **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 52 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
+| **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 58 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
 | **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
 | **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains); 46% love Claude Code vs 9% Copilot (Pragmatic Eng survey, 906 devs) | The industry crossed from "trying AI" to "AI is how we work" |
 | **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs; 71K+ industry-wide | The first public company to quantify AI engineering displacement at scale |
@@ -266,15 +266,15 @@ This is the first time a public company CEO has quantified AI code generation at
 |---|---|---|---|
 | **Snap** | [1,000 + 300 open roles](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) | 16% | Yes — explicitly |
 | **Oracle** | [20,000–30,000](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) | — | Yes — AI/data center pivot |
-| **Block** | [4,000+](https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html) | ~40% | Yes — AI restructuring |
+| **Block** | [4,000+](https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html) | ~50% | Yes — AI restructuring |
 | **Atlassian** | [1,600](https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/) | 10% | Yes — AI investment |
-| **Pinterest** | [~700](https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html) | <15% | Yes — AI reallocation |
+| **Pinterest** | [~700](https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html) | 15% | Yes — AI reallocation |
 | **GoPro** | [~23% workforce](https://petapixel.com/2026/04/08/gopro-to-lay-off-23-of-its-workforce-this-year/) | 23% | Restructuring |
 | **Pendo** | [~90](https://www.axios.com/local/raleigh/2026/04/07/raleigh-software-unicorn-pendo-layoffs-jobs) | 10% | Yes — AI-driven restructuring |
 | **Taboola** | [100](https://www.calcalistech.com/ctechnews/article/hku03an3bg) | 5% | Not stated |
-| **Qualcomm** | [1,200+ in CA](https://www.10news.com/news/local-news/san-diego-based-chipmaker-qualcomm-to-lay-off-over-1-200-california-workers/) | — | Yes — chip design |
+| **Qualcomm** | [Undisclosed](https://kogo.iheart.com/featured/kogo-local-news/content/2026-04-10-qualcomm-announces-layoffs-in-san-diego/) | — | Yes — chip design |
 
-Through mid-April 2026, **80+ tech companies have cut 71,000+ jobs**, with [Forbes reporting](https://www.forbes.com/sites/maryroeloffs/2026/04/15/snap-blames-1000-layoffs-on-ai-and-these-companies-have-done-the-same/) that **48% of cuts explicitly cite AI adoption** as a driver. Snap is the first to provide a specific code generation metric as justification — but the pattern is industry-wide.
+Through mid-April 2026, **80+ tech companies have cut 71,000+ jobs** ([Tom's Hardware](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai)), with [Nikkei Asia analysis](https://asia.nikkei.com/Business/Technology/AI-cited-in-nearly-half-of-tech-layoffs-in-2026) finding **~48% of cuts explicitly cite AI adoption** as a driver. Snap is the first to provide a specific code generation metric as justification — but the pattern is industry-wide.
 
 ---
 
@@ -326,8 +326,8 @@ The North Korean attack on Axios — [covered last week](../9983-2026-04-04-ai-n
 | **CVE** | CVE-2025-62718 | Check your lockfiles now |
 | **CVSS** | 9.3 (Critical) | Immediate remediation |
 | **Type** | SSRF in NO_PROXY handling | Affects server-side code |
-| **Attribution** | UNC1069 (North Korean state-sponsored) | Nation-state level sophistication |
-| **Blast radius** | ~600,000 downloads in 3-hour window | Audit CI/CD pipelines, rotate secrets |
+| **Attribution** | [UNC1069 (North Korea-nexus, financially motivated)](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package) | Nation-state level sophistication |
+| **Blast radius** | [Malicious versions live ~3 hours](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) (Axios averages ~100M weekly downloads) | Audit CI/CD pipelines, rotate secrets |
 
 If you use Axios (and most Node.js projects do), verify your lockfile doesn't reference versions 1.14.1 or 0.30.4. Organizations are still auditing CI/CD pipelines and rotating secrets.
 
@@ -473,11 +473,11 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **Theme:** Willison's late-window activity demonstrates the Karpathy knowledge-base concept spreading to practical developer tooling.
 
-### ✅ Denise Dresser (OpenAI CRO) — Active (April 12)
+### ✅ Denise Dresser (OpenAI CRO) — Active (April 13)
 
 **[WinBuzzer](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) · [The Decoder](https://the-decoder.com/openais-cro-says-new-spud-model-will-make-all-its-key-products-significantly-better/) · [Office Chai](https://officechai.com/ai/anthropic-is-overstating-its-revenue-run-rate-by-8-billion-openai-tells-employees/)**
 
-- Leaked "Sunday Memo" (April 12) accusing Anthropic of overstating revenue by $8B through gross vs. net accounting
+- Leaked "Sunday Memo" (April 13) accusing Anthropic of overstating revenue by $8B through gross vs. net accounting
 - Previewed "Spud" model — positioning it as a generational leap in reasoning and agent capabilities
 - Criticized Anthropic's "fear-based" AI strategy and alleged compute reliability issues
 - Framed OpenAI's enterprise strategy around the new "Frontier" agent platform
@@ -550,8 +550,8 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 | Evan Spiegel | ✅ | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
 | Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
 | Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | Blog (April 15-16) |
-| Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 12) |
-| Addy Osmani | ✅ | Patterns.dev 52 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
+| Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 13) |
+| Addy Osmani | ✅ | Patterns.dev 58 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
 | Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | [X](https://x.com/felixrieseberg/status/2044128194647994585) (April 14) |
 | Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | LinkedIn |
 | Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | LinkedIn |
@@ -646,7 +646,7 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 | **Windsurf** | **Adaptive** — intelligent model router that auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
 | **Google Antigravity** | Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
 | **Replit** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
-| **Bolt (StackBlitz)** | Sonnet 4.6 became default model (April 8), replacing Sonnet 4.5/Opus 4.5; MCP server support | AI app builder segment |
+| **Bolt (StackBlitz)** | [Sonnet 4.6 became default model](https://bolt.new/blog/sonnet-4.6-in-bolt) (February 2026), replacing earlier Claude versions; MCP server support | AI app builder segment |
 | **Lovable** | No major April product launch; [$330M raised at $6.6B](https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/) (Dec 2025); **Anthropic app builder leak** (April 12) threatens core business — [screenshots show](https://sifted.eu/articles/anthropic-lovable-challenger-leak) full-stack deploy from Claude chat | AI app builder segment leader — but depends on Claude API |
 
 ### Key Trends
@@ -661,7 +661,7 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 **[Patterns.dev](https://www.patterns.dev/ai/skills/) · [GitHub](https://github.com/PatternsDev/skills)**
 
-Addy Osmani and Hassan Djirdeh packaged **52 Agent Skills** from [Patterns.dev](https://www.patterns.dev/) — proven JavaScript, React, and Vue design patterns rewritten as agent-consumable skill files. Install by stack:
+Addy Osmani and Hassan Djirdeh packaged **58 Agent Skills** from [Patterns.dev](https://www.patterns.dev/) — proven JavaScript, React, and Vue design patterns rewritten as agent-consumable skill files. Install by stack:
 
 ```
 npx skills add PatternsDev/skills/react
@@ -731,11 +731,11 @@ AI-native CI/CD is becoming the standard for productive teams this quarter:
 
 Anthropic overtaking OpenAI in revenue — driven by enterprise API and Claude Code adoption — signals where engineering hiring dollars are flowing: toward teams building AI-integrated products, not toward teams maintaining pre-AI codebases.
 
-### The Revenue Accounting War (April 12–14)
+### The Revenue Accounting War (April 13–14)
 
-**April 12 | [WinBuzzer](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) · [The Decoder](https://the-decoder.com/openais-cro-says-new-spud-model-will-make-all-its-key-products-significantly-better/) · [Office Chai](https://officechai.com/ai/anthropic-is-overstating-its-revenue-run-rate-by-8-billion-openai-tells-employees/) · [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)**
+**April 13 | [WinBuzzer](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) · [The Decoder](https://the-decoder.com/openais-cro-says-new-spud-model-will-make-all-its-key-products-significantly-better/) · [Office Chai](https://officechai.com/ai/anthropic-is-overstating-its-revenue-run-rate-by-8-billion-openai-tells-employees/) · [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)**
 
-A leaked memo from OpenAI CRO Denise Dresser (April 12) turned the quiet revenue competition into an open war. The key accusation: **Anthropic overstates its revenue by approximately $8 billion** through accounting differences.
+A leaked memo from OpenAI CRO Denise Dresser (April 13) turned the quiet revenue competition into an open war. The key accusation: **Anthropic overstates its revenue by approximately $8 billion** through accounting differences.
 
 | Method | Anthropic | OpenAI |
 |---|---|---|
@@ -753,7 +753,7 @@ The memo also previewed **"Spud"** — OpenAI's next model, promising superior r
 
 | Flow | Amount | Engineering Implication |
 |---|---|---|
-| **Q1 2026 VC funding** | [$300B (2x previous year)](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/) | More startup engineering jobs, more AI-native teams |
+| **Q1 2026 VC funding** | [$300B (~2.5x previous year)](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/) | More startup engineering jobs, more AI-native teams |
 | **OpenAI round** | [$122B at $852B valuation](https://openai.com/index/accelerating-the-next-phase-ai/) | IPO expected 2026; massive engineering hiring continues |
 | **Meta AI capex** | [$115–135B](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx) | Largest AI infra buildout; infra engineering boom |
 | **Anthropic compute deals** | [$50B+ total](https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure) | Enterprise AI adoption accelerating |
@@ -762,7 +762,7 @@ The memo also previewed **"Spud"** — OpenAI's next model, promising superior r
 
 Snap's Spiegel made the implicit explicit: if AI generates 65% of code, you need fewer engineers to generate code — but you need better engineers to architect, review, and operate AI-generated systems. The engineering manager's challenge in 2026 isn't "should we use AI?" (85–90% already do). It's "how do we restructure teams for an agent-first workflow while maintaining code quality and developing junior talent?"
 
-The scale is staggering: [Forbes reports](https://www.forbes.com/sites/maryroeloffs/2026/04/15/snap-blames-1000-layoffs-on-ai-and-these-companies-have-done-the-same/) that **80+ tech companies have cut 71,000+ jobs in 2026**, with **48% explicitly citing AI adoption** as a driver. Oracle alone is cutting 20,000–30,000. Block cut 4,000. Atlassian cut 1,600 to "accelerate AI investment." The pattern is clear: engineering budgets are being reallocated from headcount to compute.
+The scale is staggering: [Tom's Hardware](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai) reports **80+ tech companies have cut 71,000+ jobs in 2026**, with [Nikkei Asia finding](https://asia.nikkei.com/Business/Technology/AI-cited-in-nearly-half-of-tech-layoffs-in-2026) **~48% explicitly citing AI adoption** as a driver. Oracle alone is cutting 20,000–30,000. Block cut 4,000+. Atlassian cut 1,600 to "accelerate AI investment." The pattern is clear: engineering budgets are being reallocated from headcount to compute.
 
 ---
 
@@ -791,7 +791,7 @@ Data transparency, algorithmic discrimination testing, content labeling. Enginee
 Beck, Fowler, and DHH all flagged this independently: if AI agents handle the work that juniors traditionally learned from, the path from junior to senior engineer breaks. No one has a solution yet.
 
 **Revenue accounting war clouds vendor decisions**
-OpenAI's leaked memo accusing Anthropic of $8B revenue inflation (April 12) — combined with TechCrunch reporting investor "second thoughts" (April 14) — means the competitive landscape between Claude and GPT is murkier than the headline numbers suggest. Engineering teams choosing between APIs should consider that neither company's revenue narrative may be entirely reliable heading into dual IPOs.
+OpenAI's leaked memo accusing Anthropic of $8B revenue inflation (April 13) — combined with TechCrunch reporting investor "second thoughts" (April 14) — means the competitive landscape between Claude and GPT is murkier than the headline numbers suggest. Engineering teams choosing between APIs should consider that neither company's revenue narrative may be entirely reliable heading into dual IPOs.
 
 ### 🟢 Emerging Signals
 
@@ -811,12 +811,12 @@ Two independent surveys confirm the shift: Pragmatic Engineer (906 engineers) sh
 Copilot CLI's BYOK + local model support means defense, healthcare, and financial services teams can now run AI coding agents with zero external network dependency. The last major enterprise adoption blocker just fell.
 
 **Agent Skills: the new package ecosystem**
-Patterns.dev's 52 Agent Skills for JS/React/Vue are the first serious attempt at making coding agent knowledge installable and shareable. If this pattern catches on, expect `npx skills add` to become as common as `npm install`.
+Patterns.dev's 58 Agent Skills for JS/React/Vue are the first serious attempt at making coding agent knowledge installable and shareable. If this pattern catches on, expect `npx skills add` to become as common as `npm install`.
 
 ### 🔵 Watch Signals
 
 **Anthropic app builder threatens the vibe-coding ecosystem**
-[Leaked screenshots](https://sifted.eu/articles/anthropic-lovable-challenger-leak) (April 12) show a full-stack app builder inside Claude — one-click publish, databases, auth, secrets. Lovable ($6.6B) and Bolt both depend on Claude's API. If Anthropic ships this, it competes with and supplies its own customers simultaneously. The [OpenClaw billing war](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) shows Anthropic is already willing to lock out third-party harnesses.
+[Leaked screenshots](https://sifted.eu/articles/anthropic-lovable-challenger-leak) (April 13) show a full-stack app builder inside Claude — one-click publish, databases, auth, secrets. Lovable ($6.6B) and Bolt both depend on Claude's API. If Anthropic ships this, it competes with and supplies its own customers simultaneously. The [OpenClaw billing war](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) shows Anthropic is already willing to lock out third-party harnesses.
 
 **"Context Coders" vs. "Agentic Coders" (Patrick Debois)**
 The DevOps pioneer sees two distinct developer archetypes emerging: those who manage context for AI agents, and those who build the agent pipelines themselves. In large orgs, these may become separate roles — the next Platform Engineering split.
@@ -831,7 +831,7 @@ OpenAI published *Industrial Policy for the Intelligence Age* — proposing taxa
 $134B damages, potential forced restructuring of OpenAI. If a court rules that an AI lab can't reorganize from nonprofit to for-profit, it sets precedent affecting Anthropic and every "public benefit" AI company. Watch for enterprise API stability implications.
 
 **[Anthropic IPO](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/) (October 2026)**
-At ~$380B valuation, an Anthropic IPO would reshape the AI vendor landscape. If your team depends on Claude Code or the Anthropic API, the post-IPO company may have different priorities.
+At a [$380B Series G valuation](https://fortune.com/2026/02/13/anthropics-380-billion-valuation-vaults-it-next-to-openai-spacex-among-largest-ipo-candidates/) (with recent secondary market offers reaching ~$800B), an Anthropic IPO would reshape the AI vendor landscape. If your team depends on Claude Code or the Anthropic API, the post-IPO company may have different priorities.
 
 **Physical threats to AI executives**
 A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/04/10/molotov-cocktail-thrown-at-openai-ceo-sam-altmans-home.html) (April 10). The suspect had a list of other AI executives. AI's societal debate has crossed from abstract to physical. No direct engineering impact, but signals the intensity of the backlash your AI-powered products may face from users.
@@ -849,7 +849,7 @@ A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/0
 > "For roughly half the PRs, Claude's analysis pertained to technical areas where I had no expertise — the agent was undeniably a better reviewer than I could be in those domains."
 > — **DHH**, on AI-assisted code review, [April 2026](https://world.hey.com/dhh)
 
-> "The model greatly surpasses the ability of most humans to find and exploit software vulnerabilities."
+> "AI models have reached a level of coding capability where they can surpass all but the most skilled humans at finding and exploiting software vulnerabilities."
 > — **Anthropic**, on Claude Mythos Preview, [The Hacker News](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html)
 
 > "A large fraction of my recent token throughput is going less into manipulating code, and more into manipulating knowledge."
@@ -861,8 +861,8 @@ A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/0
 > "OpenAI is the Netscape of AI — a trailblazer, but perhaps not the ultimate winner."
 > — **Jai Das**, President of Sapphire Ventures, [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)
 
-> "We've always lived in a world in which software is this precious thing that you have to think about very carefully. Those days are just over."
-> — **Marc Andreessen**, [Latent Space Podcast](https://latent.space/)
+> "We've always lived in a world in which software is this precious thing that you have to think about very carefully."
+> — **Marc Andreessen**, [Latent Space Podcast](https://latent.space/) ([clip](https://x.com/a16z/status/2040168906770534636))
 
 > "The model and the harness are no longer separable layers."
 > — Developer consensus emerging in [Hacker News discussion](https://news.ycombinator.com/item?id=47665285) on the OpenClaw billing changes
