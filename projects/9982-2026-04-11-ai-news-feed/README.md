@@ -206,7 +206,7 @@ The [JetBrains Developer Ecosystem Survey](https://blog.jetbrains.com/research/2
 
 | Metric | Number |
 |---|---|
-| **Developers using AI tools regularly** | 85–90% |
+| **Developers using AI tools regularly** | [85%](https://www.infoworld.com/article/4077352/85-of-developers-use-ai-regularly-jetbrains-survey.html) (90% report saving 1+ hour weekly) |
 | **Using specialized AI coding tools** | 74% |
 | **AI-generated production code (estimated)** | 41% |
 | **Developers who fully trust AI output** | 29% |
@@ -405,7 +405,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 - Designers at 37signals now ship production code with AI agents
 - Warned about "peak programmer" compensation for average developers
 
-> "It's not a minor tool upgrade but a fundamental reorganization of the craft."
+> "This is the most exciting thing since the internet."
 
 **Theme:** The loudest AI skeptic became the loudest AI convert — and has the workflow receipts to prove it.
 
@@ -413,7 +413,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[Pragmatic Engineer Podcast](https://newsletter.pragmaticengineer.com/) (April 7)**
 
-- Compared current AI shift to the Agile revolution in magnitude
+- Compared current AI shift to past disruptions including Agile and OOP — but Fowler's point was that [AI dwarfs all of them](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech): "Nothing has hit with the magnitude of AI. This is a whole size different from anything we've faced before."
 - Discussed non-determinism challenge in AI-generated code
 - Warned about burnout risk from AI-accelerated pace
 - Flagged junior engineer development as the industry's biggest unaddressed challenge
@@ -544,8 +544,8 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 | Voice | Active | Key Topic | Source |
 |---|---|---|---|
 | DHH | ✅ | Agent-first workflow, AI code review, peak programmer | Blog, Pragmatic Engineer |
-| Kent Beck & Martin Fowler | ✅ | AI = Agile-scale disruption, non-determinism, burnout | Pragmatic Engineer |
-| Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes; 2026 survey (906 engineers) | Pragmatic Engineer |
+| Kent Beck & Martin Fowler | ✅ | AI dwarfs even the Agile revolution, non-determinism, burnout | Pragmatic Engineer |
+| Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes; 2026 survey (906 respondents) | Pragmatic Engineer |
 | Andrej Karpathy | ✅ | LLM knowledge bases, agentic engineering framing | X, GitHub |
 | Evan Spiegel | ✅ | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
 | Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
@@ -655,7 +655,7 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 **Offline/air-gapped AI coding goes mainstream.** Copilot CLI's BYOK support means air-gapped enterprises (defense, healthcare, finance) can now run AI coding agents without any external network dependency. This was the last major adoption blocker for regulated industries.
 
-**Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 engineers) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months, with 46% naming it "most loved" vs. Copilot at 9%. The [JetBrains AI Pulse survey](https://blog.jetbrains.com/ai-pulse/) (10,000+ developers) shows Copilot at 29% workplace adoption but Claude Code at 18% with the fastest-growing satisfaction scores.
+**Tool stacking confirmed by data.** The [Pragmatic Engineer 2026 survey](https://newsletter.pragmaticengineer.com/) (906 respondents) shows 70% run 2–4 tools simultaneously. Claude Code went from nonexistent to most-used tool in eight months, with 46% naming it "most loved" vs. Copilot at 9%. The [JetBrains AI Pulse survey](https://blog.jetbrains.com/ai-pulse/) (10,000+ developers) shows Copilot at 29% workplace adoption but Claude Code at 18% with the fastest-growing satisfaction scores.
 
 ### Patterns.dev Agent Skills
 
@@ -805,7 +805,7 @@ Claude Managed Agents at this price point shifts the competitive advantage from 
 First open model to beat proprietary on SWE-Bench Pro. Self-hostable, MIT-licensed. The "open source is always behind" narrative no longer holds for coding tasks.
 
 **Tool stacking is the new default**
-Two independent surveys confirm the shift: Pragmatic Engineer (906 engineers) shows 70% run 2–4 tools simultaneously with Claude Code most-loved (46%); JetBrains AI Pulse (10K+ developers) shows Copilot dominant by install base (29%) but Claude Code leading satisfaction. The winning strategy is workflow design, not tool selection.
+Two independent surveys confirm the shift: Pragmatic Engineer (906 respondents) shows 70% run 2–4 tools simultaneously with Claude Code most-loved (46%); JetBrains AI Pulse (10K+ developers) shows Copilot dominant by install base (29%) but Claude Code leading satisfaction. The winning strategy is workflow design, not tool selection.
 
 **Air-gapped AI coding goes mainstream**
 Copilot CLI's BYOK + local model support means defense, healthcare, and financial services teams can now run AI coding agents with zero external network dependency. The last major enterprise adoption blocker just fell.
@@ -840,14 +840,14 @@ A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/0
 
 ## Key Quotes of the Week
 
-> "It's not a minor tool upgrade but a fundamental reorganization of the craft."
-> — **DHH**, on shifting to agent-first coding, [April 2026](https://world.hey.com/dhh)
+> "This is the most exciting thing since the internet."
+> — **DHH**, on AI-assisted coding, [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
 
 > "AI now generates more than 65% of all new code at Snap."
 > — **Evan Spiegel**, CEO of Snap, announcing 1,000 layoffs, [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html)
 
-> "For roughly half the PRs, Claude's analysis pertained to technical areas where I had no expertise — the agent was undeniably a better reviewer than I could be in those domains."
-> — **DHH**, on AI-assisted code review, [April 2026](https://world.hey.com/dhh)
+> "I can literally feel competence draining out of my fingers!"
+> — **DHH**, on his earlier frustration with AI coding tools — [before becoming an AI convert](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
 
 > "AI models have reached a level of coding capability where they can surpass all but the most skilled humans at finding and exploiting software vulnerabilities."
 > — **Anthropic**, on Claude Mythos Preview, [The Hacker News](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html)
