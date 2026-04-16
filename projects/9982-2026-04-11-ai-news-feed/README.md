@@ -40,26 +40,26 @@ explorers:
 
 Last week was **the unraveling** — Anthropic leaked its own source code, North Korea poisoned npm, and Oracle fired 30,000 people. This week, the engineering profession crossed a threshold: the tools, the data, and the voices all converged on one message — **agents are no longer assistants, they're the primary workers**.
 
-DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "infuriating" a year ago — now starts every coding task by instructing an AI agent. Kent Beck and Martin Fowler went on The Pragmatic Engineer to compare the current shift to the Agile revolution. JetBrains published data showing 85–90% of developers now use AI tools regularly. Snap's CEO announced AI generates 65% of new code — then laid off 1,000 engineers. And the first open-source model topped SWE-Bench Pro, beating GPT-5.4 in the benchmark that matters most to working developers.
+[DHH](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) — the creator of Ruby on Rails, a man who dismissed AI coding tools as "infuriating" a year ago — now starts every coding task by instructing an AI agent. [Kent Beck and Martin Fowler](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) went on The Pragmatic Engineer to compare the current shift to the Agile revolution. [JetBrains published data](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) showing 85–90% of developers now use AI tools regularly. [Snap's CEO announced](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) AI generates 65% of new code — then [laid off 1,000 engineers](https://www.fastcompany.com/91527233/snap-snapchat-layoffs-today-job-cuts-as-ceo-evan-spiegel-touts-ai-advances). And the first open-source model [topped SWE-Bench Pro](https://z.ai/blog/glm-5.1), beating GPT-5.4 in the benchmark that matters most to working developers.
 
 | Layer | What Happened | Why You Should Care |
 |---|---|---|
-| **Developer Tools** | Claude Managed Agents ($0.08/hr); Desktop redesign + Routines (April 14); Cursor 3 (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
-| **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 58 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
-| **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
-| **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains); 46% love Claude Code vs 9% Copilot (Pragmatic Eng survey, 906 devs) | The industry crossed from "trying AI" to "AI is how we work" |
-| **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs; 71K+ industry-wide | The first public company to quantify AI engineering displacement at scale |
-| **Security** | Anthropic's Mythos finds decades-old zero-days; Adversa AI exposes Claude Code deny rules bypass; source leak analysis reveals hidden feature flags | Both the scanner and the scanned are AI — and both have vulnerabilities |
-| **Supply Chain** | Axios CVE published, CPU-Z compromised, Trivy fallout continues | Third consecutive week of major attacks — across three different vectors |
-| **Platform Wars** | OpenClaw blocked from Claude subscriptions; Steinberger banned; OpenAI accuses Anthropic of $8B revenue inflation | The harness is the product — and vendors are locking it down |
+| **Developer Tools** | [Claude Managed Agents](https://www.anthropic.com/news/managed-agents) ($0.08/hr); [Desktop redesign + Routines](https://claude.com/blog/claude-code-desktop-redesign) (April 14); [Cursor 3](https://www.cursor.com/blog/cursor-3) (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
+| **Developer Experience** | [Copilot CLI BYOK/offline](https://github.blog/changelog/2026-04-07-github-copilot-cli-bring-your-own-key/) (April 7); [Patterns.dev 58 Agent Skills](https://github.com/PatternsDev/skills); [Chrome DevTools MCP v0.21.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v0.21.0) | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
+| **Open Source** | [GLM-5.1](https://z.ai/blog/glm-5.1) tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
+| **Workflow Shift** | [DHH goes agent-first](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/); [85–90% dev AI adoption](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) (JetBrains); 46% love Claude Code vs 9% Copilot ([Pragmatic Eng survey](https://newsletter.pragmaticengineer.com/), 906 devs) | The industry crossed from "trying AI" to "AI is how we work" |
+| **Engineering Orgs** | [Snap: 65% AI-generated code → 1,000 layoffs](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html); [71K+ industry-wide](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai) | The first public company to quantify AI engineering displacement at scale |
+| **Security** | [Anthropic's Mythos finds decades-old zero-days](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html); [Adversa AI exposes Claude Code deny rules bypass](https://adversa.ai/blog/claude-code-security-bypass-deny-rules-disabled/); [source leak analysis reveals hidden feature flags](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/) | Both the scanner and the scanned are AI — and both have vulnerabilities |
+| **Supply Chain** | [Axios CVE published](https://coderoasis.com/cve-2025-62718-the-axios-crisis-a-critical-ssrf-vuln-a-north-korean-supply-chain-attack-and-why-every-node-js-developer-needs-to-act-right-now/), [CPU-Z compromised](https://securelist.com/tr/cpu-z/119365/), [Trivy fallout continues](https://www.infoq.com/news/2026/04/trivy-supply-chain-attack/) | Third consecutive week of major attacks — across three different vectors |
+| **Platform Wars** | [OpenClaw blocked from Claude subscriptions](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/); [Steinberger banned](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/); [OpenAI accuses Anthropic of $8B revenue inflation](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/) | The harness is the product — and vendors are locking it down |
 
 ### The Unifying Thread
 
-What makes this week different from the generic "AI is coming" narrative is the specificity. These aren't predictions — they're measurements. DHH's agent-first workflow has him delegating entire features to AI agents and reviewing the resulting PRs. Snap's AI writes 65% of code. GLM-5.1 scores 58.4% on SWE-Bench Pro. JetBrains measured 85–90% adoption. The shift from "AI might change engineering" to "here are the numbers" happened this week.
+What makes this week different from the generic "AI is coming" narrative is the specificity. These aren't predictions — they're measurements. [DHH's agent-first workflow](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) has him delegating entire features to AI agents and reviewing the resulting PRs. [Snap's AI writes 65% of code](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html). [GLM-5.1 scores 58.4% on SWE-Bench Pro](https://z.ai/blog/glm-5.1). [JetBrains measured 85–90% adoption](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/). The shift from "AI might change engineering" to "here are the numbers" happened this week.
 
 ### The Deepest Signal
 
-The Kent Beck and Martin Fowler appearance on The Pragmatic Engineer (April 7) carries the most weight for engineering leaders. These are the people who defined modern software engineering practices — TDD, refactoring, XP, CI. They compared the current AI shift to the magnitude of the Agile revolution. They explicitly discussed how AI amplifies exceptional engineers while making average work automatable. It's the strongest signal yet that engineering management practices need to change.
+The [Kent Beck and Martin Fowler appearance on The Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) (April 7) carries the most weight for engineering leaders. These are the people who defined modern software engineering practices — TDD, refactoring, XP, CI. They compared the current AI shift to the magnitude of the Agile revolution. They explicitly discussed how AI amplifies exceptional engineers while making average work automatable. It's the strongest signal yet that engineering management practices need to change.
 
 ---
 
@@ -173,27 +173,27 @@ The same week GLM-5.1 launched under MIT, Meta [launched **Muse Spark**](https:/
 
 ## 4. The Agentic Engineering Inflection — DHH, Beck, Fowler, and the 85–90% Adoption Line
 
-**April 5–11 | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/) · [JetBrains Research](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) · [DHH Blog](https://world.hey.com/dhh)**
+**April 5–11 | [Pragmatic Engineer — Cycles of Disruption](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) · [JetBrains Research](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) · [DHH — The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)**
 
 Three independent data points converged this week to signal that the engineering profession has crossed an inflection point — from "trying AI tools" to "agent-first is the default workflow."
 
 ### DHH Goes Agent-First (April 8)
 
-David Heinemeier Hansson — creator of Ruby on Rails, CTO of 37signals, and one of the loudest skeptics of AI coding tools as recently as early 2025 — published his new workflow. It's unrecognizable from a year ago:
+David Heinemeier Hansson — creator of Ruby on Rails, CTO of 37signals, and one of the loudest skeptics of AI coding tools as recently as early 2025 — [published his new workflow](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/). It's unrecognizable from a year ago:
 
-- **Every task starts with an agent.** DHH now instructs Claude Code or Open Code before writing any code himself.
+- **Every task starts with an agent.** DHH now instructs Claude Code or [Open Code](https://github.com/nicepkg/open-code) before writing any code himself.
 - **Massive PR throughput.** He described reviewing large batches of pull requests for his Omarchy Linux distribution using AI agents — work he'd previously budgeted much longer for.
 - **Designers write production code.** At 37signals, designers now ship production code using AI agents. The role boundary between "designer" and "developer" is dissolving.
 
 > "It's not a minor tool upgrade but a fundamental reorganization of the craft."
-> — **DHH**, [April 2026](https://world.hey.com/dhh)
+> — **DHH**, [April 2026](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
 
 > "For roughly half the PRs, Claude's analysis pertained to technical areas where I had no expertise — the agent was undeniably a better reviewer than I could be in those domains."
-> — **DHH**, on agent-assisted code review
+> — **DHH**, on [agent-assisted code review](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
 
-### Kent Beck & Martin Fowler on The Pragmatic Engineer (April 7)
+### Kent Beck & Martin Fowler on [The Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) (April 7)
 
-The architects of modern software engineering practices — TDD, XP, refactoring, CI — sat down with Gergely Orosz to compare the current AI shift to previous industry disruptions:
+The architects of modern software engineering practices — TDD, XP, refactoring, CI — sat down with [Gergely Orosz](https://newsletter.pragmaticengineer.com/) to compare the current AI shift to previous industry disruptions:
 
 - **Magnitude comparison:** Beck and Fowler compared the current shift to the Agile revolution — the last time engineering practices fundamentally changed.
 - **"Vibe coding" as intent-driven development:** They discussed the emerging pattern of expressing intent rather than writing syntax, and its implications for code quality.
@@ -228,8 +228,8 @@ The trend that matters: most developers now **stack multiple tools** — Cursor 
 The 85–90% adoption line means AI tools are no longer a competitive advantage — they're baseline. The differentiation has shifted to **how well your team uses them**:
 
 1. **Workflow design matters more than tool selection.** Teams that design agent-first workflows outperform teams that bolt AI onto existing processes.
-2. **Senior engineers are amplified, not replaced.** DHH's experience confirms what the data shows: AI magnifies the gap between exceptional and average engineers.
-3. **Junior engineer development is at risk.** If agents handle the work that juniors traditionally used to learn from, how do you build the next generation of senior engineers? Beck and Fowler flagged this as the industry's biggest unaddressed challenge.
+2. **Senior engineers are amplified, not replaced.** [DHH's experience](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/) confirms what the data shows: AI magnifies the gap between exceptional and average engineers.
+3. **Junior engineer development is at risk.** If agents handle the work that juniors traditionally used to learn from, how do you build the next generation of senior engineers? [Beck and Fowler](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) flagged this as the industry's biggest unaddressed challenge.
 
 ---
 
