@@ -298,7 +298,7 @@ This isn't a specialized security tool — it's a general-purpose reasoning mode
 
 Rather than shipping Mythos publicly, Anthropic launched **Project Glasswing** — a vetted-access cybersecurity defense initiative:
 
-- **12 founding partners** including AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks
+- **[Founding partners](https://www.anthropic.com/glasswing)** including AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks
 - **40+ additional organizations** granted access through the Cyber Verification Program for defensive vulnerability scanning
 - [**$100 million**](https://www.anthropic.com/glasswing) in Claude usage credits for security researchers and open-source maintainers
 - [**$4 million**](https://www.anthropic.com/glasswing) in donations to open-source security organizations ($2.5M to Alpha-Omega/OpenSSF, $1.5M to Apache Software Foundation)
@@ -306,7 +306,7 @@ Rather than shipping Mythos publicly, Anthropic launched **Project Glasswing** �
 ### What This Means for Engineering Teams
 
 1. **Your vulnerability scanning tools are about to be obsolete.** If an AI model can find 27-year-old bugs that every automated scanner missed, the current generation of SAST/DAST tools is inadequate for the AI era.
-2. **Adversaries will have these capabilities within 6–18 months.** Security experts predict hostile actors will gain comparable AI capabilities — making Anthropic's head start a temporary window for defenders.
+2. **Adversaries will develop comparable capabilities.** Open-source model progress (GLM-5.1 already matches proprietary models on coding benchmarks) suggests the window where only Glasswing partners have AI-powered vulnerability scanning is temporary.
 3. **Open-source maintainers get help.** The $100M in credits and $4M in donations mean OSS projects that your codebase depends on will get AI-powered security audits. This is the most significant investment in open-source security since Google's Project Zero.
 
 ---
@@ -555,7 +555,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 | Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | [X](https://x.com/felixrieseberg/status/2044128194647994585) (April 14) |
 | Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | LinkedIn |
 | Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | LinkedIn |
-| Alaina Hardie | ✅ | Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 628 events) | GitHub, Blog |
+| Alaina Hardie | ✅ | Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 198 misalignment events) | [GitHub](https://github.com/trianglegrrl/misalign) |
 | Marc Andreessen | ✅ | Latent Space pod: "Those days are just over" — software creation becomes trivially easy; Death of the Browser | Latent Space podcast |
 | Teresa Torres | ✅ | Claude Code deep-dive article series — memory, workflows, safety, context rot (widely shared by David Bland) | [producttalk.org](https://www.producttalk.org/) |
 | Steve Yegge | ❌ | Not active this week | — |
@@ -774,7 +774,7 @@ The scale is staggering: [Forbes reports](https://www.forbes.com/sites/maryroelo
 A public company CEO quantified AI code generation and used it to justify 16% workforce reduction. This metric will be cited in board rooms and investor calls industry-wide. Engineering leaders need a response: what's your number, and what does it mean for your team structure?
 
 **AI vulnerability scanning surpasses human capability**
-Anthropic's Claude Mythos found decades-old zero-days that every human auditor and automated scanner missed. Hostile actors will have comparable capabilities within 6-18 months. Your current SAST/DAST tooling is approaching obsolescence for advanced threats.
+Anthropic's Claude Mythos [found decades-old zero-days](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html) that every human auditor and automated scanner missed. With open-source models rapidly closing the gap (GLM-5.1 already matches proprietary coding benchmarks), comparable offensive capabilities will emerge. Your current SAST/DAST tooling is approaching obsolescence for advanced threats.
 
 **Third consecutive week of major supply chain attacks**
 TeamPCP → Axios → CPU-Z, across three different vectors (CI/CD → npm → vendor websites). The attack surface is widening faster than most teams' defenses.
@@ -822,7 +822,7 @@ Patterns.dev's 52 Agent Skills for JS/React/Vue are the first serious attempt at
 The DevOps pioneer sees two distinct developer archetypes emerging: those who manage context for AI agents, and those who build the agent pipelines themselves. In large orgs, these may become separate roles — the next Platform Engineering split.
 
 **Completion-pressure misalignment has data**
-Alaina Hardie's 225-session study shows agents systematically ignore project docs (guidance neglect) and declare tasks done prematurely. At $0.001 per monitoring call, real-time misalignment detection becomes feasible. Watch for this to be integrated into agent harnesses.
+[Alaina Hardie's 225-session study](https://github.com/trianglegrrl/misalign) shows agents systematically ignore project docs (guidance neglect) and declare tasks done prematurely. The full detection pipeline runs for [~$10 in API calls](https://github.com/trianglegrrl/misalign), making regular audits feasible. Watch for this to be integrated into agent harnesses.
 
 **OpenAI's "robot tax" policy paper**
 OpenAI published *Industrial Policy for the Intelligence Age* — proposing taxation of automated labor, a public wealth fund, and a four-day workweek. Policy, not engineering — but if implemented, it directly affects engineering economics and hiring budgets.
