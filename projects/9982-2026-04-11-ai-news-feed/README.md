@@ -124,7 +124,7 @@ Early adopters tell the real story:
 
 ### The Advisor Tool: Multi-Model Orchestration Without the Plumbing
 
-Alongside Managed Agents, Anthropic shipped the **Advisor Tool** — a system that lets different Claude models take on different roles within the same workflow. A fast model handles triage, a reasoning model handles planning, and a specialist model handles execution. This is multi-model orchestration without the developer managing the routing.
+Alongside Managed Agents, Anthropic shipped the **[Advisor Tool](https://docs.anthropic.com/en/docs/agents-and-tools/advisor-tool)** — a system that lets different Claude models take on different roles within the same workflow. A fast model handles triage, a reasoning model handles planning, and a specialist model handles execution. This is multi-model orchestration without the developer managing the routing.
 
 For teams currently running their own model-routing layers (and that's most teams building production agents), this eliminates an entire category of infrastructure code.
 
