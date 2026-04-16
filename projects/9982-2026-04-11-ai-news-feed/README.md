@@ -406,7 +406,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 - Warned about ["peak programmer"](https://startupfortune.com/why-senior-developers-are-winning-the-ai-coding-era/) compensation for average developers
 
 > "This is the most exciting thing since the internet."
-> — [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
+> — **DHH**, [The New Stack](https://thenewstack.io/dhh-on-ai-vibe-coding-and-the-future-of-programming/)
 
 **Theme:** The loudest AI skeptic became the loudest AI convert — and has the workflow receipts to prove it.
 
