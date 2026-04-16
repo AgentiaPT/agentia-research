@@ -216,10 +216,10 @@ David Heinemeier Hansson — creator of Ruby on Rails, CTO of 37signals, and one
 - **Designers write production code.** At 37signals, designers now ship production code using AI agents. The role boundary between "designer" and "developer" is dissolving.
 
 > "It's more like working on a team and less like working with an overly-zealous pair programmer who can't stop stealing the keyboard."
-> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=more%20like%20working%20on%20a%20team%20and%20less%20like%20working%20with%20an%20overly-zealous%20pair%20programmer)
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=more%20like%20working%20on%20a%20team)
 
 > "They're fully capable of producing production-grade contributions to real-life code bases."
-> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=fully%20capable%20of%20producing%20production-grade%20contributions%20to%20real-life%20code%20bases)
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=fully%20capable%20of%20producing)
 
 ### Kent Beck & Martin Fowler on The Pragmatic Engineer (April 7)
 
@@ -436,7 +436,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 - Warned about "peak programmer" compensation for average developers
 
 > "This is the most exciting thing we've made computers do since we connected them to the internet."
-> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=most%20exciting%20thing%20we%E2%80%99ve%20made%20computers%20do%20since%20we%20connected%20them%20to%20the%20internet)
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=most%20exciting%20thing)
 
 **Theme:** The loudest AI skeptic became the loudest AI convert — and has the workflow receipts to prove it.
 
@@ -873,7 +873,7 @@ A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/0
 ## Key Quotes of the Week
 
 > "This is the most exciting thing we've made computers do since we connected them to the internet."
-> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=most%20exciting%20thing%20we%E2%80%99ve%20made%20computers%20do%20since%20we%20connected%20them%20to%20the%20internet)
+> — **DHH**, [Promoting AI Agents](https://world.hey.com/dhh/promoting-ai-agents-3ee04945#:~:text=most%20exciting%20thing)
 
 > "AI now generates more than 65% of all new code at Snap."
 > — **Evan Spiegel**, CEO of Snap, [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html#:~:text=AI%20now%20generates%20more%20than%2065%25)
