@@ -265,11 +265,11 @@ This is the first time a public company CEO has quantified AI code generation at
 |---|---|---|---|
 | **Snap** | 1,000 + 300 open roles | 16% | Yes — explicitly |
 | **Oracle** | 20,000–30,000 | — | Yes — AI/data center pivot |
-| **Block** | 4,000+ | ~45% | Yes — AI restructuring |
+| **Block** | 4,000+ | ~40% | Yes — AI restructuring |
 | **Atlassian** | 1,600 | 10% | Yes — AI investment |
 | **Pinterest** | ~800 | 15% | Yes — AI reallocation |
 | **GoPro** | ~23% workforce | 23% | Restructuring |
-| **Pendo** | ~90 | 10% | Yes — "accelerate AI investment" |
+| **Pendo** | ~90 | 10% | Yes — AI-driven restructuring |
 | **Taboola** | 100 | 5% | Not stated |
 | **Qualcomm** | Undisclosed | — | Yes — chip design |
 
@@ -662,4 +662,4 @@ A Molotov cocktail was thrown at Sam Altman's home (April 10). The suspect had a
 > — **OpenAI**, "Industrial Policy for the Intelligence Age", [TechCrunch](https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/)
 
 > "OpenAI is the Netscape of AI — a trailblazer, but perhaps not the ultimate winner."
-> — **Jai Das**, Managing Director at Sapphire Ventures, [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)
+> — **Jai Das**, President of Sapphire Ventures, [TechCrunch](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/)

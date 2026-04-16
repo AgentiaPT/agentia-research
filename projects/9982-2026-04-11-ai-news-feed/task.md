@@ -104,5 +104,6 @@ Extended edition window from April 5-11 to April 5-16 to capture late-breaking s
 - [x] Fact-check pass #2 (thorough, April 16 — 30+ claims verified against primary sources, corrections applied)
 - [x] Run build-index.py and commit
 - [x] Temporal window extension to April 5-16 (outline, runbook, task.md updated)
-- [ ] Update README.md content for extended window
+- [x] Update README.md content for extended window
+- [x] Fact-check pass #3 — extended window additions (15 claims verified: Dresser memo, $8B accusation, Spud/Frontier, Jai Das quote, Block/Oracle/Atlassian/Pinterest/Pendo layoffs, 71K total, Willison Datasette, Irenic Capital; corrections: Block ~40% not ~45%, Jai Das title President not MD, Pendo quote softened)
 - [ ] Human commentary integration
