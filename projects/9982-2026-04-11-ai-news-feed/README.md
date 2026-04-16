@@ -248,9 +248,9 @@ This is the first time a public company CEO has quantified AI code generation at
 | **AI-generated code** | 65%+ of all new code |
 | **Jobs cut** | 1,000 + 300 open roles eliminated |
 | **Workforce reduction** | 16% |
-| **AI support automation** | 1M+ monthly support queries handled by AI |
-| **Cost savings** | $500M annualized |
-| **Severance** | 4 months for affected US employees |
+| **AI support automation** | [1M+ monthly support queries handled by AI](https://www.techrepublic.com/article/news-snap-ai-layoffs-april-2026/) |
+| **Cost savings** | [$500M annualized](https://www.telecompaper.com/news/snap-cuts-1000-jobs-after-ai-trials-sees-usd-500-mln-in-annualised-cost-savings-by-h2--1568212) |
+| **Severance** | [4 months for affected US employees](https://deadline.com/2026/04/snap-layoffs-ceo-evan-spiegel-ai-1236861335/) |
 
 ### What Engineering Leaders Should Actually Take From This
 
@@ -264,15 +264,15 @@ This is the first time a public company CEO has quantified AI code generation at
 
 | Company | Cuts | % Workforce | AI Cited? |
 |---|---|---|---|
-| **Snap** | 1,000 + 300 open roles | 16% | Yes — explicitly |
-| **Oracle** | 20,000–30,000 | — | Yes — AI/data center pivot |
-| **Block** | 4,000+ | ~40% | Yes — AI restructuring |
-| **Atlassian** | 1,600 | 10% | Yes — AI investment |
-| **Pinterest** | ~800 | 15% | Yes — AI reallocation |
-| **GoPro** | ~23% workforce | 23% | Restructuring |
-| **Pendo** | ~90 | 10% | Yes — AI-driven restructuring |
-| **Taboola** | 100 | 5% | Not stated |
-| **Qualcomm** | Undisclosed | — | Yes — chip design |
+| **Snap** | [1,000 + 300 open roles](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) | 16% | Yes — explicitly |
+| **Oracle** | [20,000–30,000](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) | — | Yes — AI/data center pivot |
+| **Block** | [4,000+](https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html) | ~40% | Yes — AI restructuring |
+| **Atlassian** | [1,600](https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/) | 10% | Yes — AI investment |
+| **Pinterest** | [~700](https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html) | <15% | Yes — AI reallocation |
+| **GoPro** | [~23% workforce](https://petapixel.com/2026/04/08/gopro-to-lay-off-23-of-its-workforce-this-year/) | 23% | Restructuring |
+| **Pendo** | [~90](https://www.axios.com/local/raleigh/2026/04/07/raleigh-software-unicorn-pendo-layoffs-jobs) | 10% | Yes — AI-driven restructuring |
+| **Taboola** | [100](https://www.calcalistech.com/ctechnews/article/hku03an3bg) | 5% | Not stated |
+| **Qualcomm** | [1,200+ in CA](https://www.10news.com/news/local-news/san-diego-based-chipmaker-qualcomm-to-lay-off-over-1-200-california-workers/) | — | Yes — chip design |
 
 Through mid-April 2026, **80+ tech companies have cut 71,000+ jobs**, with [Forbes reporting](https://www.forbes.com/sites/maryroeloffs/2026/04/15/snap-blames-1000-layoffs-on-ai-and-these-companies-have-done-the-same/) that **48% of cuts explicitly cite AI adoption** as a driver. Snap is the first to provide a specific code generation metric as justification — but the pattern is industry-wide.
 
@@ -300,8 +300,8 @@ Rather than shipping Mythos publicly, Anthropic launched **Project Glasswing** �
 
 - **12 founding partners** including AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks
 - **40+ additional organizations** granted access through the Cyber Verification Program for defensive vulnerability scanning
-- **$100 million** in Claude usage credits for security researchers and open-source maintainers
-- **$4 million** in donations to open-source security organizations
+- [**$100 million**](https://www.anthropic.com/glasswing) in Claude usage credits for security researchers and open-source maintainers
+- [**$4 million**](https://www.anthropic.com/glasswing) in donations to open-source security organizations ($2.5M to Alpha-Omega/OpenSSF, $1.5M to Apache Software Foundation)
 
 ### What This Means for Engineering Teams
 
@@ -336,14 +336,14 @@ If you use Axios (and most Node.js projects do), verify your lockfile doesn't re
 A **new** attack vector: the official **CPUID website** served trojanized ZIP archives for approximately 6 hours. This targets **desktop software distributed through a vendor's own website** — not a package registry.
 
 - Malicious DLL (`CRYPTBASE.dll`, Zig-compiled) with an **STX RAT** backdoor (also classified as Alien RAT by some vendors)
-- Over 150 confirmed victims across retail, manufacturing, telecom, and agriculture — with the true exposure likely higher given the download window
+- [Over 150 confirmed victims](https://securelist.com/tr/cpu-z/119365/) across retail, manufacturing, telecom, and agriculture — with the true exposure likely higher given the download window
 - CPUID has remediated and published IoCs
 
 This matters because it expands the supply chain threat model: if CPUID's download page can be compromised, so can any software vendor's.
 
-### Adobe Acrobat Reader (CVE-2026-34621)
+### [Adobe Acrobat Reader (CVE-2026-34621)](https://thehackernews.com/2026/04/adobe-patches-actively-exploited.html)
 
-A prototype pollution vulnerability (CVSS 8.6) is **actively exploited in the wild**. Maliciously crafted PDFs achieve remote code execution. If your team shares PDFs through Acrobat — and most enterprise teams do — this is an active threat.
+A prototype pollution vulnerability ([CVSS 8.6](https://helpx.adobe.com/security/products/acrobat/apsb26-43.html)) is **actively exploited in the wild**. Maliciously crafted PDFs achieve remote code execution. If your team shares PDFs through Acrobat — and most enterprise teams do — this is an active threat.
 
 ### Trivy/TeamPCP Ongoing
 
@@ -383,8 +383,8 @@ California and New York lead, with frameworks covering high-risk AI, content mod
 
 Apple's crackdown continues:
 
-- **Threatened to remove xAI's Grok** from the App Store over nonconsensual deepfake image generation
-- **App submissions up 24%** to 557,000 in 2025 — mostly AI-generated using no-code tools
+- [**Threatened to remove xAI's Grok**](https://www.macrumors.com/2026/04/15/apple-threatened-pull-grok-from-app-store/) from the App Store over nonconsensual deepfake image generation
+- [**App submissions up 24%**](https://appfigures.com/resources/insights/20251205?f=2) to 557,000 in 2025 — mostly AI-generated using no-code tools
 - **Review times stretching** from days to weeks, punishing legitimate developers alongside AI spam
 - Apple now treats AI-generated content as a **distinct regulatory category** requiring active moderation
 
@@ -711,10 +711,10 @@ The Chrome DevTools MCP server ([ChromeDevTools/chrome-devtools-mcp](https://git
 
 AI-native CI/CD is becoming the standard for productive teams this quarter:
 
-- **Intelligent test selection** — AI analyzes diffs and history to run only necessary tests (up to 97% reduction in test execution time)
-- **Autonomous pipeline maintenance** — agents spot and auto-fix flaky tests and recurring build failures
+- **Intelligent test selection** — AI analyzes diffs and history to run only necessary tests ([up to 97% faster execution](https://circleci.com/) per CircleCI's Smarter Testing)
+- **Autonomous pipeline maintenance** — agents spot and auto-fix flaky tests and recurring build failures ([Harness test intelligence](https://www.harness.io/blog/unit-testing-in-ci-cd-how-to-accelerate-builds-without-sacrificing-quality))
 - **Natural language pipelines** — describe pipeline logic in plain English; AI generates CI/CD config
-- **Top choices:** Harness (full pipeline intelligence), CircleCI (targeted test execution), GitLab Duo + GitHub Actions + Copilot (accessible pricing)
+- **Top choices:** [Harness](https://www.harness.io/) (full pipeline intelligence), [CircleCI](https://circleci.com/) (targeted test execution), [GitLab Duo](https://www.almtoolbox.com/blog/gitlab-2025-release-highlights-ai-cicd-devsecops/) + GitHub Actions + Copilot (accessible pricing)
 
 ---
 
@@ -724,9 +724,9 @@ AI-native CI/CD is becoming the standard for productive teams this quarter:
 
 | Metric | Anthropic | OpenAI |
 |---|---|---|
-| **Annualized revenue** | $30B (gross) | $24B (net) |
+| **Annualized revenue** | [$30B (gross)](https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/) | [$24B (net)](https://sacra.com/c/openai/) |
 | **Primary driver** | Enterprise API + Claude Code | ChatGPT subscriptions |
-| **Enterprise customers ($1M+/yr)** | 1,000+ | Not disclosed |
+| **Enterprise customers ($1M+/yr)** | [1,000+](https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/) | Not disclosed |
 | **What it means for hiring** | Enterprise dev tools driving growth | Consumer product driving growth |
 
 Anthropic overtaking OpenAI in revenue — driven by enterprise API and Claude Code adoption — signals where engineering hiring dollars are flowing: toward teams building AI-integrated products, not toward teams maintaining pre-AI codebases.
@@ -753,10 +753,10 @@ The memo also previewed **"Spud"** — OpenAI's next model, promising superior r
 
 | Flow | Amount | Engineering Implication |
 |---|---|---|
-| **Q1 2026 VC funding** | $300B (2x previous year) | More startup engineering jobs, more AI-native teams |
-| **OpenAI round** | $122B at $852B valuation | IPO expected 2026; massive engineering hiring continues |
-| **Meta AI capex** | $115–135B | Largest AI infra buildout; infra engineering boom |
-| **Anthropic compute deals** | $50B+ total | Enterprise AI adoption accelerating |
+| **Q1 2026 VC funding** | [$300B (2x previous year)](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/) | More startup engineering jobs, more AI-native teams |
+| **OpenAI round** | [$122B at $852B valuation](https://openai.com/index/accelerating-the-next-phase-ai/) | IPO expected 2026; massive engineering hiring continues |
+| **Meta AI capex** | [$115–135B](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx) | Largest AI infra buildout; infra engineering boom |
+| **Anthropic compute deals** | [$50B+ total](https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure) | Enterprise AI adoption accelerating |
 
 ### The Tension for Engineering Leaders
 
