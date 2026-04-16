@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI × Software Engineering — April 5–16, 2026</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2d3a;
+    --text: #e0e0e0;
+    --muted: #8890a0;
+    --accent: #6c8cff;
+    --green: #4caf50;
+    --red: #ef5350;
+    --orange: #ff9800;
+    --yellow: #ffd54f;
+    --purple: #b388ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+  .header .subtitle { color: var(--muted); font-size: 0.9rem; }
+  .header .theme {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--yellow);
+    font-weight: 600;
+  }
+  .readme-banner {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .readme-banner a { color: var(--accent); font-weight: 600; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+
+  .sidebar { display: flex; flex-direction: column; gap: 1rem; }
+  .main { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+  .card h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .stat {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .stat .value {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .stat .label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+  .v-red { color: var(--red); }
+  .v-green { color: var(--green); }
+  .v-orange { color: var(--orange); }
+  .v-yellow { color: var(--yellow); }
+  .v-accent { color: var(--accent); }
+  .v-purple { color: var(--purple); }
+
+  /* Signal Radar */
+  .signal-list { list-style: none; }
+  .signal-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.8rem;
+  }
+  .signal-list li:last-child { border-bottom: none; }
+  .signal-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  .dot-red { background: var(--red); }
+  .dot-orange { background: var(--orange); }
+  .dot-green { background: var(--green); }
+  .dot-blue { background: var(--accent); }
+
+  /* Theme Bars */
+  .theme-bar {
+    margin-bottom: 0.75rem;
+  }
+  .theme-bar .bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+  .theme-bar .bar-track {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .theme-bar .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+
+  /* Voice Map */
+  .voice-map {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .voice-map .axis-label {
+    position: absolute;
+    font-size: 0.65rem;
+    color: var(--muted);
+  }
+  .voice-map .x-min { bottom: 4px; left: 8px; }
+  .voice-map .x-max { bottom: 4px; right: 8px; }
+  .voice-map .y-min { top: 50%; left: 4px; transform: translateY(-50%) rotate(-90deg); }
+  .voice-map .y-max { top: 50%; right: 4px; transform: translateY(-50%) rotate(90deg); }
+  .voice-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .voice-dot:hover { transform: translate(-50%, -50%) scale(1.5); }
+  .voice-dot .tip {
+    display: none;
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  .voice-dot:hover .tip { display: block; }
+  .crosshair-x, .crosshair-y {
+    position: absolute;
+    background: var(--border);
+  }
+  .crosshair-x { width: 100%; height: 1px; top: 50%; }
+  .crosshair-y { width: 1px; height: 100%; left: 50%; }
+
+  /* Quotes */
+  .quote-card {
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background: rgba(108, 140, 255, 0.05);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+  }
+  .quote-card .attribution {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .quote-card.red { border-left-color: var(--red); background: rgba(239, 83, 80, 0.05); }
+  .quote-card.green { border-left-color: var(--green); background: rgba(76, 175, 80, 0.05); }
+  .quote-card.orange { border-left-color: var(--orange); background: rgba(255, 152, 0, 0.05); }
+  .quote-card.purple { border-left-color: var(--purple); background: rgba(179, 136, 255, 0.05); }
+
+  /* Voice Table */
+  .voice-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  .voice-table th {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--border);
+    color: var(--muted);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .voice-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .voice-table tr:last-child td { border-bottom: none; }
+  .status { font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>AI × Software Engineering</h1>
+  <div class="subtitle">April 5–16, 2026 — Edition 6</div>
+  <div class="theme">Theme: The Agent Takeover</div>
+  <div class="readme-banner">
+    📖 <a href="https://github.com/AgentiaPT/agentia-research/blob/main/projects/9982-2026-04-11-ai-news-feed/README.md">Read the full article</a> for deep-dive analysis with sources and citations
+  </div>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <!-- Stats -->
+    <div class="card">
+      <h2>📊 Week in Numbers</h2>
+      <div class="stats-grid">
+        <div class="stat"><div class="value v-accent">46%</div><div class="label">Claude Code "most loved" (Pragmatic Engineer survey)</div></div>
+        <div class="stat"><div class="value v-orange">65%</div><div class="label">Snap code generated by AI</div></div>
+        <div class="stat"><div class="value v-green">$0.08/hr</div><div class="label">Claude Managed Agents runtime cost</div></div>
+        <div class="stat"><div class="value v-red">71K+</div><div class="label">Tech jobs cut in 2026 (48% AI-linked)</div></div>
+        <div class="stat"><div class="value v-purple">58.4%</div><div class="label">GLM-5.1 SWE-Bench Pro (#1 open-source)</div></div>
+        <div class="stat"><div class="value v-yellow">85-90%</div><div class="label">Developers using AI tools (JetBrains)</div></div>
+        <div class="stat"><div class="value v-accent">58</div><div class="label">Patterns.dev Agent Skills launched</div></div>
+        <div class="stat"><div class="value v-red">50</div><div class="label">Subcommand limit: Claude Code deny rules bypass</div></div>
+      </div>
+    </div>
+
+    <!-- Signal Radar -->
+    <div class="card">
+      <h2>📡 Signal Radar</h2>
+      <ul class="signal-list">
+        <li><span class="signal-dot dot-red"></span>Snap 65%: first hard AI code replacement number</li>
+        <li><span class="signal-dot dot-red"></span>AI vulnerability scanning surpasses humans</li>
+        <li><span class="signal-dot dot-red"></span>3rd consecutive week of supply chain attacks</li>
+        <li><span class="signal-dot dot-orange"></span>Junior engineer pipeline under threat</li>
+        <li><span class="signal-dot dot-orange"></span>Revenue war clouds vendor decisions</li>
+        <li><span class="signal-dot dot-orange"></span>19 AI bills → compliance as deployment gate</li>
+        <li><span class="signal-dot dot-green"></span>Parallel-work UX: new competitive axis</li>
+        <li><span class="signal-dot dot-green"></span>Air-gapped AI coding goes mainstream (Copilot BYOK)</li>
+        <li><span class="signal-dot dot-green"></span>Agent Skills: new package ecosystem emerging</li>
+        <li><span class="signal-dot dot-green"></span>Agent infra becomes commodity ($0.08/hr)</li>
+        <li><span class="signal-dot dot-blue"></span>OpenClaw vs Anthropic: harness wars</li>
+        <li><span class="signal-dot dot-blue"></span>Context Coders vs Agentic Coders split</li>
+        <li><span class="signal-dot dot-blue"></span>Completion-pressure misalignment has data</li>
+      </ul>
+    </div>
+
+    <!-- Theme Coverage -->
+    <div class="card">
+      <h2>📈 Theme Coverage</h2>
+      <div class="theme-bar">
+        <div class="bar-label"><span>Developer Tools / Agents</span><span>30%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--accent)"></div></div>
+      </div>
+      <div class="theme-bar">
+        <div class="bar-label"><span>Cybersecurity / Defense</span><span>20%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--red)"></div></div>
+      </div>
+      <div class="theme-bar">
+        <div class="bar-label"><span>Workflow Shift / Adoption</span><span>18%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:18%;background:var(--purple)"></div></div>
+      </div>
+      <div class="theme-bar">
+        <div class="bar-label"><span>Jobs / Economic Impact</span><span>14%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:14%;background:var(--yellow)"></div></div>
+      </div>
+      <div class="theme-bar">
+        <div class="bar-label"><span>Supply Chain / Security</span><span>10%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:10%;background:var(--green)"></div></div>
+      </div>
+      <div class="theme-bar">
+        <div class="bar-label"><span>Policy / Regulation</span><span>8%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:8%;background:var(--orange)"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Voice Position Map -->
+    <div class="card">
+      <h2>🗺️ Voice Position Map</h2>
+      <div class="voice-map">
+        <div class="crosshair-x"></div>
+        <div class="crosshair-y"></div>
+        <span class="axis-label x-min">Cautious</span>
+        <span class="axis-label x-max">Accelerationist</span>
+        <span class="axis-label y-min">Individual</span>
+        <span class="axis-label y-max">Institutional</span>
+
+        <!-- DHH: center-accel, individual -->
+        <div class="voice-dot" style="left:65%;top:55%;background:var(--green)">
+          <div class="tip">DHH — Agent-first workflow, AI code review</div>
+        </div>
+        <!-- Amodei: center, very institutional -->
+        <div class="voice-dot" style="left:55%;top:12%;background:var(--green)">
+          <div class="tip">Dario Amodei — Glasswing, Managed Agents, Desktop redesign</div>
+        </div>
+        <!-- Spiegel: accelerationist, institutional -->
+        <div class="voice-dot" style="left:75%;top:22%;background:var(--orange)">
+          <div class="tip">Evan Spiegel — 65% AI code, 1K layoffs</div>
+        </div>
+        <!-- Karpathy: center-accel, individual -->
+        <div class="voice-dot" style="left:60%;top:60%;background:var(--accent)">
+          <div class="tip">Andrej Karpathy — LLM knowledge bases, agentic engineering</div>
+        </div>
+        <!-- Beck/Fowler: center, institutional -->
+        <div class="voice-dot" style="left:45%;top:30%;background:var(--purple)">
+          <div class="tip">Beck &amp; Fowler — AI = Agile-scale disruption</div>
+        </div>
+        <!-- Orosz: center, institutional -->
+        <div class="voice-dot" style="left:50%;top:35%;background:var(--accent)">
+          <div class="tip">Gergely Orosz — 2026 survey: 46% love Claude Code</div>
+        </div>
+        <!-- Osmani: accel, individual -->
+        <div class="voice-dot" style="left:70%;top:50%;background:var(--green)">
+          <div class="tip">Addy Osmani — 58 Agent Skills, DevTools MCP v0.21.0</div>
+        </div>
+        <!-- Andreessen: very accelerationist, institutional -->
+        <div class="voice-dot" style="left:88%;top:25%;background:var(--orange)">
+          <div class="tip">Marc Andreessen — "Those days are just over"</div>
+        </div>
+        <!-- Debois: center, institutional -->
+        <div class="voice-dot" style="left:48%;top:40%;background:var(--accent)">
+          <div class="tip">Patrick Debois — Context Coders vs Agentic Coders</div>
+        </div>
+        <!-- Willison: cautious, individual -->
+        <div class="voice-dot" style="left:38%;top:65%;background:var(--green)">
+          <div class="tip">Simon Willison — Datasette 1.0a27, Karpathy refs</div>
+        </div>
+        <!-- Mollick: center, institutional -->
+        <div class="voice-dot" style="left:45%;top:28%;background:var(--accent)">
+          <div class="tip">Ethan Mollick — Mythos assessment, AI math pattern</div>
+        </div>
+        <!-- Hardie: cautious, individual -->
+        <div class="voice-dot" style="left:35%;top:58%;background:var(--yellow)">
+          <div class="tip">Alaina Hardie — Agent misalignment study (225 sessions)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Quotes -->
+    <div class="card">
+      <h2>💬 Key Quotes</h2>
+
+      <div class="quote-card">
+        "It's not a minor tool upgrade but a fundamental reorganization of the craft."
+        <div class="attribution">— DHH, on agent-first coding</div>
+      </div>
+
+      <div class="quote-card orange">
+        "AI now generates more than 65% of all new code at Snap."
+        <div class="attribution">— Evan Spiegel, CEO of Snap, announcing 1,000 layoffs</div>
+      </div>
+
+      <div class="quote-card purple">
+        "We've always lived in a world in which software is this precious thing that you have to think about very carefully. Those days are just over."
+        <div class="attribution">— Marc Andreessen, Latent Space Podcast</div>
+      </div>
+
+      <div class="quote-card red">
+        "The model greatly surpasses the ability of most humans to find and exploit software vulnerabilities."
+        <div class="attribution">— Anthropic, on Claude Mythos Preview</div>
+      </div>
+
+      <div class="quote-card green">
+        "The model and the harness are no longer separable layers. They should now be understood as a single product."
+        <div class="attribution">— Emerging developer consensus on the OpenClaw billing changes</div>
+      </div>
+    </div>
+
+    <!-- Voice Tracker Table -->
+    <div class="card">
+      <h2>📋 Voice Tracker</h2>
+      <table class="voice-table">
+        <thead>
+          <tr><th>Status</th><th>Voice</th><th>Key Topic</th><th>Source</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="status">✅</td><td>DHH</td><td>Agent-first workflow, AI code review</td><td>Blog, Pragmatic Eng</td></tr>
+          <tr><td class="status">✅</td><td>Kent Beck &amp; Fowler</td><td>AI = Agile-scale disruption</td><td>Pragmatic Eng</td></tr>
+          <tr><td class="status">✅</td><td>Gergely Orosz</td><td>2026 survey, 46% love Claude Code</td><td>Pragmatic Eng</td></tr>
+          <tr><td class="status">✅</td><td>Andrej Karpathy</td><td>LLM knowledge bases</td><td>X, GitHub</td></tr>
+          <tr><td class="status">✅</td><td>Dario Amodei</td><td>Glasswing, Managed Agents, Desktop</td><td>Anthropic</td></tr>
+          <tr><td class="status">✅</td><td>Evan Spiegel</td><td>65% AI code, 1K layoffs</td><td>CNBC</td></tr>
+          <tr><td class="status">✅</td><td>Addy Osmani</td><td>58 Agent Skills, DevTools MCP</td><td>LinkedIn, GitHub</td></tr>
+          <tr><td class="status">✅</td><td>Marc Andreessen</td><td>"Those days are just over"</td><td>Latent Space</td></tr>
+          <tr><td class="status">✅</td><td>Patrick Debois</td><td>Context vs Agentic Coders</td><td>LinkedIn</td></tr>
+          <tr><td class="status">✅</td><td>Ethan Mollick</td><td>Mythos assessment, AI math</td><td>LinkedIn</td></tr>
+          <tr><td class="status">✅</td><td>Alaina Hardie</td><td>Agent misalignment study</td><td>GitHub, Blog</td></tr>
+          <tr><td class="status">✅</td><td>Simon Willison</td><td>Datasette, Karpathy refs</td><td>Blog</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -75,7 +75,7 @@ Spawn **6 research agents simultaneously**, each covering a different topic area
 | **Research papers** | arXiv papers, studies, conference proceedings relevant to AI × software engineering |
 
 Each agent prompt should:
-- Specify the exact date range (e.g., "March 30 to April 4, 2026")
+- Specify the exact date range: previous edition end date + 1 through today (e.g., "April 5 to April 16, 2026")
 - List specific search queries to run
 - Request structured output: what happened, when, source URL, key quotes, why it matters
 
@@ -142,12 +142,14 @@ Create `outline.md` with:
 
 ### Date window discipline
 
-**Only include stories clearly within the edition's week window.** This is the most common editorial mistake. Rules:
+**The edition's date window runs from the previous edition's end date + 1 through the current date (today).** For example, if the previous edition covered March 30 – April 4, the next edition starts on April 5 and extends through whatever date the edition is being finalized. This ensures no gap between editions and that the latest news is always captured.
+
+**Only include stories clearly within the edition's date window.** This is the most common editorial mistake. Rules:
 
 - If a story was covered in a previous edition → **don't retell it**. Reference it with a link: `[covered last week](../9984-.../README.md#section-anchor)`.
-- If a study/paper was published before the week window → **don't include it** even if it's relevant.
-- If ongoing fallout from a previous story has *new developments* this week → **cover the new development only**, with a brief cross-reference to the original.
-- Aggregate stats (e.g., "53% of AI code has security holes") that aren't tied to a specific this-week publication → **don't include**.
+- If a study/paper was published before the date window → **don't include it** even if it's relevant.
+- If ongoing fallout from a previous story has *new developments* within the window → **cover the new development only**, with a brief cross-reference to the original.
+- Aggregate stats (e.g., "53% of AI code has security holes") that aren't tied to a specific publication within the window → **don't include**.
 
 Commit the outline.
 
@@ -509,6 +511,35 @@ Claude Code's April 1 changelog included `/buddy` — "hatch a small creature th
 
 ---
 
+## Source Link Policy (Mandatory)
+
+> **⚠️ NO LINK = NO INCLUSION.** Every insight, news item, quote, statistic, and claim in the newsletter **must** have an inline source link. If a verifiable source URL cannot be provided, the item must be removed from the edition. This is non-negotiable.
+
+### Rules
+
+1. **Every factual claim needs an inline link** — not just a section header link, but a link near the specific claim. Readers should be able to click through and verify any statement without searching.
+2. **Quotes must link to the original source** — the outlet, blog post, tweet, or podcast where the quote was published. If the original is behind a paywall or 403, link to a credible secondary source that quotes the original verbatim.
+3. **Statistics must link to the study/report** — not to a secondary article summarizing the study. If the primary source is paywalled, link to both (primary + accessible secondary).
+4. **Voice Tracker entries** — each active voice must have at least one source link in their entry (blog, tweet, podcast, LinkedIn post).
+5. **Signals section** — every signal must reference a specific sourced event, not a general trend assertion.
+6. **During fact-check (Phase 6)** — any claim that cannot be traced to a verifiable source URL must be flagged for removal or softened to opinion/analysis with explicit "unverified" labeling.
+
+### What counts as a valid source
+
+- Official company blogs, changelogs, documentation
+- Established tech outlets (TechCrunch, The Register, Ars Technica, VentureBeat, etc.)
+- Named individual's public posts (blog, X/Twitter, LinkedIn, Threads) — link to the specific post
+- Academic papers (arXiv, conference proceedings)
+- GitHub repos, npm registry, official release notes
+
+### What does NOT count
+
+- "Multiple sources report..." with no links — name the sources and link them
+- "Industry observers noted..." — who? link or remove
+- Paraphrased consensus without attribution — either quote someone specific or remove
+
+---
+
 ## Common Mistakes
 
 | Mistake | Prevention |
@@ -522,6 +553,7 @@ Claude Code's April 1 changelog included `/buddy` — "hatch a small creature th
 | Session timeout loses work | Commit after every 2–3 sections, use part files for HTML |
 | Including April Fools' jokes as real news | Corroborate April 1 stories against April 2+ coverage from multiple outlets |
 | Including satire/parody sources | Verify the outlet is a legitimate news source, not a satirical site |
+| Claims without source links | NO LINK = NO INCLUSION. Every claim must have a verifiable inline source URL |
 
 ---
 
