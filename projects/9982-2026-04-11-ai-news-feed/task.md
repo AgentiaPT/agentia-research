@@ -50,11 +50,26 @@ Start working on last week's edition six software news update. Check past editio
 - Bryan Cantrill
 - Chelsea Troy
 
+## Key Stories This Week
+
+1. **Anthropic: Claude Mythos & Project Glasswing** — "Too dangerous to release" model finds thousands of zero-days. 40+ partner cybersecurity initiative
+2. **The Anti-Distillation Alliance** — OpenAI, Anthropic, Google unite against Chinese model copying. $1B AI Frontier Fund
+3. **Meta Goes Closed: Muse Spark** — First proprietary model, end of open-source era, $115-135B capex
+4. **OpenAI's Robot Tax Blueprint** — Policy paper: robot tax, public wealth fund, 4-day workweek
+5. **Anthropic surpasses OpenAI in revenue** — $30B vs $24B annualized, 1,000+ enterprise customers at $1M+
+6. **Claude Managed Agents** — Public beta, $0.08/hr, Notion/Asana/Sentry early adopters
+7. **Musk seeks Altman ouster** — Trial April 27, $134-150B damages
+8. **Altman Molotov cocktail attack** — Physical violence against AI leaders
+9. **Supply chain**: CPU-Z attack, Axios CVE published, Trivy fallout continues
+10. **Snap layoffs** — 1,000 jobs, AI generates 65% of code
+11. **19 new AI bills** — Regulatory wave
+12. **GLM-5.1** — Zhipu AI open-source 744B model without NVIDIA
+
 ## Progress
 
 - [x] Created project folder (9982) and task.md
-- [ ] Research phase — parallel research agents covering all topic areas
-- [ ] Create outline.md with section plan (12 sections)
+- [x] Research phase — web searches covering all topic areas (models, tools, security, jobs, voices, papers)
+- [x] Create outline.md with section plan (12 sections, theme: "The Fortress")
 - [ ] Write README.md sections incrementally
 - [ ] Build explorer.html dashboard
 - [ ] Take screenshot (explorer-screenshot.png)
