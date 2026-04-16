@@ -488,7 +488,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[LinkedIn](https://www.linkedin.com/in/nicedoc/) · [GitHub](https://github.com/nicedoc/chrome-devtools-mcp)**
 
-- Launched **Patterns.dev Agent Skills** (58 skills) with Hassan Djirdeh — JS, React, Vue patterns packaged for coding agents
+- Launched [**Patterns.dev Agent Skills**](https://github.com/PatternsDev/skills) (52 skills) with Hassan Djirdeh — JS, React, Vue patterns packaged for coding agents
 - Shipped **Chrome DevTools MCP Server v0.21.0** — Lighthouse via MCP, memory leak detection, a11y debugging, multi-agent `pageId` routing
 - Focus on making proven web development patterns machine-readable for the agent era
 
