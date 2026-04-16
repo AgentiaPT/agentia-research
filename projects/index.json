@@ -1,10 +1,10 @@
 {
-  "generated": "2026-04-16T05:45:13.932236+00:00",
+  "generated": "2026-04-16T06:08:57.802032+00:00",
   "projects": [
     {
       "id": "9982-2026-04-11-ai-news-feed",
       "slug": "ai-news-feed",
-      "title": "AI × Software Engineering — April 5–11, 2026",
+      "title": "AI × Software Engineering — April 5–15, 2026",
       "date": "2026-04-11",
       "status": "draft",
       "tags": [
@@ -39,7 +39,7 @@
         }
       ],
       "path": "projects/9982-2026-04-11-ai-news-feed",
-      "wordCount": 5553,
+      "wordCount": 5659,
       "readingTime": 24
     },
     {

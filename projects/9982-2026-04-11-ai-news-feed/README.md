@@ -1,5 +1,5 @@
 ---
-title: "AI × Software Engineering — April 5–11, 2026"
+title: "AI × Software Engineering — April 5–15, 2026"
 date: 2026-04-11
 status: draft
 tags: [ai, news, weekly, developer-tools, agentic-engineering, supply-chain, testing, open-source, layoffs]
@@ -10,7 +10,7 @@ explorers:
     screenshot: explorer-screenshot.png
 ---
 
-# AI × Software Engineering — April 5–11, 2026
+# AI × Software Engineering — April 5–15, 2026
 
 > **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
@@ -25,7 +25,7 @@ explorers:
 1. [The Week's Narrative — The Agent Takeover](#1-the-weeks-narrative--the-agent-takeover)
 2. [Claude Managed Agents — $0.08/hr Infrastructure Changes the Build-vs-Buy Math](#2-claude-managed-agents--008hr-infrastructure-changes-the-build-vs-buy-math)
 3. [GLM-5.1 — First Open-Source Model Tops SWE-Bench Pro](#3-glm-51--first-open-source-model-tops-swe-bench-pro)
-4. [The Agentic Engineering Inflection — DHH, Beck, Fowler, and the 90% Adoption Line](#4-the-agentic-engineering-inflection--dhh-beck-fowler-and-the-90-adoption-line)
+4. [The Agentic Engineering Inflection — DHH, Beck, Fowler, and the 85–90% Adoption Line](#4-the-agentic-engineering-inflection--dhh-beck-fowler-and-the-8590-adoption-line)
 5. [Snap's 65% Metric — What It Means for Your Engineering Org](#5-snaps-65-metric--what-it-means-for-your-engineering-org)
 6. [Project Glasswing — AI That Finds Zero-Days Faster Than Your Security Team](#6-project-glasswing--ai-that-finds-zero-days-faster-than-your-security-team)
 7. [Supply Chain: The Siege Continues](#7-supply-chain-the-siege-continues)
@@ -40,20 +40,20 @@ explorers:
 
 Last week was **the unraveling** — Anthropic leaked its own source code, North Korea poisoned npm, and Oracle fired 30,000 people. This week, the engineering profession crossed a threshold: the tools, the data, and the voices all converged on one message — **agents are no longer assistants, they're the primary workers**.
 
-DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "infuriating" a year ago — now starts every coding task by instructing an AI agent. Kent Beck and Martin Fowler went on The Pragmatic Engineer to compare the current shift to the Agile revolution. JetBrains published data showing 90% of developers now use AI tools regularly. Snap's CEO announced AI generates 65% of new code — then laid off 1,000 engineers. And the first open-source model topped SWE-Bench Pro, beating GPT-5.4 in the benchmark that matters most to working developers.
+DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "infuriating" a year ago — now starts every coding task by instructing an AI agent. Kent Beck and Martin Fowler went on The Pragmatic Engineer to compare the current shift to the Agile revolution. JetBrains published data showing 85–90% of developers now use AI tools regularly. Snap's CEO announced AI generates 65% of new code — then laid off 1,000 engineers. And the first open-source model topped SWE-Bench Pro, beating GPT-5.4 in the benchmark that matters most to working developers.
 
 | Layer | What Happened | Why You Should Care |
 |---|---|---|
 | **Developer Tools** | Claude Managed Agents launched at $0.08/hr | Build-vs-buy math for agent infrastructure just changed |
 | **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
-| **Workflow Shift** | DHH goes agent-first; 90% dev AI adoption (JetBrains) | The industry crossed from "trying AI" to "AI is how we work" |
+| **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains) | The industry crossed from "trying AI" to "AI is how we work" |
 | **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs | The first public company to quantify AI engineering displacement at scale |
 | **Security** | Anthropic's Mythos finds decades-old zero-days autonomously | AI vulnerability scanning just leapfrogged your entire security pipeline |
 | **Supply Chain** | Axios CVE published, CPU-Z compromised, Trivy fallout continues | Third consecutive week of major attacks — across three different vectors |
 
 ### The Unifying Thread
 
-What makes this week different from the generic "AI is coming" narrative is the specificity. These aren't predictions — they're measurements. DHH reviewed 100 PRs in 90 minutes. Snap's AI writes 65% of code. GLM-5.1 scores 58.4% on SWE-Bench Pro. JetBrains measured 90% adoption. The shift from "AI might change engineering" to "here are the numbers" happened this week.
+What makes this week different from the generic "AI is coming" narrative is the specificity. These aren't predictions — they're measurements. DHH's agent-first workflow has him delegating entire features to AI agents and reviewing the resulting PRs. Snap's AI writes 65% of code. GLM-5.1 scores 58.4% on SWE-Bench Pro. JetBrains measured 85–90% adoption. The shift from "AI might change engineering" to "here are the numbers" happened this week.
 
 ### The Deepest Signal
 
@@ -100,7 +100,7 @@ For teams currently running their own model-routing layers (and that's most team
 
 | Platform | Pricing | Key Differentiator |
 |---|---|---|
-| **Claude Managed Agents** | $0.08/hr + tokens | Best code understanding (80.8% SWE-bench), managed sandbox |
+| **Claude Managed Agents** | $0.08/hr + tokens | Best code understanding (80.8% SWE-bench Verified), managed sandbox |
 | **OpenAI Assistants API** | Per-token only | Largest model ecosystem, function calling |
 | **Google Vertex AI Agents** | Per-prediction | Deepest cloud integration, Gemini models |
 
@@ -169,7 +169,7 @@ The same week GLM-5.1 launched under MIT, Meta launched **Muse Spark** — its f
 
 ---
 
-## 4. The Agentic Engineering Inflection — DHH, Beck, Fowler, and the 90% Adoption Line
+## 4. The Agentic Engineering Inflection — DHH, Beck, Fowler, and the 85–90% Adoption Line
 
 **April 5–11 | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/) · [JetBrains Research](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) · [DHH Blog](https://world.hey.com/dhh)**
 
@@ -180,7 +180,7 @@ Three independent data points converged this week to signal that the engineering
 David Heinemeier Hansson — creator of Ruby on Rails, CTO of 37signals, and one of the loudest skeptics of AI coding tools as recently as early 2025 — published his new workflow. It's unrecognizable from a year ago:
 
 - **Every task starts with an agent.** DHH now instructs Claude Code or Open Code before writing any code himself.
-- **100 PRs in 90 minutes.** He reviewed 100 pull requests for his Omarchy Linux distribution using AI agents — a job he'd budgeted a week for.
+- **Massive PR throughput.** He described reviewing large batches of pull requests for his Omarchy Linux distribution using AI agents — work he'd previously budgeted much longer for.
 - **Designers write production code.** At 37signals, designers now ship production code using AI agents. The role boundary between "designer" and "developer" is dissolving.
 
 > "It's not a minor tool upgrade but a fundamental reorganization of the craft."
@@ -200,11 +200,11 @@ The architects of modern software engineering practices — TDD, XP, refactoring
 
 ### The JetBrains Numbers (April 2026)
 
-The [JetBrains Developer Ecosystem Survey](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) published fresh adoption data from 10,000+ developers worldwide:
+The [JetBrains Developer Ecosystem Survey](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) published fresh adoption data from 10,000+ developers worldwide. The main State of Developer Ecosystem survey (24,000+ developers, published late 2025) found 85% regular AI usage; a follow-up AI Pulse survey in January 2026 pushed that figure to 90%:
 
 | Metric | Number |
 |---|---|
-| **Developers using AI tools regularly** | 90% |
+| **Developers using AI tools regularly** | 85–90% |
 | **Using specialized AI coding tools** | 74% |
 | **AI-generated production code (estimated)** | 41% |
 | **Developers who fully trust AI output** | 29% |
@@ -223,7 +223,7 @@ The trend that matters: most developers now **stack multiple tools** — Cursor 
 
 ### What This Means for Engineering Managers
 
-The 90% adoption line means AI tools are no longer a competitive advantage — they're baseline. The differentiation has shifted to **how well your team uses them**:
+The 85–90% adoption line means AI tools are no longer a competitive advantage — they're baseline. The differentiation has shifted to **how well your team uses them**:
 
 1. **Workflow design matters more than tool selection.** Teams that design agent-first workflows outperform teams that bolt AI onto existing processes.
 2. **Senior engineers are amplified, not replaced.** DHH's experience confirms what the data shows: AI magnifies the gap between exceptional and average engineers.
@@ -234,6 +234,8 @@ The 90% adoption line means AI tools are no longer a competitive advantage — t
 ## 5. Snap's 65% Metric — What It Means for Your Engineering Org
 
 **April 15 | [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) · [TechRepublic](https://www.techrepublic.com/article/news-snap-ai-layoffs-april-2026/) · [Fast Company](https://www.fastcompany.com/91527233/snap-snapchat-layoffs-today-job-cuts-as-ceo-evan-spiegel-touts-ai-advances)**
+
+*Note: This story broke on April 15, after our standard April 5–11 coverage window, but was included due to its significance for the edition's engineering workforce theme.*
 
 When Snap CEO Evan Spiegel announced 1,000 layoffs (16% of workforce) this week, the headline number wasn't the layoffs — it was the justification: **AI now generates more than 65% of all new code at Snap.**
 
@@ -292,9 +294,9 @@ This isn't a specialized security tool — it's a general-purpose reasoning mode
 
 Rather than shipping Mythos publicly, Anthropic launched **Project Glasswing** — a vetted-access cybersecurity defense initiative:
 
-- **40+ partners** including AWS, Apple, Google, Microsoft, CrowdStrike, Cisco, and the Linux Foundation
+- **12 founding partners** including AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks
+- **40+ additional organizations** granted access through the Cyber Verification Program for defensive vulnerability scanning
 - **$100 million** in Claude usage credits for security researchers and open-source maintainers
-- **Cyber Verification Program** — vetted access to Mythos for defensive vulnerability scanning
 - **$4 million** in donations to open-source security organizations
 
 ### What This Means for Engineering Teams
@@ -329,8 +331,8 @@ If you use Axios (and most Node.js projects do), verify your lockfile doesn't re
 
 A **new** attack vector: the official **CPUID website** served trojanized ZIP archives for approximately 6 hours. This targets **desktop software distributed through a vendor's own website** — not a package registry.
 
-- Malicious DLL (`CRYPTBASE.dll`, Zig-compiled) with an **Alien RAT variant** backdoor
-- Thousands of developers downloading CPU utilities during the window were potentially exposed
+- Malicious DLL (`CRYPTBASE.dll`, Zig-compiled) with an **STX RAT** backdoor (also classified as Alien RAT by some vendors)
+- Over 150 confirmed victims across retail, manufacturing, telecom, and agriculture — with the true exposure likely higher given the download window
 - CPUID has remediated and published IoCs
 
 This matters because it expands the supply chain threat model: if CPUID's download page can be compromised, so can any software vendor's.
@@ -395,7 +397,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 **[Blog](https://world.hey.com/dhh) · [Pragmatic Engineer Podcast](https://newsletter.pragmaticengineer.com/)**
 
 - Published agent-first coding workflow — starts every task with AI agents
-- Reviewed 100 PRs in 90 minutes using Claude Code
+- Reviewed large batches of PRs for Omarchy Linux using Claude Code
 - Designers at 37signals now ship production code with AI agents
 - Warned about "peak programmer" compensation for average developers
 
@@ -462,7 +464,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 | Voice | Active | Key Topic | Source |
 |---|---|---|---|
-| DHH | ✅ | Agent-first workflow, 100 PRs in 90 min, peak programmer | Blog, Pragmatic Engineer |
+| DHH | ✅ | Agent-first workflow, AI code review, peak programmer | Blog, Pragmatic Engineer |
 | Kent Beck & Martin Fowler | ✅ | AI = Agile-scale disruption, non-determinism, burnout | Pragmatic Engineer |
 | Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes | Pragmatic Engineer |
 | Andrej Karpathy | ✅ | LLM knowledge bases, agentic engineering framing | X, GitHub |
@@ -481,7 +483,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 | Tool | What Changed This Week | Adoption |
 |---|---|---|
-| **Claude Code** | Managed Agents launched ($0.08/hr); 80.8% SWE-bench; 1M-token context beta | 18% workplace adoption, 91% CSAT |
+| **Claude Code** | Managed Agents launched ($0.08/hr); 80.8% SWE-bench Verified; 1M-token context beta | 18% workplace adoption, 91% CSAT |
 | **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review since March | 29% workplace (largest), growth stalling |
 | **Cursor** | Composer 2 (launched March 19, built on Kimi K2.5); 61.3 CursorBench; 73.7 SWE-bench Multilingual | 18% workplace, fastest growth |
 | **Windsurf** | Post-Cognition acquisition; strong free tier; privacy-focused enterprise features | Competitive free alternative |
@@ -535,7 +537,7 @@ Anthropic overtaking OpenAI in revenue — driven by enterprise API and Claude C
 
 ### The Tension for Engineering Leaders
 
-Snap's Spiegel made the implicit explicit: if AI generates 65% of code, you need fewer engineers to generate code — but you need better engineers to architect, review, and operate AI-generated systems. The engineering manager's challenge in 2026 isn't "should we use AI?" (90% already do). It's "how do we restructure teams for an agent-first workflow while maintaining code quality and developing junior talent?"
+Snap's Spiegel made the implicit explicit: if AI generates 65% of code, you need fewer engineers to generate code — but you need better engineers to architect, review, and operate AI-generated systems. The engineering manager's challenge in 2026 isn't "should we use AI?" (85–90% already do). It's "how do we restructure teams for an agent-first workflow while maintaining code quality and developing junior talent?"
 
 ---
 
