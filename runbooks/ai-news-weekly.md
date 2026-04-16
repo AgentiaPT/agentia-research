@@ -511,6 +511,35 @@ Claude Code's April 1 changelog included `/buddy` — "hatch a small creature th
 
 ---
 
+## Source Link Policy (Mandatory)
+
+> **⚠️ NO LINK = NO INCLUSION.** Every insight, news item, quote, statistic, and claim in the newsletter **must** have an inline source link. If a verifiable source URL cannot be provided, the item must be removed from the edition. This is non-negotiable.
+
+### Rules
+
+1. **Every factual claim needs an inline link** — not just a section header link, but a link near the specific claim. Readers should be able to click through and verify any statement without searching.
+2. **Quotes must link to the original source** — the outlet, blog post, tweet, or podcast where the quote was published. If the original is behind a paywall or 403, link to a credible secondary source that quotes the original verbatim.
+3. **Statistics must link to the study/report** — not to a secondary article summarizing the study. If the primary source is paywalled, link to both (primary + accessible secondary).
+4. **Voice Tracker entries** — each active voice must have at least one source link in their entry (blog, tweet, podcast, LinkedIn post).
+5. **Signals section** — every signal must reference a specific sourced event, not a general trend assertion.
+6. **During fact-check (Phase 6)** — any claim that cannot be traced to a verifiable source URL must be flagged for removal or softened to opinion/analysis with explicit "unverified" labeling.
+
+### What counts as a valid source
+
+- Official company blogs, changelogs, documentation
+- Established tech outlets (TechCrunch, The Register, Ars Technica, VentureBeat, etc.)
+- Named individual's public posts (blog, X/Twitter, LinkedIn, Threads) — link to the specific post
+- Academic papers (arXiv, conference proceedings)
+- GitHub repos, npm registry, official release notes
+
+### What does NOT count
+
+- "Multiple sources report..." with no links — name the sources and link them
+- "Industry observers noted..." — who? link or remove
+- Paraphrased consensus without attribution — either quote someone specific or remove
+
+---
+
 ## Common Mistakes
 
 | Mistake | Prevention |
@@ -524,6 +553,7 @@ Claude Code's April 1 changelog included `/buddy` — "hatch a small creature th
 | Session timeout loses work | Commit after every 2–3 sections, use part files for HTML |
 | Including April Fools' jokes as real news | Corroborate April 1 stories against April 2+ coverage from multiple outlets |
 | Including satire/parody sources | Verify the outlet is a legitimate news source, not a satirical site |
+| Claims without source links | NO LINK = NO INCLUSION. Every claim must have a verifiable inline source URL |
 
 ---
 

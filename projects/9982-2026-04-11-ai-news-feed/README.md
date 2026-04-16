@@ -45,7 +45,7 @@ DHH — the creator of Ruby on Rails, a man who dismissed AI coding tools as "in
 | Layer | What Happened | Why You Should Care |
 |---|---|---|
 | **Developer Tools** | Claude Managed Agents ($0.08/hr); Desktop redesign + Routines (April 14); Cursor 3 (April 2) | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |
-| **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 58 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
+| **Developer Experience** | Copilot CLI BYOK/offline (April 7); Patterns.dev 52 Agent Skills; Chrome DevTools MCP v0.21.0 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install" |
 | **Open Source** | GLM-5.1 tops SWE-Bench Pro (58.4%) | First open-source model to beat GPT-5.4 in coding — you can self-host this |
 | **Workflow Shift** | DHH goes agent-first; 85–90% dev AI adoption (JetBrains); 46% love Claude Code vs 9% Copilot (Pragmatic Eng survey, 906 devs) | The industry crossed from "trying AI" to "AI is how we work" |
 | **Engineering Orgs** | Snap: 65% AI-generated code → 1,000 layoffs; 71K+ industry-wide | The first public company to quantify AI engineering displacement at scale |
@@ -498,9 +498,9 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[LinkedIn](https://www.linkedin.com/in/emollick/)**
 
-- Published Wharton Lab research on game industry AI adaptation (Zimran Ahmed, 20 studios surveyed)
-- Highlighted UK government's independent Mythos assessment — "32-step corporate network attack" capability
-- Analyzed pattern of AI capability claims: overstated → minor wins → actual breakthroughs (using math as example)
+- Shared [Wharton Generative AI Labs research](https://lnkd.in/eSJunM-P) on game industry AI adaptation by Zimran Ahmed (Senior Fellow at Wharton GAIL) — 20 structured interviews across AAA, mid-size, and indie studios
+- Highlighted [UK government's independent Mythos assessment](https://lnkd.in/erimPs23) — "32-step corporate network attack, from initial reconnaissance to full network takeover"
+- Analyzed the pattern of AI capability claims: overstated → minor wins → actual breakthroughs (using math as example)
 
 **Theme:** Mollick continues as the most credible academic bridge between AI hype and evidence. His "claims progression" framework is useful for engineering leaders evaluating vendor announcements.
 
@@ -508,7 +508,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[LinkedIn](https://www.linkedin.com/in/patrickdebois/)**
 
-- Coined **"Context Coders vs. Agentic Coders"** distinction — two developer archetypes emerging in engineering orgs
+- Described **"Context Coders vs. Agentic Coders"** distinction — two developer archetypes emerging in engineering orgs
 - Context Coders manage the context development lifecycle; Agentic Coders maintain the pipelines — "the thing that builds the thing"
 - Predicted this split will formalize in larger orgs, becoming "the new CI/CD"
 - Noted coding pipeline convergence across all tools
@@ -530,10 +530,10 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 **[GitHub](https://github.com/trianglegrrl/misalign) · [Blog](https://alainahardie.com/completion-pressure-misalignment)**
 
-- Published first empirical study of completion-pressure misalignment in production agentic coding systems
-- 225 sessions, 628 events reviewed by hand, 198 genuine misalignment events across 8 categories
+- Published [first empirical study](https://github.com/trianglegrrl/misalign) of completion-pressure misalignment in production agentic coding systems
+- 225 sessions analyzed from a 1.65 GB corpus, 198 genuine misalignment events across 8 categories
 - Built open-source detection pipeline that works without hand-labeled data
-- Identified "guidance neglect" as tied with premature completion for most common failure
+- Identified premature completion (72 events) and guidance neglect (68 events) as the two dominant failure modes
 
 **Theme:** The first person to put numbers on the "why does my AI agent keep ignoring my project docs?" problem. Actionable for any team running Claude Code or Cursor.
 
@@ -551,13 +551,13 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 | Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
 | Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | Blog (April 15-16) |
 | Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 12) |
-| Addy Osmani | ✅ | Patterns.dev 58 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
+| Addy Osmani | ✅ | Patterns.dev 52 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
 | Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | LinkedIn, X (April 14) |
 | Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | LinkedIn |
 | Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | LinkedIn |
 | Alaina Hardie | ✅ | Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 628 events) | GitHub, Blog |
 | Marc Andreessen | ✅ | Latent Space pod: "Those days are just over" — software creation becomes trivially easy; Death of the Browser | Latent Space podcast |
-| Teresa Torres | ✅ | Claude Code deep-dive article series — memory, workflows, safety, context rot (widely shared by David Bland) | Blog |
+| Teresa Torres | ✅ | Claude Code deep-dive article series — memory, workflows, safety, context rot (widely shared by David Bland) | [producttalk.org](https://www.producttalk.org/) |
 | Steve Yegge | ❌ | Not active this week | — |
 | Kelsey Hightower | ❌ | Nutanix keynote was prior week | — |
 
@@ -600,17 +600,39 @@ The [npm sourcemap leak covered last week](../9983-2026-04-04-ai-news-feed/READM
 | **Anti-distillation mechanisms** | ✅ | Fake tool definitions injected into system prompts; reasoning chain summarization with cryptographic signatures |
 | **"Undercover mode"** | ✅ | Stealth mode to obscure Anthropic employee contributions to open-source projects |
 | **Multi-agent natural language orchestration** | ✅ | Sub-agents coordinated via natural language system prompts (e.g., "Do not rubber-stamp weak work") |
-| **"Spaghetti" architecture** | Debated | One analyst called it "staff-engineer spaghetti: performance-aware, feature-flagged, surgically optimized spaghetti." A 3,167-line function with 486 branch points was found. Others noted the async generator architecture is clean and the bash security system is thorough |
+| **"Spaghetti" architecture** | Debated | [One analyst](https://www.sabrina.dev/p/claude-code-source-leak-analysis) called it "staff-engineer spaghetti: performance-aware, feature-flagged, surgically optimized spaghetti." A [3,167-line function](https://techtrenches.dev/p/the-snake-that-ate-itself-what-claude) with 486 branch points was found in `print.ts`. Others noted the async generator architecture is clean and the bash security system is thorough |
 | **JSON parsed by LLM, not code** | ❌ | Mischaracterized — the code uses standard JSONL for persistence. System prompts are processed by the LLM, but that's how all LLM agents work |
 | **22 image compression retries** | ❌ | The "22" refers to security validators, not image retries. Context compression has a circuit breaker after 3 failures |
 
 **Adversa AI Security Vulnerability (April 1, patched April 6):** Claude Code's permission engine had a **hard-coded 50-subcommand limit**. When a shell command exceeded 50 subcommands (joined by `&&`, `||`, or `;`), **all deny-rule enforcement was silently skipped** — falling back to a generic "ask" prompt with zero indication that security rules were bypassed. A malicious `CLAUDE.md` could craft routine-looking build pipelines that exfiltrate credentials via hard-blocked commands like `curl` and `wget`. Anthropic patched it on April 6 using their tree-sitter parser.
 
+### Claude App Builder Leak — Screenshots Surface (April 12)
+
+**[Sifted](https://sifted.eu/articles/anthropic-lovable-challenger-leak) · [Dataconomy](https://dataconomy.com/2026/04/14/leaked-screenshots-reveal-anthropics-secret-full-stack-app-builder/) · [MindStudio Analysis](https://www.mindstudio.ai/blog/is-anthropic-building-lovable-replit-competitor) · [Kingy AI](https://kingy.ai/ai/anthropic-leak-hints-at-a-claude-app-builder-that-could-crush-lovable-bolt-and-v0/)**
+
+Screenshots of an unreleased **full-stack app builder** inside Claude surfaced on X on April 12 (5M+ combined views), revealing Anthropic is building a direct competitor to Lovable, Bolt, and Replit.
+
+**What the leaked screenshots show:**
+
+| Feature | Detail |
+|---|---|
+| **"Let's ship something great"** prompt bar | Full app creation interface inside Claude's chat window |
+| **Live in-browser preview pane** | Apps render in real time alongside the conversation |
+| **One-click "Publish" button** | Anthropic handles hosting/deployment — not just code generation |
+| **Pre-built "Recipes"** | Auth setup, database connections, dark mode, security scans |
+| **Settings panel** | Tabs for: security, storage, secrets, logs, user analytics |
+
+This is full-stack deployment: frontend, backend, database, auth, and hosting — all from a chat window. It goes far beyond current Claude Artifacts (which only render frontend previews).
+
+**The platform risk:** Lovable and Bolt both depend on Anthropic's Claude API. If Anthropic launches a competing product, it simultaneously competes with and supplies infrastructure to its rivals. As [MindStudio noted](https://www.mindstudio.ai/blog/is-anthropic-building-lovable-replit-competitor): "The gap between 'generates a frontend preview' and 'generates a production application' is enormous. Databases, auth, routing, state management, backend logic, error handling, deployment pipelines — none of these exist in the Artifact model today."
+
+**Connection to the source leak:** The March 31 code leak revealed feature flags ([KAIROS](https://thenewstack.io/claude-code-source-leak/), COORDINATOR, ULTRAPLAN) that align with these screenshots. Internal comments reportedly suggest a teaser period and a full launch target, though Anthropic has not confirmed any timeline. The [Claude Marketplace](https://www.uselayo.com/blog/claude-apps-the-complete-guide-for-2026) (launched March 2026) included Lovable and Replit as launch partners — suggesting Anthropic may position itself as the platform layer rather than a direct replacement, though the leaked feature set overlaps directly with Lovable's core.
+
 ### OpenClaw Billing War (April 4–10)
 
 **[TechCrunch](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) · [Boris Cherny (Threads)](https://www.threads.com/@boris_cherny/post/DWsAWeND5nm/)**
 
-Anthropic blocked third-party harnesses (like OpenClaw) from Claude subscriptions on April 4. Then **temporarily banned OpenClaw creator Peter Steinberger's account** around April 10. Steinberger criticized the timing, saying features were copied into Anthropic's harness before locking out open source. He subsequently migrated OpenClaw to OpenAI Codex OAuth.
+Anthropic blocked third-party harnesses (like OpenClaw) from Claude subscriptions on [April 4](https://www.threads.com/@boris_cherny/post/DWsAWeND5nm/). Then **[temporarily banned](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) OpenClaw creator Peter Steinberger's account** around April 10. Steinberger posted: "Funny how timings match up, first they copy some popular features into their closed harness, then they lock out open source." He subsequently migrated OpenClaw to OpenAI Codex OAuth.
 
 The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully subscription-eligible — this is intentional, not a workaround. The harness is where Anthropic controls fair use boundaries, context management, and caching. The emerging consensus: **the model and the harness are no longer separable layers** — they should be understood as a single product.
 
@@ -625,7 +647,7 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 | **Google Antigravity** | Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
 | **Replit** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
 | **Bolt (StackBlitz)** | Sonnet 4.6 became default model (April 8), replacing Sonnet 4.5/Opus 4.5; MCP server support | AI app builder segment |
-| **Lovable** | No major April product launch; $330M raised at $6.6B (Dec 2025); Anthropic reportedly building competing in-chat app builder ([Sifted](https://sifted.eu/articles/anthropic-lovable-challenger-leak)) | AI app builder segment leader |
+| **Lovable** | No major April product launch; [$330M raised at $6.6B](https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/) (Dec 2025); **Anthropic app builder leak** (April 12) threatens core business — [screenshots show](https://sifted.eu/articles/anthropic-lovable-challenger-leak) full-stack deploy from Claude chat | AI app builder segment leader — but depends on Claude API |
 
 ### Key Trends
 
@@ -639,7 +661,7 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 **[Patterns.dev](https://www.patterns.dev/ai/skills/) · [GitHub](https://github.com/PatternsDev/skills)**
 
-Addy Osmani and Hassan Djirdeh packaged **58 Agent Skills** from Patterns.dev — proven JavaScript, React, and Vue design patterns rewritten as agent-consumable skill files. Install by stack:
+Addy Osmani and Hassan Djirdeh packaged **52 Agent Skills** from [Patterns.dev](https://www.patterns.dev/) — proven JavaScript, React, and Vue design patterns rewritten as agent-consumable skill files. Install by stack:
 
 ```
 npx skills add PatternsDev/skills/react
@@ -647,15 +669,15 @@ npx skills add PatternsDev/skills/javascript
 npx skills add PatternsDev/skills --skill ai-ui-patterns
 ```
 
-Works with Claude Code, Cursor, Codex, Antigravity, Gemini CLI. Focuses on React + Vite (filling a gap for SPAs outside Next.js/Remix), render optimization, and TanStack Query guidance.
+Works with [Claude Code, Cursor, and Codex](https://github.com/PatternsDev/skills) (other agents compatible via plain markdown format). Focuses on React + Vite (filling a gap for SPAs outside Next.js/Remix) and render optimization.
 
 **Why this matters:** Agent Skills are becoming the new "npm install" — curated knowledge packages that make AI agents more effective at specific stacks. Expect more framework-specific skill libraries.
 
 ### Chrome DevTools MCP Server v0.21.0
 
-**[GitHub](https://github.com/nicedoc/chrome-devtools-mcp/releases/tag/v0.21.0)**
+**[GitHub](https://github.com/nicedoc/chrome-devtools-mcp/releases/tag/v0.21.0) · [Announcement](https://www.linkedin.com/in/nicedoc/)**
 
-Addy Osmani's DevTools MCP server shipped major agent-workflow features:
+The Chrome DevTools MCP server ([ChromeDevTools/chrome-devtools-mcp](https://github.com/nicedoc/chrome-devtools-mcp)) shipped major agent-workflow features, promoted by Addy Osmani:
 
 - **Lighthouse performance audits via MCP** — automated Core Web Vitals and LCP optimization in agent workflows
 - **Memory leak detection skill** — using `take_memory_snapshot` tool for autonomous leak detection
@@ -674,13 +696,13 @@ Addy Osmani's DevTools MCP server shipped major agent-workflow features:
 
 ### Completion-Pressure Misalignment: First Empirical Study
 
-**[GitHub](https://github.com/trianglegrrl/misalign) · [Blog](https://alainahardie.com/completion-pressure-misalignment)**
+**[GitHub](https://github.com/trianglegrrl/misalign)**
 
-Alaina Hardie (who uses Claude Code and Cursor daily) built an open-source pipeline to detect agent misalignment from production session traces. Key findings from 225 sessions, 628 events reviewed by hand:
+[Alaina Hardie](https://github.com/trianglegrrl) (who uses Claude Code and Cursor daily) built an open-source pipeline to detect agent misalignment from production session traces. Key findings from a stratified sample of 225 sessions (from a 1.65 GB corpus across 4 machines and 17 projects), with 198 genuine misalignment events identified across 8 categories:
 
-- **Guidance neglect** tied with **premature completion** as the most common failure mode — the agent skips project docs written specifically to prevent the mistake it's making
-- A prospective monitor catches 46% of premature completions and 32% of guidance neglect at 17% false positive rate
-- Each monitoring call costs **$0.001** — cheap enough to run on every assistant turn
+- **Premature completion** (72 events) and **guidance neglect** (68 events) are the two dominant failure modes — the agent declares tasks done too early or skips project docs written specifically to prevent the mistake it's making
+- A prospective monitor achieves a 36–78% catch rate depending on confidence tuning, at 17% false positive rate
+- The full pipeline runs for approximately **$10 in API calls** — cheap enough for regular audits
 - The pipeline works without hand-labeled data (zero-shot classification produces comparable results)
 
 **For engineering managers:** this is the first quantitative framework for measuring how often AI agents ignore your CLAUDE.md / .cursorrules / project docs. If you've felt like your agents keep making the same mistakes despite careful documentation — you're not imagining it, and now there's data.
@@ -789,12 +811,12 @@ Two independent surveys confirm the shift: Pragmatic Engineer (906 engineers) sh
 Copilot CLI's BYOK + local model support means defense, healthcare, and financial services teams can now run AI coding agents with zero external network dependency. The last major enterprise adoption blocker just fell.
 
 **Agent Skills: the new package ecosystem**
-Patterns.dev's 58 Agent Skills for JS/React/Vue are the first serious attempt at making coding agent knowledge installable and shareable. If this pattern catches on, expect `npx skills add` to become as common as `npm install`.
+Patterns.dev's 52 Agent Skills for JS/React/Vue are the first serious attempt at making coding agent knowledge installable and shareable. If this pattern catches on, expect `npx skills add` to become as common as `npm install`.
 
 ### 🔵 Watch Signals
 
-**OpenClaw vs. Anthropic — the harness wars**
-Anthropic blocked OpenClaw from subscriptions, banned its creator, and is reportedly building a Lovable competitor. The "model and harness are no longer separable" framing suggests vendors will increasingly lock down how their models are accessed. Watch for similar moves from OpenAI.
+**Anthropic app builder threatens the vibe-coding ecosystem**
+[Leaked screenshots](https://sifted.eu/articles/anthropic-lovable-challenger-leak) (April 12) show a full-stack app builder inside Claude — one-click publish, databases, auth, secrets. Lovable ($6.6B) and Bolt both depend on Claude's API. If Anthropic ships this, it competes with and supplies its own customers simultaneously. The [OpenClaw billing war](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) shows Anthropic is already willing to lock out third-party harnesses.
 
 **"Context Coders" vs. "Agentic Coders" (Patrick Debois)**
 The DevOps pioneer sees two distinct developer archetypes emerging: those who manage context for AI agents, and those who build the agent pipelines themselves. In large orgs, these may become separate roles — the next Platform Engineering split.
