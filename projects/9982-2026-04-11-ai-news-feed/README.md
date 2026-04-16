@@ -177,7 +177,7 @@ GLM-5.1 isn't just a code completion model — it's designed for long-horizon au
 | **CyberGym** | [68.7](https://github.com/zai-org/GLM-5) | Cybersecurity reasoning (top score) |
 | **MCP-Atlas** | [71.8](https://github.com/zai-org/GLM-5) | Multi-step tool use and API orchestration |
 
-In one demonstration, GLM-5.1 [autonomously worked on a coding task for **8 hours across 655 cycles**](https://venturebeat.com/technology/ai-joins-the-8-hour-work-day-as-glm-ships-5-1-open-source-llm-beating-opus-4-6-and-gpt-5-4-on-swe-bench-pro/) without human intervention — building an entire Linux desktop environment.
+In one demonstration, GLM-5.1 [autonomously worked on a coding task for **8 hours across 655 cycles**](https://venturebeat.com/technology/ai-joins-the-8-hour-work-day-as-glm-ships-5-1-open-source-llm-beating-opus-4) without human intervention — building an entire Linux desktop environment.
 
 ### Practical Specs for Your Infra Team
 
