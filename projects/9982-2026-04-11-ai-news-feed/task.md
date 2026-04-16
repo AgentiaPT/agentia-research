@@ -106,4 +106,13 @@ Extended edition window from April 5-11 to April 5-16 to capture late-breaking s
 - [x] Temporal window extension to April 5-16 (outline, runbook, task.md updated)
 - [x] Update README.md content for extended window
 - [x] Fact-check pass #3 — extended window additions (15 claims verified: Dresser memo, $8B accusation, Spud/Frontier, Jai Das quote, Block/Oracle/Atlassian/Pinterest/Pendo layoffs, 71K total, Willison Datasette, Irenic Capital; corrections: Block ~40% not ~45%, Jai Das title President not MD, Pendo quote softened)
+- [x] LinkedIn review + comprehensive coding agent coverage expansion (April 16)
+  - Added §10 subsections: Claude Code Desktop Redesign + Routines (April 14), Source Leak Aftermath + Adversa AI, OpenClaw Billing War
+  - Expanded tool table: Cursor 3, Copilot CLI BYOK, Windsurf Adaptive Model Selection, Replit Code Repair, Bolt, Lovable, Antigravity outage
+  - Added: Patterns.dev 58 Agent Skills, Chrome DevTools MCP v0.21.0, Completion-Pressure Misalignment study
+  - New voices: Addy Osmani, Ethan Mollick, Patrick Debois, Marc Andreessen, Alaina Hardie, Felix Rieseberg, Teresa Torres
+  - Updated §1 narrative table with Developer Experience and Platform Wars rows
+  - Expanded §12 signals: parallel-work UX, air-gapped AI, agent skills ecosystem, context/agentic coder split, harness wars
+  - Source: user's LinkedIn saved posts cross-referenced with web research (3 parallel research agents)
+- [ ] Update explorer.html dashboard with new content
 - [ ] Human commentary integration
