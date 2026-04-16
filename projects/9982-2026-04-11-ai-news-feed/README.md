@@ -552,7 +552,7 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 | Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | Blog (April 15-16) |
 | Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 12) |
 | Addy Osmani | ✅ | Patterns.dev 52 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
-| Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | LinkedIn, X (April 14) |
+| Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | [X](https://x.com/felixrieseberg/status/2044128194647994585) (April 14) |
 | Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | LinkedIn |
 | Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | LinkedIn |
 | Alaina Hardie | ✅ | Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 628 events) | GitHub, Blog |
@@ -827,14 +827,14 @@ Alaina Hardie's 225-session study shows agents systematically ignore project doc
 **OpenAI's "robot tax" policy paper**
 OpenAI published *Industrial Policy for the Intelligence Age* — proposing taxation of automated labor, a public wealth fund, and a four-day workweek. Policy, not engineering — but if implemented, it directly affects engineering economics and hiring budgets.
 
-**Musk vs. OpenAI trial (April 27)**
+**[Musk vs. OpenAI trial](https://www.cnbc.com/2026/04/15/musk-openai-trial-april-27.html) (April 27)**
 $134B damages, potential forced restructuring of OpenAI. If a court rules that an AI lab can't reorganize from nonprofit to for-profit, it sets precedent affecting Anthropic and every "public benefit" AI company. Watch for enterprise API stability implications.
 
-**Anthropic IPO (October 2026)**
+**[Anthropic IPO](https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/) (October 2026)**
 At ~$380B valuation, an Anthropic IPO would reshape the AI vendor landscape. If your team depends on Claude Code or the Anthropic API, the post-IPO company may have different priorities.
 
 **Physical threats to AI executives**
-A Molotov cocktail was thrown at Sam Altman's home (April 10). The suspect had a list of other AI executives. AI's societal debate has crossed from abstract to physical. No direct engineering impact, but signals the intensity of the backlash your AI-powered products may face from users.
+A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/04/10/molotov-cocktail-thrown-at-openai-ceo-sam-altmans-home.html) (April 10). The suspect had a list of other AI executives. AI's societal debate has crossed from abstract to physical. No direct engineering impact, but signals the intensity of the backlash your AI-powered products may face from users.
 
 ---
 
@@ -865,4 +865,4 @@ A Molotov cocktail was thrown at Sam Altman's home (April 10). The suspect had a
 > — **Marc Andreessen**, [Latent Space Podcast](https://latent.space/)
 
 > "The model and the harness are no longer separable layers."
-> — Emerging consensus among developers commenting on the OpenClaw billing changes
+> — Developer consensus emerging in [Hacker News discussion](https://news.ycombinator.com/item?id=47665285) on the OpenClaw billing changes
