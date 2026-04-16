@@ -304,7 +304,7 @@ This is the first time a public company CEO has quantified AI code generation at
 | **Taboola** | [100](https://www.calcalistech.com/ctechnews/article/hku03an3bg) | 5% | Not stated |
 | **Qualcomm** | [Undisclosed](https://kogo.iheart.com/featured/kogo-local-news/content/2026-04-10-qualcomm-announces-layoffs-in-san-diego/) | — | Yes — chip design |
 
-Through mid-April 2026, **80+ tech companies have cut 71,000+ jobs** ([Tom's Hardware](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai)), with [Nikkei Asia analysis](https://asia.nikkei.com/Business/Technology/AI-cited-in-nearly-half-of-tech-layoffs-in-2026) finding **~48% of cuts explicitly cite AI adoption** as a driver. Snap is the first to provide a specific code generation metric as justification — but the pattern is industry-wide.
+Through mid-April 2026, **80+ tech companies have cut 71,000+ jobs** ([Tom's Hardware](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai)), with [RationalFX analysis via TechRadar](https://www.techradar.com/pro/nearly-80-000-tech-workers-have-already-lost-their-jobs-in-2026-and-ai-impact-means-more-could-be-to-come#:~:text=nearly%20half) finding **~48% of cuts explicitly cite AI adoption** as a driver. Snap is the first to provide a specific code generation metric as justification — but the pattern is industry-wide.
 
 ---
 
@@ -743,7 +743,7 @@ The Chrome DevTools MCP server ([ChromeDevTools/chrome-devtools-mcp](https://git
 
 AI-native CI/CD is becoming the standard for productive teams this quarter:
 
-- **Intelligent test selection** — AI analyzes diffs and history to run only necessary tests ([up to 97% faster execution](https://circleci.com/) per CircleCI's Smarter Testing)
+- **Intelligent test selection** — AI analyzes diffs and history to run only necessary tests ([up to 97% faster execution](https://circleci.com/blog/smarter-testing/#:~:text=97%25) per CircleCI's Smarter Testing)
 - **Autonomous pipeline maintenance** — agents spot and auto-fix flaky tests and recurring build failures ([Harness test intelligence](https://www.harness.io/blog/unit-testing-in-ci-cd-how-to-accelerate-builds-without-sacrificing-quality))
 - **Natural language pipelines** — describe pipeline logic in plain English; AI generates CI/CD config
 - **Top choices:** [Harness](https://www.harness.io/) (full pipeline intelligence), [CircleCI](https://circleci.com/) (targeted test execution), [GitLab Duo](https://www.almtoolbox.com/blog/gitlab-2025-release-highlights-ai-cicd-devsecops/) + GitHub Actions + Copilot (accessible pricing)
@@ -879,7 +879,7 @@ A [Molotov cocktail was thrown at Sam Altman's home](https://www.cnbc.com/2026/0
 > — **Evan Spiegel**, CEO of Snap, [CNBC](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html#:~:text=AI%20now%20generates%20more%20than%2065%25)
 
 > "I can literally feel competence draining out of my fingers!"
-> — **DHH**, on his earlier frustration with AI coding tools, [X](https://x.com/dhh/status/1838281814700548312#:~:text=I%20can%20literally%20feel%20competence%20draining%20out%20of%20my%20fingers)
+> — **DHH**, on his earlier frustration with AI coding tools, [Lex Fridman Podcast #474](https://lexfridman.com/dhh-david-heinemeier-hansson-transcript/#:~:text=competence%20draining%20out%20of%20my%20fingers)
 
 > "AI models have reached a level of coding capability where they can surpass all but the most skilled humans at finding and exploiting software vulnerabilities."
 > — **Anthropic**, [Project Glasswing](https://www.anthropic.com/glasswing#:~:text=AI%20models%20have%20reached%20a%20level%20of%20coding%20capability)
