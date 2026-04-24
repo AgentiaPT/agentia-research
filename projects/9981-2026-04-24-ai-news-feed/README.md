@@ -12,7 +12,7 @@ explorers:
 
 # AI × Software Engineering — April 17–24, 2026
 
-> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> **Note:** This project was authored by [Github Copilot/Opus 4.6](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 **Theme:** The Reality Check — The week GPT-5.5 landed, Anthropic admitted its flagship got dumber, and Wall Street started repricing the entire SaaS sector.
 
