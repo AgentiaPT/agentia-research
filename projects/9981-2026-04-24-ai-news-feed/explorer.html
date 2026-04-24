@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Reality Check — AI × SE Weekly · April 17–24, 2026</title>
+<style>
+  @import url('data:text/css,');
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2d3a;
+    --text: #e0e0e0;
+    --muted: #8890a0;
+    --accent: #6c8cff;
+    --green: #4caf50;
+    --red: #ef5350;
+    --orange: #ff9800;
+    --yellow: #ffd54f;
+    --purple: #b388ff;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+  }
+  /* Sidebar */
+  .sidebar {
+    background: var(--card);
+    border-right: 1px solid var(--border);
+    padding: 24px 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .sidebar h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .sidebar a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 4px;
+    transition: background 0.15s;
+  }
+  .sidebar a:hover { background: rgba(108,140,255,0.1); color: var(--accent); }
+  .sidebar .back-link {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sidebar .back-link:hover { color: var(--accent); }
+  /* Main */
+  .main { padding: 32px 40px; max-width: 1200px; }
+  .gradient-text {
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  /* Header */
+  .header { margin-bottom: 40px; }
+  .header h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 4px; }
+  .header .subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 8px; }
+  .header .date-badge {
+    display: inline-block;
+    background: rgba(108,140,255,0.12);
+    color: var(--accent);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  /* Cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .stat-card:hover { transform: translateY(-2px); }
+  .stat-card .value { font-size: 1.8rem; font-weight: 800; margin-bottom: 4px; }
+  .stat-card .label { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+  .stat-card.green { border-color: var(--green); }
+  .stat-card.green .value { color: var(--green); }
+  .stat-card.red { border-color: var(--red); }
+  .stat-card.red .value { color: var(--red); }
+  .stat-card.orange { border-color: var(--orange); }
+  .stat-card.orange .value { color: var(--orange); }
+  /* Signal Radar */
+  .signal-section { margin-bottom: 12px; }
+  .signal-section .signal-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  .signal-items { padding-left: 32px; }
+  .signal-items li {
+    list-style: none;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    color: var(--text);
+    position: relative;
+  }
+  .signal-items li::before {
+    content: '→';
+    position: absolute;
+    left: -18px;
+    color: var(--muted);
+  }
+  /* Coverage Bars */
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+  .bar-label {
+    width: 180px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .bar-track {
+    flex: 1;
+    height: 24px;
+    background: rgba(108,140,255,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--accent), var(--purple));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    transition: width 0.6s ease;
+  }
+  /* Voice Map */
+  .voice-map-container {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    background: rgba(108,140,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .voice-map-inner {
+    position: absolute;
+    inset: 0;
+  }
+  .axis-label {
+    position: absolute;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .axis-label.left { left: 8px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+  .axis-label.right { right: 8px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+  .axis-label.top { top: 8px; left: 50%; transform: translateX(-50%); }
+  .axis-label.bottom { bottom: 8px; left: 50%; transform: translateX(-50%); }
+  .voice-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    z-index: 2;
+  }
+  .voice-dot:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0 12px rgba(108,140,255,0.5);
+    z-index: 10;
+  }
+  .voice-dot .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    white-space: nowrap;
+    font-size: 12px;
+    color: var(--text);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    z-index: 100;
+  }
+  .voice-dot:hover .tooltip { display: block; }
+  .crosshair-h, .crosshair-v {
+    position: absolute;
+    background: var(--border);
+  }
+  .crosshair-h { left: 5%; right: 5%; top: 50%; height: 1px; }
+  .crosshair-v { top: 5%; bottom: 5%; left: 50%; width: 1px; }
+  /* Quotes */
+  .quote-block {
+    border-left: 4px solid var(--accent);
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background: rgba(108,140,255,0.04);
+    border-radius: 0 8px 8px 0;
+  }
+  .quote-block .quote-text {
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .quote-block .quote-attr {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .quote-block.red { border-left-color: var(--red); background: rgba(239,83,80,0.04); }
+  .quote-block.orange { border-left-color: var(--orange); background: rgba(255,152,0,0.04); }
+  .quote-block.yellow { border-left-color: var(--yellow); background: rgba(255,213,79,0.04); }
+  .quote-block.purple { border-left-color: var(--purple); background: rgba(179,136,255,0.04); }
+  .quote-block.green { border-left-color: var(--green); background: rgba(76,175,80,0.04); }
+  /* Voice Tracker Table */
+  .tracker-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .tracker-table th {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--border);
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tracker-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .tracker-table tr:hover { background: rgba(108,140,255,0.04); }
+  .tracker-table .status-active { color: var(--green); }
+  .tracker-table .status-inactive { color: var(--muted); }
+  .tracker-table .topic { color: var(--text); font-size: 0.82rem; }
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar {
+      position: static;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 16px;
+    }
+    .main { padding: 20px 16px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .stat-card .value { font-size: 1.4rem; }
+    .bar-label { width: 120px; font-size: 0.78rem; }
+    .header h1 { font-size: 1.8rem; }
+  }
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <a href="README.md" class="back-link">← Back to README</a>
+    <h2>Sections</h2>
+    <a href="#stats">📊 Key Numbers</a>
+    <a href="#signals">📡 Signal Radar</a>
+    <a href="#coverage">📈 Theme Coverage</a>
+    <a href="#voicemap">🗺️ Voice Position Map</a>
+    <a href="#quotes">💬 Key Quotes</a>
+    <a href="#tracker">👥 Voice Tracker</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Header -->
+    <header class="header" id="top">
+      <h1 class="gradient-text">The Reality Check</h1>
+      <p class="subtitle">AI × Software Engineering — Weekly Intelligence Brief</p>
+      <span class="date-badge">📅 April 17 – 24, 2026</span>
+    </header>
+
+    <!-- Stats Grid -->
+    <section id="stats">
+      <h2 class="section-title gradient-text">📊 Key Numbers This Week</h2>
+      <div class="stats-grid">
+        <div class="stat-card green">
+          <div class="value">82.7%</div>
+          <div class="label">GPT-5.5 TerminalBench</div>
+        </div>
+        <div class="stat-card green">
+          <div class="value">64.3%</div>
+          <div class="label">Opus 4.7 SWE-Bench Pro</div>
+        </div>
+        <div class="stat-card red">
+          <div class="value">2×</div>
+          <div class="label">GPT-5.5 Price vs GPT-5.4</div>
+        </div>
+        <div class="stat-card green">
+          <div class="value">$0.14/M</div>
+          <div class="label">DeepSeek V4 Input Tokens</div>
+        </div>
+        <div class="stat-card red">
+          <div class="value">−27%</div>
+          <div class="label">Software ETF (6-month)</div>
+        </div>
+        <div class="stat-card red">
+          <div class="value">8,000</div>
+          <div class="label">Meta Layoffs</div>
+        </div>
+        <div class="stat-card red">
+          <div class="value">200K+</div>
+          <div class="label">MCP Servers Exposed</div>
+        </div>
+        <div class="stat-card orange">
+          <div class="value">$60B</div>
+          <div class="label">SpaceX / Cursor Valuation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signal Radar -->
+    <section id="signals">
+      <div class="card">
+        <h2 class="gradient-text">📡 Signal Radar</h2>
+
+        <div class="signal-section">
+          <div class="signal-header"><span style="font-size:1.2em">🔴</span> Critical</div>
+          <ul class="signal-items">
+            <li>MCP remote-code-execution "by design" — 200K+ servers exposed</li>
+            <li>CanisterSprawl worm — first self-propagating AI supply-chain attack</li>
+          </ul>
+        </div>
+
+        <div class="signal-section">
+          <div class="signal-header"><span style="font-size:1.2em">🟠</span> Warning</div>
+          <ul class="signal-items">
+            <li>Software stock repricing — IGV ETF down 27% in six months</li>
+            <li>Meta layoffs template — 8,000 cuts; "AI can do it" as justification</li>
+            <li>GPT-5.5 pricing 2× predecessor — capability vs cost tension</li>
+          </ul>
+        </div>
+
+        <div class="signal-section">
+          <div class="signal-header"><span style="font-size:1.2em">🟢</span> Emerging</div>
+          <ul class="signal-items">
+            <li>DeepSeek V4 on Chinese silicon — domestic chip independence</li>
+            <li>Claude Design threatens Figma — AI enters design tooling</li>
+            <li>Anthropic transparency — Claude 4 system prompt published</li>
+          </ul>
+        </div>
+
+        <div class="signal-section">
+          <div class="signal-header"><span style="font-size:1.2em">🔵</span> Watch</div>
+          <ul class="signal-items">
+            <li>SpaceX / Cursor $60B valuation — AI-native editor premium</li>
+            <li>ICLR safety papers — alignment research accelerating</li>
+            <li>Mollick gaming thesis + $22B AI investment wave</li>
+            <li>Comment and Control — adversarial code comments hijack agents</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theme Coverage Bars -->
+    <section id="coverage">
+      <div class="card">
+        <h2 class="gradient-text">📈 Theme Coverage</h2>
+        <div class="bar-row">
+          <span class="bar-label">§1 Narrative</span>
+          <div class="bar-track"><div class="bar-fill" style="width:100%">100%</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">§2 GPT-5.5</span>
+          <div class="bar-track"><div class="bar-fill" style="width:90%">90%</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">§3 Postmortem</span>
+          <div class="bar-track"><div class="bar-fill" style="width:85%">85%</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">§4 Claude Platform</span>
+          <div class="bar-track"><div class="bar-fill" style="width:80%">80%</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">§5 Security</span>
+          <div class="bar-track"><div class="bar-fill" style="width:95%">95%</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">§6 SpaceX / Cursor</span>
+          <div class="bar-track"><div class="bar-fill" style="width:70%">70%</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">§7 Market</span>
+          <div class="bar-track"><div class="bar-fill" style="width:85%">85%</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">§8 DeepSeek / Research</span>
+          <div class="bar-track"><div class="bar-fill" style="width:75%">75%</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voice Position Map -->
+    <section id="voicemap">
+      <div class="card">
+        <h2 class="gradient-text">🗺️ Voice Position Map</h2>
+        <p style="color:var(--muted);font-size:0.85rem;margin-bottom:16px;">Hover over dots to see names. X = Cautious ↔ Accelerationist · Y = Individual ↔ Institutional</p>
+        <div class="voice-map-container">
+          <div class="voice-map-inner">
+            <div class="crosshair-h"></div>
+            <div class="crosshair-v"></div>
+            <span class="axis-label left">Individual</span>
+            <span class="axis-label right">Institutional</span>
+            <span class="axis-label top" style="top:4px">Institutional</span>
+            <span class="axis-label bottom" style="bottom:4px">Individual</span>
+            <span class="axis-label" style="left:8px;bottom:8px;font-size:10px;">Cautious</span>
+            <span class="axis-label" style="right:8px;bottom:8px;font-size:10px;">Accelerationist</span>
+
+            <!-- Voices plotted: x% from left, (100-y)% from top -->
+            <div class="voice-dot" style="left:35%;top:15%;background:var(--purple);">
+              <span class="tooltip">Dario Amodei — Cautious / Institutional</span>
+            </div>
+            <div class="voice-dot" style="left:75%;top:10%;background:var(--red);">
+              <span class="tooltip">Sam Altman — Accelerationist / Institutional</span>
+            </div>
+            <div class="voice-dot" style="left:55%;top:40%;background:var(--orange);">
+              <span class="tooltip">Ethan Mollick — Center / Academic</span>
+            </div>
+            <div class="voice-dot" style="left:70%;top:20%;background:var(--accent);">
+              <span class="tooltip">Aaron Levie — Accelerationist / Institutional</span>
+            </div>
+            <div class="voice-dot" style="left:60%;top:50%;background:var(--green);">
+              <span class="tooltip">Steve Yegge — Center / Individual</span>
+            </div>
+            <div class="voice-dot" style="left:40%;top:45%;background:var(--yellow);">
+              <span class="tooltip">Martin Fowler — Cautious / Individual</span>
+            </div>
+            <div class="voice-dot" style="left:30%;top:55%;background:var(--red);">
+              <span class="tooltip">DHH — Cautious / Individual</span>
+            </div>
+            <div class="voice-dot" style="left:45%;top:60%;background:var(--muted);">
+              <span class="tooltip">Daniel Stenberg — Center / Individual</span>
+            </div>
+            <div class="voice-dot" style="left:55%;top:55%;background:var(--green);">
+              <span class="tooltip">Simon Willison — Center / Individual</span>
+            </div>
+            <div class="voice-dot" style="left:65%;top:25%;background:var(--accent);">
+              <span class="tooltip">Guillermo Rauch — Accelerationist / Institutional</span>
+            </div>
+            <div class="voice-dot" style="left:65%;top:50%;background:var(--orange);">
+              <span class="tooltip">Swyx — Accelerationist / Individual</span>
+            </div>
+            <div class="voice-dot" style="left:50%;top:45%;background:var(--green);">
+              <span class="tooltip">Gergely Orosz — Center / Individual</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Quotes -->
+    <section id="quotes">
+      <div class="card">
+        <h2 class="gradient-text">💬 Key Quotes</h2>
+
+        <div class="quote-block">
+          <div class="quote-text">"A new class of intelligence for real work."</div>
+          <div class="quote-attr">— OpenAI</div>
+        </div>
+
+        <div class="quote-block red">
+          <div class="quote-text">"This was the wrong tradeoff."</div>
+          <div class="quote-attr">— Anthropic Engineering</div>
+        </div>
+
+        <div class="quote-block orange">
+          <div class="quote-text">"If you're building agents, you basically need to throw away large parts of previous work."</div>
+          <div class="quote-attr">— Aaron Levie</div>
+        </div>
+
+        <div class="quote-block yellow">
+          <div class="quote-text">"The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami."</div>
+          <div class="quote-attr">— Daniel Stenberg</div>
+        </div>
+
+        <div class="quote-block purple">
+          <div class="quote-text">"I don't want AI turned on our own people."</div>
+          <div class="quote-attr">— Dario Amodei</div>
+        </div>
+
+        <div class="quote-block green">
+          <div class="quote-text">"Not everything around me is somebody's life work anymore."</div>
+          <div class="quote-attr">— Ethan Mollick</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voice Tracker Table -->
+    <section id="tracker">
+      <div class="card">
+        <h2 class="gradient-text">👥 Voice Tracker</h2>
+        <div style="overflow-x:auto;">
+          <table class="tracker-table">
+            <thead>
+              <tr>
+                <th>Voice</th>
+                <th>Status</th>
+                <th>Topic Summary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dario Amodei</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Opposes AI use on workers; Anthropic transparency push; Claude 4 system prompt</td>
+              </tr>
+              <tr>
+                <td><strong>Sam Altman</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">GPT-5.5 launch; "new class of intelligence" positioning; pricing strategy</td>
+              </tr>
+              <tr>
+                <td><strong>Ethan Mollick</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Gaming industry parallel; $22B AI thesis; cultural disruption commentary</td>
+              </tr>
+              <tr>
+                <td><strong>Aaron Levie</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Agent architecture reset; enterprise implications of MCP vulnerabilities</td>
+              </tr>
+              <tr>
+                <td><strong>Steve Yegge</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">AI coding tools critique; developer experience evolution</td>
+              </tr>
+              <tr>
+                <td><strong>Martin Fowler</strong></td>
+                <td class="status-inactive">❌ Inactive</td>
+                <td class="topic">—</td>
+              </tr>
+              <tr>
+                <td><strong>DHH</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Skeptical of AI layoff justification; software craftsmanship defense</td>
+              </tr>
+              <tr>
+                <td><strong>Daniel Stenberg</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">AI security report tsunami; open source maintainer burden from AI slop</td>
+              </tr>
+              <tr>
+                <td><strong>Simon Willison</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">MCP security analysis; prompt injection via code comments</td>
+              </tr>
+              <tr>
+                <td><strong>Guillermo Rauch</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Cursor/SpaceX valuation commentary; AI-native dev tools future</td>
+              </tr>
+              <tr>
+                <td><strong>Swyx</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">AI engineering landscape; agent infrastructure discourse</td>
+              </tr>
+              <tr>
+                <td><strong>Gergely Orosz</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Software market repricing analysis; Meta layoffs pattern</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align:center;padding:32px 0 48px;color:var(--muted);font-size:0.82rem;">
+      <p>AI × Software Engineering Weekly — Edition: The Reality Check</p>
+      <p style="margin-top:4px;">Built for <a href="https://github.com/AgentiaPT/agentia-research" style="color:var(--accent);text-decoration:none;">agentia-research</a></p>
+    </footer>
+  </main>
+</div>
+
+<script>
+  // Animate bars on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+          const w = bar.style.width;
+          bar.style.width = '0%';
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => { bar.style.width = w; });
+          });
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const coverageCard = document.querySelector('#coverage .card');
+  if (coverageCard) observer.observe(coverageCard);
+
+  // Smooth scroll for sidebar
+  document.querySelectorAll('.sidebar a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Animate stats on load
+  document.querySelectorAll('.stat-card').forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(16px)';
+    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    setTimeout(() => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 80 * i);
+  });
+</script>
+</body>
+</html>

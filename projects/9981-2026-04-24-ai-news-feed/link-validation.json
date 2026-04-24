@@ -1,0 +1,992 @@
+[
+  {
+    "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.anthropic.com/engineering/april-23-postmortem",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 247
+  },
+  {
+    "url": "https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 251
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-5-5/",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://openai.com/index/introducing-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 266
+  },
+  {
+    "url": "https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 263
+  },
+  {
+    "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 290
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 316
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://docs.anthropic.com/en/docs/claude-code",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 340
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-5-5/#:~:text=a%20new%20class%20of%20intelligence",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "a new class of intelligence",
+    "final_url": "https://openai.com/index/introducing-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 130
+  },
+  {
+    "url": "https://arxiv.org/abs/2504.13978",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://arxiv.org/abs/2504.13978",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 174
+  },
+  {
+    "url": "https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 209
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-5-5/#:~:text=a%20new%20class%20of%20intelligence%20for%20real%20work%20and%20powering%20agents",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "a new class of intelligence for real work and powering agents",
+    "final_url": "https://openai.com/index/introducing-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 3
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-5-5/#:~:text=Codex",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Codex",
+    "final_url": "https://openai.com/index/introducing-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 5
+  },
+  {
+    "url": "https://agentiapt.github.io/agentia-research/projects/9981-2026-04-24-ai-news-feed/explorer.html",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://agentiapt.github.io/agentia-research/projects/9981-2026-04-24-ai-news-feed/explorer.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 487
+  },
+  {
+    "url": "https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 487
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-5-5/#:~:text=long-context",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "long-context",
+    "final_url": "https://openai.com/index/introducing-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 8
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 254
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-5-5/#:~:text=fewer%20tokens",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "fewer tokens",
+    "final_url": "https://openai.com/index/introducing-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 3
+  },
+  {
+    "url": "https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 515
+  },
+  {
+    "url": "https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 346
+  },
+  {
+    "url": "https://openai.com/index/introducing-gpt-5-5/#:~:text=You%20can%20give%20GPT-5.5%20a%20messy%2C%20multi-part%20task",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "You can give GPT-5.5 a messy",
+    "final_url": "https://openai.com/index/introducing-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 4
+  },
+  {
+    "url": "https://appwrite.io/blog/post/gpt-5-5-launch#:~:text=%245%20per%20million%20input%20tokens",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "$5 per million input tokens",
+    "final_url": "https://appwrite.io/blog/post/gpt-5-5-launch",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 188
+  },
+  {
+    "url": "https://appwrite.io/blog/post/gpt-5-5-launch#:~:text=token%20efficiency",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "token efficiency",
+    "final_url": "https://appwrite.io/blog/post/gpt-5-5-launch",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 160
+  },
+  {
+    "url": "https://appwrite.io/blog/post/gpt-5-5-launch#:~:text=benchmarks%2C%20pricing%2C%20and%20what%20changes",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "benchmarks",
+    "final_url": "https://appwrite.io/blog/post/gpt-5-5-launch",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 351
+  },
+  {
+    "url": "https://the-decoder.com/openai-unveils-gpt-5-5-claims-a-new-class-of-intelligence-at-double-the-api-price/#:~:text=new%20class%20of%20intelligence",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "new class of intelligence",
+    "final_url": "https://the-decoder.com/openai-unveils-gpt-5-5-claims-a-new-class-of-intelligence-at-double-the-api-price/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 292
+  },
+  {
+    "url": "https://iclr.cc/virtual/2026/papers.html",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://iclr.cc/virtual/2026/papers.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 463
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/april-23-postmortem#:~:text=update%20on%20recent%20Claude%20Code%20quality%20reports",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "update on recent Claude Code quality reports",
+    "final_url": "https://www.anthropic.com/engineering/april-23-postmortem",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 97
+  },
+  {
+    "url": "https://the-decoder.com/openai-unveils-gpt-5-5-claims-a-new-class-of-intelligence-at-double-the-api-price/#:~:text=DeepSeek",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "DeepSeek",
+    "final_url": "https://the-decoder.com/openai-unveils-gpt-5-5-claims-a-new-class-of-intelligence-at-double-the-api-price/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 100
+  },
+  {
+    "url": "https://www.anthropic.com/engineering/april-23-postmortem#:~:text=This%20was%20the%20wrong%20tradeoff",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "This was the wrong tradeoff",
+    "final_url": "https://www.anthropic.com/engineering/april-23-postmortem",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 4
+  },
+  {
+    "url": "https://www.anthropic.com/news/claude-design-anthropic-labs#:~:text=Introducing%20Claude%20Design",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Introducing Claude Design",
+    "final_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 4
+  },
+  {
+    "url": "https://apidog.com/blog/what-is-gpt-5-5/#:~:text=pricing",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "pricing",
+    "final_url": "https://apidog.com/blog/what-is-gpt-5-5/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 319
+  },
+  {
+    "url": "https://community.openai.com/#:~:text=GPT-5.5%20pricing",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "GPT-5.5 pricing",
+    "final_url": "https://community.openai.com/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 317
+  },
+  {
+    "url": "https://decrypt.co/365333/openai-gpt-5-5-release-agentic-coding-benchmarks#:~:text=Faster%2C%20Smarter%E2%80%94And%20Pricier",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Faster",
+    "final_url": "https://decrypt.co/365333/openai-gpt-5-5-release-agentic-coding-benchmarks",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 404
+  },
+  {
+    "url": "https://www.anthropic.com/news/claude-design-anthropic-labs#:~:text=research%20preview",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "research preview",
+    "final_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 4
+  },
+  {
+    "url": "https://www.anthropic.com/news/claude-design-anthropic-labs#:~:text=first%20draft",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "first draft",
+    "final_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 4
+  },
+  {
+    "url": "https://www.theregister.com/2026/04/23/anthropic_says_it_has_fixed/#:~:text=Anthropic%20admits%20it%20dumbed%20down%20Claude",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Anthropic admits it dumbed down Claude",
+    "final_url": "https://www.theregister.com/2026/04/23/anthropic_says_it_has_fixed/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 188
+  },
+  {
+    "url": "https://www.marktechpost.com/2026/04/23/openai-releases-gpt-5-5-a-fully-retrained-agentic-model-that-scores-82-7-on-terminal-bench-2-0-and-84-9-on-gdpval/#:~:text=Terminal-Bench%202.0",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Terminal-Bench 2.0",
+    "final_url": "https://www.marktechpost.com/2026/04/23/openai-releases-gpt-5-5-a-fully-retrained-agentic-model-that-scores-82-7-on-terminal-bench-2-0-and-84-9-on-gdpval/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 327
+  },
+  {
+    "url": "https://arcprize.org/leaderboard#:~:text=GPT-5.5",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "GPT-5.5",
+    "final_url": "https://arcprize.org/leaderboard",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 526
+  },
+  {
+    "url": "https://www.livemint.com/technology/tech-news/did-anthropic-dumb-down-claude-code-post-mortem-reveals-the-three-bugs-that-crippled-performance-11777013226388.html#:~:text=three%20bugs%20that%20crippled%20performance",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "three bugs that crippled performance",
+    "final_url": "https://www.livemint.com/technology/tech-news/did-anthropic-dumb-down-claude-code-post-mortem-reveals-the-three-bugs-that-crippled-performance-11777013226388.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 314
+  },
+  {
+    "url": "https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork#:~:text=live%20artifacts",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "live artifacts",
+    "final_url": "https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 63
+  },
+  {
+    "url": "https://www.livemint.com/technology/tech-news/did-anthropic-dumb-down-claude-code-post-mortem-reveals-the-three-bugs-that-crippled-performance-11777013226388.html#:~:text=usage%20limits%20reset",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "usage limits reset",
+    "final_url": "https://www.livemint.com/technology/tech-news/did-anthropic-dumb-down-claude-code-post-mortem-reveals-the-three-bugs-that-crippled-performance-11777013226388.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 289
+  },
+  {
+    "url": "https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/#:~:text=Krieger%20Exits%20Figma%20Board",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Krieger Exits Figma Board",
+    "final_url": "https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 321
+  },
+  {
+    "url": "https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/#:~:text=Mike%20Krieger%20Exits%20Figma%20Board",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Mike Krieger Exits Figma Board",
+    "final_url": "https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 241
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=uhQfErAzdiA#:~:text=RIP%20Frontend%20Developers",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "RIP Frontend Developers",
+    "final_url": "https://www.youtube.com/watch?v=uhQfErAzdiA",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 43
+  },
+  {
+    "url": "https://kingy.ai/ai/clients-were-right-anthropic-admits-claude-code-got-dumber-not-claude-post-mortem/#:~:text=Clients%20Were%20Right",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Clients Were Right",
+    "final_url": "https://kingy.ai/ai/clients-were-right-anthropic-admits-claude-code-got-dumber-not-claude-post-mortem/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 390
+  },
+  {
+    "url": "https://www.basisreport.com/news/fig-figma-stock-drops-ai-design-competition#:~:text=Figma%20Stock%20Drops%207%25%20as%20AI%20Design%20Tools%20Threaten",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Figma Stock Drops 7% as AI Design Tools Threaten",
+    "final_url": "https://www.basisreport.com/news/fig-figma-stock-drops-ai-design-competition",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 305
+  },
+  {
+    "url": "https://www.aibusinessreview.org/2026/04/18/anthropic-cpo-figma-board-exit-competing-product/#:~:text=Anthropic%20CPO%20Leaves%20Figma%20Board",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Anthropic CPO Leaves Figma Board",
+    "final_url": "https://www.aibusinessreview.org/2026/04/18/anthropic-cpo-figma-board-exit-competing-product/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 281
+  },
+  {
+    "url": "https://officechai.com/ai/figmas-stock-falls-7-after-anthropic-introduces-claude-design/#:~:text=Figma%E2%80%99s%20Stock%20Falls%207%25",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Figma\u2019s Stock Falls 7%",
+    "final_url": "https://officechai.com/ai/figmas-stock-falls-7-after-anthropic-introduces-claude-design/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 392
+  },
+  {
+    "url": "https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html#:~:text=responsibility%20of%20downstream%20developers",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "responsibility of downstream developers",
+    "final_url": "https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 121
+  },
+  {
+    "url": "https://yourstory.com/ai-story/claude-cowork-live-dashboards-ai-bi-disruption#:~:text=replacing%20dashboards%20with%20live%20artifacts",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "replacing dashboards with live artifacts",
+    "final_url": "https://yourstory.com/ai-story/claude-cowork-live-dashboards-ai-bi-disruption",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 427
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html#:~:text=software%20stocks",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "software stocks",
+    "final_url": "https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 184
+  },
+  {
+    "url": "https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/#:~:text=ServiceNow",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "ServiceNow",
+    "final_url": "https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 247
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html#:~:text=Meta%20will%20cut",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Meta will cut",
+    "final_url": "https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 176
+  },
+  {
+    "url": "https://finance.yahoo.com/markets/stocks/articles/ibm-q1-2026-earnings-beat-132710855.html#:~:text=IBM%20stock%20drops",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "IBM stock drops",
+    "final_url": "https://finance.yahoo.com/markets/stocks/articles/ibm-q1-2026-earnings-beat-132710855.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 233
+  },
+  {
+    "url": "https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "everything around me is somebody's life work",
+    "final_url": "https://x.com/emollick/status/2045318277958709540",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 77
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=DeepSeek%20V4",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "DeepSeek V4",
+    "final_url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 3
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=Huawei%20Ascend",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Huawei Ascend",
+    "final_url": "https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 3
+  },
+  {
+    "url": "https://enterprisezone.cc/sachin-rekhi-unveils-claude-coworks-live-artifacts-for-effortless-dashboard-creation/#:~:text=I%20used%20to%20recommend%20Claude%20Code%20for%20this%20but%20now%20it%E2%80%99s%20all%20possible%20simply%20in%20Claude%20Cowork",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "I used to recommend Claude Code for this but now it\u2019s all possible simply in Claude Cowork",
+    "final_url": "https://enterprisezone.cc/sachin-rekhi-unveils-claude-coworks-live-artifacts-for-effortless-dashboard-creation/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 558
+  },
+  {
+    "url": "https://enterprisezone.cc/sachin-rekhi-unveils-claude-coworks-live-artifacts-for-effortless-dashboard-creation/#:~:text=AI%20Productivity%20class",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "AI Productivity class",
+    "final_url": "https://enterprisezone.cc/sachin-rekhi-unveils-claude-coworks-live-artifacts-for-effortless-dashboard-creation/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 558
+  },
+  {
+    "url": "https://www.mrlatte.net/en/stories/2026/04/18/claude-design/#:~:text=From%2020%20Prompts%20Down%20to%202",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "From 20 Prompts Down to 2",
+    "final_url": "https://www.mrlatte.net/en/stories/2026/04/18/claude-design/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 520
+  },
+  {
+    "url": "https://www.theneuron.ai/newsletter/around-the-horn-digest-everything-that-happened-in-ai-this-weekend-friday-sunday-april-17-19-2026/#:~:text=SaaSpocalypse",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "SaaSpocalypse",
+    "final_url": "https://www.theneuron.ai/newsletter/around-the-horn-digest-everything-that-happened-in-ai-this-weekend-friday-sunday-april-17-19-2026/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 571
+  },
+  {
+    "url": "https://beancount.io/blog/2026/02/02/vertical-saas-survival-guide-competing-against-ai-giants#:~:text=Vertical%20SaaS%20Survival%20Guide",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Vertical SaaS Survival Guide",
+    "final_url": "https://beancount.io/blog/2026/02/02/vertical-saas-survival-guide-competing-against-ai-giants",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 574
+  },
+  {
+    "url": "https://arxiv.org/abs/2504.13978#:~:text=44%25%20of%20agent-generated%20code",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "44% of agent-generated code",
+    "final_url": "https://arxiv.org/abs/2504.13978",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 89
+  },
+  {
+    "url": "https://arxiv.org/abs/2504.14813#:~:text=over-editing",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "over-editing",
+    "final_url": "https://arxiv.org/abs/2504.14813",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 89
+  },
+  {
+    "url": "https://arxiv.org/abs/2504.12069#:~:text=ASMR-Bench",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "ASMR-Bench",
+    "final_url": "https://arxiv.org/abs/2504.12069",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 6
+  },
+  {
+    "url": "https://arxiv.org/abs/2504.14157#:~:text=61K%20runs",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "61K runs",
+    "final_url": "https://arxiv.org/abs/2504.14157",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 86
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html#:~:text=I%20don%27t%20want%20AI%20turned%20on%20our%20own%20people",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "I don't want AI turned on our own people",
+    "final_url": "https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 5
+  },
+  {
+    "url": "https://www.googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-Strategic-Partnership-to-Boost-Automotive-Innovation-with-Gemini-for-Workspace-and-Agentic-AI#:~:text=35%25%20of%20validated%20code",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "35% of validated code",
+    "final_url": "https://www.googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-Strategic-Partnership-to-Boost-Automotive-Innovation-with-Gemini-for-Workspace-and-Agentic-AI",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 514
+  },
+  {
+    "url": "https://www.gamedeveloper.com/business/dead-by-daylight-developer-behaviour-interactive-lays-off-staff-for-third-time-since-2024#:~:text=third%20round%20of%20layoffs",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "third round of layoffs",
+    "final_url": "https://www.gamedeveloper.com/business/dead-by-daylight-developer-behaviour-interactive-lays-off-staff-for-third-time-since-2024",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 444
+  },
+  {
+    "url": "https://blockchain.news/news/morgan-stanley-ai-gaming-22-billion-annual-profit#:~:text=cut%20game%20dev%20costs",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "cut game dev costs",
+    "final_url": "https://blockchain.news/news/morgan-stanley-ai-gaming-22-billion-annual-profit",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 442
+  },
+  {
+    "url": "https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 139
+  },
+  {
+    "url": "https://explore.n1n.ai/p/qwen-3-6-27b-new-open-weight-model#:~:text=Qwen%203.6-27B",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Qwen 3.6-27B",
+    "final_url": "https://explore.n1n.ai/p/qwen-3-6-27b-new-open-weight-model",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 365
+  },
+  {
+    "url": "https://www.oneusefulthing.org/#:~:text=procedural%203D%20harbor%20town",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "procedural 3D harbor town",
+    "final_url": "https://www.oneusefulthing.org/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 475
+  },
+  {
+    "url": "https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 159
+  },
+  {
+    "url": "https://blockchain.news/ainews/gpt-5-5-vs-leading-models-procedural-3d-harbor-town-simulation-benchmark-and-2026-ai-capabilities-analysis",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://blockchain.news/ainews/gpt-5-5-vs-leading-models-procedural-3d-harbor-town-simulation-benchmark-and-2026-ai-capabilities-analysis",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 216
+  },
+  {
+    "url": "https://blockchain.news/ainews/sam-altman-shares-jakub-s-quote-latest-analysis-on-openai-leadership-signals-and-2026-ai-product-roadmap-implications",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://blockchain.news/ainews/sam-altman-shares-jakub-s-quote-latest-analysis-on-openai-leadership-signals-and-2026-ai-product-roadmap-implications",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 8
+  },
+  {
+    "url": "https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html#:~:text=throw%20away%20large%20parts%20of%20previous%20work",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "throw away large parts of previous work",
+    "final_url": "https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 322
+  },
+  {
+    "url": "https://simonwillison.net/#:~:text=agentic%20engineering%20patterns",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "agentic engineering patterns",
+    "final_url": "https://simonwillison.net/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 149
+  },
+  {
+    "url": "https://explore.n1n.ai/blog/qwen-3-6-27b-gguf-llama-cpp-local-multimodal-2026-04-23",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://explore.n1n.ai/blog/qwen-3-6-27b-gguf-llama-cpp-local-multimodal-2026-04-23",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 72
+  },
+  {
+    "url": "https://martinfowler.com/fragments/2026-04-21.html#:~:text=cognitive%20debt",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "cognitive debt",
+    "final_url": "https://martinfowler.com/fragments/2026-04-21.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 321
+  },
+  {
+    "url": "https://buildfastwithai.com/artificial-intelligence/iclr-2026-key-breakthroughs#:~:text=AlphaAlign",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "AlphaAlign",
+    "final_url": "https://buildfastwithai.com/artificial-intelligence/iclr-2026-key-breakthroughs",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 548
+  },
+  {
+    "url": "https://buildfastwithai.com/artificial-intelligence/iclr-2026-key-breakthroughs#:~:text=WaltzRL",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "WaltzRL",
+    "final_url": "https://buildfastwithai.com/artificial-intelligence/iclr-2026-key-breakthroughs",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 542
+  },
+  {
+    "url": "https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 54
+  },
+  {
+    "url": "https://world.hey.com/dhh#:~:text=our%20computers",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "our computers",
+    "final_url": "https://world.hey.com/dhh",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 408
+  },
+  {
+    "url": "https://arena.ai/leaderboard/text",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://arena.ai/leaderboard/text",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 213
+  },
+  {
+    "url": "https://newsletter.pragmaticengineer.com/#:~:text=Designing%20Data-Intensive%20Applications",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "Designing Data-Intensive Applications",
+    "final_url": "https://newsletter.pragmaticengineer.com/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 369
+  },
+  {
+    "url": "https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/#:~:text=AI%20slop%20tsunami",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "AI slop tsunami",
+    "final_url": "https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 411
+  },
+  {
+    "url": "https://www.googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-Strategic-Partnership-to-Boost-Automotive-Innovation-with-Gemini-for-Workspace-and-Agentic-AI",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-Strategic-Partnership-to-Boost-Automotive-Innovation-with-Gemini-for-Workspace-and-Agentic-AI",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 115
+  },
+  {
+    "url": "https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html#:~:text=two-tier%20system",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "two-tier system",
+    "final_url": "https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 521
+  },
+  {
+    "url": "https://blogs.oracle.com/ai-and-datascience/cohere-sdk-is-now-natively-integrated-with-oci-ai",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://blogs.oracle.com/ai-and-datascience/cohere-sdk-is-now-natively-integrated-with-oci-ai",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 261
+  },
+  {
+    "url": "https://poddtoppen.se/podcast/1674008350/latent-space-the-ai-engineer-podcast/shopifys-ai-phase-transition-2026-usage-explosion-unlimited-opus-46-token-budget-tangle-tangent-simgym-with-mikhail-parakhin-shopify-cto",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://poddtoppen.se/podcast/1674008350/latent-space-the-ai-engineer-podcast/shopifys-ai-phase-transition-2026-usage-explosion-unlimited-opus-46-token-budget-tangle-tangent-simgym-with-mikhail-parakhin-shopify-cto",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 515
+  },
+  {
+    "url": "https://www.bloomberg.com/news/articles/2026-04-22/vista-strikes-deal-to-speed-up-google-ai-in-software-portfolio",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.bloomberg.com/news/articles/2026-04-22/vista-strikes-deal-to-speed-up-google-ai-in-software-portfolio",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 134
+  },
+  {
+    "url": "https://www.bloomberg.com/news/articles/2026-04-22/nvidia-backed-vast-data-raises-1-billion-triples-valuation-to-30-billion",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.bloomberg.com/news/articles/2026-04-22/nvidia-backed-vast-data-raises-1-billion-triples-valuation-to-30-billion",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 171
+  },
+  {
+    "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 197
+  },
+  {
+    "url": "https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 192
+  },
+  {
+    "url": "https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 147
+  },
+  {
+    "url": "https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 165
+  },
+  {
+    "url": "https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 179
+  },
+  {
+    "url": "https://money.usnews.com/investing/news/articles/2026-04-22/gaming-industry-could-unlock-22-billion-in-profits-on-ai-driven-cost-cuts-morgan-stanley",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://money.usnews.com/investing/news/articles/2026-04-22/gaming-industry-could-unlock-22-billion-in-profits-on-ai-driven-cost-cuts-morgan-stanley",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 404
+  },
+  {
+    "url": "https://laffaz.com/quora-layoffs-poe-adam-dangelo/",
+    "status": "BLOCKED",
+    "http": 403,
+    "anchor": "n/a",
+    "anchor_text": "",
+    "final_url": "https://laffaz.com/quora-layoffs-poe-adam-dangelo/",
+    "note": "HTTP 403 (may be paywall / bot block / server error)",
+    "elapsed_ms": 447
+  }
+]

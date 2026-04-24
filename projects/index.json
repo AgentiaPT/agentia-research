@@ -1,6 +1,49 @@
 {
-  "generated": "2026-04-16T14:53:01.807784+00:00",
+  "generated": "2026-04-24T14:25:17.535367+00:00",
   "projects": [
+    {
+      "id": "9981-2026-04-24-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI × Software Engineering — April 17–24, 2026",
+      "date": "2026-04-24",
+      "status": "draft",
+      "tags": [
+        "ai-news",
+        "weekly",
+        "reality-check",
+        "gpt55",
+        "anthropic-postmortem",
+        "claude-design",
+        "security",
+        "spacex-cursor",
+        "market-repricing",
+        "deepseek-v4"
+      ],
+      "description": "**Previous edition:** [April 5–16, 2026](../9982-2026-04-11-ai-news-feed/README.md)",
+      "files": [
+        "README.md",
+        "explorer-screenshot.png",
+        "explorer.html",
+        "outline.md",
+        "research-raw.md",
+        "sources.md",
+        "task.md"
+      ],
+      "htmlFiles": [
+        "explorer.html"
+      ],
+      "explorers": [
+        {
+          "file": "explorer.html",
+          "title": "The Reality Check Dashboard",
+          "description": "Visual dashboard with signal radar, voice position maps, benchmark comparisons, and key quotes from the week AI got a reality check",
+          "screenshot": "explorer-screenshot.png"
+        }
+      ],
+      "path": "projects/9981-2026-04-24-ai-news-feed",
+      "wordCount": 7381,
+      "readingTime": 32
+    },
     {
       "id": "9982-2026-04-11-ai-news-feed",
       "slug": "ai-news-feed",

@@ -1,0 +1,230 @@
+#!/usr/bin/env python3
+"""
+Extract every external markdown link from a README and render a markdown table
+with the surrounding sentence as context.
+
+Usage:
+    python3 scripts/extract-readme-links.py <path-to-readme.md> [--out table.md]
+
+Rules:
+- Only http(s) links are included (no relative/anchor/mailto).
+- Deduplication is by full URL (text-fragment variants count as distinct).
+- Context = the sentence containing the link, with the link label wrapped in **bold**
+  and the rest of the sentence kept verbatim (minus markdown link syntax).
+- Output is a GitHub-Flavored Markdown table: #, Flags, Label, URL, Domain, Context.
+- Links whose path (ignoring query/fragment/text-fragment anchor) is "/" or empty
+  are flagged as ROOT — they point at a domain homepage rather than a specific
+  article, which is a research-quality problem per CLAUDE.md.
+- No LLM involved — pure regex + string processing.
+"""
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+from pathlib import Path
+from urllib.parse import urlsplit
+
+INLINE_LINK_RE = re.compile(
+    r'\[(?P<label>[^\]]*)\]\(\s*(?P<url><[^>]+>|[^)\s]+)(?:\s+"[^"]*")?\s*\)'
+)
+
+SENTENCE_SPLIT_RE = re.compile(r'(?<=[.!?])\s+(?=[A-Z0-9\*"\'\(\[])')
+
+
+def strip_md(text: str) -> str:
+    """Collapse markdown inline link syntax to plain label text for context display."""
+    # Replace [label](url) with label
+    text = re.sub(r'\[([^\]]*)\]\([^)]+\)', r'\1', text)
+    # Collapse whitespace/newlines
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+def extract_sentence(full_text: str, start: int, end: int) -> str:
+    """
+    Return the sentence containing the span [start, end).
+    A sentence is bounded by blank lines, list-item boundaries, or .!? + space + Capital.
+    """
+    # Bound by blank line / line start
+    block_start = full_text.rfind("\n\n", 0, start)
+    if block_start == -1:
+        block_start = 0
+    else:
+        block_start += 2
+
+    block_end = full_text.find("\n\n", end)
+    if block_end == -1:
+        block_end = len(full_text)
+
+    block = full_text[block_start:block_end]
+    rel_start = start - block_start
+    rel_end = end - block_start
+
+    # Strip leading list/heading markers from the block line that contains the link
+    # but keep sentence boundaries inside the block.
+    # Split the block into sentences using .!? as separators.
+    sentences: list[tuple[int, int]] = []
+    cursor = 0
+    for m in SENTENCE_SPLIT_RE.finditer(block):
+        sentences.append((cursor, m.start()))
+        cursor = m.end()
+    sentences.append((cursor, len(block)))
+
+    # Find the sentence that contains the link span.
+    for s, e in sentences:
+        if s <= rel_start < e or s < rel_end <= e:
+            sentence = block[s:e]
+            break
+    else:
+        sentence = block
+
+    # Strip leading bullet / heading / blockquote markers
+    sentence = re.sub(r'^\s*(?:[-*+]\s+|#{1,6}\s+|>\s*)+', '', sentence)
+    return strip_md(sentence).strip()
+
+
+def domain_of(url: str) -> str:
+    netloc = urlsplit(url).netloc.lower()
+    return netloc[4:] if netloc.startswith("www.") else netloc
+
+
+def is_root_url(url: str) -> bool:
+    """True if the URL points at a domain root (path is empty or "/"), regardless of
+    query, fragment, or text-fragment anchor. Root links are flagged as weak sources
+    because they don't identify a specific article."""
+    path = urlsplit(url).path or ""
+    return path in ("", "/")
+
+
+def escape_table_cell(text: str) -> str:
+    """Make a string safe for a GFM table cell."""
+    text = text.replace("\\", "\\\\")
+    text = text.replace("|", "\\|")
+    text = text.replace("\n", " ")
+    text = text.replace("\r", " ")
+    return text.strip()
+
+
+def truncate(text: str, limit: int = 240) -> str:
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1].rstrip() + "…"
+
+
+def extract(readme_path: Path) -> list[dict]:
+    text = readme_path.read_text()
+    seen: dict[str, dict] = {}
+    order: list[str] = []
+
+    for m in INLINE_LINK_RE.finditer(text):
+        label = m.group("label").strip()
+        url = m.group("url").strip().strip("<>")
+        if not url.startswith(("http://", "https://")):
+            continue
+
+        sentence = extract_sentence(text, m.start(), m.end())
+        entry = seen.get(url)
+        if entry is None:
+            flags = []
+            if is_root_url(url):
+                flags.append("ROOT")
+            entry = {
+                "url": url,
+                "domain": domain_of(url),
+                "labels": [],
+                "contexts": [],
+                "count": 0,
+                "flags": flags,
+            }
+            seen[url] = entry
+            order.append(url)
+
+        if label and label not in entry["labels"]:
+            entry["labels"].append(label)
+        if sentence and sentence not in entry["contexts"]:
+            entry["contexts"].append(sentence)
+        entry["count"] += 1
+
+    return [seen[u] for u in order]
+
+
+def render_markdown_table(entries: list[dict], source: Path) -> str:
+    lines: list[str] = []
+    flagged = [e for e in entries if e["flags"]]
+    lines.append(f"# Source links extracted from `{source.name}`")
+    lines.append("")
+    lines.append(f"- Source file: `{source}`")
+    lines.append(f"- Unique external URLs: **{len(entries)}**")
+    lines.append(
+        f"- Total external link occurrences: **{sum(e['count'] for e in entries)}**"
+    )
+    lines.append(
+        f"- Distinct domains: **{len({e['domain'] for e in entries})}**"
+    )
+    lines.append(f"- Flagged links: **{len(flagged)}**")
+    lines.append("")
+    lines.append("Generated by `scripts/extract-readme-links.py` (regex-based, no LLM).")
+    lines.append("")
+    lines.append(
+        "**Flag legend** — `ROOT`: URL path is `/` or empty (ignoring `#:~:text=` "
+        "anchor). These point at a domain homepage, not a specific article, and "
+        "violate the CLAUDE.md rule that every external claim should be anchored to "
+        "a concrete source."
+    )
+    lines.append("")
+
+    if flagged:
+        lines.append("## Flagged links (fix these first)")
+        lines.append("")
+        lines.append("| # | Flags | Label | Domain | URL | Context |")
+        lines.append("|---|---|---|---|---|---|")
+        for i, e in enumerate(flagged, 1):
+            flags = escape_table_cell(",".join(e["flags"]))
+            label = escape_table_cell(truncate(" / ".join(e["labels"]) or "(no label)", 120))
+            url = escape_table_cell(e["url"])
+            domain = escape_table_cell(e["domain"])
+            context = escape_table_cell(truncate(" · ".join(e["contexts"]), 320))
+            lines.append(f"| {i} | {flags} | {label} | {domain} | <{url}> | {context} |")
+        lines.append("")
+
+    lines.append("## All links")
+    lines.append("")
+    lines.append("| # | Flags | Label | Domain | URL | Context |")
+    lines.append("|---|---|---|---|---|---|")
+
+    for i, e in enumerate(entries, 1):
+        flags = escape_table_cell(",".join(e["flags"]) or "—")
+        label = escape_table_cell(truncate(" / ".join(e["labels"]) or "(no label)", 120))
+        url = escape_table_cell(e["url"])
+        domain = escape_table_cell(e["domain"])
+        context = escape_table_cell(truncate(" · ".join(e["contexts"]), 320))
+        lines.append(f"| {i} | {flags} | {label} | {domain} | <{url}> | {context} |")
+
+    lines.append("")
+    return "\n".join(lines)
+
+
+def main() -> int:
+    p = argparse.ArgumentParser()
+    p.add_argument("readme", type=Path)
+    p.add_argument("--out", type=Path, default=None)
+    args = p.parse_args()
+
+    if not args.readme.is_file():
+        print(f"error: {args.readme} not found", file=sys.stderr)
+        return 2
+
+    entries = extract(args.readme)
+    table = render_markdown_table(entries, args.readme)
+
+    if args.out:
+        args.out.write_text(table)
+        print(f"wrote {args.out} ({len(entries)} unique URLs)", file=sys.stderr)
+    else:
+        print(table)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
