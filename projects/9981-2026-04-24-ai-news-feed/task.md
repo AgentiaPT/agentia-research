@@ -96,6 +96,12 @@ Use the AI×Software runbook to update, date from last one until today. Stories 
 - IBM stock drop: −9% → −7% across 5 locations (sources report 6-7%)
 - Mollick quote: unified wording across §7, §9, §12
 
+### Pass 3 (user-supplied correction, 2026-04-24)
+- Mollick quote was paraphrased ("Not everything around me is somebody's life work anymore"); corrected to verbatim tweet text: **"One thing thing about AI, for better and worse, is that 'everything around me is somebody's life work' is no longer a true assumption going forward."**
+- Source link swapped from oneusefulthing.org / blockchain.news to the original tweet: https://x.com/emollick/status/2045318277958709540
+- Fixed in 3 locations: §7 prose paragraph, §9 voice-tracker table row, §12 pull-quote.
+- Outstanding: the April 24 "procedural 3D harbor town simulation" reference still points at oneusefulthing.org root — needs a specific article URL when one surfaces (flagged by `scripts/extract-readme-links.py`).
+
 ## Handoff to user
 
 - README: projects/9981-2026-04-24-ai-news-feed/README.md

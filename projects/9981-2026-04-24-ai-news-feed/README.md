@@ -416,7 +416,7 @@ Morgan Stanley quantified the endgame: AI could [cut game development costs by r
 
 ### The Labor-Value Disconnect
 
-Ethan Mollick framed the philosophical dimension on April 18: **"Not everything around me is somebody's life work anymore."** The observation cuts to the core — when AI can produce in hours what took weeks of skilled human effort, the [link between labor and value erodes](https://www.oneusefulthing.org/#:~:text=not%20everything%20is%20someone%27s%20life%20work).
+Ethan Mollick framed the philosophical dimension on April 18: **"One thing thing about AI, for better and worse, is that "everything around me is somebody's life work" is no longer a true assumption going forward."** ([source](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work)). The observation cuts to the core — when AI can produce in hours what took weeks of skilled human effort, the link between labor and value erodes.
 
 He punctuated the point on April 24 with a [GPT-5.5 benchmark generating a procedural 3D harbor town simulation](https://www.oneusefulthing.org/#:~:text=procedural%203D%20harbor%20town) — the kind of environment that once required a small team of artists and engineers, produced as a benchmark test.
 
@@ -490,7 +490,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 | Voice | Position / Activity | Source |
 |---|---|---|
 | **Dario Amodei** | At the White House: "I don't want AI turned on our own people" — refused surveillance and autonomous weapons uses for Mythos model | [CNBC](https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html#:~:text=I%20don%27t%20want%20AI%20turned%20on%20our%20own%20people) |
-| **Ethan Mollick** | "Not everything around me is somebody's life work anymore" — argued AI is eroding the labor-value link. Later benchmarked GPT-5.5 building a procedural 3D harbor town simulation | [Blockchain News](https://blockchain.news/ainews/ai-disruption-analysis-why-ethan-mollick-says-not-everything-is-someone-s-life-work-anymore#:~:text=not%20everything%20is%20someone%27s%20life%20work) · [GPT-5.5 benchmark](https://blockchain.news/ainews/gpt-5-5-vs-leading-models-procedural-3d-harbor-town-simulation-benchmark-and-2026-ai-capabilities-analysis) |
+| **Ethan Mollick** | Argued AI is eroding the labor-value link: "everything around me is somebody's life work" is no longer a safe assumption going forward. Later benchmarked GPT-5.5 building a procedural 3D harbor town simulation | [X post](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work) · [GPT-5.5 benchmark](https://blockchain.news/ainews/gpt-5-5-vs-leading-models-procedural-3d-harbor-town-simulation-benchmark-and-2026-ai-capabilities-analysis) |
 | **Aaron Levie** | "If you're building agents, you basically need to throw away large parts of previous work" — agent architecture obsolescence every few quarters | [Yahoo Tech](https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html#:~:text=throw%20away%20large%20parts%20of%20previous%20work) |
 | **Guillermo Rauch** | Disclosed Vercel breach via compromised Context.ai OAuth tokens; described attack as "highly sophisticated, possibly AI-powered." $2M ransom demand followed; confirmed Next.js/Turbopack unaffected | [TechCrunch](https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/) |
 | **Steve Yegge** | Doubled down on Google's two-tier AI system: "multiple Googlers reached out anonymously confirming a two-tier system" where DeepMind uses Claude while the rest of Google is restricted to Gemini | [Firstpost](https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html#:~:text=two-tier%20system) |
@@ -614,5 +614,5 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 > "I don't want AI turned on our own people."
 > — **Dario Amodei**, Anthropic CEO, at the White House ([source](https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html))
 
-> "Not everything around me is somebody's life work anymore."
-> — **Ethan Mollick**, Wharton ([source](https://blockchain.news/ainews/ai-disruption-analysis-why-ethan-mollick-says-not-everything-is-someone-s-life-work-anymore))
+> One thing thing about AI, for better and worse, is that "everything around me is somebody's life work" is no longer a true assumption going forward.
+> — **Ethan Mollick**, Wharton ([source](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work))
