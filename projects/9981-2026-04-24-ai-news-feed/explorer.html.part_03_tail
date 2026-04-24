@@ -1,0 +1,168 @@
+
+    <!-- Key Quotes -->
+    <section id="quotes">
+      <div class="card">
+        <h2 class="gradient-text">💬 Key Quotes</h2>
+
+        <div class="quote-block">
+          <div class="quote-text">"A new class of intelligence for real work."</div>
+          <div class="quote-attr">— OpenAI</div>
+        </div>
+
+        <div class="quote-block red">
+          <div class="quote-text">"This was the wrong tradeoff."</div>
+          <div class="quote-attr">— Anthropic Engineering</div>
+        </div>
+
+        <div class="quote-block orange">
+          <div class="quote-text">"If you're building agents, you basically need to throw away large parts of previous work."</div>
+          <div class="quote-attr">— Aaron Levie</div>
+        </div>
+
+        <div class="quote-block yellow">
+          <div class="quote-text">"The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami."</div>
+          <div class="quote-attr">— Daniel Stenberg</div>
+        </div>
+
+        <div class="quote-block purple">
+          <div class="quote-text">"I don't want AI turned on our own people."</div>
+          <div class="quote-attr">— Dario Amodei</div>
+        </div>
+
+        <div class="quote-block green">
+          <div class="quote-text">"Not everything around me is somebody's life work anymore."</div>
+          <div class="quote-attr">— Ethan Mollick</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voice Tracker Table -->
+    <section id="tracker">
+      <div class="card">
+        <h2 class="gradient-text">👥 Voice Tracker</h2>
+        <div style="overflow-x:auto;">
+          <table class="tracker-table">
+            <thead>
+              <tr>
+                <th>Voice</th>
+                <th>Status</th>
+                <th>Topic Summary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dario Amodei</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Opposes AI use on workers; Anthropic transparency push; Claude 4 system prompt</td>
+              </tr>
+              <tr>
+                <td><strong>Sam Altman</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">GPT-5.5 launch; "new class of intelligence" positioning; pricing strategy</td>
+              </tr>
+              <tr>
+                <td><strong>Ethan Mollick</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Gaming industry parallel; $22B AI thesis; cultural disruption commentary</td>
+              </tr>
+              <tr>
+                <td><strong>Aaron Levie</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Agent architecture reset; enterprise implications of MCP vulnerabilities</td>
+              </tr>
+              <tr>
+                <td><strong>Steve Yegge</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">AI coding tools critique; developer experience evolution</td>
+              </tr>
+              <tr>
+                <td><strong>Martin Fowler</strong></td>
+                <td class="status-inactive">❌ Inactive</td>
+                <td class="topic">—</td>
+              </tr>
+              <tr>
+                <td><strong>DHH</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Skeptical of AI layoff justification; software craftsmanship defense</td>
+              </tr>
+              <tr>
+                <td><strong>Daniel Stenberg</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">AI security report tsunami; open source maintainer burden from AI slop</td>
+              </tr>
+              <tr>
+                <td><strong>Simon Willison</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">MCP security analysis; prompt injection via code comments</td>
+              </tr>
+              <tr>
+                <td><strong>Guillermo Rauch</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Cursor/SpaceX valuation commentary; AI-native dev tools future</td>
+              </tr>
+              <tr>
+                <td><strong>Swyx</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">AI engineering landscape; agent infrastructure discourse</td>
+              </tr>
+              <tr>
+                <td><strong>Gergely Orosz</strong></td>
+                <td class="status-active">✅ Active</td>
+                <td class="topic">Software market repricing analysis; Meta layoffs pattern</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align:center;padding:32px 0 48px;color:var(--muted);font-size:0.82rem;">
+      <p>AI × Software Engineering Weekly — Edition: The Reality Check</p>
+      <p style="margin-top:4px;">Built for <a href="https://github.com/AgentiaPT/agentia-research" style="color:var(--accent);text-decoration:none;">agentia-research</a></p>
+    </footer>
+  </main>
+</div>
+
+<script>
+  // Animate bars on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+          const w = bar.style.width;
+          bar.style.width = '0%';
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => { bar.style.width = w; });
+          });
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const coverageCard = document.querySelector('#coverage .card');
+  if (coverageCard) observer.observe(coverageCard);
+
+  // Smooth scroll for sidebar
+  document.querySelectorAll('.sidebar a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Animate stats on load
+  document.querySelectorAll('.stat-card').forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(16px)';
+    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    setTimeout(() => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 80 * i);
+  });
+</script>
+</body>
+</html>
