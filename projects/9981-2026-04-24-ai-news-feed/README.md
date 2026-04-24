@@ -109,7 +109,7 @@ And then there's **DeepSeek V4**, [previewed just one day later](https://the-dec
 
 ### Why This Matters
 
-GPT-5.5 is a genuine technical achievement — the TerminalBench and ARC-AGI 2 scores represent real capability expansion, not incremental tuning. But the launch crystallizes this edition's theme: **the reality check**. The model that OpenAI calls "a new class of intelligence" still trails Anthropic's flagship on the coding benchmark developers care about most. The pricing that OpenAI calls efficient is 2× what developers paid last month. And the market that's supposed to reward AI breakthroughs just [crashed software stocks 6% in a single day](../9982-2026-04-11-ai-news-feed/README.md#11-jobs--economic-impact) on the realization that AI isn't just boosting productivity — it's repricing entire business models. The frontier keeps advancing. The question is no longer *how smart* — it's *how much*, and *for whom*.
+GPT-5.5 is a genuine technical achievement — the TerminalBench and ARC-AGI 2 scores represent real capability expansion, not incremental tuning. But the launch crystallizes this edition's theme: **the reality check**. The model that OpenAI calls "a new class of intelligence" still trails Anthropic's flagship on the coding benchmark developers care about most. The pricing that OpenAI calls efficient is 2× what developers paid last month. And the market that's supposed to reward AI breakthroughs just [crashed software stocks 6% in a single day](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas) on the realization that AI isn't just boosting productivity — it's repricing entire business models. The frontier keeps advancing. The question is no longer *how smart* — it's *how much*, and *for whom*.
 
 ---
 
@@ -379,7 +379,7 @@ The through-line is vertical integration. The companies that control the full st
 
 ---
 
-## §7 — The Market Repricing: Software Stocks Crash as AI Eats SaaS
+## 7. The Market Repricing — Software Stocks Crash as AI Eats SaaS
 
 Wall Street delivered its verdict on legacy software this week — and it was brutal. On a single trading day, the market carved billions off companies that *beat* their own earnings estimates, while rewarding AI infrastructure plays. The message: recurring SaaS revenue is no longer a moat when AI can replicate the product.
 
@@ -428,7 +428,7 @@ The pattern is consistent across sectors: **gaming, enterprise software, automot
 
 ---
 
-## §8 — DeepSeek V4 & the Open-Weight Reality Check
+## 8. DeepSeek V4 & the Open-Weight Reality Check
 
 DeepSeek dropped V4 on April 24 and the numbers demand attention: a **1.6-trillion-parameter MoE** that activates only 49 billion parameters per forward pass, runs on **Huawei Ascend 910C/950PR** silicon — not a single NVIDIA chip in sight — and undercuts Western API pricing by an order of magnitude. Meanwhile, fresh research papers are quietly documenting how far AI-generated code actually survives contact with production. Welcome to the reality check.
 
@@ -554,14 +554,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 ### Market Signals
 
-**Software stocks crashed on April 23** despite strong earnings — the market is repricing SaaS on AI substitution risk:
-
-| Stock / Index | Move | Revenue | Source |
-|---|---|---|---|
-| **ServiceNow** | **−18%** | $3.77B (+22% YoY, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **IBM** | **−7%** | $15.92B (+9.5%, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **iShares Software ETF (IGV)** | **−6%** (day), **−27%** (6 months) | — | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **Texas Instruments** | **+17%** | AI infra beneficiary | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
+**Software stocks crashed on April 23** — see [§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas) for full analysis. Headline: ServiceNow **−18%**, IBM **−7%**, IGV **−6%** (day) / **−27%** (6 months) despite beating earnings. Texas Instruments **+17%** (AI infra beneficiary). [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
 
 ### AI Adoption Metrics
 
@@ -604,7 +597,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 ---
 
-### Key Quotes of the Week
+## Key Quotes of the Week
 
 > "A new class of intelligence for real work."
 > — **OpenAI**, GPT-5.5 launch announcement ([source](https://openai.com/index/introducing-gpt-5-5/))

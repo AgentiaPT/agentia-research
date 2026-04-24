@@ -51,7 +51,7 @@
 - Why this matters: developer tooling is now geopolitical
 
 ## 7. The Market Repricing — Software Stocks Crash as AI Eats SaaS
-- ServiceNow -18%, IBM -9% despite beating earnings
+- ServiceNow -18%, IBM -7% despite beating earnings
 - iShares Software ETF -6% in one day, -27% in six months
 - Texas Instruments +17% (AI infra beneficiary)
 - Meta 8,000 layoffs to fund AI pivot
