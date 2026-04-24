@@ -51,7 +51,7 @@ The theme isn't pessimism — the technology is genuinely better than it was a m
 | **Quality** | Anthropic publishes [three-bug postmortem](https://www.anthropic.com/engineering/april-23-postmortem) — Claude Code degraded for **7 weeks** by product-layer bugs, not model changes. "The wrong tradeoff" | Your model provider's default parameters, caching, and system prompts are invisible dependencies that can silently break your app |
 | **Platform** | [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) threatens Figma (stock **−7%**). [Cowork Live Artifacts](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork) turn chat into a BI tool | Model providers are eating their own ecosystem — when your API vendor builds the product, what's your moat? |
 | **Security** | [MCP RCE "by design"](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html) across **200K+ servers**. [CanisterSprawl](https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials): first cross-ecosystem supply chain worm. [Bitwarden CLI](https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack) compromise targets AI tool configs | The AI toolchain is the new high-value target — and the defense hasn't caught up. Fourth consecutive week of escalation |
-| **Market** | [ServiceNow **−18%**, IBM **−9%**](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) despite beating earnings. [Meta cuts 8,000](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) to fund AI. [SpaceX $60B Cursor option](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion) | The market is repricing the entire SaaS sector on AI substitution risk. Developer tooling is now a strategic asset worth $60B |
+| **Market** | [ServiceNow **−18%**, IBM **−7%**](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) despite beating earnings. [Meta cuts 8,000](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) to fund AI. [SpaceX $60B Cursor option](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion) | The market is repricing the entire SaaS sector on AI substitution risk. Developer tooling is now a strategic asset worth $60B |
 | **Research** | [44% agent code survival](https://arxiv.org/abs/2504.13978) in production PRs. [ICLR 2026](https://iclr.cc/virtual/2026/papers.html): AlphaAlign cuts unsafe responses **40% → <5%** | Benchmarks say one thing; merge rates say another. The production gap is now quantified |
 
 The deepest signal this week isn't technical — it's financial. When **ServiceNow drops 18%** after posting 22% revenue growth, the market isn't saying the company failed. It's saying the *category* is being repriced. AI substitution risk isn't a distant threat anymore — it's the primary lens through which Wall Street values software companies. The companies building AI infrastructure (Texas Instruments **+17%**, VAST Data's **$30B valuation**) are rewarded. The companies AI might replace are punished, regardless of current performance.
@@ -388,11 +388,11 @@ Wall Street delivered its verdict on legacy software this week — and it was br
 | Ticker | Move | Revenue | YoY Growth | Earnings |
 |--------|------|---------|------------|----------|
 | **ServiceNow (NOW)** | **−18%** | $3.77B | +22% | Beat |
-| **IBM** | **−9%** | $15.92B | +9.5% | Beat |
+| **IBM** | **−7%** | $15.92B | +9.5% | Beat |
 | **iShares Software ETF (IGV)** | **−6% (day)** | — | −27% (6mo) | — |
 | **Texas Instruments (TXN)** | **+17%** | — | — | Beat |
 
-ServiceNow posted **$3.77B in revenue, up 22% year-over-year**, and still [lost nearly a fifth of its market cap in a single session](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/#:~:text=ServiceNow). IBM's **$15.92B quarter with 9.5% growth** — historically a victory lap for Big Blue — [earned shareholders a 9% haircut](https://finance.yahoo.com/markets/stocks/articles/ibm-q1-2026-earnings-beat-132710855.html#:~:text=IBM%20stock%20drops). The iShares Expanded Tech-Software ETF fell **6% in a single day** and is now down **27% over six months**, a drawdown that rivals early-pandemic levels. [The software selloff is structural, not cyclical](https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html#:~:text=software%20stocks).
+ServiceNow posted **$3.77B in revenue, up 22% year-over-year**, and still [lost nearly a fifth of its market cap in a single session](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/#:~:text=ServiceNow). IBM's **$15.92B quarter with 9.5% growth** — historically a victory lap for Big Blue — [earned shareholders a ~7% haircut](https://finance.yahoo.com/markets/stocks/articles/ibm-q1-2026-earnings-beat-132710855.html#:~:text=IBM%20stock%20drops). The iShares Expanded Tech-Software ETF fell **6% in a single day** and is now down **27% over six months**, a drawdown that rivals early-pandemic levels. [The software selloff is structural, not cyclical](https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html#:~:text=software%20stocks).
 
 The outlier? **Texas Instruments surged 17%** the same day — a chipmaker feeding the AI infrastructure buildout, not competing with it.
 
@@ -416,7 +416,7 @@ Morgan Stanley quantified the endgame: AI could [cut game development costs by r
 
 ### The Labor-Value Disconnect
 
-Ethan Mollick framed the philosophical dimension on April 18: **"Not everything is someone's life work anymore."** The observation cuts to the core — when AI can produce in hours what took weeks of skilled human effort, the [link between labor and value erodes](https://www.oneusefulthing.org/#:~:text=not%20everything%20is%20someone%27s%20life%20work).
+Ethan Mollick framed the philosophical dimension on April 18: **"Not everything around me is somebody's life work anymore."** The observation cuts to the core — when AI can produce in hours what took weeks of skilled human effort, the [link between labor and value erodes](https://www.oneusefulthing.org/#:~:text=not%20everything%20is%20someone%27s%20life%20work).
 
 He punctuated the point on April 24 with a [GPT-5.5 benchmark generating a procedural 3D harbor town simulation](https://www.oneusefulthing.org/#:~:text=procedural%203D%20harbor%20town) — the kind of environment that once required a small team of artists and engineers, produced as a benchmark test.
 
@@ -559,7 +559,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 | Stock / Index | Move | Revenue | Source |
 |---|---|---|---|
 | **ServiceNow** | **−18%** | $3.77B (+22% YoY, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **IBM** | **−9%** | $15.92B (+9.5%, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
+| **IBM** | **−7%** | $15.92B (+9.5%, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
 | **iShares Software ETF (IGV)** | **−6%** (day), **−27%** (6 months) | — | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
 | **Texas Instruments** | **+17%** | AI infra beneficiary | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
 
@@ -585,7 +585,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 ### 🟠 Warning
 
-- **Software stock repricing accelerating** — ServiceNow **−18%**, IBM **−9%** despite beating earnings. The market is pricing AI substitution risk into the entire SaaS sector. Even growth can't outrun the narrative. [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
+- **Software stock repricing accelerating** — ServiceNow **−18%**, IBM **−7%** despite beating earnings. The market is pricing AI substitution risk into the entire SaaS sector. Even growth can't outrun the narrative. [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
 - **Meta 8K layoffs set template for AI-pivot restructuring** — 14,000 total impacted, new "Applied AI" org. Every enterprise CTO watching to see if the template works. [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html)
 - **GPT-5.5 pricing 2× increase** — API costs double from $2.50/$15 to $5/$30 per million tokens. The era of cheap frontier APIs may be ending as providers seek margins. [OpenAI](https://openai.com/index/introducing-gpt-5-5/)
 
