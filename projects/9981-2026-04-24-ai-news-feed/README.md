@@ -47,7 +47,7 @@ The theme isn't pessimism — the technology is genuinely better than it was a m
 
 | Layer | What Happened | Why You Should Care |
 |---|---|---|
-| **Models** | [GPT-5.5 launches](https://openai.com/index/introducing-gpt-5-5/) — TerminalBench **82.7%**, 1M context, ARC-AGI 2 **85%**. API pricing **doubles** to $5/$30. [DeepSeek V4](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html) previews on Huawei Ascend at **$0.14/M** | Frontier reasoning leaps are real, but Opus 4.7 still leads the coding benchmark developers use most (SWE-Bench Pro 64.3% vs 58.6%), and the pricing squeeze is tightening from both ends |
+| **Models** | [GPT-5.5 launches](https://openai.com/index/introducing-gpt-5-5/) — TerminalBench **82.7%**, 1M context, ARC-AGI 2 **85%**. API pricing **doubles** to $5/$30. [DeepSeek V4](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html) previews on Huawei Ascend at **$0.14/M** (Flash tier) | Frontier reasoning leaps are real, but Opus 4.7 still leads the coding benchmark developers use most (SWE-Bench Pro 64.3% vs 58.6%), and the pricing squeeze is tightening from both ends |
 | **Quality** | Anthropic publishes [three-bug postmortem](https://www.anthropic.com/engineering/april-23-postmortem) — Claude Code degraded for **7 weeks** by product-layer bugs, not model changes. "The wrong tradeoff" | Your model provider's default parameters, caching, and system prompts are invisible dependencies that can silently break your app |
 | **Platform** | [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) threatens Figma (stock **−7%**). [Cowork Live Artifacts](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork) turn chat into a BI tool | Model providers are eating their own ecosystem — when your API vendor builds the product, what's your moat? |
 | **Security** | [MCP RCE "by design"](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html) across **200K+ servers**. [CanisterSprawl](https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials): first cross-ecosystem supply chain worm. [Bitwarden CLI](https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack) compromise targets AI tool configs | The AI toolchain is the new high-value target — and the defense hasn't caught up. Fourth consecutive week of escalation |
@@ -97,7 +97,7 @@ The sticker shock is real: **$5/$30 per million tokens is a clean 2× over GPT-5
 
 Community reaction on the [OpenAI Developer Forum](https://community.openai.com/#:~:text=GPT-5.5%20pricing) has been pointed. Indie developers and small-scale operators see the doubling as a de facto paywall locking them out of frontier capabilities, while enterprise users running agentic workflows see the token-efficiency argument as [legitimate](https://appwrite.io/blog/post/gpt-5-5-launch#:~:text=token%20efficiency). The pricing also invites direct comparison to Opus 4.7 at $5/$25 — **$5 cheaper on output** and still leading the coding benchmark that matters most.
 
-> "You can give GPT-5.5 a messy, multi-part task and trust it to plan, use tools, check its work, navigate ambiguity, and keep going."
+> "You can give GPT-5.5 a messy, multi-part task and trust it to plan, use tools, check its work, navigate through ambiguity, and keep going."
 >
 > — [OpenAI](https://openai.com/index/introducing-gpt-5-5/#:~:text=You%20can%20give%20GPT-5.5%20a%20messy%2C%20multi-part%20task)
 
@@ -105,7 +105,7 @@ Community reaction on the [OpenAI Developer Forum](https://community.openai.com/
 
 The Chatbot Arena tells a nuanced story: **Opus 4.7 Thinking holds the #1 overall position**, while GPT-5.5 leads on ARC-AGI 2 and TerminalBench ([MarktechPost](https://www.marktechpost.com/2026/04/23/openai-releases-gpt-5-5-a-fully-retrained-agentic-model-that-scores-82-7-on-terminal-bench-2-0-and-84-9-on-gdpval/#:~:text=Terminal-Bench%202.0)). The picture that emerges is **domain segmentation at the frontier**: GPT-5.5 dominates abstract reasoning, long-context retrieval, and agentic command-line work; Opus 4.7 dominates real-world code generation and multi-file engineering tasks. Neither model is categorically better — they're categorically *different*.
 
-And then there's **DeepSeek V4**, [previewed just one day later](https://the-decoder.com/openai-unveils-gpt-5-5-claims-a-new-class-of-intelligence-at-double-the-api-price/#:~:text=DeepSeek) on April 24, with API pricing rumored at $0.14/M input — undercutting GPT-5.5 by **36×**. The open-source pressure on frontier pricing isn't hypothetical anymore; last edition we covered [GLM-5.1 topping SWE-Bench Pro](../9982-2026-04-11-ai-news-feed/README.md#3-glm-51--first-open-source-model-tops-swe-bench-pro) as the first open-source model to do so. The squeeze on proprietary pricing is tightening from both ends.
+And then there's **DeepSeek V4**, [previewed just one day later](https://the-decoder.com/openai-unveils-gpt-5-5-claims-a-new-class-of-intelligence-at-double-the-api-price/#:~:text=DeepSeek) on April 24, with V4-Flash API pricing at $0.14/M input — undercutting GPT-5.5 by **36×**. The open-source pressure on frontier pricing isn't hypothetical anymore; last edition we covered [GLM-5.1 topping SWE-Bench Pro](../9982-2026-04-11-ai-news-feed/README.md#3-glm-51--first-open-source-model-tops-swe-bench-pro) as the first open-source model to do so. The squeeze on proprietary pricing is tightening from both ends.
 
 ### Why This Matters
 
@@ -335,7 +335,7 @@ Bloomberg reported on April 21 that SpaceX has secured an **option to acquire An
 |---|---|
 | **Acquisition option** | $60B |
 | **Partnership-only fee** | $10B |
-| **Cursor's prior valuation** | ~$29.3B (Series C, Jan 2026) |
+| **Cursor's prior valuation** | ~$29.3B (Series D, Nov 2025) |
 | **Compute access** | xAI Colossus, ~1M H100-equivalent |
 | **SpaceX IPO timeline** | As early as June 2026, up to $2T valuation |
 
@@ -392,7 +392,7 @@ Wall Street delivered its verdict on legacy software this week — and it was br
 | **iShares Software ETF (IGV)** | **−6% (day)** | — | −27% (6mo) | — |
 | **Texas Instruments (TXN)** | **+17%** | — | — | Beat |
 
-ServiceNow posted **$3.77B in revenue, up 22% year-over-year**, and still [lost nearly a fifth of its market cap in a single session](https://www.forbes.com/sites/dereksaul/2025/04/23/servicenow-stock-crashes-18-in-mega-cap-techs-worst-day-in-years/#:~:text=ServiceNow%20stock%20crashes%2018%25). IBM's **$15.92B quarter with 9.5% growth** — historically a victory lap for Big Blue — [earned shareholders a 9% haircut](https://www.cnbc.com/2025/04/23/ibm-stock-drops-on-tariff-uncertainty.html#:~:text=IBM%20stock%20drops). The iShares Expanded Tech-Software ETF fell **6% in a single day** and is now down **27% over six months**, a drawdown that rivals early-pandemic levels. [The software selloff is structural, not cyclical](https://money.usnews.com/investing/news/articles/2025-04-23/wall-street-ends-sharply-higher-on-tariff-hopes#:~:text=software%20stocks).
+ServiceNow posted **$3.77B in revenue, up 22% year-over-year**, and still [lost nearly a fifth of its market cap in a single session](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/#:~:text=ServiceNow). IBM's **$15.92B quarter with 9.5% growth** — historically a victory lap for Big Blue — [earned shareholders a 9% haircut](https://finance.yahoo.com/markets/stocks/articles/ibm-q1-2026-earnings-beat-132710855.html#:~:text=IBM%20stock%20drops). The iShares Expanded Tech-Software ETF fell **6% in a single day** and is now down **27% over six months**, a drawdown that rivals early-pandemic levels. [The software selloff is structural, not cyclical](https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html#:~:text=software%20stocks).
 
 The outlier? **Texas Instruments surged 17%** the same day — a chipmaker feeding the AI infrastructure buildout, not competing with it.
 
@@ -400,13 +400,13 @@ The outlier? **Texas Instruments surged 17%** the same day — a chipmaker feedi
 
 Meta made it official on April 23: **8,000 layoffs plus 6,000 cancelled hires**, reducing headcount from roughly **79,000 to 71,000**. Cuts begin May 20 with **16 weeks of severance plus two additional weeks per year of service**. The company is consolidating under a new **"Applied AI" organization** — a rebrand that tells you exactly where Zuckerberg's capital is flowing.
 
-This isn't a cost-cutting exercise; it's a [capital reallocation at scale](https://www.cnbc.com/2025/04/23/meta-begins-latest-round-of-layoffs.html#:~:text=Meta%20begins%20latest%20round%20of%20layoffs). Every dollar saved on human headcount buys more GPU time, more training runs, more inference capacity. The 14,000-person impact — layoffs plus cancelled roles — represents roughly **18% of Meta's pre-cut workforce**.
+This isn't a cost-cutting exercise; it's a [capital reallocation at scale](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html#:~:text=Meta%20will%20cut). Every dollar saved on human headcount buys more GPU time, more training runs, more inference capacity. The 14,000-person impact — layoffs plus cancelled roles — represents roughly **18% of Meta's pre-cut workforce**.
 
 ### Valeo: 35% of Validated Code Is Now AI-Generated
 
 French automotive supplier Valeo quietly dropped one of the week's most significant data points: **35% of its validated production code is now generated by AI**, using Google's Gemini Code Assist. The company has also deployed **100,000 employees on Gemini Workspace** for daily tasks.
 
-This is [an enterprise-scale deployment, not a pilot](https://www.googlecloudpresscorner.com/2025-04-22-Valeo-Accelerates-AI-Transformation-with-Google-Cloud#:~:text=35%25%20of%20validated%20code). When a **100,000-person industrial company** reports that a third of its codebase comes from AI — and that code passes validation — the implications cascade through every cost model in enterprise software.
+This is [an enterprise-scale deployment, not a pilot](https://www.googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-Strategic-Partnership-to-Boost-Automotive-Innovation-with-Gemini-for-Workspace-and-Agentic-AI#:~:text=35%25%20of%20validated%20code). When a **100,000-person industrial company** reports that a third of its codebase comes from AI — and that code passes validation — the implications cascade through every cost model in enterprise software.
 
 ### Gaming: Layoffs Now, $22B in AI Profits Later
 
@@ -434,7 +434,7 @@ DeepSeek dropped V4 on April 24 and the numbers demand attention: a **1.6-trilli
 
 ### DeepSeek V4: The Headline Numbers
 
-DeepSeek released two variants simultaneously — [V4-Pro and V4-Flash](https://www.cnbc.com/2025/04/24/chinese-ai-lab-deepseek-releases-new-model.html#:~:text=DeepSeek%20V4) — targeting different cost–capability trade-offs:
+DeepSeek released two variants simultaneously — [V4-Pro and V4-Flash](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=DeepSeek%20V4) — targeting different cost–capability trade-offs:
 
 | Model | Total Params | Active Params | Context | LiveCodeBench | MMLU-Pro |
 |---|---|---|---|---|---|
@@ -445,12 +445,12 @@ The pricing is where jaws drop:
 
 | Provider | Input (per 1 M tokens) | Approx. Multiplier vs DeepSeek |
 |---|---|---|
-| **DeepSeek V4** | **$0.14** | 1× |
+| **DeepSeek V4-Flash** | **$0.14** | 1× |
 | GPT-4.1 | $2.00 | ~14× |
 | Claude Sonnet 4 | $3.00 | ~21× |
 | Gemini 2.5 Pro | $1.25 | ~9× |
 
-At **$0.14 per million input tokens**, V4-Pro is **20–50× cheaper** than comparable Western frontier APIs depending on the tier. The [first major LLM trained entirely on Huawei Ascend hardware](https://www.cnbc.com/2025/04/24/chinese-ai-lab-deepseek-releases-new-model.html#:~:text=Huawei%20Ascend) proves that the US chip-export controls have not stopped China from reaching parity on key benchmarks — they have merely forced an alternative supply chain into existence.
+At **$0.14 per million input tokens**, V4-Flash is **20–50× cheaper** than comparable Western frontier APIs depending on the tier. The [first major LLM trained entirely on Huawei Ascend hardware](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=Huawei%20Ascend) proves that the US chip-export controls have not stopped China from reaching parity on key benchmarks — they have merely forced an alternative supply chain into existence.
 
 ### Qwen 3.6: The Open-Weight Family Expands
 
