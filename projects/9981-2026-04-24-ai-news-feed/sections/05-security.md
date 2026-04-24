@@ -1,0 +1,91 @@
+## 5. The Security Siege Continues — MCP's "By Design" RCE and the First Cross-Ecosystem Worm
+
+Last week we called supply-chain attacks [the siege that won't lift](../9982-2026-04-11-ai-news-feed/README.md#7-supply-chain-the-siege-continues). This week the siege escalated: a protocol-level flaw that Anthropic *refuses to patch*, the first self-propagating worm that jumps ecosystems, and three marquee AI coding agents caught leaking secrets through PR titles. Four consecutive weeks. No end in sight.
+
+---
+
+### MCP: Remote Code Execution "By Design"
+
+OX Security disclosed on April 20 that the **STDIO transport** in Anthropic's Model Context Protocol passes user-controlled input straight to a shell — no sanitization, no allow-list, no escape. The result: arbitrary command execution on any host running an MCP server.
+
+> "Input sanitization and restricting what commands are supplied is the responsibility of downstream developers, not the protocol itself."
+> — [Anthropic's response](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html#:~:text=responsibility%20of%20downstream%20developers)
+
+**Blast radius:** **150 M+ downloads**, **~200 K vulnerable server instances**, and **7 000+ publicly exposed servers** — spanning LiteLLM, LangChain, Flowise, Cursor, Windsurf, and Claude Code itself [\[1\]](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html#:~:text=150%20million%20downloads) [\[2\]](https://www.csoonline.com/article/4159889/rce-by-design-mcp-architectural-choice-haunts-ai-agent-ecosystem.html#:~:text=by%20design) [\[3\]](https://www.infosecurity-magazine.com/news/systemic-flaw-mcp-expose-150/#:~:text=150%20Million%20Downloads).
+
+OX identified four exploitation paths: unauthenticated UI injection, hardening bypasses, zero-click prompt injection (Windsurf), and malicious marketplace packages. CVEs have been assigned for Windsurf, LiteLLM, GPT Researcher, Flowise, and others — but **no protocol-level fix exists** [\[4\]](https://gbhackers.com/anthropic-mcp-hit-by-critical-vulnerability/#:~:text=no%20protocol-level%20fix).
+
+---
+
+### CanisterSprawl: The First Cross-Ecosystem Supply-Chain Worm
+
+On April 21, researchers documented **CanisterSprawl** — a self-propagating worm that jumps between npm and PyPI. It steals publish tokens from infected machines, uses them to trojanize packages the victim maintains, and coordinates via **decentralized command-and-control hosted on Internet Computer Protocol (ICP) canisters** — making takedowns nearly impossible [\[5\]](https://thehackernews.com/2026/04/canistersprawl-self-propagating-worm.html#:~:text=self-propagating%20worm) [\[6\]](https://www.endorlabs.com/learn/canistersprawl-the-first-cross-ecosystem-supply-chain-worm#:~:text=decentralized%20C2).
+
+| Attribute | Detail |
+|---|---|
+| **Vector** | Stolen npm/PyPI publish tokens |
+| **Propagation** | Automatic — trojanizes victim's own packages |
+| **C2** | ICP canisters (no centralized server to seize) |
+| **Ecosystems** | npm → PyPI (bidirectional) |
+
+This is the threat model the industry warned about and never built defenses for: **worm-speed propagation across package registries with no single point of takedown**.
+
+---
+
+### Bitwarden CLI: 93 Minutes, 334 Developers, AI Creds Gone
+
+On April 22, attackers compromised a Bitwarden engineer's GitHub account, poisoned a GitHub Actions workflow via OIDC Trusted Publishing, and shipped `@bitwarden/cli@2026.4.0` to npm. The malicious version lived for **93 minutes** before removal [\[7\]](https://thehackernews.com/2026/04/bitwarden-cli-compromised-in-ongoing.html#:~:text=93-minute) [\[8\]](https://www.stepsecurity.io/blog/bitwarden-cli-hijacked-on-npm-bun-staged-credential-stealer-targets-developers-github-actions-and-ai-tools#:~:text=Bun-Staged%20Credential%20Stealer).
+
+What made this different: the stealer **explicitly targeted AI tool configurations** — `~/.claude.json`, Cursor configs, Codex CLI settings, MCP server credentials, and Aider tokens. It's the first npm compromise designed to harvest AI assistant credentials at scale [\[9\]](https://www.mend.io/blog/compromised-bitwarden-cli-npm-worm-ai-poisoning/#:~:text=AI%20Assistants) [\[10\]](https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack#:~:text=AI%20tool%20credentials).
+
+Stolen secrets were encrypted with AES-256-GCM and sent to `audit.checkmarx.cx` — a domain impersonating the legitimate Checkmarx security firm. **334 developers** confirmed affected.
+
+---
+
+### "Comment and Control": Three AI Agents, One Injection, All Your Secrets
+
+Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude Code**, **Gemini CLI**, and **GitHub Copilot Agent** all exfiltrate repository secrets when a malicious instruction is embedded in a PR title [\[11\]](https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026#:~:text=Comment%20and%20Control) [\[12\]](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/#:~:text=prompt%20injection%20via%20comments).
+
+The attack requires **zero infrastructure** — no C2 server, no malware. The AI agent reads the PR title, treats the injected text as an instruction, and posts its own API keys into a PR comment.
+
+| Agent | Rated | Bounty | Public Advisory |
+|---|---|---|---|
+| Claude Code (Anthropic) | CVSS **9.4** | $100 | None |
+| Gemini CLI (Google) | — | $1,337 | None |
+| Copilot Agent (GitHub) | — | $500 | None |
+
+All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[13\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
+
+---
+
+### Google Confirms: Prompt Injection Is in the Wild
+
+Google's Threat Intelligence team, partnering with DeepMind, published a large-scale study of indirect prompt injection payloads found across the Common Crawl corpus [\[14\]](https://security.googleblog.com/2026/04/ai-threats-in-wild-current-state-of.html#:~:text=AI%20threats%20in%20the%20wild). Most are low-impact (SEO manipulation, tone hijacking), but the team documented functional payloads attempting **data exfiltration**, **financial fraud** (fake PayPal/Stripe instructions for payment-capable agents), and **destructive actions** (file deletion targeting privileged dev tools) [\[15\]](https://www.helpnetsecurity.com/2026/04/24/indirect-prompt-injection-in-the-wild/#:~:text=indirect%20prompt%20injection).
+
+The finding that matters: attackers are now sharing **injection templates** — organized toolkits, not one-off experiments [\[16\]](https://www.infosecurity-magazine.com/news/researchers-10-wild-indirect/#:~:text=10%20In-the-Wild).
+
+---
+
+### RedSun: Windows Defender Becomes the Attack Vector
+
+Disclosed April 17, **RedSun** is an unpatched zero-day in Windows Defender's remediation engine. An attacker combines NTFS directory junctions, opportunistic locks, and the Cloud Files API to trick Defender into overwriting a system binary (`TieringEngineService.exe`) with attacker-controlled code — **as SYSTEM** [\[17\]](https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/#:~:text=RedSun%20zero-day) [\[18\]](https://blackswan-cybersecurity.com/threat-advisory-redsun-zero-day-windows-defender-april-17-2026/#:~:text=THREAT%20ADVISORY).
+
+No admin rights needed. No kernel exploit. Works on fully patched April 2026 systems. **No official fix as of April 24** [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days).
+
+---
+
+### Rapid-Fire Patch Table
+
+| Date | Item | Detail | Source |
+|---|---|---|---|
+| Apr 21 | **Oracle CPU** | **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) | [\[20\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update) |
+| Apr 21 | **AI security tools hijacked** | Compromised at **90+ organizations** via trojanized scanning integrations | [\[21\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools) |
+| Apr 17 | **RedSun + BlueHammer** | Two Defender 0-days; BlueHammer (CVE-2026-33825) patched, RedSun still open | [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days) |
+
+---
+
+### Why This Matters
+
+The pattern is no longer "supply-chain attacks are increasing." The pattern is **convergence**: supply-chain worms now target AI tool credentials specifically (Bitwarden), protocols designed for AI agents ship RCE by design (MCP), and AI agents themselves become exfiltration channels (Comment and Control). Google's research confirms prompt injection payloads are being industrialized in the wild.
+
+This is the fourth consecutive week of escalating supply-chain and AI-security incidents. The attackers have figured out that **the AI toolchain is the new high-value target** — and the defenders haven't caught up.
