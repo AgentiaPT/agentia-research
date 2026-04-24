@@ -609,10 +609,10 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 > — **Aaron Levie**, Box CEO ([source](https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html))
 
 > "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami. Less slop but lots of reports. Many of them really good."
-> — **Daniel Stenberg**, curl maintainer ([source](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/))
+> — **Daniel Stenberg**, curl maintainer ([source](https://mastodon.social/@bagder/116336957584445742))
 
 > "I don't want AI turned on our own people."
-> — **Dario Amodei**, Anthropic CEO, at the White House ([source](https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html))
+> — **Dario Amodei**, Anthropic CEO, at the White House ([source](https://www.ft.com/content/9e0e0fc6-ab7d-4b69-a8b1-5a972b82fb06?syn-25a6b1a6=1))
 
 > One thing thing about AI, for better and worse, is that "everything around me is somebody's life work" is no longer a true assumption going forward.
 > — **Ethan Mollick**, Wharton ([source](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work))
