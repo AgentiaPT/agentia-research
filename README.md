@@ -17,6 +17,7 @@ Deep research, interactive explorations, and tools at the intersection of AI and
 <!-- BEGIN PROJECTS -->
 | Project | Description | Live Demo | Words | Read Time | Status | Date |
 |---------|-------------|-----------|------:|-----------|--------|------|
+| [AI × Software Engineering — April 17–24, 2026](projects/9981-2026-04-24-ai-news-feed/) | **Previous edition:** [April 5–16, 2026](../9982-2026-04-11-ai-news-feed/README.md) | [Explorer](https://agentiapt.github.io/agentia-research/projects/9981-2026-04-24-ai-news-feed/explorer.html) | 7.4k | 32 min | Draft | 2026-04-24 |
 | [AI × Software Engineering — April 5–16, 2026](projects/9982-2026-04-11-ai-news-feed/) | **Previous edition:** [March 30 – April 4, 2026](../9983-2026-04-04-ai-news-feed/README.md) | [Explorer](https://agentiapt.github.io/agentia-research/projects/9982-2026-04-11-ai-news-feed/explorer.html) | 10.6k | 45 min | Complete | 2026-04-16 |
 | [AI × Software Engineering — March 30 – April 4, 2026](projects/9983-2026-04-04-ai-news-feed/) | **Previous edition:** [March 22–29, 2026](../9984-2026-03-29-ai-news-feed/README.md) | [Explorer](https://agentiapt.github.io/agentia-research/projects/9983-2026-04-04-ai-news-feed/explorer.html) | 8.6k | 37 min | Complete | 2026-04-04 |
 | [AI × Software Engineering — March 22–29, 2026](projects/9984-2026-03-29-ai-news-feed/) | A curated, thematic feed tracking the voices, signals, and narratives shaping the intersection of AI and software engine... | [Explorer](https://agentiapt.github.io/agentia-research/projects/9984-2026-03-29-ai-news-feed/explorer.html) | 7.6k | 32 min | Complete | 2026-03-29 |
@@ -26,7 +27,6 @@ Deep research, interactive explorations, and tools at the intersection of AI and
 | [The Great Budget Reallocation: From SaaS Seats and Headcount to Token Budgets](projects/9991-2026-03-20-token-budget-analysis/) | **Interactive Explorer:** [Token Budget Calculator](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-2... | [Explorer](https://agentiapt.github.io/agentia-research/projects/9991-2026-03-20-token-budget-analysis/explorer.html) | 3.7k | 16 min | Complete | 2026-03-20 |
 | [Git Secret Detection & Sensitive Information Leak Prevention](projects/9992-2026-03-17-git-secret-detection/) | Comprehensive landscape analysis of tools, practices, and patterns for preventing secrets and sensitive data from leakin... | — | 3.4k | 15 min | Complete | 2026-03-17 |
 | [Hardening the Claude Code Sandbox: A Practical Security Guide](projects/9993-2026-03-17-claude-code-sandbox-hardening/) | Claude Code ships with a sandbox that provides OS-level process isolation for all Bash commands. On Linux and WSL2 this ... | — | 2.6k | 12 min | Complete | 2026-03-17 |
-| [Can LLMs Self-Improve Code Without Feedback? An Empirical Test](projects/9994-2026-03-15-self-correction-experiment/) | An empirical experiment testing whether LLMs can genuinely improve code through iterative self-reflection — or whether "... | — | 397 | 2 min | Draft | 2026-03-15 |
 <!-- END PROJECTS -->
 
 [View all projects &rarr;](projects/)
