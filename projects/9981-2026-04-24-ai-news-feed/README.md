@@ -1,7 +1,7 @@
 ---
 title: "AI × Software Engineering — April 17–24, 2026"
 date: 2026-04-24
-status: draft
+status: v1
 tags: [ai-news, weekly, reality-check, gpt55, anthropic-postmortem, claude-design, security, spacex-cursor, market-repricing, deepseek-v4]
 explorers:
   - file: explorer.html
