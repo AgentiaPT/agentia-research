@@ -1,0 +1,185 @@
+
+## Phase 2: Outline & Theme (~5 minutes)
+
+### 2.1 Orchestrator synthesizes the theme
+
+The orchestrator reads `triage.md` (not `research-raw.md`) and derives:
+- **Week theme** — 2–3 word thematic label (e.g., "The Fortress", "The Unraveling", "The Inflection"). Use the `Theme hint` from kickoff if provided.
+- **Unifying thread** — one-sentence thesis tying the top stories together.
+- **Story-to-section map** — every in-window keeper assigned to exactly one of the 12 sections.
+
+If the orchestrator is unsure between two themes, pick one and move on. Editorial revision is cheap; stalling is expensive.
+
+### 2.2 Write outline.md
+
+```markdown
+# Outline: <Theme> — <START_DATE>–<END_DATE>, <YEAR>
+
+> Sync warning: every edit to README.md must be mirrored here in the same commit.
+> See the [runbook](../../runbooks/ai-news-weekly.md) for the sync protocol.
+
+**Theme:** <2-3 word label>
+**Thesis:** <one sentence>
+
+## 1. The Week's Narrative
+- Convergence table: <rows>
+- Unifying thread: <one line>
+- Deepest signal: <one line>
+
+## 2. <Section title>
+- <story>
+- <story>
+- quote candidate: <name> — "<snippet>" <source_url>
+
+...
+
+## 9. Voice Tracker
+- Active ✅: <list>
+- Inactive ❌: <list>
+
+## 10. Model & Tool Updates
+- <bulleted updates>
+
+## 11. Jobs & Economic Impact
+- <bulleted data>
+
+## 12. Signals & Radar
+- 🔴 Critical: <list>
+- 🟠 Warning: <list>
+- 🟢 Emerging: <list>
+- 🔵 Watch: <list>
+
+## Key Quotes candidates
+- <name, source_url, one-line quote>
+
+## Must-cover resolution
+- <story> → §N
+- <story> → cross-reference only (linked to prev edition anchor)
+- <story> → dropped, reason: <...>
+
+## Pending Additions
+- [ ] <items to slot in later>
+```
+
+### 2.3 The 12-section structure
+
+| # | Section | Content |
+|---|---|---|
+| 1 | **The Week's Narrative** | Thesis, convergence table, unifying thread, deepest signal |
+| 2–8 | **Thematic deep-dives** | 6–7 sections, one per story cluster. Lead para, subsections, tables, blockquotes, "why this matters" |
+| 9 | **Voice Tracker** | Active (✅) and inactive (❌) voices with quotes and sources |
+| 10 | **Model & Tool Updates** | Short-form updates organized by company/tool |
+| 11 | **Jobs & Economic Impact** | Data tables, narratives, hiring vs layoffs |
+| 12 | **Signals & Radar** | Color-coded signals + Key Quotes of the Week |
+
+### 2.4 Date window discipline (non-negotiable)
+
+- Story published before window → **exclude** (even if relevant).
+- Story already covered → **cross-reference only** (`[covered last week](../NNNN-OLD-.../README.md#anchor)`).
+- New developments on an old story → cover the **new** development only, with a brief cross-ref.
+- Aggregate stats not tied to a within-window publication → **exclude**.
+
+### 2.5 Commit the outline
+
+```bash
+git add projects/NNNN-*/outline.md
+git commit -m "news NNNN: outline — theme '<theme>'"
+```
+
+---
+
+## Phase 3: Per-Section Writing (~25 minutes, serial with parallelism where safe)
+
+### 3.1 Writing is delegated, section by section
+
+**The orchestrator does not write sections.** It spawns one writing sub-agent per section. Each writing sub-agent:
+- Has a clean context.
+- Receives only the outline entry for its section + the relevant slice of `research-raw.md`.
+- Produces `sections/NN-slug.md` and commits it.
+- Returns a 10-line summary to the orchestrator.
+
+### 3.2 Parallelism strategy
+
+**Sections that are independent → parallel** (sections 2–8 thematic deep-dives).
+**Sections that depend on others → serial after their dependencies:**
+- §1 Narrative depends on §2–§8 being written (it synthesizes the week).
+- §9 Voice Tracker depends on §2–§8 (voices are sourced from those stories).
+- §10, §11, §12 are independent.
+
+**Recommended batching (3 rounds):**
+
+1. **Round A (parallel, 7 agents):** §2, §3, §4, §5, §6, §7, §8.
+2. **Round B (parallel, 3 agents):** §10, §11, §12.
+3. **Round C (parallel, 2 agents):** §1, §9 (they synthesize from A + B).
+
+### 3.3 Writing sub-agent prompt template
+
+```
+You are writing sub-agent W<SECTION_NUMBER> for the weekly AI × Software Engineering edition.
+
+Section: §<N> — <title>
+Theme of the week: <theme>
+Date window: <start>..<end>
+
+Outline slice for your section (verbatim from outline.md):
+<paste only this section's outline entry>
+
+Research slice (verbatim rows from research-raw.md):
+<paste ONLY the rows relevant to this section, and any cross-cutting voices/quotes>
+
+Writing rules (from the runbook):
+- Lead with the news, not the context.
+- Tables for comparative data, timelines, numbers.
+- Blockquotes for exact quotes with attribution + inline source link.
+- Bold for key metrics, names, first mentions.
+- NO LINK = NO INCLUSION. Every factual claim has an inline source URL.
+- Use #:~:text= fragment syntax when linking to a specific passage.
+- Every major claim needs an inline source link.
+- Closing "why this matters" paragraph in deep-dive sections.
+- Cross-reference previous editions with relative links where relevant: `../NNNN-OLD-.../README.md#anchor`.
+- Do NOT write content for stories outside the date window. If research gave you one, skip it.
+- Do NOT include April Fools' content if the date window touches April 1 — apply the April Fools' protocol from the runbook.
+
+Output:
+1. Write the section to `projects/NNNN-*/sections/NN-slug.md` using the Write tool.
+2. Commit: `git add projects/NNNN-*/sections/NN-slug.md && git commit -m "news NNNN: §<N> <slug>"`.
+3. Return to the orchestrator:
+
+## Section summary
+- File: sections/NN-slug.md
+- Line count: <wc -l result>
+- Commit SHA: <git rev-parse HEAD>
+- Stories covered: <bulleted list>
+- Voices quoted: <bulleted list with source URLs>
+- Cross-refs to previous editions: <list>
+- Open questions / unresolved claims for fact-checker: <list>
+```
+
+### 3.4 Orchestrator's role during writing
+
+After each round of writing sub-agents returns:
+1. Append each return's summary to `task.md` under `## Section summaries`.
+2. **Do not `Read` the section files.** Use `wc -l projects/NNNN-*/sections/*.md` to check progress.
+3. Commit `task.md` updates after each round.
+4. Launch the next round.
+
+### 3.5 April Fools' protocol (if applicable)
+
+Only relevant if the date window touches **March 28 – April 4**. See the dedicated April Fools' Warning block near the end of this runbook. Pass a copy of that block into each writing sub-agent prompt when applicable.
+
+### 3.6 Section file naming
+
+```
+sections/01-narrative.md
+sections/02-<topic-slug>.md
+...
+sections/12-signals.md
+```
+
+Slug is kebab-case, describes the section's story cluster.
+
+### 3.7 Word count target
+
+Target: **6,000–8,000 words total** across all sections. If total falls below 5,500 after Round A, flag to orchestrator for a coverage-gap follow-up. If above 9,000, flag sections over 1,500 words for condensation in the editor pass.
+
+---
