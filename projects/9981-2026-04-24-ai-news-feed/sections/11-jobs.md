@@ -5,7 +5,7 @@
 - **Meta** (Apr 23) — **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted**
   - Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year — [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html)
 - **Microsoft** (Apr 23–24) — **~8,000–9,000 cuts** announced alongside Meta
-  - Combined Meta + Microsoft: **20,000+ jobs in 48 hours**. Raises concern of AI-driven labor crisis — [CNBC](https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html)
+  - Combined Meta + Microsoft: **20,000+ jobs on the same day**. Raises concern of AI-driven labor crisis — [CNBC](https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html)
 - **Atlassian** (Mar 11) — **~1,600 cuts (~10% workforce)**, ~900 from R&D
   - CEO Cannon-Brookes: self-funding "further investment in AI and enterprise sales." AI-attributed layoffs now standard pattern — [Atlassian Blog](https://www.atlassian.com/blog/company-news/atlassian-team-update-march-2026)
 - **Amazon** (cumulative since Oct 2025) — **~30,000 corporate cuts** total (~14K Oct + ~16K Jan)

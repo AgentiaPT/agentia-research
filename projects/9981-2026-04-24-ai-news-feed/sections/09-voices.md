@@ -13,7 +13,7 @@
 - **Daniel Stenberg** — "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami. Less slop but lots of reports. Many of them really good." curl expects record vulnerabilities in 2026 — [Blog](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/#:~:text=AI%20slop%20tsunami)
 - **Sam Altman** — Co-announced GPT-5.5 launch, calling it "a new class of intelligence for real work and powering agents." OpenAI credits researcher Jakub Pachocki in the announcement — [OpenAI](https://openai.com/index/introducing-gpt-5-5/#:~:text=new%20class%20of%20intelligence%20for%20real%20work%20and%20powering%20agents)
 - **Simon Willison** — Weekly newsletter: new chapter of "Agentic Engineering Patterns" guide; highlighted Claude Code harness bug (not model issue); covered "honker" Rust SQLite extension — [Blog](https://simonwillison.net/2026/Apr/24/#:~:text=Agentic%20Engineering%20Patterns)
-- **Gergely Orosz** — Published the [2026 AI Impact Survey](https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026): 906 engineers, three archetypes (Builders/Shippers/Coasters), roles converging. Separately, deep-dive on ["Tokenmaxxing as a Weird New Trend"](https://blog.pragmaticengineer.com/the-pulse-tokenmaxxing-as-a-weird-new-trend/). Also podcast: "Designing Data-Intensive Applications" with Martin Kleppmann — [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications)
+- **Gergely Orosz** — Published the [2026 AI Impact Survey](https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026): 900+ engineers, three archetypes (Builders/Shippers/Coasters), roles converging. Separately, deep-dive on ["Tokenmaxxing as a Weird New Trend"](https://blog.pragmaticengineer.com/the-pulse-tokenmaxxing-as-a-weird-new-trend/). Also podcast: "Designing Data-Intensive Applications" with Martin Kleppmann — [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications)
 
 ### New Voices 🆕
 
@@ -22,7 +22,7 @@
 
 ### Moved to Active ↑
 
-- **Andrej Karpathy** — "LLM Wiki" concept went viral (Apr 20–23): advocates replacing RAG pipelines with LLM-maintained markdown wikis as persistent "second brains." His personal wiki: **100+ articles, ~400,000 words** with near-zero manual effort. [GitHub gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) garnered 5,000+ stars and ~3,700 forks, spawning new SaaS products — [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2026/04/llm-wiki-by-andrej-karpathy/) · [Medium](https://medium.com/@sathishkraju/rag-isnt-dead-but-something-is-karpathy-s-llm-wiki-explained-512e3393801b)
+- **Andrej Karpathy** — "LLM Wiki" concept went viral (Apr 20–23): advocates replacing RAG pipelines with LLM-maintained markdown wikis as persistent "second brains." [GitHub gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) garnered 5,000+ stars and 5,000+ forks, spawning new SaaS products — [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2026/04/llm-wiki-by-andrej-karpathy/) · [Medium](https://medium.com/@sathishkraju/rag-isnt-dead-but-something-is-karpathy-s-llm-wiki-explained-512e3393801b)
 
 ### Inactive ❌
 

@@ -64,9 +64,9 @@ The SWE-bench near-100% scores paired with the 44% production survival rate from
 
 ---
 
-### Pragmatic Engineer Survey: 906 Engineers Reveal Three Archetypes
+### Pragmatic Engineer Survey: 900+ Engineers Reveal Three Archetypes
 
-[Gergely Orosz's 2026 AI Impact Survey](https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026#:~:text=The%20impact%20of%20AI%20on%20software%20engineers) — 906 respondents, mostly senior engineers from Europe and the US — revealed a profession splitting into **three distinct archetypes**:
+[Gergely Orosz's 2026 AI Impact Survey](https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026#:~:text=The%20impact%20of%20AI%20on%20software%20engineers) — 900+ respondents, mostly senior engineers from Europe and the US — revealed a profession splitting into **three distinct archetypes**:
 
 - **Builders** — Frustrated by AI-generated "slop," prefer handcrafted code, resist AI tool mandates. Strongest among senior engineers and open-source contributors
 - **Shippers** — Embrace AI as force multiplier, measure output in PRs merged per day, less concerned about code quality nuances. Dominant among startup engineers and product-focused teams
@@ -84,7 +84,7 @@ The data is damning:
 
 - **Initial AI code acceptance**: 80–90% of suggestions accepted at first glance
 - **Persistent acceptance after revision**: only **10–30%** — most "accepted" code gets rewritten or deleted within weeks
-- **Code churn**: GitClear/Jellyfish data shows **~9.4× higher code churn** for frequent AI tool users vs non-AI users ([Jellyfish](https://jellyfish.co/blog/is-tokenmaxxing-cost-effective-new-data-from-jellyfish-explains/#:~:text=code%20churn))
+- **Code churn**: GitClear data shows **~9.4× higher code churn** for frequent AI tool users vs non-AI users ([GitClear](https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality), [Jellyfish](https://jellyfish.co/blog/is-tokenmaxxing-cost-effective-new-data-from-jellyfish-explains/#:~:text=code%20churn))
 - **DX Core 4**: New measurement framework unifying DORA + SPACE + DevEx into four dimensions — Speed, Effectiveness, Quality, Business Impact — giving engineering leaders realistic benchmarks ([DX](https://getdx.com/dx-core-4/))
 
 This is a textbook case of **Goodhart's law**: "When a measure becomes a target, it ceases to be a good measure." Teams optimizing for lines-of-code-generated or tokens-consumed are producing more output that gets churned, reverted, or abandoned — creating the *appearance* of productivity while degrading the codebase. The 44% agent code survival rate from the SWE-chat paper and the 9.4× churn multiplier tell the same story from different angles.

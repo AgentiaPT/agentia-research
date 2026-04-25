@@ -47,7 +47,7 @@ Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude 
 The attack requires **zero infrastructure** — no C2 server, no malware. The entire attack loop runs within GitHub itself: an attacker writes a malicious PR title or issue comment, the AI agent reads and processes it as trusted context, and posts its own API keys into a PR comment. This is the **first public cross-vendor demonstration** of a single prompt injection pattern defeating multiple major AI agents simultaneously.
 
 - **Claude Code (Anthropic)** — CVSS **9.4**, Bounty: $100, Public Advisory: None
-- **Gemini CLI (Google)** — CVSS **9.3**, Bounty: $1,337, Public Advisory: None
+- **Gemini CLI (Google)** — Bounty: $1,337, Public Advisory: None
 - **Copilot Agent (GitHub)** — Bounty: $500, Public Advisory: None
 
 All three share the same architectural flaw: **untrusted GitHub data flows into an AI agent that holds production secrets and unrestricted tool access**. All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[14\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
