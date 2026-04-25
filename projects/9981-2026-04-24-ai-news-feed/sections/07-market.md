@@ -31,7 +31,7 @@ This is [an enterprise-scale deployment, not a pilot](https://www.googlecloudpre
 
 **Behaviour Interactive** announced its [third round of layoffs since 2024](https://www.gamedeveloper.com/business/dead-by-daylight-developer-behaviour-interactive-lays-off-staff-for-third-time-since-2024#:~:text=third%20round%20of%20layoffs), cutting mobile and external development teams. The *Dead by Daylight* studio joins a growing list of mid-tier developers thinning ranks as AI tools compress production timelines.
 
-Morgan Stanley quantified the endgame: AI could [cut game development costs by roughly 50%](https://blockchain.news/news/morgan-stanley-ai-gaming-22-billion-annual-profit#:~:text=cut%20game%20dev%20costs), **unlocking $22 billion in annual industry profits**. Their projected winners — **Tencent, Sony, and Roblox** — are companies with distribution leverage and the capital to adopt AI toolchains first. Studios without that scale face a cost disadvantage that compounds every quarter.
+Morgan Stanley quantified the endgame: AI could [cut game development costs by roughly 50%](https://money.usnews.com/investing/news/articles/2026-04-22/gaming-industry-could-unlock-22-billion-in-profits-on-ai-driven-cost-cuts-morgan-stanley#:~:text=cut%20game%20dev%20costs), **unlocking $22 billion in annual industry profits**. Their projected winners — **Tencent, Sony, and Roblox** — are companies with distribution leverage and the capital to adopt AI toolchains first. Studios without that scale face a cost disadvantage that compounds every quarter.
 
 ### The Labor-Value Disconnect
 

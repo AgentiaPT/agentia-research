@@ -6,7 +6,7 @@
 |---|---|---|---|---|
 | **Meta** | Apr 23 | **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted** | Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year | [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) |
 | **Behaviour Interactive** | Apr 22 | Third round of cuts since 2024 | Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff | [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs) |
-| **Quora / Poe** | Apr 19 | Poe team downsized, pushed to break even | CEO Adam D'Angelo: Poe "would now need to sustain itself." Core Q&A profitable, Poe is not | [Laffaz](https://laffaz.com/quora-layoffs-poe-adam-dangelo/) |
+| **Quora / Poe** | Apr 19 | Poe team downsized, pushed to break even | CEO Adam D'Angelo: Poe "would now need to sustain itself." Core Q&A profitable, Poe is not | |
 
 ### Market Signals
 

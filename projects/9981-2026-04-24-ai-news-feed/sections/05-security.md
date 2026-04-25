@@ -68,7 +68,7 @@ The finding that matters: attackers are now sharing **injection templates** — 
 
 ### RedSun: Windows Defender Becomes the Attack Vector
 
-Disclosed April 17, **RedSun** is an unpatched zero-day in Windows Defender's remediation engine. An attacker combines NTFS directory junctions, opportunistic locks, and the Cloud Files API to trick Defender into overwriting a system binary (`TieringEngineService.exe`) with attacker-controlled code — **as SYSTEM** [\[17\]](https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/#:~:text=RedSun%20zero-day) [\[18\]](https://blackswan-cybersecurity.com/threat-advisory-redsun-zero-day-windows-defender-april-17-2026/#:~:text=THREAT%20ADVISORY).
+Disclosed April 17, **RedSun** is an unpatched zero-day in Windows Defender's remediation engine. An attacker combines NTFS directory junctions, opportunistic locks, and the Cloud Files API to trick Defender into overwriting a system binary (`TieringEngineService.exe`) with attacker-controlled code — **as SYSTEM** [\[17\]](https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/#:~:text=RedSun%20zero-day) [\[18\]](https://www.bleepingcomputer.com/news/security/recently-leaked-windows-zero-days-now-exploited-in-attacks/#:~:text=RedSun).
 
 No admin rights needed. No kernel exploit. Works on fully patched April 2026 systems. **No official fix as of April 24** [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days).
 

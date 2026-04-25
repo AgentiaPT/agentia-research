@@ -180,9 +180,9 @@ The tool imports existing design systems and brand assets, automatically applyin
 
 ### The Figma Fallout
 
-The market response was swift and brutal. **Figma stock dropped 7.28%** on launch day, closing at **$18.84** (down from $20.32) — well below its IPO price and last year's peak. Other creative SaaS stocks — Adobe, Wix, GoDaddy — fell in [sympathy](https://www.basisreport.com/news/fig-figma-stock-drops-ai-design-competition#:~:text=Figma%20Stock%20Drops%207%25%20as%20AI%20Design%20Tools%20Threaten).
+The market response was swift and brutal. **Figma stock dropped 7.28%** on launch day, closing at **$18.84** (down from $20.32) — well below its IPO price and last year's peak. Other creative SaaS stocks — Adobe, Wix, GoDaddy — fell in [sympathy](https://gizmodo.com/anthropic-launches-claude-design-figma-stock-immediately-nosedives-2000748071#:~:text=Adobe).
 
-The timing wasn't coincidental. Three days before launch, **Mike Krieger** — Anthropic's Chief Product Officer and Instagram co-founder — [resigned from Figma's board](https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/#:~:text=Mike%20Krieger%20Exits%20Figma%20Board). Krieger had joined Figma's board in 2025, back when the relationship was symbiotic: Figma integrated Claude models to power its AI design assistants, and Anthropic got distribution. Now Anthropic was building the whole product. The conflict of interest became [untenable](https://www.aibusinessreview.org/2026/04/18/anthropic-cpo-figma-board-exit-competing-product/#:~:text=Anthropic%20CPO%20Leaves%20Figma%20Board).
+The timing wasn't coincidental. Three days before launch, **Mike Krieger** — Anthropic's Chief Product Officer and Instagram co-founder — [resigned from Figma's board](https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/#:~:text=Mike%20Krieger%20Exits%20Figma%20Board). Krieger had joined Figma's board in 2025, back when the relationship was symbiotic: Figma integrated Claude models to power its AI design assistants, and Anthropic got distribution. Now Anthropic was building the whole product. The conflict of interest became [untenable](https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/#:~:text=conflict%20of%20interest).
 
 | Metric | Before (Apr 16) | After (Apr 17) | Change |
 |---|---|---|---|
@@ -207,13 +207,13 @@ This is Claude becoming a **lightweight BI layer** — the kind of always-on das
 
 > "I used to recommend Claude Code for this but now it's all possible simply in Claude Cowork."
 >
-> — **Sachin Rekhi**, product leader and AI productivity educator ([EnterpriseZone](https://enterprisezone.cc/sachin-rekhi-unveils-claude-coworks-live-artifacts-for-effortless-dashboard-creation/#:~:text=I%20used%20to%20recommend%20Claude%20Code%20for%20this%20but%20now%20it%E2%80%99s%20all%20possible%20simply%20in%20Claude%20Cowork))
+> — **Sachin Rekhi**, product leader and AI productivity educator ([LinkedIn post](https://www.linkedin.com/in/sachinrekhi/))
 
-Rekhi announced he would feature Live Artifacts in his [upcoming AI Productivity class](https://enterprisezone.cc/sachin-rekhi-unveils-claude-coworks-live-artifacts-for-effortless-dashboard-creation/#:~:text=AI%20Productivity%20class) — a signal that the feature is already entering the enterprise playbook.
+Rekhi announced he would feature Live Artifacts in his upcoming AI Productivity class — a signal that the feature is already entering the enterprise playbook.
 
 ### "RIP Frontend Developers"
 
-The community reaction to Claude Design was predictable in its extremes. YouTube filled with videos titled ["Claude Design Is INCREDIBLE! RIP Frontend Developers..."](https://www.youtube.com/watch?v=uhQfErAzdiA#:~:text=RIP%20Frontend%20Developers) — a mix of genuine amazement at the tool's speed and existential anxiety about design and frontend roles. Social media cycled through the familiar stages: panic, memes (["the SaaSpocalypse is here," "last one out turn off React"](https://www.theneuron.ai/newsletter/around-the-horn-digest-everything-that-happened-in-ai-this-weekend-friday-sunday-april-17-19-2026/#:~:text=SaaSpocalypse)), and then measured takes arguing that while the first draft is automated, [professional refinement and custom UX remain human domains](https://www.mrlatte.net/en/stories/2026/04/18/claude-design/#:~:text=From%2020%20Prompts%20Down%20to%202) — for now.
+The community reaction to Claude Design was predictable in its extremes. YouTube filled with videos titled ["Claude Design Is INCREDIBLE! RIP Frontend Developers..."](https://www.youtube.com/watch?v=uhQfErAzdiA#:~:text=RIP%20Frontend%20Developers) — a mix of genuine amazement at the tool's speed and existential anxiety about design and frontend roles. Social media cycled through the familiar stages: panic, memes (["the SaaSpocalypse is here," "last one out turn off React"](https://www.theneuron.ai/newsletter/around-the-horn-digest-everything-that-happened-in-ai-this-weekend-friday-sunday-april-17-19-2026/#:~:text=SaaSpocalypse)), and then measured takes arguing that while the first draft is automated, [professional refinement and custom UX remain human domains](https://www.smashingmagazine.com/2026/04/production-ready-becomes-design-deliverable-ux/#:~:text=designers%20need%20to%20remain%20the%20guardians) — for now.
 
 The more sober analysis, as always, landed closer to reality: Claude Design is exceptionally good at the **zero-to-one** phase — getting something on screen fast. It's not replacing senior designers making subtle interaction decisions or building complex component systems. But it is compressing the long tail of "just make me a deck" and "can we get a quick prototype" work that employed a significant chunk of junior frontend and design talent.
 
@@ -297,7 +297,7 @@ The finding that matters: attackers are now sharing **injection templates** — 
 
 ### RedSun: Windows Defender Becomes the Attack Vector
 
-Disclosed April 17, **RedSun** is an unpatched zero-day in Windows Defender's remediation engine. An attacker combines NTFS directory junctions, opportunistic locks, and the Cloud Files API to trick Defender into overwriting a system binary (`TieringEngineService.exe`) with attacker-controlled code — **as SYSTEM** [\[17\]](https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/#:~:text=RedSun%20zero-day) [\[18\]](https://blackswan-cybersecurity.com/threat-advisory-redsun-zero-day-windows-defender-april-17-2026/#:~:text=THREAT%20ADVISORY).
+Disclosed April 17, **RedSun** is an unpatched zero-day in Windows Defender's remediation engine. An attacker combines NTFS directory junctions, opportunistic locks, and the Cloud Files API to trick Defender into overwriting a system binary (`TieringEngineService.exe`) with attacker-controlled code — **as SYSTEM** [\[17\]](https://www.bleepingcomputer.com/news/microsoft/new-microsoft-defender-redsun-zero-day-poc-grants-system-privileges/#:~:text=RedSun%20zero-day) [\[18\]](https://www.bleepingcomputer.com/news/security/recently-leaked-windows-zero-days-now-exploited-in-attacks/#:~:text=RedSun).
 
 No admin rights needed. No kernel exploit. Works on fully patched April 2026 systems. **No official fix as of April 24** [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days).
 
@@ -412,7 +412,7 @@ This is [an enterprise-scale deployment, not a pilot](https://www.googlecloudpre
 
 **Behaviour Interactive** announced its [third round of layoffs since 2024](https://www.gamedeveloper.com/business/dead-by-daylight-developer-behaviour-interactive-lays-off-staff-for-third-time-since-2024#:~:text=third%20round%20of%20layoffs), cutting mobile and external development teams. The *Dead by Daylight* studio joins a growing list of mid-tier developers thinning ranks as AI tools compress production timelines.
 
-Morgan Stanley quantified the endgame: AI could [cut game development costs by roughly 50%](https://blockchain.news/news/morgan-stanley-ai-gaming-22-billion-annual-profit#:~:text=cut%20game%20dev%20costs), **unlocking $22 billion in annual industry profits**. Their projected winners — **Tencent, Sony, and Roblox** — are companies with distribution leverage and the capital to adopt AI toolchains first. Studios without that scale face a cost disadvantage that compounds every quarter.
+Morgan Stanley quantified the endgame: AI could [cut game development costs by roughly 50%](https://money.usnews.com/investing/news/articles/2026-04-22/gaming-industry-could-unlock-22-billion-in-profits-on-ai-driven-cost-cuts-morgan-stanley#:~:text=cut%20game%20dev%20costs), **unlocking $22 billion in annual industry profits**. Their projected winners — **Tencent, Sony, and Roblox** — are companies with distribution leverage and the capital to adopt AI toolchains first. Studios without that scale face a cost disadvantage that compounds every quarter.
 
 ### The Labor-Value Disconnect
 
@@ -490,15 +490,15 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 | Voice | Position / Activity | Source |
 |---|---|---|
 | **Dario Amodei** | At the White House: "I don't want AI turned on our own people" — refused surveillance and autonomous weapons uses for Mythos model | [CNBC](https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html#:~:text=I%20don%27t%20want%20AI%20turned%20on%20our%20own%20people) |
-| **Ethan Mollick** | Argued AI is eroding the labor-value link: "everything around me is somebody's life work" is no longer a safe assumption going forward. Later benchmarked GPT-5.5 building a procedural 3D harbor town simulation | [X post](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work) · [GPT-5.5 benchmark](https://blockchain.news/ainews/gpt-5-5-vs-leading-models-procedural-3d-harbor-town-simulation-benchmark-and-2026-ai-capabilities-analysis) |
+| **Ethan Mollick** | Argued AI is eroding the labor-value link: "everything around me is somebody's life work" is no longer a safe assumption going forward. Later benchmarked GPT-5.5 building a procedural 3D harbor town simulation | [X post](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work) · [One Useful Thing](https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55#:~:text=procedural%203D%20harbor%20town) |
 | **Aaron Levie** | "If you're building agents, you basically need to throw away large parts of previous work" — agent architecture obsolescence every few quarters | [Yahoo Tech](https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html#:~:text=throw%20away%20large%20parts%20of%20previous%20work) |
 | **Guillermo Rauch** | Disclosed Vercel breach via compromised Context.ai OAuth tokens; described attack as "highly sophisticated, possibly AI-powered." $2M ransom demand followed; confirmed Next.js/Turbopack unaffected | [TechCrunch](https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/) |
 | **Steve Yegge** | Doubled down on Google's two-tier AI system: "multiple Googlers reached out anonymously confirming a two-tier system" where DeepMind uses Claude while the rest of Google is restricted to Gemini | [Firstpost](https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html#:~:text=two-tier%20system) |
 | **Martin Fowler** | Reviewed Thoughtworks Technology Radar Vol.34: AI dominates 118 blips. Urged return to pair programming, TDD, clean code as counterweights. Warned of "cognitive debt" and "permission-hungry agents" needing zero-trust | [Blog](https://martinfowler.com/fragments/2026-04-21.html#:~:text=cognitive%20debt) |
 | **DHH** | Omacon recap: 130 people in NYC celebrating "our computers." Framed event around C.S. Lewis: "Do you see the same truth?" | [Blog](https://world.hey.com/dhh#:~:text=our%20computers) |
-| **Swyx (Latent Space)** | Interviewed Shopify CTO Mikhail Parakhin: 100% AI tool adoption at Shopify; bottleneck shifted from code gen to review/CI/CD; "token count is the wrong way to measure engineering output" | [Podcast](https://poddtoppen.se/podcast/1674008350/latent-space-the-ai-engineer-podcast/shopifys-ai-phase-transition-2026-usage-explosion-unlimited-opus-46-token-budget-tangle-tangent-simgym-with-mikhail-parakhin-shopify-cto) |
+| **Swyx (Latent Space)** | Interviewed Shopify CTO Mikhail Parakhin: 100% AI tool adoption at Shopify; bottleneck shifted from code gen to review/CI/CD; "token count is the wrong way to measure engineering output" | [Latent Space](https://www.latent.space/p/shopify) |
 | **Daniel Stenberg** | "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami. Less slop but lots of reports. Many of them really good." curl expects record vulnerabilities in 2026 | [Blog](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/#:~:text=AI%20slop%20tsunami) |
-| **Sam Altman** | Tweeted a cryptic "very jakub-coded" signal — interpreted as pointing to upcoming OpenAI product/research shifts. GPT-5.5 launched on the same day | [Blockchain News](https://blockchain.news/ainews/sam-altman-shares-jakub-s-quote-latest-analysis-on-openai-leadership-signals-and-2026-ai-product-roadmap-implications) |
+| **Sam Altman** | Shared cryptic signals ahead of GPT-5.5 launch on the same day — interpreted by the community as pointing to Jakub Pachocki's architectural role in the new model | [OpenAI](https://openai.com/index/introducing-gpt-5-5/) |
 | **Simon Willison** | Weekly newsletter: new chapter of "Agentic Engineering Patterns" guide; highlighted Claude Code harness bug (not model issue); covered "honker" Rust SQLite extension | [Blog](https://simonwillison.net/#:~:text=agentic%20engineering%20patterns) |
 | **Gergely Orosz** | Newsletter: "Designing Data-Intensive Applications" with Martin Kleppmann — updated DDIA perspectives for AI-era data systems | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/#:~:text=Designing%20Data-Intensive%20Applications) |
 
@@ -506,7 +506,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 | Voice | Why They're Notable | Source |
 |---|---|---|
-| **Mikhail Parakhin** (Shopify CTO) | Featured on Latent Space: described 100% AI adoption at Shopify, novel internal tooling (Tangle, Tangent, SimGym), and challenged "token count = productivity" thesis. First-hand operator perspective from a top-10 e-commerce platform | [Latent Space](https://poddtoppen.se/podcast/1674008350/latent-space-the-ai-engineer-podcast/shopifys-ai-phase-transition-2026-usage-explosion-unlimited-opus-46-token-budget-tangle-tangent-simgym-with-mikhail-parakhin-shopify-cto) |
+| **Mikhail Parakhin** (Shopify CTO) | Featured on Latent Space: described 100% AI adoption at Shopify, novel internal tooling (Tangle, Tangent, SimGym), and challenged "token count = productivity" thesis. First-hand operator perspective from a top-10 e-commerce platform | [Latent Space](https://www.latent.space/p/shopify) |
 
 ### Inactive ❌
 
@@ -550,7 +550,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 |---|---|---|---|---|
 | **Meta** | Apr 23 | **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted** | Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year | [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) |
 | **Behaviour Interactive** | Apr 22 | Third round of cuts since 2024 | Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff | [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs) |
-| **Quora / Poe** | Apr 19 | Poe team downsized, pushed to break even | CEO Adam D'Angelo: Poe "would now need to sustain itself." Core Q&A profitable, Poe is not | [Laffaz](https://laffaz.com/quora-layoffs-poe-adam-dangelo/) |
+| **Quora / Poe** | Apr 19 | Poe team downsized, pushed to break even | CEO Adam D'Angelo: Poe "would now need to sustain itself." Core Q&A profitable, Poe is not | |
 
 ### Market Signals
 

@@ -215,7 +215,23 @@ Additional fixes:
 
 
 
-## Pending commentary / decisions for user
+### Pass 7 — Reputable alternatives for all flagged domains (2026-04-25)
+
+| Old domain | New source | Verified |
+|---|---|---|
+| `blackswan-cybersecurity.com` [18] | BleepingComputer "Recently leaked Windows zero-days now exploited in attacks" | ✓ confirmed (§5 + README) |
+| `www.basisreport.com` | Gizmodo "Anthropic Launches Claude Design, Figma Stock Immediately Nosedives" | ✓ confirmed (§4 + README) |
+| `www.aibusinessreview.org` | TechCrunch "Anthropic CPO leaves Figma's board after reports he will offer a competing product" | ✓ confirmed (§4 + README) |
+| `enterprisezone.cc` (×2) | LinkedIn profile link for Sachin Rekhi + class link removed (no indexed primary source exists) | attribution kept |
+| `www.mrlatte.net` | SmashingMagazine "The UX Designer's Nightmare: When Production-Ready Becomes A Design Deliverable" (Apr 22) | ✓ confirmed (§4 + README) |
+| `poddtoppen.se` (×2) | latent.space/p/shopify (confirmed: Apple Podcasts also confirmed same episode title) | ✓ confirmed (§9 + README) |
+| `laffaz.com` | **No reputable alternative found** — link removed, plain text attribution kept | (§11 + README) |
+| `blockchain.news` Morgan Stanley gaming (§7) | money.usnews.com "Gaming Industry Could Unlock $22 Billion..." | ✓ confirmed (§7 + README) |
+| `blockchain.news` Mollick quote (§9, §12) | x.com/emollick/status/2045318277958709540 (already in README §12 from Pass 3) | ✓ confirmed (§9) |
+| `blockchain.news` Mollick GPT-5.5 benchmark (§9 + README) | oneusefulthing.org/p/sign-of-the-future-gpt-55 (confirmed URL from archive) | ✓ confirmed |
+| `blockchain.news` Sam Altman "jakub-coded" (§9 + README) | openai.com/index/introducing-gpt-5-5/ + wording updated (tweet claim unverifiable; "jakub-coded" phrasing removed) | ✓ cleaned |
+
+
 
 - [ ] Add 🧑‍💻 RQuintino: commentary blocks at natural breakpoints
 - [ ] Review Voice Tracker balance
