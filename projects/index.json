@@ -1,23 +1,27 @@
 {
-  "generated": "2026-04-25T11:49:51.349440+00:00",
+  "generated": "2026-04-25T14:44:52.581943+00:00",
   "projects": [
     {
       "id": "9981-2026-04-24-ai-news-feed",
       "slug": "ai-news-feed",
       "title": "AI × Software Engineering — April 17–24, 2026",
       "date": "2026-04-24",
-      "status": "v1",
+      "status": "v2",
       "tags": [
         "ai-news",
         "weekly",
         "reality-check",
+        "pricing-upheaval",
         "gpt55",
         "anthropic-postmortem",
         "claude-design",
         "security",
         "spacex-cursor",
         "market-repricing",
-        "deepseek-v4"
+        "deepseek-v4",
+        "stanford-ai-index",
+        "tokenmaxxing",
+        "copilot-policy"
       ],
       "description": "**Previous edition:** [April 5–16, 2026](../9982-2026-04-11-ai-news-feed/README.md)",
       "files": [
@@ -44,8 +48,8 @@
         }
       ],
       "path": "projects/9981-2026-04-24-ai-news-feed",
-      "wordCount": 7121,
-      "readingTime": 30
+      "wordCount": 11300,
+      "readingTime": 48
     },
     {
       "id": "9982-2026-04-11-ai-news-feed",
