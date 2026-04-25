@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-24T14:25:17.535367+00:00",
+  "generated": "2026-04-25T11:49:51.349440+00:00",
   "projects": [
     {
       "id": "9981-2026-04-24-ai-news-feed",
       "slug": "ai-news-feed",
       "title": "AI × Software Engineering — April 17–24, 2026",
       "date": "2026-04-24",
-      "status": "draft",
+      "status": "v1",
       "tags": [
         "ai-news",
         "weekly",
@@ -24,7 +24,10 @@
         "README.md",
         "explorer-screenshot.png",
         "explorer.html",
+        "link-validation.json",
+        "link-validation.md",
         "outline.md",
+        "readme-links.md",
         "research-raw.md",
         "sources.md",
         "task.md"
@@ -41,8 +44,8 @@
         }
       ],
       "path": "projects/9981-2026-04-24-ai-news-feed",
-      "wordCount": 7381,
-      "readingTime": 32
+      "wordCount": 7121,
+      "readingTime": 30
     },
     {
       "id": "9982-2026-04-11-ai-news-feed",
@@ -82,8 +85,8 @@
         }
       ],
       "path": "projects/9982-2026-04-11-ai-news-feed",
-      "wordCount": 10595,
-      "readingTime": 45
+      "wordCount": 10193,
+      "readingTime": 43
     },
     {
       "id": "9983-2026-04-04-ai-news-feed",
