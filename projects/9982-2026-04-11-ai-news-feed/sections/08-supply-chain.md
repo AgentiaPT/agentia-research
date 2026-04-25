@@ -8,13 +8,11 @@ The supply chain siege that dominated last week's headlines continues with new d
 
 The North Korean attack on Axios — [covered last week](../9983-2026-04-04-ai-news-feed/README.md#3-the-axios-bomb--north-korea-hits-npms-most-downloaded-http-library) as a breaking story — received a formal CVE designation this week:
 
-| Field | Detail |
-|---|---|
-| **CVE** | CVE-2025-62718 |
-| **CVSS** | 9.3 (Critical) |
-| **Type** | Server-Side Request Forgery (SSRF) in NO_PROXY handling |
-| **Attribution** | UNC1069 (North Korean state-sponsored) |
-| **Blast radius** | ~600,000 downloads during 3-hour poisoning window |
+- **CVE:** CVE-2025-62718
+- **CVSS:** 9.3 (Critical)
+- **Type:** Server-Side Request Forgery (SSRF) in NO_PROXY handling
+- **Attribution:** UNC1069 (North Korean state-sponsored)
+- **Blast radius:** ~600,000 downloads during 3-hour poisoning window
 
 The CVE formalizes what was already known: the compromised Axios versions (1.14.1, 0.30.4) distributed a cross-platform RAT through a malicious `plain-crypto-js` dependency. Organizations are still auditing CI/CD pipelines and rotating secrets.
 

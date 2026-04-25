@@ -6,14 +6,12 @@ Meta launched **Muse Spark** — its first proprietary AI model — signaling th
 
 ### What Muse Spark Does
 
-| Feature | Detail |
-|---|---|
-| **Architecture** | Natively multimodal (text + images from pretraining, not bolted on) |
-| **Reasoning modes** | Three tiers: Instant (fast queries), Thinking (moderate reasoning), Contemplating (parallel sub-agents) |
-| **Efficiency** | Delivers better performance than Llama 4 Maverick with ~10x less compute |
-| **Health focus** | Physician collaboration, nutritional scanning, interactive wellness assistant |
-| **Platforms** | meta.ai, WhatsApp, Instagram, Facebook, Messenger, Meta Ray-Ban AI glasses |
-| **Access model** | Private preview API only — no open-source release, Meta account required |
+- **Architecture:** Natively multimodal (text + images from pretraining, not bolted on)
+- **Reasoning modes:** Three tiers: Instant (fast queries), Thinking (moderate reasoning), Contemplating (parallel sub-agents)
+- **Efficiency:** Delivers better performance than Llama 4 Maverick with ~10x less compute
+- **Health focus:** Physician collaboration, nutritional scanning, interactive wellness assistant
+- **Platforms:** meta.ai, WhatsApp, Instagram, Facebook, Messenger, Meta Ray-Ban AI glasses
+- **Access model:** Private preview API only — no open-source release, Meta account required
 
 The "Contemplating" mode is notable: multiple sub-agents work in parallel to solve hard problems, similar to Google's Deep Think and OpenAI's GPT-5.4 Pro — but integrated natively into a consumer product used by billions.
 

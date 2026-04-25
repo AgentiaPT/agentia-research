@@ -6,15 +6,13 @@ Anthropic — the company that accidentally published 512,000 lines of source co
 
 Meanwhile, OpenAI, Anthropic, and Google — three companies that can barely agree on what "alignment" means — formed an unprecedented intelligence-sharing alliance to fight Chinese model copying. Meta abandoned open source entirely, launching Muse Spark as its first proprietary model. OpenAI published a policy paper proposing to tax its own technology. And someone threw a Molotov cocktail at Sam Altman's house.
 
-| Layer | Who | What |
-|---|---|---|
-| **Cybersecurity** | Anthropic | Claude Mythos withheld; Project Glasswing launched with 40+ partners |
-| **Model Defense** | OpenAI / Anthropic / Google | Anti-distillation alliance via Frontier Model Forum; $1B fund |
-| **Market Structure** | Meta | Muse Spark: first proprietary model, end of open-source era |
-| **Economic Policy** | OpenAI | "Robot tax" blueprint: tax automation, fund citizens, 4-day workweek |
-| **Legal** | Musk vs. OpenAI | Seeks Altman ouster, $134B damages, trial April 27 |
-| **Physical Safety** | Altman | Molotov cocktail attack on CEO's home; suspect had list of AI executives |
-| **Infrastructure** | Anthropic | Surpasses OpenAI in revenue ($30B vs $24B); $50B+ compute deals |
+- **Cybersecurity** (Anthropic) — Claude Mythos withheld; Project Glasswing launched with 40+ partners
+- **Model Defense** (OpenAI / Anthropic / Google) — Anti-distillation alliance via Frontier Model Forum; $1B fund
+- **Market Structure** (Meta) — Muse Spark: first proprietary model, end of open-source era
+- **Economic Policy** (OpenAI) — "Robot tax" blueprint: tax automation, fund citizens, 4-day workweek
+- **Legal** (Musk vs. OpenAI) — Seeks Altman ouster, $134B damages, trial April 27
+- **Physical Safety** (Altman) — Molotov cocktail attack on CEO's home; suspect had list of AI executives
+- **Infrastructure** (Anthropic) — Surpasses OpenAI in revenue ($30B vs $24B); $50B+ compute deals
 
 ### The Unifying Thread
 

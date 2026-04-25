@@ -6,13 +6,11 @@ OpenAI published *Industrial Policy for the Intelligence Age: Ideas to Keep Peop
 
 ### The Five Pillars
 
-| Proposal | Mechanism | Parallel |
-|---|---|---|
-| **Robot Tax** | Tax automated labor at rates comparable to displaced human workers | Bill Gates' 2017 suggestion |
-| **Public Wealth Fund** | Federally managed fund seeded by AI company contributions, distributing citizen dividends | Alaska Permanent Fund |
-| **Four-Day Workweek** | Government-backed pilot programs: 32 hours at full pay as an "efficiency dividend" | Iceland, Belgium pilots |
-| **Automatic Safety Nets** | Trigger-based expansion of unemployment benefits tied to real-time AI displacement metrics | Novel |
-| **Tax Base Shift** | Realign from payroll taxes (which erode with automation) to capital gains and corporate income | Sovereign wealth funds |
+- **Robot Tax** — Tax automated labor at rates comparable to displaced human workers (parallel: Bill Gates' 2017 suggestion)
+- **Public Wealth Fund** — Federally managed fund seeded by AI company contributions, distributing citizen dividends (parallel: Alaska Permanent Fund)
+- **Four-Day Workweek** — Government-backed pilot programs: 32 hours at full pay as an "efficiency dividend" (parallel: Iceland, Belgium pilots)
+- **Automatic Safety Nets** — Trigger-based expansion of unemployment benefits tied to real-time AI displacement metrics (novel)
+- **Tax Base Shift** — Realign from payroll taxes (which erode with automation) to capital gains and corporate income (parallel: sovereign wealth funds)
 
 The paper frames AI access as a **fundamental right** and includes containment strategies for managing risks of uncontrollable superintelligent AI.
 

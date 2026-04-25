@@ -25,11 +25,9 @@ This follows Apple's [crackdown on vibe-coded apps](../9983-2026-04-04-ai-news-f
 
 The volume of AI-generated app submissions is overwhelming Apple's review infrastructure:
 
-| Metric | Number |
-|---|---|
-| **Apps submitted (2025)** | 557,000 (up 24% from 2024, highest since 2016) |
-| **Revenue concentration** | Top 1% capture 92% of in-app purchase revenue |
-| **Review times** | Stretching from days to weeks for some developers |
+- **Apps submitted (2025):** 557,000 (up 24% from 2024, highest since 2016)
+- **Revenue concentration:** Top 1% capture 92% of in-app purchase revenue
+- **Review times:** Stretching from days to weeks for some developers
 
 Most new submissions are produced with no-code AI tools. Apple maintains that most reviews complete within 48 hours, but developers report significant delays — an unintended consequence of the AI generation boom that punishes legitimate developers alongside AI spam.
 
