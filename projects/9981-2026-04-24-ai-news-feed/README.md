@@ -52,7 +52,7 @@ The theme isn't pessimism — the technology is genuinely better than it was a m
 | **Platform** | [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) threatens Figma (stock **−7%**). [Cowork Live Artifacts](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork) turn chat into a BI tool | Model providers are eating their own ecosystem — when your API vendor builds the product, what's your moat? |
 | **Security** | [MCP RCE "by design"](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html) across **200K+ servers**. [CanisterSprawl](https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials): first cross-ecosystem supply chain worm. [Bitwarden CLI](https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack) compromise targets AI tool configs | The AI toolchain is the new high-value target — and the defense hasn't caught up. Fourth consecutive week of escalation |
 | **Market** | [ServiceNow **−18%**, IBM **−7%**](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) despite beating earnings. [Meta cuts 8,000](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) to fund AI. [SpaceX $60B Cursor option](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion) | The market is repricing the entire SaaS sector on AI substitution risk. Developer tooling is now a strategic asset worth $60B |
-| **Research** | [44% agent code survival](https://arxiv.org/abs/2504.13978) in production PRs. [ICLR 2026](https://iclr.cc/virtual/2026/papers.html): AlphaAlign cuts unsafe responses **40% → <5%** | Benchmarks say one thing; merge rates say another. The production gap is now quantified |
+| **Research** | [44% agent code survival](https://arxiv.org/abs/2604.20779) in production PRs. [ICLR 2026](https://iclr.cc/virtual/2026/papers.html): AlphaAlign cuts unsafe responses **40% → <5%** | Benchmarks say one thing; merge rates say another. The production gap is now quantified |
 
 The deepest signal this week isn't technical — it's financial. When **ServiceNow drops 18%** after posting 22% revenue growth, the market isn't saying the company failed. It's saying the *category* is being repriced. AI substitution risk isn't a distant threat anymore — it's the primary lens through which Wall Street values software companies. The companies building AI infrastructure (Texas Instruments **+17%**, VAST Data's **$30B valuation**) are rewarded. The companies AI might replace are punished, regardless of current performance.
 
@@ -454,17 +454,17 @@ At **$0.14 per million input tokens**, V4-Flash is **20–50× cheaper** than co
 
 ### Qwen 3.6: The Open-Weight Family Expands
 
-Alibaba's Qwen team shipped [Qwen 3.6-27B on April 20](https://explore.n1n.ai/p/qwen-3-6-27b-new-open-weight-model#:~:text=Qwen%203.6-27B) — a **dense 27-billion-parameter** open-weight model with multimodal capabilities and native **GGUF support** for local inference. Alongside it, **Qwen 3.6-Max-Preview** appeared as a hosted API option. The combination gives developers a spectrum from laptop-friendly local deployment to cloud-scale API access, all within a single model family. The open-weight ecosystem is no longer a scrappy underdog — it is becoming the default starting point for cost-conscious teams.
+Alibaba's Qwen team shipped [Qwen 3.6-27B on April 22](https://www.marktechpost.com/2026/04/22/alibaba-qwen-team-releases-qwen3-6-27b-a-dense-open-weight-model-outperforming-397b-moe-on-agentic-coding-benchmarks/#:~:text=Qwen3.6-27B) — a **dense 27-billion-parameter** open-weight model with multimodal capabilities and native **GGUF support** for local inference. Alongside it, **Qwen 3.6-Max-Preview** appeared as a hosted API option. The combination gives developers a spectrum from laptop-friendly local deployment to cloud-scale API access, all within a single model family. The open-weight ecosystem is no longer a scrappy underdog — it is becoming the default starting point for cost-conscious teams.
 
 ### Research Papers: The Production Gap
 
 Three papers published this week paint a sobering picture of AI coding in real-world pipelines:
 
-**44% agent code survival.** A study examining [AI-authored pull requests in production repositories](https://arxiv.org/abs/2504.13978#:~:text=44%25%20of%20agent-generated%20code) found that only **44% of agent-generated code** survives the review process unchanged. The rest is rewritten, partially reverted, or abandoned entirely. The "SWE-chat" paper calls this the gap between benchmark heroics and merge-ready engineering.
+**44% agent code survival.** A study examining [AI-authored pull requests in production repositories](https://arxiv.org/abs/2604.20779#:~:text=Just%2044%25%20of%20all%20agent-produced%20code%20survives) found that only **44% of agent-generated code** survives into user commits. The rest is rewritten, partially reverted, or abandoned entirely. The "SWE-chat" paper calls this the gap between benchmark heroics and merge-ready engineering.
 
-**Over-editing under false confidence.** The "PDB" paper documents an [over-editing gap in LLM debugging](https://arxiv.org/abs/2504.14813#:~:text=over-editing): models that locate bugs correctly still introduce unnecessary changes elsewhere in the file, driven by **false confidence** in their understanding of surrounding context. Correct diagnosis, incorrect surgery.
+**Over-editing under false confidence.** The "PDB" paper documents an [over-editing gap in LLM debugging](https://arxiv.org/abs/2604.17338#:~:text=frontier%20LLMs%20often%20regenerate%20correct%20but%20over-edited%20solutions): frontier models achieve unit-test pass rates above 76% but **edit precision below 45%** — regenerating and over-editing rather than making targeted minimal fixes, even when explicitly instructed to debug precisely. Correct output, unnecessary surgery.
 
-**CI/CD reliability at scale.** An empirical study of [61,000 CI/CD runs across five AI coding bots](https://arxiv.org/abs/2504.14157#:~:text=61K%20runs) reveals persistent flakiness — bots that pass local tests frequently break in CI environments due to environment assumptions, non-deterministic outputs, and missing dependency declarations.
+**CI/CD reliability at scale.** An empirical study of [61,837 CI/CD runs across five AI coding bots](https://arxiv.org/abs/2604.18334#:~:text=61%2C837%20runs) reveals substantial agent-dependent differences — Copilot and Codex reach ~93–94% workflow success, while a **negative correlation** between agent contribution frequency and success rate shows that heavier agentic usage can erode pipeline reliability. 3,067 failed agentic PRs map to 13 distinct failure categories.
 
 Together, these papers converge on a single theme: **AI can write code that looks right and benchmarks well, but production is a different arena.**
 
@@ -472,8 +472,8 @@ Together, these papers converge on a single theme: **AI can write code that look
 
 The International Conference on Learning Representations (April 23–24) featured two safety-alignment breakthroughs:
 
-- [**AlphaAlign**](https://buildfastwithai.com/artificial-intelligence/iclr-2026-key-breakthroughs#:~:text=AlphaAlign) and [**WaltzRL**](https://buildfastwithai.com/artificial-intelligence/iclr-2026-key-breakthroughs#:~:text=WaltzRL) — reinforcement-learning frameworks that **cut unsafe model responses from ~40% to under 5%** on standard safety benchmarks.
-- [**ASMR-Bench**](https://arxiv.org/abs/2504.12069#:~:text=ASMR-Bench), a new sabotage-detection benchmark, found that current detection methods achieve an **AUROC of only 0.77** — meaning roughly one in four sabotage attempts by a misaligned model would go undetected. Safety is improving, but the detection tooling has not caught up.
+- [**AlphaAlign**](https://openreview.net/forum?id=2XNb1JUKW3#:~:text=AlphaAlign) and [**WaltzRL**](https://iclr.cc/virtual/2026/poster/10011750#:~:text=WaltzRL) — reinforcement-learning frameworks that **cut unsafe model responses from ~40% to under 5%** on standard safety benchmarks.
+- [**ASMR-Bench**](https://arxiv.org/abs/2604.16286#:~:text=ASMR-Bench), a new sabotage-detection benchmark, found that current detection methods achieve an **AUROC of only 0.77** — meaning roughly one in four sabotage attempts by a misaligned model would go undetected. Safety is improving, but the detection tooling has not caught up.
 
 ### Why This Matters
 
@@ -533,8 +533,8 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 | Model / Tool | Date | Key Update | Source |
 |---|---|---|---|
 | **GPT-5.5** (OpenAI) | Apr 23 | 1M-token context, TerminalBench 2.0: **82.7%**, SWE-Bench Pro: **58.6%**, ARC-AGI 2: **85%**. API: $5/$30 per 1M tokens (2× GPT-5.4) | [OpenAI](https://openai.com/index/introducing-gpt-5-5/) |
-| **DeepSeek V4** | Apr 24 | 1.6T-param MoE (49B active), Huawei Ascend. LiveCodeBench **93.5**, MMLU-Pro **87.5**. **$0.14/M input** (20–50× cheaper) | [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html) |
-| **Qwen 3.6-27B** (Alibaba) | Apr 20 | Dense open-weight, multimodal (text+vision), GGUF for llama.cpp. Qwen 3.6-Max-Preview (API) also launched | [N1N AI](https://explore.n1n.ai/blog/qwen-3-6-27b-gguf-llama-cpp-local-multimodal-2026-04-23) |
+| **DeepSeek V4** | Apr 24 | 1.6T-param MoE (49B active), Huawei Ascend. LiveCodeBench **93.5**, MMLU-Pro **87.5**. V4-Flash **$0.14/M** · V4-Pro **$1.74/M** | [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html) |
+| **Qwen 3.6-27B** (Alibaba) | Apr 22 | Dense open-weight, multimodal (text+vision), GGUF for llama.cpp. Qwen 3.6-Max-Preview (API) also launched | [MarkTechPost](https://www.marktechpost.com/2026/04/22/alibaba-qwen-team-releases-qwen3-6-27b-a-dense-open-weight-model-outperforming-397b-moe-on-agentic-coding-benchmarks/) |
 | **Chatbot Arena** | Apr 23–24 | Claude Opus 4.7 Thinking holds **#1 overall** (~1503 Elo). GPT-5.5 leads ARC-AGI 2. Top-6 gap: ~20 Elo | [Arena AI](https://arena.ai/leaderboard/text) |
 | **Claude Design** (Anthropic) | Apr 17 | AI design companion powered by Opus 4.7 vision. Creates prototypes, decks, exports to Figma/Canva/PDF | [Anthropic](https://www.anthropic.com/news/claude-design-anthropic-labs) |
 | **Claude Cowork Live Artifacts** | Apr 20 | Persistent auto-refreshing dashboards. Connects Asana, Notion, Salesforce, Sheets, Slack, Gmail | [Claude Support](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork) |
@@ -584,7 +584,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 ### 🟢 Emerging
 
-- **DeepSeek V4 on domestic Chinese silicon** — First major LLM optimized for Huawei Ascend, not NVIDIA. **$0.14/M input tokens** (20–50× cheaper). Geopolitical divergence in AI infrastructure is now real. [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html)
+- **DeepSeek V4 on domestic Chinese silicon** — First major LLM optimized for Huawei Ascend, not NVIDIA. V4-Flash **$0.14/M** · V4-Pro **$1.74/M** (20–50× cheaper than Western APIs). Geopolitical divergence in AI infrastructure is now real. [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html)
 - **Claude Design threatens Figma** — Stock dropped **7%** on launch day. Mike Krieger resigned from Figma's board pre-launch. Model providers are eating their own ecosystem. [TechCrunch](https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/)
 - **Anthropic postmortem sets transparency precedent** — Detailed engineering breakdown of three product bugs. Rare candor in AI industry. Future "nerfing" complaints will be measured against this bar. [Anthropic](https://www.anthropic.com/engineering/april-23-postmortem)
 

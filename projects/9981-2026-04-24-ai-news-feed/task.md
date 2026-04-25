@@ -96,6 +96,26 @@ Use the AI×Software runbook to update, date from last one until today. Stories 
 - IBM stock drop: −9% → −7% across 5 locations (sources report 6-7%)
 - Mollick quote: unified wording across §7, §9, §12
 
+### Pass 4 — Firecrawl fact-check (2026-04-25, §8 Research section only)
+
+All 4 arXiv IDs in §8 pointed to completely unrelated papers (critical hallucinations from original research phase). Verified correct IDs using Firecrawl + web search:
+
+| Wrong ID | Correct ID | Paper |
+|---|---|---|
+| 2504.13978 | **2604.20779** | SWE-chat: 44% agent code survival |
+| 2504.14813 | **2604.17338** | PDB: frontier LLMs over-edit while debugging |
+| 2504.14157 | **2604.18334** | CI/CD reliability: 61,837 runs, 5 bots |
+| 2504.12069 | **2604.16286** | ASMR-Bench: sabotage detection AUROC 0.77 |
+
+Additional fixes:
+- **V4-Flash pricing**: Section file had "V4-Pro is $0.14/M" — corrected to "V4-Flash". V4-Pro is $1.74/M (confirmed via web search). Pricing table entry updated from "DeepSeek V4 $0.14" → "DeepSeek V4-Flash $0.14". Model updates table now shows both tiers.
+- **CNBC URL**: Section file had `cnbc.com/2025/04/24/chinese-ai-lab-deepseek-releases-new-model.html` (wrong year, wrong article). Corrected to `cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html`.
+- **Qwen 3.6-27B date**: "April 20" → "April 22" (confirmed via MarkTechPost, published 2026-04-22).
+- **Qwen source link**: n1n.ai 404 → replaced with MarkTechPost (working, correct article).
+- **AlphaAlign/WaltzRL source**: buildfastwithai.com/artificial-intelligence/iclr-2026-key-breakthroughs (404) → replaced with openreview.net (AlphaAlign) and iclr.cc (WaltzRL).
+- **CI/CD description**: Original text described "persistent flakiness" and local-vs-CI breakage; actual paper finds agent-dependent differences (Copilot/Codex at 93–94% success) and negative correlation between frequency and success. Description updated to match actual findings.
+- **PDB description**: Original text framed around "false confidence" and "introduce unnecessary changes elsewhere." Updated to match abstract language (over-editing/regeneration, precision below 45%).
+
 ### Pass 3 (user-supplied correction, 2026-04-24)
 - Mollick quote was paraphrased ("Not everything around me is somebody's life work anymore"); corrected to verbatim tweet text: **"One thing thing about AI, for better and worse, is that 'everything around me is somebody's life work' is no longer a true assumption going forward."**
 - Source link swapped from oneusefulthing.org / blockchain.news to the original tweet: https://x.com/emollick/status/2045318277958709540
