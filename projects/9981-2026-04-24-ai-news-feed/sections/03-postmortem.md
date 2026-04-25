@@ -6,11 +6,9 @@
 
 ### The Three Bugs
 
-| # | Change | Introduced | Fixed | Duration | Root Cause |
-|---|--------|-----------|-------|----------|------------|
-| 1 | **Reasoning effort downgrade** | Mar 4 | Apr 7 | 34 days | Default silently switched from `high` → `medium` to reduce UI-freezing latency spikes |
-| 2 | **Cache-clearing bug** | Mar 26 | Apr 10 | 15 days | Optimization to clear stale thinking state after idle sessions instead cleared it *every turn* |
-| 3 | **Verbosity-reduction prompt** | Apr 16 | Apr 20 | 4 days | System prompt capped responses at ~25 words between tool calls, starving reasoning bandwidth |
+1. **Reasoning effort downgrade** — Introduced Mar 4, fixed Apr 7 (34 days). Default silently switched from `high` → `medium` to reduce UI-freezing latency spikes
+2. **Cache-clearing bug** — Introduced Mar 26, fixed Apr 10 (15 days). Optimization to clear stale thinking state after idle sessions instead cleared it *every turn*
+3. **Verbosity-reduction prompt** — Introduced Apr 16, fixed Apr 20 (4 days). System prompt capped responses at ~25 words between tool calls, starving reasoning bandwidth
 
 The timeline matters. Bug 1 ran solo for **22 days** before Bug 2 stacked on top of it. For the **12-day overlap** between March 26 and April 7, users experienced *both* reduced reasoning depth and aggressive context amnesia — making the model appear forgetful, repetitive, and incapable of maintaining coherent multi-step plans. Bug 1 was fixed April 7; Bug 2 continued alone until April 10. Then, just six days after Bug 2 was fixed, Bug 3 arrived and re-introduced a different flavor of degradation. The cumulative effect: from March 4 through April 20, there was **not a single day** when Claude Code ran without at least one active regression.
 

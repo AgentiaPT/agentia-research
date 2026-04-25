@@ -8,14 +8,12 @@ Anthropic spent this week doing something its API customers hoped it never would
 
 Claude Design launched April 17 as an [Anthropic Labs research preview](https://www.anthropic.com/news/claude-design-anthropic-labs#:~:text=research%20preview), powered by **Opus 4.7's vision capabilities**. The pitch: describe what you need — a landing page, pitch deck, interactive prototype, slide presentation — and Claude generates a fully editable artifact on a live canvas. No Figma. No frontend developer. No design degree.
 
-| Capability | Details |
-|---|---|
-| **Input** | Text prompts, screenshots, Figma files, PDFs, codebases, voice notes |
-| **Output** | Interactive prototypes, slide decks, one-pagers, marketing collateral |
-| **Export** | Figma, Canva, PDF, PPTX, live URLs, production-ready HTML |
-| **Editing** | Conversational iteration, inline comments, direct manipulation, sliders |
-| **Model** | Claude Opus 4.7 (vision) |
-| **Access** | Pro, Max, Team, Enterprise — no added fee during research preview |
+- **Input:** Text prompts, screenshots, Figma files, PDFs, codebases, voice notes
+- **Output:** Interactive prototypes, slide decks, one-pagers, marketing collateral
+- **Export:** Figma, Canva, PDF, PPTX, live URLs, production-ready HTML
+- **Editing:** Conversational iteration, inline comments, direct manipulation, sliders
+- **Model:** Claude Opus 4.7 (vision)
+- **Access:** Pro, Max, Team, Enterprise — no added fee during research preview
 
 The tool imports existing design systems and brand assets, automatically applying colors, typography, and component libraries to generated outputs. It's explicitly designed for the ["first draft" phase](https://www.anthropic.com/news/claude-design-anthropic-labs#:~:text=first%20draft) — the part of the workflow where designers and non-designers alike spend the most time going from blank canvas to something worth reviewing.
 
@@ -25,24 +23,20 @@ The market response was swift and brutal. **Figma stock dropped 7.28%** on launc
 
 The timing wasn't coincidental. Three days before launch, **Mike Krieger** — Anthropic's Chief Product Officer and Instagram co-founder — [resigned from Figma's board](https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/#:~:text=Mike%20Krieger%20Exits%20Figma%20Board). Krieger had joined Figma's board in 2025, back when the relationship was symbiotic: Figma integrated Claude models to power its AI design assistants, and Anthropic got distribution. Now Anthropic was building the whole product. The conflict of interest became [untenable](https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/#:~:text=conflict%20of%20interest).
 
-| Metric | Before (Apr 16) | After (Apr 17) | Change |
-|---|---|---|---|
-| **Figma (FIG) stock** | $20.32 | $18.84 | **−7.28%** |
-| **Krieger board status** | Active member | Resigned (Apr 14) | — |
-| **Anthropic–Figma relationship** | API provider / partner | Direct competitor | — |
+- **Figma (FIG) stock** — Before: $20.32 → After: $18.84 (**−7.28%**)
+- **Krieger board status** — Before: Active member → After: Resigned (Apr 14)
+- **Anthropic–Figma relationship** — Before: API provider / partner → After: Direct competitor
 
 ### Cowork Live Artifacts: Dashboards That Breathe
 
 Three days later, Anthropic shipped [Live Artifacts for Claude Cowork](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork#:~:text=live%20artifacts) — persistent, auto-refreshing HTML dashboards that connect directly to your data sources. Tell Claude what dashboard you want, specify the integrations, and it builds a versioned, cross-device artifact that pulls fresh data every time you open it.
 
-| Feature | Details |
-|---|---|
-| **Data sources** | Asana, Notion, Salesforce, Google Sheets, Slack, Gmail, Google Calendar |
-| **Persistence** | Auto-saved in dedicated Cowork tab, accessible across devices |
-| **Versioning** | Full version history with rollback |
-| **Refresh** | Auto-refreshes with live data on open |
-| **Iteration** | Modify with follow-up prompts — no rebuild required |
-| **Access** | All paid plans (Pro, Max, Team, Enterprise) |
+- **Data sources:** Asana, Notion, Salesforce, Google Sheets, Slack, Gmail, Google Calendar
+- **Persistence:** Auto-saved in dedicated Cowork tab, accessible across devices
+- **Versioning:** Full version history with rollback
+- **Refresh:** Auto-refreshes with live data on open
+- **Iteration:** Modify with follow-up prompts — no rebuild required
+- **Access:** All paid plans (Pro, Max, Team, Enterprise)
 
 This is Claude becoming a **lightweight BI layer** — the kind of always-on dashboard that previously required Tableau, Looker, or a data team. Product leaders noticed immediately:
 

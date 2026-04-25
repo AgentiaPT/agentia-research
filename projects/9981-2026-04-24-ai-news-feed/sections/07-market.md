@@ -4,12 +4,10 @@ Wall Street delivered its verdict on legacy software this week — and it was br
 
 ### The Bloodbath in Numbers
 
-| Ticker | Move | Revenue | YoY Growth | Earnings |
-|--------|------|---------|------------|----------|
-| **ServiceNow (NOW)** | **−18%** | $3.77B | +22% | Beat |
-| **IBM** | **−9%** | $15.92B | +9.5% | Beat |
-| **iShares Software ETF (IGV)** | **−6% (day)** | — | −27% (6mo) | — |
-| **Texas Instruments (TXN)** | **~+19%** | — | — | Beat |
+- **ServiceNow (NOW)** — **−18%**, Revenue: $3.77B, YoY Growth: +22%, Earnings: Beat
+- **IBM** — **−9%**, Revenue: $15.92B, YoY Growth: +9.5%, Earnings: Beat
+- **iShares Software ETF (IGV)** — **−6% (day)**, YoY Growth: −27% (6mo)
+- **Texas Instruments (TXN)** — **~+19%**, Earnings: Beat
 
 ServiceNow posted **$3.77B in revenue, up 22% year-over-year**, and still [lost nearly a fifth of its market cap in a single session](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/#:~:text=ServiceNow%20stock%20crashes%2018%25). IBM's **$15.92B quarter with 9.5% growth** — historically a victory lap for Big Blue — [earned shareholders a 9% haircut](https://www.cnbc.com/2026/04/22/ibm-q1-earnings-report-2026.html#:~:text=IBM%20stock%20drops). The iShares Expanded Tech-Software ETF fell **6% in a single day** and is now down **27% over six months**, a drawdown that rivals early-pandemic levels. [The software selloff is structural, not cyclical](https://money.usnews.com/investing/news/articles/2026-04-23/us-software-stocks-slide-as-ibm-servicenow-results-reignite-ai-disruption-fears#:~:text=software%20stocks).
 
