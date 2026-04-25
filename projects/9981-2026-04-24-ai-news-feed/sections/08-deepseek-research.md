@@ -6,19 +6,15 @@ DeepSeek dropped V4 on April 24 and the numbers demand attention: a **1.6-trilli
 
 DeepSeek released two variants simultaneously — [V4-Pro and V4-Flash](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=DeepSeek%20V4) — targeting different cost–capability trade-offs:
 
-| Model | Total Params | Active Params | Context | LiveCodeBench | MMLU-Pro |
-|---|---|---|---|---|---|
-| **V4-Pro** | 1.6 T | 49 B | 1 M tokens | **93.5** | **87.5** |
-| **V4-Flash** | 284 B | 13 B | 1 M tokens | — | — |
+- **V4-Pro** — 1.6T total params, 49B active, 1M token context, LiveCodeBench **93.5**, MMLU-Pro **87.5**
+- **V4-Flash** — 284B total params, 13B active, 1M token context
 
 The pricing is where jaws drop:
 
-| Provider | Input (per 1 M tokens) | Approx. Multiplier vs DeepSeek |
-|---|---|---|
-| **DeepSeek V4-Flash** | **$0.14** | 1× |
-| GPT-4.1 | $2.00 | ~14× |
-| Claude Sonnet 4 | $3.00 | ~21× |
-| Gemini 2.5 Pro | $1.25 | ~9× |
+- **DeepSeek V4-Flash** — **$0.14**/1M tokens (1×)
+- **GPT-4.1** — $2.00/1M tokens (~14× vs DeepSeek)
+- **Claude Sonnet 4** — $3.00/1M tokens (~21× vs DeepSeek)
+- **Gemini 2.5 Pro** — $1.25/1M tokens (~9× vs DeepSeek)
 
 At **$0.14 per million input tokens**, V4-Flash is **20–50× cheaper** than comparable Western frontier APIs depending on the tier. The [first major LLM trained entirely on Huawei Ascend hardware](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=Huawei%20Ascend) proves that the US chip-export controls have not stopped China from reaching parity on key benchmarks — they have merely forced an alternative supply chain into existence.
 

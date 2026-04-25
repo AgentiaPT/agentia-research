@@ -8,11 +8,9 @@ OpenAI, Anthropic, and Google — three companies that compete ferociously for t
 
 Adversarial distillation is a technique where competitors send millions of automated prompts to a rival's API, collecting the outputs to train copycat models. The practice is a legitimate AI technique at small scale — but the scale described this week is industrial espionage.
 
-| Lab | Attacks Documented |
-|---|---|
-| **Anthropic** | 16 million adversarial exchanges from 24,000 fake accounts |
-| **OpenAI** | Tens of thousands of fraudulent accounts identified |
-| **Google** | Pattern confirmed, numbers not disclosed |
+- **Anthropic** — 16 million adversarial exchanges from 24,000 fake accounts
+- **OpenAI** — Tens of thousands of fraudulent accounts identified
+- **Google** — Pattern confirmed, numbers not disclosed
 
 The named targets: **DeepSeek**, **Moonshot AI**, and **MiniMax**. US officials estimate the practice costs American AI labs **billions annually**. The catalyst was DeepSeek's release of DeepSeek-R1, a model that rivaled leading US models and sparked suspicions it was trained extensively via adversarial distillation.
 

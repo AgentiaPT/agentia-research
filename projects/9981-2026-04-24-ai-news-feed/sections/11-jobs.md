@@ -2,22 +2,20 @@
 
 ### Layoffs & Restructuring
 
-| Company | Date | Impact | Context | Source |
-|---|---|---|---|---|
-| **Meta** | Apr 23 | **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted** | Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year | [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) |
-| **Behaviour Interactive** | Apr 22 | Third round of cuts since 2024 | Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff | [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs) |
+- **Meta** (Apr 23) — **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted**
+  - Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year — [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html)
+- **Behaviour Interactive** (Apr 22) — Third round of cuts since 2024
+  - Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff — [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs)
 
 
 ### Market Signals
 
 **Software stocks crashed on April 23** despite strong earnings — the market is repricing SaaS on AI substitution risk:
 
-| Stock / Index | Move | Revenue | Source |
-|---|---|---|---|
-| **ServiceNow** | **−18%** | $3.77B (+22% YoY, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **IBM** | **−9%** | $15.92B (+9.5%, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **iShares Software ETF (IGV)** | **−6%** (day), **−27%** (6 months) | — | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **Texas Instruments** | **~+19%** | AI infra beneficiary | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
+- **ServiceNow** — **−18%**, Revenue: $3.77B (+22% YoY, beat) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
+- **IBM** — **−9%**, Revenue: $15.92B (+9.5%, beat) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
+- **iShares Software ETF (IGV)** — **−6%** (day), **−27%** (6 months) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
+- **Texas Instruments** — **~+19%**, AI infra beneficiary — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
 
 ### AI Adoption Metrics
 

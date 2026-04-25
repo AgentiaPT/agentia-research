@@ -8,11 +8,9 @@ Anthropic launched **Claude Managed Agents** in public beta — a suite of compo
 
 The system separates three concerns:
 
-| Component | Role |
-|---|---|
-| **The Brain** | Claude handles reasoning, planning, and decision-making |
-| **The Hands** | Sandboxed code execution, file operations, tool use |
-| **The Session** | Persistent event log maintaining state across interactions |
+- **The Brain:** Claude handles reasoning, planning, and decision-making
+- **The Hands:** Sandboxed code execution, file operations, tool use
+- **The Session:** Persistent event log maintaining state across interactions
 
 This decoupling means developers don't need to build sandbox infrastructure, credential management, session persistence, scaling, or error recovery. Anthropic handles all of it.
 
@@ -30,10 +28,8 @@ Alongside Managed Agents, Anthropic shipped the **Advisor Tool** — a system th
 
 At $0.08/hour, agent infrastructure is approaching commodity pricing. The comparison:
 
-| Option | Setup Time | Cost |
-|---|---|---|
-| Build your own agent infrastructure | 2–6 months | Engineering salaries + cloud costs |
-| Claude Managed Agents | Days | $0.08/hr + tokens |
+- **Build your own agent infrastructure** — 2–6 months setup, engineering salaries + cloud costs
+- **Claude Managed Agents** — days to set up, $0.08/hr + tokens
 
 This directly competes with OpenAI's Assistants API and Google's Vertex AI agents, but Anthropic's bet is that the combination of Claude's code understanding (80.8% SWE-bench) and managed infrastructure will be the deciding factor for enterprises already invested in the Claude ecosystem.
 

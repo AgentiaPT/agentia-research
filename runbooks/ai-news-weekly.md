@@ -356,11 +356,11 @@ If the orchestrator is unsure between two themes, pick one and move on. Editoria
 
 | # | Section | Content |
 |---|---|---|
-| 1 | **The Week's Narrative** | Thesis, convergence table, unifying thread, deepest signal |
-| 2–8 | **Thematic deep-dives** | 6–7 sections, one per story cluster. Lead para, subsections, tables, blockquotes, "why this matters" |
+| 1 | **The Week's Narrative** | Thesis, convergence list, unifying thread, deepest signal |
+| 2–8 | **Thematic deep-dives** | 6–7 sections, one per story cluster. Lead para, subsections, bold-label bullet lists, blockquotes, "why this matters" |
 | 9 | **Voice Tracker** | Active (✅) and inactive (❌) voices with quotes and sources |
 | 10 | **Model & Tool Updates** | Short-form updates organized by company/tool |
-| 11 | **Jobs & Economic Impact** | Data tables, narratives, hiring vs layoffs |
+| 11 | **Jobs & Economic Impact** | Structured bullet lists, narratives, hiring vs layoffs |
 | 12 | **Signals & Radar** | Color-coded signals + Key Quotes of the Week |
 
 ### 2.4 Date window discipline (non-negotiable)
@@ -380,6 +380,15 @@ git commit -m "news NNNN: outline — theme '<theme>'"
 ---
 
 ## Phase 3: Per-Section Writing (~25 minutes, serial with parallelism where safe)
+
+> **⚠️ SUBSTACK FORMATTING CONSTRAINT (non-negotiable):** Markdown tables do **not** render on Substack — they appear as broken pipe-delimited text. **Never use markdown tables** in section files (`sections/*.md`) or the assembled `README.md`. Use these alternatives instead:
+>
+> - **Bold-label bullet lists** for structured data: `- **Label** — value, detail, metric`
+> - **Nested bullets** for multi-field records: top bullet = entity, sub-bullets = attributes
+> - **Definition-style pairs** for key/value data: `**Key:** Value`
+> - **Blockquotes with bold labels** for emphasis: `> **Category:** description`
+>
+> This applies to ALL sections including convergence summaries (§1), comparison data (§2–8), voice trackers (§9), model updates (§10), jobs data (§11), and signals (§12).
 
 ### 3.1 Writing is delegated, section by section
 
@@ -420,7 +429,9 @@ Research slice (verbatim rows from research-raw.md):
 
 Writing rules (from the runbook):
 - Lead with the news, not the context.
-- Tables for comparative data, timelines, numbers.
+- **NO MARKDOWN TABLES.** Markdown tables do not render on Substack. Use bold-label bullet lists, definition-style lists, or nested bullets for comparative data, timelines, and numbers. Example — instead of a table, write:
+  - **GPT-5.5** — TerminalBench 82.7%, 1M context, $5/$30 pricing
+  - **DeepSeek V4** — Huawei Ascend, $0.14/M (Flash tier)
 - Blockquotes for exact quotes with attribution + inline source link.
 - Bold for key metrics, names, first mentions.
 - NO LINK = NO INCLUSION. Every factual claim has an inline source URL.

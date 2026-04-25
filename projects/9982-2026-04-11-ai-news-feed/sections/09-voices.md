@@ -60,30 +60,26 @@
 
 ### Voices Not Active This Week
 
-| Voice | Last Active | Notes |
-|---|---|---|
-| Andrej Karpathy | March 30–April 4 | No major new statements; prior "agentic engineering" takes still circulating |
-| Simon Willison | March 30–April 4 | Active in technical commentary, no headline takes |
-| Marc Andreessen | March 30–April 4 | Latent Space podcast from prior week still referenced |
-| Boris Cherny | March 30–April 4 | DMCA crisis is resolved; no new public statements |
-| Gergely Orosz | Ongoing newsletter | No specific this-week items found |
-| Steve Yegge | Earlier 2026 | Not active this week |
-| Kelsey Hightower | April 7–9 | Keynoted Nutanix .NEXT; no AI-specific takes surfaced |
-| Guillermo Rauch | March 30–April 4 | No new public statements |
-| Aaron Levie | March 30–April 4 | No new public statements |
+- **Andrej Karpathy** — last active March 30–April 4; no major new statements; prior "agentic engineering" takes still circulating
+- **Simon Willison** — last active March 30–April 4; active in technical commentary, no headline takes
+- **Marc Andreessen** — last active March 30–April 4; Latent Space podcast from prior week still referenced
+- **Boris Cherny** — last active March 30–April 4; DMCA crisis is resolved; no new public statements
+- **Gergely Orosz** — ongoing newsletter; no specific this-week items found
+- **Steve Yegge** — last active earlier 2026; not active this week
+- **Kelsey Hightower** — last active April 7–9; keynoted Nutanix .NEXT; no AI-specific takes surfaced
+- **Guillermo Rauch** — last active March 30–April 4; no new public statements
+- **Aaron Levie** — last active March 30–April 4; no new public statements
 
 ---
 
 ### Voice Summary Table
 
-| Voice | Active | Key Topic | Source |
-|---|---|---|---|
-| Sam Altman | ✅ | Molotov attack, robot tax paper, "Building the Future" talk | CNBC, Blog, TechCrunch |
-| Dario Amodei | ✅ | Glasswing, Mythos, $30B revenue, Managed Agents | Anthropic, CNBC |
-| Elon Musk | ✅ | Seeks Altman ouster, $134B damages, trial April 27 | CNBC, Bloomberg |
-| Evan Spiegel | ✅ | 1,000 layoffs, 65% AI-generated code at Snap | CNBC, Fast Company |
-| Alexandr Wang | ✅ | Muse Spark launch, Meta goes proprietary | Meta Blog |
-| Andrej Karpathy | ❌ | — | — |
-| Simon Willison | ❌ | — | — |
-| Marc Andreessen | ❌ | — | — |
-| Gergely Orosz | ❌ | — | — |
+- ✅ **Sam Altman** — Molotov attack, robot tax paper, "Building the Future" talk (CNBC, Blog, TechCrunch)
+- ✅ **Dario Amodei** — Glasswing, Mythos, $30B revenue, Managed Agents (Anthropic, CNBC)
+- ✅ **Elon Musk** — Seeks Altman ouster, $134B damages, trial April 27 (CNBC, Bloomberg)
+- ✅ **Evan Spiegel** — 1,000 layoffs, 65% AI-generated code at Snap (CNBC, Fast Company)
+- ✅ **Alexandr Wang** — Muse Spark launch, Meta goes proprietary (Meta Blog)
+- ❌ **Andrej Karpathy**
+- ❌ **Simon Willison**
+- ❌ **Marc Andreessen**
+- ❌ **Gergely Orosz**

@@ -8,11 +8,9 @@ Seven days after [accidentally leaking 512,000 lines of Claude Code source](../9
 
 Claude Mythos Preview — Anthropic's most advanced model — was not explicitly trained as a cybersecurity tool. But as a result of general improvements in code understanding, reasoning, and autonomy, the model autonomously identified **thousands of zero-day vulnerabilities** in every major operating system and web browser. Some bugs had evaded detection for over two decades:
 
-| Discovery | Age | Impact |
-|---|---|---|
-| OpenBSD vulnerability | 27 years | Undetected by human auditors and automated fuzzing |
-| FreeBSD remote code execution | 17 years | Full remote compromise |
-| Multiple browser zero-days | Various | Working exploits generated independently |
+- **OpenBSD vulnerability** — 27 years old, undetected by human auditors and automated fuzzing
+- **FreeBSD remote code execution** — 17 years old, full remote compromise
+- **Multiple browser zero-days** — various ages, working exploits generated independently
 
 Mythos generated working exploits for these vulnerabilities **independently** — no human guidance, no specific security training, just raw reasoning applied to code. This represents the biggest shift in vulnerability research since Google's Project Zero was founded in 2014.
 
@@ -34,12 +32,10 @@ Partner organizations are using Mythos for vulnerability detection, penetration 
 
 The same week, Anthropic surpassed OpenAI in annualized revenue for the first time:
 
-| Metric | Anthropic | OpenAI |
-|---|---|---|
-| **Annualized revenue** | $30B | $24B |
-| **Enterprise customers ($1M+/yr)** | 1,000+ | Not disclosed |
-| **Fortune 10 coverage** | 8 of 10 | Not disclosed |
-| **Primary revenue driver** | Claude Code + enterprise API | ChatGPT subscriptions |
+- **Annualized revenue:** Anthropic $30B vs. OpenAI $24B
+- **Enterprise customers ($1M+/yr):** Anthropic 1,000+ vs. OpenAI not disclosed
+- **Fortune 10 coverage:** Anthropic 8 of 10 vs. OpenAI not disclosed
+- **Primary revenue driver:** Anthropic — Claude Code + enterprise API; OpenAI — ChatGPT subscriptions
 
 This growth was fueled by enterprise adoption — particularly Claude Code, which has become the fastest-growing developer tool in history. An IPO is being discussed for **October 2026** at a potential valuation near **$380 billion**.
 

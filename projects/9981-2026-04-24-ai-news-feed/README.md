@@ -45,14 +45,12 @@ Last week was [the agent takeover](../9982-2026-04-11-ai-news-feed/README.md) �
 
 The theme isn't pessimism — the technology is genuinely better than it was a month ago. The theme is **calibration**. The gap between what AI benchmarks promise and what production delivers is now wide enough that the market, the research community, and the developer community are all independently adjusting expectations downward.
 
-| Layer | What Happened | Why You Should Care |
-|---|---|---|
-| **Models** | [GPT-5.5 launches](https://openai.com/index/introducing-gpt-5-5/) — TerminalBench **82.7%**, 1M context, ARC-AGI 2 **85%**. API pricing **doubles** to $5/$30. [DeepSeek V4](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html) previews on Huawei Ascend at **$0.14/M** (Flash tier) | Frontier reasoning leaps are real, but Opus 4.7 still leads the coding benchmark developers use most (SWE-Bench Pro 64.3% vs 58.6%), and the pricing squeeze is tightening from both ends |
-| **Quality** | Anthropic publishes [three-bug postmortem](https://www.anthropic.com/engineering/april-23-postmortem) — Claude Code degraded for **7 weeks** by product-layer bugs, not model changes. "The wrong tradeoff" | Your model provider's default parameters, caching, and system prompts are invisible dependencies that can silently break your app |
-| **Platform** | [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) threatens Figma (stock **−7%**). [Cowork Live Artifacts](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork) turn chat into a BI tool | Model providers are eating their own ecosystem — when your API vendor builds the product, what's your moat? |
-| **Security** | [MCP RCE "by design"](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html) across **200K+ servers**. [CanisterSprawl](https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials): first cross-ecosystem supply chain worm. [Bitwarden CLI](https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack) compromise targets AI tool configs | The AI toolchain is the new high-value target — and the defense hasn't caught up. Fourth consecutive week of escalation |
-| **Market** | [ServiceNow **−18%**, IBM **−7%**](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) despite beating earnings. [Meta cuts 8,000](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) to fund AI. [SpaceX $60B Cursor option](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion) | The market is repricing the entire SaaS sector on AI substitution risk. Developer tooling is now a strategic asset worth $60B |
-| **Research** | [44% agent code survival](https://arxiv.org/abs/2604.20779) in production PRs. [ICLR 2026](https://iclr.cc/virtual/2026/papers.html): AlphaAlign cuts unsafe responses **40% → <5%** | Benchmarks say one thing; merge rates say another. The production gap is now quantified |
+- **Models** — [GPT-5.5 launches](https://openai.com/index/introducing-gpt-5-5/) — TerminalBench **82.7%**, 1M context, ARC-AGI 2 **85%**. API pricing **doubles** to $5/$30. [DeepSeek V4](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html) previews on Huawei Ascend at **$0.14/M** (Flash tier). *Why it matters:* Frontier reasoning leaps are real, but Opus 4.7 still leads the coding benchmark developers use most (SWE-Bench Pro 64.3% vs 58.6%), and the pricing squeeze is tightening from both ends
+- **Quality** — Anthropic publishes [three-bug postmortem](https://www.anthropic.com/engineering/april-23-postmortem) — Claude Code degraded for **7 weeks** by product-layer bugs, not model changes. "The wrong tradeoff." *Why it matters:* Your model provider's default parameters, caching, and system prompts are invisible dependencies that can silently break your app
+- **Platform** — [Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs) threatens Figma (stock **−7%**). [Cowork Live Artifacts](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork) turn chat into a BI tool. *Why it matters:* Model providers are eating their own ecosystem — when your API vendor builds the product, what's your moat?
+- **Security** — [MCP RCE "by design"](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html) across **200K+ servers**. [CanisterSprawl](https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials): first cross-ecosystem supply chain worm. [Bitwarden CLI](https://www.endorlabs.com/learn/shai-hulud-the-third-coming----inside-the-bitwarden-cli-2026-4-0-supply-chain-attack) compromise targets AI tool configs. *Why it matters:* The AI toolchain is the new high-value target — and the defense hasn't caught up. Fourth consecutive week of escalation
+- **Market** — [ServiceNow **−18%**, IBM **−7%**](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) despite beating earnings. [Meta cuts 8,000](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) to fund AI. [SpaceX $60B Cursor option](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion). *Why it matters:* The market is repricing the entire SaaS sector on AI substitution risk. Developer tooling is now a strategic asset worth $60B
+- **Research** — [44% agent code survival](https://arxiv.org/abs/2604.20779) in production PRs. [ICLR 2026](https://iclr.cc/virtual/2026/papers.html): AlphaAlign cuts unsafe responses **40% → <5%**. *Why it matters:* Benchmarks say one thing; merge rates say another. The production gap is now quantified
 
 The deepest signal this week isn't technical — it's financial. When **ServiceNow drops 18%** after posting 22% revenue growth, the market isn't saying the company failed. It's saying the *category* is being repriced. AI substitution risk isn't a distant threat anymore — it's the primary lens through which Wall Street values software companies. The companies building AI infrastructure (Texas Instruments **~+19%**, VAST Data's **$30B valuation**) are rewarded. The companies AI might replace are punished, regardless of current performance.
 
@@ -68,16 +66,14 @@ OpenAI shipped **GPT-5.5** — codenamed **"Spud"** — on April 23, calling it 
 
 ### The Numbers
 
-| Benchmark | GPT-5.5 | GPT-5.4 | Claude Opus 4.7 | Notes |
-|---|---|---|---|---|
-| **TerminalBench 2.0** | **82.7%** | 75.1% | 69.4% | SOTA — command-line agentic tasks |
-| **SWE-Bench Pro** | 58.6% | 57.7% | **64.3%** | Opus 4.7 still leads by 5.7 pts |
-| **ARC-AGI 2** | **85.0%** | — | 75.8% | Biggest reasoning leap this cycle |
-| **OSWorld-Verified** | **78.7%** | — | 78.0% | Near-parity on desktop automation |
-| **GDPval** | **84.9%** | 83.0% | 80.3% | Knowledge work across professions |
-| **GPQA Diamond** | **93.6%** | — | — | Graduate-level science QA |
-| **MRCR v2 1M** | **74.0%** | 36.6% | — | Long-context recall doubles |
-| **FrontierMath Tier 4** | **35.4%** | — | 22.9% | Hard mathematical reasoning |
+- **TerminalBench 2.0** — GPT-5.5: **82.7%**, GPT-5.4: 75.1%, Opus 4.7: 69.4% — SOTA, command-line agentic tasks
+- **SWE-Bench Pro** — GPT-5.5: 58.6%, GPT-5.4: 57.7%, Opus 4.7: **64.3%** — Opus 4.7 still leads by 5.7 pts
+- **ARC-AGI 2** — GPT-5.5: **85.0%**, Opus 4.7: 75.8% — Biggest reasoning leap this cycle
+- **OSWorld-Verified** — GPT-5.5: **78.7%**, Opus 4.7: 78.0% — Near-parity on desktop automation
+- **GDPval** — GPT-5.5: **84.9%**, GPT-5.4: 83.0%, Opus 4.7: 80.3% — Knowledge work across professions
+- **GPQA Diamond** — GPT-5.5: **93.6%** — Graduate-level science QA
+- **MRCR v2 1M** — GPT-5.5: **74.0%**, GPT-5.4: 36.6% — Long-context recall doubles
+- **FrontierMath Tier 4** — GPT-5.5: **35.4%**, Opus 4.7: 22.9% — Hard mathematical reasoning
 
 Two takeaways jump out. First, the **ARC-AGI 2 score of 85%** represents a genuine reasoning leap — this benchmark tests novel pattern recognition that can't be memorized from training data, and GPT-5.5 clears Opus 4.7 by nearly [10 points](https://arcprize.org/leaderboard#:~:text=GPT-5.5). Second, the **MRCR v2 1M** score doubling from 36.6% to 74.0% means the 1M-token context window isn't just marketing — the model can actually retrieve and reason over information buried deep in massive documents, a [critical capability for enterprise codebases](https://openai.com/index/introducing-gpt-5-5/#:~:text=long-context).
 
@@ -85,13 +81,11 @@ But look at column four. **Claude Opus 4.7 still leads SWE-Bench Pro at 64.3%** 
 
 ### The Price Tag
 
-| Tier | Input / 1M tokens | Output / 1M tokens | vs. GPT-5.4 |
-|---|---|---|---|
-| **GPT-5.5 Standard** | **$5.00** | **$30.00** | **2× increase** |
-| **GPT-5.5 Pro** | $30.00 | $180.00 | New tier |
-| **GPT-5.5 Batch/Flex** | $2.50 | $15.00 | Matches old GPT-5.4 pricing |
-| Claude Opus 4.7 | $5.00 | $25.00 | — |
-| GPT-5.4 | $2.50 | $15.00 | Baseline |
+- **GPT-5.5 Standard** — Input: **$5.00**/1M, Output: **$30.00**/1M — **2× increase** vs GPT-5.4
+- **GPT-5.5 Pro** — Input: $30.00/1M, Output: $180.00/1M — New tier
+- **GPT-5.5 Batch/Flex** — Input: $2.50/1M, Output: $15.00/1M — Matches old GPT-5.4 pricing
+- **Claude Opus 4.7** — Input: $5.00/1M, Output: $25.00/1M
+- **GPT-5.4** — Input: $2.50/1M, Output: $15.00/1M — Baseline
 
 The sticker shock is real: **$5/$30 per million tokens is a clean 2× over GPT-5.4's $2.50/$15** ([Appwrite](https://appwrite.io/blog/post/gpt-5-5-launch#:~:text=%245%20per%20million%20input%20tokens), [Apidog](https://apidog.com/blog/what-is-gpt-5-5/#:~:text=pricing)). OpenAI's defense: GPT-5.5 uses [~40% fewer tokens](https://openai.com/index/introducing-gpt-5-5/#:~:text=fewer%20tokens) to complete the same tasks, making the effective cost increase closer to 20%. The Batch/Flex tier at $2.50/$15 — matching GPT-5.4's standard pricing — offers a pressure valve for cost-sensitive workloads.
 
@@ -121,11 +115,9 @@ GPT-5.5 is a genuine technical achievement — the TerminalBench and ARC-AGI 2 s
 
 ### The Three Bugs
 
-| # | Change | Introduced | Fixed | Duration | Root Cause |
-|---|--------|-----------|-------|----------|------------|
-| 1 | **Reasoning effort downgrade** | Mar 4 | Apr 7 | 34 days | Default silently switched from `high` → `medium` to reduce UI-freezing latency spikes |
-| 2 | **Cache-clearing bug** | Mar 26 | Apr 10 | 15 days | Optimization to clear stale thinking state after idle sessions instead cleared it *every turn* |
-| 3 | **Verbosity-reduction prompt** | Apr 16 | Apr 20 | 4 days | System prompt capped responses at ~25 words between tool calls, starving reasoning bandwidth |
+1. **Reasoning effort downgrade** — Introduced Mar 4, fixed Apr 7 (34 days). Default silently switched from `high` → `medium` to reduce UI-freezing latency spikes
+2. **Cache-clearing bug** — Introduced Mar 26, fixed Apr 10 (15 days). Optimization to clear stale thinking state after idle sessions instead cleared it *every turn*
+3. **Verbosity-reduction prompt** — Introduced Apr 16, fixed Apr 20 (4 days). System prompt capped responses at ~25 words between tool calls, starving reasoning bandwidth
 
 The timeline matters. Bug 1 ran solo for **22 days** before Bug 2 stacked on top of it. For the **12-day overlap** between March 26 and April 7, users experienced *both* reduced reasoning depth and aggressive context amnesia — making the model appear forgetful, repetitive, and incapable of maintaining coherent multi-step plans. Bug 1 was fixed April 7; Bug 2 continued alone until April 10. Then, just six days after Bug 2 was fixed, Bug 3 arrived and re-introduced a different flavor of degradation. The cumulative effect: from March 4 through April 20, there was **not a single day** when Claude Code ran without at least one active regression.
 
@@ -167,14 +159,12 @@ Anthropic spent this week doing something its API customers hoped it never would
 
 Claude Design launched April 17 as an [Anthropic Labs research preview](https://www.anthropic.com/news/claude-design-anthropic-labs#:~:text=research%20preview), powered by **Opus 4.7's vision capabilities**. The pitch: describe what you need — a landing page, pitch deck, interactive prototype, slide presentation — and Claude generates a fully editable artifact on a live canvas. No Figma. No frontend developer. No design degree.
 
-| Capability | Details |
-|---|---|
-| **Input** | Text prompts, screenshots, Figma files, PDFs, codebases, voice notes |
-| **Output** | Interactive prototypes, slide decks, one-pagers, marketing collateral |
-| **Export** | Figma, Canva, PDF, PPTX, live URLs, production-ready HTML |
-| **Editing** | Conversational iteration, inline comments, direct manipulation, sliders |
-| **Model** | Claude Opus 4.7 (vision) |
-| **Access** | Pro, Max, Team, Enterprise — no added fee during research preview |
+- **Input:** Text prompts, screenshots, Figma files, PDFs, codebases, voice notes
+- **Output:** Interactive prototypes, slide decks, one-pagers, marketing collateral
+- **Export:** Figma, Canva, PDF, PPTX, live URLs, production-ready HTML
+- **Editing:** Conversational iteration, inline comments, direct manipulation, sliders
+- **Model:** Claude Opus 4.7 (vision)
+- **Access:** Pro, Max, Team, Enterprise — no added fee during research preview
 
 The tool imports existing design systems and brand assets, automatically applying colors, typography, and component libraries to generated outputs. It's explicitly designed for the ["first draft" phase](https://www.anthropic.com/news/claude-design-anthropic-labs#:~:text=first%20draft) — the part of the workflow where designers and non-designers alike spend the most time going from blank canvas to something worth reviewing.
 
@@ -184,24 +174,20 @@ The market response was swift and brutal. **Figma stock dropped 7.28%** on launc
 
 The timing wasn't coincidental. Three days before launch, **Mike Krieger** — Anthropic's Chief Product Officer and Instagram co-founder — [resigned from Figma's board](https://techstory.in/mike-krieger-exits-figma-board-as-anthropic-targets-the-canvas/#:~:text=Mike%20Krieger%20Exits%20Figma%20Board). Krieger had joined Figma's board in 2025, back when the relationship was symbiotic: Figma integrated Claude models to power its AI design assistants, and Anthropic got distribution. Now Anthropic was building the whole product. The conflict of interest became [untenable](https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/#:~:text=conflict%20of%20interest).
 
-| Metric | Before (Apr 16) | After (Apr 17) | Change |
-|---|---|---|---|
-| **Figma (FIG) stock** | $20.32 | $18.84 | **−7.28%** |
-| **Krieger board status** | Active member | Resigned (Apr 14) | — |
-| **Anthropic–Figma relationship** | API provider / partner | Direct competitor | — |
+- **Figma (FIG) stock** — $20.32 → $18.84 (**−7.28%**)
+- **Krieger board status** — Active member → Resigned (Apr 14)
+- **Anthropic–Figma relationship** — API provider / partner → Direct competitor
 
 ### Cowork Live Artifacts: Dashboards That Breathe
 
 Three days later, Anthropic shipped [Live Artifacts for Claude Cowork](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork#:~:text=live%20artifacts) — persistent, auto-refreshing HTML dashboards that connect directly to your data sources. Tell Claude what dashboard you want, specify the integrations, and it builds a versioned, cross-device artifact that pulls fresh data every time you open it.
 
-| Feature | Details |
-|---|---|
-| **Data sources** | Asana, Notion, Salesforce, Google Sheets, Slack, Gmail, Google Calendar |
-| **Persistence** | Auto-saved in dedicated Cowork tab, accessible across devices |
-| **Versioning** | Full version history with rollback |
-| **Refresh** | Auto-refreshes with live data on open |
-| **Iteration** | Modify with follow-up prompts — no rebuild required |
-| **Access** | All paid plans (Pro, Max, Team, Enterprise) |
+- **Data sources:** Asana, Notion, Salesforce, Google Sheets, Slack, Gmail, Google Calendar
+- **Persistence:** Auto-saved in dedicated Cowork tab, accessible across devices
+- **Versioning:** Full version history with rollback
+- **Refresh:** Auto-refreshes with live data on open
+- **Iteration:** Modify with follow-up prompts — no rebuild required
+- **Access:** All paid plans (Pro, Max, Team, Enterprise)
 
 This is Claude becoming a **lightweight BI layer** — the kind of always-on dashboard that previously required Tableau, Looker, or a data team. Product leaders noticed immediately:
 
@@ -250,12 +236,10 @@ OX identified four exploitation paths: unauthenticated UI injection, hardening b
 
 On April 21, researchers documented **CanisterSprawl** — a self-propagating worm that jumps between npm and PyPI. It steals publish tokens from infected machines, uses them to trojanize packages the victim maintains, and coordinates via **decentralized command-and-control hosted on Internet Computer Protocol (ICP) canisters** — making takedowns nearly impossible [\[5\]](https://thehackernews.com/2026/04/canistersprawl-self-propagating-worm.html#:~:text=self-propagating%20worm) [\[6\]](https://www.endorlabs.com/learn/canistersprawl-the-first-cross-ecosystem-supply-chain-worm#:~:text=decentralized%20C2).
 
-| Attribute | Detail |
-|---|---|
-| **Vector** | Stolen npm/PyPI publish tokens |
-| **Propagation** | Automatic — trojanizes victim's own packages |
-| **C2** | ICP canisters (no centralized server to seize) |
-| **Ecosystems** | npm → PyPI (bidirectional) |
+- **Vector:** Stolen npm/PyPI publish tokens
+- **Propagation:** Automatic — trojanizes victim's own packages
+- **C2:** ICP canisters (no centralized server to seize)
+- **Ecosystems:** npm → PyPI (bidirectional)
 
 This is the threat model the industry warned about and never built defenses for: **worm-speed propagation across package registries with no single point of takedown**.
 
@@ -277,11 +261,9 @@ Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude 
 
 The attack requires **zero infrastructure** — no C2 server, no malware. The AI agent reads the PR title, treats the injected text as an instruction, and posts its own API keys into a PR comment.
 
-| Agent | Rated | Bounty | Public Advisory |
-|---|---|---|---|
-| Claude Code (Anthropic) | CVSS **9.4** | $100 | None |
-| Gemini CLI (Google) | — | $1,337 | None |
-| Copilot Agent (GitHub) | — | $500 | None |
+- **Claude Code (Anthropic)** — CVSS **9.4**, Bounty: $100, Public Advisory: None
+- **Gemini CLI (Google)** — Bounty: $1,337, Public Advisory: None
+- **Copilot Agent (GitHub)** — Bounty: $500, Public Advisory: None
 
 All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[13\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
 
@@ -305,11 +287,9 @@ No admin rights needed. No kernel exploit. Works on fully patched April 2026 sys
 
 ### Rapid-Fire Patch Table
 
-| Date | Item | Detail | Source |
-|---|---|---|---|
-| Apr 21 | **Oracle CPU** | **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) | [\[20\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update) |
-| Apr 21 | **AI security tools hijacked** | Compromised at **90+ organizations** via trojanized scanning integrations | [\[21\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools) |
-| Apr 17 | **RedSun + BlueHammer** | Two Defender 0-days; BlueHammer (CVE-2026-33825) patched, RedSun still open | [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days) |
+- **Oracle CPU** (Apr 21) — **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) [\[20\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update)
+- **AI security tools hijacked** (Apr 21) — Compromised at **90+ organizations** via trojanized scanning integrations [\[21\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools)
+- **RedSun + BlueHammer** (Apr 17) — Two Defender 0-days; BlueHammer (CVE-2026-33825) patched, RedSun still open [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days)
 
 ---
 
@@ -331,13 +311,11 @@ Anduril wants to build AI-powered fighter jets. SpaceX wants to own the IDE. Thi
 
 Bloomberg reported on April 21 that SpaceX has secured an **option to acquire Anysphere** (Cursor's parent) for **$60 billion** — or, if the acquisition doesn't close, a **$10 billion partnership fee** for exclusive access to Cursor's technology. Under the deal, Cursor would train its models on **xAI's Colossus cluster (~1 million H100-equivalent GPUs)**, giving it compute access that no other coding assistant can match [\[1\]](https://www.cnbc.com/2026/04/21/spacex-cursor-anysphere-60-billion-option-deal.html#:~:text=60%20billion%20option) [\[2\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=Colossus%20cluster).
 
-| Metric | Value |
-|---|---|
-| **Acquisition option** | $60B |
-| **Partnership-only fee** | $10B |
-| **Cursor's prior valuation** | ~$29.3B (Series D, Nov 2025) |
-| **Compute access** | xAI Colossus, ~1M H100-equivalent |
-| **SpaceX IPO timeline** | As early as June 2026, up to $2T valuation |
+- **Acquisition option:** $60B
+- **Partnership-only fee:** $10B
+- **Cursor's prior valuation:** ~$29.3B (Series D, Nov 2025)
+- **Compute access:** xAI Colossus, ~1M H100-equivalent
+- **SpaceX IPO timeline:** As early as June 2026, up to $2T valuation
 
 The premium is staggering — a **105% markup** over Cursor's November 2025 valuation — but the logic is structural, not financial. SpaceX writes mission-critical flight software. Starlink alone runs millions of lines of code across **7,000+ satellites**. Owning the AI coding tool that generates and reviews that code isn't a productivity play; it's **supply-chain control for software that keeps people alive** [\[3\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=mission-critical%20flight%20software).
 
@@ -349,13 +327,11 @@ The xAI angle matters just as much. Training on Colossus means Cursor's next-gen
 
 One day later, **VAST Data closed a $1 billion Series F at a $30 billion valuation** — tripling its 2023 valuation — led by Drive Capital and Access Industries, with participation from **Nvidia, Fidelity, and NEA** [\[4\]](https://www.cnbc.com/2026/04/22/vast-data-raises-1-billion-series-f-30-billion-valuation.html#:~:text=1%20billion%20Series%20F) [\[5\]](https://www.forbes.com/sites/kenrickcai/2026/04/22/vast-data-series-f-nvidia-fidelity/#:~:text=tripling%20its%202023%20valuation).
 
-| Metric | Value |
-|---|---|
-| **Round** | Series F, $1B |
-| **Valuation** | $30B |
-| **Lead investors** | Drive Capital, Access Industries |
-| **Strategic backers** | Nvidia, Fidelity, NEA |
-| **Valuation growth** | ~3× from 2023 |
+- **Round:** Series F, $1B
+- **Valuation:** $30B
+- **Lead investors:** Drive Capital, Access Industries
+- **Strategic backers:** Nvidia, Fidelity, NEA
+- **Valuation growth:** ~3× from 2023
 
 VAST builds the **data platform layer** that AI training clusters run on — the storage and data management beneath the GPUs. When Colossus-scale clusters are the new competitive moat, the companies supplying their storage infrastructure command venture premiums that match.
 
@@ -385,12 +361,10 @@ Wall Street delivered its verdict on legacy software this week — and it was br
 
 ### The Bloodbath in Numbers
 
-| Ticker | Move | Revenue | YoY Growth | Earnings |
-|--------|------|---------|------------|----------|
-| **ServiceNow (NOW)** | **−18%** | $3.77B | +22% | Beat |
-| **IBM** | **−7%** | $15.92B | +9.5% | Beat |
-| **iShares Software ETF (IGV)** | **−6% (day)** | — | −27% (6mo) | — |
-| **Texas Instruments (TXN)** | **~+19%** | — | — | Beat |
+- **ServiceNow (NOW)** — **−18%**, Revenue: $3.77B, YoY: +22%, Earnings: Beat
+- **IBM** — **−7%**, Revenue: $15.92B, YoY: +9.5%, Earnings: Beat
+- **iShares Software ETF (IGV)** — **−6% (day)**, −27% (6mo)
+- **Texas Instruments (TXN)** — **~+19%**, Earnings: Beat
 
 ServiceNow posted **$3.77B in revenue, up 22% year-over-year**, and still [lost nearly a fifth of its market cap in a single session](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/#:~:text=ServiceNow). IBM's **$15.92B quarter with 9.5% growth** — historically a victory lap for Big Blue — [earned shareholders a ~7% haircut](https://finance.yahoo.com/markets/stocks/articles/ibm-q1-2026-earnings-beat-132710855.html#:~:text=IBM%20stock%20drops). The iShares Expanded Tech-Software ETF fell **6% in a single day** and is now down **27% over six months**, a drawdown that rivals early-pandemic levels. [The software selloff is structural, not cyclical](https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html#:~:text=software%20stocks).
 
@@ -436,19 +410,15 @@ DeepSeek dropped V4 on April 24 and the numbers demand attention: a **1.6-trilli
 
 DeepSeek released two variants simultaneously — [V4-Pro and V4-Flash](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=DeepSeek%20V4) — targeting different cost–capability trade-offs:
 
-| Model | Total Params | Active Params | Context | LiveCodeBench | MMLU-Pro |
-|---|---|---|---|---|---|
-| **V4-Pro** | 1.6 T | 49 B | 1 M tokens | **93.5** | **87.5** |
-| **V4-Flash** | 284 B | 13 B | 1 M tokens | — | — |
+- **V4-Pro** — 1.6 T total params, 49 B active, 1 M token context, LiveCodeBench: **93.5**, MMLU-Pro: **87.5**
+- **V4-Flash** — 284 B total params, 13 B active, 1 M token context
 
 The pricing is where jaws drop:
 
-| Provider | Input (per 1 M tokens) | Approx. Multiplier vs DeepSeek |
-|---|---|---|
-| **DeepSeek V4-Flash** | **$0.14** | 1× |
-| GPT-4.1 | $2.00 | ~14× |
-| Claude Sonnet 4 | $3.00 | ~21× |
-| Gemini 2.5 Pro | $1.25 | ~9× |
+- **DeepSeek V4-Flash** — **$0.14** per 1M input tokens (1×)
+- **GPT-4.1** — $2.00 per 1M input tokens (~14× vs DeepSeek)
+- **Claude Sonnet 4** — $3.00 per 1M input tokens (~21× vs DeepSeek)
+- **Gemini 2.5 Pro** — $1.25 per 1M input tokens (~9× vs DeepSeek)
 
 At **$0.14 per million input tokens**, V4-Flash is **20–50× cheaper** than comparable Western frontier APIs depending on the tier. The [first major LLM trained entirely on Huawei Ascend hardware](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html#:~:text=Huawei%20Ascend) proves that the US chip-export controls have not stopped China from reaching parity on key benchmarks — they have merely forced an alternative supply chain into existence.
 
@@ -487,58 +457,50 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 ### Active This Week ✅
 
-| Voice | Position / Activity | Source |
-|---|---|---|
-| **Dario Amodei** | At the White House: "I don't want AI turned on our own people" — refused surveillance and autonomous weapons uses for Mythos model | [CNBC](https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html#:~:text=I%20don%27t%20want%20AI%20turned%20on%20our%20own%20people) |
-| **Ethan Mollick** | Argued AI is eroding the labor-value link: "everything around me is somebody's life work" is no longer a safe assumption going forward. Later benchmarked GPT-5.5 building a procedural 3D harbor town simulation | [X post](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work) · [One Useful Thing](https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55#:~:text=procedural%203D%20harbor%20town) |
-| **Aaron Levie** | "If you're building agents, you basically need to throw away large parts of previous work" — agent architecture obsolescence every few quarters | [Yahoo Tech](https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html#:~:text=throw%20away%20large%20parts%20of%20previous%20work) |
-| **Guillermo Rauch** | Disclosed Vercel breach via compromised Context.ai OAuth tokens; described attack as "highly sophisticated, possibly AI-powered." $2M ransom demand followed; confirmed Next.js/Turbopack unaffected | [TechCrunch](https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/) |
-| **Steve Yegge** | Doubled down on Google's two-tier AI system: "multiple Googlers reached out anonymously confirming a two-tier system" where DeepMind uses Claude while the rest of Google is restricted to Gemini | [Firstpost](https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html#:~:text=two-tier%20system) |
-| **Martin Fowler** | Reviewed Thoughtworks Technology Radar Vol.34: AI dominates 118 blips. Urged return to pair programming, TDD, clean code as counterweights. Warned of "cognitive debt" and "permission-hungry agents" needing zero-trust | [Blog](https://martinfowler.com/fragments/2026-04-21.html#:~:text=cognitive%20debt) |
-| **DHH** | Omacon recap: 130 people in NYC celebrating "our computers." Framed event around C.S. Lewis: "Do you see the same truth?" | [Blog](https://world.hey.com/dhh/celebrating-computers-at-omacon-163eb568#:~:text=our%20computers) |
-| **Swyx (Latent Space)** | Interviewed Shopify CTO Mikhail Parakhin: 100% AI tool adoption at Shopify; bottleneck shifted from code gen to review/CI/CD; "token count is the wrong way to measure engineering output" | [Latent Space](https://www.latent.space/p/shopify) |
-| **Daniel Stenberg** | "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami. Less slop but lots of reports. Many of them really good." curl expects record vulnerabilities in 2026 | [Blog](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/#:~:text=AI%20slop%20tsunami) |
-| **Sam Altman** | Co-announced GPT-5.5 launch, calling it "a new class of intelligence for real work and powering agents." OpenAI credits researcher Jakub Pachocki in the announcement | [OpenAI](https://openai.com/index/introducing-gpt-5-5/#:~:text=new%20class%20of%20intelligence%20for%20real%20work%20and%20powering%20agents) |
-| **Simon Willison** | Weekly newsletter: new chapter of "Agentic Engineering Patterns" guide; highlighted Claude Code harness bug (not model issue); covered "honker" Rust SQLite extension | [Blog](https://simonwillison.net/2026/Apr/24/#:~:text=Agentic%20Engineering%20Patterns) |
-| **Gergely Orosz** | Podcast episode: "Designing Data-Intensive Applications" with Martin Kleppmann — updated DDIA perspectives for AI-era data systems | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications#:~:text=Designing%20Data-intensive%20Applications) |
+- **Dario Amodei** — At the White House: "I don't want AI turned on our own people" — refused surveillance and autonomous weapons uses for Mythos model — [CNBC](https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html#:~:text=I%20don%27t%20want%20AI%20turned%20on%20our%20own%20people)
+- **Ethan Mollick** — Argued AI is eroding the labor-value link: "everything around me is somebody's life work" is no longer a safe assumption going forward. Later benchmarked GPT-5.5 building a procedural 3D harbor town simulation — [X post](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work) · [One Useful Thing](https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55#:~:text=procedural%203D%20harbor%20town)
+- **Aaron Levie** — "If you're building agents, you basically need to throw away large parts of previous work" — agent architecture obsolescence every few quarters — [Yahoo Tech](https://tech.yahoo.com/ai/articles/systems-built-arent-useful-anymore-163106806.html#:~:text=throw%20away%20large%20parts%20of%20previous%20work)
+- **Guillermo Rauch** — Disclosed Vercel breach via compromised Context.ai OAuth tokens; described attack as "highly sophisticated, possibly AI-powered." $2M ransom demand followed; confirmed Next.js/Turbopack unaffected — [TechCrunch](https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/)
+- **Steve Yegge** — Doubled down on Google's two-tier AI system: "multiple Googlers reached out anonymously confirming a two-tier system" where DeepMind uses Claude while the rest of Google is restricted to Gemini — [Firstpost](https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html#:~:text=two-tier%20system)
+- **Martin Fowler** — Reviewed Thoughtworks Technology Radar Vol.34: AI dominates 118 blips. Urged return to pair programming, TDD, clean code as counterweights. Warned of "cognitive debt" and "permission-hungry agents" needing zero-trust — [Blog](https://martinfowler.com/fragments/2026-04-21.html#:~:text=cognitive%20debt)
+- **DHH** — Omacon recap: 130 people in NYC celebrating "our computers." Framed event around C.S. Lewis: "Do you see the same truth?" — [Blog](https://world.hey.com/dhh/celebrating-computers-at-omacon-163eb568#:~:text=our%20computers)
+- **Swyx (Latent Space)** — Interviewed Shopify CTO Mikhail Parakhin: 100% AI tool adoption at Shopify; bottleneck shifted from code gen to review/CI/CD; "token count is the wrong way to measure engineering output" — [Latent Space](https://www.latent.space/p/shopify)
+- **Daniel Stenberg** — "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami. Less slop but lots of reports. Many of them really good." curl expects record vulnerabilities in 2026 — [Blog](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/#:~:text=AI%20slop%20tsunami)
+- **Sam Altman** — Co-announced GPT-5.5 launch, calling it "a new class of intelligence for real work and powering agents." OpenAI credits researcher Jakub Pachocki in the announcement — [OpenAI](https://openai.com/index/introducing-gpt-5-5/#:~:text=new%20class%20of%20intelligence%20for%20real%20work%20and%20powering%20agents)
+- **Simon Willison** — Weekly newsletter: new chapter of "Agentic Engineering Patterns" guide; highlighted Claude Code harness bug (not model issue); covered "honker" Rust SQLite extension — [Blog](https://simonwillison.net/2026/Apr/24/#:~:text=Agentic%20Engineering%20Patterns)
+- **Gergely Orosz** — Podcast episode: "Designing Data-Intensive Applications" with Martin Kleppmann — updated DDIA perspectives for AI-era data systems — [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications#:~:text=Designing%20Data-intensive%20Applications)
 
 ### New Voice 🆕
 
-| Voice | Why They're Notable | Source |
-|---|---|---|
-| **Mikhail Parakhin** (Shopify CTO) | Featured on Latent Space: described 100% AI adoption at Shopify, novel internal tooling (Tangle, Tangent, SimGym), and challenged "token count = productivity" thesis. First-hand operator perspective from a top-10 e-commerce platform | [Latent Space](https://www.latent.space/p/shopify) |
+- **Mikhail Parakhin** (Shopify CTO) — Featured on Latent Space: described 100% AI adoption at Shopify, novel internal tooling (Tangle, Tangent, SimGym), and challenged "token count = productivity" thesis. First-hand operator perspective from a top-10 e-commerce platform — [Latent Space](https://www.latent.space/p/shopify)
 
 ### Inactive ❌
 
-| Voice | Last Notable Activity |
-|---|---|
-| Andrej Karpathy | Apr 2–4 (LLM Knowledge Base tweets) |
-| Marc Andreessen | Apr 23 tweet (off-topic — SPLC, not AI×SWE) |
-| Kelsey Hightower | KubeCon EU (Mar 23–26) |
-| Kent C. Dodds | Laracon US (Apr 15) |
-| Theo Browne | No activity found in window |
-| Addy Osmani | AEO framework (Apr 11, pre-window) |
-| Bryan Cantrill | "Peril of laziness lost" (Apr 12, pre-window) |
-| Chelsea Troy | No activity found in window |
-| Boris Cherny | No activity found in window |
-| Josh Gottheimer | No activity found in window |
-| Charles Carmakal | No activity found in window |
-| Jim Farley | No activity found in window |
-| Teresa Torres | No activity found in window |
+- **Andrej Karpathy** — Apr 2–4 (LLM Knowledge Base tweets)
+- **Marc Andreessen** — Apr 23 tweet (off-topic — SPLC, not AI×SWE)
+- **Kelsey Hightower** — KubeCon EU (Mar 23–26)
+- **Kent C. Dodds** — Laracon US (Apr 15)
+- **Theo Browne** — No activity found in window
+- **Addy Osmani** — AEO framework (Apr 11, pre-window)
+- **Bryan Cantrill** — "Peril of laziness lost" (Apr 12, pre-window)
+- **Chelsea Troy** — No activity found in window
+- **Boris Cherny** — No activity found in window
+- **Josh Gottheimer** — No activity found in window
+- **Charles Carmakal** — No activity found in window
+- **Jim Farley** — No activity found in window
+- **Teresa Torres** — No activity found in window
 
 ---
 
 ## 10. Model & Tool Updates
 
-| Model / Tool | Date | Key Update | Source |
-|---|---|---|---|
-| **GPT-5.5** (OpenAI) | Apr 23 | 1M-token context, TerminalBench 2.0: **82.7%**, SWE-Bench Pro: **58.6%**, ARC-AGI 2: **85%**. API: $5/$30 per 1M tokens (2× GPT-5.4) | [OpenAI](https://openai.com/index/introducing-gpt-5-5/) |
-| **DeepSeek V4** | Apr 24 | 1.6T-param MoE (49B active), Huawei Ascend. LiveCodeBench **93.5**, MMLU-Pro **87.5**. V4-Flash **$0.14/M** · V4-Pro **$1.74/M** | [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html) |
-| **Qwen 3.6-27B** (Alibaba) | Apr 22 | Dense open-weight, multimodal (text+vision), GGUF for llama.cpp. Qwen 3.6-Max-Preview (API) also launched | [MarkTechPost](https://www.marktechpost.com/2026/04/22/alibaba-qwen-team-releases-qwen3-6-27b-a-dense-open-weight-model-outperforming-397b-moe-on-agentic-coding-benchmarks/) |
-| **Chatbot Arena** | Apr 23–24 | Claude Opus 4.7 Thinking holds **#1 overall** (~1503 Elo). GPT-5.5 leads ARC-AGI 2. Top-6 gap: ~20 Elo | [Arena AI](https://arena.ai/leaderboard/text) |
-| **Claude Design** (Anthropic) | Apr 17 | AI design companion powered by Opus 4.7 vision. Creates prototypes, decks, exports to Figma/Canva/PDF | [Anthropic](https://www.anthropic.com/news/claude-design-anthropic-labs) |
-| **Claude Cowork Live Artifacts** | Apr 20 | Persistent auto-refreshing dashboards. Connects Asana, Notion, Salesforce, Sheets, Slack, Gmail | [Claude Support](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork) |
-| **Cohere SDK** on Oracle Cloud | Apr 20 | Command A, Command R, Embed, Rerank natively integrated with OCI Generative AI | [Oracle Blog](https://blogs.oracle.com/ai-and-datascience/cohere-sdk-is-now-natively-integrated-with-oci-ai) |
+- **GPT-5.5** (OpenAI), Apr 23 — 1M-token context, TerminalBench 2.0: **82.7%**, SWE-Bench Pro: **58.6%**, ARC-AGI 2: **85%**. API: $5/$30 per 1M tokens (2× GPT-5.4) — [OpenAI](https://openai.com/index/introducing-gpt-5-5/)
+- **DeepSeek V4**, Apr 24 — 1.6T-param MoE (49B active), Huawei Ascend. LiveCodeBench **93.5**, MMLU-Pro **87.5**. V4-Flash **$0.14/M** · V4-Pro **$1.74/M** — [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html)
+- **Qwen 3.6-27B** (Alibaba), Apr 22 — Dense open-weight, multimodal (text+vision), GGUF for llama.cpp. Qwen 3.6-Max-Preview (API) also launched — [MarkTechPost](https://www.marktechpost.com/2026/04/22/alibaba-qwen-team-releases-qwen3-6-27b-a-dense-open-weight-model-outperforming-397b-moe-on-agentic-coding-benchmarks/)
+- **Chatbot Arena**, Apr 23–24 — Claude Opus 4.7 Thinking holds **#1 overall** (~1503 Elo). GPT-5.5 leads ARC-AGI 2. Top-6 gap: ~20 Elo — [Arena AI](https://arena.ai/leaderboard/text)
+- **Claude Design** (Anthropic), Apr 17 — AI design companion powered by Opus 4.7 vision. Creates prototypes, decks, exports to Figma/Canva/PDF — [Anthropic](https://www.anthropic.com/news/claude-design-anthropic-labs)
+- **Claude Cowork Live Artifacts**, Apr 20 — Persistent auto-refreshing dashboards. Connects Asana, Notion, Salesforce, Sheets, Slack, Gmail — [Claude Support](https://support.claude.com/en/articles/14729249-use-live-artifacts-in-claude-cowork)
+- **Cohere SDK** on Oracle Cloud, Apr 20 — Command A, Command R, Embed, Rerank natively integrated with OCI Generative AI — [Oracle Blog](https://blogs.oracle.com/ai-and-datascience/cohere-sdk-is-now-natively-integrated-with-oci-ai)
 
 ---
 
@@ -546,10 +508,8 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 ### Layoffs & Restructuring
 
-| Company | Date | Impact | Context | Source |
-|---|---|---|---|---|
-| **Meta** | Apr 23 | **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted** | Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year | [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) |
-| **Behaviour Interactive** | Apr 22 | Third round of cuts since 2024 | Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff | [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs) |
+- **Meta** (Apr 23) — **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted**. Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year — [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html)
+- **Behaviour Interactive** (Apr 22) — Third round of cuts since 2024. Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff — [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs)
 
 ### Market Signals
 

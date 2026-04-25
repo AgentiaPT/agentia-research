@@ -21,12 +21,10 @@ OX identified four exploitation paths: unauthenticated UI injection, hardening b
 
 On April 21, researchers documented **CanisterSprawl** — a self-propagating worm that jumps between npm and PyPI. It steals publish tokens from infected machines, uses them to trojanize packages the victim maintains, and coordinates via **decentralized command-and-control hosted on Internet Computer Protocol (ICP) canisters** — making takedowns nearly impossible [\[5\]](https://thehackernews.com/2026/04/canistersprawl-self-propagating-worm.html#:~:text=self-propagating%20worm) [\[6\]](https://www.endorlabs.com/learn/canistersprawl-the-first-cross-ecosystem-supply-chain-worm#:~:text=decentralized%20C2).
 
-| Attribute | Detail |
-|---|---|
-| **Vector** | Stolen npm/PyPI publish tokens |
-| **Propagation** | Automatic — trojanizes victim's own packages |
-| **C2** | ICP canisters (no centralized server to seize) |
-| **Ecosystems** | npm → PyPI (bidirectional) |
+- **Vector:** Stolen npm/PyPI publish tokens
+- **Propagation:** Automatic — trojanizes victim's own packages
+- **C2:** ICP canisters (no centralized server to seize)
+- **Ecosystems:** npm → PyPI (bidirectional)
 
 This is the threat model the industry warned about and never built defenses for: **worm-speed propagation across package registries with no single point of takedown**.
 
@@ -48,11 +46,9 @@ Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude 
 
 The attack requires **zero infrastructure** — no C2 server, no malware. The AI agent reads the PR title, treats the injected text as an instruction, and posts its own API keys into a PR comment.
 
-| Agent | Rated | Bounty | Public Advisory |
-|---|---|---|---|
-| Claude Code (Anthropic) | CVSS **9.4** | $100 | None |
-| Gemini CLI (Google) | — | $1,337 | None |
-| Copilot Agent (GitHub) | — | $500 | None |
+- **Claude Code (Anthropic)** — CVSS **9.4**, Bounty: $100, Public Advisory: None
+- **Gemini CLI (Google)** — Bounty: $1,337, Public Advisory: None
+- **Copilot Agent (GitHub)** — Bounty: $500, Public Advisory: None
 
 All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[13\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
 
@@ -76,11 +72,9 @@ No admin rights needed. No kernel exploit. Works on fully patched April 2026 sys
 
 ### Rapid-Fire Patch Table
 
-| Date | Item | Detail | Source |
-|---|---|---|---|
-| Apr 21 | **Oracle CPU** | **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) | [\[20\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update) |
-| Apr 21 | **AI security tools hijacked** | Compromised at **90+ organizations** via trojanized scanning integrations | [\[21\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools) |
-| Apr 17 | **RedSun + BlueHammer** | Two Defender 0-days; BlueHammer (CVE-2026-33825) patched, RedSun still open | [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days) |
+- **Oracle CPU** (Apr 21) — **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) [\[20\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update)
+- **AI security tools hijacked** (Apr 21) — Compromised at **90+ organizations** via trojanized scanning integrations [\[21\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools)
+- **RedSun + BlueHammer** (Apr 17) — Two Defender 0-days; BlueHammer (CVE-2026-33825) patched, RedSun still open [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days)
 
 ---
 

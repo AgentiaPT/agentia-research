@@ -8,13 +8,11 @@ Anduril wants to build AI-powered fighter jets. SpaceX wants to own the IDE. Thi
 
 Bloomberg reported on April 21 that SpaceX has secured an **option to acquire Anysphere** (Cursor's parent) for **$60 billion** — or, if the acquisition doesn't close, a **$10 billion partnership fee** for exclusive access to Cursor's technology. Under the deal, Cursor would train its models on **xAI's Colossus cluster (~1 million H100-equivalent GPUs)**, giving it compute access that no other coding assistant can match [\[1\]](https://www.cnbc.com/2026/04/21/spacex-cursor-anysphere-60-billion-option-deal.html#:~:text=60%20billion%20option) [\[2\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=Colossus%20cluster).
 
-| Metric | Value |
-|---|---|
-| **Acquisition option** | $60B |
-| **Partnership-only fee** | $10B |
-| **Cursor's prior valuation** | ~$29.3B (Series D, Nov 2025) |
-| **Compute access** | xAI Colossus, ~1M H100-equivalent |
-| **SpaceX IPO timeline** | As early as June 2026, up to $2T valuation |
+- **Acquisition option:** $60B
+- **Partnership-only fee:** $10B
+- **Cursor's prior valuation:** ~$29.3B (Series D, Nov 2025)
+- **Compute access:** xAI Colossus, ~1M H100-equivalent
+- **SpaceX IPO timeline:** As early as June 2026, up to $2T valuation
 
 The premium is staggering — a **105% markup** over Cursor's November 2025 valuation — but the logic is structural, not financial. SpaceX writes mission-critical flight software. Starlink alone runs millions of lines of code across **7,000+ satellites**. Owning the AI coding tool that generates and reviews that code isn't a productivity play; it's **supply-chain control for software that keeps people alive** [\[3\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=mission-critical%20flight%20software).
 
@@ -26,13 +24,11 @@ The xAI angle matters just as much. Training on Colossus means Cursor's next-gen
 
 One day later, **VAST Data closed a $1 billion Series F at a $30 billion valuation** — tripling its 2023 valuation — led by Drive Capital and Access Industries, with participation from **Nvidia, Fidelity, and NEA** [\[4\]](https://www.cnbc.com/2026/04/22/vast-data-raises-1-billion-series-f-30-billion-valuation.html#:~:text=1%20billion%20Series%20F) [\[5\]](https://www.forbes.com/sites/kenrickcai/2026/04/22/vast-data-series-f-nvidia-fidelity/#:~:text=tripling%20its%202023%20valuation).
 
-| Metric | Value |
-|---|---|
-| **Round** | Series F, $1B |
-| **Valuation** | $30B |
-| **Lead investors** | Drive Capital, Access Industries |
-| **Strategic backers** | Nvidia, Fidelity, NEA |
-| **Valuation growth** | ~3× from 2023 |
+- **Round:** Series F, $1B
+- **Valuation:** $30B
+- **Lead investors:** Drive Capital, Access Industries
+- **Strategic backers:** Nvidia, Fidelity, NEA
+- **Valuation growth:** ~3× from 2023
 
 VAST builds the **data platform layer** that AI training clusters run on — the storage and data management beneath the GPUs. When Colossus-scale clusters are the new competitive moat, the companies supplying their storage infrastructure command venture premiums that match.
 
