@@ -19,7 +19,7 @@ OX identified four exploitation paths: unauthenticated UI injection, hardening b
 
 ### CanisterSprawl: The First Cross-Ecosystem Supply-Chain Worm
 
-On April 21, researchers documented **CanisterSprawl** — a self-propagating worm that jumps between npm and PyPI. It steals publish tokens from infected machines, uses them to trojanize packages the victim maintains, and coordinates via **decentralized command-and-control hosted on Internet Computer Protocol (ICP) canisters** — making takedowns nearly impossible [\[5\]](https://thehackernews.com/2026/04/canistersprawl-self-propagating-worm.html#:~:text=self-propagating%20worm) [\[6\]](https://www.endorlabs.com/learn/canistersprawl-the-first-cross-ecosystem-supply-chain-worm#:~:text=decentralized%20C2).
+On April 21, researchers documented **CanisterSprawl** — a self-propagating worm that jumps between npm and PyPI. It steals publish tokens from infected machines, uses them to trojanize packages the victim maintains, and coordinates via **decentralized command-and-control hosted on Internet Computer Protocol (ICP) canisters** — making takedowns nearly impossible [\[5\]](https://thehackernews.com/2026/04/canistersprawl-self-propagating-worm.html#:~:text=self-propagating%20worm) [\[6\]](https://www.endorlabs.com/learn/canistersprawl-the-first-cross-ecosystem-supply-chain-worm#:~:text=decentralized%20C2) [\[7\]](https://blog.gitguardian.com/three-supply-chain-campaigns-hit-npm-pypi-and-docker-hub-in-48-hours/#:~:text=CanisterSprawl).
 
 - **Vector:** Stolen npm/PyPI publish tokens
 - **Propagation:** Automatic — trojanizes victim's own packages
@@ -42,15 +42,15 @@ Stolen secrets were encrypted with AES-256-GCM and sent to `audit.checkmarx.cx` 
 
 ### "Comment and Control": Three AI Agents, One Injection, All Your Secrets
 
-Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude Code**, **Gemini CLI**, and **GitHub Copilot Agent** all exfiltrate repository secrets when a malicious instruction is embedded in a PR title [\[11\]](https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026#:~:text=Comment%20and%20Control) [\[12\]](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/#:~:text=prompt%20injection%20via%20comments).
+Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude Code**, **Gemini CLI**, and **GitHub Copilot Agent** all exfiltrate repository secrets when a malicious instruction is embedded in a PR title, issue body, or issue comment [\[11\]](https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026#:~:text=Comment%20and%20Control) [\[12\]](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/#:~:text=prompt%20injection%20via%20comments) [\[13\]](https://cybersecuritynews.com/prompt-injection-via-github-comments/#:~:text=pull%20request%20titles%2C%20issue%20bodies%2C%20and%20issue%20comments).
 
-The attack requires **zero infrastructure** — no C2 server, no malware. The AI agent reads the PR title, treats the injected text as an instruction, and posts its own API keys into a PR comment.
+The attack requires **zero infrastructure** — no C2 server, no malware. The entire attack loop runs within GitHub itself: an attacker writes a malicious PR title or issue comment, the AI agent reads and processes it as trusted context, and posts its own API keys into a PR comment. This is the **first public cross-vendor demonstration** of a single prompt injection pattern defeating multiple major AI agents simultaneously.
 
 - **Claude Code (Anthropic)** — CVSS **9.4**, Bounty: $100, Public Advisory: None
-- **Gemini CLI (Google)** — Bounty: $1,337, Public Advisory: None
+- **Gemini CLI (Google)** — CVSS **9.3**, Bounty: $1,337, Public Advisory: None
 - **Copilot Agent (GitHub)** — Bounty: $500, Public Advisory: None
 
-All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[13\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
+All three share the same architectural flaw: **untrusted GitHub data flows into an AI agent that holds production secrets and unrestricted tool access**. All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[14\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
 
 ---
 
@@ -72,8 +72,9 @@ No admin rights needed. No kernel exploit. Works on fully patched April 2026 sys
 
 ### Rapid-Fire Patch Table
 
-- **Oracle CPU** (Apr 21) — **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) [\[20\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update)
-- **AI security tools hijacked** (Apr 21) — Compromised at **90+ organizations** via trojanized scanning integrations [\[21\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools)
+- **Three ecosystems, 48 hours** (Apr 21–23) — GitGuardian documented three coordinated supply-chain campaigns hitting **npm, PyPI, and Docker Hub** in a single weekend: compromised **Checkmarx KICS** Docker images and VS Code extensions harvesting GitHub tokens, **xinference** on PyPI with credential-stealing payloads across three malicious releases, and CanisterSprawl on npm (covered above). All three targeted the same thing: **developer secrets** — API keys, cloud creds, SSH keys, CI/CD tokens [\[22\]](https://blog.gitguardian.com/three-supply-chain-campaigns-hit-npm-pypi-and-docker-hub-in-48-hours/#:~:text=Three%20supply%20chain%20attacks%20hit%20npm%2C%20PyPI%2C%20and%20Docker%20Hub)
+- **Oracle CPU** (Apr 21) — **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) [\[23\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update)
+- **AI security tools hijacked** (Apr 21) — Compromised at **90+ organizations** via trojanized scanning integrations [\[24\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools)
 - **RedSun + BlueHammer** (Apr 17) — Two Defender 0-days; BlueHammer (CVE-2026-33825) patched, RedSun still open [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days)
 
 ---
