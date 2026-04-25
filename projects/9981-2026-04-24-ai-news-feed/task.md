@@ -263,3 +263,7 @@ Additional fixes:
 - [ ] Review Voice Tracker balance
 - [ ] Switch status: draft → complete when ready
 - [ ] Push to remote (agent does NOT push — see CLAUDE.md)
+
+## v3 additions (2026-04-25)
+
+- Addy Osmani "Agent Harness Engineering" — moved from Inactive → Active (Moved to Active ↑) in §9; added 🔵 Watch entry to §12

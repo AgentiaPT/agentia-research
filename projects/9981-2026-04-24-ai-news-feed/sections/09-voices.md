@@ -23,6 +23,7 @@
 ### Moved to Active ↑
 
 - **Andrej Karpathy** — "LLM Wiki" concept went viral (Apr 20–23): advocates replacing RAG pipelines with LLM-maintained markdown wikis as persistent "second brains." [GitHub gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) garnered 5,000+ stars and 5,000+ forks, spawning new SaaS products — [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2026/04/llm-wiki-by-andrej-karpathy/) · [Medium](https://medium.com/@sathishkraju/rag-isnt-dead-but-something-is-karpathy-s-llm-wiki-explained-512e3393801b)
+- **Addy Osmani** — Published "Agent Harness Engineering" this week: argues that most agent failures trace back to scaffolding configuration, not model limitations. Synthesizes harness primitives (filesystem, bash, sandboxes, memory files, hooks, subagents, observability) into a practical framework. "A decent model with a great harness beats a great model with a bad harness." Closely mirrors the Anthropic postmortem lesson (§3) and Simon Willison's agentic patterns work — [Blog](https://addyosmani.com/blog/agent-harness-engineering/#:~:text=A%20decent%20model%20with%20a%20great%20harness%20beats%20a%20great%20model%20with%20a%20bad%20harness)
 
 ### Inactive ❌
 
@@ -30,7 +31,6 @@
 - **Kelsey Hightower** — KubeCon EU (Mar 23–26)
 - **Kent C. Dodds** — Laracon US (Apr 15)
 - **Theo Browne** — No activity found in window
-- **Addy Osmani** — AEO framework (Apr 11, pre-window)
 - **Bryan Cantrill** — "Peril of laziness lost" (Apr 12, pre-window)
 - **Chelsea Troy** — No activity found in window
 - **Boris Cherny** — No activity found in window
