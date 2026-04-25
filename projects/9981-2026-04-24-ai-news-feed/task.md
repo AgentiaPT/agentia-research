@@ -72,6 +72,32 @@ Use the AI×Software runbook to update, date from last one until today. Stories 
 - [x] Phase 7: Fact-check loop — 2 passes, 13 total corrections (11 + 2)
 - [x] Phase 8: Editor pass — structural fixes, cross-ref correction, redundancy cut
 - [x] Phase 9: Final packaging — status: draft
+- [x] Phase 10 (v2): User-directed expansion — 25+ new stories integrated, 3 parallel fact-check agents, all sections updated, README reassembled (769 lines, ~11400 words)
+
+## v2 Expansion Stories Added (Phase 10)
+
+- The Great AI Coding Price Upheaval (TIER 1 — §1, §4, §12) — GitHub paused signups, Anthropic A/B test, OpenAI $100 tier, token-based billing coming
+- Anthropic Enterprise Pricing Shift (§4) — flat $200 → $20 seat + usage-based, costs 2-3× for heavy users
+- Stanford AI Index 2026 (§7, §8, §11) — junior dev −20%, SWE-bench near 100%, 53% GenAI adoption, 88% org deployment
+- Google 75% AI-Generated Code (§7, §11) — Cloud Next keynote, up from 25% in 18 months
+- Cursor 3 Launch + $50B Funding (§6) — Agents Window, Composer 2, BugBot 80%, $2B raise talks
+- Pragmatic Engineer Survey (§8) — 906 engineers, Builders/Shippers/Coasters archetypes
+- Tokenmaxxing / Goodhart's Law (§8, §12) — 9.4× code churn, 10-30% persistent acceptance, DX Core 4
+- MIT Technology Review × SoftServe (§8, §11) — 51% agentic AI adoption, 98% expect acceleration
+- GitHub Copilot Policy Week (§10, §12) — signup pause, training data policy, token billing, C++ LS
+- Claude Opus 4.7 on Copilot (§10) — 7.5× multiplier, Opus 4.5/4.6 retired
+- OpenAI Workspace Agents (§10, §12) — Codex-powered, replace GPTs, Slack/Salesforce integration
+- Google Cloud Next '26 (§10, §12) — $750M fund, ADK, Agent Studio, Workspace MCP, TPU 8, Apple/Siri
+- ChatGPT Images 2.0 (§10) — Thinking Mode reasoning, 2K res, DALL-E retirement
+- Lovable Security Incident (§5, §12) — BOLA vulnerability, fix in 2 hours, all public projects privated
+- EU AI Act Article 12 + €63.2M (§5, §11, §12) — Aug 2026 deadline, logging requirements, penalties
+- Meta + Microsoft 20K+ Layoffs (§7, §11) — combined 48hr cuts, 92K YTD, 48% AI-attributed
+- Atlassian 1,600 Cuts (§7, §11) — 900 from R&D, AI-attributed layoffs pattern
+- Kent Beck "Nobody Wants Agents" (§9, §12) — Augment Code Intent, swarm management critique
+- Karpathy LLM Wiki (§9, §12) — RAG replacement, 100 articles/400K words, viral gist
+- Copilot for Jira (§10) — enhanced triggers for issue-to-PR automation
+- Claude Code 4% of GitHub Commits (§11) — SemiAnalysis data, 1 in 25 open-source lines
+- Google Prompt Injection Industrial (§5, §12) — templates seeded across public web
 
 ## Key stories shipped
 

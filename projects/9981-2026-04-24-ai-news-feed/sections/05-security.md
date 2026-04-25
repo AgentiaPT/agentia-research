@@ -19,7 +19,7 @@ OX identified four exploitation paths: unauthenticated UI injection, hardening b
 
 ### CanisterSprawl: The First Cross-Ecosystem Supply-Chain Worm
 
-On April 21, researchers documented **CanisterSprawl** — a self-propagating worm that jumps between npm and PyPI. It steals publish tokens from infected machines, uses them to trojanize packages the victim maintains, and coordinates via **decentralized command-and-control hosted on Internet Computer Protocol (ICP) canisters** — making takedowns nearly impossible [\[5\]](https://thehackernews.com/2026/04/canistersprawl-self-propagating-worm.html#:~:text=self-propagating%20worm) [\[6\]](https://www.endorlabs.com/learn/canistersprawl-the-first-cross-ecosystem-supply-chain-worm#:~:text=decentralized%20C2).
+On April 21, researchers documented **CanisterSprawl** — a self-propagating worm that jumps between npm and PyPI. It steals publish tokens from infected machines, uses them to trojanize packages the victim maintains, and coordinates via **decentralized command-and-control hosted on Internet Computer Protocol (ICP) canisters** — making takedowns nearly impossible [\[5\]](https://thehackernews.com/2026/04/canistersprawl-self-propagating-worm.html#:~:text=self-propagating%20worm) [\[6\]](https://www.endorlabs.com/learn/canistersprawl-the-first-cross-ecosystem-supply-chain-worm#:~:text=decentralized%20C2) [\[7\]](https://blog.gitguardian.com/three-supply-chain-campaigns-hit-npm-pypi-and-docker-hub-in-48-hours/#:~:text=CanisterSprawl).
 
 - **Vector:** Stolen npm/PyPI publish tokens
 - **Propagation:** Automatic — trojanizes victim's own packages
@@ -42,15 +42,15 @@ Stolen secrets were encrypted with AES-256-GCM and sent to `audit.checkmarx.cx` 
 
 ### "Comment and Control": Three AI Agents, One Injection, All Your Secrets
 
-Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude Code**, **Gemini CLI**, and **GitHub Copilot Agent** all exfiltrate repository secrets when a malicious instruction is embedded in a PR title [\[11\]](https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026#:~:text=Comment%20and%20Control) [\[12\]](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/#:~:text=prompt%20injection%20via%20comments).
+Researchers Aonan Guan, Zhengyu Liu, and Gavin Zhong demonstrated that **Claude Code**, **Gemini CLI**, and **GitHub Copilot Agent** all exfiltrate repository secrets when a malicious instruction is embedded in a PR title, issue body, or issue comment [\[11\]](https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026#:~:text=Comment%20and%20Control) [\[12\]](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/#:~:text=prompt%20injection%20via%20comments) [\[13\]](https://cybersecuritynews.com/prompt-injection-via-github-comments/#:~:text=pull%20request%20titles%2C%20issue%20bodies%2C%20and%20issue%20comments).
 
-The attack requires **zero infrastructure** — no C2 server, no malware. The AI agent reads the PR title, treats the injected text as an instruction, and posts its own API keys into a PR comment.
+The attack requires **zero infrastructure** — no C2 server, no malware. The entire attack loop runs within GitHub itself: an attacker writes a malicious PR title or issue comment, the AI agent reads and processes it as trusted context, and posts its own API keys into a PR comment. This is the **first public cross-vendor demonstration** of a single prompt injection pattern defeating multiple major AI agents simultaneously.
 
 - **Claude Code (Anthropic)** — CVSS **9.4**, Bounty: $100, Public Advisory: None
 - **Gemini CLI (Google)** — Bounty: $1,337, Public Advisory: None
 - **Copilot Agent (GitHub)** — Bounty: $500, Public Advisory: None
 
-All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[13\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
+All three share the same architectural flaw: **untrusted GitHub data flows into an AI agent that holds production secrets and unrestricted tool access**. All three vendors **patched silently** — no CVEs, no advisories. Users on older versions remain exposed [\[14\]](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/#:~:text=patched%20quietly).
 
 ---
 
@@ -72,14 +72,33 @@ No admin rights needed. No kernel exploit. Works on fully patched April 2026 sys
 
 ### Rapid-Fire Patch Table
 
-- **Oracle CPU** (Apr 21) — **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) [\[20\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update)
-- **AI security tools hijacked** (Apr 21) — Compromised at **90+ organizations** via trojanized scanning integrations [\[21\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools)
+- **Three ecosystems, 48 hours** (Apr 21–23) — GitGuardian documented three coordinated supply-chain campaigns hitting **npm, PyPI, and Docker Hub** in a single weekend: compromised **Checkmarx KICS** Docker images and VS Code extensions harvesting GitHub tokens, **xinference** on PyPI with credential-stealing payloads across three malicious releases, and CanisterSprawl on npm (covered above). All three targeted the same thing: **developer secrets** — API keys, cloud creds, SSH keys, CI/CD tokens [\[22\]](https://blog.gitguardian.com/three-supply-chain-campaigns-hit-npm-pypi-and-docker-hub-in-48-hours/#:~:text=Three%20supply%20chain%20attacks%20hit%20npm%2C%20PyPI%2C%20and%20Docker%20Hub)
+- **Oracle CPU** (Apr 21) — **241 CVEs**, 481 patches, 34 critical; Oracle Communications worst-hit (139 patches) [\[23\]](https://blogs.oracle.com/security/april-2026-critical-patch-update-released#:~:text=Critical%20Patch%20Update)
+- **AI security tools hijacked** (Apr 21) — Compromised at **90+ organizations** via trojanized scanning integrations [\[24\]](https://thehackernews.com/2026/04/ai-security-tools-hijacked.html#:~:text=AI%20security%20tools)
 - **RedSun + BlueHammer** (Apr 17) — Two Defender 0-days; BlueHammer (CVE-2026-33825) patched, RedSun still open [\[19\]](https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html#:~:text=Three%20Microsoft%20Defender%20Zero-Days)
+
+---
+
+### Lovable: When Your No-Code AI Builder Exposes Everything
+
+On April 20, a security researcher disclosed that **all public Lovable projects' chat history and source code could be accessed by any authenticated user** — a classic Broken Object-Level Authorization (BOLA) vulnerability. The regression was [introduced in February 2026](https://lovable.dev/blog/our-response-to-the-april-2026-incident#:~:text=February%202026%20%E2%80%94%20Backend%20regressions) when backend changes re-enabled public access paths that had been locked down.
+
+To Lovable's credit, the response was fast: **fix shipped within 2 hours**, all current public projects made private (except official templates), and a [detailed remediation timeline published](https://lovable.dev/blog/our-response-to-the-april-2026-incident#:~:text=We%20shipped%20a%20fix%20within%20two%20hours). Private projects and Lovable Cloud were never impacted. But the incident is a cautionary tale for anyone evaluating no-code AI app builders — when the platform generates your code *and* hosts your conversations about it, the blast radius of a single authorization bug is far wider than a traditional SaaS breach.
+
+---
+
+### EU AI Act: The Compliance Clock Is Ticking
+
+The regulatory dimension of AI security sharpened this week. **EU AI Act Annex III high-risk obligations take effect August 2, 2026** — meaning agents performing credit scoring, resume filtering, or healthcare-benefit decisions must implement **Article 12-compliant automatic logging**: every agent action recorded, retained, and auditable. Penalties: up to **€15 million or 3% of global annual revenue** ([Help Net Security](https://www.helpnetsecurity.com/2026/04/16/eu-ai-act-logging-requirements/#:~:text=EU%20AI%20Act%20logging%20requirements)). A possible Digital Omnibus delay may push some obligations for *existing* deployed systems to December 2027, but **new deployments face the August deadline** ([EU Digital Strategy](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).
+
+Separately, the **EU Commission allocated €63.2 million** under the Digital Europe Programme for AI in health and online safety — the first major funding tranche under the act's provisions.
+
+For engineering teams: if your agents touch any Annex III high-risk domain, **build verifiable action logs now**. The August deadline is 14 weeks away.
 
 ---
 
 ### Why This Matters
 
-The pattern is no longer "supply-chain attacks are increasing." The pattern is **convergence**: supply-chain worms now target AI tool credentials specifically (Bitwarden), protocols designed for AI agents ship RCE by design (MCP), and AI agents themselves become exfiltration channels (Comment and Control). Google's research confirms prompt injection payloads are being industrialized in the wild.
+The pattern is no longer "supply-chain attacks are increasing." The pattern is **convergence**: supply-chain worms now target AI tool credentials specifically (Bitwarden), protocols designed for AI agents ship RCE by design (MCP), AI agents themselves become exfiltration channels (Comment and Control), and even no-code AI platforms expose user data through basic authorization failures (Lovable). Google's research confirms prompt injection payloads are being industrialized in the wild. And now **regulation is arriving**: the EU AI Act's logging requirements turn security from a best practice into a legal obligation with nine-figure penalties.
 
-This is the fourth consecutive week of escalating supply-chain and AI-security incidents. The attackers have figured out that **the AI toolchain is the new high-value target** — and the defenders haven't caught up.
+Treat prompt injection like SQL injection — defense in depth from design through deployment. The attackers have figured out that **the AI toolchain is the new high-value target**, the defenders haven't caught up, and the regulators are about to start fining.
