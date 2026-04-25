@@ -35,9 +35,9 @@ Morgan Stanley quantified the endgame: AI could [cut game development costs by r
 
 ### The Labor-Value Disconnect
 
-Ethan Mollick framed the philosophical dimension on April 18: **"Not everything is someone's life work anymore."** The observation cuts to the core — when AI can produce in hours what took weeks of skilled human effort, the [link between labor and value erodes](https://www.oneusefulthing.org/#:~:text=not%20everything%20is%20someone%27s%20life%20work).
+Ethan Mollick framed the philosophical dimension on April 18: **"Not everything is someone's life work anymore."** The observation cuts to the core — when AI can produce in hours what took weeks of skilled human effort, the [link between labor and value erodes](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work).
 
-He punctuated the point on April 24 with a [GPT-5.5 benchmark generating a procedural 3D harbor town simulation](https://www.oneusefulthing.org/#:~:text=procedural%203D%20harbor%20town) — the kind of environment that once required a small team of artists and engineers, produced as a benchmark test.
+He punctuated the point on April 24 with a [GPT-5.5 benchmark generating a procedural 3D harbor town simulation](https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55#:~:text=procedural%203D%20harbor%20town) — the kind of environment that once required a small team of artists and engineers, produced as a benchmark test.
 
 ### Why This Matters
 

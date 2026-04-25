@@ -139,7 +139,7 @@ The reasoning effort change was an intentional product decision, not an accident
 
 The cache-clearing bug was more insidious. An optimization designed to clear Claude's internal thinking state from sessions idle for over an hour contained a logic error that triggered the clearing **every conversational turn** for the remainder of the session. The result: Claude lost track of its own reasoning history mid-conversation, producing the exact "amnesia" symptoms users described — wrong tool calls, repeated work, and inexplicable context loss. Because the bug's severity varied by session length and idle patterns, it appeared inconsistent across users and evaded internal evaluations.
 
-The verbosity prompt, introduced on April 16 — the [same day Opus 4.7 launched](../9982-2026-04-11-ai-news-feed/README.md#13-breaking--claude-opus-47-ships-today) — was the shortest-lived but perhaps most revealing failure. Quick internal evals showed no degradation, but real-world multi-session coding work exposed a **~3% performance drop** on coding tasks. The lesson: synthetic benchmarks and spot-checks missed what sustained professional use caught immediately.
+The verbosity prompt, introduced on April 16 — the [same day Opus 4.7 launched](../9982-2026-04-11-ai-news-feed/README.md#13-breaking--claude-opus-47-ships-today) — was the shortest-lived but perhaps most revealing failure. Quick internal evals showed no degradation, but a broader set of ablations revealed a [**~3% performance drop** on coding tasks](https://www.anthropic.com/engineering/april-23-postmortem#:~:text=3%25%20drop%20for%20both%20Opus%204.6%20and%204.7). The lesson: synthetic benchmarks and spot-checks missed what sustained professional use caught immediately.
 
 ### What Was NOT the Problem
 
@@ -418,7 +418,7 @@ Morgan Stanley quantified the endgame: AI could [cut game development costs by r
 
 Ethan Mollick framed the philosophical dimension on April 18: **"One thing thing about AI, for better and worse, is that "everything around me is somebody's life work" is no longer a true assumption going forward."** ([source](https://x.com/emollick/status/2045318277958709540#:~:text=everything%20around%20me%20is%20somebody%27s%20life%20work)). The observation cuts to the core — when AI can produce in hours what took weeks of skilled human effort, the link between labor and value erodes.
 
-He punctuated the point on April 24 with a [GPT-5.5 benchmark generating a procedural 3D harbor town simulation](https://www.oneusefulthing.org/#:~:text=procedural%203D%20harbor%20town) — the kind of environment that once required a small team of artists and engineers, produced as a benchmark test.
+He punctuated the point on April 24 with a [GPT-5.5 benchmark generating a procedural 3D harbor town simulation](https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55#:~:text=procedural%203D%20harbor%20town) — the kind of environment that once required a small team of artists and engineers, produced as a benchmark test.
 
 ### Why This Matters
 
@@ -495,12 +495,12 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 | **Guillermo Rauch** | Disclosed Vercel breach via compromised Context.ai OAuth tokens; described attack as "highly sophisticated, possibly AI-powered." $2M ransom demand followed; confirmed Next.js/Turbopack unaffected | [TechCrunch](https://techcrunch.com/2026/04/20/app-host-vercel-confirms-security-incident-says-customer-data-was-stolen-via-breach-at-context-ai/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/) |
 | **Steve Yegge** | Doubled down on Google's two-tier AI system: "multiple Googlers reached out anonymously confirming a two-tier system" where DeepMind uses Claude while the rest of Google is restricted to Gemini | [Firstpost](https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html#:~:text=two-tier%20system) |
 | **Martin Fowler** | Reviewed Thoughtworks Technology Radar Vol.34: AI dominates 118 blips. Urged return to pair programming, TDD, clean code as counterweights. Warned of "cognitive debt" and "permission-hungry agents" needing zero-trust | [Blog](https://martinfowler.com/fragments/2026-04-21.html#:~:text=cognitive%20debt) |
-| **DHH** | Omacon recap: 130 people in NYC celebrating "our computers." Framed event around C.S. Lewis: "Do you see the same truth?" | [Blog](https://world.hey.com/dhh#:~:text=our%20computers) |
+| **DHH** | Omacon recap: 130 people in NYC celebrating "our computers." Framed event around C.S. Lewis: "Do you see the same truth?" | [Blog](https://world.hey.com/dhh/celebrating-computers-at-omacon-163eb568#:~:text=our%20computers) |
 | **Swyx (Latent Space)** | Interviewed Shopify CTO Mikhail Parakhin: 100% AI tool adoption at Shopify; bottleneck shifted from code gen to review/CI/CD; "token count is the wrong way to measure engineering output" | [Latent Space](https://www.latent.space/p/shopify) |
 | **Daniel Stenberg** | "The challenge with AI in open source security has transitioned from an AI slop tsunami into more of a plain security report tsunami. Less slop but lots of reports. Many of them really good." curl expects record vulnerabilities in 2026 | [Blog](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/#:~:text=AI%20slop%20tsunami) |
-| **Sam Altman** | Shared cryptic signals ahead of GPT-5.5 launch on the same day — interpreted by the community as pointing to Jakub Pachocki's architectural role in the new model | [OpenAI](https://openai.com/index/introducing-gpt-5-5/) |
-| **Simon Willison** | Weekly newsletter: new chapter of "Agentic Engineering Patterns" guide; highlighted Claude Code harness bug (not model issue); covered "honker" Rust SQLite extension | [Blog](https://simonwillison.net/#:~:text=agentic%20engineering%20patterns) |
-| **Gergely Orosz** | Newsletter: "Designing Data-Intensive Applications" with Martin Kleppmann — updated DDIA perspectives for AI-era data systems | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/#:~:text=Designing%20Data-Intensive%20Applications) |
+| **Sam Altman** | Co-announced GPT-5.5 launch, calling it "a new class of intelligence for real work and powering agents." OpenAI credits researcher Jakub Pachocki in the announcement | [OpenAI](https://openai.com/index/introducing-gpt-5-5/#:~:text=new%20class%20of%20intelligence%20for%20real%20work%20and%20powering%20agents) |
+| **Simon Willison** | Weekly newsletter: new chapter of "Agentic Engineering Patterns" guide; highlighted Claude Code harness bug (not model issue); covered "honker" Rust SQLite extension | [Blog](https://simonwillison.net/2026/Apr/24/#:~:text=Agentic%20Engineering%20Patterns) |
+| **Gergely Orosz** | Podcast episode: "Designing Data-Intensive Applications" with Martin Kleppmann — updated DDIA perspectives for AI-era data systems | [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/designing-data-intensive-applications#:~:text=Designing%20Data-intensive%20Applications) |
 
 ### New Voice 🆕
 
@@ -550,7 +550,6 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 |---|---|---|---|---|
 | **Meta** | Apr 23 | **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted** | Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year | [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) |
 | **Behaviour Interactive** | Apr 22 | Third round of cuts since 2024 | Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff | [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs) |
-| **Quora / Poe** | Apr 19 | Poe team downsized, pushed to break even | CEO Adam D'Angelo: Poe "would now need to sustain itself." Core Q&A profitable, Poe is not | |
 
 ### Market Signals
 

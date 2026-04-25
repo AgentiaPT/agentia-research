@@ -24,7 +24,7 @@ The reasoning effort change was an intentional product decision, not an accident
 
 The cache-clearing bug was more insidious. An optimization designed to clear Claude's internal thinking state from sessions idle for over an hour contained a logic error that triggered the clearing **every conversational turn** for the remainder of the session. The result: Claude lost track of its own reasoning history mid-conversation, producing the exact "amnesia" symptoms users described — wrong tool calls, repeated work, and inexplicable context loss. Because the bug's severity varied by session length and idle patterns, it appeared inconsistent across users and evaded internal evaluations.
 
-The verbosity prompt, introduced on April 16 — the [same day Opus 4.7 launched](../9982-2026-04-11-ai-news-feed/README.md#13-breaking--claude-opus-47-ships-today) — was the shortest-lived but perhaps most revealing failure. Quick internal evals showed no degradation, but real-world multi-session coding work exposed a **~3% performance drop** on coding tasks. The lesson: synthetic benchmarks and spot-checks missed what sustained professional use caught immediately.
+The verbosity prompt, introduced on April 16 — the [same day Opus 4.7 launched](../9982-2026-04-11-ai-news-feed/README.md#13-breaking--claude-opus-47-ships-today) — was the shortest-lived but perhaps most revealing failure. Quick internal evals showed no degradation, but a broader set of ablations revealed a [**~3% performance drop** on coding tasks](https://www.anthropic.com/engineering/april-23-postmortem#:~:text=3%25%20drop%20for%20both%20Opus%204.6%20and%204.7). The lesson: synthetic benchmarks and spot-checks missed what sustained professional use caught immediately.
 
 ### What Was NOT the Problem
 
