@@ -603,6 +603,7 @@ This is authoritative industry data proving that agentic AI adoption is mainstre
 ### Moved to Active ↑
 
 - **Andrej Karpathy** — "LLM Wiki" concept went viral (Apr 20–23): advocates replacing RAG pipelines with LLM-maintained markdown wikis as persistent "second brains." [GitHub gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) garnered 5,000+ stars and 5,000+ forks, spawning new SaaS products — [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2026/04/llm-wiki-by-andrej-karpathy/) · [Medium](https://medium.com/@sathishkraju/rag-isnt-dead-but-something-is-karpathy-s-llm-wiki-explained-512e3393801b)
+- **Addy Osmani** — Published "Agent Harness Engineering" this week: argues that most agent failures trace back to scaffolding configuration, not model limitations. Synthesizes harness primitives (filesystem, bash, sandboxes, memory files, hooks, subagents, observability) into a practical framework. "A decent model with a great harness beats a great model with a bad harness." Closely mirrors the Anthropic postmortem lesson (§3) and Simon Willison's agentic patterns work — [Blog](https://addyosmani.com/blog/agent-harness-engineering/#:~:text=A%20decent%20model%20with%20a%20great%20harness%20beats%20a%20great%20model%20with%20a%20bad%20harness)
 
 ### Inactive ❌
 
@@ -610,7 +611,6 @@ This is authoritative industry data proving that agentic AI adoption is mainstre
 - **Kelsey Hightower** — KubeCon EU (Mar 23–26)
 - **Kent C. Dodds** — Laracon US (Apr 15)
 - **Theo Browne** — No activity found in window
-- **Addy Osmani** — AEO framework (Apr 11, pre-window)
 - **Bryan Cantrill** — "Peril of laziness lost" (Apr 12, pre-window)
 - **Chelsea Troy** — No activity found in window
 - **Boris Cherny** — No activity found in window
@@ -730,6 +730,7 @@ A pivotal week for Copilot's commercial model:
 
 - **SpaceX/Cursor $60B** — Dev tooling enters geopolitical chess; Cursor trains on xAI Colossus ([§6](#6-spacexs-60b-cursor-option--when-ai-coding-tools-become-strategic-assets)) — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion)
 - **Kent Beck: "Nobody wants agents"** — Managing the swarm, not directing work. Counterpoint gaining traction — [Tidy First](https://tidyfirst.substack.com/p/genie-lessons-nobody-wants-agents)
+- **Harness engineering goes mainstream** — Addy Osmani synthesizes the growing consensus: agent capability is shaped by scaffolding, not just model weights. "A decent model with a great harness beats a great model with a bad harness." Directly echoes the Anthropic postmortem ([§3](#3-anthropics-three-bug-postmortem--when-nerfing-was-actually-engineering-debt)) and Simon Willison's agentic patterns work — [Addy Osmani](https://addyosmani.com/blog/agent-harness-engineering/#:~:text=A%20decent%20model%20with%20a%20great%20harness%20beats%20a%20great%20model%20with%20a%20bad%20harness)
 - **Stanford AI Index** — Junior devs (22–25) down ~20%. SWE-bench near 100%. 88% org adoption ([§8](#8-deepseek-v4--the-open-weight-reality-check)) — [Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report)
 - **OpenAI Workspace Agents** — Codex-powered persistent agents replacing GPTs. Free until May 6 — [OpenAI](https://openai.com/index/introducing-workspace-agents-in-chatgpt/)
 - **ICLR 2026 safety** — AlphaAlign & WaltzRL cut unsafe responses from ~40% → <5% — [ICLR 2026](https://iclr.cc/virtual/2026/papers.html)

@@ -28,6 +28,7 @@
 
 - **SpaceX/Cursor $60B** — Dev tooling enters geopolitical chess; Cursor trains on xAI Colossus (§6) — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion)
 - **Kent Beck: "Nobody wants agents"** — Managing the swarm, not directing work. Counterpoint gaining traction — [Tidy First](https://tidyfirst.substack.com/p/genie-lessons-nobody-wants-agents)
+- **Harness engineering goes mainstream** — Addy Osmani synthesizes the growing consensus: agent capability is shaped by scaffolding, not just model weights. "A decent model with a great harness beats a great model with a bad harness." Directly echoes the Anthropic postmortem (§3) and Simon Willison's agentic patterns work — [Addy Osmani](https://addyosmani.com/blog/agent-harness-engineering/#:~:text=A%20decent%20model%20with%20a%20great%20harness%20beats%20a%20great%20model%20with%20a%20bad%20harness)
 - **Stanford AI Index** — Junior devs (22–25) down ~20%. SWE-bench near 100%. 88% org adoption (§8) — [Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report)
 - **OpenAI Workspace Agents** — Codex-powered persistent agents replacing GPTs. Free until May 6 — [OpenAI](https://openai.com/index/introducing-workspace-agents-in-chatgpt/)
 - **ICLR 2026 safety** — AlphaAlign & WaltzRL cut unsafe responses from ~40% → <5% — [ICLR 2026](https://iclr.cc/virtual/2026/papers.html)
