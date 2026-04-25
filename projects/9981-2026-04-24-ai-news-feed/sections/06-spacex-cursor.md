@@ -1,6 +1,19 @@
 ## 6. SpaceX's $60B Cursor Option — When AI Coding Tools Become Strategic Assets
 
-Anduril wants to build AI-powered fighter jets. SpaceX wants to own the IDE. This week the developer-tooling market stopped being a venture story and became a geopolitical one, with three deals that collectively redraw the map of who controls the AI infrastructure stack.
+Anduril wants to build AI-powered fighter jets. SpaceX wants to own the IDE. This week the developer-tooling market stopped being a venture story and became a geopolitical one, with three deals that collectively redraw the map of who controls the AI infrastructure stack — and Cursor itself shipped its biggest product update in months.
+
+---
+
+### Cursor 3: The Product Behind the Price Tag
+
+Before the $60B headlines, Cursor shipped **Cursor 3** on April 2 — the release that justifies the valuation conversations. The headline feature: a dedicated **Agents Window** that replaces the old sidebar with a full-panel interface for multi-step agentic workflows, including **cloud-to-local handoff** that preserves conversation context across environments ([Cursor Blog](https://cursor.com/blog/cursor-3)).
+
+- **Agents Window** — Full-panel agentic interface, default for all users
+- **Composer 2** — Built on Moonshot AI's Kimi K2.5 with ~75% proprietary Cursor RL fine-tuning, streaming at 200+ tok/s ([TechCrunch](https://techcrunch.com/2026/03/22/cursor-admits-its-new-coding-model-was-built-on-top-of-moonshot-ais-kimi/))
+- **Design Mode** — Toggle via Cmd+Shift+D for visual-first prototyping
+- **BugBot** — Automated PR review bot now at **~80% resolution rate** (up from 52% at launch), 110K+ repos enabled, 44K+ learned codebase rules ([Cursor Blog](https://cursor.com/blog/planetscale))
+
+And the funding rounds keep compressing: Cursor is now [in talks to raise **$2 billion** at a **$50B+ valuation**](https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html#:~:text=Cursor%20in%20talks%20to%20raise), led by a16z and Thrive Capital with Nvidia as a strategic investor — a **70% markup** over its $29.3B Series D just five months ago.
 
 ---
 

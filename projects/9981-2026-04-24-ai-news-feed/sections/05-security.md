@@ -78,8 +78,26 @@ No admin rights needed. No kernel exploit. Works on fully patched April 2026 sys
 
 ---
 
+### Lovable: When Your No-Code AI Builder Exposes Everything
+
+On April 20, a security researcher disclosed that **all public Lovable projects' chat history and source code could be accessed by any authenticated user** — a classic Broken Object-Level Authorization (BOLA) vulnerability. The regression was [introduced in February 2026](https://lovable.dev/blog/our-response-to-the-april-2026-incident#:~:text=February%202026%20%E2%80%94%20Backend%20regressions) when backend changes re-enabled public access paths that had been locked down.
+
+To Lovable's credit, the response was fast: **fix shipped within 2 hours**, all current public projects made private (except official templates), and a [detailed remediation timeline published](https://lovable.dev/blog/our-response-to-the-april-2026-incident#:~:text=We%20shipped%20a%20fix%20within%20two%20hours). Private projects and Lovable Cloud were never impacted. But the incident is a cautionary tale for anyone evaluating no-code AI app builders — when the platform generates your code *and* hosts your conversations about it, the blast radius of a single authorization bug is far wider than a traditional SaaS breach.
+
+---
+
+### EU AI Act: The Compliance Clock Is Ticking
+
+The regulatory dimension of AI security sharpened this week. **EU AI Act Annex III high-risk obligations take effect August 2, 2026** — meaning agents performing credit scoring, resume filtering, or healthcare-benefit decisions must implement **Article 12-compliant automatic logging**: every agent action recorded, retained, and auditable. Penalties: up to **€15 million or 3% of global annual revenue** ([Help Net Security](https://www.helpnetsecurity.com/2026/04/16/eu-ai-act-logging-requirements/#:~:text=EU%20AI%20Act%20logging%20requirements)). A possible Digital Omnibus delay may push some obligations for *existing* deployed systems to December 2027, but **new deployments face the August deadline** ([EU Digital Strategy](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)).
+
+Separately, the **EU Commission allocated €63.2 million** under the Digital Europe Programme for AI in health and online safety — the first major funding tranche under the act's provisions.
+
+For engineering teams: if your agents touch any Annex III high-risk domain, **build verifiable action logs now**. The August deadline is 14 weeks away.
+
+---
+
 ### Why This Matters
 
-The pattern is no longer "supply-chain attacks are increasing." The pattern is **convergence**: supply-chain worms now target AI tool credentials specifically (Bitwarden), protocols designed for AI agents ship RCE by design (MCP), and AI agents themselves become exfiltration channels (Comment and Control). Google's research confirms prompt injection payloads are being industrialized in the wild.
+The pattern is no longer "supply-chain attacks are increasing." The pattern is **convergence**: supply-chain worms now target AI tool credentials specifically (Bitwarden), protocols designed for AI agents ship RCE by design (MCP), AI agents themselves become exfiltration channels (Comment and Control), and even no-code AI platforms expose user data through basic authorization failures (Lovable). Google's research confirms prompt injection payloads are being industrialized in the wild. And now **regulation is arriving**: the EU AI Act's logging requirements turn security from a best practice into a legal obligation with nine-figure penalties.
 
-This is the fourth consecutive week of escalating supply-chain and AI-security incidents. The attackers have figured out that **the AI toolchain is the new high-value target** — and the defenders haven't caught up.
+Treat prompt injection like SQL injection — defense in depth from design through deployment. The attackers have figured out that **the AI toolchain is the new high-value target**, the defenders haven't caught up, and the regulators are about to start fining.
