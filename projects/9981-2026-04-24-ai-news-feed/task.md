@@ -96,7 +96,35 @@ Use the AI×Software runbook to update, date from last one until today. Stories 
 - IBM stock drop: −9% → −7% across 5 locations (sources report 6-7%)
 - Mollick quote: unified wording across §7, §9, §12
 
-### Pass 4 — Firecrawl fact-check (2026-04-25, §8 Research section only)
+### Pass 5 — Firecrawl fact-check (2026-04-25, §1–3 sections)
+
+**§1 (Narrative) corrections:**
+- arXiv `2504.13978` → `2604.20779` (SWE-chat paper: 44% agent code survival) — same fix applied to §8 in Pass 4, narrative section file and README table row were still using the old wrong ID
+- Texas Instruments **+17%** → **~+19%** — actual close was +19.43% (largest single-day gain since 2000 per NewsBreak). Fixed in §1 section file, README narrative paragraph, §7 table, §7 prose, and §12 signals entry.
+- IBM −9% in the §1 narrative table: **CONFIRMED CORRECT per Forbes source** (the linked article). The Forbes article explicitly reports −9% for IBM. The Pass 2 correction to −7% in §7 and §9 was based on other sources; the §1 narrative uses Forbes as its source which says −9%.
+
+**§2 (GPT-5.5) corrections:**
+- Quote: "navigate ambiguity" → "navigate **through** ambiguity" — verified verbatim from the OpenAI announcement page. (This was listed as fixed in Pass 1 but only applied to the README, not the section file.)
+
+**§3 (Postmortem) corrections:**
+- "**15-day overlap** between March 26 and April 10" → "**12-day overlap** between March 26 and April 7" — Bug 1 (reasoning effort) was fixed April 7; Bug 2 (cache clearing) ran until April 10. The period where BOTH bugs were simultaneously active is March 26–April 7 = 12 days. After April 7, only Bug 2 remained. Added clarifying sentence "Bug 1 was fixed April 7; Bug 2 continued alone until April 10."
+- "all **affected paid** subscribers" → "all **subscribers**" — postmortem says verbatim "Today we are resetting usage limits for all subscribers."
+
+**Confirmed correct (no changes needed):**
+- GPT-5.5 codename "Spud" ✓
+- "First fully retrained base model since GPT-4.5" ✓ 
+- 1M token context window (API) ✓ (Codex uses 400K but API is 1M)
+- Omnimodal (text, image, audio, video) ✓
+- All benchmark scores: TerminalBench 82.7%, ARC-AGI 2 85%, SWE-Bench Pro 58.6%, MRCR 74.0% ✓
+- ARC-AGI 2 gap "nearly 10 points" (85.0 − 75.8 = 9.2) ✓
+- Pricing $5/$30 standard, $2.50/$15 Batch/Flex, $30/$180 Pro ✓
+- ~40% token efficiency ✓
+- Postmortem bug dates and durations ✓
+- "Wrong tradeoff" quote verbatim match ✓
+- ServiceNow −18% ✓, ServiceNow 22% revenue growth ✓
+- VAST Data $30B valuation ✓
+
+
 
 All 4 arXiv IDs in §8 pointed to completely unrelated papers (critical hallucinations from original research phase). Verified correct IDs using Firecrawl + web search:
 

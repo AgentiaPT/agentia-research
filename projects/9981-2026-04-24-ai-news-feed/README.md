@@ -54,7 +54,7 @@ The theme isn't pessimism — the technology is genuinely better than it was a m
 | **Market** | [ServiceNow **−18%**, IBM **−7%**](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) despite beating earnings. [Meta cuts 8,000](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html) to fund AI. [SpaceX $60B Cursor option](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion) | The market is repricing the entire SaaS sector on AI substitution risk. Developer tooling is now a strategic asset worth $60B |
 | **Research** | [44% agent code survival](https://arxiv.org/abs/2604.20779) in production PRs. [ICLR 2026](https://iclr.cc/virtual/2026/papers.html): AlphaAlign cuts unsafe responses **40% → <5%** | Benchmarks say one thing; merge rates say another. The production gap is now quantified |
 
-The deepest signal this week isn't technical — it's financial. When **ServiceNow drops 18%** after posting 22% revenue growth, the market isn't saying the company failed. It's saying the *category* is being repriced. AI substitution risk isn't a distant threat anymore — it's the primary lens through which Wall Street values software companies. The companies building AI infrastructure (Texas Instruments **+17%**, VAST Data's **$30B valuation**) are rewarded. The companies AI might replace are punished, regardless of current performance.
+The deepest signal this week isn't technical — it's financial. When **ServiceNow drops 18%** after posting 22% revenue growth, the market isn't saying the company failed. It's saying the *category* is being repriced. AI substitution risk isn't a distant threat anymore — it's the primary lens through which Wall Street values software companies. The companies building AI infrastructure (Texas Instruments **~+19%**, VAST Data's **$30B valuation**) are rewarded. The companies AI might replace are punished, regardless of current performance.
 
 For developers, the practical takeaway is a paradox: the tools are getting better *and* less trustworthy simultaneously. GPT-5.5's reasoning capabilities are genuinely new. Anthropic's postmortem proves that even world-class models can be silently sabotaged by their own product layers. Research shows more than half of AI-generated code doesn't survive review. The reality check isn't that AI doesn't work — it's that **making it work reliably in production remains an engineering discipline, not a benchmark competition**.
 
@@ -127,7 +127,7 @@ GPT-5.5 is a genuine technical achievement — the TerminalBench and ARC-AGI 2 s
 | 2 | **Cache-clearing bug** | Mar 26 | Apr 10 | 15 days | Optimization to clear stale thinking state after idle sessions instead cleared it *every turn* |
 | 3 | **Verbosity-reduction prompt** | Apr 16 | Apr 20 | 4 days | System prompt capped responses at ~25 words between tool calls, starving reasoning bandwidth |
 
-The timeline matters. Bug 1 ran solo for **22 days** before Bug 2 stacked on top of it. For the **15-day overlap** between March 26 and April 10, users experienced *both* reduced reasoning depth and aggressive context amnesia — making the model appear forgetful, repetitive, and incapable of maintaining coherent multi-step plans. Then, just six days after Bug 2 was fixed, Bug 3 arrived and re-introduced a different flavor of degradation. The cumulative effect: from March 4 through April 20, there was **not a single day** when Claude Code ran without at least one active regression.
+The timeline matters. Bug 1 ran solo for **22 days** before Bug 2 stacked on top of it. For the **12-day overlap** between March 26 and April 7, users experienced *both* reduced reasoning depth and aggressive context amnesia — making the model appear forgetful, repetitive, and incapable of maintaining coherent multi-step plans. Bug 1 was fixed April 7; Bug 2 continued alone until April 10. Then, just six days after Bug 2 was fixed, Bug 3 arrived and re-introduced a different flavor of degradation. The cumulative effect: from March 4 through April 20, there was **not a single day** when Claude Code ran without at least one active regression.
 
 ### The Wrong Tradeoff
 
@@ -149,7 +149,7 @@ Anthropic was explicit: **model weights were never changed**. The underlying Cla
 
 The developer community's response came in two waves. First, vindication. For weeks, users reporting degradation had been met with suggestions to adjust their `/effort` settings or told the issues were subjective. **Kingy AI** captured the mood with its headline: ["Clients Were Right: Anthropic Admits Claude Code Got Dumber"](https://kingy.ai/ai/clients-were-right-anthropic-admits-claude-code-got-dumber-not-claude-post-mortem/#:~:text=Clients%20Were%20Right). **The Register** was less diplomatic: ["Anthropic admits it dumbed down Claude with 'upgrades'"](https://www.theregister.com/2026/04/23/anthropic_says_it_has_fixed/#:~:text=Anthropic%20admits%20it%20dumbed%20down%20Claude).
 
-Then came the second wave: genuine praise for the postmortem's transparency. Unlike vague acknowledgments common in the industry, Anthropic published specific dates, technical root causes, and an unambiguous admission of fault. As a goodwill measure, the company [reset usage limits](https://www.livemint.com/technology/tech-news/did-anthropic-dumb-down-claude-code-post-mortem-reveals-the-three-bugs-that-crippled-performance-11777013226388.html#:~:text=usage%20limits%20reset) for all affected paid subscribers — a concrete acknowledgment that users had burned through caps on a degraded product.
+Then came the second wave: genuine praise for the postmortem's transparency. Unlike vague acknowledgments common in the industry, Anthropic published specific dates, technical root causes, and an unambiguous admission of fault. As a goodwill measure, the company [reset usage limits](https://www.livemint.com/technology/tech-news/did-anthropic-dumb-down-claude-code-post-mortem-reveals-the-three-bugs-that-crippled-performance-11777013226388.html#:~:text=usage%20limits%20reset) for all subscribers — a concrete acknowledgment that users had burned through caps on a degraded product.
 
 ### Why This Matters
 
@@ -390,11 +390,11 @@ Wall Street delivered its verdict on legacy software this week — and it was br
 | **ServiceNow (NOW)** | **−18%** | $3.77B | +22% | Beat |
 | **IBM** | **−7%** | $15.92B | +9.5% | Beat |
 | **iShares Software ETF (IGV)** | **−6% (day)** | — | −27% (6mo) | — |
-| **Texas Instruments (TXN)** | **+17%** | — | — | Beat |
+| **Texas Instruments (TXN)** | **~+19%** | — | — | Beat |
 
 ServiceNow posted **$3.77B in revenue, up 22% year-over-year**, and still [lost nearly a fifth of its market cap in a single session](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/#:~:text=ServiceNow). IBM's **$15.92B quarter with 9.5% growth** — historically a victory lap for Big Blue — [earned shareholders a ~7% haircut](https://finance.yahoo.com/markets/stocks/articles/ibm-q1-2026-earnings-beat-132710855.html#:~:text=IBM%20stock%20drops). The iShares Expanded Tech-Software ETF fell **6% in a single day** and is now down **27% over six months**, a drawdown that rivals early-pandemic levels. [The software selloff is structural, not cyclical](https://www.cnbc.com/2026/04/23/software-stocks-plunge-on-servicenow-ibm-results-ai-fears-escalate.html#:~:text=software%20stocks).
 
-The outlier? **Texas Instruments surged 17%** the same day — a chipmaker feeding the AI infrastructure buildout, not competing with it.
+The outlier? **Texas Instruments surged ~19%** the same day — a chipmaker feeding the AI infrastructure buildout, not competing with it.
 
 ### Meta: 8,000 Jobs to Fund the AI Pivot
 
@@ -554,7 +554,7 @@ For engineering leaders, the takeaway is nuanced: **adopt aggressively on cost, 
 
 ### Market Signals
 
-**Software stocks crashed on April 23** — see [§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas) for full analysis. Headline: ServiceNow **−18%**, IBM **−7%**, IGV **−6%** (day) / **−27%** (6 months) despite beating earnings. Texas Instruments **+17%** (AI infra beneficiary). [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
+**Software stocks crashed on April 23** — see [§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas) for full analysis. Headline: ServiceNow **−18%**, IBM **−7%**, IGV **−6%** (day) / **−27%** (6 months) despite beating earnings. Texas Instruments **~+19%** (AI infra beneficiary). [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
 
 ### AI Adoption Metrics
 
