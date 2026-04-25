@@ -44,4 +44,4 @@
 > — **Dario Amodei**, Anthropic CEO, at the White House ([source](https://www.cnbc.com/2026/04/17/anthropic-dario-amodei-trump-mythos.html))
 
 > "Not everything around me is somebody's life work anymore."
-> — **Ethan Mollick**, Wharton ([source](https://blockchain.news/ainews/ai-disruption-analysis-why-ethan-mollick-says-not-everything-is-someone-s-life-work-anymore))
+> — **Ethan Mollick**, Wharton ([source](https://x.com/emollick/status/2045318277958709540))

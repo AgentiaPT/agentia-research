@@ -12,11 +12,11 @@ Bloomberg reported on April 21 that SpaceX has secured an **option to acquire An
 |---|---|
 | **Acquisition option** | $60B |
 | **Partnership-only fee** | $10B |
-| **Cursor's prior valuation** | ~$29.3B (Series C, Jan 2026) |
+| **Cursor's prior valuation** | ~$29.3B (Series D, Nov 2025) |
 | **Compute access** | xAI Colossus, ~1M H100-equivalent |
 | **SpaceX IPO timeline** | As early as June 2026, up to $2T valuation |
 
-The premium is staggering — a **105% markup** over Cursor's January valuation — but the logic is structural, not financial. SpaceX writes mission-critical flight software. Starlink alone runs millions of lines of code across **7,000+ satellites**. Owning the AI coding tool that generates and reviews that code isn't a productivity play; it's **supply-chain control for software that keeps people alive** [\[3\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=mission-critical%20flight%20software).
+The premium is staggering — a **105% markup** over Cursor's November 2025 valuation — but the logic is structural, not financial. SpaceX writes mission-critical flight software. Starlink alone runs millions of lines of code across **7,000+ satellites**. Owning the AI coding tool that generates and reviews that code isn't a productivity play; it's **supply-chain control for software that keeps people alive** [\[3\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=mission-critical%20flight%20software).
 
 The xAI angle matters just as much. Training on Colossus means Cursor's next-generation models won't depend on OpenAI, Anthropic, or Google for frontier compute. For Musk's empire, it creates a **vertically integrated AI stack**: xAI builds the models, Colossus trains them, Cursor ships them to developers, and SpaceX consumes the output. No external dependency at any layer.
 
