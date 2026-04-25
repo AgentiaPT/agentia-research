@@ -62,7 +62,7 @@ The theme isn't pessimism — the technology is genuinely better than it was a m
 - **Enterprise** — [Google Cloud Next](https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26): $750M agentic fund, ADK, Workspace MCP Server, Apple/Gemini Siri. [OpenAI Workspace Agents](https://openai.com/index/introducing-workspace-agents-in-chatgpt/): Codex-powered persistent agents replacing GPTs. [MIT study](https://www.technologyreview.com/2026/04/14/1134397/redefining-the-future-of-software-engineering/): 51% already deploying agentic AI
   - *Why it matters:* The enterprise agentic stack is materializing — Google, OpenAI, and Microsoft are all building the same thing from different directions
 
-The deepest signal this week isn't any single story — it's the **convergence of sobering data from every direction**. Stanford says junior dev employment is down 20%. TechCrunch says AI code churn is 9.4× higher. Research papers say only 44% of AI code survives review. Kent Beck says "nobody wants agents — I have a system and I want it to change." And the financial markets are telling you what they think with ServiceNow −18% and a $60B price tag on a code editor. The reality check isn't that AI doesn't work — it's that **making it work reliably in production remains an engineering discipline**, the free lunch on pricing is ending, and the gap between capability and harness quality matters more than ever.
+The deepest signal this week isn't any single story — it's the **convergence of sobering data from every direction**: benchmarks, research papers, hiring data, stock prices, and practitioner experience all independently arriving at the same conclusion. The reality check isn't that AI doesn't work — it's that **making it work reliably in production remains an engineering discipline**, the free lunch on pricing is ending, and the gap between capability and harness quality matters more than ever.
 
 ---
 
@@ -442,7 +442,7 @@ The trajectory matters more than the number: **25% → 50% → 75% in 18 months*
 
 ### Stanford: Junior Dev Employment Down ~20%
 
-The Stanford AI Index 2026 quantified what many suspected: **employment for software developers aged 22–25 has fallen approximately 20% since 2024** in the United States ([Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report#:~:text=employment%20for%20developers%20aged%2022-25)). The data confirms a structural shift — not just fewer entry-level hires, but an active contraction in the junior developer pipeline. Combined with Google's 75% code milestone and Atlassian's R&D-heavy layoffs, the picture for early-career developers is the bleakest it has been in a decade.
+The Stanford AI Index 2026 quantified the shift: **employment for software developers aged 22–25 has fallen approximately 20% since 2024** in the US ([Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report#:~:text=employment%20for%20developers%20aged%2022-25)). Combined with Google's 75% AI code milestone and Atlassian's R&D-heavy cuts, the picture for early-career developers is the bleakest in a decade. (Full Stanford data in [§8](#8-deepseek-v4--the-open-weight-reality-check).)
 
 ### Valeo: 35% of Validated Code Is Now AI-Generated
 
@@ -657,54 +657,46 @@ A pivotal week for Copilot's commercial model:
 
 ## 11. Jobs & Economic Impact
 
-### Layoffs & Restructuring
+> Quick-reference data. For analysis, see the deep-dive sections linked below.
 
-- **Meta** (Apr 23) — **8,000 layoffs** + 6,000 open roles cancelled = **14,000 impacted**
-  - Headcount ~79K → ~71K. New "Applied AI" org centralizes AI across FB/IG/WhatsApp. Cuts start May 20. Severance: 16 weeks + 2 weeks/year — [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html)
-- **Microsoft** (Apr 23–24) — **~8,000–9,000 cuts** announced alongside Meta
-  - Combined Meta + Microsoft: **20,000+ jobs on the same day**. Raises concern of AI-driven labor crisis — [CNBC](https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html)
-- **Atlassian** (Mar 11) — **~1,600 cuts (~10% workforce)**, ~900 from R&D
-  - CEO Cannon-Brookes: self-funding "further investment in AI and enterprise sales." AI-attributed layoffs now standard pattern — [Atlassian Blog](https://www.atlassian.com/blog/company-news/atlassian-team-update-march-2026)
-- **Amazon** (cumulative since Oct 2025) — **~30,000 corporate cuts** total (~14K Oct + ~16K Jan)
-- **Behaviour Interactive** (Apr 22) — Third round of cuts since 2024
-  - Dead by Daylight studio. Mobile/external dev teams targeted. ~1,200 employees pre-layoff — [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs)
-- **Industry total**: Tech layoffs at **~92,000 YTD** per Layoffs.fyi, with Metaintro attributing roughly **48% to AI/automation**
+### Layoffs & Restructuring ([§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas))
 
-### The Junior Developer Crisis
+- **Meta** (Apr 23) — **8,000 layoffs** + 6,000 cancelled roles = **14,000 impacted**. New "Applied AI" org. Cuts start May 20 — [CNBC](https://www.cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html)
+- **Microsoft** (Apr 23–24) — **~8,000–9,000 cuts**. Combined with Meta: **20,000+ on the same day** — [CNBC](https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html)
+- **Atlassian** (Mar 11) — **~1,600 cuts (~10%)**, ~900 from R&D — [Atlassian Blog](https://www.atlassian.com/blog/company-news/atlassian-team-update-march-2026)
+- **Amazon** (cumulative since Oct 2025) — **~30,000 corporate cuts**
+- **Behaviour Interactive** (Apr 22) — Third round since 2024. Mobile/external dev teams — [Game Developer](https://www.gamedeveloper.com/business/dead-by-daylight-studio-behaviour-interactive-confirms-layoffs)
+- **Industry total**: **~92,000 YTD**, ~48% AI-attributed (Layoffs.fyi / Metaintro)
 
-- **Stanford AI Index 2026**: Employment for developers aged **22–25 down ~20%** since 2024 in the US — [Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report)
-- **MIT Technology Review × SoftServe** (Apr 14): **51% of software teams** already using agentic AI; **98% of leaders** expect significant acceleration. Biggest hiring shifts: AI engineers (51%), software architects (32%), data engineers (29%) — [MIT Technology Review](https://www.technologyreview.com/2026/04/14/1134397/redefining-the-future-of-software-engineering/)
-- **Pattern**: Atlassian's R&D-heavy cuts + Stanford's junior dev data + Google's 75% AI code = structural contraction at the entry level
+### Junior Developer Pipeline ([§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas), [§8](#8-deepseek-v4--the-open-weight-reality-check))
 
-### Market Signals
+- **Stanford AI Index 2026**: Devs aged **22–25 down ~20%** since 2024 — [Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report)
+- **MIT Technology Review × SoftServe**: **51%** of teams using agentic AI; **98%** of leaders expect significant acceleration — [MIT Technology Review](https://www.technologyreview.com/2026/04/14/1134397/redefining-the-future-of-software-engineering/)
 
-**Software stocks crashed on April 23** despite strong earnings — the market is repricing SaaS on AI substitution risk:
+### Market Signals ([§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas))
 
-- **ServiceNow** — **−18%**, Revenue: $3.77B (+22% YoY, beat) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
-- **IBM** — **−9%**, Revenue: $15.92B (+9.5%, beat) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
-- **iShares Software ETF (IGV)** — **−6%** (day), **−27%** (6 months) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
-- **Texas Instruments** — **~+19%**, AI infra beneficiary — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
+- **ServiceNow −18%**, **IBM −9%**, **IGV −6%** (day) / −27% (6mo) — all despite beating earnings. **Texas Instruments +19%** (AI infra beneficiary) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
 
 ### AI Adoption Metrics
 
-- **Google**: **75% of new code** now AI-generated in internal repos — up from 25% (Oct 2024) → 50% (late 2025) → 75% (Apr 2026) — [Fast Company](https://www.fastcompany.com/91531519/google-ceo-says-75-of-the-companys-code-is-ai-generated)
-- **Valeo**: **35% of validated code** now AI-generated via Google Gemini Code Assist. **100,000 employees** on Gemini for Workspace — [Google Cloud Press](https://www.googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-Strategic-Partnership-to-Boost-Automotive-Innovation-with-Gemini-for-Workspace-and-Agentic-AI)
-- **Claude Code**: **~4% of all public GitHub commits** in March 2026 — one AI agent authoring 1 in 25 lines of open-source work globally — [dev.to / SemiAnalysis](https://dev.to/skilaai/cursor-vs-claude-code-vs-codex-2026-one-just-took-4-of-all-github-commits-2ldn)
-- **Stanford AI Index**: **88% of organizations** actively deploying AI; **53% global GenAI adoption** in 3 years (faster than PC or internet) — [Stanford HAI](https://hai.stanford.edu/ai-index/2026-ai-index-report/economy)
-- **Morgan Stanley**: AI could unlock **~$22 billion** in annual gaming industry profits by cutting dev costs **~50%**. Global gaming spend: **$275B** in 2026. Winners: Tencent, Sony, Roblox — [US News](https://money.usnews.com/investing/news/articles/2026-04-22/gaming-industry-could-unlock-22-billion-in-profits-on-ai-driven-cost-cuts-morgan-stanley)
+- **Google**: **75%** of new code AI-generated (25% → 50% → 75% in 18 months) — [Fast Company](https://www.fastcompany.com/91531519/google-ceo-says-75-of-the-companys-code-is-ai-generated)
+- **Valeo**: **35%** of validated code AI-generated; **100K employees** on Gemini Workspace — [Google Cloud Press](https://www.googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-Strategic-Partnership-to-Boost-Automotive-Innovation-with-Gemini-for-Workspace-and-Agentic-AI)
+- **Claude Code**: **~4%** of all public GitHub commits (Mar 2026) — [dev.to / SemiAnalysis](https://dev.to/skilaai/cursor-vs-claude-code-vs-codex-2026-one-just-took-4-of-all-github-commits-2ldn)
+- **Stanford AI Index**: **88%** of orgs deploying AI; **53%** global GenAI adoption in 3 years — [Stanford HAI](https://hai.stanford.edu/ai-index/2026-ai-index-report/economy)
+- **Morgan Stanley**: AI could unlock **~$22B** in annual gaming profits by cutting dev costs ~50% — [US News](https://money.usnews.com/investing/news/articles/2026-04-22/gaming-industry-could-unlock-22-billion-in-profits-on-ai-driven-cost-cuts-morgan-stanley)
 
-### Regulatory & Funding
+### Regulatory & Funding ([§5](#5-the-security-siege-continues--mcps-by-design-rce-and-the-first-cross-ecosystem-worm))
 
-- **EU Commission**: Allocated **€63.2 million** under Digital Europe Programme for AI in health and online safety (Apr 21) — [EU Digital Strategy](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
-- **EU AI Act**: Annex III high-risk obligations take effect **Aug 2, 2026**. Article 12 logging requirements. Penalties up to **€15M or 3% global revenue** — [Help Net Security](https://www.helpnetsecurity.com/2026/04/16/eu-ai-act-logging-requirements/)
+- **EU AI Act**: Annex III high-risk obligations **Aug 2, 2026**. Penalties up to **€15M / 3% global revenue** — [Help Net Security](https://www.helpnetsecurity.com/2026/04/16/eu-ai-act-logging-requirements/)
+- **EU Commission**: **€63.2M** under Digital Europe Programme for AI in health and online safety — [EU Digital Strategy](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
 
-### Deals
+### Deals ([§6](#6-spacexs-60b-cursor-option--when-ai-coding-tools-become-strategic-assets))
 
-- **SpaceX**: **$60B option** to acquire Cursor (prior valuation ~$29.3B) — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion)
-- **Cursor**: In talks for **$2B raise at $50B+ valuation** (a16z, Thrive Capital, Nvidia) — [CNBC](https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html)
-- **VAST Data**: Series F **$1B at $30B** valuation (tripled from 2023). Nvidia, Fidelity backed — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-22/nvidia-backed-vast-data-raises-1-billion-triples-valuation-to-30-billion)
-- **Vista Equity + Google Cloud**: Multiyear deal for **90+ portfolio companies** to deploy Gemini agents with "minimal human oversight" — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-22/vista-strikes-deal-to-speed-up-google-ai-in-software-portfolio)
-- **Google Cloud**: **$750M partner fund** for agentic AI development — [Google Cloud](https://www.googlecloudpresscorner.com/2026-04-22-Google-Cloud-Commits-750-Million-to-Accelerate-Partners-Agentic-AI-Development)
+- **SpaceX**: **$60B option** to acquire Cursor — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion)
+- **Cursor**: **$2B raise at $50B+** (a16z, Thrive, Nvidia) — [CNBC](https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html)
+- **VAST Data**: Series F **$1B at $30B** (3× from 2023) — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-22/nvidia-backed-vast-data-raises-1-billion-triples-valuation-to-30-billion)
+- **Vista Equity + Google Cloud**: **90+ portfolio companies** on Gemini agents — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-22/vista-strikes-deal-to-speed-up-google-ai-in-software-portfolio)
+- **Google Cloud**: **$750M** agentic AI partner fund — [Google Cloud](https://www.googlecloudpresscorner.com/2026-04-22-Google-Cloud-Commits-750-Million-to-Accelerate-Partners-Agentic-AI-Development)
 
 ---
 
@@ -712,37 +704,37 @@ A pivotal week for Copilot's commercial model:
 
 ### 🔴 Critical
 
-- **The Great AI Coding Price Upheaval** — The week the $20 era died. In a coordinated 72-hour window: Anthropic briefly pulled Claude Code from the $20 Pro plan (Apr 21, reverted — [A/B test on ~2% of new signups](https://simonwillison.net/2026/Apr/22/claude-code-confusion/)), GitHub paused new Copilot Pro/Pro+/Student signups ([Apr 20](https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/)), and OpenAI launched a [$100 Pro tier](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/) (Apr 9). Anthropic shifted enterprise pricing from flat $200/seat to usage-based. Microsoft reportedly moving all Copilot subscribers to [token-based billing in June](https://www.wheresyoured.at/exclusive-microsoft-moving-all-github-copilot-subscribers-to-token-based-billing-in-june/). The entire AI coding tool pricing structure is being reset — [Pasquale Pillitteri analysis](https://pasqualepillitteri.it/en/news/1241/ai-coding-tools-2026-price-hike-claude-copilot-codex-gemini)
-- **MCP "by design" RCE across 200K+ servers** — OX Security disclosed that Anthropic's Model Context Protocol ships with an architectural remote code execution flaw via STDIO transport. **150M+ downloads**, **7K+ public servers** affected. Anthropic declined a protocol-level fix, calling the behavior "by design." [The Hacker News](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html)
-- **CanisterSprawl: first cross-ecosystem self-propagating supply chain worm** — Autonomously spreads across npm and PyPI via stolen publish tokens. Exfiltrates SSH keys, cloud creds, crypto wallets to decentralized ICP canisters. [StepSecurity](https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials)
-- **GitHub Copilot training data policy** — Effective Apr 24, GitHub will use Free/Pro/Pro+ interaction data to train AI models. Opted in by default; Business/Enterprise exempt. Combined with signup pause and Pro+ gating, the most significant policy week in Copilot's history — [InfoQ](https://www.infoq.com/news/2026/04/github-copilot-training-data/)
+- **The Great AI Coding Price Upheaval** — In 72 hours: Anthropic briefly pulled Claude Code from Pro ([reverted](https://simonwillison.net/2026/Apr/22/claude-code-confusion/)), GitHub [paused signups](https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/), OpenAI launched a [$100 tier](https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/), and Microsoft reportedly moving to [token billing in June](https://www.wheresyoured.at/exclusive-microsoft-moving-all-github-copilot-subscribers-to-token-based-billing-in-june/). The $20 era is over — [analysis](https://pasqualepillitteri.it/en/news/1241/ai-coding-tools-2026-price-hike-claude-copilot-codex-gemini)
+- **MCP "by design" RCE** — STDIO transport ships RCE across **200K+ servers**, **150M+ downloads**. Anthropic declined a protocol-level fix ([§5](#5-the-security-siege-continues--mcps-by-design-rce-and-the-first-cross-ecosystem-worm)) — [The Hacker News](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html)
+- **CanisterSprawl** — First cross-ecosystem worm (npm ↔ PyPI) via stolen publish tokens, decentralized C2 ([§5](#5-the-security-siege-continues--mcps-by-design-rce-and-the-first-cross-ecosystem-worm)) — [StepSecurity](https://www.stepsecurity.io/blog/pgserve-compromised-on-npm-malicious-versions-harvest-credentials)
+- **GitHub Copilot training data policy** — Free/Pro/Pro+ interaction data used for AI training, opted in by default (Apr 24). Business/Enterprise exempt — [InfoQ](https://www.infoq.com/news/2026/04/github-copilot-training-data/)
 
 ### 🟠 Warning
 
-- **Software stock repricing accelerating** — ServiceNow **−18%**, IBM **−9%** despite beating earnings. The market is pricing AI substitution risk into the entire SaaS sector. Even growth can't outrun the narrative. [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
-- **92,000 tech layoffs YTD, ~48% AI-attributed** — Meta + Microsoft: 20,000+ on the same day. Amazon: 30,000 cumulative since Oct. Atlassian: 1,600 (900 from R&D). "Cut and redirect to AI" is the dominant restructuring pattern. [CNBC](https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html)
-- **Tokenmaxxing: the productivity illusion** — TechCrunch analysis: real gains 5–15% vs vendor-claimed 30–50%. Code churn **9.4×** higher with AI tools. Persistent acceptance only 10–30%. Goodhart's law in action: when token throughput becomes the target, quality suffers. [TechCrunch](https://techcrunch.com/2026/04/17/tokenmaxxing-is-making-developers-less-productive-than-they-think/)
-- **GPT-5.5 pricing 2× increase** — API costs double from $2.50/$15 to $5/$30 per million tokens. The era of cheap frontier APIs may be ending as providers seek margins. [OpenAI](https://openai.com/index/introducing-gpt-5-5/)
-- **EU AI Act Annex III: 14 weeks to compliance** — High-risk obligations take effect Aug 2, 2026. Article 12 logging requirements for AI agents in credit scoring, hiring, healthcare. Penalties up to €15M or 3% global revenue. [Help Net Security](https://www.helpnetsecurity.com/2026/04/16/eu-ai-act-logging-requirements/)
+- **Software stock repricing** — ServiceNow **−18%**, IBM **−9%** despite beating earnings ([§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas)) — [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/)
+- **92,000 tech layoffs YTD** — ~48% AI-attributed. Meta + Microsoft: 20K+ on the same day ([§7](#7-the-market-repricing--software-stocks-crash-as-ai-eats-saas)) — [CNBC](https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html)
+- **Tokenmaxxing** — Real gains 5–15% vs vendor-claimed 30–50%. Code churn **9.4×** higher. Goodhart's law in action ([§8](#8-deepseek-v4--the-open-weight-reality-check)) — [TechCrunch](https://techcrunch.com/2026/04/17/tokenmaxxing-is-making-developers-less-productive-than-they-think/)
+- **GPT-5.5 pricing 2×** — API doubles to $5/$30 per million tokens ([§2](#2-gpt-55--a-new-class-of-intelligence-meets-a-new-class-of-pricing)) — [OpenAI](https://openai.com/index/introducing-gpt-5-5/)
+- **EU AI Act Annex III: 14 weeks** — High-risk logging obligations Aug 2, 2026. Penalties up to €15M / 3% revenue ([§5](#5-the-security-siege-continues--mcps-by-design-rce-and-the-first-cross-ecosystem-worm)) — [Help Net Security](https://www.helpnetsecurity.com/2026/04/16/eu-ai-act-logging-requirements/)
 
 ### 🟢 Emerging
 
-- **DeepSeek V4 on domestic Chinese silicon** — First major LLM optimized for Huawei Ascend, not NVIDIA. **$0.14/M input tokens** (20–50× cheaper). Geopolitical divergence in AI infrastructure is now real. [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html)
-- **Claude Design threatens Figma** — Stock dropped **7%** on launch day. Mike Krieger resigned from Figma's board pre-launch. Model providers are eating their own ecosystem. [TechCrunch](https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/)
-- **Anthropic postmortem sets transparency precedent** — Detailed engineering breakdown of three product bugs. Rare candor in AI industry. Future "nerfing" complaints will be measured against this bar. [Anthropic](https://www.anthropic.com/engineering/april-23-postmortem)
-- **Karpathy's LLM Wiki paradigm** — Advocates replacing RAG with LLM-maintained markdown wikis. GitHub gist went viral (5,000+ stars, 5,000+ forks), spawning new products. Practical paradigm shift for knowledge management — [GitHub Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-- **Google Cloud Next '26 agentic stack** — $750M partner fund, Agent Developer Kit, Agent Studio, Workspace MCP Server. Plus Apple as preferred cloud partner for Gemini-powered Siri. The enterprise agentic infrastructure is materializing — [Google Cloud Blog](https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26)
-- **Prompt injection goes industrial** — Google Threat Intelligence found injection templates seeded across the public web. Organized toolkits, not experiments. Treat like SQL injection — defense in depth from design through deployment. [Google Security Blog](https://security.googleblog.com/2026/04/ai-threats-in-wild-current-state-of.html)
+- **DeepSeek V4 on Huawei Ascend** — **$0.14/M** input (20–50× cheaper than Western APIs). Geopolitical divergence is real ([§8](#8-deepseek-v4--the-open-weight-reality-check)) — [CNBC](https://www.cnbc.com/2026/04/24/deepseek-v4-llm-preview-open-source-ai-competition-china.html)
+- **Claude Design vs Figma** — Stock **−7%** on launch. Krieger resigned from Figma board pre-launch ([§4](#4-claude-design--cowork-live-artifacts--anthropics-platform-play)) — [TechCrunch](https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/)
+- **Anthropic postmortem precedent** — Detailed three-bug breakdown; rare AI industry candor ([§3](#3-anthropics-three-bug-postmortem--when-nerfing-was-actually-engineering-debt)) — [Anthropic](https://www.anthropic.com/engineering/april-23-postmortem)
+- **Karpathy's LLM Wiki** — Replace RAG with LLM-maintained markdown wikis. Gist: 5K+ stars, 5K+ forks — [GitHub Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+- **Google Cloud Next '26** — $750M agentic fund, ADK, Workspace MCP Server, Apple/Gemini Siri — [Google Cloud Blog](https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26)
+- **Prompt injection industrialized** — Google found organized injection templates across the public web ([§5](#5-the-security-siege-continues--mcps-by-design-rce-and-the-first-cross-ecosystem-worm)) — [Google Security Blog](https://security.googleblog.com/2026/04/ai-threats-in-wild-current-state-of.html)
 
 ### 🔵 Watch
 
-- **SpaceX/Cursor $60B** — Developer tooling enters geopolitical chess. Cursor trains on xAI Colossus. If the deal closes, Elon Musk controls a top-3 AI coding tool. [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion)
-- **Kent Beck: "Nobody wants agents"** — Sharp critique of multi-agent complexity from the creator of XP and TDD. Found himself managing the swarm rather than directing work. Counterpoint to agentic hype gaining traction among experienced practitioners. [Tidy First](https://tidyfirst.substack.com/p/genie-lessons-nobody-wants-agents)
-- **Stanford AI Index 2026 — junior dev pipeline** — Employment for devs aged 22–25 down ~20% since 2024. SWE-bench near 100%. 88% org adoption. The data proves AI is restructuring the job market and skill requirements. [Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report)
-- **OpenAI Workspace Agents** — Codex-powered persistent agents replacing GPTs for enterprise. Integrate Slack/Salesforce/Google Drive. Self-scheduling. Free until May 6. OpenAI's enterprise play against Microsoft Copilot and Google's Gemini Enterprise. [OpenAI](https://openai.com/index/introducing-workspace-agents-in-chatgpt/)
-- **ICLR 2026 safety breakthroughs** — AlphaAlign & WaltzRL cut unsafe LLM responses from **~40% → <5%**. RL-based alignment reaching production-grade safety. [ICLR 2026](https://iclr.cc/virtual/2026/papers.html)
-- **Lovable security incident** — Public projects' chat history and source exposed via BOLA vulnerability (regression from Feb 2026). Fix in 2 hours, all public projects made private. Cautionary tale for no-code AI builders. [Lovable Blog](https://lovable.dev/blog/our-response-to-the-april-2026-incident)
-- **Pragmatic Engineer Survey** — 900+ engineers, three archetypes (Builders/Shippers/Coasters), roles converging, cost concerns mounting. The most detailed snapshot of how AI is reshaping engineering teams. [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026)
+- **SpaceX/Cursor $60B** — Dev tooling enters geopolitical chess; Cursor trains on xAI Colossus ([§6](#6-spacexs-60b-cursor-option--when-ai-coding-tools-become-strategic-assets)) — [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-21/spacex-says-has-agreement-to-acquire-cursor-for-60-billion)
+- **Kent Beck: "Nobody wants agents"** — Managing the swarm, not directing work. Counterpoint gaining traction — [Tidy First](https://tidyfirst.substack.com/p/genie-lessons-nobody-wants-agents)
+- **Stanford AI Index** — Junior devs (22–25) down ~20%. SWE-bench near 100%. 88% org adoption ([§8](#8-deepseek-v4--the-open-weight-reality-check)) — [Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report)
+- **OpenAI Workspace Agents** — Codex-powered persistent agents replacing GPTs. Free until May 6 — [OpenAI](https://openai.com/index/introducing-workspace-agents-in-chatgpt/)
+- **ICLR 2026 safety** — AlphaAlign & WaltzRL cut unsafe responses from ~40% → <5% — [ICLR 2026](https://iclr.cc/virtual/2026/papers.html)
+- **Lovable BOLA incident** — Public projects exposed; fix in 2 hours. Cautionary tale for no-code AI builders ([§5](#5-the-security-siege-continues--mcps-by-design-rce-and-the-first-cross-ecosystem-worm)) — [Lovable Blog](https://lovable.dev/blog/our-response-to-the-april-2026-incident)
+- **Pragmatic Engineer Survey** — 900+ engineers, three archetypes, roles converging ([§8](#8-deepseek-v4--the-open-weight-reality-check)) — [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/the-impact-of-ai-on-software-engineers-2026)
 
 ---
 
