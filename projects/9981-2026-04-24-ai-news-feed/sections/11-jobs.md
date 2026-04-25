@@ -17,7 +17,7 @@
 | **ServiceNow** | **−18%** | $3.77B (+22% YoY, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
 | **IBM** | **−9%** | $15.92B (+9.5%, beat) | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
 | **iShares Software ETF (IGV)** | **−6%** (day), **−27%** (6 months) | — | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
-| **Texas Instruments** | **+17%** | AI infra beneficiary | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
+| **Texas Instruments** | **~+19%** | AI infra beneficiary | [Forbes](https://www.forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks-even-those-reporting-good-earnings/) |
 
 ### AI Adoption Metrics
 

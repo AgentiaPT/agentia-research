@@ -223,7 +223,7 @@ These two launches represent a strategic inflection point for Anthropic — and 
 
 Claude Design and Live Artifacts break that contract. Anthropic is now building the **application layer** — not just the intelligence layer — and it's using the same model capabilities that its API customers depend on to do it. The Krieger resignation is the clearest possible signal: when your API provider puts its CPO on your board and then pulls him off to launch a competing product, the relationship has changed.
 
-For software engineers, the immediate practical impact is narrow — Claude Design generates impressive first drafts but still needs human hands for production work. The strategic impact is enormous: if the model provider can build the product, what moat does the SaaS wrapper around the API actually have? Every company building on Claude's API is now asking that question. The SaaS survival playbook — proprietary data, compliance wrappers, domain expertise — just became [mandatory reading](https://beancount.io/blog/2026/02/02/vertical-saas-survival-guide-competing-against-ai-giants#:~:text=Vertical%20SaaS%20Survival%20Guide).
+For software engineers, the immediate practical impact is narrow — Claude Design generates impressive first drafts but still needs human hands for production work. The strategic impact is enormous: if the model provider can build the product, what moat does the SaaS wrapper around the API actually have? Every company building on Claude's API is now asking that question. The SaaS survival playbook — proprietary data, compliance wrappers, domain expertise — just became mandatory reading.
 
 ---
 
@@ -339,7 +339,7 @@ Bloomberg reported on April 21 that SpaceX has secured an **option to acquire An
 | **Compute access** | xAI Colossus, ~1M H100-equivalent |
 | **SpaceX IPO timeline** | As early as June 2026, up to $2T valuation |
 
-The premium is staggering — a **105% markup** over Cursor's January valuation — but the logic is structural, not financial. SpaceX writes mission-critical flight software. Starlink alone runs millions of lines of code across **7,000+ satellites**. Owning the AI coding tool that generates and reviews that code isn't a productivity play; it's **supply-chain control for software that keeps people alive** [\[3\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=mission-critical%20flight%20software).
+The premium is staggering — a **105% markup** over Cursor's November 2025 valuation — but the logic is structural, not financial. SpaceX writes mission-critical flight software. Starlink alone runs millions of lines of code across **7,000+ satellites**. Owning the AI coding tool that generates and reviews that code isn't a productivity play; it's **supply-chain control for software that keeps people alive** [\[3\]](https://www.forbes.com/sites/alexkonrad/2026/04/21/spacex-cursor-deal-xai-colossus-training/#:~:text=mission-critical%20flight%20software).
 
 The xAI angle matters just as much. Training on Colossus means Cursor's next-generation models won't depend on OpenAI, Anthropic, or Google for frontier compute. For Musk's empire, it creates a **vertically integrated AI stack**: xAI builds the models, Colossus trains them, Cursor ships them to developers, and SpaceX consumes the output. No external dependency at any layer.
 

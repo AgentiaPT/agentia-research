@@ -150,11 +150,70 @@ Additional fixes:
 - Fixed in 3 locations: §7 prose paragraph, §9 voice-tracker table row, §12 pull-quote.
 - Outstanding: the April 24 "procedural 3D harbor town simulation" reference still points at oneusefulthing.org root — needs a specific article URL when one surfaces (flagged by `scripts/extract-readme-links.py`).
 
-## Handoff to user
+### Pass 6 — Firecrawl + web_search fact-check (2026-04-25, §4–12 all remaining sections)
 
-- README: projects/9981-2026-04-24-ai-news-feed/README.md
-- Explorer: https://agentiapt.github.io/agentia-research/projects/9981-2026-04-24-ai-news-feed/explorer.html
-- Pending manual checks: none — all deferred items resolved in pass 2
+**DOMAINS FLAGGED FOR MANUAL REVIEW (not fetched — prompt injection risk):**
+| Domain | Section | Usage |
+|---|---|---|
+| blackswan-cybersecurity.com | §5 | RedSun threat advisory |
+| beancount.io | §4 | "Vertical SaaS Survival Guide" (FABRICATED URL — beancount.io has no blog; link removed) |
+| www.aibusinessreview.org | §4 | Krieger board exit article |
+| www.basisreport.com | §4 | Figma stock drop article |
+| enterprisezone.cc | §4 | Sachin Rekhi quote |
+| www.mrlatte.net | §4 | "professional refinement" design take |
+| poddtoppen.se | §9 | Swyx/Latent Space podcast URL |
+| laffaz.com | §11 | Quora/Poe layoffs story (facts confirmed via web_search) |
+| explore.n1n.ai | §10 | Qwen 3.6-27B (replaced with MarkTechPost) |
+| blockchain.news | §9, §12 | Mollick/Altman stories |
+
+**§4 (Claude Design / Cowork) corrections:**
+- **beancount.io link removed** — beancount.io is a Python accounting tool and has no blog section. The URL `beancount.io/blog/2026/02/02/vertical-saas-survival-guide-competing-against-ai-giants` is fabricated. Changed to plain text "mandatory reading" (no link). Fixed in both §4 section file and README.
+- Figma closing price $18.84, -7.28% from $20.32: **CONFIRMED** correct via officechai.com source (the cited source confirms these exact numbers).
+- Mike Krieger resigned April 14 (3 days before April 17 launch): **CONFIRMED**.
+- Krieger joined Figma board "in 2025": not independently verified but not disputed.
+
+**§5 (Security) — all key facts confirmed:**
+- MCP: 150M+ downloads, ~200K vulnerable servers, 7K+ public servers ✓
+- CanisterSprawl StepSecurity link (pgserve URL): confirmed correct — "CanisterSprawl: pgserve Compromised on npm" is the article title ✓
+- Bitwarden CLI: @2026.4.0, 93 minutes, 334 developers, sent to audit.checkmarx.cx ✓
+- Oracle CPU April 21: 241 CVEs, 481 patches, 34 critical, Oracle Communications worst-hit at 139 patches ✓
+- Comment and Control researchers (Aonan Guan, Zhengyu Liu, Gavin Zhong), CVSS 9.4 / $100 / $1,337 / $500 ✓
+
+**§6 (SpaceX/Cursor) corrections:**
+- **"Series C, Jan 2026"** → **"Series D, Nov 2025"** — confirmed: Cursor's Nov 2025 round was Series D at $29.3B. Pass 1 fixed the README but not the section file. Fixed now.
+- **"January valuation"** → **"November 2025 valuation"** in prose — consistency fix.
+- SpaceX IPO "as early as June 2026, up to $2T valuation": **CONFIRMED** ✓
+- xAI Colossus ~1M H100-equivalent: **CONFIRMED** ✓
+- VAST Data Series F led by Drive Capital and Access Industries, Nvidia/Fidelity/NEA: **CONFIRMED** ✓
+
+**§7 (Market) corrections:**
+- **Texas Instruments +17% → ~+19%** (×2 in section file: table and prose) — actual close April 23 was +19.43%
+- **IBM CNBC URL had wrong year 2025** → replaced with `cnbc.com/2026/04/22/ibm-q1-earnings-report-2026.html`
+- **ServiceNow Forbes URL had wrong year 2025** (Derek Saul article) → replaced with `forbes.com/sites/aliciapark/2026/04/23/ai-fears-keep-hammering-software-stocks...`
+- **USNews software selloff URL was wrong** (2025 tariff article) → replaced with `money.usnews.com/investing/news/articles/2026-04-23/us-software-stocks-slide-as-ibm-servicenow-results-reignite-ai-disruption-fears`
+- **Meta CNBC URL had wrong year 2025** → replaced with `cnbc.com/2026/04/23/meta-will-cut-10percent-of-workforce-as-it-pushes-more-into-ai.html`
+- **Valeo Google Cloud URL had wrong year 2025** → replaced with `googlecloudpresscorner.com/2026-04-22-Valeo-and-Google-Cloud-Expand-...`
+- IBM 9.5% revenue growth: **CONFIRMED** ✓
+- Meta: 8K layoffs + 6K cancelled = 14K total, headcount 79K→71K, May 20 start, 16 weeks + 2/year severance: **CONFIRMED** ✓
+- Valeo 35% AI code, 100K employees on Gemini Workspace: **CONFIRMED** ✓
+- Morgan Stanley: $22B profits, ~50% cost cuts, $275B global gaming spend, Tencent/Sony/Roblox: **CONFIRMED** ✓
+- Behaviour Interactive ~1,200 employees pre-layoff: **CONFIRMED** ✓
+
+**§10 (Model Updates) corrections:**
+- **Qwen date Apr 20 → Apr 22** (same as §8 fix, model table section file not previously updated)
+- **explore.n1n.ai URL replaced with MarkTechPost URL** (known, trusted domain)
+
+**§11 (Jobs) corrections:**
+- **Texas Instruments +17% → ~+19%** in market signals table
+
+**§9 (Voices) / §12 (Signals) — confirmed correct:**
+- Dario Amodei quote/CNBC URL: **CONFIRMED** ✓
+- Aaron Levie quote/Yahoo Tech: **CONFIRMED** ✓
+- Martin Fowler blog: **CONFIRMED** ✓
+- Daniel Stenberg blog: **CONFIRMED** ✓
+- Comment and Control VentureBeat URL: used in both §5 and §12 (same article)
+
+
 
 ## Pending commentary / decisions for user
 
