@@ -43,16 +43,14 @@ Last week was **the unraveling** — Anthropic leaked its own source code [\[1\]
 
 DHH [\[4\]](https://world.hey.com/dhh/promoting-ai-agents-3ee04945) — the creator of Ruby on Rails, a man who dismissed AI coding tools as "infuriating" a year ago — now starts every coding task by instructing an AI agent [\[5\]](https://newsletter.pragmaticengineer.com/p/dhhs-new-way-of-writing-code). Kent Beck and Martin Fowler went on The Pragmatic Engineer [\[6\]](https://newsletter.pragmaticengineer.com/p/cycles-of-disruption-in-the-tech) to compare the current shift to the Agile revolution. JetBrains published data [\[7\]](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) showing 85–90% of developers now use AI tools regularly. Snap's CEO announced AI generates 65% of new code — then laid off 1,000 engineers [\[8\]](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html). And the first open-source model topped SWE-Bench Pro [\[9\]](https://z.ai/blog/glm-5.1), beating GPT-5.4 in the benchmark that matters most to working developers.
 
-| Layer                    | What Happened                                                                                                                                                                                                                                                                                                                                                                                                       | Why You Should Care                                                                |     |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --- |
-| **Developer Tools**      | Claude Managed Agents [\[10\]](https://www.anthropic.com/engineering/managed-agents) ($0.08/hr); Desktop redesign + Routines [\[11\]](https://claude.com/blog/claude-code-desktop-redesign) (April 14); Cursor 3 [\[12\]](https://cursor.com/blog/cursor-3) (April 2)                                                                                                                                                            | Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on |     |
-| **Developer Experience** | Copilot CLI BYOK/offline [\[13\]](https://github.blog/changelog/2026-04-07-copilot-cli-now-supports-byok-and-local-models/) (April 7); Patterns.dev 58 Agent Skills [\[14\]](https://github.com/PatternsDev/skills); Chrome DevTools MCP v0.21.0 [\[15\]](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v0.21.0)                                                                 | Air-gapped AI coding goes mainstream; agent skills become the new "npm install"    |     |
-| **Open Source**          | GLM-5.1 tops SWE-Bench Pro (58.4%) [\[9\]](https://z.ai/blog/glm-5.1)                                                                                                                                                                                                                                                                                                                                                 | First open-source model to beat GPT-5.4 in coding — you can self-host this         |     |
-| **Workflow Shift**       | DHH goes agent-first [\[5\]](https://newsletter.pragmaticengineer.com/p/dhhs-new-way-of-writing-code); 85–90% dev AI adoption [\[7\]](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) (JetBrains); 46% love Claude Code vs 9% Copilot [\[16\]](https://newsletter.pragmaticengineer.com/p/ai-tooling-for-software-engineers-2026) (Pragmatic Eng survey, 906 devs) | The industry crossed from "trying AI" to "AI is how we work"                       |     |
-| **Engineering Orgs**     | Snap: 65% AI-generated code → 1,000 layoffs [\[8\]](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html); 71K+ industry-wide [\[17\]](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai)                                                                            | The first public company to quantify AI engineering displacement at scale          |     |
-| **Security**             | Anthropic's Mythos finds decades-old zero-days [\[18\]](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html); Adversa AI exposes Claude Code deny rules bypass [\[19\]](https://adversa.ai/blog/claude-code-security-bypass-deny-rules-disabled/); source leak analysis reveals hidden feature flags [\[20\]](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/)                         | Both the scanner and the scanned are AI — and both have vulnerabilities            |     |
-| **Supply Chain**         | Axios CVE published [\[2\]](https://coderoasis.com/cve-2025-62718-the-axios-crisis-a-critical-ssrf-vuln-a-north-korean-supply-chain-attack-and-why-every-node-js-developer-needs-to-act-right-now/), CPU-Z compromised [\[21\]](https://securelist.com/tr/cpu-z/119365/), Trivy fallout continues [\[22\]](https://www.infoq.com/news/2026/04/trivy-supply-chain-attack/)                                                 | Third consecutive week of major attacks — across three different vectors           |     |
-| **Platform Wars**        | OpenClaw blocked from Claude subscriptions; Steinberger banned [\[23\]](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/); OpenAI accuses Anthropic of $8B revenue inflation [\[24\]](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/)                                                              | The harness is the product — and vendors are locking it down                       |     |
+- **Developer Tools** — Claude Managed Agents [\[10\]](https://www.anthropic.com/engineering/managed-agents) ($0.08/hr); Desktop redesign + Routines [\[11\]](https://claude.com/blog/claude-code-desktop-redesign) (April 14); Cursor 3 [\[12\]](https://cursor.com/blog/cursor-3) (April 2). *Two parallel-work UX overhauls in two weeks — the multi-agent workspace race is on*
+- **Developer Experience** — Copilot CLI BYOK/offline [\[13\]](https://github.blog/changelog/2026-04-07-copilot-cli-now-supports-byok-and-local-models/) (April 7); Patterns.dev 58 Agent Skills [\[14\]](https://github.com/PatternsDev/skills); Chrome DevTools MCP v0.21.0 [\[15\]](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v0.21.0). *Air-gapped AI coding goes mainstream; agent skills become the new "npm install"*
+- **Open Source** — GLM-5.1 tops SWE-Bench Pro (58.4%) [\[9\]](https://z.ai/blog/glm-5.1). *First open-source model to beat GPT-5.4 in coding — you can self-host this*
+- **Workflow Shift** — DHH goes agent-first [\[5\]](https://newsletter.pragmaticengineer.com/p/dhhs-new-way-of-writing-code); 85–90% dev AI adoption [\[7\]](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) (JetBrains); 46% love Claude Code vs 9% Copilot [\[16\]](https://newsletter.pragmaticengineer.com/p/ai-tooling-for-software-engineers-2026) (Pragmatic Eng survey, 906 devs). *The industry crossed from "trying AI" to "AI is how we work"*
+- **Engineering Orgs** — Snap: 65% AI-generated code → 1,000 layoffs [\[8\]](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html); 71K+ industry-wide [\[17\]](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai). *The first public company to quantify AI engineering displacement at scale*
+- **Security** — Anthropic's Mythos finds decades-old zero-days [\[18\]](https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html); Adversa AI exposes Claude Code deny rules bypass [\[19\]](https://adversa.ai/blog/claude-code-security-bypass-deny-rules-disabled/); source leak analysis reveals hidden feature flags [\[20\]](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/). *Both the scanner and the scanned are AI — and both have vulnerabilities*
+- **Supply Chain** — Axios CVE published [\[2\]](https://coderoasis.com/cve-2025-62718-the-axios-crisis-a-critical-ssrf-vuln-a-north-korean-supply-chain-attack-and-why-every-node-js-developer-needs-to-act-right-now/), CPU-Z compromised [\[21\]](https://securelist.com/tr/cpu-z/119365/), Trivy fallout continues [\[22\]](https://www.infoq.com/news/2026/04/trivy-supply-chain-attack/). *Third consecutive week of major attacks — across three different vectors*
+- **Platform Wars** — OpenClaw blocked from Claude subscriptions; Steinberger banned [\[23\]](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/); OpenAI accuses Anthropic of $8B revenue inflation [\[24\]](https://winbuzzer.com/2026/04/15/openai-memo-attacks-anthropic-revenue-claims-enterprise-battle-plan-xcxwbn/). *The harness is the product — and vendors are locking it down*
 
 ### The Unifying Thread
 
@@ -104,11 +102,9 @@ Anthropic launched **Claude Managed Agents** in public beta — and the pricing 
 
 The system cleanly separates three concerns that teams typically spend months building:
 
-| Component | What It Handles | What You No Longer Build |
-|---|---|---|
-| **The Brain** | Claude handles reasoning, planning, decision-making | Prompt orchestration, retry logic, model routing |
-| **The Hands** | Sandboxed code execution, file operations, tool use | Container orchestration, sandbox security, file I/O isolation |
-| **The Session** | Persistent event log maintaining state across interactions | State management, crash recovery, audit logging |
+- **The Brain** — Claude handles reasoning, planning, decision-making. *You no longer build:* prompt orchestration, retry logic, model routing
+- **The Hands** — Sandboxed code execution, file operations, tool use. *You no longer build:* container orchestration, sandbox security, file I/O isolation
+- **The Session** — Persistent event log maintaining state across interactions. *You no longer build:* state management, crash recovery, audit logging
 
 This decoupling means your team doesn't need to build sandbox infrastructure, credential management, session persistence, scaling, or error recovery. Anthropic handles all of it.
 
@@ -116,12 +112,10 @@ This decoupling means your team doesn't need to build sandbox infrastructure, cr
 
 Early adopters tell the real story:
 
-| Company | Use Case | What Changed |
-|---|---|---|
-| **Notion** | Autonomous workspace management agents | [Early adopter](https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/); reduced agent infrastructure overhead |
-| **Asana** | Multi-step project automation | [Shipped advanced features "dramatically faster"](https://www.techradar.com/pro/go-from-prototype-to-launch-in-days-rather-than-months-anthropic-reveals-claude-managed-agents-promises-to-make-agent-building-10x-faster) |
-| **Sentry** | Automated error triage and resolution | [Agent goes from flagged bug to open PR, fully autonomous](https://www.helpnetsecurity.com/2026/04/09/claude-managed-agents-bring-execution-and-control-to-ai-agent-workflows/) |
-| **Rakuten** | E-commerce workflow automation | [Deploying agents across business functions](https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/) |
+- **Notion** — Autonomous workspace management agents. [Early adopter](https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/); reduced agent infrastructure overhead
+- **Asana** — Multi-step project automation. [Shipped advanced features "dramatically faster"](https://www.techradar.com/pro/go-from-prototype-to-launch-in-days-rather-than-months-anthropic-reveals-claude-managed-agents-promises-to-make-agent-building-10x-faster)
+- **Sentry** — Automated error triage and resolution. [Agent goes from flagged bug to open PR, fully autonomous](https://www.helpnetsecurity.com/2026/04/09/claude-managed-agents-bring-execution-and-control-to-ai-agent-workflows/)
+- **Rakuten** — E-commerce workflow automation. [Deploying agents across business functions](https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/)
 
 ### The Advisor Tool: Multi-Model Orchestration Without the Plumbing
 
@@ -131,20 +125,16 @@ For teams currently running their own model-routing layers (and that's most team
 
 ### The Competitive Landscape
 
-| Platform | Pricing | Key Differentiator |
-|---|---|---|
-| **Claude Managed Agents** | $0.08/hr + tokens | Best code understanding ([80.8% SWE-bench Verified](https://www.anthropic.com/news/claude-opus-4-6)), managed sandbox |
-| **OpenAI Assistants API** | Per-token only | Largest model ecosystem, function calling |
-| **Google Vertex AI Agents** | Per-prediction | Deepest cloud integration, Gemini models |
+- **Claude Managed Agents** — $0.08/hr + tokens. Best code understanding ([80.8% SWE-bench Verified](https://www.anthropic.com/news/claude-opus-4-6)), managed sandbox
+- **OpenAI Assistants API** — Per-token only. Largest model ecosystem, function calling
+- **Google Vertex AI Agents** — Per-prediction. Deepest cloud integration, Gemini models
 
 ### Why This Matters
 
 At $0.08/hour, the question isn't whether to use managed agent infrastructure — it's which provider. The comparison that matters for engineering managers:
 
-| Option | Timeline | Cost |
-|---|---|---|
-| Build your own agent infrastructure | 2–6 months engineering | Salaries + cloud + ongoing maintenance |
-| Claude Managed Agents | Days to production | $0.08/hr + tokens |
+- **Build your own agent infrastructure** — 2–6 months engineering, salaries + cloud + ongoing maintenance
+- **Claude Managed Agents** — Days to production, $0.08/hr + tokens
 
 This is the **AWS Lambda moment for AI agents** — the point where infrastructure becomes a commodity and the competitive advantage shifts entirely to what you build on top of it.
 
@@ -160,35 +150,29 @@ Zhipu AI (now Z.ai) released **GLM-5.1** — a 754-billion parameter open-source
 
 SWE-Bench Pro uses real GitHub issues — models must read a codebase, understand a bug report, write a patch, and pass the test suite. It's the closest thing to measuring actual engineering capability:
 
-| Model | SWE-Bench Pro (%) | License | Self-Hostable? |
-|---|---|---|---|
-| **GLM-5.1** | **58.4** | MIT | Yes — full weights on HuggingFace |
-| GPT-5.4 | 57.7 | Proprietary | No |
-| Claude Opus 4.6 | 57.3 | Proprietary | No |
-| Gemini 3.1 Pro | 54.2 | Proprietary | No |
+- **GLM-5.1** — **58.4%**, MIT license, self-hostable (full weights on HuggingFace)
+- **GPT-5.4** — 57.7%, Proprietary, not self-hostable
+- **Claude Opus 4.6** — 57.3%, Proprietary, not self-hostable
+- **Gemini 3.1 Pro** — 54.2%, Proprietary, not self-hostable
 
 ### Beyond Code Completion: Agentic Capabilities
 
 GLM-5.1 isn't just a code completion model — it's designed for long-horizon autonomous engineering:
 
-| Benchmark | Score | What It Tests |
-|---|---|---|
-| **Terminal-Bench 2.0** | [63.5](https://github.com/zai-org/GLM-5) | Linux shell engineering tasks |
-| **NL2Repo** | [42.7](https://github.com/zai-org/GLM-5) | Full repo generation from natural language |
-| **CyberGym** | [68.7](https://github.com/zai-org/GLM-5) | Cybersecurity reasoning (top score) |
-| **MCP-Atlas** | [71.8](https://github.com/zai-org/GLM-5) | Multi-step tool use and API orchestration |
+- **Terminal-Bench 2.0** — [63.5](https://github.com/zai-org/GLM-5), Linux shell engineering tasks
+- **NL2Repo** — [42.7](https://github.com/zai-org/GLM-5), Full repo generation from natural language
+- **CyberGym** — [68.7](https://github.com/zai-org/GLM-5), Cybersecurity reasoning (top score)
+- **MCP-Atlas** — [71.8](https://github.com/zai-org/GLM-5), Multi-step tool use and API orchestration
 
 In one demonstration, GLM-5.1 [autonomously worked on a coding task for **8 hours across 655 cycles**](https://venturebeat.com/technology/ai-joins-the-8-hour-work-day-as-glm-ships-5-1-open-source-llm-beating-opus-4) without human intervention — building an entire Linux desktop environment.
 
 ### Practical Specs for Your Infra Team
 
-| Spec | Detail |
-|---|---|
-| **Architecture** | Mixture of Experts (754B total, ~40B active per token) |
-| **Context window** | 200K tokens input, 131K output |
-| **License** | MIT — unrestricted commercial use |
-| **Frameworks** | vLLM, SGLang, Transformers, KTransformers |
-| **Local deployment** | Quantized builds run on Mac Studio or multi-GPU setups via Ollama |
+- **Architecture:** Mixture of Experts (754B total, ~40B active per token)
+- **Context window:** 200K tokens input, 131K output
+- **License:** MIT — unrestricted commercial use
+- **Frameworks:** vLLM, SGLang, Transformers, KTransformers
+- **Local deployment:** Quantized builds run on Mac Studio or multi-GPU setups via Ollama
 
 ### Why This Matters
 
@@ -235,22 +219,18 @@ The architects of modern software engineering practices — TDD, XP, refactoring
 
 The [JetBrains Developer Ecosystem Survey](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/) published fresh adoption data from 10,000+ developers worldwide. The main State of Developer Ecosystem survey (24,000+ developers, published late 2025) found 85% regular AI usage; a follow-up AI Pulse survey in January 2026 pushed that figure to 90%:
 
-| Metric | Number |
-|---|---|
-| **Developers using AI tools regularly** | [85%](https://www.infoworld.com/article/4077352/85-of-developers-use-ai-regularly-jetbrains-survey.html) (90% report saving 1+ hour weekly) |
-| **Using specialized AI coding tools** | 74% |
-| **AI-generated production code (estimated)** | 41% |
-| **Developers who fully trust AI output** | 29% |
+- **Developers using AI tools regularly:** [85%](https://www.infoworld.com/article/4077352/85-of-developers-use-ai-regularly-jetbrains-survey.html) (90% report saving 1+ hour weekly)
+- **Using specialized AI coding tools:** 74%
+- **AI-generated production code (estimated):** 41%
+- **Developers who fully trust AI output:** 29%
 
 ### The Tool Adoption Leaderboard
 
-| Tool | Work Adoption | Key Strength |
-|---|---|---|
-| **GitHub Copilot** | 29% | Enterprise integration, compliance |
-| **ChatGPT (for coding)** | 28% | General-purpose, no IDE lock-in |
-| **Claude Code** | 18% | Highest satisfaction (91% CSAT, NPS 54) |
-| **Cursor** | 18% | Agentic workflows, multi-file editing |
-| **Google Antigravity** | 6% | Rapid growth, late 2025 launch |
+- **GitHub Copilot** — 29% work adoption. Enterprise integration, compliance
+- **ChatGPT (for coding)** — 28% work adoption. General-purpose, no IDE lock-in
+- **Claude Code** — 18% work adoption. Highest satisfaction (91% CSAT, NPS 54)
+- **Cursor** — 18% work adoption. Agentic workflows, multi-file editing
+- **Google Antigravity** — 6% work adoption. Rapid growth, late 2025 launch
 
 The trend that matters: most developers now **stack multiple tools** — Cursor for editing, Claude Code for complex refactoring, Copilot for fast autocomplete. No single tool dominates all workflows.
 
@@ -274,14 +254,12 @@ This is the first time a public company CEO has quantified AI code generation at
 
 ### The Numbers
 
-| Metric | Detail |
-|---|---|
-| **AI-generated code** | 65%+ of all new code |
-| **Jobs cut** | 1,000 + 300 open roles eliminated |
-| **Workforce reduction** | 16% |
-| **AI support automation** | [1M+ monthly support queries handled by AI](https://www.techrepublic.com/article/news-snap-ai-layoffs-april-2026/) |
-| **Cost savings** | [$500M annualized](https://www.telecompaper.com/news/snap-cuts-1000-jobs-after-ai-trials-sees-usd-500-mln-in-annualised-cost-savings-by-h2--1568212) |
-| **Severance** | [4 months for affected US employees](https://deadline.com/2026/04/snap-layoffs-ceo-evan-spiegel-ai-1236861335/) |
+- **AI-generated code:** 65%+ of all new code
+- **Jobs cut:** 1,000 + 300 open roles eliminated
+- **Workforce reduction:** 16%
+- **AI support automation:** [1M+ monthly support queries handled by AI](https://www.techrepublic.com/article/news-snap-ai-layoffs-april-2026/)
+- **Cost savings:** [$500M annualized](https://www.telecompaper.com/news/snap-cuts-1000-jobs-after-ai-trials-sees-usd-500-mln-in-annualised-cost-savings-by-h2--1568212)
+- **Severance:** [4 months for affected US employees](https://deadline.com/2026/04/snap-layoffs-ceo-evan-spiegel-ai-1236861335/)
 
 ### What Engineering Leaders Should Actually Take From This
 
@@ -293,17 +271,15 @@ This is the first time a public company CEO has quantified AI code generation at
 
 ### The Broader Layoff Context
 
-| Company | Cuts | % Workforce | AI Cited? |
-|---|---|---|---|
-| **Snap** | [1,000 + 300 open roles](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html) | 16% | Yes — explicitly |
-| **Oracle** | [20,000–30,000](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html) | — | Yes — AI/data center pivot |
-| **Block** | [4,000+](https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html) | ~50% | Yes — AI restructuring |
-| **Atlassian** | [1,600](https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/) | 10% | Yes — AI investment |
-| **Pinterest** | [~700](https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html) | 15% | Yes — AI reallocation |
-| **GoPro** | [~23% workforce](https://petapixel.com/2026/04/08/gopro-to-lay-off-23-of-its-workforce-this-year/) | 23% | Restructuring |
-| **Pendo** | [~90](https://www.axios.com/local/raleigh/2026/04/07/raleigh-software-unicorn-pendo-layoffs-jobs) | 10% | Yes — AI-driven restructuring |
-| **Taboola** | [100](https://www.calcalistech.com/ctechnews/article/hku03an3bg) | 5% | Not stated |
-| **Qualcomm** | [Undisclosed](https://kogo.iheart.com/featured/kogo-local-news/content/2026-04-10-qualcomm-announces-layoffs-in-san-diego/) | — | Yes — chip design |
+- **Snap** — [1,000 + 300 open roles](https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html), 16% workforce. AI cited: Yes — explicitly
+- **Oracle** — [20,000–30,000](https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html). AI cited: Yes — AI/data center pivot
+- **Block** — [4,000+](https://www.cnbc.com/2026/02/26/block-laying-off-about-4000-employees-nearly-half-of-its-workforce.html), ~50% workforce. AI cited: Yes — AI restructuring
+- **Atlassian** — [1,600](https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/), 10% workforce. AI cited: Yes — AI investment
+- **Pinterest** — [~700](https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html), 15% workforce. AI cited: Yes — AI reallocation
+- **GoPro** — [~23% workforce](https://petapixel.com/2026/04/08/gopro-to-lay-off-23-of-its-workforce-this-year/), 23% workforce. AI cited: Restructuring
+- **Pendo** — [~90](https://www.axios.com/local/raleigh/2026/04/07/raleigh-software-unicorn-pendo-layoffs-jobs), 10% workforce. AI cited: Yes — AI-driven restructuring
+- **Taboola** — [100](https://www.calcalistech.com/ctechnews/article/hku03an3bg), 5% workforce. AI cited: Not stated
+- **Qualcomm** — [Undisclosed](https://kogo.iheart.com/featured/kogo-local-news/content/2026-04-10-qualcomm-announces-layoffs-in-san-diego/). AI cited: Yes — chip design
 
 Through mid-April 2026, **80+ tech companies have cut 71,000+ jobs** ([Tom's Hardware](https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai)), with [RationalFX analysis via TechRadar](https://www.techradar.com/pro/nearly-80-000-tech-workers-have-already-lost-their-jobs-in-2026-and-ai-impact-means-more-could-be-to-come#:~:text=nearly%20half) finding **~48% of cuts explicitly cite AI adoption** as a driver. Snap is the first to provide a specific code generation metric as justification — but the pattern is industry-wide.
 
@@ -317,11 +293,9 @@ Anthropic's Claude Mythos Preview — its most advanced model — autonomously i
 
 ### What Mythos Found
 
-| Discovery | Age | Implication for Your Stack |
-|---|---|---|
-| OpenBSD kernel vulnerability | 27 years | Undetected by decades of audits and fuzzing |
-| FreeBSD remote code execution | 17 years | Full remote compromise in production servers |
-| Multiple browser zero-days | Various | Working exploits generated independently — no human guidance |
+- **OpenBSD kernel vulnerability** — 27 years old. Undetected by decades of audits and fuzzing
+- **FreeBSD remote code execution** — 17 years old. Full remote compromise in production servers
+- **Multiple browser zero-days** — Various ages. Working exploits generated independently — no human guidance
 
 This isn't a specialized security tool — it's a general-purpose reasoning model that happens to be devastatingly good at finding bugs. The implication: **every codebase, including yours, likely has vulnerabilities that AI can find faster than your current security tooling.**
 
@@ -352,13 +326,11 @@ Three consecutive weeks of major supply chain attacks across three different vec
 
 The North Korean attack on Axios — [covered last week](../9983-2026-04-04-ai-news-feed/README.md#3-the-axios-bomb--north-korea-hits-npms-most-downloaded-http-library) — received a formal CVE designation:
 
-| Field | Detail | Action Required |
-|---|---|---|
-| **CVE** | CVE-2025-62718 | Check your lockfiles now |
-| **CVSS** | 9.3 (Critical) | Immediate remediation |
-| **Type** | SSRF in NO_PROXY handling | Affects server-side code |
-| **Attribution** | [UNC1069 (North Korea-nexus, financially motivated)](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package) | Nation-state level sophistication |
-| **Blast radius** | [Malicious versions live ~3 hours](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) (Axios averages ~100M weekly downloads) | Audit CI/CD pipelines, rotate secrets |
+- **CVE:** CVE-2025-62718 — *Action:* Check your lockfiles now
+- **CVSS:** 9.3 (Critical) — *Action:* Immediate remediation
+- **Type:** SSRF in NO_PROXY handling — *Action:* Affects server-side code
+- **Attribution:** [UNC1069 (North Korea-nexus, financially motivated)](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package) — *Action:* Nation-state level sophistication
+- **Blast radius:** [Malicious versions live ~3 hours](https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/) (Axios averages ~100M weekly downloads) — *Action:* Audit CI/CD pipelines, rotate secrets
 
 If you use Axios (and most Node.js projects do), verify your lockfile doesn't reference versions 1.14.1 or 0.30.4. Organizations are still auditing CI/CD pipelines and rotating secrets.
 
@@ -401,12 +373,10 @@ The attack surface is widening faster than most teams' security posture. If your
 
 The bills cluster around requirements that directly affect software teams:
 
-| Category | Requirement | Impact on Engineering |
-|---|---|---|
-| **Data transparency** | Disclose training data sources and AI decision-making processes | Logging and audit trail infrastructure needed |
-| **User protections** | Consent for AI-generated content, especially deepfakes | Content labeling in your product's AI outputs |
-| **Algorithmic discrimination** | Restrictions on biased AI outcomes | Bias testing in CI/CD pipelines |
-| **App store accountability** | Platforms liable for AI-generated outputs | Content moderation for AI features |
+- **Data transparency** — Disclose training data sources and AI decision-making processes. *Engineering impact:* Logging and audit trail infrastructure needed
+- **User protections** — Consent for AI-generated content, especially deepfakes. *Engineering impact:* Content labeling in your product's AI outputs
+- **Algorithmic discrimination** — Restrictions on biased AI outcomes. *Engineering impact:* Bias testing in CI/CD pipelines
+- **App store accountability** — Platforms liable for AI-generated outputs. *Engineering impact:* Content moderation for AI features
 
 California and New York lead, with frameworks covering high-risk AI, content moderation, and civil rights. This follows the [California AI executive order](../9983-2026-04-04-ai-news-feed/README.md#12-signals--radar) from March 30.
 
@@ -574,25 +544,23 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 ### Voice Summary Table
 
-| Voice | Active | Key Topic | Source |
-|---|---|---|---|
-| DHH | ✅ | Agent-first workflow, AI code review, peak programmer | Blog, Pragmatic Engineer |
-| Kent Beck & Martin Fowler | ✅ | AI dwarfs even the Agile revolution, non-determinism, burnout | Pragmatic Engineer |
-| Gergely Orosz | ✅ | Published Beck/Fowler and DHH episodes; 2026 survey (906 respondents) | Pragmatic Engineer |
-| Andrej Karpathy | ✅ | LLM knowledge bases, agentic engineering framing | X, GitHub |
-| Evan Spiegel | ✅ | 65% AI code, 1,000 layoffs | CNBC, Fast Company |
-| Dario Amodei | ✅ | Glasswing, Managed Agents, $30B revenue | Anthropic, CNBC |
-| Simon Willison | ✅ | Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts | Blog (April 15-16) |
-| Denise Dresser | ✅ | Revenue accounting attack on Anthropic, "Spud" model preview | Leaked memo (April 13) |
-| Addy Osmani | ✅ | Patterns.dev 58 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0 | LinkedIn, GitHub |
-| Felix Rieseberg | ✅ | Claude Code desktop redesign launch announcement | [X](https://x.com/felixrieseberg/status/2044128194647994585) (April 14) |
-| Ethan Mollick | ✅ | AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern | LinkedIn |
-| Patrick Debois | ✅ | "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence | LinkedIn |
-| Alaina Hardie | ✅ | Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 198 misalignment events) | [GitHub](https://github.com/trianglegrrl/misalign) |
-| Marc Andreessen | ✅ | Latent Space pod: "Those days are just over" — software creation becomes trivially easy; Death of the Browser | Latent Space podcast |
-| Teresa Torres | ✅ | Claude Code deep-dive article series — memory, workflows, safety, context rot (widely shared by David Bland) | [producttalk.org](https://www.producttalk.org/) |
-| Steve Yegge | ❌ | Not active this week | — |
-| Kelsey Hightower | ❌ | Nutanix keynote was prior week | — |
+- **DHH** — ✅ Active. Agent-first workflow, AI code review, peak programmer. *Source:* Blog, Pragmatic Engineer
+- **Kent Beck & Martin Fowler** — ✅ Active. AI dwarfs even the Agile revolution, non-determinism, burnout. *Source:* Pragmatic Engineer
+- **Gergely Orosz** — ✅ Active. Published Beck/Fowler and DHH episodes; 2026 survey (906 respondents). *Source:* Pragmatic Engineer
+- **Andrej Karpathy** — ✅ Active. LLM knowledge bases, agentic engineering framing. *Source:* X, GitHub
+- **Evan Spiegel** — ✅ Active. 65% AI code, 1,000 layoffs. *Source:* CNBC, Fast Company
+- **Dario Amodei** — ✅ Active. Glasswing, Managed Agents, $30B revenue. *Source:* Anthropic, CNBC
+- **Simon Willison** — ✅ Active. Datasette 1.0a27, Karpathy LLM wiki references, Claude Artifacts. *Source:* Blog (April 15-16)
+- **Denise Dresser** — ✅ Active. Revenue accounting attack on Anthropic, "Spud" model preview. *Source:* Leaked memo (April 13)
+- **Addy Osmani** — ✅ Active. Patterns.dev 58 Agent Skills for JS/React/Vue; Chrome DevTools MCP v0.21.0. *Source:* LinkedIn, GitHub
+- **Felix Rieseberg** — ✅ Active. Claude Code desktop redesign launch announcement. *Source:* [X](https://x.com/felixrieseberg/status/2044128194647994585) (April 14)
+- **Ethan Mollick** — ✅ Active. AI in game industry (Wharton Lab report); UK gov Mythos assessment; AI math breakthroughs pattern. *Source:* LinkedIn
+- **Patrick Debois** — ✅ Active. "Context Coders vs Agentic Coders" — two distinct developer archetypes emerging; coding pipeline convergence. *Source:* LinkedIn
+- **Alaina Hardie** — ✅ Active. Completion-pressure misalignment — first empirical study of agent failure modes (225 sessions, 198 misalignment events). *Source:* [GitHub](https://github.com/trianglegrrl/misalign)
+- **Marc Andreessen** — ✅ Active. Latent Space pod: "Those days are just over" — software creation becomes trivially easy; Death of the Browser. *Source:* Latent Space podcast
+- **Teresa Torres** — ✅ Active. Claude Code deep-dive article series — memory, workflows, safety, context rot (widely shared by David Bland). *Source:* [producttalk.org](https://www.producttalk.org/)
+- **Steve Yegge** — ❌ Not active this week
+- **Kelsey Hightower** — ❌ Nutanix keynote was prior week
 
 ---
 
@@ -604,15 +572,13 @@ If you're shipping AI features in an iOS app, expect longer review times and exp
 
 Anthropic shipped the biggest Claude Code UX overhaul since launch. The desktop app was **rebuilt from the ground up for parallel work** — the same week Cursor 3 launched its own multi-agent workspace. The parallel-work arms race is now official.
 
-| Feature | What It Does | Why It Matters |
-|---|---|---|
-| **Multi-session sidebar** | All active/recent sessions in one place, filterable by status, project, environment | No more tab juggling — manage 5+ agent sessions from one window |
-| **Integrated terminal** | Run tests and builds without leaving the app | Eliminates the IDE↔terminal context switch |
-| **In-app file editor** | Spot edits without opening an IDE | Quick fixes don't need a full editor |
-| **Rebuilt diff viewer** | Optimized for large changesets | AI-generated diffs are often 500+ lines — this matters |
-| **Side chats (Cmd+;)** | Branch a question off a running task | Ask "will this break X?" without polluting the agent's main context |
-| **Drag-and-drop panes** | Flexible workspace layout | Customize for your workflow — code left, terminal right, chat bottom |
-| **Expanded preview pane** | HTML, PDFs, local app servers | Preview AI-generated UIs in real time |
+- **Multi-session sidebar** — All active/recent sessions in one place, filterable by status, project, environment. *Why it matters:* No more tab juggling — manage 5+ agent sessions from one window
+- **Integrated terminal** — Run tests and builds without leaving the app. *Why it matters:* Eliminates the IDE↔terminal context switch
+- **In-app file editor** — Spot edits without opening an IDE. *Why it matters:* Quick fixes don't need a full editor
+- **Rebuilt diff viewer** — Optimized for large changesets. *Why it matters:* AI-generated diffs are often 500+ lines — this matters
+- **Side chats (Cmd+;)** — Branch a question off a running task. *Why it matters:* Ask "will this break X?" without polluting the agent's main context
+- **Drag-and-drop panes** — Flexible workspace layout. *Why it matters:* Customize for your workflow — code left, terminal right, chat bottom
+- **Expanded preview pane** — HTML, PDFs, local app servers. *Why it matters:* Preview AI-generated UIs in real time
 
 Available on Pro, Max, Team, and Enterprise plans.
 
@@ -626,16 +592,14 @@ Available on Pro, Max, Team, and Enterprise plans.
 
 The [npm sourcemap leak covered last week](../9983-2026-04-04-ai-news-feed/README.md) (~512K lines of TypeScript, 1,906 files) continued generating analysis throughout this window. Key findings from researchers who dug into the code:
 
-| Finding | Verified? | Detail |
-|---|---|---|
-| **QueryEngine.ts: ~46,000 lines** | ✅ | Single file handles all LLM API calls, streaming, caching, orchestration, retry logic, rate limiting, context management |
-| **44 hidden feature flags** | ✅ | Unreleased features: KAIROS (always-on background agent), ULTRAPLAN (30-min remote planning), Buddy companion, agent swarms |
-| **Anti-distillation mechanisms** | ✅ | Fake tool definitions injected into system prompts; reasoning chain summarization with cryptographic signatures |
-| **"Undercover mode"** | ✅ | Stealth mode to obscure Anthropic employee contributions to open-source projects |
-| **Multi-agent natural language orchestration** | ✅ | Sub-agents coordinated via natural language system prompts (e.g., "Do not rubber-stamp weak work") |
-| **"Spaghetti" architecture** | Debated | [One analyst](https://www.sabrina.dev/p/claude-code-source-leak-analysis) called it "staff-engineer spaghetti: performance-aware, feature-flagged, surgically optimized spaghetti." A [3,167-line function](https://techtrenches.dev/p/the-snake-that-ate-itself-what-claude) with 486 branch points was found in `print.ts`. Others noted the async generator architecture is clean and the bash security system is thorough |
-| **JSON parsed by LLM, not code** | ❌ | Mischaracterized — the code uses standard JSONL for persistence. System prompts are processed by the LLM, but that's how all LLM agents work |
-| **22 image compression retries** | ❌ | The "22" refers to security validators, not image retries. Context compression has a circuit breaker after 3 failures |
+- **QueryEngine.ts: ~46,000 lines** — ✅ Verified. Single file handles all LLM API calls, streaming, caching, orchestration, retry logic, rate limiting, context management
+- **44 hidden feature flags** — ✅ Verified. Unreleased features: KAIROS (always-on background agent), ULTRAPLAN (30-min remote planning), Buddy companion, agent swarms
+- **Anti-distillation mechanisms** — ✅ Verified. Fake tool definitions injected into system prompts; reasoning chain summarization with cryptographic signatures
+- **"Undercover mode"** — ✅ Verified. Stealth mode to obscure Anthropic employee contributions to open-source projects
+- **Multi-agent natural language orchestration** — ✅ Verified. Sub-agents coordinated via natural language system prompts (e.g., "Do not rubber-stamp weak work")
+- **"Spaghetti" architecture** — Debated. [One analyst](https://www.sabrina.dev/p/claude-code-source-leak-analysis) called it "staff-engineer spaghetti: performance-aware, feature-flagged, surgically optimized spaghetti." A [3,167-line function](https://techtrenches.dev/p/the-snake-that-ate-itself-what-claude) with 486 branch points was found in `print.ts`. Others noted the async generator architecture is clean and the bash security system is thorough
+- **JSON parsed by LLM, not code** — ❌ Mischaracterized — the code uses standard JSONL for persistence. System prompts are processed by the LLM, but that's how all LLM agents work
+- **22 image compression retries** — ❌ The "22" refers to security validators, not image retries. Context compression has a circuit breaker after 3 failures
 
 **Adversa AI Security Vulnerability (April 1, patched April 6):** Claude Code's permission engine had a **hard-coded 50-subcommand limit**. When a shell command exceeded 50 subcommands (joined by `&&`, `||`, or `;`), **all deny-rule enforcement was silently skipped** — falling back to a generic "ask" prompt with zero indication that security rules were bypassed. A malicious `CLAUDE.md` could craft routine-looking build pipelines that exfiltrate credentials via hard-blocked commands like `curl` and `wget`. Anthropic patched it on April 6 using their tree-sitter parser.
 
@@ -647,13 +611,11 @@ Screenshots of an unreleased **full-stack app builder** inside Claude surfaced o
 
 **What the leaked screenshots show:**
 
-| Feature | Detail |
-|---|---|
-| **"Let's ship something great"** prompt bar | Full app creation interface inside Claude's chat window |
-| **Live in-browser preview pane** | Apps render in real time alongside the conversation |
-| **One-click "Publish" button** | Anthropic handles hosting/deployment — not just code generation |
-| **Pre-built "Recipes"** | Auth setup, database connections, dark mode, security scans |
-| **Settings panel** | Tabs for: security, storage, secrets, logs, user analytics |
+- **"Let's ship something great" prompt bar:** Full app creation interface inside Claude's chat window
+- **Live in-browser preview pane:** Apps render in real time alongside the conversation
+- **One-click "Publish" button:** Anthropic handles hosting/deployment — not just code generation
+- **Pre-built "Recipes":** Auth setup, database connections, dark mode, security scans
+- **Settings panel:** Tabs for: security, storage, secrets, logs, user analytics
 
 This is full-stack deployment: frontend, backend, database, auth, and hosting — all from a chat window. It goes far beyond current Claude Artifacts (which only render frontend previews).
 
@@ -671,16 +633,14 @@ The key nuance (from Boris Cherny): the Claude Code CLI and SDK remain fully sub
 
 ### Developer Tools Landscape
 
-| Tool | What Changed (April 1–16) | Adoption |
-|---|---|---|
-| **Claude Code** | Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions | 18% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), 46% most-loved ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/)) |
-| **GitHub Copilot** | Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry | 29% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), 9% most-loved |
-| **Cursor** | **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes | 18% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), fastest growth |
-| **Windsurf** | **Adaptive** — intelligent model router that auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes | Competitive free alternative |
-| **Google Antigravity** | Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)** | 6% workplace, rapid growth |
-| **Replit** | **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode | Strong among beginners/prototypers |
-| **Bolt (StackBlitz)** | [Sonnet 4.6 became default model](https://bolt.new/blog/sonnet-4.6-in-bolt) (February 2026), replacing earlier Claude versions; MCP server support | AI app builder segment |
-| **Lovable** | No major April product launch; [$330M raised at $6.6B](https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/) (Dec 2025); **Anthropic app builder leak** (April 12) threatens core business — [screenshots show](https://sifted.eu/articles/anthropic-lovable-challenger-leak) full-stack deploy from Claude chat | AI app builder segment leader — but depends on Claude API |
+- **Claude Code** — Desktop redesign (April 14); Routines research preview; Managed Agents ($0.08/hr); source leak code analysis; Adversa AI deny rules patch (April 6); OpenClaw blocked from subscriptions. *Adoption:* 18% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), 46% most-loved ([Pragmatic Engineer](https://newsletter.pragmaticengineer.com/))
+- **GitHub Copilot** — Agent mode GA in VS Code + JetBrains; agentic code review; **CLI BYOK + local model support** (April 7) — fully offline with Ollama, vLLM, Foundry Local; `COPILOT_OFFLINE=true` disables all telemetry. *Adoption:* 29% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), 9% most-loved
+- **Cursor** — **Cursor 3** (April 2): Agents Window for parallel agents across repos/environments; Design Mode for annotating UI elements in-browser; Agent Tabs for side-by-side views; `/worktree` for isolated git worktree changes. *Adoption:* 18% workplace ([JetBrains](https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/)), fastest growth
+- **Windsurf** — **Adaptive** — intelligent model router that auto-picks best model per task to conserve quota; `.codeiumignore`/`.gitignore` support for Fast Context; MCP OAuth fixes. *Adoption:* Competitive free alternative
+- **Google Antigravity** — Improved MCP auth; Linux sandboxing announced; **9+ hour service disruption (April 15)**. *Adoption:* 6% workplace, rapid growth
+- **Replit** — **Developer Day** (April 2): Code Repair AI model auto-fixes ~60% of LSP errors; Economy/Power mode selection; Lite Mode. *Adoption:* Strong among beginners/prototypers
+- **Bolt (StackBlitz)** — [Sonnet 4.6 became default model](https://bolt.new/blog/sonnet-4.6-in-bolt) (February 2026), replacing earlier Claude versions; MCP server support. *Adoption:* AI app builder segment
+- **Lovable** — No major April product launch; [$330M raised at $6.6B](https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/) (Dec 2025); **Anthropic app builder leak** (April 12) threatens core business — [screenshots show](https://sifted.eu/articles/anthropic-lovable-challenger-leak) full-stack deploy from Claude chat. *Adoption:* AI app builder segment leader — but depends on Claude API
 
 ### Key Trends
 
@@ -720,12 +680,10 @@ The Chrome DevTools MCP server ([ChromeDevTools/chrome-devtools-mcp](https://git
 
 ### AI Models for Engineering
 
-| Model | What's New | Why It Matters for Devs |
-|---|---|---|
-| **GLM-5.1** (Z.ai) | 754B MoE, MIT license, #1 SWE-Bench Pro (58.4%) | First self-hostable model to beat proprietary options in coding |
-| **Claude Mythos Preview** | Restricted to Glasswing cybersecurity partners | AI vulnerability scanning at superhuman level |
-| **Muse Spark** (Meta) | First proprietary model, three reasoning modes | Meta abandons open source — Llama dependencies at risk |
-| **Gemma 4** (Google) | Apache 2.0 — last major open frontier model | Your fallback if you need open + capable |
+- **GLM-5.1** (Z.ai) — 754B MoE, MIT license, #1 SWE-Bench Pro (58.4%). *Why it matters:* First self-hostable model to beat proprietary options in coding
+- **Claude Mythos Preview** — Restricted to Glasswing cybersecurity partners. *Why it matters:* AI vulnerability scanning at superhuman level
+- **Muse Spark** (Meta) — First proprietary model, three reasoning modes. *Why it matters:* Meta abandons open source — Llama dependencies at risk
+- **Gemma 4** (Google) — Apache 2.0 — last major open frontier model. *Why it matters:* Your fallback if you need open + capable
 
 ### Completion-Pressure Misalignment: First Empirical Study
 
@@ -755,12 +713,10 @@ AI-native CI/CD is becoming the standard for productive teams this quarter:
 
 ### The Revenue War (Context for Engineering Hiring)
 
-| Metric | Anthropic | OpenAI |
-|---|---|---|
-| **Annualized revenue** | [$30B (gross)](https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/) | [$24B (net)](https://sacra.com/c/openai/) |
-| **Primary driver** | Enterprise API + Claude Code | ChatGPT subscriptions |
-| **Enterprise customers ($1M+/yr)** | [1,000+](https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/) | Not disclosed |
-| **What it means for hiring** | Enterprise dev tools driving growth | Consumer product driving growth |
+- **Annualized revenue** — Anthropic: [$30B (gross)](https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/) · OpenAI: [$24B (net)](https://sacra.com/c/openai/)
+- **Primary driver** — Anthropic: Enterprise API + Claude Code · OpenAI: ChatGPT subscriptions
+- **Enterprise customers ($1M+/yr)** — Anthropic: [1,000+](https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/) · OpenAI: Not disclosed
+- **What it means for hiring** — Anthropic: Enterprise dev tools driving growth · OpenAI: Consumer product driving growth
 
 Anthropic overtaking OpenAI in revenue — driven by enterprise API and Claude Code adoption — signals where engineering hiring dollars are flowing: toward teams building AI-integrated products, not toward teams maintaining pre-AI codebases.
 
@@ -770,11 +726,9 @@ Anthropic overtaking OpenAI in revenue — driven by enterprise API and Claude C
 
 A leaked memo from OpenAI CRO Denise Dresser (April 13) turned the quiet revenue competition into an open war. The key accusation: **Anthropic overstates its revenue by approximately $8 billion** through accounting differences.
 
-| Method | Anthropic | OpenAI |
-|---|---|---|
-| **Accounting** | Gross (books full invoice incl. AWS/Google Cloud cut) | Net (books revenue after Microsoft's share) |
-| **Reported run rate** | $30B | $24B |
-| **OpenAI's claimed real rate** | ~$22B | $24B |
+- **Accounting** — Anthropic: Gross (books full invoice incl. AWS/Google Cloud cut) · OpenAI: Net (books revenue after Microsoft's share)
+- **Reported run rate** — Anthropic: $30B · OpenAI: $24B
+- **OpenAI's claimed real rate** — Anthropic: ~$22B · OpenAI: $24B
 
 Both methods are legal under US GAAP, but they produce drastically different market perceptions. If Dresser's analysis is accurate, OpenAI is actually ahead.
 
@@ -784,12 +738,10 @@ The memo also previewed **"Spud"** — OpenAI's next model, promising superior r
 
 ### Capital Flows
 
-| Flow | Amount | Engineering Implication |
-|---|---|---|
-| **Q1 2026 VC funding** | [$300B (~2.5x previous year)](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/) | More startup engineering jobs, more AI-native teams |
-| **OpenAI round** | [$122B at $852B valuation](https://openai.com/index/accelerating-the-next-phase-ai/) | IPO expected 2026; massive engineering hiring continues |
-| **Meta AI capex** | [$115–135B](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx) | Largest AI infra buildout; infra engineering boom |
-| **Anthropic compute deals** | [$50B+ total](https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure) | Enterprise AI adoption accelerating |
+- **Q1 2026 VC funding** — [$300B (~2.5x previous year)](https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/). *Engineering implication:* More startup engineering jobs, more AI-native teams
+- **OpenAI round** — [$122B at $852B valuation](https://openai.com/index/accelerating-the-next-phase-ai/). *Engineering implication:* IPO expected 2026; massive engineering hiring continues
+- **Meta AI capex** — [$115–135B](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx). *Engineering implication:* Largest AI infra buildout; infra engineering boom
+- **Anthropic compute deals** — [$50B+ total](https://www.anthropic.com/news/anthropic-invests-50-billion-in-american-ai-infrastructure). *Engineering implication:* Enterprise AI adoption accelerating
 
 ### The Tension for Engineering Leaders
 
@@ -912,11 +864,9 @@ As this edition went to press, Anthropic shipped **Claude Opus 4.7** — the suc
 
 The release was the worst-kept secret of the week. Three independent leaks confirmed what [The Information reported on April 14](https://www.theinformation.com/briefings/exclusive-anthropic-preps-opus-4-7-model-ai-design-tool):
 
-| Leak | Date | What It Revealed |
-|---|---|---|
-| **npm source code leak** | March 31 | Internal version strings referencing `opus-4.7` and `sonnet-4.8` in [500K+ lines of exposed TypeScript](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/) |
-| **The Information exclusive** | April 14 | Opus 4.7 + AI design tool launching "as soon as this week" |
-| **Vertex AI console** | April 16 | Model ID `anthropic-claude-opus-4-7` [spotted in Google's quota management page](https://help.apiyi.com/en/claude-opus-4-7-vertex-ai-leak-release-analysis-en.html) with EU region billing configured |
+1. **npm source code leak** (March 31) — Internal version strings referencing `opus-4.7` and `sonnet-4.8` in [500K+ lines of exposed TypeScript](https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/)
+2. **The Information exclusive** (April 14) — Opus 4.7 + AI design tool launching "as soon as this week"
+3. **Vertex AI console** (April 16) — Model ID `anthropic-claude-opus-4-7` [spotted in Google's quota management page](https://help.apiyi.com/en/claude-opus-4-7-vertex-ai-leak-release-analysis-en.html) with EU region billing configured
 
 [Polymarket](https://polymarket.com/event/claude-4pt7-released-by) assigned 79% probability to an April 16 release. The market was right.
 
@@ -924,18 +874,16 @@ The release was the worst-kept secret of the week. Three independent leaks confi
 
 Opus 4.7 isn't a marginal upgrade — the coding and vision improvements are substantial:
 
-| Benchmark | Opus 4.7 | Opus 4.6 | Delta |
-|---|---|---|---|
-| **CursorBench** | [70%](https://www.anthropic.com/news/claude-opus-4-7) | 58% | +12 pts |
-| **Rakuten-SWE-Bench** | [3× more tasks resolved](https://www.anthropic.com/news/claude-opus-4-7) | baseline | 3× |
-| **XBOW visual acuity** | [98.5%](https://www.anthropic.com/news/claude-opus-4-7) | 54.5% | +44 pts |
-| **CyberGym** | [73.8](https://www.anthropic.com/news/claude-opus-4-7) | 66.6 | +7.2 |
-| **OfficeQA Pro (Databricks)** | [21% fewer errors](https://www.anthropic.com/news/claude-opus-4-7) | baseline | −21% errors |
-| **BigLaw Bench (Harvey)** | [90.9%](https://www.anthropic.com/news/claude-opus-4-7) | — | — |
-| **Finance Agent** | [State-of-the-art](https://www.anthropic.com/news/claude-opus-4-7) | 0.767 | 0.813 |
-| **93-task coding benchmark** | [13% improvement](https://www.anthropic.com/news/claude-opus-4-7) | baseline | +13% |
-| **Multi-step workflows** | [+14% at fewer tokens](https://www.anthropic.com/news/claude-opus-4-7) | baseline | +14% |
-| **Tool errors** | [⅓ reduction](https://www.anthropic.com/news/claude-opus-4-7) | baseline | −33% |
+- **CursorBench** — Opus 4.7: [70%](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: 58% · Delta: +12 pts
+- **Rakuten-SWE-Bench** — Opus 4.7: [3× more tasks resolved](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: baseline · Delta: 3×
+- **XBOW visual acuity** — Opus 4.7: [98.5%](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: 54.5% · Delta: +44 pts
+- **CyberGym** — Opus 4.7: [73.8](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: 66.6 · Delta: +7.2
+- **OfficeQA Pro (Databricks)** — Opus 4.7: [21% fewer errors](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: baseline · Delta: −21% errors
+- **BigLaw Bench (Harvey)** — Opus 4.7: [90.9%](https://www.anthropic.com/news/claude-opus-4-7)
+- **Finance Agent** — Opus 4.7: [State-of-the-art](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: 0.767 · Delta: 0.813
+- **93-task coding benchmark** — Opus 4.7: [13% improvement](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: baseline · Delta: +13%
+- **Multi-step workflows** — Opus 4.7: [+14% at fewer tokens](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: baseline · Delta: +14%
+- **Tool errors** — Opus 4.7: [⅓ reduction](https://www.anthropic.com/news/claude-opus-4-7) · Opus 4.6: baseline · Delta: −33%
 
 The **vision leap** is the headline: 98.5% vs 54.5% on visual acuity means Opus 4.7 can reliably read dense screenshots, chemical structures, and technical diagrams at up to 2,576 pixels on the long edge (~3.75 megapixels) — a **3× increase** in supported image resolution.
 
@@ -943,13 +891,11 @@ The **CursorBench jump** (58% → 70%) matters most for working developers — t
 
 ### New Features for Developers
 
-| Feature | What It Does |
-|---|---|
-| **`xhigh` effort level** | New tier between `high` and `max` — finer control over reasoning vs. latency. Now the default in Claude Code for all plans |
-| **`/ultrareview` command** | Dedicated code review sessions that flag bugs and design issues. Pro/Max users get three free ultrareviews |
-| **Task budgets (public beta)** | Guide token allocation across longer agentic runs — prevents runaway costs |
-| **Auto mode for Max** | Autonomous decision-making with fewer interruptions — extended from Team/Enterprise |
-| **Higher-res images** | Up to 2,576px long edge, >3× increase from prior models |
+- **`xhigh` effort level:** New tier between `high` and `max` — finer control over reasoning vs. latency. Now the default in Claude Code for all plans
+- **`/ultrareview` command:** Dedicated code review sessions that flag bugs and design issues. Pro/Max users get three free ultrareviews
+- **Task budgets (public beta):** Guide token allocation across longer agentic runs — prevents runaway costs
+- **Auto mode for Max:** Autonomous decision-making with fewer interruptions — extended from Team/Enterprise
+- **Higher-res images:** Up to 2,576px long edge, >3× increase from prior models
 
 ### The AI Design Tool — Anthropic Competes With Its Own Customers
 
@@ -957,12 +903,10 @@ Alongside Opus 4.7, Anthropic is shipping an **AI-powered design tool** that gen
 
 The market reacted before launch:
 
-| Stock | Drop | Why |
-|---|---|---|
-| **Figma (FIG)** | [−6%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Direct competition — Figma commands 80-90% UI/UX market share |
-| **Wix** | [−4.7%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Website builder market overlap |
-| **Adobe (ADBE)** | [−2.7%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Creative tool disruption threat |
-| **GoDaddy (GDDY)** | [−3%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html) | Web presence builder overlap |
+- **Figma (FIG)** — [−6%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html). Direct competition — Figma commands 80-90% UI/UX market share
+- **Wix** — [−4.7%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html). Website builder market overlap
+- **Adobe (ADBE)** — [−2.7%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html). Creative tool disruption threat
+- **GoDaddy (GDDY)** — [−3%](https://finance.yahoo.com/markets/stocks/articles/figma-wix-shares-tumble-anthropic-184914891.html). Web presence builder overlap
 
 This is the same pattern as the [OpenClaw billing war](#openclaw-billing-war-april-410) — Anthropic competing with and supplying its own ecosystem simultaneously. Lovable ($6.6B valuation) and Bolt both run on Claude's API. The [leaked app builder screenshots from April 12](#claude-app-builder-leak--screenshots-surface-april-12) now make more sense: the design tool, the app builder, and Opus 4.7 are a coordinated platform play.
 
@@ -970,13 +914,18 @@ This is the same pattern as the [OpenClaw billing war](#openclaw-billing-war-apr
 
 Anthropic now operates two model tiers with very different access:
 
-| | Opus 4.7 | Mythos Preview |
-|---|---|---|
-| **Access** | Generally available | [Restricted to Glasswing partners](https://www.anthropic.com/glasswing) |
-| **Positioning** | Commercial flagship | Cybersecurity / research |
-| **Safety profile** | "Largely well-aligned" | Best-aligned model |
-| **Cyber capabilities** | Differentially reduced | Full capability ([found 27-year-old zero-days](#6-project-glasswing--ai-that-finds-zero-days-faster-than-your-security-team)) |
-| **Next in line** | — | Sonnet 4.8 (leaked in source code, projected May 2026) |
+- **Opus 4.7**
+  - **Access:** Generally available
+  - **Positioning:** Commercial flagship
+  - **Safety profile:** "Largely well-aligned"
+  - **Cyber capabilities:** Differentially reduced
+  - **Next in line:** —
+- **Mythos Preview**
+  - **Access:** [Restricted to Glasswing partners](https://www.anthropic.com/glasswing)
+  - **Positioning:** Cybersecurity / research
+  - **Safety profile:** Best-aligned model
+  - **Cyber capabilities:** Full capability ([found 27-year-old zero-days](#6-project-glasswing--ai-that-finds-zero-days-faster-than-your-security-team))
+  - **Next in line:** Sonnet 4.8 (leaked in source code, projected May 2026)
 
 The source code leak also referenced models codenamed **Capybara** — suggesting more announcements are queued.
 
