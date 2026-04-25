@@ -33,7 +33,7 @@ The trajectory matters more than the number: **25% → 50% → 75% in 18 months*
 
 ### Stanford: Junior Dev Employment Down ~20%
 
-The Stanford AI Index 2026 quantified what many suspected: **employment for software developers aged 22–25 has fallen approximately 20% since 2024** in the United States ([Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report#:~:text=employment%20for%20developers%20aged%2022-25)). The data confirms a structural shift — not just fewer entry-level hires, but an active contraction in the junior developer pipeline. Combined with Google's 75% code milestone and Atlassian's R&D-heavy layoffs, the picture for early-career developers is the bleakest it has been in a decade.
+The Stanford AI Index 2026 quantified the shift: **employment for software developers aged 22–25 has fallen approximately 20% since 2024** in the US ([Stanford HAI](https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report#:~:text=employment%20for%20developers%20aged%2022-25)). Combined with Google's 75% AI code milestone and Atlassian's R&D-heavy cuts, the picture for early-career developers is the bleakest in a decade. (Full Stanford data in §8.)
 
 ### Valeo: 35% of Validated Code Is Now AI-Generated
 
