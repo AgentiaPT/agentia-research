@@ -19,6 +19,6 @@ Also answer: why doesn't this seem to happen when editing a large Vela app (12k 
 
 - [x] Fetched and read full paper from arXiv HTML version
 - [x] Extracted all key sections: methodology, results, analysis, limitations, conclusion
-- [ ] Write README.md with full deep-dive analysis
-- [ ] Fact-check all claims
-- [ ] Run build-index.py
+- [x] Write README.md with full deep-dive analysis
+- [x] Fact-check 10 key claims against actual paper text — all verified
+- [x] Run build-index.py and commit updated indexes
