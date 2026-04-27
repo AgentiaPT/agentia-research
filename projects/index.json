@@ -1,6 +1,31 @@
 {
-  "generated": "2026-04-25T16:23:31.269815+00:00",
+  "generated": "2026-04-27T09:18:23.686869+00:00",
   "projects": [
+    {
+      "id": "9980-2026-04-27-delegate52-paper-analysis",
+      "slug": "delegate52-paper-analysis",
+      "title": "Deep Dive: LLMs Corrupt Your Documents When You Delegate (DELEGATE-52)",
+      "date": "2026-04-27",
+      "status": "complete",
+      "tags": [
+        "llm-evaluation",
+        "delegation",
+        "vibe-coding",
+        "document-editing",
+        "benchmark",
+        "agentic-coding"
+      ],
+      "description": "This paper introduces **DELEGATE-52**, a benchmark that tests whether LLMs can faithfully edit documents across 52 professional domains over long workflows (20 interactions). The key finding: **all tested LLMs degrade documents over repeated editing**, with even frontier models (Gemini 3.1 Pro, Claude 4.6 Opus, GPT 5.4) losing ~25% of document content by the end. The degradation is driven by **sparse critical failures** (not gradual decay), compounds over time, and worsens with larger documents, longer interactions, and distractor context.",
+      "files": [
+        "README.md",
+        "task.md"
+      ],
+      "htmlFiles": [],
+      "explorers": [],
+      "path": "projects/9980-2026-04-27-delegate52-paper-analysis",
+      "wordCount": 2664,
+      "readingTime": 12
+    },
     {
       "id": "9981-2026-04-24-ai-news-feed",
       "slug": "ai-news-feed",
@@ -48,7 +73,7 @@
         }
       ],
       "path": "projects/9981-2026-04-24-ai-news-feed",
-      "wordCount": 10792,
+      "wordCount": 10903,
       "readingTime": 46
     },
     {
