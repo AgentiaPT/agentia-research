@@ -42,6 +42,15 @@ The week OpenAI broke free from Microsoft, landed on AWS, and every major platfo
 ---
 
 If last week was "The Reality Check," this week was **The Great Unbundling** — the moment the AI industry's cozy partnerships fractured and re-formed into something rawer and more competitive. OpenAI's seven-year exclusive marriage with Microsoft officially ended on April 27, the AGI clause that once gave the word "artificial general intelligence" contractual power quietly dissolved, and within 24 hours GPT-5.5 was serving tokens on Amazon Bedrock. Meanwhile, a Cursor agent wiped a startup's production database in nine seconds flat, PyTorch Lightning got hijacked to steal developer credentials through Claude Code config files, and GitHub admitted its own infrastructure couldn't handle the agent traffic its products had created.
+## 1. The Week's Narrative — The Great Unbundling
+
+**April 25 – May 1, 2026**
+
+The week OpenAI broke free from Microsoft, landed on AWS, and every major platform race accelerated to escape velocity.
+
+---
+
+If last week was "The Reality Check," this week was **The Great Unbundling** — the moment the AI industry's cozy partnerships fractured and re-formed into something rawer and more competitive. OpenAI's seven-year exclusive marriage with Microsoft officially ended on April 27, the AGI clause that once gave the word "artificial general intelligence" contractual power quietly dissolved, and within 24 hours GPT-5.5 was serving tokens on Amazon Bedrock. Meanwhile, a Cursor agent wiped a startup's production database in nine seconds flat, PyTorch Lightning got hijacked to steal developer credentials through Claude Code config files, and GitHub admitted its own infrastructure couldn't handle the agent traffic its products had created.
 
 The throughline: **agentic AI is no longer a product category — it's a force reshaping platform economics, security models, and developer infrastructure simultaneously.** OpenAI unbundled from Microsoft to go multi-cloud. GitHub unbundled Copilot pricing from flat subscriptions to usage-based billing — days after confessing that agent traffic broke their capacity plans. Cursor unbundled its runtime into an SDK. Warp unbundled its entire codebase into open source. And the supply chain attackers? They understood the unbundling too — weaponizing the very configuration files that Claude Code and VS Code use for persistence.
 
@@ -362,18 +371,29 @@ Steve Yegge's viral X thread (1.9M+ views, 4,500+ likes, 458 replies) dropped a 
 
 Four platform announcements that each represent a different vector of the agentic evolution.
 
-### VS Code 1.118 (Apr 29)
+### VS Code 1.118 — The "Every Token Counts" Release (Apr 29)
 
 [Release notes](https://code.visualstudio.com/updates/v1_118)
 
-The most agent-aware VS Code release yet — six features that all serve autonomous workflows:
+The most significant VS Code release in the context of [Section 5's billing earthquake](#5-github-copilots-billing-earthquake--from-flat-subscriptions-to-pay-per-token). With usage-based billing arriving June 1, VS Code 1.118 ships an aggressive token efficiency overhaul — explicitly acknowledging the billing change in its release notes. The message is clear: Microsoft is simultaneously raising the price of tokens AND giving you tools to use fewer of them.
 
-- **Remote Control** — track and steer ongoing Copilot CLI sessions from GitHub.com or mobile. Start a task on your laptop, monitor from your phone.
-- **Codebase Search** — semantic indexing now for all workspaces + org-wide text search across GitHub repos. Agents (and humans) find code faster.
-- **Dedicated Context for Skills** — skill execution isolated via `context: fork`; keeps main chat focused while subagents explore separately
-- **Chronicle** — SQLite-backed chat history with `/chronicle:standup` and natural language queries. "What did I work on yesterday?" now has an answer.
-- **Enterprise Policy** — fail-closed org membership gating for AI features. Admins restrict which organizations can use AI.
-- **Token Efficiency** — 93% cache reuse, 20% savings from tool search, 12% faster WebSocket mode for OpenAI. Timed before June 1 usage-based billing.
+**Token Efficiency — The Headline Story**
+
+The release notes open this section by directly citing the April 27 billing announcement. Three major optimizations ship together:
+
+- **93% prompt cache reuse** — strategic cache breakpoints at system prompt, tools list, and last-two-messages boundaries mean repeated context is billed at ~10× lower rates (particularly for Anthropic models). Cache-stable system prompts and tools registration eliminate byte drift that previously reset caches mid-session.
+- **Tool search tool (20% token savings)** — splits the agent's toolset into ~30 always-available tools (covering 88% of calls) and deferred tools loaded on-demand via semantic search. Already default for Anthropic models; rolling out for GPT-5.4/5.5 via Responses API.
+- **Agentic search + execution tools** — two new specialist small models handle codebase exploration and terminal execution respectively, replacing expensive frontier-model token usage for these tasks. The execution tool filters verbose terminal output before returning to the main agent — no more paying premium tokens to read 500 lines of test output.
+- **WebSocket mode (12% faster for OpenAI)** — persistent connection sends only delta input per turn; server retains conversation state. Reduces request size and latency in multi-turn agent workflows.
+
+**Combined impact:** A heavy agentic coding session that might have consumed 200+ credits under naive billing could now cost 40–60% less through caching and delegation alone. This positions VS Code as the "cost-aware IDE" — the billing system penalizes waste, and the editor actively eliminates it.
+
+**Other Key Features**
+
+- **Chronicle (experimental)** — SQLite-backed local index of all chat sessions: metadata, files touched, PRs referenced. Commands: `/chronicle:standup` (24h activity grouped by branch), `/chronicle:tips` (7-day usage analysis for prompt improvement), `/chronicle [query]` (free-form natural language search across history). Your chat history becomes queryable institutional memory.
+- **Remote Control** — track and steer ongoing Copilot CLI sessions from GitHub.com or mobile.
+- **Dedicated Context for Skills** — skill execution isolated via `context: fork`; subagents explore without polluting main chat context.
+- **Enterprise Policy** — fail-closed org membership gating for AI features.
 
 ### Replit App Monitoring (Apr 29)
 
@@ -584,6 +604,14 @@ Claude embedded directly into creative software via MCP: Adobe Creative Cloud (5
 [Visual Studio Magazine](https://visualstudiomagazine.com) · [Neowin](https://www.neowin.net)
 
 Production-ready Agent Framework 1.0 for .NET and Python — unified SDK merging Semantic Kernel and AutoGen. Visual Studio 2026 April update introduces cloud agents (remote AI execution from the IDE), Debugger Agent (automated bug diagnosis and fix validation), and custom agent skills that travel across projects. Supports A2A (agent-to-agent) and MCP interoperability. Copilot agent mode for C++ reached GA.
+
+---
+
+**Playwright CLI v0.1.9 — Sharper Tools for Coding Agents (Apr 30)**
+
+[npm](https://www.npmjs.com/package/@anthropic-ai/playwright-cli)
+
+Microsoft's Playwright team shipped v0.1.9 with features explicitly designed for AI coding agents: **UI Review + Highlight** gives agents visual confirmation of page state with bounding-box overlays; `generate-locator` produces stable element references for agent-authored tests; `snapshot --boxes` returns structured bounding-box data; `--raw` and `--json` flags everywhere enable machine-parseable output. Also adds file drop and clipboard data support. The UI Review feature lets agents request visual confirmation before proceeding — a pattern for reducing autonomous UI testing errors. This is Playwright evolving from "testing library" to "agent perception layer."
 
 ---
 

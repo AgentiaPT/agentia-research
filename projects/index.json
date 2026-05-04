@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-04T09:46:31.974401+00:00",
+  "generated": "2026-05-04T09:53:34.818357+00:00",
   "projects": [
     {
       "id": "9980-2026-05-04-ai-news-feed",
@@ -31,8 +31,8 @@
       "htmlFiles": [],
       "explorers": [],
       "path": "projects/9980-2026-05-04-ai-news-feed",
-      "wordCount": 6263,
-      "readingTime": 27
+      "wordCount": 6756,
+      "readingTime": 29
     },
     {
       "id": "9981-2026-04-24-ai-news-feed",

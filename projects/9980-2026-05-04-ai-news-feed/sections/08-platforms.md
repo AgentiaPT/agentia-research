@@ -4,18 +4,29 @@
 
 Four platform announcements that each represent a different vector of the agentic evolution.
 
-### VS Code 1.118 (Apr 29)
+### VS Code 1.118 — The "Every Token Counts" Release (Apr 29)
 
 [Release notes](https://code.visualstudio.com/updates/v1_118)
 
-The most agent-aware VS Code release yet — six features that all serve autonomous workflows:
+The most significant VS Code release in the context of [Section 5's billing earthquake](#5-github-copilots-billing-earthquake--from-flat-subscriptions-to-pay-per-token). With usage-based billing arriving June 1, VS Code 1.118 ships an aggressive token efficiency overhaul — explicitly acknowledging the billing change in its release notes. The message is clear: Microsoft is simultaneously raising the price of tokens AND giving you tools to use fewer of them.
 
-- **Remote Control** — track and steer ongoing Copilot CLI sessions from GitHub.com or mobile. Start a task on your laptop, monitor from your phone.
-- **Codebase Search** — semantic indexing now for all workspaces + org-wide text search across GitHub repos. Agents (and humans) find code faster.
-- **Dedicated Context for Skills** — skill execution isolated via `context: fork`; keeps main chat focused while subagents explore separately
-- **Chronicle** — SQLite-backed chat history with `/chronicle:standup` and natural language queries. "What did I work on yesterday?" now has an answer.
-- **Enterprise Policy** — fail-closed org membership gating for AI features. Admins restrict which organizations can use AI.
-- **Token Efficiency** — 93% cache reuse, 20% savings from tool search, 12% faster WebSocket mode for OpenAI. Timed before June 1 usage-based billing.
+**Token Efficiency — The Headline Story**
+
+The release notes open this section by directly citing the April 27 billing announcement. Three major optimizations ship together:
+
+- **93% prompt cache reuse** — strategic cache breakpoints at system prompt, tools list, and last-two-messages boundaries mean repeated context is billed at ~10× lower rates (particularly for Anthropic models). Cache-stable system prompts and tools registration eliminate byte drift that previously reset caches mid-session.
+- **Tool search tool (20% token savings)** — splits the agent's toolset into ~30 always-available tools (covering 88% of calls) and deferred tools loaded on-demand via semantic search. Already default for Anthropic models; rolling out for GPT-5.4/5.5 via Responses API.
+- **Agentic search + execution tools** — two new specialist small models handle codebase exploration and terminal execution respectively, replacing expensive frontier-model token usage for these tasks. The execution tool filters verbose terminal output before returning to the main agent — no more paying premium tokens to read 500 lines of test output.
+- **WebSocket mode (12% faster for OpenAI)** — persistent connection sends only delta input per turn; server retains conversation state. Reduces request size and latency in multi-turn agent workflows.
+
+**Combined impact:** A heavy agentic coding session that might have consumed 200+ credits under naive billing could now cost 40–60% less through caching and delegation alone. This positions VS Code as the "cost-aware IDE" — the billing system penalizes waste, and the editor actively eliminates it.
+
+**Other Key Features**
+
+- **Chronicle (experimental)** — SQLite-backed local index of all chat sessions: metadata, files touched, PRs referenced. Commands: `/chronicle:standup` (24h activity grouped by branch), `/chronicle:tips` (7-day usage analysis for prompt improvement), `/chronicle [query]` (free-form natural language search across history). Your chat history becomes queryable institutional memory.
+- **Remote Control** — track and steer ongoing Copilot CLI sessions from GitHub.com or mobile.
+- **Dedicated Context for Skills** — skill execution isolated via `context: fork`; subagents explore without polluting main chat context.
+- **Enterprise Policy** — fail-closed org membership gating for AI features.
 
 ### Replit App Monitoring (Apr 29)
 

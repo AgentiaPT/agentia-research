@@ -39,3 +39,11 @@ Claude embedded directly into creative software via MCP: Adobe Creative Cloud (5
 Production-ready Agent Framework 1.0 for .NET and Python — unified SDK merging Semantic Kernel and AutoGen. Visual Studio 2026 April update introduces cloud agents (remote AI execution from the IDE), Debugger Agent (automated bug diagnosis and fix validation), and custom agent skills that travel across projects. Supports A2A (agent-to-agent) and MCP interoperability. Copilot agent mode for C++ reached GA.
 
 ---
+
+**Playwright CLI v0.1.9 — Sharper Tools for Coding Agents (Apr 30)**
+
+[npm](https://www.npmjs.com/package/@anthropic-ai/playwright-cli)
+
+Microsoft's Playwright team shipped v0.1.9 with features explicitly designed for AI coding agents: **UI Review + Highlight** gives agents visual confirmation of page state with bounding-box overlays; `generate-locator` produces stable element references for agent-authored tests; `snapshot --boxes` returns structured bounding-box data; `--raw` and `--json` flags everywhere enable machine-parseable output. Also adds file drop and clipboard data support. The UI Review feature lets agents request visual confirmation before proceeding — a pattern for reducing autonomous UI testing errors. This is Playwright evolving from "testing library" to "agent perception layer."
+
+---
