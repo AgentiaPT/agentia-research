@@ -97,10 +97,10 @@ Each story gets an independent sub-agent to get details, confirm everything, gat
 - [x] Phase 0: Setup & task.md
 - [x] Phase 1: Research (7 parallel sub-agents completed — 40+ stories found)
 - [x] Phase 2: Story tracking document with facts (outline.md)
-- [ ] Phase 3: Outline & theme selection
-- [ ] Phase 4: Per-section writing (parts)
-- [ ] Phase 5: README assembly (concat)
+- [x] Phase 3: Per-section writing (12 sections, ~10.4K words)
+- [x] Phase 4: README assembly (concat, 527 lines)
+- [x] Phase 5: Index updated
 - [ ] Phase 6: Explorer dashboard
-- [ ] Phase 7: Sources & index
+- [ ] Phase 7: Sources compilation
 - [ ] Phase 8: Fact-check loop
 - [ ] Phase 9: Final packaging — status: draft
