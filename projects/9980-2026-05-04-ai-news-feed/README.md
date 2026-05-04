@@ -41,15 +41,6 @@ The week OpenAI broke free from Microsoft, landed on AWS, and every major platfo
 
 ---
 
-If last week was "The Reality Check," this week was **The Great Unbundling** — the moment the AI industry's cozy partnerships fractured and re-formed into something rawer and more competitive. OpenAI's seven-year exclusive marriage with Microsoft officially ended on April 27, the AGI clause that once gave the word "artificial general intelligence" contractual power quietly dissolved, and within 24 hours GPT-5.5 was serving tokens on Amazon Bedrock. Meanwhile, a Cursor agent wiped a startup's production database in nine seconds flat, PyTorch Lightning got hijacked to steal developer credentials through Claude Code config files, and GitHub admitted its own infrastructure couldn't handle the agent traffic its products had created.
-## 1. The Week's Narrative — The Great Unbundling
-
-**April 25 – May 1, 2026**
-
-The week OpenAI broke free from Microsoft, landed on AWS, and every major platform race accelerated to escape velocity.
-
----
-
 If last week was "The Reality Check," this week was **The Great Unbundling** — the moment the AI industry's cozy partnerships fractured into something rawer and more competitive. OpenAI's seven-year exclusive marriage with Microsoft officially ended on April 27, the AGI clause quietly dissolved, and within 24 hours GPT-5.5 was serving tokens on Amazon Bedrock. Meanwhile, a Cursor agent wiped a startup's production database in nine seconds flat, PyTorch Lightning got hijacked to steal credentials through Claude Code config files, and GitHub admitted its own infrastructure couldn't handle the agent traffic its products created.
 
 The throughline: **agentic AI is no longer a product category — it's a force reshaping platform economics, security models, and developer infrastructure simultaneously.** OpenAI unbundled from Microsoft to go multi-cloud. GitHub unbundled Copilot pricing from flat subscriptions to usage-based billing — days after confessing that agent traffic broke their capacity plans. Cursor unbundled its runtime into an SDK. Warp unbundled its entire codebase into open source. And the supply chain attackers understood the unbundling too — weaponizing the configuration files that Claude Code and VS Code use for persistence.
