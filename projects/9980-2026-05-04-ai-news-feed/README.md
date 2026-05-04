@@ -1,7 +1,7 @@
 ---
 title: "AI × Software Engineering — April 25–May 1, 2026"
 date: 2026-05-04
-status: draft
+status: published
 tags: [ai-news, weekly, unbundling, openai-aws, supply-chain, pocketos, symphony, karpathy, yegge, cursor, codex, mistral, copilot-billing, agentic-engineering]
 ---
 
