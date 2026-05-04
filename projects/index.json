@@ -1,6 +1,36 @@
 {
-  "generated": "2026-04-25T16:23:31.269815+00:00",
+  "generated": "2026-05-04T08:56:14.116132+00:00",
   "projects": [
+    {
+      "id": "9980-2026-05-01-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI × Software Engineering — April 25–May 1, 2026",
+      "date": "2026-05-01",
+      "status": "draft",
+      "tags": [
+        "ai-news",
+        "weekly",
+        "great-unbundling",
+        "supply-chain-worm",
+        "openai-multi-cloud",
+        "mistral-medium",
+        "congressional-probe",
+        "mcp-enterprise",
+        "ai-capex-paradox",
+        "musk-trial"
+      ],
+      "description": "**Previous edition:** [April 17–24, 2026](../9981-2026-04-24-ai-news-feed/README.md)",
+      "files": [
+        "README.md",
+        "outline.md",
+        "task.md"
+      ],
+      "htmlFiles": [],
+      "explorers": [],
+      "path": "projects/9980-2026-05-01-ai-news-feed",
+      "wordCount": 10350,
+      "readingTime": 44
+    },
     {
       "id": "9981-2026-04-24-ai-news-feed",
       "slug": "ai-news-feed",
@@ -48,7 +78,7 @@
         }
       ],
       "path": "projects/9981-2026-04-24-ai-news-feed",
-      "wordCount": 10792,
+      "wordCount": 10903,
       "readingTime": 46
     },
     {
