@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-04T09:28:28.840324+00:00",
+  "generated": "2026-05-04T09:46:31.974401+00:00",
   "projects": [
     {
       "id": "9980-2026-05-04-ai-news-feed",
@@ -20,6 +20,7 @@
         "cursor",
         "codex",
         "mistral",
+        "copilot-billing",
         "agentic-engineering"
       ],
       "description": "**Previous edition:** [April 17–24, 2026](../9981-2026-04-24-ai-news-feed/README.md)",
@@ -30,8 +31,8 @@
       "htmlFiles": [],
       "explorers": [],
       "path": "projects/9980-2026-05-04-ai-news-feed",
-      "wordCount": 5546,
-      "readingTime": 24
+      "wordCount": 6263,
+      "readingTime": 27
     },
     {
       "id": "9981-2026-04-24-ai-news-feed",

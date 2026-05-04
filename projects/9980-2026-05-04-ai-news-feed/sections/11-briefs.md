@@ -1,4 +1,4 @@
-## 10. Brief Takes
+## 11. Brief Takes
 
 **Stories worth knowing, condensed.**
 
@@ -7,12 +7,6 @@
 **Stripe Sessions 2026 — 288 Launches for Agentic Commerce**
 
 Stripe announced 288 products/features, repositioning from payments processor to "economic infrastructure for the AI economy." Key launches: Agent Wallets via Stripe Link (250M+ users) let consumers authorize AI agents to make purchases with one-time virtual cards; Agentic Commerce Suite integrates with Gemini, Meta, Microsoft, and OpenAI for purchases inside AI assistants; Machine Payments Protocol (MPP) enables true machine-to-machine micropayments. The question isn't whether AI agents will transact — it's who controls the payment rails.
-
----
-
-**GitHub Copilot Moves to Usage-Based Billing (Apr 27)**
-
-All Copilot usage now consumes "AI Credits" based on tokens processed and model selected. Starting June 1, Copilot code review on private repos also consumes GitHub Actions minutes (dual billing). Public repos exempt. This is GitHub pricing AI coding as infrastructure, not software — you pay for what you use, not what you have.
 
 ---
 

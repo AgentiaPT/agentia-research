@@ -1,4 +1,4 @@
-## 8. OpenAI Symphony — From Prompts to Orchestration
+## 9. OpenAI Symphony — From Prompts to Orchestration
 
 **April 28 | [OpenAI](https://openai.com/index/open-source-codex-orchestration-symphony/) · [GitHub](https://github.com/openai/symphony) · [InfoWorld](https://www.infoworld.com/article/4164173/openais-symphony-spec-pushes-coding-agents-from-prompts-to-orchestration.html)**
 

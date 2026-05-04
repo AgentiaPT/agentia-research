@@ -1,4 +1,4 @@
-## 5. The Tooling Arms Race — Codex, Claude Code, Cursor, Copilot All Ship Major Updates
+## 6. The Tooling Arms Race — Codex, Claude Code, Cursor, Copilot All Ship Major Updates
 
 **April 28–30 | Multiple sources**
 

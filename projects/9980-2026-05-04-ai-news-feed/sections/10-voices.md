@@ -1,4 +1,4 @@
-## 9. Voice Tracker
+## 10. Voice Tracker
 
 **Who said what this week — the people shaping how software engineering meets AI.**
 

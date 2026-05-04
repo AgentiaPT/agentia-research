@@ -1,4 +1,4 @@
-## 6. Karpathy's "Software 3.0" and the Yegge–Google Drama
+## 7. Karpathy's "Software 3.0" and the Yegge–Google Drama
 
 **April 26–May 1 | [Sequoia Ascent](https://karpathy.bearblog.dev/sequoia-ascent-2026/) · [VentureBeat](https://venturebeat.com/orchestration/google-leaders-including-demis-hassabis-push-back-on-claim-of-uneven-ai-adoption-internally) · [Firstpost](https://www.firstpost.com/tech/googlers-want-better-agentic-tools-steve-yegge-reiterates-concerns-over-uneven-ai-adoption-at-google-14002858.html)**
 

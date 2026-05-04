@@ -1,4 +1,4 @@
-## 7. Platform Updates — VS Code 1.118, Replit Monitoring, Anthropic Security, Mistral Medium 3.5
+## 8. Platform Updates — VS Code 1.118, Replit Monitoring, Anthropic Security, Mistral Medium 3.5
 
 **April 28–30 | Multiple sources**
 
