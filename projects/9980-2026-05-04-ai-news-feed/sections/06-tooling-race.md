@@ -2,58 +2,57 @@
 
 **April 28–30 | Multiple sources**
 
-Four competing AI coding platforms shipped significant updates within 72 hours of each other. The pattern is clear: every tool is racing from "code assistant" to "autonomous project teammate."
+Four competing AI coding platforms shipped significant updates within 72 hours. Every tool is racing from "code assistant" to "autonomous project teammate."
 
 ### OpenAI Codex — Persistent Goals, Memory, 90+ Plugins (Apr 30)
 
 [Releasebot](https://releasebot.io/updates/openai/codex) · [Digital Applied](https://www.digitalapplied.com/blog/openai-codex-for-almost-everything-release-guide) · [BigHatGroup](https://www.bighatgroup.com/blog/openai-codex-enterprise-ai-automation-april-2026/)
 
-- **`/goal` command** — define persistent workflows that survive across sessions and days. "Keep test coverage above 80%" becomes a standing instruction the agent checks every run.
-- **Cross-session memory** (preview, enterprise-first) — Codex remembers project context, decisions, and patterns between sessions without re-prompting
-- **90+ new plugins** — Atlassian (Jira/Confluence), CircleCI, GitLab, Notion, Linear — Codex now reads from and writes to the tools teams actually use
-- **In-app browser annotation** — mark elements in a browser view; Codex understands visual context for frontend work
-- **SSH remote dev** (alpha) — connect Codex to remote machines for builds, testing, deployment
-- **Framing shift:** OpenAI explicitly marketing Codex as a "workspace agent" / "project teammate" — not a code assistant
+- **`/goal` command** — persistent workflows surviving across sessions. "Keep test coverage above 80%" becomes a standing instruction.
+- **Cross-session memory** (preview, enterprise-first) — remembers project context between sessions without re-prompting
+- **90+ new plugins** — Atlassian, CircleCI, GitLab, Notion, Linear — reads from and writes to actual team tools
+- **In-app browser annotation** — mark elements for visual context in frontend work
+- **SSH remote dev** (alpha) — connect to remote machines for builds/testing/deployment
 
 ### Claude Code — /ultrareview, plugin-prune, MCP alwaysLoad (Apr 20–28)
 
 [Anthropic Docs](https://docs.anthropic.com/en/docs/claude-code) · [Changelog](https://docs.anthropic.com/en/docs/claude-code/changelog) · [UltraReview guide](https://www.claudedirectory.org/blog/ultrareview-claude-code-guide)
 
-- **`/ultrareview`** — cloud multi-agent code review with a verification pass; launches parallel review agents that check each other's work. Public preview.
+- **`/ultrareview`** — cloud multi-agent code review with verification pass; parallel agents check each other's work
 - **`plugin prune`** — cleans orphaned plugin dependencies (v2.1.121, Apr 28)
 - **Windows PowerShell native** — full support without Git Bash since v2.1.84
-- **`alwaysLoad` MCP** — MCP tools load instantly at session start; no more waiting for lazy initialization (v2.1.121)
+- **`alwaysLoad` MCP** — MCP tools load instantly at session start (v2.1.121)
 - **PostToolUse hooks expansion** — hook into any tool completion for custom workflows
 
 ### Cursor — SDK + Security Review (Apr 29–30)
 
 [Cursor SDK blog](https://authorityaitools.com/blog/cursor-sdk-launch-april-2026) · [Security Review changelog](https://cursor.com/changelog/04-30-26) · [CVE-2026-26268](https://nvd.nist.gov/vuln/detail/cve-2026-26268)
 
-- **Cursor SDK** (`@cursor/sdk`, Apr 29) — TypeScript SDK exposing the full agent runtime; runs local, cloud, or self-hosted. Supports subagents, hooks, MCP servers, SSE streaming.
+- **Cursor SDK** (`@cursor/sdk`, Apr 29) — TypeScript SDK exposing the full agent runtime; local, cloud, or self-hosted. Supports subagents, hooks, MCP servers, SSE streaming.
 - **Security Review** (Apr 30, Teams/Enterprise) — two always-on agents:
-  - **PR Security Reviewer** — flags vulnerabilities, auth regressions, prompt injection risks on every PR
+  - **PR Security Reviewer** — flags vulnerabilities, auth regressions, prompt injection on every PR
   - **Vulnerability Scanner** — scheduled full-codebase scans
-- First major IDE to treat **prompt injection as a first-class vulnerability class**
-- Released days after patching CVE-2026-26268 (git hook remote code execution)
+- First major IDE treating **prompt injection as a first-class vulnerability class**
+- Released days after patching CVE-2026-26268 (git hook RCE)
 
 ### GitHub Copilot CLI — ACP Sessions, Headless OAuth, Slash Commands (Apr 29–May 1)
 
 [GitHub Blog](https://github.blog) · [GitHub Docs](https://docs.github.com/en/copilot) · [VS Code 1.118 notes](https://code.visualstudio.com/updates/v1_118)
 
-- **ACP session controls** — allow-all permissions, backgrounding (`Ctrl+X B`), named sessions, remote steering from GitHub.com or mobile
-- **Headless OAuth** (v1.0.40, May 1) — `client_credentials` grant for MCP servers; no browser needed in CI/containers/headless environments
+- **ACP session controls** — allow-all permissions, backgrounding (`Ctrl+X B`), named sessions, remote steering from GitHub.com/mobile
+- **Headless OAuth** (v1.0.40, May 1) — `client_credentials` grant for MCP servers; no browser needed in CI/containers
 - **New slash commands:** `/compact`, `/context`, `/usage`, `/env`, `/chronicle`, `/extensions` with hot reload
-- **Auto model selection** — CLI picks the optimal model per task; BYOK/local models supported
+- **Auto model selection** — CLI picks optimal model per task; BYOK/local models supported
 - **Extension SDK** — multi-language extension authoring with tab completion
 
 ### The Pattern
 
 Every platform shipped the same three capabilities within days:
 
-- **Persistence** — agents that remember across sessions (Codex memory, Claude Code alwaysLoad, Copilot named sessions)
+- **Persistence** — agents remembering across sessions (Codex memory, Claude alwaysLoad, Copilot named sessions)
 - **Orchestration** — managing multiple sub-agents or external tools (Claude ultrareview, Cursor subagents, Symphony)
-- **Security** — hardening against the new attack surfaces (Cursor Security Review, Anthropic Claude Security, Copilot headless OAuth)
+- **Security** — hardening against new attack surfaces (Cursor Security Review, Anthropic Claude Security, Copilot headless OAuth)
 
-The race is no longer "who writes better code completions." It's who builds the most capable autonomous software engineer — and who secures it first.
+The race is no longer "who writes better completions." It's who builds the most capable autonomous engineer — and secures it first.
 
 ---

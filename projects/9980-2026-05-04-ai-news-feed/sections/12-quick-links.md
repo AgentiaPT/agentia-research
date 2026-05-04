@@ -1,15 +1,6 @@
 ## 12. Quick Links — New Tools & Frameworks
 
-**Three repos that landed this week and deserve your attention.**
-
----
-
-**OpenAI Symphony** — Autonomous Codex Orchestration
-
-- **Repo:** [github.com/openai/symphony](https://github.com/openai/symphony)
-- **Stars:** ~15k | **License:** Apache-2.0
-- **What:** Spec + Elixir reference implementation for turning task boards (Linear, Jira, GitHub Issues) into control planes for Codex agents. Agents pull tasks, work in isolated sandboxes, deliver PRs with proof of work.
-- **Why it matters:** The jump from "one human supervises one agent" to "agents autonomously process backlogs." OpenAI claims 500% PR increase internally.
+**Two repos that landed this week and deserve your attention.**
 
 ---
 
@@ -20,7 +11,6 @@
 - **What:** Declare all agent context (skills, instructions, prompts, MCP servers, plugins) in one `apm.yml`. `apm install` reproduces it everywhere. Lockfile-pinned, security-scanned, policy-gated.
 - **Cross-agent:** Works with Copilot, Claude Code, Cursor, OpenCode, Codex, Gemini, Windsurf
 - **Key command:** `apm compile -t copilot` generates `.github/copilot-instructions.md` automatically
-- **Why it matters:** Solves "works on my machine" for AI agent setups. Version, share, and enforce agent configurations with the same rigor as code dependencies.
 
 ---
 
@@ -32,6 +22,5 @@
 - **Key commands:** `agentrc readiness` (score), `agentrc instructions` (generate), `agentrc eval` (measure improvement)
 - **Integration:** CLI, VS Code extension, CI/CD pipeline quality gate, batch processing across orgs
 - **Companion to APM:** AgentRC generates context → APM distributes it across teams
-- **Why it matters:** *"Your repo has an AI-readiness score. Here's how to check it."* Turns context engineering from art into measurable practice.
 
 ---
