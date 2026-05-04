@@ -6,7 +6,7 @@ Complete catalog of all research projects, newest first.
 
 | Project | Description | Live Demo | Words | Read Time | Status | Date |
 |---------|-------------|-----------|------:|-----------|--------|------|
-| [AI × Software Engineering — April 25–May 1, 2026](9980-2026-05-04-ai-news-feed/) | **Previous edition:** [April 17–24, 2026](../9981-2026-04-24-ai-news-feed/README.md) | — | 6.8k | 29 min | Draft | 2026-05-04 |
+| [AI × Software Engineering — April 25–May 1, 2026](9980-2026-05-04-ai-news-feed/) | **Previous edition:** [April 17–24, 2026](../9981-2026-04-24-ai-news-feed/README.md) | — | 5.5k | 24 min | Draft | 2026-05-04 |
 | [AI × Software Engineering — April 17–24, 2026](9981-2026-04-24-ai-news-feed/) | **Previous edition:** [April 5–16, 2026](../9982-2026-04-11-ai-news-feed/README.md) | [Explorer](https://agentiapt.github.io/agentia-research/projects/9981-2026-04-24-ai-news-feed/explorer.html) | 10.9k | 46 min | V2 | 2026-04-24 |
 | [AI × Software Engineering — April 5–16, 2026](9982-2026-04-11-ai-news-feed/) | **Previous edition:** [March 30 – April 4, 2026](../9983-2026-04-04-ai-news-feed/README.md) | [Explorer](https://agentiapt.github.io/agentia-research/projects/9982-2026-04-11-ai-news-feed/explorer.html) | 10.2k | 43 min | Complete | 2026-04-16 |
 | [AI × Software Engineering — March 30 – April 4, 2026](9983-2026-04-04-ai-news-feed/) | **Previous edition:** [March 22–29, 2026](../9984-2026-03-29-ai-news-feed/README.md) | [Explorer](https://agentiapt.github.io/agentia-research/projects/9983-2026-04-04-ai-news-feed/explorer.html) | 8.6k | 37 min | Complete | 2026-04-04 |
