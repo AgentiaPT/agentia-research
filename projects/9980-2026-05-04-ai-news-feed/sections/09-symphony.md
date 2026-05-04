@@ -20,7 +20,7 @@ The mental model: your project manager assigns tasks to a ticket board. Symphony
 - **Language-agnostic spec** — `SPEC.md` defines the protocol; any agent framework can implement it
 - **Reference implementation** in Elixir (chosen for supervision trees and fault tolerance)
 - **Apache 2.0** license
-- **21.1k GitHub stars** in the first week
+- **~15k GitHub stars** in the first weeks
 - OpenAI claims **500% increase in PRs** internally after adopting the workflow
 
 **Why It Matters**

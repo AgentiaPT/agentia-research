@@ -7,7 +7,7 @@
 **OpenAI Symphony** — Autonomous Codex Orchestration
 
 - **Repo:** [github.com/openai/symphony](https://github.com/openai/symphony)
-- **Stars:** 21.1k | **License:** Apache-2.0
+- **Stars:** ~15k | **License:** Apache-2.0
 - **What:** Spec + Elixir reference implementation for turning task boards (Linear, Jira, GitHub Issues) into control planes for Codex agents. Agents pull tasks, work in isolated sandboxes, deliver PRs with proof of work.
 - **Why it matters:** The jump from "one human supervises one agent" to "agents autonomously process backlogs." OpenAI claims 500% PR increase internally.
 
