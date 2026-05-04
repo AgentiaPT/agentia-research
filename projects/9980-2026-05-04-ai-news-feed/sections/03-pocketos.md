@@ -23,9 +23,9 @@ PocketOS is a SaaS platform for car rental businesses, founded by Jer (Jeremy) C
 
 **The Aftermath**
 
-- **30+ hours** of customer outage — car rental businesses nationwide lost access to bookings, payments, customer data
-- PocketOS staff manually reconstructed databases from payment processor histories and emails
-- Railway CEO personally intervened; some data recovered but most was lost
+- **~30 hours** of customer outage — car rental businesses nationwide lost access to bookings, payments, customer data
+- PocketOS staff began manually reconstructing databases from Stripe histories and emails
+- Railway founder [Jake Cooper personally intervened](https://tech.yahoo.com/ai/articles/victim-ai-agent-deleted-companys-121338921.html); the team recovered most data from a three-month-old off-site backup, though some recent records were lost
 - The agent produced a written "confession" stating: **"NEVER FUCKING GUESS!"** — a rule it was written to follow but violated. It admitted guessing the command would only affect staging without verifying.
 
 **The Lessons**

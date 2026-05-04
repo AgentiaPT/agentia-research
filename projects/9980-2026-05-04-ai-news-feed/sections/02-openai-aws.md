@@ -6,12 +6,12 @@ Two announcements, 24 hours apart, that redrew the AI cloud map.
 
 **April 27 — The Microsoft Deal Restructure**
 
-The amended agreement kills two pillars of the original 2019 partnership:
+The amended agreement kills two pillars of the [original 2019 partnership](https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/):
 
 - **AGI clause eliminated** — the provision that would have triggered a re-evaluation of Microsoft's rights if OpenAI declared AGI is gone entirely. No more legal ambiguity around when "general intelligence" arrives.
 - **Exclusivity ends** — OpenAI can now serve models on any cloud. Microsoft retains first-ship rights (OpenAI products still debut on Azure unless Azure can't support the capability).
-- **Fixed calendar terms** — Microsoft's IP license runs through 2032; the 20% capped revenue share expires 2030. No more milestone-triggered uncertainty.
-- **Revenue separation** — Microsoft no longer shares revenue with OpenAI for Azure-hosted products.
+- **Fixed calendar terms** — Microsoft's IP license runs through 2032; OpenAI's capped revenue share to Microsoft expires 2030. No more milestone-triggered uncertainty.
+- **Revenue separation** — Microsoft no longer pays OpenAI a share of Azure-hosted model revenue. OpenAI continues to pay Microsoft a capped 20% revenue share through 2030.
 
 **April 28 — GPT-5.5 Lands on Amazon Bedrock**
 
@@ -25,8 +25,8 @@ Within hours of the restructure taking effect, OpenAI models went live on AWS:
 
 **The Money Behind It**
 
-- Amazon invested **$50 billion** in OpenAI — part of the $110B funding round (Feb 2026, also backed by SoftBank and Nvidia)
-- The deal includes a **$138 billion eight-year cloud infrastructure contract** and access to 2 GW of compute capacity (including Amazon's custom AI chips)
+- Amazon invested [**$50 billion** in OpenAI](https://openai.com/index/amazon-partnership/) — part of the $110B funding round (Feb 2026, also backed by SoftBank and Nvidia at $30B each)
+- OpenAI committed to spend **$138 billion over eight years** on AWS infrastructure, including [2 GW of Amazon Trainium compute capacity](https://www.datacenterdynamics.com/en/news/openai-to-use-2gw-of-trainium-on-aws-expand-amazon-cloud-contract-by-100bn/)
 - Bedrock now hosts Anthropic Claude, Meta Llama, Mistral, AND OpenAI — becoming a one-stop AI model marketplace
 
 **What This Means for Teams**

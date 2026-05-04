@@ -18,6 +18,6 @@ This edition covers the biggest restructuring in AI commercial history, the most
 - **8.3M** — monthly downloads of the hijacked PyTorch Lightning package
 - **90M** — pull requests merged monthly on GitHub (breaking their infra)
 - **288** — new products launched at Stripe Sessions
-- **21.1k** — GitHub stars on OpenAI Symphony in its first week
+- **20k+** — GitHub stars on OpenAI Symphony within days of launch
 
 ---

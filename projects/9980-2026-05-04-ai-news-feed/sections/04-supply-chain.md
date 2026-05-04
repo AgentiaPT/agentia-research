@@ -12,7 +12,7 @@ A single campaign — **"Mini Shai-Hulud"** by the TeamPCP group — bridged Pyt
 - **Stolen:** SSH keys, shell histories, `.env` files, GitHub/npm/cloud credentials (AWS, Azure, GCP), Kubernetes configs, Docker tokens, Discord/Slack sessions, crypto wallets
 - **Propagation:** Used stolen GitHub tokens to inject worm payloads into up to 50 branches per repo with write access — impersonating "Claude Code" for commits
 - **Cross-ecosystem spread:** Modified local npm packages to propagate into Node.js
-- **Impact:** 1,800+ public repos found hosting exfiltrated credentials
+- **Impact:** [1,800+ developers affected](https://securityboulevard.com/2026/05/1800-developers-hit-in-mini-shai-hulud-supply-chain-attack-across-pypi-npm-and-php/); over 1,100 public repos found hosting exfiltrated credentials
 - **Clean version:** 2.6.1 — PyPI quarantined the package
 
 **SAP npm Packages — AI Tool Persistence**
@@ -38,6 +38,6 @@ This isn't typosquatting or a one-off dependency confusion. It's:
 - Pin PyTorch Lightning to ≤2.6.1; audit any installs of 2.6.2/2.6.3
 - Audit `.claude/` and `.vscode/tasks.json` in all repos for unauthorized entries
 - Rotate all credentials if any compromised packages were installed
-- Review SAP Security Note 3747787 if using CAP/MBT
+- Review [SAP Security Note 3747787](https://me.sap.com/notes/3747787) if using CAP/MBT
 
 ---
