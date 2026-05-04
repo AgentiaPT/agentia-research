@@ -60,7 +60,7 @@ Start the work on latest AI×Software newsletter update, range April 25 to May 1
 ## Progress
 
 - [x] Created project folder 9980 and scaffolding
-- [ ] Sub-agent research for each story
-- [ ] Write newsletter sections (parts)
-- [ ] Concatenate final README.md
+- [x] Sub-agent research for each story (18 research files)
+- [x] Write newsletter sections (12 parts)
+- [x] Concatenate final README.md (5,576 words)
 - [ ] Build index

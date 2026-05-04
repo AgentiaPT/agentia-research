@@ -1,6 +1,38 @@
 {
-  "generated": "2026-04-25T16:23:31.269815+00:00",
+  "generated": "2026-05-04T09:28:28.840324+00:00",
   "projects": [
+    {
+      "id": "9980-2026-05-04-ai-news-feed",
+      "slug": "ai-news-feed",
+      "title": "AI × Software Engineering — April 25–May 1, 2026",
+      "date": "2026-05-04",
+      "status": "draft",
+      "tags": [
+        "ai-news",
+        "weekly",
+        "unbundling",
+        "openai-aws",
+        "supply-chain",
+        "pocketos",
+        "symphony",
+        "karpathy",
+        "yegge",
+        "cursor",
+        "codex",
+        "mistral",
+        "agentic-engineering"
+      ],
+      "description": "**Previous edition:** [April 17–24, 2026](../9981-2026-04-24-ai-news-feed/README.md)",
+      "files": [
+        "README.md",
+        "task.md"
+      ],
+      "htmlFiles": [],
+      "explorers": [],
+      "path": "projects/9980-2026-05-04-ai-news-feed",
+      "wordCount": 5546,
+      "readingTime": 24
+    },
     {
       "id": "9981-2026-04-24-ai-news-feed",
       "slug": "ai-news-feed",
@@ -48,7 +80,7 @@
         }
       ],
       "path": "projects/9981-2026-04-24-ai-news-feed",
-      "wordCount": 10792,
+      "wordCount": 10903,
       "readingTime": 46
     },
     {
