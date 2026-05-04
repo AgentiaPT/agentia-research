@@ -6,7 +6,7 @@ Four competing AI coding platforms shipped significant updates within 72 hours o
 
 ### OpenAI Codex — Persistent Goals, Memory, 90+ Plugins (Apr 30)
 
-[Releasebot](https://releasebot.dev) · [WindowsReport](https://windowsreport.com) · [TestingCatalog](https://testingcatalog.com)
+[Releasebot](https://releasebot.io/updates/openai/codex) · [Digital Applied](https://www.digitalapplied.com/blog/openai-codex-for-almost-everything-release-guide) · [BigHatGroup](https://www.bighatgroup.com/blog/openai-codex-enterprise-ai-automation-april-2026/)
 
 - **`/goal` command** — define persistent workflows that survive across sessions and days. "Keep test coverage above 80%" becomes a standing instruction the agent checks every run.
 - **Cross-session memory** (preview, enterprise-first) — Codex remembers project context, decisions, and patterns between sessions without re-prompting
@@ -15,9 +15,9 @@ Four competing AI coding platforms shipped significant updates within 72 hours o
 - **SSH remote dev** (alpha) — connect Codex to remote machines for builds, testing, deployment
 - **Framing shift:** OpenAI explicitly marketing Codex as a "workspace agent" / "project teammate" — not a code assistant
 
-### Claude Code — ultrareview, plugin-prune, MCP alwaysLoad (Apr 20–28)
+### Claude Code — /ultrareview, plugin-prune, MCP alwaysLoad (Apr 20–28)
 
-[Anthropic Docs](https://docs.anthropic.com) · [Changelog](https://docs.anthropic.com/en/docs/claude-code/changelog)
+[Anthropic Docs](https://docs.anthropic.com/en/docs/claude-code) · [Changelog](https://docs.anthropic.com/en/docs/claude-code/changelog) · [UltraReview guide](https://www.claudedirectory.org/blog/ultrareview-claude-code-guide)
 
 - **`/ultrareview`** — cloud multi-agent code review with a verification pass; launches parallel review agents that check each other's work. Public preview.
 - **`plugin prune`** — cleans orphaned plugin dependencies (v2.1.121, Apr 28)
@@ -26,6 +26,8 @@ Four competing AI coding platforms shipped significant updates within 72 hours o
 - **PostToolUse hooks expansion** — hook into any tool completion for custom workflows
 
 ### Cursor — SDK + Security Review (Apr 29–30)
+
+[Cursor SDK blog](https://authorityaitools.com/blog/cursor-sdk-launch-april-2026) · [Security Review changelog](https://cursor.com/changelog/04-30-26) · [CVE-2026-26268](https://nvd.nist.gov/vuln/detail/cve-2026-26268)
 
 - **Cursor SDK** (`@cursor/sdk`, Apr 29) — TypeScript SDK exposing the full agent runtime; runs local, cloud, or self-hosted. Supports subagents, hooks, MCP servers, SSE streaming.
 - **Security Review** (Apr 30, Teams/Enterprise) — two always-on agents:
@@ -36,7 +38,7 @@ Four competing AI coding platforms shipped significant updates within 72 hours o
 
 ### GitHub Copilot CLI — ACP Sessions, Headless OAuth, Slash Commands (Apr 29–May 1)
 
-[GitHub Blog](https://github.blog) · [docs.github.com](https://docs.github.com)
+[GitHub Blog](https://github.blog) · [GitHub Docs](https://docs.github.com/en/copilot) · [VS Code 1.118 notes](https://code.visualstudio.com/updates/v1_118)
 
 - **ACP session controls** — allow-all permissions, backgrounding (`Ctrl+X B`), named sessions, remote steering from GitHub.com or mobile
 - **Headless OAuth** (v1.0.40, May 1) — `client_credentials` grant for MCP servers; no browser needed in CI/containers/headless environments

@@ -6,7 +6,7 @@ Four platform announcements that each represent a different vector of the agenti
 
 ### VS Code 1.118 — The "Every Token Counts" Release (Apr 29)
 
-[Release notes](https://code.visualstudio.com/updates/v1_118)
+[Release notes](https://code.visualstudio.com/updates/v1_118) · [Visual Studio Magazine](https://visualstudiomagazine.com/articles/2026/04/30/vs-code-curbs-token-use-ahead-of-copilots-controversial-usage-based-billing-switch.aspx)
 
 The most significant VS Code release in the context of [Section 5's billing earthquake](#5-github-copilots-billing-earthquake--from-flat-subscriptions-to-pay-per-token). With usage-based billing arriving June 1, VS Code 1.118 ships an aggressive token efficiency overhaul — explicitly acknowledging the billing change in its release notes. The message is clear: Microsoft is simultaneously raising the price of tokens AND giving you tools to use fewer of them.
 
@@ -30,7 +30,7 @@ The release notes open this section by directly citing the April 27 billing anno
 
 ### Replit App Monitoring (Apr 29)
 
-[Replit Blog](https://replit.com/blog)
+[Replit Blog](https://blog.replit.com/app-monitoring) · [Replit Docs](https://docs.replit.com/updates/2026/05/01/changelog)
 
 Replit closes the build → deploy → **operate** loop:
 
@@ -41,9 +41,9 @@ Replit closes the build → deploy → **operate** loop:
 
 ### Anthropic Claude Security — Public Beta (Apr 30)
 
-[Anthropic](https://anthropic.com)
+[Claude Blog](https://claude.com/blog/claude-security-public-beta) · [SecurityWeek](https://www.securityweek.com/anthropic-unveils-claude-security-to-counter-ai-powered-exploit-surge/) · [CRN](https://www.crn.com/news/security/2026/anthropic-launches-claude-security-5-things-to-know)
 
-Claude Security launched for Enterprise customers (50+ seats):
+Claude Security launched for all Enterprise customers:
 
 - Built on **Opus 4.7** — uses LLM reasoning (not pattern-matching) to find complex logic and cross-file vulnerabilities
 - Accessible at `claude.ai/security` — no API setup, no CLI; supports scheduled scans, webhooks, CSV/SARIF export
@@ -54,7 +54,7 @@ Claude Security launched for Enterprise customers (50+ seats):
 
 ### Mistral Medium 3.5 — Open-Weight Flagship (Apr 29)
 
-[Mistral AI](https://mistral.ai)
+[Mistral AI](https://mistral.ai) · [MarktechPost](https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/) · [DataNorth](https://datanorth.ai/news/mistral-medium-3-5-release)
 
 The French lab unifies its model lineup into one open-weight flagship:
 
@@ -63,7 +63,7 @@ The French lab unifies its model lineup into one open-weight flagship:
 - **Self-hostable on 4 GPUs** (A100 80GB or equivalent)
 - **Modified MIT license** — truly open weights on Hugging Face
 - **API pricing:** $1.50/$7.50 per million tokens (input/output) — undercutting both GPT-5.5 ($5/$30) and Opus 4.7 ($5/$25)
-- **SWE-Bench:** 77.6% — not frontier-leading but competitive, and you own the weights
+- **SWE-Bench Verified:** 77.6% — not frontier-leading but competitive, and you own the weights
 - Unifies Mistral's previously fragmented coding, reasoning, and vision models into a single checkpoint
 
 **Why this matters:** At $1.50/$7.50 with open weights, Mistral offers the "good enough and controllable" option for teams who won't pay frontier pricing or can't send code to external APIs. The 4-GPU self-hosting target makes it deployable on a single enterprise node.
