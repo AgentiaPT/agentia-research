@@ -54,24 +54,50 @@ Each story gets an independent sub-agent to get details, confirm everything, gat
 
 - (Attachment not received — stories will be discovered via research sub-agents)
 
-## Stories to Research & Cover — April 25 to May 1, 2026
+## Stories Discovered — April 25 to May 1, 2026
 
-> Each story below is a markdown task. Sub-agents will gather facts, sources, and key quotes.
+> 7 parallel research sub-agents completed. Full details in `sections/research-r[1-7]-*.md`. Consolidated tracker in `outline.md`.
 
-- [ ] **Story 1: TBD — Model releases & benchmarks** — Pending research
-- [ ] **Story 2: TBD — Developer tools & agentic coding** — Pending research
-- [ ] **Story 3: TBD — Security & vulnerabilities** — Pending research
-- [ ] **Story 4: TBD — Jobs, layoffs, funding** — Pending research
-- [ ] **Story 5: TBD — Thought leader voices** — Pending research
-- [ ] **Story 6: TBD — Research papers** — Pending research
-- [ ] **Story 7: TBD — Enterprise & industry** — Pending research
+### TIER 1 — Lead Stories
+- [x] Mini Shai-Hulud supply chain worm (PyTorch Lightning + intercom-client + SAP) — Apr 29-30
+- [x] OpenAI ends Azure exclusivity → AWS Bedrock ($38-50B deal) — Apr 28
+- [x] Mistral Medium 3.5 — 128B open-weight + Vibe coding agents — Apr 29
+- [x] OpenAI misses Q1 revenue → AI stock selloff (ARM −8%) — Apr 28
+- [x] US House PRC AI investigation (Cursor/Anysphere + Airbnb) — Apr 29
+- [x] Musk v. OpenAI trial begins ($130B) — Apr 27-28
+
+### TIER 2 — Section-worthy
+- [x] Cursor SDK public beta (TypeScript) — Apr 29
+- [x] GitHub Copilot VS Cloud Agent + Debugger Agent — Apr 30
+- [x] CVE-2026-26268 Cursor git hook RCE (CVSS 9.9) — Apr 28
+- [x] Anthropic Claude Security (AI vuln scanner) — Apr 30
+- [x] Google Cloud Managed MCP Servers GA (50+) — Apr 28
+- [x] Apple CLAUDE.md leak in Support app — Apr 30
+- [x] IBM Bob (enterprise SDLC AI, 80K users) — Apr 28
+- [x] AWS "What's Next" (Amazon Quick, NEURA Robotics) — Apr 28
+- [x] Meta 8,000 layoffs / $115-145B AI capex — Apr 25
+- [x] Hugging Face LeRobot CVE-2026-25874 (CVSS 9.8) — Apr 28-29
+- [x] Anthropic 9 Claude Connectors (Blender, Adobe, etc.) — Apr 28
+
+### TIER 3 — Briefs / Signals
+- [x] Claude Code v2.1.126 (project purge, Windows) — May 1
+- [x] Cursor v3.2.16 Security Agents — Apr 29
+- [x] Flowise CVE-2026-40933 (CVSS 10.0, MCP) — late Apr
+- [x] Google Antigravity prompt injection → RCE — Apr 28
+- [x] Apple CEO transition (Cook → Ternus) — Apr 25
+- [x] DeepSeek V4 open-source adoption — Apr 25-30
+- [x] Deloitte State of AI 2026 — late Apr
+- [x] Build 2026 + I/O 2026 previews — Apr 29
+- [x] Nebius → Eigen AI ($643M) — May 1
+- [x] Opus 4.7 reaches 83.5% SWE-bench — late Apr
+- [x] Tech layoffs YTD pass 115K — Apr 30
 
 ## Progress
 
 - [x] Phase 0: Setup & task.md
-- [ ] Phase 1: Research (parallel sub-agents for story discovery)
-- [ ] Phase 2: Story tracking document with facts
-- [ ] Phase 3: Outline & theme
+- [x] Phase 1: Research (7 parallel sub-agents completed — 40+ stories found)
+- [x] Phase 2: Story tracking document with facts (outline.md)
+- [ ] Phase 3: Outline & theme selection
 - [ ] Phase 4: Per-section writing (parts)
 - [ ] Phase 5: README assembly (concat)
 - [ ] Phase 6: Explorer dashboard
