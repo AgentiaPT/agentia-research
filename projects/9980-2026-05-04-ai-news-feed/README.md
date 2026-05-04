@@ -7,7 +7,7 @@ tags: [ai-news, weekly, unbundling, openai-aws, supply-chain, pocketos, symphony
 
 # AI × Software Engineering — April 25–May 1, 2026
 
-> **Note:** This project was authored by [GitHub Copilot](https://github.com/copilot) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
+> **Note:** This project was authored by [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (AI) with human direction and review. While factual accuracy and quality were prioritized, AI-generated content may contain errors, hallucinations, or outdated information. Sources and claims should be independently verified before relying on them.
 
 **Theme:** The Great Unbundling — The week OpenAI broke free from Microsoft, landed on AWS, a Cursor agent destroyed a production database in 9 seconds, and supply chain attackers weaponized AI coding tool configs.
 
