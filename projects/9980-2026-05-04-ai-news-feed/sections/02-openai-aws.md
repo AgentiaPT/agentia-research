@@ -1,0 +1,39 @@
+## 2. OpenAI on AWS — The Exclusivity Era Ends
+
+**April 27–28 | [OpenAI](https://openai.com) · [AWS](https://www.aboutamazon.com/news/aws/bedrock-openai-models) · [Unite.AI](https://www.unite.ai/microsoft-loses-openai-exclusivity-and-agi-clause-in-amended-deal/) · [VentureBeat](https://venturebeat.com/technology/microsoft-and-openai-gut-their-exclusive-deal-freeing-openai-to-sell-on-aws-and-google-cloud)**
+
+Two announcements, 24 hours apart, that redrew the AI cloud map.
+
+**April 27 — The Microsoft Deal Restructure**
+
+The amended agreement kills two pillars of the original 2019 partnership:
+
+- **AGI clause eliminated** — the provision that would have triggered a re-evaluation of Microsoft's rights if OpenAI declared AGI is gone entirely. No more legal ambiguity around when "general intelligence" arrives.
+- **Exclusivity ends** — OpenAI can now serve models on any cloud. Microsoft retains first-ship rights (OpenAI products still debut on Azure unless Azure can't support the capability).
+- **Fixed calendar terms** — Microsoft's IP license runs through 2032; the 20% capped revenue share expires 2030. No more milestone-triggered uncertainty.
+- **Revenue separation** — Microsoft no longer shares revenue with OpenAI for Azure-hosted products.
+
+**April 28 — GPT-5.5 Lands on Amazon Bedrock**
+
+Within hours of the restructure taking effect, OpenAI models went live on AWS:
+
+- **Available models:** GPT-5.5, GPT-5.4, Codex, Managed Agents (limited preview)
+- **Pricing:** $5/$30 per million tokens (input/output) — matching OpenAI's direct API; batch/flex at 50% off
+- **Context:** 1M token window; same capabilities as the direct API
+- **Lighter variant:** GPT-5.2-Codex at $1.75/$14 per million tokens for cost-sensitive workloads
+- **Enterprise integration:** AWS customers apply existing cloud commitments toward OpenAI usage — no new contracts needed
+
+**The Money Behind It**
+
+- Amazon invested **$50 billion** in OpenAI — part of the $110B funding round (Feb 2026, also backed by SoftBank and Nvidia)
+- The deal includes a **$138 billion eight-year cloud infrastructure contract** and access to 2 GW of compute capacity (including Amazon's custom AI chips)
+- Bedrock now hosts Anthropic Claude, Meta Llama, Mistral, AND OpenAI — becoming a one-stop AI model marketplace
+
+**What This Means for Teams**
+
+- AWS-locked enterprises can access GPT-5.5 and Codex through existing IAM, VPC, and compliance tooling — no Azure account needed
+- Three clouds competing to host the same models creates downward pricing pressure
+- OpenAI's path to IPO is clearer: multi-cloud revenue diversification makes them investable as an independent entity
+- The era of single-vendor AI lock-in is officially over
+
+---
